@@ -8,7 +8,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/virtualtoolkit"/>
 	<classpathentry kind="lib" path="D:/dewan_backup/Java/lib/qdox-1.12.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Grader"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ObjectEditor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/uigen"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
