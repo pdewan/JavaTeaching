@@ -1,8 +1,8 @@
 package lectures.mvc.properties;
 
 import lectures.composite.objects_shapes.ImageWithHeight;
-import util.models.PropertyListenerRegisterer;
+import util.models.PropertyListenerRegistrar;
 
-public interface ObservableShuttleImage extends ImageWithHeight, PropertyListenerRegisterer {
+public interface ObservableShuttleImage extends ImageWithHeight, PropertyListenerRegistrar {
 
 }

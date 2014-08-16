@@ -12,7 +12,7 @@ import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
 import lectures.mvc.properties.ObservableCartesianPlane;
-import util.models.PropertyListenerRegisterer;
+import util.models.PropertyListenerRegistrar;
 
 public class ACartesianPlaneView extends Component implements PropertyChangeListener {	
     BasicStroke dotted = new BasicStroke(

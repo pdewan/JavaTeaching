@@ -7,7 +7,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 
-import util.models.PropertyListenerRegisterer;
+import util.models.PropertyListenerRegistrar;
 
 public class ABMISpreadsheetView implements PropertyChangeListener {
 	JTextField heightField, weightField;

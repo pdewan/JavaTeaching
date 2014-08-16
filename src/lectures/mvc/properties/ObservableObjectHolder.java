@@ -1,7 +1,7 @@
 package lectures.mvc.properties;
 
-import util.models.PropertyListenerRegisterer;
+import util.models.PropertyListenerRegistrar;
 
-public interface ObservableObjectHolder<ObjectType> extends ObjectHolder<ObjectType>, PropertyListenerRegisterer{
+public interface ObservableObjectHolder<ObjectType> extends ObjectHolder<ObjectType>, PropertyListenerRegistrar{
 
 }

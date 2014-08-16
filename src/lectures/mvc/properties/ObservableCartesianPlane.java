@@ -1,8 +1,8 @@
 package lectures.mvc.properties;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import util.models.PropertyListenerRegisterer;
+import util.models.PropertyListenerRegistrar;
 
-public interface ObservableCartesianPlane extends CartesianPlane, PropertyListenerRegisterer {
+public interface ObservableCartesianPlane extends CartesianPlane, PropertyListenerRegistrar {
 
 }
