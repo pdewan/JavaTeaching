@@ -133,15 +133,16 @@ public class CodeSnippets {
 	
 
 	 static void readAndPrintStrings() {
-		// fill array with numbers input by the user
+		// read the number of strings to be input
 		System.out.println("Number of Strings:");
-		int numElements = Console.readInt(); // reads the next line as integer
+		int numElements = Console.readInt(); 
+		// fill array with num elements numbers input by the user
 		System.out.println("Please enter " + numElements + " strings");
 		String[] strings = new String[numElements]; // dynamic array
 		for (int elementNum = 0; elementNum < numElements; elementNum++)
 			strings[elementNum] = Console.readString();
 		/*
-		 * This loop prints  the array input* in the previous loop
+		 * Print the array input* in the previous loop
 		 */
 		for (int elementNum = 0; elementNum < strings.length; elementNum++)
 			System.out.println(strings[elementNum]);
@@ -149,7 +150,6 @@ public class CodeSnippets {
 		String s = strings[0]; // unsafe
 		for (int i = 0; i < s.length(); i++)
 			System.out.println(s.charAt(i));
-
 	}
 	
 	 static void modularReadAndPrintStrings() {
