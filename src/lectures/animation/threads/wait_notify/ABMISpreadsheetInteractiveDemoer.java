@@ -9,12 +9,15 @@ public class ABMISpreadsheetInteractiveDemoer {
 		ClearanceManager clearanceManager = new AClearanceManager();
 		ObjectEditor.edit(clearanceManager);
 		BMISpreadsheet bmiSpreadsheet = new ABMISpreadsheet();	
+		final int initWeight = 75;
+    	final double initHeight = 1.77;
 		bmiSpreadsheet.setHeight(1.77);
 		bmiSpreadsheet.setWeight(75);
 		OEFrame editor = ObjectEditor.edit(bmiSpreadsheet);
 		clearanceManager.waitForProceed();
 		editor.select(bmiSpreadsheet, "Weight");
-		bmiSpreadsheet.setWeight(70);
+		final int secondWeight = 70;
+		bmiSpreadsheet.setWeight(secondWeight);
 		editor.refresh();
 		clearanceManager.waitForProceed();
 		editor.select(bmiSpreadsheet, "Height");

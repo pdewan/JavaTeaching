@@ -4,20 +4,23 @@ import lectures.animation.threads_commands.ThreadSupport;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 public class ABMISpreadsheetAnimatingDemoer {	
-	public static void main (String[] args) {		
+	public static void main (String[] args) {
+		final int initWeight = 75;
+    	final double initHeight = 1.77;
+		final int sleepTime = 3000;
 		ABMISpreadsheet bmiSpreadsheet = new ABMISpreadsheet();	
-		bmiSpreadsheet.setHeight(1.77);
-		bmiSpreadsheet.setWeight(75);
+		bmiSpreadsheet.setHeight(initHeight);
+		bmiSpreadsheet.setWeight(initWeight);
 		OEFrame editor = ObjectEditor.edit(bmiSpreadsheet);
-		ThreadSupport.sleep(3000);
+		ThreadSupport.sleep(sleepTime);
 		editor.select(bmiSpreadsheet, "Weight");
-		bmiSpreadsheet.setWeight(70);
+		bmiSpreadsheet.setWeight(sleepTime);
 		editor.refresh();
-		ThreadSupport.sleep(3000);
+		ThreadSupport.sleep(sleepTime);
 		editor.select(bmiSpreadsheet, "Height");
 		bmiSpreadsheet.setHeight(0);
 		editor.refresh();
-		ThreadSupport.sleep(3000);
+		ThreadSupport.sleep(sleepTime);
 		editor.select(bmiSpreadsheet, "Weight");
 		bmiSpreadsheet.setWeight(0);
 		editor.refresh();

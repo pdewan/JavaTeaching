@@ -19,12 +19,14 @@ public class ABMISpreadsheetAndCalculator implements BMISpreadsheetAndCalculator
     public double getBMI() {
         return bmi;
     }
-    public double calculateBMI(double height, double weight) {
-		return weight/(height*height);
+    public double calculateBMI(double aHeight, double aWeight) {
+		return aWeight/(aHeight*aHeight);
 	}
     public static void main (String[] args) {
+    	final int initWeight = 75;
+    	final double initHeight = 1.77;
     	BMISpreadsheetAndCalculator bmiSpreadsheet = new ABMISpreadsheetAndCalculator();
-    	double bmi = bmiSpreadsheet.calculateBMI(1.77, 75);
+    	double bmi = bmiSpreadsheet.calculateBMI(initHeight, initWeight);
     	bmi = bmiSpreadsheet.getBMI();
     }
 }
