@@ -1,9 +1,8 @@
 package lectures.oegraphics;
 
+import lectures.recursion.Factorial;
 import shapes.FlexibleShape;
 import shapes.FlexibleTextShape;
-import shapes.TextShape;
-import lectures.recursion.Factorial;
 import bus.uigen.ObjectEditor;
 import bus.uigen.shapes.ARectangleModel;
 import bus.uigen.shapes.AStringModel;

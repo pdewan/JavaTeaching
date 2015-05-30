@@ -11,7 +11,6 @@ import lectures.animation.loops.ShuttleAnimator;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.mvc.properties.ObservablePlottedShuttle;
 import lectures.mvc.toolkit.APlottedShuttleView;
-import lectures.mvc.toolkit.BeanView;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

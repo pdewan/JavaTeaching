@@ -5,9 +5,6 @@ import java.beans.PropertyChangeListener;
 
 import javax.swing.JProgressBar;
 import javax.swing.JSlider;
-import javax.swing.JTextField;
-
-import util.models.PropertyListenerRegistrar;
 
 public class AnInterfaceBasedBMISpreadsheetView implements PropertyChangeListener {
 	TextComponentInterface heightField, weightField;

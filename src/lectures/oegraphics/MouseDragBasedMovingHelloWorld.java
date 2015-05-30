@@ -3,7 +3,6 @@ package lectures.oegraphics;
 import java.awt.event.MouseEvent;
 
 import shapes.FlexibleShape;
-
 import bus.uigen.ObjectEditor;
 
 public class MouseDragBasedMovingHelloWorld {

@@ -1,7 +1,7 @@
 package lectures.oegraphics;
 
-import shapes.AttributedShape;
 import lectures.main_consoleinput.Console;
+import shapes.AttributedShape;
 import bus.uigen.ObjectEditor;
 import bus.uigen.shapes.ALineModel;
 

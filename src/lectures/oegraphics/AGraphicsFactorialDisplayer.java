@@ -1,10 +1,8 @@
 package lectures.oegraphics;
 
+import lectures.java_basics_overview.FactorialSpreadsheet;
 import shapes.FlexibleShape;
 import shapes.FlexibleTextShape;
-import lectures.java_basics_overview.FactorialSpreadsheet;
-import lectures.recursion.Factorial;
-import bus.uigen.ObjectEditor;
 import bus.uigen.shapes.ARectangleModel;
 import bus.uigen.shapes.AStringModel;
 

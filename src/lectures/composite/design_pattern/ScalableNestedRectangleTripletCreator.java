@@ -1,6 +1,5 @@
 package lectures.composite.design_pattern;
 
-import lectures.extra.ScalableRectangle;
 import bus.uigen.ObjectEditor;
 
 public class ScalableNestedRectangleTripletCreator extends ScalableNestedRectanglePairCreator {

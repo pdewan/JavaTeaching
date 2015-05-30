@@ -1,5 +1,4 @@
 package lectures.scanning;
-import java.util.Scanner;
 public class AModularUpperCasePrinter {
 	public static void main(String[] args) {
 		if (args.length != 1) {

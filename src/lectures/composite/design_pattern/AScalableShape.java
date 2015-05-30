@@ -1,7 +1,5 @@
 package lectures.composite.design_pattern;
 
-import util.annotations.StructurePattern;
-import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;
 public class AScalableShape implements ScalableShape {
 	int x, y, width, height;

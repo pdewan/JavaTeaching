@@ -3,7 +3,6 @@ package lectures.mvc.toolkit;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
 

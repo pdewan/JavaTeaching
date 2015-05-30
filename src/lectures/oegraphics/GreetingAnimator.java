@@ -1,6 +1,5 @@
 package lectures.oegraphics;
 
-import lectures.animation.threads.wait_notify.ClearanceManager;
 import shapes.FlexibleShape;
 import util.misc.Console;
 import bus.uigen.ObjectEditor;

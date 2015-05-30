@@ -1,7 +1,5 @@
 package lectures.generics_adapters;
 
-import java.awt.Color;
-import java.awt.Component;
 
 public class ALocatableMover implements Visitor<Locatable> {
 	  int x, y;

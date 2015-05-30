@@ -1,7 +1,6 @@
 package lectures.java_basics_overview;
 
 import util.annotations.ComponentWidth;
-import util.annotations.Visible;
 import bus.uigen.ObjectEditor;
 public class ALoopingFactorialSpreadsheet implements FactorialSpreadsheet {
 	int number;

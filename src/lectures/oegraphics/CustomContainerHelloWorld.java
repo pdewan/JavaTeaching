@@ -8,12 +8,10 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 
 import shapes.FlexibleShape;
-
 import bus.uigen.ObjectEditor;
 import bus.uigen.controller.AComponentInputter;
 import bus.uigen.controller.ComponentInputter;
 import bus.uigen.models.ComponentDrawer;
-import bus.uigen.widgets.swing.DelegateJPanel;
 
 public class CustomContainerHelloWorld {
 	protected static FlexibleShape helloShape;

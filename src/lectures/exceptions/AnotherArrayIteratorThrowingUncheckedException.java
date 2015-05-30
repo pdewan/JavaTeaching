@@ -2,9 +2,6 @@ package lectures.exceptions;
 
 import java.util.NoSuchElementException;
 
-import lectures.iterator.IteratedStringPrinter;
-import lectures.iterator.StringIterator;
-
 public class AnotherArrayIteratorThrowingUncheckedException implements StringIteratorThrowingIOException {
 	String[] elements;
 	int nextIndex;

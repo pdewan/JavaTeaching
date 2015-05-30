@@ -2,10 +2,9 @@ package lectures.oegraphics;
 
 import java.awt.event.MouseEvent;
 
+import lectures.recursion.Factorial;
 import shapes.FlexibleShape;
 import shapes.TextShape;
-
-import lectures.recursion.Factorial;
 import bus.uigen.ObjectEditor;
 
 public class OEFactorialGraphicsWithBlockingInput implements FactorialGraphics {

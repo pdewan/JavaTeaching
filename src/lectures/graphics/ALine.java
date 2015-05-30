@@ -1,8 +1,8 @@
 package lectures.graphics;
-import bus.uigen.OEFrame;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.misc.ThreadSupport;
+import bus.uigen.OEFrame;
 @StructurePattern(StructurePatternNames.LINE_PATTERN) 
 public class ALine implements Line {
 	int x, y, width, height;

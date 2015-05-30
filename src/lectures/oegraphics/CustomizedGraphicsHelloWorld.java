@@ -1,10 +1,8 @@
 package lectures.oegraphics;
 
 import java.awt.Color;
-import java.awt.Font;
 
 import shapes.FlexibleShape;
-
 import bus.uigen.ObjectEditor;
 
 public class CustomizedGraphicsHelloWorld {

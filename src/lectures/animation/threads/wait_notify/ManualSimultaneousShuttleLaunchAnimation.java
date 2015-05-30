@@ -1,7 +1,5 @@
 package lectures.animation.threads.wait_notify;
 
-import bus.uigen.OEFrame;
-import bus.uigen.ObjectEditor;
 import lectures.animation.loops.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;

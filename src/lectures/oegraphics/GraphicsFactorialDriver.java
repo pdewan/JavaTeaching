@@ -3,7 +3,6 @@ package lectures.oegraphics;
 import java.awt.Color;
 
 import lectures.java_basics_overview.ALoopingFactorialSpreadsheet;
-import lectures.java_basics_overview.ARecursiveFactorialSpreadsheet;
 import lectures.java_basics_overview.FactorialSpreadsheet;
 import util.misc.ThreadSupport;
 import bus.uigen.OEFrame;

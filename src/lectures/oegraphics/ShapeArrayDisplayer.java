@@ -1,10 +1,6 @@
 package lectures.oegraphics;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import shapes.FlexibleShape;
-
 import bus.uigen.ObjectEditor;
 import bus.uigen.shapes.ALineModel;
 import bus.uigen.shapes.ARectangleModel;

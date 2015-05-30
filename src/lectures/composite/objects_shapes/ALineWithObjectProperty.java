@@ -1,13 +1,11 @@
 package lectures.composite.objects_shapes;
 
+import lectures.graphics.ACartesianPoint;
+import lectures.graphics.Point;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.misc.ThreadSupport;
 import bus.uigen.OEFrame;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
-import lectures.graphics.Point;
 @StructurePattern(StructurePatternNames.LINE_PATTERN) 
 
 public class ALineWithObjectProperty implements LineWithObjectProperty {

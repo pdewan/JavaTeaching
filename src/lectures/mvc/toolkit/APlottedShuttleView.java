@@ -4,14 +4,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes.ImageWithHeight;
-import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.ObservableCartesianPlane;
 import lectures.mvc.properties.ObservablePlottedShuttle;
 
