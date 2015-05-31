@@ -31,33 +31,33 @@ public class AnAssertingBMISpreadsheet implements BMISpreadsheet {
 //		assert preGetWeight();
 		return weight;
 	}
-	public boolean preSetWeight (double newWeight) {
-		return newWeight > 0;
+	public boolean preSetWeight (double newValue) {
+		return newValue> 0;
 	}
-	public void setWeight(double newWeight) {
-		assert preSetWeight(newWeight);
+	public void setWeight(double newValue) {
+		assert preSetWeight(newValue);
 		try {
-		if (!preSetWeight(newWeight)) return;
-		weight = newWeight;
+		if (!preSetWeight(newValue)) return;
+		weight = newValue;
 		} finally {
-		assert preSetWeight(newWeight);
+		assert preSetWeight(newValue);
 		}
 	} 
 	
 	public double getHeight() {
 		return height;
 	}
-	public boolean preSetHeight (double newHeight) {
-		return newHeight > 0;
+	public boolean preSetHeight (double newValue) {
+		return newValue> 0;
 	}	
 	public boolean preSetHeight () {
 		return height > 0;
 	}
-	public void setHeight(double newHeight) {
-		assert preSetHeight(newHeight);
+	public void setHeight(double newValue) {
+		assert preSetHeight(newValue);
 		assert preSetHeight();
 		double oldWeight = weight;
-		height = newHeight;
+		height = newValue;
 		assert preSetHeight();
 		assert oldWeight == weight;
 	}	

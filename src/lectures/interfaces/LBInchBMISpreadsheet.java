@@ -9,8 +9,8 @@ public interface LBInchBMISpreadsheet {
 	public final double CMS_IN_INCH = 2.54;
     public final double LBS_IN_KG = 2.2;
 	double getWeight();
-	void setWeight(double newWeight);	
+	void setWeight(double newValue);	
 	double getHeight();
-	void setHeight(double newHeight);	
+	void setHeight(double newValue);	
 	double getBMI();	
 }

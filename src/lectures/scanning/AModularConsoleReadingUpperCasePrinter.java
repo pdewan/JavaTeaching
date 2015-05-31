@@ -7,11 +7,11 @@ public class AModularConsoleReadingUpperCasePrinter {
 		scanAndPrint(scannedString);		
 	}
 	
-	public static void scanAndPrint(String scannedString) {
+	public static void scanAndPrint(String aScannedString) {
 		System.out.println("Upper Case Letters:");
 		int index = 0;
-		while (index < scannedString.length()) {
-			char nextLetter = scannedString.charAt(index);
+		while (index < aScannedString.length()) {
+			char nextLetter = aScannedString.charAt(index);
 			if (nextLetter >= 'A' && nextLetter <= 'Z')
 				System.out.print(nextLetter);
 			index++;

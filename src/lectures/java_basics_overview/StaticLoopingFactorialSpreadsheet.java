@@ -5,8 +5,8 @@ public class StaticLoopingFactorialSpreadsheet {
 	public static int getNumber() {
 		return number;
 	}
-	public static void setNumber(int newVal) {
-		number = newVal ;
+	public static void setNumber(int newValue) {
+		number = newValue ;
 		factorial = Factorials.loopingFactorial(number);
 	}	
 	public static long getFactorial() {

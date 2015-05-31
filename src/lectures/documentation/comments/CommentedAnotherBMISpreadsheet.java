@@ -16,12 +16,12 @@ public class CommentedAnotherBMISpreadsheet implements CommentedBMISpreadsheet{
         return height;
     }
 	
-    public void setHeight(double newHeight) {
-        height = newHeight;
+    public void setHeight(double newValue) {
+        height = newValue;
         /* recompute dependent properties */
         bmi = weight/(height*height); 
         /*
-   	    System.out.println(newHeight);  // debugging statement nests in general comment
+   	    System.out.println(newValue);  // debugging statement nests in general comment
    	 	*/
     }
    
@@ -29,12 +29,12 @@ public class CommentedAnotherBMISpreadsheet implements CommentedBMISpreadsheet{
         return weight;
     }
  
-    public void setWeight(double newWeight) {    	
-        weight = newWeight;
+    public void setWeight(double newValue) {    	
+        weight = newValue;
         /* recompute dependent 
    	       properties */
         bmi = weight/(height*height);
-//   	    System.out.println(newHeight);
+//   	    System.out.println(newValue);
    	 	
     }
     /**

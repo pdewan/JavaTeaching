@@ -6,8 +6,8 @@ public class AnOverWeightSpreadsheet {
 	public int getBMI() {
 		return bmi;
 	}
-	public void setBMI(int newVal) {
-		bmi = newVal;
+	public void setBMI(int newValue) {
+		bmi = newValue;
 	}	
 
 }

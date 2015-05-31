@@ -14,14 +14,14 @@ public class AnIntBMISpreadsheet implements IntBMISpreadsheet {
 	public int getWeight() {
 		return weight;
 	}
-	public void setWeight(int newWeight) {
-		weight = newWeight;
+	public void setWeight(int newValue) {
+		weight = newValue;
 	}	
 	public int getHeight() {
 		return height;
 	}
-	public void setHeight(int newHeight) {
-		height = newHeight;
+	public void setHeight(int newValue) {
+		height = newValue;
 	}	
 	public int getBMI() {
 		return weight/(height*height);

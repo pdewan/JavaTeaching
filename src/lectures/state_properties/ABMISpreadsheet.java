@@ -11,15 +11,15 @@ public class ABMISpreadsheet  {
 	public double getWeight() {
 		return weight;
 	}
-	public void setWeight(double newWeight) {
-		weight = newWeight;
+	public void setWeight(double newValue) {
+		weight = newValue;
 	}	
 	public double getHeight() {
 		return height;
 	}
-	public void setHeight(double newHeight) {
+	public void setHeight(double newValue) {
 //		System.out.println("setHeight() Called");
-		height = newHeight;
+		height = newValue;
 	}	
 	public double getBMI() {
 //		System.out.println("getBMI() Called");

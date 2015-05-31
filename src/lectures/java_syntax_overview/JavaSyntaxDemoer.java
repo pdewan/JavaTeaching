@@ -14,27 +14,27 @@ public class JavaSyntaxDemoer {
 		double height = 1.77;
 		float weight = 75;
 		boolean overWeight = false;
-		final int HIGH_BMI = 27;
+		final int highBMI = 27;
 		String name = "joe";
 		char firstChar = name.charAt(0);
 		int bmi = (int) (weight / (height * height));
 
 		// arrays
 		int[] ints;
-		final int MAX_INTS = 20;
-		int[] ints2 = new int[MAX_INTS];
-		final int MAX_CHARS = 20;
-		char[] chars = new char[MAX_CHARS];
-		final int MAX_STRINGS = 20;
+		final int maxInts = 20;
+		int[] ints2 = new int[maxInts];
+		final int maxChars = 20;
+		char[] chars = new char[maxChars];
+		final int maxStrings = 20;
 
-		char[] strings = new char[MAX_STRINGS];
-		final int MAX_STRING_ARRAYS = 20;
-		String[][] stringArrays = new String[MAX_STRINGS][MAX_STRING_ARRAYS];
+		char[] strings = new char[maxStrings];
+		final int maxStringsArray = 20;
+		String[][] stringArrays = new String[maxStrings][maxStringsArray];
 	}
 
 	public static void conditionalAndOutput(int score) {
-		final int PASS_CUTOFF = 50;
-		if (score < PASS_CUTOFF) {
+		final int passCutoff = 50;
+		if (score < passCutoff) {
 			System.out.println("**************");
 			System.out.println("FAILED");
 			System.out.println("**************");

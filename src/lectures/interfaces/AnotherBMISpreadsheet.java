@@ -5,16 +5,16 @@ public class AnotherBMISpreadsheet implements BMISpreadsheet{
 	public double getHeight() {
         return height;
     }
-    public void setHeight(double newHeight) {
-        height = newHeight;
+    public void setHeight(double newValue) {
+        height = newValue;
         bmi = weight/(height*height);
     }
     
     public double getWeight() {
         return weight;
     }
-    public void setWeight(double newWeight) {
-        weight = newWeight;
+    public void setWeight(double newValue) {
+        weight = newValue;
         bmi = weight/(height*height);
     }    
     public double getBMI() {

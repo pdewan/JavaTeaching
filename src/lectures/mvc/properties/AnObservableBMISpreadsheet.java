@@ -17,12 +17,12 @@ public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements Obser
 		super(theInitialHeight, theInitialWeight);
 	}
 	
-	public void setWeight(double newWeight) {
+	public void setWeight(double newValue) {
 		double oldWeight = getWeight();
 		double oldBMI = getBMI();
-		super.setWeight(newWeight);
+		super.setWeight(newValue);
 		if (propertyListenerSupport != null) {
-		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "Weight", oldWeight, newWeight));
+		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "Weight", oldWeight, newValue));
 		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "BMI", oldBMI, getBMI()));
 		}
 
@@ -30,12 +30,12 @@ public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements Obser
 //	public double getHeight() {
 //		return height;
 //	}
-	public void setHeight(double newHeight) {
+	public void setHeight(double newValue) {
 		double oldHeight = getHeight();
 		double oldBMI = getBMI();
-		super.setHeight(newHeight);
+		super.setHeight(newValue);
 		if (propertyListenerSupport != null) {
-		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "Height", oldHeight, newHeight));
+		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "Height", oldHeight, newValue));
 		  propertyListenerSupport.notifyAllListeners(new PropertyChangeEvent(this, "BMI", oldBMI, getBMI()));
 		}
 	}	

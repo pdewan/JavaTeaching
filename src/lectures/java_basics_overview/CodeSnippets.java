@@ -12,30 +12,30 @@ public class CodeSnippets {
 
 	 static void primtiveAndStringLocalVariables() {		
 		// primitives and string
-		double height = 1.77;
-		float weight = 75;
-		boolean overWeight = false;
-		final int HIGH_BMI = 27;
+		final double height = 1.77;
+		final float weight = 75;
+		final boolean overWeight = false;
+		final int highBMI = 27;
 		String name = "joe";
 		char firstChar = name.charAt(0);
 		int bmi = (int) (weight / (height * height));
 
 		// arrays
 		int[] ints;
-		final int MAX_INTS = 20;
-		int[] ints2 = new int[MAX_INTS];
-		final int MAX_CHARS = 20;
-		char[] chars = new char[MAX_CHARS];
-		final int MAX_STRINGS = 20;
+		final int maxInts = 20;
+		int[] ints2 = new int[maxInts];
+		final int maxChars = 20;
+		char[] chars = new char[maxChars];
+		final int maxStrings = 20;
 
-		char[] strings = new char[MAX_STRINGS];
-		final int MAX_STRING_ARRAYS = 20;
-		String[][] stringArrays = new String[MAX_STRINGS][MAX_STRING_ARRAYS];
+		char[] strings = new char[maxStrings];
+		final int maxStringArrays = 20;
+		String[][] stringArrays = new String[maxStrings][maxStringArrays];
 	}
 
-	 static void conditionalAndOutput(int score) {
-		final int PASS_CUTOFF = 50;
-		if (score < PASS_CUTOFF) {
+	 static void conditionalAndOutput(int aScore) {
+		final int passCutoff = 50;
+		if (aScore < passCutoff) {
 			System.out.println("**************");
 			System.out.println("FAILED");
 			System.out.println("**************");
@@ -58,31 +58,31 @@ public class CodeSnippets {
 		}
 	}
 	
-	static char computeCharGrade(int score) {
-		if (score >=90)
+	static char computeCharGrade(int aScore) {
+		if (aScore >=90)
 			return 'A';
-		if (score >= 80)
+		if (aScore >= 80)
 			return 'B';
-		if (score >= 70)
+		if (aScore >= 70)
 			return 'C';
-		if (score >= 60)
+		if (aScore >= 60)
 			return 'D';
 		return 'F';
 	}
-	static Grade computeEnumGrade(int score) {
-		if (score >=90)
+	static Grade computeEnumGrade(int aScore) {
+		if (aScore >=90)
 			return Grade.A;
-		if (score >= 80)
+		if (aScore >= 80)
 			return Grade.B;
-		if (score >= 70)
+		if (aScore >= 70)
 			return Grade.C;
-		if (score >= 60)
+		if (aScore >= 60)
 			return Grade.D;
 		return Grade.F;
 	}
 	 
-	static void commentOnGrade(char grade) {
-		switch (grade) {
+	static void commentOnGrade(char aGrade) {
+		switch (aGrade) {
 		case 'A':
 		case 'B':
 			System.out.println("Good");
@@ -99,8 +99,8 @@ public class CodeSnippets {
 		}
 	}
 	
-	static void commentOnGrade(Grade grade) {
-		switch (grade) {
+	static void commentOnGrade(Grade aGrade) {
+		switch (aGrade) {
 		case A:
 		case B:
 			System.out.println("Good");
@@ -162,21 +162,21 @@ public class CodeSnippets {
 		System.out.println("Number of Strings:");
 		return Console.readInt(); // reads the next line as integer
 	}
-	 static String[] readStrings(int numElements) {
-		System.out.println("Please enter " + numElements + " strings");
-		String[] strings = new String[numElements]; // dynamic array
-		for (int elementNum = 0; elementNum < numElements; elementNum++)
+	 static String[] readStrings(int aNumElements) {
+		System.out.println("Please enter " + aNumElements + " strings");
+		String[] strings = new String[aNumElements]; // dynamic array
+		for (int elementNum = 0; elementNum < aNumElements; elementNum++)
 			strings[elementNum] = Console.readString();
 		return strings;
 	}
-	 static void printStrings(String[] strings) {
-		for (int elementNum = 0; elementNum < strings.length; elementNum++)
-			System.out.println(strings[elementNum]);
+	 static void printStrings(String[] aStrings) {
+		for (int elementNum = 0; elementNum < aStrings.length; elementNum++)
+			System.out.println(aStrings[elementNum]);
 	}
 	
-	 static void printString(String s) {
-		for (int i = 0; i < s.length(); i++)
-			System.out.println(s.charAt(i));
+	 static void printString(String aString) {
+		for (int i = 0; i < aString.length(); i++)
+			System.out.println(aString.charAt(i));
 	}
 	
 

@@ -5,22 +5,22 @@ public class ABMISpreadsheetAndCalculator implements BMISpreadsheet, BMICalculat
 	public double getHeight() {
         return height;
     }
-    public void setHeight(double newHeight) {
-        height = newHeight;
+    public void setHeight(double newValue) {
+        height = newValue;
         bmi = calculateBMI(height, weight);
     }    
     public double getWeight() {
         return weight;
     }
-    public void setWeight(double newWeight) {
-        weight = newWeight;
+    public void setWeight(double newValue) {
+        weight = newValue;
         bmi = calculateBMI(height, weight);
     }    
     public double getBMI() {
         return bmi;
     }
-    public double calculateBMI(double height, double weight) {
-		return weight/(height*height);
+    public double calculateBMI(double aHeight, double aWeight) {
+		return aWeight/(aHeight*aHeight);
 	}
     public static void main (String[] args) {
     	BMICalculator bmiCalculator = new ABMISpreadsheetAndCalculator();

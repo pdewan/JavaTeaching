@@ -10,14 +10,14 @@ public class ABMISpreadheetWithPublicVariables implements BMISpreadsheet {
 	public double getWeight() {
 		return weight;
 	}
-	public void setWeight(double newWeight) {
-		weight = newWeight;
+	public void setWeight(double newValue) {
+		weight = newValue;
 	}	
 	public double getHeight() {
 		return height;
 	}
-	public void setHeight(double newHeight) {
-		height = newHeight;
+	public void setHeight(double newValue) {
+		height = newValue;
 	}	
 	public double getBMI() {
 		return weight/(height*height);

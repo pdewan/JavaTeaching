@@ -28,7 +28,8 @@ public class ABankAccount implements BankAccount {
      	return retVal;
 	}
 	public static void main (String args[]) {
-		ObjectEditor.edit(new ABankAccount(2500));
+		final int initialBalance = 2500;
+		ObjectEditor.edit(new ABankAccount(initialBalance));
 	}
 
 }

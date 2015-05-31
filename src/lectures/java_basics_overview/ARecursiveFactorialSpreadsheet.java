@@ -7,8 +7,8 @@ public class ARecursiveFactorialSpreadsheet implements FactorialSpreadsheet {
 	public int getNumber() {
 		return number;
 	}
-	public void setNumber(int newVal) {
-		number = newVal;
+	public void setNumber(int newValue) {
+		number = newValue;
 		factorial = Factorials.recursingFactorial(number);
 	}
 	public long getFactorial() {

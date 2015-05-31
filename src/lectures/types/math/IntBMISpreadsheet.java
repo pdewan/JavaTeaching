@@ -3,8 +3,8 @@ package lectures.types.math;
 
 public interface IntBMISpreadsheet {
 	int getWeight();
-	void setWeight(int newWeight);	
+	void setWeight(int newValue);	
 	int getHeight();
-	void setHeight(int newHeight);	
+	void setHeight(int newValue);	
 	int getBMI();
 }

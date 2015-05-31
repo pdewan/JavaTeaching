@@ -10,8 +10,8 @@ import bus.uigen.ObjectEditor;
 //@PropertyNames({ "Height", "Weight", "BMI"})
 @EditablePropertyNames({"Height", "Weight"})
 public class ABMISpreadsheetNotFollowingBeanConventions  {
-	double height = 1.77;
-	double weight = 75;
+	double height ;
+	double weight;
 	public double getWeight() {
 		return weight;
 	}

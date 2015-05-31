@@ -15,20 +15,20 @@ public class AnUnmodularUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 	public double getBMI() {return bmiSpreadsheet.getBMI();}
 	public double getHeight() {return bmiSpreadsheet.getHeight();}
 	public double getWeight() {return bmiSpreadsheet.getWeight();}
-	public void setHeight(double theHeight) {
+	public void setHeight(double newValue) {
 		oldHeight = getHeight();
-		newHeight = theHeight;
+		newHeight = newValue;
 		undoEnabled = true;
 		redoEnabled = false;
-		bmiSpreadsheet.setHeight(theHeight);
+		bmiSpreadsheet.setHeight(newValue);
 	}
-	public void setWeight(double theWeight) {
+	public void setWeight(double newValue) {
 		oldWeight = getWeight();
-		newWeight = theWeight;
+		newWeight = newValue;
 		lastWriteMethod = WriteMethod.SET_WEIGHT;
 		undoEnabled = true;
 		redoEnabled = false;
-		bmiSpreadsheet.setWeight(theWeight);		
+		bmiSpreadsheet.setWeight(newValue);		
 	}
 	void undoWeight() {bmiSpreadsheet.setWeight(oldWeight);	}
 	void undoHeight() {bmiSpreadsheet.setHeight(oldHeight);	}
