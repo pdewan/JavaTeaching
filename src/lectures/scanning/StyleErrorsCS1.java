@@ -25,7 +25,10 @@ public class StyleErrorsCS1 {
 		if (roundingError = lengthInCMS/lengthInInches != CMS_IN_INCHES ) {
 			System.out.println ("Java has rounding errors");
 		}	
-		
+		if (lengthInCMS/lengthInInches != CMS_IN_INCHES) 
+			roundingError = true;
+			System.out.println ("Java has rounding errors");
+		if (roundingError) System.out.println ("Java has rounding errors");
 	}
 
 }
