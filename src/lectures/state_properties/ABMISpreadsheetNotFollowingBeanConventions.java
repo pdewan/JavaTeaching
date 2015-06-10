@@ -6,9 +6,11 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
-@PropertyNames({ "Weight", "Height", "BMI"})
-//@PropertyNames({ "Height", "Weight", "BMI"})
-@EditablePropertyNames({"Height", "Weight"})
+//@PropertyNames({ "Weight", "Height", "BMI"})
+@PropertyNames({ "Height"})
+//@EditablePropertyNames({"Height", "Weight"})
+@EditablePropertyNames({"Height"})
+
 public class ABMISpreadsheetNotFollowingBeanConventions  {
 	double height ;
 	double weight;
