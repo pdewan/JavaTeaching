@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import lectures.main_consoleinput.Console;
 import lectures.mvc.Counter;
 
-public class AMultipleUIInteractor implements CounterInteractor {        
+public class MultipleUIInteractor implements CounterInteractor {        
         public void edit (Counter counter) {	
 	while (true) {
 	     int nextInput = Console.readInt();

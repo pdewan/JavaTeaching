@@ -1,53 +1,22 @@
 package lectures.mvc.monolithic;
 
-import lectures.mvc.Counter;
+import java.util.Scanner;
 
-public interface MonolithicConsoleUI {
-	public void edit (Counter counter);
+import lectures.main_consoleinput.Console;
+
+
+public class MonolithicConsoleUI {
+        static int counter = 0;	
+        static Scanner scanner = new Scanner(System.in);
+        public static void main(String[] args) {
+			while (true) {
+	        	System.out.println("Counter: " + counter); 
+				int nextInput = scanner.nextInt();
+				if (nextInput == 0) return;
+					counter += nextInput;
+		}
+	}
 }
 
-//public class ConsoleUI {
-//        static int counter = 0;	
-//        public static void main(String[] args) {
-//        	System.out.println("Counter: " + counter); 	
-//			while (true) {
-//				int nextInput = Console.readInt();
-//				if (nextInput == 0) return;
-//					counter += nextInput;
-//				System.out.println("Counter: " + counter);
-//		}
-//	}
-//}
-
-
-//import javax.swing.JOptionPane;
-//public class ConsoleUI {
-//	static int counter = 0;	
-//	public static void main(String[] args) {	
-//		while (true) {
-//			int nextInput = Console.readInt();
-//			if (nextInput == 0) return;
-//				counter += nextInput;
-//			JOptionPane.showMessageDialog(
-//				null, "Counter: " + counter);
-//		}
-//	}
-//}
-
-//import javax.swing.JOptionPane;
-//public class ConsoleUI {
-//	static int counter = 0;	
-//	public static void main(String[] args) {
-//		System.out.println("Counter: " + counter);
-//		while (true) {
-//			int nextInput = Console.readInt();
-//			if (nextInput == 0) return;
-//				counter += nextInput;
-//			System.out.println("Counter: " + counter);
-//			JOptionPane.showMessageDialog(
-//				null, "Counter: " + counter);
-//		}
-//	}
-//}
 
 
