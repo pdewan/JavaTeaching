@@ -1,7 +1,7 @@
 package lectures.mvc.properties;
 import lectures.graphics.StringShape;
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
-public interface ObservableStringShape extends StringShape, PropertyListenerRegistrar {	
+public interface ObservableStringShape extends StringShape, PropertyListenerRegisterer {	
     
 }

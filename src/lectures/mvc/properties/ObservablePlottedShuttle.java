@@ -1,8 +1,8 @@
 package lectures.mvc.properties;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
-public interface ObservablePlottedShuttle extends PlottedShuttle, PropertyListenerRegistrar{
+public interface ObservablePlottedShuttle extends PlottedShuttle, PropertyListenerRegisterer{
 
 }

@@ -1,8 +1,8 @@
 package lectures.mvc.toolkit;
 
 import lectures.interfaces.BMISpreadsheet;
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
-public interface ObservableBMISpreadsheet extends BMISpreadsheet, PropertyListenerRegistrar {
+public interface ObservableBMISpreadsheet extends BMISpreadsheet, PropertyListenerRegisterer {
 
 }

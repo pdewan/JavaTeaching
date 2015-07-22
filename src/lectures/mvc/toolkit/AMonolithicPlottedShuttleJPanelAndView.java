@@ -16,7 +16,7 @@ import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
 import lectures.mvc.properties.ObservablePlottedShuttle;
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
 public class AMonolithicPlottedShuttleJPanelAndView extends JPanel implements BeanView {  
 	BasicStroke dotted = new BasicStroke(
@@ -66,7 +66,7 @@ public class AMonolithicPlottedShuttleJPanelAndView extends JPanel implements Be
 		g.drawString(s, aLabel.getX(), aLabel.getY());		
 	}
 	@Override
-	public void register(PropertyListenerRegistrar aPropertyChangeRegister) {
+	public void register(PropertyListenerRegisterer aPropertyChangeRegister) {
 		aPropertyChangeRegister.addPropertyChangeListener(this);		
 	}	
 	

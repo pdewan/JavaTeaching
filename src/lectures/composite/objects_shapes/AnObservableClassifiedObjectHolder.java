@@ -6,10 +6,10 @@ import java.beans.PropertyChangeListener;
 import lectures.mvc.properties.APropertyListenerSupport;
 import lectures.mvc.properties.PropertyListenerSupport;
 import util.annotations.ComponentWidth;
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
 
-public class AnObservableClassifiedObjectHolder implements PropertyListenerRegistrar, ClassifiedObjectHolder {
+public class AnObservableClassifiedObjectHolder implements PropertyListenerRegisterer, ClassifiedObjectHolder {
 	Object object;
 	String kind;
 	PropertyListenerSupport propertyListenerSupport = new APropertyListenerSupport();	

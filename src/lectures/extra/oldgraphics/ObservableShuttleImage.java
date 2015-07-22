@@ -1,7 +1,7 @@
 package lectures.extra.oldgraphics;
 
-import util.models.PropertyListenerRegistrar;
+import util.models.PropertyListenerRegisterer;
 
-public interface ObservableShuttleImage extends ShuttleImage, PropertyListenerRegistrar {
+public interface ObservableShuttleImage extends ShuttleImage, PropertyListenerRegisterer {
 
 }
