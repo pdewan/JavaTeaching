@@ -3,8 +3,14 @@ package lectures.scanning;
 public class StyleErrorsCS1 {
 	static int lengthInInches;
 	static int mLengthInInches;
-	public final static double CMS_IN_INCHES = 2.54;	
+	public final static double CMS_IN_INCHES = 2.54;
+	public final static double cmsInInches = 2.54;	
+
 	String[] args;
+	
+	public int Sum(int anArg1, int anArg2) {
+		return anArg1 + anArg2;
+	}
 	
 	public static void main(String[] args) {
 		int lengthInInches = 0;

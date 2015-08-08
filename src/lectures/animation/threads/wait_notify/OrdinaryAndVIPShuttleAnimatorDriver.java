@@ -8,9 +8,9 @@ import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
 public class OrdinaryAndVIPShuttleAnimatorDriver  extends ConcurrentShuttleLaunchAnimation {
-	public static int ANIMATOR_FRAME_HEIGHT = 125;
-	public static int CLEARANCE_FRAME_WIDTH = 200;
-	public static int CLEARANCE_FRAME_HEIGHT = 150;
+	public static final int ANIMATOR_FRAME_HEIGHT = 125;
+	public static final int CLEARANCE_FRAME_WIDTH = 200;
+	public static final int CLEARANCE_FRAME_HEIGHT = 150;
 	static int animatorNumber;
 	
 	public static void displayShuttleAnimator(ShuttleAnimator shuttleAnimator1) {

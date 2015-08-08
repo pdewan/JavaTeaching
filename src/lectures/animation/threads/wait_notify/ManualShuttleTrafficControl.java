@@ -9,9 +9,9 @@ import bus.uigen.ObjectEditor;
 
 public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimation {
 //extends OrdinaryAndVIPShuttleAnimatorDriver {	
-	public static int ANIMATOR_FRAME_HEIGHT = 125;
-	public static int CLEARANCE_FRAME_WIDTH = 200;
-	public static int CLEARANCE_FRAME_HEIGHT = 150;
+	public final static int ANIMATOR_FRAME_HEIGHT = 125;
+	public final static int CLEARANCE_FRAME_WIDTH = 200;
+	public final static int CLEARANCE_FRAME_HEIGHT = 150;
 	static int animatorNumber;	
 	public static void displayShuttleAnimator(ShuttleAnimator shuttleAnimator1) {
 		OEFrame frame = ObjectEditor.edit(shuttleAnimator1);
