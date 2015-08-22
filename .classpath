@@ -2,12 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/remotereflect"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Shapes"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/util"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/virtualtoolkit"/>
 	<classpathentry kind="lib" path="D:/dewan_backup/Java/lib/qdox-1.12.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/uigen"/>
+	<classpathentry kind="lib" path="D:/dewan_backup/Java/lib/oeall22.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
