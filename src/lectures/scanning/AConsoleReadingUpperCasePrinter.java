@@ -15,6 +15,7 @@ public class AConsoleReadingUpperCasePrinter {
 			index++;
 		}
 		System.out.println();
+		scanner.close();
 	}
 
 }
