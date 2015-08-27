@@ -1,6 +1,9 @@
 package lectures.style;
 
 import java.util.StringTokenizer;
+import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
 import lectures.state_properties.ABMISpreadsheet;
 public class StyleErrorsCS1 {
 	static int lengthInInches;
