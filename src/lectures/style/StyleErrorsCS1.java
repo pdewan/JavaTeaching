@@ -4,7 +4,16 @@ import java.util.StringTokenizer;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+
+import util.annotations.EditablePropertyNames;
+import util.annotations.PropertyNames;
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
+import util.annotations.Tags;
 import lectures.state_properties.ABMISpreadsheet;
+@Tags({"Style", "Bean", "Annotation"})
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
+@EditablePropertyNames({"P", "A"})
 public class StyleErrorsCS1 {
 	static int lengthInInches;
 	static int mLengthInInches;
@@ -38,6 +47,9 @@ public class StyleErrorsCS1 {
 	}
 	public static void setP(String p) {
 		System.out.println(p);		
+	}
+	public static String getA() {
+		return a;
 	}
 	
 
