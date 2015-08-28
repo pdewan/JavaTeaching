@@ -12,19 +12,23 @@ public class Factorials {
 	
 	// what does Eclipse say if you replace the first long with int but do not replace the second one?
 	// what does Eclipse say if you replace the second long with int but not replace the first one? 
+//	public static int loopingFactorial(int aNumber) {
 	public static long loopingFactorial(int aNumber) {
 		long aFactorial = 1;
 		while (aNumber > 0) {
 			aFactorial *= aNumber;
 			aNumber -= 1;
 		}
+//		return (int) aFactorial;
 		return aFactorial;
+
 	}
 	// What happens to the times and results when you replace  long with int?
 	// try factorial 16 and 17
 	// what does Eclipse say if you delete public or static
 	public static long recursingFactorial(int aNumber) {
-		// What happens if you delete or comment out the next two lines
+		// What happens if you delete or comment out the next two lines, which are the
+		// base case
 		if (aNumber <= 1)
 			return 1;
 		return aNumber*recursingFactorial(aNumber-1);

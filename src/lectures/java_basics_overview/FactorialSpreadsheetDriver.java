@@ -4,14 +4,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class FactorialSpreadsheetDriver {
-	static final int NUMBER_WITH_LARGE_FACTORIAL = 15;
+	static final int NUMBER_WITH_LARGE_FACTORIAL = 8000;
 	// what happens to the times when you change this number to say 2, 100000, and 2000000?
 	//  in which cases could you perceive the  time delays?
-	public static final long NUMBER_OF_LARGE_FACTORIAL_COMPUTATIONS = 1000000;
+	public static final long NUMBER_OF_LARGE_FACTORIAL_COMPUTATIONS = 100000;
 	// what happens to the output when you switch between the following two initializing-declarations
 	// what do you think is happening when you do the switch?
-	static FactorialSpreadsheet factorialSpreadsheet = new ARecursiveFactorialSpreadsheet();
-//	static FactorialSpreadsheet factorialSpreadsheet = new ALoopingFactorialSpreadsheet();
+//	static FactorialSpreadsheet factorialSpreadsheet = new ARecursiveFactorialSpreadsheet();
+	static FactorialSpreadsheet factorialSpreadsheet = new ALoopingFactorialSpreadsheet();
 	static BufferedReader inputStream = new BufferedReader(
 			new InputStreamReader(System.in));
 	public static int readInt() {		
