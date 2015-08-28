@@ -13,7 +13,7 @@ import util.annotations.Tags;
 import lectures.state_properties.ABMISpreadsheet;
 @Tags({"Style", "Annotation"})
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
-@PropertyNames({"P", "A"})
+@PropertyNames({"P", "A", "B"})
 @EditablePropertyNames({"P", "A"})
 public class StyleErrorsCS1 {
 	static int lengthInInches;
