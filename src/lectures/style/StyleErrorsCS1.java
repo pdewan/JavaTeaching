@@ -11,8 +11,9 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.annotations.Tags;
 import lectures.state_properties.ABMISpreadsheet;
-@Tags({"Style", "Bean", "Annotation"})
+@Tags({"Style", "Annotation"})
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
+@PropertyNames({"P", "A"})
 @EditablePropertyNames({"P", "A"})
 public class StyleErrorsCS1 {
 	static int lengthInInches;
@@ -52,6 +53,34 @@ public class StyleErrorsCS1 {
 		return a;
 	}
 	
+	public static void giveGradeThenBranching(boolean hasScreenShots, 
+			boolean correctPackage, boolean runsCorrectly) {
+		if (hasScreenShots) {
+			if (correctPackage) {
+				if (runsCorrectly) {
+					System.out.println("Full Credit");
+				} else {
+					System.out.println("Does not run correctly");
+				}
+			} else {
+				System.out.println("Cannot run");
+			}
+		} else {
+			System.out.println("Not tested");
+		}
+	}
+	public static void giveGradeElseBranching(boolean hasScreenShots, 
+			boolean correctPackage, boolean runsCorrectly) {
+		if (!hasScreenShots) {
+			System.out.println("Not tested");
+		} else if (!correctPackage) {
+			System.out.println("Cannot run");
+		} else if (!runsCorrectly) {
+			System.out.println("Does not run correctly");
+		} else {
+			System.out.println("Full Credit");
+		}				
+	}
 
 	public static int Sum(int anArg1, int anArg2) {
 		return anArg1 + anArg2;
