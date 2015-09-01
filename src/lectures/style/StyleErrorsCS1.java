@@ -27,22 +27,7 @@ public class StyleErrorsCS1 {
 	static String p;
 	static String a;
 	
-	public static String add(String a, String b){
-		return a + b;
-	}
 	
-	
-	public static String badAdd(String a, String b) {
-		p = add (a, b);
-		return p;
-	}
-
-	static int marker = 0;
-	
-	public static char nextChar(){
-		marker++;
-		return p.charAt(marker);
-	}
 	public static String getP(){
 		return p;
 	}
@@ -77,9 +62,10 @@ public class StyleErrorsCS1 {
 			System.out.println("Cannot run");
 		} else if (!runsCorrectly) {
 			System.out.println("Does not run correctly");
-		} else {
+		} else 
 			System.out.println("Full Credit");
-		}				
+			System.out.println ("Well done");
+						
 	}
 
 	public static int Sum(int anArg1, int anArg2) {
@@ -117,6 +103,8 @@ public class StyleErrorsCS1 {
 			setP("Hello");
 		if (!(p == "Hello"))
 			setP("Hello");
+		if ("Hello".equals(p))
+			setP("Hello");
 
 		int lengthInInches = 0;
 		if (lengthInInches <= 0 ); 
@@ -139,6 +127,22 @@ public class StyleErrorsCS1 {
 			roundingError = true;
 			System.out.println ("Java has rounding errors");
 		if (roundingError) System.out.println ("Java has rounding errors");
+	}
+	public static String add(String a, String b){
+		return a + b;
+	}
+	
+	
+	public static String badAdd(String a, String b) {
+		p = add (a, b);
+		return p;
+	}
+
+	static int marker = 0;
+	
+	public static char nextChar(){
+		marker++;
+		return p.charAt(marker);
 	}
 
 }
