@@ -5,16 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-import util.annotations.EditablePropertyNames;
-import util.annotations.PropertyNames;
-import util.annotations.StructurePattern;
-import util.annotations.StructurePatternNames;
 import util.annotations.Tags;
 import lectures.state_properties.ABMISpreadsheet;
-@Tags({"Style", "Annotation"})
-@StructurePattern(StructurePatternNames.BEAN_PATTERN)
-@PropertyNames({"P", "A", "B"})
-@EditablePropertyNames({"P", "A"})
+@Tags({"Style", "Annotation", "ScannerBean"})
+
 public class StyleErrorsCS1 {
 	static int lengthInInches;
 	static int mLengthInInches;
@@ -25,18 +19,11 @@ public class StyleErrorsCS1 {
 
 	String[] args;
 	static String p;
-	static String a;
 	
-	
-	public static String getP(){
-		return p;
-	}
 	public static void setP(String p) {
 		System.out.println(p);		
 	}
-	public static String getA() {
-		return a;
-	}
+	
 	
 	public static void giveGradeThenBranching(boolean hasScreenShots, 
 			boolean correctPackage, boolean runsCorrectly) {
@@ -82,13 +69,15 @@ public class StyleErrorsCS1 {
 	}
 	
 	public void print (int[] anArray) {
-		for (int k = 0; k < anArray.length; k++)
+		for (int k = 0; k < anArray.length; k++) {
 			System.out.println(anArray[k]);
+		}
 	}
 	
 	public void print (int[][] anArray) {
-		for (int k = 0; k < anArray.length; k++)
+		for (int k = 0; k < anArray.length; k++) {
 			print(anArray[k]);
+		}
 	}
 	public void modularPrintArray () {
 		int[][][] anArray = {{{1, 2}, {3, 4}}};
@@ -99,12 +88,15 @@ public class StyleErrorsCS1 {
 	
 	
 	public static void main(String[] args) {
-		if (!p.equals("Hello"))			
+		if (!p.equals("Hello"))	{		
 			setP("Hello");
-		if (!(p == "Hello"))
+		}
+		if (!(p == "Hello")) {
 			setP("Hello");
-		if ("Hello".equals(p))
+		}
+		if ("Hello".equals(p)) {
 			setP("Hello");
+		}
 
 		int lengthInInches = 0;
 		if (lengthInInches <= 0 ); 
