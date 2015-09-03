@@ -12,21 +12,23 @@ import lectures.interfaces.BMISpreadsheet;
 @PropertyNames({ "Height", "Weight", "BMI", "IdealBMI" })
 @EditablePropertyNames({ "Height", "Weight", "BMI" })
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
-public class ABMISpreadsheet implements BMISpreadsheet {
+public class ABMISpreadsheetWihStyleErrorsCS2 
+	implements BMISpreadsheet 
+	{
 	double height;
 	double weight;
 
-	public ABMISpreadsheet() {
+	public ABMISpreadsheetWihStyleErrorsCS2() {
 	}
 
-	public ABMISpreadsheet(double theInitialHeight, double theInitialWeight) {
+	public ABMISpreadsheetWihStyleErrorsCS2(double theInitialHeight, double theInitialWeight) {
 		setHeight(theInitialHeight);
 		setWeight(theInitialWeight);
 	}
 
 	public double getWeight() {
-		// return weight;
-		return 70.0;
+		 return weight;
+//		return 70.0;
 	}
 
 	public void setWeight(double newValue) {
@@ -47,14 +49,18 @@ public class ABMISpreadsheet implements BMISpreadsheet {
 		return weight / (height * height);
 	}
 //	public static void print(BMISpreadsheet aBMISpreadsheet) {
-//		System.out.println ("BMI:" + aBMISpreadsheet.getBMI());
+//		System.out.println ("Height:" + aBMISpreadsheet.getHeight());		
+//		System.out.println ("Weight:" + aBMISpreadsheet.getWeight());
+//		System.out.println ("BMI:" + aBMISpreadsheet.getBMI());	
 //		
 //	}
-	public static void print(ABMISpreadsheet aBMISpreadsheet) {
+	public static void print(ABMISpreadsheetWihStyleErrorsCS2 aBMISpreadsheet) {
+		System.out.println ("Height:" + aBMISpreadsheet.getHeight());		
+		System.out.println ("Weight:" + aBMISpreadsheet.getWeight());
 		System.out.println ("BMI:" + aBMISpreadsheet.getBMI());		
 	}
 	public static void main (String[] args) {
-		print (new ABMISpreadsheet());
+		print (new ABMISpreadsheetWihStyleErrorsCS2());
 //		print (new AnotherBMISpreadsheet());
 	}
 }
