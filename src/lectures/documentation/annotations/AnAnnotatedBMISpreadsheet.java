@@ -1,9 +1,15 @@
 package lectures.documentation.annotations;
 
+import util.annotations.EditablePropertyNames;
 import util.annotations.Explanation;
+import util.annotations.PropertyNames;
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import util.annotations.Tags;
 @Explanation("Stores previously computed BMI value in a variable.")
 @Tags({"Annotations", "Spreadsheet", "Properties", "Interfaces", "Object Editor"})
+@PropertyNames({"Weight", "Height", "BMI"})
+@EditablePropertyNames({"Height","Weight"})
 public class AnAnnotatedBMISpreadsheet implements AnnotatedBMISpreadsheet   {
 	double height, weight;
 	double initialHeight, initialWeight;
