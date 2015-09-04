@@ -8,12 +8,12 @@ import util.annotations.Tags;
 import lectures.interfaces.AnotherBMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
 
-@Tags({ "ScannerBean" })
-@PropertyNames({ "Height", "Weight", "BMI", "IdealBMI" })
+@Tags({ "Quote" })
+@PropertyNames({ "Height", "Weight", "BMI"/*, "IdealBMI"*/ })
 @EditablePropertyNames({ "Height", "Weight", "BMI" })
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class ABMISpreadsheetWihStyleErrorsCS2 
-//	implements BMISpreadsheet 
+	implements BMISpreadsheet 
 	{
 	double height;
 	double weight;
