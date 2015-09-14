@@ -10,7 +10,6 @@ import lectures.graphics.StringShape;
 import util.annotations.Visible;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-// how should this share code with ACartesianPlane?
 public class APraxisGraphCartesianPlane implements DAGCartesianPlane {
 	int originX, originY;
 	int axesLength;
