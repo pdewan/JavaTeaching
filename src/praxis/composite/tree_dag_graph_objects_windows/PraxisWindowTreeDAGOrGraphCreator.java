@@ -22,11 +22,11 @@ public class PraxisWindowTreeDAGOrGraphCreator {
 		leftPanel.add(textField);
 		JButton button = new JButton ("Press me");
 		// comment this out
-//		rightPanel.add(button);
+		rightPanel.add(button);
 		// uncomment this after commenting the upper and lower lines out 
 //		rightPanel.add(textField);
 		// uncomment this after commenting the above two lines out
-		rightPanel.add(splitPane);
+//		rightPanel.add(splitPane);
 		frame.setSize(300, 100);
 		frame.setVisible(true);
 	}
