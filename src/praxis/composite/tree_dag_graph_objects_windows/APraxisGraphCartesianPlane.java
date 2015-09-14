@@ -124,5 +124,7 @@ public class APraxisGraphCartesianPlane implements DAGCartesianPlane {
 		OEFrame editor = ObjectEditor.edit(plane);
 		editor.showTreePanel();
 		editor.setSize(500, 600);
+		// set break point on statement below
+		System.out.println("Plane Displayed");
 	}
 }
