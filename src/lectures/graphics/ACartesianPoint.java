@@ -1,6 +1,8 @@
 package lectures.graphics;
 
 import util.annotations.Explanation;
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;
 @Explanation("Uses Cartesian representation.")
 public class ACartesianPoint implements Point {	

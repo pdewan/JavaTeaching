@@ -1,28 +1,33 @@
-package lectures.composite.tree_dag_graph_objects_windows;
+package praxis.composite.tree_dag_graph_objects_windows;
 
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
+import lectures.composite.tree_dag_graph_objects_windows.DAGCartesianPlane;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.AStringShape;
 import lectures.graphics.Point;
 import lectures.graphics.StringShape;
 import util.annotations.Visible;
+import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 // how should this share code with ACartesianPlane?
-public class ADAGCartesianPlane implements DAGCartesianPlane {
+public class APraxisGraphCartesianPlane implements DAGCartesianPlane {
 	int originX, originY;
 	int axesLength;
-	LineWithObjectProperty xAxis, yAxis;
+	PraxisLineWithObjectProperty xAxis;
+	LineWithObjectProperty yAxis;
+
 	Point xAxisLocation, yAxisLocation;
 	StringShape xLabel;
 	StringShape yLabel;
-	public ADAGCartesianPlane(int theAxesLength, int theOriginX, int theOriginY) {
+	public APraxisGraphCartesianPlane(int theAxesLength, int theOriginX, int theOriginY) {
 		axesLength = theAxesLength;
 		originX = theOriginX;
 		originY = theOriginY;
 		xAxisLocation = toXAxisLocation();
 		yAxisLocation = toYAxisLocation();
-		xAxis = new ALineWithObjectProperty(xAxisLocation, theAxesLength, 0);
+		xAxis = new APraxisLineWithObjectProperty(xAxisLocation, theAxesLength, 0);
+		xAxis.setGraph(this);
 		yAxis = new ALineWithObjectProperty(yAxisLocation, 0, theAxesLength);
 		xLabel = new AStringShape("X", toXLabelX(), toXLabelY());
 		yLabel = new AStringShape("Y", toYLabelX(), toYLabelY());
@@ -34,13 +39,21 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	public LineWithObjectProperty getYAxis() {
 		return yAxis;
 	}
-	@Visible(false)
+	// comment this in
+//	@Visible(false)
 	public Point getXAxisLocation() {
-		return xAxisLocation;
+		// comment this out
+		return null;
+		// uncomment this in
+//		return xAxisLocation;
 	}
-	@Visible(false)
+	// comment this in
+//	@Visible(false)
 	public Point getYAxisLocation() {
-		return yAxisLocation;
+		// comment this out
+		return null;
+		// uncommment this in
+//		return yAxisLocation;
 	}	
 	public void setAxesLength(int anAxesLength) {
 		axesLength = anAxesLength;
@@ -108,7 +121,9 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	}
 
 	public static void main(String[] args) {
-		DAGCartesianPlane plane = new ADAGCartesianPlane(200, 125, 125);
-		ObjectEditor.edit(plane);
+		DAGCartesianPlane plane = new APraxisGraphCartesianPlane(200, 125, 125);
+		OEFrame editor = ObjectEditor.edit(plane);
+		editor.showTreePanel();
+		editor.setSize(500, 600);
 	}
 }

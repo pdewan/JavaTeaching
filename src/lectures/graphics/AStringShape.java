@@ -1,8 +1,10 @@
 package lectures.graphics;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;
 
-//@StructurePattern(StructurePatternNames.LABEL_PATTERN)
+@StructurePattern(StructurePatternNames.STRING_PATTERN)
 public class AStringShape implements StringShape {
 	String text;
 	int x, y;
