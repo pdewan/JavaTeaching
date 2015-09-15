@@ -123,7 +123,7 @@ public class APraxisGraphCartesianPlane implements DAGCartesianPlane {
 		DAGCartesianPlane plane = new APraxisGraphCartesianPlane(200, 125, 125);
 		OEFrame editor = ObjectEditor.edit(plane);
 		editor.showTreePanel();
-		editor.setSize(500, 600);
+		editor.setSize(1200, 600);
 		// set break point on statement below
 		System.out.println("Plane Displayed");
 	}
