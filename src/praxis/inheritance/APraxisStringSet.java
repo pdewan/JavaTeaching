@@ -15,7 +15,7 @@ public class APraxisStringSet extends APraxisStringDatabase implements PraxisStr
 	// uncomment this
 //	protected int size = 0;
 	public void add(String element) {
-		System.out.println ("Calling addElement and size =" + size);
+//		System.out.println ("Calling addElement and size =" + size);
 //		if (size == MAX_SIZE)
 		if (size == AStringHistory.MAX_SIZE) {
 			System.out.println("Adding item to a full history");
