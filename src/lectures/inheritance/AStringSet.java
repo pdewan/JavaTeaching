@@ -6,9 +6,8 @@ public class AStringSet extends AStringDatabase implements StringDatabase {
 		if (isFull())
 			System.out.println("Adding item to a full history");
 		else if (!member(element)) {
-			// check for duplicate
-			contents[size] = element;
-			size++;
+			super.addElement(element);
+
 		}
 	}
 	
