@@ -1,6 +1,6 @@
 package lectures.inheritance.is_a;
 
-public interface CorrectlytInheritingLine extends CorrectlyInheritingPoint {
+public interface CorrectlytInheritingLine extends Locatable {
 	int getX();
 
 	int getY();

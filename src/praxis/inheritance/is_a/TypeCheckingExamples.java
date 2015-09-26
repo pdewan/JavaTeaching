@@ -1,5 +1,9 @@
-package lectures.inheritance;
+package praxis.inheritance.is_a;
 
+import praxis.inheritance.APraxisStringDatabase;
+import praxis.inheritance.APraxisStringHistory;
+import praxis.inheritance.PraxisStringDatabase;
+import praxis.inheritance.PraxisStringHistory;
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
 import lectures.graphics.Point;
@@ -13,33 +17,33 @@ public class TypeCheckingExamples {
 	}
 	
    public  void assigningToAMoreGeneralType() {
-	   StringHistory stringHistory = new AStringDatabase();
+	   PraxisStringHistory stringHistory = new APraxisStringDatabase();
 	   stringHistory.size();
 //	   stringHistory .clear();
-	   ((StringDatabase) stringHistory) .clear();
-	   if (stringHistory instanceof StringDatabase) {
-		   ((StringDatabase) stringHistory) .clear();
+	   ((PraxisStringDatabase) stringHistory) .clear();
+	   if (stringHistory instanceof PraxisStringDatabase) {
+		   ((PraxisStringDatabase) stringHistory) .clear();
 	   } else {
 		   System.out.println("Got unlucky");
 	   }
 	}
    
    public  void incorrectCompileTimeAndRunTimeCasts() {
-	   StringDatabase database= (StringDatabase) new AStringHistory(); // runtime error known at compile to be error
+	   PraxisStringDatabase database= (PraxisStringDatabase) new APraxisStringHistory(); // runtime error known at compile to be error
 //	   String[] strings= (String)  "Joe Doe";
-	   Point point = (Point) (new AStringHistory()); // runtime error and known to be wrong at compile time
-	   StringHistory stringHistory = new AStringHistoryAndPoint(); 
+	   Point point = (Point) (new APraxisStringHistory()); // runtime error and known to be wrong at compile time
+	   StringHistory stringHistory = new APraxisStringHistoryAndPoint(); 
 	   point = (Point) stringHistory; 
 //	   point = (Point) "hello";
 	}
    
    public void legalAndIllegalArrayExamples() {
-	   Object[] objects = { "Joe Doe", new AStringDatabase(), new AStringHistory()};
-	   StringDatabase[] database= {(StringDatabase) new AStringHistory()};
+	   Object[] objects = { "Joe Doe", new APraxisStringDatabase(), new AStringHistory()};
+	   PraxisStringDatabase[] database= {(PraxisStringDatabase) new AStringHistory()};
    }
    
    public void specialObjectRules() {
-	   StringHistory stringHistory = new AStringDatabase(); 
+	   PraxisStringHistory stringHistory = new APraxisStringDatabase(); 
 	   Object o = stringHistory; // StringHistory is an object
 	   System.out.println(stringHistory);  // println takes Object arguments
 
