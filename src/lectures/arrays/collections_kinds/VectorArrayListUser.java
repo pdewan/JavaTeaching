@@ -9,11 +9,11 @@ public class VectorArrayListUser {
 		List names = new Vector();
 		List grandSlams = new ArrayList();
 		names.add("Nadal");
-		grandSlams.add(11);
+		grandSlams.add(14);
 		names.add("Federer");
 		grandSlams.add(17);
 		names.add("Djokovic");
-		grandSlams.add(5);
+		grandSlams.add(9);
 	}
 
 }
