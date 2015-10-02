@@ -7,11 +7,13 @@ import lectures.graphics.ALine;
 import lectures.graphics.Line;
 import bus.uigen.ObjectEditor;
 
-public class APraxisObservableLine extends ALine implements ObservableLine  {
+public class APraxisObservableLine extends ALine implements PraxisObservableLine  {
 //	int x, y, width, height;
+	String name;
 	PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
-	public APraxisObservableLine (int initX, int initY, int initWidth, int initHeight) {
+	public APraxisObservableLine (String aName, int initX, int initY, int initWidth, int initHeight) {
 		super(initX, initY, initWidth, initHeight);
+		name = aName;
 	}
 //	public int getX() {return x;}
 	public void setX(int newVal) {
@@ -50,12 +52,15 @@ public class APraxisObservableLine extends ALine implements ObservableLine  {
 		propertySupport.add(listener);
 		
 	}
-	public static void main(String args[]) {
-		ObservableLine observableLine = new APraxisObservableLine(10, 10, 20, 20);
-		ObjectEditor.edit(observableLine);
-		observableLine.setX(100);
-		observableLine.setY(100);
-		observableLine.setWidth(100);
-		observableLine.setHeight(100);
+	public String toString () {
+		return name;
 	}
+//	public static void main(String args[]) {
+//		PraxisObservableLine observableLine = new APraxisObservableLine(10, 10, 20, 20);
+//		ObjectEditor.edit(observableLine);
+//		observableLine.setX(100);
+//		observableLine.setY(100);
+//		observableLine.setWidth(100);
+//		observableLine.setHeight(100);
+//	}
 }

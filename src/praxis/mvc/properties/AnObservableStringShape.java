@@ -6,14 +6,14 @@ import java.beans.PropertyChangeListener;
 import lectures.graphics.AStringShape;
 import lectures.graphics.StringShape;
 
-public class AnObservableStringShape extends AStringShape implements ObservableStringShape {
+public class AnObservableStringShape extends AStringShape implements PraxisObservableStringShape {
 //	int width, height;
 //	String text, imageFileName;
 //	Point location;
 	PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
 
-	public AnObservableStringShape(String initImageFile, int initX, int initY) {
-		super(initImageFile, initX, initY);
+	public AnObservableStringShape(String initText, int initX, int initY) {
+		super(initText, initX, initY);
 	}
 	public void addPropertyChangeListener(PropertyChangeListener l) {
 		propertySupport.add(l);
@@ -47,7 +47,9 @@ public class AnObservableStringShape extends AStringShape implements ObservableS
 				newVal));
 		
 	}
-
+	public String toString() {
+		return getText();
+	}
 	
 
 	public static void main(String[] args) {

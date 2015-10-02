@@ -12,8 +12,8 @@ public class APraxisObservableCartesianPlane extends ACartesianPlane implements 
     PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
     public APraxisObservableCartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
         super(theAxesLength, theOriginX, theOriginY);
-        xAxis = new APraxisObservableLine(toXAxisX(), toXAxisY(), axesLength, 0);
-        yAxis = new APraxisObservableLine(toYAxisX(), toYAxisY(), 0, axesLength); 
+        xAxis = new APraxisObservableLine("XAxis", toXAxisX(), toXAxisY(), axesLength, 0);
+        yAxis = new APraxisObservableLine("YAxis", toYAxisX(), toYAxisY(), 0, axesLength); 
         xLabel = new AnObservableStringShape ("X", toXLabelX(), toXLabelY());
         yLabel = new AnObservableStringShape ("Y", toYLabelX(), toYLabelY());
     } 
