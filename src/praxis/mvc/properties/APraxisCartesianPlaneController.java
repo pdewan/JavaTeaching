@@ -2,10 +2,12 @@ package praxis.mvc.properties;
 
 import java.util.Scanner;
 
+import praxis.composite.objects_shapes.PraxisCartesianPlane;
+
 public class APraxisCartesianPlaneController implements PraxisConsoleController{
 	static Scanner scanner = new Scanner(System.in);
-	PraxisObservableCartesianPlane model;
-	public APraxisCartesianPlaneController(PraxisObservableCartesianPlane aModel) {
+	PraxisCartesianPlane model;
+	public APraxisCartesianPlaneController(PraxisCartesianPlane aModel) {
 		model = aModel;		
 	}
 	public void processInput () {

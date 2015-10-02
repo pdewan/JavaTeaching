@@ -8,12 +8,10 @@ import lectures.graphics.Line;
 import bus.uigen.ObjectEditor;
 
 public class APraxisObservableLine extends ALine implements PraxisObservableLine  {
-//	int x, y, width, height;
-	String name;
+
 	PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
-	public APraxisObservableLine (String aName, int initX, int initY, int initWidth, int initHeight) {
+	public APraxisObservableLine (int initX, int initY, int initWidth, int initHeight) {
 		super(initX, initY, initWidth, initHeight);
-		name = aName;
 	}
 //	public int getX() {return x;}
 	public void setX(int newVal) {
@@ -52,9 +50,7 @@ public class APraxisObservableLine extends ALine implements PraxisObservableLine
 		propertySupport.add(listener);
 		
 	}
-	public String toString () {
-		return name;
-	}
+	
 //	public static void main(String args[]) {
 //		PraxisObservableLine observableLine = new APraxisObservableLine(10, 10, 20, 20);
 //		ObjectEditor.edit(observableLine);
