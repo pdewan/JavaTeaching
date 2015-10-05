@@ -3,16 +3,15 @@ package praxis.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.Tags;
 import lectures.graphics.AStringShape;
 import lectures.graphics.StringShape;
+@Tags({"Model", "Observable"})
+public class APraxisNotifyingStringShape extends AStringShape implements PraxisObservableStringShape {
 
-public class AnObservableStringShape extends AStringShape implements PraxisObservableStringShape {
-//	int width, height;
-//	String text, imageFileName;
-//	Point location;
 	PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
 
-	public AnObservableStringShape(String initText, int initX, int initY) {
+	public APraxisNotifyingStringShape(String initText, int initX, int initY) {
 		super(initText, initX, initY);
 	}
 	public void addPropertyChangeListener(PropertyChangeListener l) {
@@ -53,7 +52,7 @@ public class AnObservableStringShape extends AStringShape implements PraxisObser
 	
 
 	public static void main(String[] args) {
-		StringShape label = new AnObservableStringShape("hello", 10, 20);
+		StringShape label = new APraxisNotifyingStringShape("hello", 10, 20);
 		bus.uigen.ObjectEditor.edit(label);
 		label.setX(100);
 		label.setY(50);

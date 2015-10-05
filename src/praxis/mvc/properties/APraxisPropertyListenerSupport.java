@@ -3,6 +3,8 @@ package praxis.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.Tags;
+@Tags({"NotificationSupport"})
 public class APraxisPropertyListenerSupport implements PraxisPropertyListenerSupport {
 	public final int MAX_SIZE = 50;
 	PropertyChangeListener[] contents = new PropertyChangeListener[MAX_SIZE];
@@ -21,11 +23,12 @@ public class APraxisPropertyListenerSupport implements PraxisPropertyListenerSup
 
 	}
 
-	public void add(PropertyChangeListener l) {
+	public void add(PropertyChangeListener l) {		
 		if (isFull())
 			System.out.println("Adding item to a full collection");
 		else {
 			contents[size] = l;
+			// put break here
 			size++;
 		}
 	}  

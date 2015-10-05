@@ -3,17 +3,17 @@ package praxis.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.Tags;
 import lectures.graphics.ALine;
 import lectures.graphics.Line;
 import bus.uigen.ObjectEditor;
-
-public class APraxisObservableLine extends ALine implements PraxisObservableLine  {
+@Tags({"Model", "Observable"})
+public class APraxisNotifyingLine extends ALine implements PraxisObservableLine  {
 
 	PraxisPropertyListenerSupport propertySupport = new APraxisPropertyListenerSupport();
-	public APraxisObservableLine (int initX, int initY, int initWidth, int initHeight) {
+	public APraxisNotifyingLine (int initX, int initY, int initWidth, int initHeight) {
 		super(initX, initY, initWidth, initHeight);
 	}
-//	public int getX() {return x;}
 	public void setX(int newVal) {
 		int oldVal = getX();
 		super.setX(newVal);
@@ -26,7 +26,6 @@ public class APraxisObservableLine extends ALine implements PraxisObservableLine
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "Y", oldVal,
 				newVal));
 	}
-//	public int getWidth() {return width;}
 	public void setWidth(int newVal) {
 		int oldVal = getWidth();
 		super.setWidth(newVal);
@@ -40,13 +39,10 @@ public class APraxisObservableLine extends ALine implements PraxisObservableLine
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "Height", oldVal,
 				newVal));
 	}
-	public boolean equals(Object otherVal) {
-		if (!(otherVal instanceof Line)) return false;
-		Line otherLine = (Line) otherVal;
-		return (getX() == otherLine.getX() && getY() == otherLine.getY() && getWidth() == otherLine.getWidth() && getHeight() == otherLine.getHeight());
-	}	
+		
 	@Override
 	public void addPropertyChangeListener(PropertyChangeListener listener) {
+		// put break here
 		propertySupport.add(listener);
 		
 	}
