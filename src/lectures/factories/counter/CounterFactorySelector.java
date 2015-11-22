@@ -1,4 +1,4 @@
-package lectures.extra.factories;
+package lectures.factories.counter;
 
 public class CounterFactorySelector {
 	//static CounterFactory counterFactory = new ACounterFactory();

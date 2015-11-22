@@ -1,4 +1,4 @@
-package lectures.factories;
+package lectures.factories.course;
 
 import lectures.inheritance.abstract_classes.Course;
 import lectures.main_consoleinput.Console;

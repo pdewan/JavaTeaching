@@ -1,4 +1,4 @@
-package lectures.extra.factories;
+package lectures.factories.counter;
 
 import lectures.mvc.Counter;
 import bus.uigen.ObjectEditor;
@@ -29,7 +29,7 @@ public class CounterFactoryDriver {
 //	}
 	public static void main (String args[]) {
 		CounterFactory counterFactory =  CounterFactorySelector.getCounterFactory();
-		Counter model = counterFactory.createCounterModel(); 
+		Counter model = counterFactory.createCounter(); 
 		ObjectEditor.edit(model);
 	}
 }

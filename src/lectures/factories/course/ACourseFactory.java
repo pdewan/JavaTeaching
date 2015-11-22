@@ -1,4 +1,4 @@
-package lectures.factories;
+package lectures.factories.course;
 
 import lectures.inheritance.abstract_classes.AFreshmanSeminar;
 import lectures.inheritance.abstract_classes.ARegularCourse;
