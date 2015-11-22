@@ -3,7 +3,7 @@ package lectures.factories.counter;
 import lectures.mvc.ACounter;
 import lectures.mvc.Counter;
 
-public class AStaticFactoryUsingCourseSubscriptions implements CourseSubscriptions{
+public class AStaticFactoryMethodUsingCourseSubscriptions implements CourseSubscriptions{
 	Counter youTubeSubscriptions = StaticCounterFactory.createCounter();
 	Counter mixSubscriptions = StaticCounterFactory.createCounter();
 	public void youTubeSubscribed(String aUser) {

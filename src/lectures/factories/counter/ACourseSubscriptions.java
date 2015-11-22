@@ -20,5 +20,4 @@ public class ACourseSubscriptions implements CourseSubscriptions{
 	public void mixUnSubscribed(String aUser) {
 		mixSubscriptions.add(-1);
 	}
-
 }

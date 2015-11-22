@@ -11,7 +11,7 @@ import java.util.Scanner;
 import lectures.mvc.Counter;
 
 public class StaticConfigurableCounterFactory {
-	public static final String CONFIGURATION_FILE_NAME = "config.txt";
+	public static final String CONFIGURATION_FILE_NAME = "counter_config.txt";
 	static Class counterClass = AShortCounter.class;
 	static Constructor counterConstructor;
 	public static Counter createCounter (short initValue) {

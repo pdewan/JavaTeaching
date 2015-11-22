@@ -3,12 +3,10 @@ package lectures.factories.counter;
 import lectures.mvc.ACounter;
 import lectures.mvc.Counter;
 
-public class ACourseVisitsWithFactoryMethods implements CourseVisits{	
+public abstract class AnAbstractCourseVisitsWithFactoryMethods implements CourseVisits{	
+	public abstract Counter createCounter();
 	Counter youTubeVisits = createCounter();
 	Counter mixVisits = createCounter();
-	public Counter createCounter() {
-		return new AnIntCounter ((short) 0);
-	}
 	public void youTubeVisited(String aUser) {
 		youTubeVisits.add(1);
 	}	

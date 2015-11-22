@@ -10,5 +10,4 @@ public class InstanceCountingCounterSingletonFactory {
 		}
 		return instanceCounter;
 	}
-
 }
