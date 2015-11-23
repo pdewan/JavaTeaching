@@ -16,5 +16,4 @@ public class MySwingFactroryUser {
 		FrameSelector.setFrameFactory(new MySwingFrameFactory());
 		ObjectEditor.edit(aBMISpreadsheet);		
 	}
-
 }

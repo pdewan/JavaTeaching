@@ -16,5 +16,4 @@ public class ToolkitChanger {
 		VirtualToolkit.setDefaultToolkit(new AWTToolkit());
 		ObjectEditor.edit(aBMISpreadsheet);		
 	}
-
 }

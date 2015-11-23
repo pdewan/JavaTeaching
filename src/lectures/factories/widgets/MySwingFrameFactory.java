@@ -11,7 +11,6 @@ import bus.uigen.widgets.VirtualFrame;
 import bus.uigen.widgets.swing.SwingFrameFactory;
 
 public class MySwingFrameFactory extends SwingFrameFactory implements FrameFactory {
-
 	@Override
 	protected JFrame createJFrame() {
 		JFrame aJFrame = new JFrame();
