@@ -11,6 +11,7 @@ import bus.uigen.widgets.swing.SwingToolkit;
 
 public class MySwingFactroryUser {
 	public static void main (String[] anArgs) {
+		ObjectEditor.initialize();
 		BMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet();
 		ObjectEditor.edit(aBMISpreadsheet);
 		FrameSelector.setFrameFactory(new MySwingFrameFactory());
