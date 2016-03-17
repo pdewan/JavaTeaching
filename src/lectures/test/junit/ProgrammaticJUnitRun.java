@@ -32,9 +32,9 @@ public class ProgrammaticJUnitRun  extends RunListener {
 		RunNotifier aRunNotifier = new RunNotifier();
 		aRunNotifier.addListener(new ProgrammaticJUnitRun());
 		try {
-//			Runner aRunner = new BlockJUnit4ClassRunner(ACartesianPointJUnitTester.class);
+			Runner aRunner = new BlockJUnit4ClassRunner(ACartesianPointJUnitTester.class);
 			// InitializationError
-			Runner aRunner = new BlockJUnit4ClassRunner(ACartesianPointParametrizedJUnitTester.class);
+//			Runner aRunner = new BlockJUnit4ClassRunner(ACartesianPointParametrizedJUnitTester.class);
 //			Runner aRunner = new BlockJUnit4ClassRunner(ASinglePointBeforeClassJUnitMultiTester.class);
 			// IniitializationError
 //			Runner aRunner = new BlockJUnit4ClassRunner(ACartesianPointParametrizedJUnitMultiTester.class);
