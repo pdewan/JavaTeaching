@@ -20,6 +20,7 @@ public class Factorials {
 			aNumber -= 1;
 		}
 //		return (int) aFactorial;
+//		MultiMethodPermutations.numPermutations4Choose2 = 0;
 		return aFactorial;
 
 	}
