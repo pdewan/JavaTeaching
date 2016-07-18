@@ -3,6 +3,9 @@ package lectures.java_basics_overview;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import lectures.interfaces.ARecursiveFactorialSpreadsheet;
+import lectures.interfaces.FactorialSpreadsheet;
+
 public class FactorialSpreadsheetDriver {
 	static final int NUMBER_WITH_LARGE_FACTORIAL = 8000;
 	// what happens to the times when you change this number to say 2, 100000, and 2000000?

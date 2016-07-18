@@ -16,9 +16,5 @@ public class StaticLoopingFactorialSpreadsheet {
 	public static long getFactorial() {
 		return factorial;
 	}
-	public static void main (String[] args) {
-		StaticLoopingFactorialSpreadsheet.setNumber(4);
-		System.out.println(StaticLoopingFactorialSpreadsheet.getFactorial() 
-				* StaticLoopingFactorialSpreadsheet.getFactorial());
-	}
+	
 }

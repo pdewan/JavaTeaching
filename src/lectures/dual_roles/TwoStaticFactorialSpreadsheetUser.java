@@ -13,6 +13,8 @@ public class TwoStaticFactorialSpreadsheetUser {
 				* AnotherStaticLoopingFactorialSpreadsheet.getFactorial());
 		// we can now access 4! and 2! simultaneously without storing them in local variables
 		System.out.println (StaticLoopingFactorialSpreadsheet.getFactorial()/AnotherStaticLoopingFactorialSpreadsheet.getFactorial());
+		// copy and paste, ugh!
+		// what if we want an arbitrary number of store factorials, not known before we start the program
 
 		
 	}

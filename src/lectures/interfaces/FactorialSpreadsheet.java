@@ -1,4 +1,4 @@
-package lectures.java_basics_overview;
+package lectures.interfaces;
 public interface FactorialSpreadsheet {
 	public int getNumber();
 	public void setNumber(int newValue) ;

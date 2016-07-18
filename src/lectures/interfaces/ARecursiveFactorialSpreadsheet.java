@@ -1,4 +1,6 @@
-package lectures.java_basics_overview;
+package lectures.interfaces;
+
+import lectures.java_basics_overview.Factorials;
 
 
 public class ARecursiveFactorialSpreadsheet implements FactorialSpreadsheet {

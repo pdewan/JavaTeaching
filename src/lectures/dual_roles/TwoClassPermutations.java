@@ -8,7 +8,7 @@ public class TwoClassPermutations {
 	static long numPermutations4Choose2;
 	static long numPermutations4Choose3; 
 	public static void printNumPermutations(int n, int r, long numPermutations) {
-		System.out.println ("N = " + n + " R = " + r + " Permuntations = " + numPermutations4Choose2);
+		System.out.println ("N = " + n + " R = " + r + " Permuntations = " + numPermutations);
 	}
 
 	public static void main (String[] args) {

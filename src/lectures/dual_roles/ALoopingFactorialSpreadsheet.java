@@ -2,9 +2,10 @@ package lectures.dual_roles;
 
 import lectures.java_basics_overview.Factorials;
 
-//import util.annotations.ComponentWidth;
-//import bus.uigen.ObjectEditor;
-public class ALoopingFactorialSpreadsheet  {
+
+public class ALoopingFactorialSpreadsheet 
+//	implements FactorialSpreadsheet 
+{
 	int number;
 	long factorial;
 //	@Visible(false)
