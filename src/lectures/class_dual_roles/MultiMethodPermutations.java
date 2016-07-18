@@ -1,4 +1,4 @@
-package lectures.dual_roles;
+package lectures.class_dual_roles;
 
 public class MultiMethodPermutations {
 	static long numPermutations4Choose2;

@@ -1,6 +1,6 @@
 package lectures.oegraphics;
 
-import lectures.interfaces.FactorialSpreadsheet;
+import lectures.class_dual_roles.FactorialSpreadsheet;
 import shapes.FlexibleShape;
 import shapes.FlexibleTextShape;
 import bus.uigen.shapes.ARectangleModel;

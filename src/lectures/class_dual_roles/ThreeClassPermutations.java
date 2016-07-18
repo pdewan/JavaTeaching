@@ -1,7 +1,6 @@
-package lectures.dual_roles;
+package lectures.class_dual_roles;
 
 import lectures.java_basics_overview.Factorials;
-import lectures.java_basics_overview.Permutations;
 
 public class ThreeClassPermutations {
 	//public
