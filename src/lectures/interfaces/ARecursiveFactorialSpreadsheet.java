@@ -1,4 +1,4 @@
-package lectures.class_dual_roles;
+package lectures.interfaces;
 
 import lectures.java_basics_overview.Factorials;
 

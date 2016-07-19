@@ -2,8 +2,8 @@ package lectures.oegraphics;
 
 import java.awt.Color;
 
-import lectures.class_dual_roles.ALoopingFactorialSpreadsheet;
-import lectures.class_dual_roles.FactorialSpreadsheet;
+import lectures.interfaces.ALoopingFactorialSpreadsheet;
+import lectures.interfaces.FactorialSpreadsheet;
 import util.misc.ThreadSupport;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

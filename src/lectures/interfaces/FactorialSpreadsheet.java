@@ -1,4 +1,4 @@
-package lectures.class_dual_roles;
+package lectures.interfaces;
 public interface FactorialSpreadsheet {
 	public int getNumber();
 	public void setNumber(int newValue) ;

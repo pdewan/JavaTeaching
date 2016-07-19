@@ -1,8 +1,6 @@
 package lectures.class_dual_roles;
 
 public class SingleMethodPermutations {
-	static long numPermutations4Choose2;
-	static long numPermutations4Choose3; 
 	public static void main (String[] args) {
 		// compute n!/(n-r)!
 		int n = 4;
@@ -21,7 +19,7 @@ public class SingleMethodPermutations {
 			nMinusRFactorial *= nextMultiplier;
 			nextMultiplier -= 1;
 		}
-		numPermutations4Choose2 = nFactorial/nMinusRFactorial; // 4/(4-2)!
+		long numPermutations4Choose2 = nFactorial/nMinusRFactorial; // 4/(4-2)!
 		System.out.println ("N = " + n + " R = " + r + " Permuntations = " + numPermutations4Choose2);
 
 		// now compute the permutations for 4/(4-3)! to see how permutations grow
@@ -32,7 +30,7 @@ public class SingleMethodPermutations {
 			nMinusRFactorial *= nextMultiplier;
 			nextMultiplier -= 1;
 		}
-		numPermutations4Choose3 = nFactorial/nMinusRFactorial; // 4/(4-3)!
+		long numPermutations4Choose3 = nFactorial/nMinusRFactorial; // 4/(4-3)!
 		System.out.println ("N = " + n + " R = " + r + " Permuntations = " + numPermutations4Choose3);
 		
 		
