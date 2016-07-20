@@ -1,6 +1,5 @@
 package lectures.class_dual_roles;
 
-import lectures.java_basics_overview.Factorials;
 // copy of StaticLoopingFactorialSpreadsheet, with just the clas name changed
 public class AnotherStaticLoopingFactorialSpreadsheet {
 	static int number;

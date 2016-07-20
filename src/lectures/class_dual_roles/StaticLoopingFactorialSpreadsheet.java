@@ -1,6 +1,5 @@
 package lectures.class_dual_roles;
 
-import lectures.java_basics_overview.Factorials;
 
 public class StaticLoopingFactorialSpreadsheet {
 	// static variables are external to methods, shared by all static methods in a class

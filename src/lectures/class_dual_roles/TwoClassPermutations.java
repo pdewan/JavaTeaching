@@ -1,6 +1,5 @@
 package lectures.class_dual_roles;
 
-import lectures.java_basics_overview.Factorials;
 
 public class TwoClassPermutations {
 

@@ -1,7 +1,6 @@
 package lectures.class_dual_roles;
 
 import lectures.interfaces.FactorialSpreadsheet;
-import lectures.java_basics_overview.Factorials;
 
 
 public class ALoopingFactorialSpreadsheet 

@@ -1,8 +1,8 @@
 package lectures.class_dual_roles.users;
 
 import lectures.class_dual_roles.AnotherStaticLoopingFactorialSpreadsheet;
+import lectures.class_dual_roles.Factorials;
 import lectures.class_dual_roles.StaticLoopingFactorialSpreadsheet;
-import lectures.java_basics_overview.Factorials;
 
 public class TwoStaticFactorialSpreadsheetUser {
 	
