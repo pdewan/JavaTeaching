@@ -24,13 +24,11 @@ public class ThreeClassPermutations {
 //		printNumPermutations(4, 2, numPermutations4Choose2);
 
 		// we recompute 4!
-		// useful to remember computed factorials	
+		// useful to remember computed factorials, Factorial Spreadsheet examples will show how	
 		r = 3;
 		long numPermutations4Choose3 = Permutations.numPermutations(n, r);
-//		long numPermutations4Choose3 = Permutations.numPermutations(4, 3);
 
 		printNumPermutations(n, r, numPermutations4Choose3);
-//		printNumPermutations(4, 3, numPermutations4Choose3);
 
 	}
 }

@@ -6,6 +6,8 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
+import lectures.state_properties.ABMISpreadsheet;
+
 public class PropertiesAnalyzer {
 	// the following method uses the imported Bean classes. You do no have to understand how it
 	// works, though the curious may want to look at it at leisure
@@ -49,8 +51,11 @@ public class PropertiesAnalyzer {
 	public static void main (String[] args) {
 		printProperties(new ALoopingFactorialSpreadsheet());
 	// 13. Uncomment the code below.  Click on name and press F3 to visit he the definition
-	// of this pretender.
-		printProperties(new AFactorialSpreadsheetPretender());
+	// of this pretender. What properties do you expect? What do you get?
+//		printProperties(new AFactorialSpreadsheetPretender());
+	// 14. uncomment the the code below. Click on name and press F3 to visit he the definition.
+	// what properties do you expct, what do you get?
+		printProperties(new ABMISpreadsheet());
 	}
 
 }
