@@ -3,7 +3,7 @@ package lectures.class_dual_roles.users;
 import lectures.class_dual_roles.ALoopingFactorialSpreadsheet;
 import lectures.class_dual_roles.Factorials;
 
-public class InstantiatingFactorialSpreadsheetUser {
+public class InstantiatingFactorialSpreadsheetUse {
 	
 	public static void main (String[] args) {
 		// The class is being instantiated now before use by doing a new
