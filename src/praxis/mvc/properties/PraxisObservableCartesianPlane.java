@@ -1,6 +1,6 @@
 package praxis.mvc.properties;
 
-import praxis.composite.objects_shapes.PraxisCartesianPlane;
+import praxis.composite.objects_shapes.f15.PraxisCartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
 import util.models.PropertyListenerRegisterer;
 

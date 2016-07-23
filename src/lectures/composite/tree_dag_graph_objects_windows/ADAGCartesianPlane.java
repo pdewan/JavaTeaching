@@ -1,5 +1,8 @@
 package lectures.composite.tree_dag_graph_objects_windows;
-
+// The widget examples show that data structures that are displayed in a hierarchical
+// fashion should be trees.
+// Here we will create a DAG and try and display it both in the tree view and the graphics view
+// Look at the code and see if you can figure out which nodes have multiple parents.
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
 import lectures.graphics.ACartesianPoint;
@@ -7,13 +10,13 @@ import lectures.graphics.AStringShape;
 import lectures.graphics.Point;
 import lectures.graphics.StringShape;
 import util.annotations.Visible;
+import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-// how should this share code with ACartesianPlane?
 public class ADAGCartesianPlane implements DAGCartesianPlane {
 	int originX, originY;
 	int axesLength;
-	LineWithObjectProperty xAxis, yAxis;
-	Point xAxisLocation, yAxisLocation;
+	LineWithObjectProperty xAxis, yAxis; // we are using different lines for axes
+	Point xAxisLocation, yAxisLocation; // we nave two additional variables (and properties)
 	StringShape xLabel;
 	StringShape yLabel;
 	public ADAGCartesianPlane(int theAxesLength, int theOriginX, int theOriginY) {
@@ -34,12 +37,12 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	public LineWithObjectProperty getYAxis() {
 		return yAxis;
 	}
-	@Visible(false)
-	public Point getXAxisLocation() {
+//	@Visible(false)
+	public Point getXAxisLocation() { // additional property
 		return xAxisLocation;
 	}
-	@Visible(false)
-	public Point getYAxisLocation() {
+//	@Visible(false)
+	public Point getYAxisLocation() { // additional property
 		return yAxisLocation;
 	}	
 	public void setAxesLength(int anAxesLength) {
@@ -108,7 +111,20 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	}
 
 	public static void main(String[] args) {
-		DAGCartesianPlane plane = new ADAGCartesianPlane(200, 125, 125);
-		ObjectEditor.edit(plane);
+		DAGCartesianPlane aCartesianPlane = new ADAGCartesianPlane(200, 125, 125);
+		OEFrame anOEFrame = ObjectEditor.edit(aCartesianPlane);
+		anOEFrame.showTreePanel();
+		// This print statement verifies that we have a DAG, two different paths
+		// from the root lead to the same node
+		System.out.println(aCartesianPlane.getXAxis().getLocation() + " " + aCartesianPlane.getXAxisLocation());
 	}
+	
+	// Look at the tree view and the graphics view. Do each of the views make sense?
+	// Uncomment the visible annotations. do the views make more sense now?
+	// Many of you will want to create data structures that are graphs or dags for
+	// convenience point of view. The Visible annotation tells Objecteditor to ignore
+	// certain edges when displaying the object.
+	
+	// For the curious, execute the Common->Display Widget Tree command to see the
+	// widget tree created by ObjectEditor to display this object
 }

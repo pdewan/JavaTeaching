@@ -2,7 +2,7 @@ package praxis.inheritance.is_a;
 
 import java.util.Arrays;
 
-import praxis.composite.objects_shapes.APraxisCartesianPlane;
+import praxis.composite.objects_shapes.f15.APraxisCartesianPlane;
 import praxis.inheritance.APraxisStringDatabase;
 import praxis.inheritance.APraxisStringHistory;
 import praxis.inheritance.APraxisStringSet;

@@ -1,4 +1,4 @@
-package praxis.composite.objects_shapes;
+package praxis.composite.objects_shapes.f15;
 
 import lectures.composite.objects_shapes.LineWithObjectProperty;
 import lectures.graphics.Line;

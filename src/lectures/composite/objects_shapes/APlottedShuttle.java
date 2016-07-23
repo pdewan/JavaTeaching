@@ -1,6 +1,12 @@
 package lectures.composite.objects_shapes;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
+// Without looking at this program, run it and observe the graphics view created.
+// What properties/logical structure do you think this class has based on the graphics view.
+// Use the Common->TreeView command to view the actual logical structure.
+// Examine this code.
+// Does your predicted logical structure match the actual one?
+// If not, which is the preferable one?
 
 public class APlottedShuttle implements PlottedShuttle /*, NotAPoint*/ {
     static protected final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";
@@ -9,15 +15,11 @@ public class APlottedShuttle implements PlottedShuttle /*, NotAPoint*/ {
 	int shuttleX = 0, shuttleY = 0;
 	protected CartesianPlane cartesianPlane; 
 	protected ImageWithHeight shuttleImage;
-	// why not use 
-//	public static final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";
-//	public static final int SHUTTLE_IMAGE_HEIGHT = 25;
 	public APlottedShuttle(int anX, int aY) {
 		cartesianPlane = new ACartesianPlane (AXES_LENGTH, ORIGIN_X, ORIGIN_Y);
 		shuttleImage = new AnImageWithHeight(SHUTTLE_IMAGE_FILE_NAME);
 		setShuttleX(anX);
 		setShuttleY(aY);
-//		shuttle = new AMovableImage(SHUTTLE_IMAGE_FILE_NAME, windowX(), windowY());
 	}
 	public CartesianPlane getCartesianPlane() {return cartesianPlane;}
 	public ImageWithHeight getShuttleImage() {return shuttleImage;}

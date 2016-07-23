@@ -5,7 +5,11 @@ import lectures.graphics.AStringShape;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
 import bus.uigen.ObjectEditor;
-
+// This is how you should not change structures
+// Compare setAxesLength() of this class with the one in the previous one.
+// Compare one of the getters (say getAxis()) with the corresponding getter of the previous class
+// Does any composite node change in this example (get differenrt children) and when
+// does it change?
 public class AnInefficientCartesianPlane implements CartesianPlane {
 	protected int originX, originY;
 	protected int axesLength; 
@@ -13,7 +17,9 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     	axesLength = theAxesLength; 
     	originX = theOriginX;
     	originY = theOriginY;      
-    }    
+    }  
+    
+    // what is this getter more inefficient than the previous one?
     public Line getXAxis() {
     	return new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
     }
