@@ -1,8 +1,7 @@
 package lectures.arrays;
-
+// A Library class for printing arrays
 import java.util.Arrays;
 
-import lectures.constructors_pointers.UninitializedVariables;
 import lectures.interfaces.ALoopingFactorialSpreadsheet;
 import lectures.interfaces.ARecursiveFactorialSpreadsheet;
 import lectures.interfaces.FactorialSpreadsheet;
@@ -26,10 +25,13 @@ public class ArrayLifeCycle {
 		// Put break point here	
 		uninitializedElements[0] = new ARecursiveFactorialSpreadsheet();
 		System.out.println (uninitializedElements.length);
+		System.out.println(Arrays.toString(uninitializedElements));
+
 		uninitializedElements = new FactorialSpreadsheet[] {
 				new ALoopingFactorialSpreadsheet()
 		};
 		System.out.println (uninitializedElements.length);
+		System.out.println(Arrays.toString(uninitializedElements));
 		// Did the array assigned to uninitializedElements change size ever in this program?
 
 	}	
@@ -37,11 +39,13 @@ public class ArrayLifeCycle {
 	// and assigning elements of array objects, which are distinct steps
 	// To better understand arrays, debug-run the program and look at the variable
 	// uninitialized elements. What Id (pointer) do you see next to the array variable name?
+	// What size (in brackets) do you see next to it. 
+	// bottom you will see all of it
 	// What are the values of elements and their ids?
-	// Now press F6, steo over to step over the next statement.
-	// View the variable in the same way. Did the Id change? How did the elements change?
+	// Now press F6, step over to step over the next statement.
+	// View the variable in the same way. Did the Id change? 
 	// Press F6 to step over until you hit the last println
-	// View the variable in the same way. Did the Id change? How did the elements change?
+	// View the variable in the same way. Did the Id change? 
 
 		
 	

@@ -1,4 +1,5 @@
 package lectures.arrays.collections_implementation;
+// Try and understand the program and run it without any break points first
 public class AStringHistory implements StringHistory {
 	public static final int MAX_SIZE = 50;
 	protected String[] contents = new String[MAX_SIZE];
@@ -33,16 +34,24 @@ public class AStringHistory implements StringHistory {
 			retVal += separator + contents[i];
 		}		
 		return retVal;
-	}
-	
+	}	
 
 	public static void main (String[] args) {
-		StringHistory stringHistory = new AStringHistory();
-		stringHistory.addElement("James Dean");
-		stringHistory.addElement("Joe Doe");
-		stringHistory.addElement("Jane Smith");
-		stringHistory.addElement("John Smith");
-		bus.uigen.ObjectEditor.edit(stringHistory);
-		System.out.println(stringHistory);		
+		StringHistory aStringHistory = new AStringHistory();
+		aStringHistory.addElement("James Dean");
+		System.out.println(aStringHistory.size());
+		System.out.println(aStringHistory);
+		// set break point below
+		aStringHistory.addElement("Joe Doe");	
+		System.out.println (aStringHistory.size());
+		System.out.println(aStringHistory);	
+		bus.uigen.ObjectEditor.edit(aStringHistory);		
 	}
+	// At the breakpoint, examine the array contents and look at its id and dimension (length) 
+	// within brackets. Also look at the value of the size variable.
+	// Step over the addElement() method.
+	// Examine the variables in the same way? Did the size of the string history change?
+	// What does that mean anyway? Did the size of the array change?
+	// What is the purpose of the method isFull?
+	
 }
