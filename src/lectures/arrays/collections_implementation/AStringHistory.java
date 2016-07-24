@@ -18,9 +18,9 @@ public class AStringHistory implements StringHistory {
 	}
 	
 	public void addElement(String element) {
-		if (isFull())
+		if (isFull()) {
 			System.out.println("Adding item to a full history");
-		else {
+		} else {
 			contents[size] = element;
 			size++;
 		}

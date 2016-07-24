@@ -3,18 +3,26 @@ package lectures.arrays;
 import lectures.extra.ALoan;
 import lectures.extra.AnotherLoan;
 import lectures.extra.Loan;
+import lectures.interfaces.ABMISpreadsheet;
+import lectures.interfaces.ALoopingFactorialSpreadsheet;
+import lectures.interfaces.ARecursiveFactorialSpreadsheet;
+import lectures.interfaces.AnotherBMISpreadsheet;
+import lectures.interfaces.BMISpreadsheet;
+import lectures.interfaces.FactorialSpreadsheet;
 
 public class ArraysExample {
 	// initialized arrays
 	int[] assignmentScores = {100, 98, 99, 100, 90, 80};
 	double[] gpas = {3.8, 3.1, 3.7, 3.1, 3.6, 3.9};
 	String[] initials = {"JFK", "FDR", "JC", "BC", "RR", "GB"};
-	Loan [] loans = {new ALoan(100000), new AnotherLoan (100)};
+	FactorialSpreadsheet[] factorialSpreadsheets = {
+			new ALoopingFactorialSpreadsheet(), 
+			new ARecursiveFactorialSpreadsheet()};
 	int[] unInitializedAssignmentScores;
 	int[] assignmentScoresWithUninitializedElements = new int[3];
 	String[] initialsWithUninitializedElements = new String[3];
 	
-	public void changeArraySize() {
+	public void assignNewArrayWithDifferentSize() {
 		assignmentScores = new int[] {60, 40, 50};		
 	}
 	public void operateOnArrays() {
@@ -32,6 +40,7 @@ public class ArraysExample {
 		int[] assignmentScores;
 		unInitializedAssignmentScores = new int[] {60, 40, 50};
 	}
+	
 	public void accessUninitializedArray () {
 		System.out.println(unInitializedAssignmentScores.length);		
 	}
@@ -43,6 +52,9 @@ public class ArraysExample {
 	public void accessUninitializedObjectArrayElements () {
 		System.out.println(initialsWithUninitializedElements[0]);
 		System.out.println(initialsWithUninitializedElements[0].length());
+	}
+	public static void main (String[] anArgs) {
+		
 	}
 	
 
