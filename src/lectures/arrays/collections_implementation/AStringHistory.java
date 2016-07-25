@@ -9,8 +9,14 @@ import util.annotations.StructurePatternNames;
 public class AStringHistory implements StringHistory {
 	public static final int MAX_SIZE = 50;
 	protected String[] contents = new String[MAX_SIZE];
-	protected int size = 0;
-
+	protected int size = 0;	
+//	public AStringHistory() {
+//		System.out.println("AStringHistory Parameterless Constructor Called");
+//	}
+//	public AStringHistory(int aMaxSize) {
+//		contents = new String[MAX_SIZE];
+//		System.out.println("AStringHistory Single-Parameter Constructor Called");
+//   }
 	public int size() {
 		return size;
 	}
@@ -55,8 +61,10 @@ public class AStringHistory implements StringHistory {
 		System.out.println(aStringHistory);	
 		bus.uigen.ObjectEditor.edit(aStringHistory);		
 	}
+    // COLLECTION KINDS
 	// Why do you think this object is called a history?
 	
+	// DYNAMIC COLLECTIONS vs. STATIC ARRAYS
 	// At the breakpoint, examine the contents variable and look at its id and dimension (length) 
 	// within brackets. Also look at the value of the size variable.
 	// Step over the addElement() method.

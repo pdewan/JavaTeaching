@@ -2,11 +2,16 @@ package lectures.inheritance;
 
 import lectures.arrays.collections_implementation.AStringHistory;
 
-// Again study and run the program and  try to understand what it does on your own.
+// Again first study and run the program and  try to understand what it does on your own.
 
 public class AStringDatabase extends AStringHistory implements StringDatabase {
-	protected int uselessVariable;
+	protected int uselessVariable = 0;
 //    int size = 0;
+//	public AStringDatabase() {
+//		uselessVariable = 2;
+//		System.out.println (uselessVariable); // what is its value, 0 or 2
+//	}
+
 	public void clear() {
 	    size = 0;
 	}
@@ -51,9 +56,10 @@ public class AStringDatabase extends AStringHistory implements StringDatabase {
 		aStringDatabase.removeElement(EXAMPLE_ITEM); // removing a second time
 		System.out.println(aStringDatabase);  
     }
+    // COLLECTION KINDS
+   // Why do you think this object is not called a history and called a database?
     
-    // After you run the program, explore it in some more depth.
-
+    // EXTENDING INTERFACES AND CLASSES
     // Look at the operation performed on a string database in the main program.
     // Which of these operation are performed also on the string history we saw earlier
         
@@ -73,6 +79,7 @@ public class AStringDatabase extends AStringHistory implements StringDatabase {
     // E is a supertype of C and C is a sub type of E
     // If C and E are classes, then we can use the terms superclass and subclass also
 
+    // IMPlEMENTING INHERITED INTERFACE HEADERS AND INHERITING  METHOD IMPLEMENTATIONS IN CLASSES
     
     // Go to the declaration of StringHistory.
     // Add a an arbitrary method header to in this interface such as:
@@ -105,7 +112,7 @@ public class AStringDatabase extends AStringHistory implements StringDatabase {
     // When the program stops at indexOf, hover over the size variable declaration again in the method
     // and look at it again.
     
-    // Will you ever re-declare a variable again?
+    // Will you ever re-declare a variable again in a subclass?
      
 
    
