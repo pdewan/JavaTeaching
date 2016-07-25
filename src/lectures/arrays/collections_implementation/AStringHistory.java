@@ -39,7 +39,9 @@ public class AStringHistory implements StringHistory {
 			String separator = (i == 0)?"":":";
 			retVal += separator + contents[i];
 		}		
-		return retVal;
+//		return retVal;
+		return super.toString();
+
 	}	
 
 	public static void main (String[] args) {
