@@ -1,5 +1,11 @@
 package lectures.arrays.collections_implementation;
+
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
+
 // Try and understand the program and run it without any break points first
+
+@StructurePattern(StructurePatternNames.VECTOR_PATTERN) // Method headers follow Java's Vector class
 public class AStringHistory implements StringHistory {
 	public static final int MAX_SIZE = 50;
 	protected String[] contents = new String[MAX_SIZE];
@@ -20,7 +26,7 @@ public class AStringHistory implements StringHistory {
 	
 	public void addElement(String element) {
 		if (isFull()) {
-			System.out.println("Adding item to a full history");
+			System.out.println("Cannot add item to a full history");
 		} else {
 			contents[size] = element;
 			size++;
@@ -47,7 +53,9 @@ public class AStringHistory implements StringHistory {
 		System.out.println(aStringHistory);	
 		bus.uigen.ObjectEditor.edit(aStringHistory);		
 	}
-	// At the breakpoint, examine the array contents and look at its id and dimension (length) 
+	// Why do you think this object is called a history?
+	
+	// At the breakpoint, examine the contents variable and look at its id and dimension (length) 
 	// within brackets. Also look at the value of the size variable.
 	// Step over the addElement() method.
 	// Examine the variables in the same way? Did the size of the string history change?
