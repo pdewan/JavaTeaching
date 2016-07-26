@@ -9,6 +9,7 @@ public class AStringSet extends AStringDatabase // extending an extended class
 //		super();
     }
 	public void addElement(String element) {
+		// SUPER CALL IN METHOD
 		// set a break point here and Step Over (F6) the statements to see
 		// which path is taken in the two adds
 		if (isFull()) {
@@ -32,7 +33,7 @@ public class AStringSet extends AStringDatabase // extending an extended class
 }
 // Why do you think this object is called a set?
 
-// SUPER CALLS IN METHODS
+// CLASS OBJECT
 // Go to the definition of toString() in AStringSet.
 // Comment out the current return statement and uncomment the one below.
 // Set a breakpoint at the new return statement.
@@ -68,7 +69,8 @@ public class AStringSet extends AStringDatabase // extending an extended class
 // SUPER CALL PLACEMENT
 // Uncomment the top super in the constructor in this class and comment the first one out.
 // Note the error
-// What would be the value of useLessVariable if the second super was allowed?
+// What would be the value of useLessVariable if the second super was allowed? 
+// Does it make sense for a super class to initialize after the subclass does?
 
 // ORDER OF INITIALIZATION
 // To really understand what is going on, put a break point on the first statement of 

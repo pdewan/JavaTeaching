@@ -43,10 +43,10 @@ public class TypeCheckingExamples {
 	   }
    }
 
-   public static void instanceOfTest(Object aCollection) {
-	   System.out.println (aCollection instanceof StringHistory);
-	   System.out.println (aCollection instanceof StringDatabase);
-	   System.out.println (aCollection instanceof AStringSet);
+   public static void instanceOfTest(Object anObject) {
+	   System.out.println (anObject instanceof StringHistory);
+	   System.out.println (anObject instanceof StringDatabase);
+	   System.out.println (anObject instanceof AStringSet);
    }
    public static void main(String[] args) {
 	   StringDatabase aSet = new AStringSet();
@@ -73,9 +73,10 @@ public class TypeCheckingExamples {
 //	   aSet = aSetMasqueradingAsAHistory;
 //	   aSetMasqueradingAsAHistory = new AStringHistory();
 //	   aSet = (StringDatabase) aSetMasqueradingAsAHistory;
-	   //Which statements give errors?
+//	   AStringDatabase aDatabaseClassInstance = aSet;
+	   //Which of the statements above give errors?
 	   // Can you explain the reason?
-	   // Comment in the ones that gives errors.
+	   // Comment back the ones that gives errors.
 	   
 	   // Uncomment the following statement and try to determine what will happen when you execute it
 	   // with the above cast uncommented
@@ -84,10 +85,18 @@ public class TypeCheckingExamples {
 	   // Comment the statement back.
 	   
 	   // INSTANCE OF RULES
-	   // To consolidate what you have learned uncommen the following and run the program
+	   // To consolidate what you have learned uncomment the following and run the program
 	   instanceOfTest(new AStringHistory());
-	   instanceOfTest(new AStringDatabase());
 	   instanceOfTest(new AStringSet());
+	   
+  	   Object anObject = aSet; // aSet is typed as an interface, Object is a superclass
+	   // If I is an interface, and C is a class, based on your understanding of IS-A rules, 
+  	   // is it ever true that I IS-A C?
+	   // If not, why was the statement above legal?
+	   // This example points flaws in Java's design, it did not define an interface for class Object
+  	   // and needs a special rule to make the statement above legal
+	   
+
 	  
 	  
    }
