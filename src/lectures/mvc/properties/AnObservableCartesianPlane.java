@@ -7,8 +7,7 @@ import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
 import bus.uigen.ObjectEditor;
 public class AnObservableCartesianPlane extends ACartesianPlane implements ObservableCartesianPlane {
-//    Line xAxis;
-//    Line yAxis;  
+ 
     PropertyListenerSupport propertySupport = new APropertyListenerSupport();
     public AnObservableCartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
         super(theAxesLength, theOriginX, theOriginY);

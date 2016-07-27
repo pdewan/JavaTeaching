@@ -8,12 +8,10 @@ import lectures.graphics.Line;
 import bus.uigen.ObjectEditor;
 
 public class AnObservableLine extends ALine implements ObservableLine  {
-//	int x, y, width, height;
 	PropertyListenerSupport propertySupport = new APropertyListenerSupport();
 	public AnObservableLine (int initX, int initY, int initWidth, int initHeight) {
 		super(initX, initY, initWidth, initHeight);
 	}
-//	public int getX() {return x;}
 	public void setX(int newVal) {
 		int oldVal = getX();
 		super.setX(newVal);
@@ -26,7 +24,6 @@ public class AnObservableLine extends ALine implements ObservableLine  {
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "Y", oldVal,
 				newVal));
 	}
-//	public int getWidth() {return width;}
 	public void setWidth(int newVal) {
 		int oldVal = getWidth();
 		super.setWidth(newVal);
@@ -39,11 +36,6 @@ public class AnObservableLine extends ALine implements ObservableLine  {
 		super.setHeight(newVal);
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "Height", oldVal,
 				newVal));
-	}
-	public boolean equals(Object otherVal) {
-		if (!(otherVal instanceof Line)) return false;
-		Line otherLine = (Line) otherVal;
-		return (getX() == otherLine.getX() && getY() == otherLine.getY() && getWidth() == otherLine.getWidth() && getHeight() == otherLine.getHeight());
 	}	
 	@Override
 	public void addPropertyChangeListener(PropertyChangeListener listener) {

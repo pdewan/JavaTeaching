@@ -8,7 +8,8 @@ import bus.uigen.OEFrame;
 // Make sure you have oeall22.jar in the classpath
 import bus.uigen.ObjectEditor;
 
-// Run this program, see how it works.
+// USING OBJECT EDITOR
+// Run this program, see how it works
 // Enter different values for height and weight and press enter.
 // Can you change the value of the BMI property?
 public class AutoBMISpreadsheetGUI {
@@ -17,13 +18,13 @@ public class AutoBMISpreadsheetGUI {
 		final double initialWeight = 75;
 		BMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet(initialHeight, initialWeight);
 		OEFrame anOEFrame = ObjectEditor.edit(aBMISpreadsheet);
-	
+// WHAT DOES OE DISPLAY?	
 		// Look carefully again at the code in ABMISpreadsheet.
 		
 		// Based on this code, and maybe some experimentation, can you say
 		// whether ObjectEditor shows the variables or properties (as defined by bean conventions)
 		// of the object?
-		
+// ANNOTATIONS		
 		// When you run the program, you see a warning from ObjectEditor.	
 		// Uncomment the line beginning with StructurePattern.
 		// The warning goes away. 
@@ -34,6 +35,7 @@ public class AutoBMISpreadsheetGUI {
 		// cannot use a different spelling for StructurePattern.
 		// Does the term Bean in the annotation make sense?
 		
+//INTERACTION BETWEEN OBJECTEDITOR AND EDITED OBJECT		
 		// Let us now understand the interaction between ObjectEditor and the object being edited.
 		// What is your hypothesis regarding how ObjectEditor interacts with the edited object
 		// to display the object and to change the weight? That is what methods are called iniitally
@@ -46,6 +48,8 @@ public class AutoBMISpreadsheetGUI {
 		// calls  a method to obtain the previous version of the value, in case it need to be
 		// restored. Because of this you will see an extra print that would not be needed without undo.
 		
+		// INTERACTIVE AND PROGRAMMED REFRESH
+
 		// What happens if we change a displayed object from the program, as below.
 		// Will the display change? Think about it and then uncomment this code,
 		// leaving the refresh part commented and wait until you get the println output.
@@ -59,6 +63,7 @@ public class AutoBMISpreadsheetGUI {
 ////			anOEFrame.refresh();
 //		}
 //		System.out.println ("No more weight again!");
+		
 		// Execute the Common->Refresh command and observe its behavior
 		// Now uncomment the refresh() line above and run the program again.
 		// Does the new behavior make sense?

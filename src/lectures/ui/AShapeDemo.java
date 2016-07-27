@@ -47,6 +47,7 @@ public class AShapeDemo {
     public static void main (String[] args ) {
     	OEFrame anOEFrame = ObjectEditor.edit(new AShapeDemo());
     	anOEFrame.showTreePanel();
+ // MAIN AND EDITABLE TREE PANEL
     	// Run Main program. You will see both a main panel and a tree panel.
     	// Use the Common->Tree menu item to hide and show the tree panel
     	// Edit the items in the main panel. The tree panel view should change.
@@ -57,23 +58,25 @@ public class AShapeDemo {
     	// a delay of 1200 milliseconds."
     	
     	// When you use the BeanPattern annotation, ObjectEdior displays the properties
-    	// in the main view (and possibly tree view if you create) one without interpreting
+    	// in the main panel (and possibly tree view if you create) one without interpreting
     	// the properties in any way. The other annotations, currently commented out
     	// are associated with specific interpretations. To understand them, you will need to
     	// comment out the Bean Pattern annotation and uncomment one of the other commented
     	// annotations.
     	
+  // DRAW PANEL, AUTO POINT DISPLAY, JAVA COORDINATE SYSTEM  	
     	// Our first goal is to make this object look like a point.
     	// Uncomment the Point Pattern annotation. This annotation tells ObjectEditor that if this object
     	// has properties expected from a Point, then it should be displayed as a point on the screen.
     	// The current properties of this object are,of course, sufficient to represent a point.
-    	
-    	// Execute the program. 
-    	// You should see a point in a graphic plane. Hover over it to see the message.
-    	// ObjectEditor uses the Java coordinate system. Try to understand it by editing the
-    	// X and Y properties in the tree window (if editing it is a pain, =just change the 
+      	// Execute the program. 
+    	// The main panel is no longer displayed now, instead we see a draw panel.
+    	// You should see a point positioned using the Java coordinate system. Hover over it to see the message.
+    	// Try to understand the coordinate system by editing the
+    	// X and Y properties in the tree window (if editing it is a pain, just change the 
     	// named constants in this program.
     	
+// LINE PATTERN
     	// Comment out the point pattern annotation.
     	
     	// Comment in the line pattern annotation. This annotation tells ObjectEditor that if this object
@@ -87,10 +90,12 @@ public class AShapeDemo {
     	// A line can be represented as a computer object in many ways, not all of which are
     	// supported by ObjectEditor. What we have seen above is on set of properties representing
     	// a line. Think of other possible representations of a line.
-    	
+  
+   // RECTANGLE AND OVAL PATTERN   	
     	// Now change the uncommented annotation to Rectangle Pattern and Oval Pattern
     	// and see the expected result.
     	
+   // STRING PATTERN 	
     	// The string pattern annotation is for a String that can be positioned on the screen. 
     	// The X, Y and Text properties are  essential to represent it. The height and width are
     	// supposed to be optional, allowing you to clip the displayed text to the 
@@ -98,6 +103,7 @@ public class AShapeDemo {
     	// Java's clipping behavior. You do not need such clipping
     	// so comment out the Width and Height properties when you display a string.
     	
+  // IMAGE PATTERN  	
     	// The Image pattern is for an image that can be positioned on the screen.
     	// The X, Y and ImageFileNa,me properties are  essential to represent it. 
     	// The height and width are optional, allowing you to scale the displayed image. 

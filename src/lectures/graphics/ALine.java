@@ -21,7 +21,9 @@ public class ALine implements Line {
 	public int getHeight() {return height;}
 	public void setHeight(int newHeight) {height = newHeight;}	
 	public boolean equals(Object otherVal) {
-		if (!(otherVal instanceof Line)) return false;
+		if (!(otherVal instanceof Line)) {
+			return false;
+		}
 		Line otherLine = (Line) otherVal;
 		return (x == otherLine.getX() && y == otherLine.getY() && width == otherLine.getWidth() && height == otherLine.getHeight());
 	}

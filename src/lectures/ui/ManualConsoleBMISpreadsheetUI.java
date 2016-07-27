@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import lectures.interfaces.ABMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
+// USER INTERFACE VS (ProGRAMMING) INTERFACE
 // The interfaces we saw earlier are programming interfaces.
 // They allow an object to interact with another object - they are interfaces
 // between programmed objects.
@@ -35,10 +36,16 @@ public class ManualConsoleBMISpreadsheetUI {
 		}
 		
 	}
+// USER-INTERFACE CODE
+// To provude a programming interface, one must declare an interface
+// one line of code per method in the class. How much effort to provide a user-interface
+	
 // How many lines of user-interface code here?
 // How many lines of code in the very simple class, ABMISpreadsheet?
 // Usually the code required to interact with an object is as much as
 // the code to implement the object.
 // This means our effort doubles.
 // How can we solve this problem, at least in this class.
+// Eclipse will automatically extract a programming interface from a clsas.
+// Can we similarly automatically extract a user-interace from a class?
 }
