@@ -6,7 +6,7 @@ import java.beans.PropertyChangeListener;
 import lectures.graphics.ALine;
 import lectures.graphics.Line;
 import bus.uigen.ObjectEditor;
-
+// PROPERTY-BASED NOTIFICATION - ANOTHER EXAMPLE
 public class AnObservableLine extends ALine implements ObservableLine  {
 	PropertyListenerSupport propertySupport = new APropertyListenerSupport();
 	public AnObservableLine (int initX, int initY, int initWidth, int initHeight) {
@@ -15,6 +15,7 @@ public class AnObservableLine extends ALine implements ObservableLine  {
 	public void setX(int newVal) {
 		int oldVal = getX();
 		super.setX(newVal);
+		// Only one notification in this setter
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "X", oldVal,
 				newVal));
 	}
@@ -45,9 +46,10 @@ public class AnObservableLine extends ALine implements ObservableLine  {
 	public static void main(String args[]) {
 		ObservableLine observableLine = new AnObservableLine(10, 10, 20, 20);
 		ObjectEditor.edit(observableLine);
-		observableLine.setX(100);
+		// No need to call refresh!
+		observableLine.setX(50);
 		observableLine.setY(100);
-		observableLine.setWidth(100);
-		observableLine.setHeight(100);
+		observableLine.setWidth(150);
+		observableLine.setHeight(200);
 	}
 }

@@ -16,6 +16,8 @@ package lectures.mvc;
 
 public class AnObservableCounter extends ACounter implements ObservableCounter {
 	int counter = 0;
+	// List of registered observers -much like StringHistory except that it holds
+	// Observers instead of strings.
 	ObserverHistory observers = new AnObserverHistory();
 	public void add (int amount) {
 		super.add(amount);
@@ -24,13 +26,16 @@ public class AnObservableCounter extends ACounter implements ObservableCounter {
 	// Go to CounterObserver (F3)
 	public void addObserver(CounterObserver observer) {
 		observers.addElement(observer);
-		observer.update(this); // does the model know how the view will display the new state
+		// why call update here? Hint: an observer can be added after the model changes
+		// and some object other than the observer can call this method for the observer
+		observer.update(this); 
 	}
-
+	// Can the notification code be put in another class?
 	void notifyAllObservers() {
 		for (int observerNum = 0; observerNum < observers.size();
 			observerNum++) {
-		observers.elementAt(observerNum).update(this);
+		// Should/does the model know how each observable will react to the new state
+			observers.elementAt(observerNum).update(this); 
 		}
 	}
 }

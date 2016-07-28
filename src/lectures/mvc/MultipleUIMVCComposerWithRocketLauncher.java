@@ -20,6 +20,8 @@ public class MultipleUIMVCComposerWithRocketLauncher {
 		controller.setModel(model);
 		// Ask the controller to run its input loop, this better be the last statement
 		controller.processInput();
+		// Use F6 and F5 to step into processInput and see how the chain of events
+		// triggered by a user input
 	}
 	// How will you change this code to create the three original user-interfaces in the
 	// mvc.monolithic package?

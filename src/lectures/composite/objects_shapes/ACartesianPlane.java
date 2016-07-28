@@ -28,6 +28,7 @@ public class ACartesianPlane implements CartesianPlane {
      	xLabel = new AStringShape ("X", toXLabelX(), toXLabelY());
         yLabel = new AStringShape ("Y", toYLabelX(), toYLabelY());
     }    
+    // Do we need setters for these properties?
     public Line getXAxis() {
     	return xAxis;
     }
