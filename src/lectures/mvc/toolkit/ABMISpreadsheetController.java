@@ -9,7 +9,8 @@ import lectures.interfaces.BMISpreadsheet;
 // TOOLKIT CONTROLLER
 // As we see below it is not only a controller for a the model
 // but an observer of the editable widgets, which are not models!
-public class ABMISpreadsheetController implements ActionListener {
+public class ABMISpreadsheetController 
+	implements ActionListener { // The observer interface defined by the editable widgets
 	JTextField height, weight;
 	BMISpreadsheet bmiSpreadsheet;
 	public ABMISpreadsheetController (BMISpreadsheet theBMISpreadsheet, JTextField theHeight, JTextField theWeight) {
@@ -33,7 +34,9 @@ public class ABMISpreadsheetController implements ActionListener {
 			bmiSpreadsheet.setWeight(val);
 		}		
 	}
+	
 	// Put a break point in actionPerformed and trace the actions that lead to a new BMI value being displayed
-	// by the progress bar and slider
+	// by the progress bar and slider. Step return (F7) when you execute the propertyChange 
+	// method in ObjectEditor
 	
 }

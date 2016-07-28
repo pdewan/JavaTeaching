@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.graphics;
 
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;

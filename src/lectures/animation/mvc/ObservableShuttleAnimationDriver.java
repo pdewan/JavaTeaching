@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import lectures.animation.loops.AShuttleAnimator;
 import lectures.animation.loops.ShuttleAnimationDriver;
 import lectures.animation.loops.ShuttleAnimator;
+import lectures.mvc.graphics.APlottedShuttleView;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.mvc.properties.ObservablePlottedShuttle;
-import lectures.mvc.toolkit.APlottedShuttleView;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

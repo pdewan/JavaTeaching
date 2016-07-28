@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.graphics;
 
 import java.awt.Component;
 import java.awt.event.KeyEvent;
@@ -6,7 +6,8 @@ import java.awt.event.KeyListener;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
 
-public class APlottedShuttleKeyController implements KeyListener {
+public class APlottedShuttleKeyController 
+	implements KeyListener { // Defined by Java
 	Component shuttleComponent;
 	PlottedShuttle plottedShuttle;
 	public static final int TARGET_X = 100;
@@ -16,6 +17,7 @@ public class APlottedShuttleKeyController implements KeyListener {
 		plottedShuttle = aPlottedShuttle;
 		shuttleComponent.addKeyListener(this);
 	}	
+	// This key event our controller cares about
     public void keyTyped(KeyEvent e) {
     	char typedChar = e.getKeyChar();
     	switch (typedChar) {
@@ -27,6 +29,7 @@ public class APlottedShuttleKeyController implements KeyListener {
     		break;
     	}    
 	}	
+	// These it does not
 	public void keyPressed(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}	
 }

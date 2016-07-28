@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.graphics;
 
 import java.awt.Frame;
 import java.awt.Graphics;
@@ -10,6 +10,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
+
+import lectures.mvc.toolkit.TextComponentInterface;
 
 public class ARoundedTextField extends Panel implements TextComponentInterface, KeyListener  {
 	int eventId;

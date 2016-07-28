@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.graphics;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
