@@ -10,7 +10,7 @@ import util.annotations.StructurePatternNames;
 @PropertyNames({ 
 	"Weight", 
 	"Height",
-	"WeightGainRate",
+//	"WeightGainRate",
 	"BMI"
 	})
 @EditablePropertyNames({
@@ -30,23 +30,18 @@ public class ABMISpreadsheet implements BMISpreadsheet {
 	}
 //	@ComponentWidth(300)
 	public double getWeight() {
-//		System.out.println("getWeight() called");
 		return weight;
 	}
 	public void setWeight(double newValue) {
-//		System.out.println("setWeight() called");
 		weight = newValue;
 	}	
 	public double getHeight() {
-//		System.out.println("getHeight() called");
 		return height;
 	}
 	public void setHeight(double newValue) {
-//		System.out.println("setHeight() called with new value:" + newValue);
 		height = newValue;
 	}	
 	public double getBMI() {
-//		System.out.println("getBMI() called");
 		return weight/(height*height);
 	}		
 }
