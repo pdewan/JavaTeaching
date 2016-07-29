@@ -17,7 +17,21 @@ import bus.uigen.ObjectEditor;
 // What do you think the purpose of a Thread is based on your observations?
 
 
-// Put a beak
+// Put break points and uncomment statements as instructed below and in the classes
+// AShuttleAnimator and AShuttleAnimationCommand. Study this code and the two classes.
+// Debug-run the program and when each break point is hit, follow the instructions
+
+// Now look at all of the classes in this exercise. Can you identify a general design pattern
+// for creating threaded applications and for creating threaded animation applications.
+
+// Put a break point in the setShuttleY() method in AnObservablePlottedShuttle
+// and debug-run the program. based on what you see, can you  refine your  design patterns
+// and identify how these classes interact with each other.
+// Can you justify why these classes should not be combined with each other?
+// Why not combine the animator and animation class?
+// why not combine the command object and animator?
+
+
 public class ConcurrentShuttleLaunchAnimation extends SingleShuttleLaunchAnimation  {
 	static int threadNumber = 0;
 	protected final static String SHUTTLE_THREAD_NAME = "Shuttle Animation";
@@ -34,11 +48,14 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleLaunchAnimati
 		// As you single step the two times, try to determine
 		// When does the main thread disappear from the thread list?
 		// when a new thread appear in the thread list.
+		
 
 		Thread thread = new Thread(new AShuttleAnimationCommand(aShuttleAnimator, aShuttle, ANIMATION_STEP, ANIMATION_PAUSE_TIME));	
 		threadNumber++;
 		thread.setName(SHUTTLE_THREAD_NAME + " " + threadNumber);
 		thread.start();
+		// Uncomment this statement. Does this message appear after the anumations have finished?
+//		System.out.println ("Animation Finished?");
 	}
 //	
 //	public static void displayShuttleFrame (PlottedShuttle aShuttle, int aFrameX, int aFrameY) {
