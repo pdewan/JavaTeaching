@@ -7,7 +7,7 @@ public class ASynchronizedShuttleAnimator extends AShuttleAnimator  {
 	public synchronized void animateFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime) {		
 		super.animateFromOrigin(shuttle, animationStep, animationPauseTime);
 	}
-	public synchronized void animateFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime, OEFrame frame) {
-		super.animateFromOrigin(shuttle, animationStep, animationPauseTime, frame);
-	}
+//	public synchronized void animateFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime, OEFrame frame) {
+//		super.animateFromOrigin(shuttle, animationStep, animationPauseTime, frame);
+//	}
 }

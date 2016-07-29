@@ -2,9 +2,11 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import bus.uigen.ObjectEditor;
-
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class AnObservablePlottedShuttle extends APlottedShuttle implements ObservablePlottedShuttle {
 	PropertyListenerSupport propertySupport = new APropertyListenerSupport();	
 	public AnObservablePlottedShuttle(int anX, int aY) {

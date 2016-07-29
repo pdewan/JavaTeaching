@@ -14,7 +14,7 @@ import lectures.mvc.properties.ObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
-public class ObservableShuttleAnimationDriver extends  ShuttleAnimationDriver {	
+public class MultipleViewShuttleAnimationDriver extends  ShuttleAnimationDriver {	
 	public static void main(String[] args) {
 		ObservablePlottedShuttle shuttle = new AnObservablePlottedShuttle(50, 100);
 		OEFrame oeFrame = ObjectEditor.edit(shuttle);

@@ -3,8 +3,10 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.AnImageWithHeight;
-
+@StructurePattern(StructurePatternNames.IMAGE_PATTERN)
 public class AnObservableImageWithHeight extends AnImageWithHeight implements ObservableShuttleImage {
 	public AnObservableImageWithHeight(String anImageFileName) {
 		super(anImageFileName);

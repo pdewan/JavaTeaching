@@ -3,13 +3,15 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
 import bus.uigen.ObjectEditor;
 // PROPERTY-BASED NOTIFICATION IN COMPOSITE OBJECTS
 // So far our observables had atomic properties
 // How does the observable change when it has Object properties
-
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class AnObservableCartesianPlane extends ACartesianPlane implements ObservableCartesianPlane {
  
     PropertyListenerSupport propertySupport = new APropertyListenerSupport();
