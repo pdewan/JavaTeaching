@@ -16,7 +16,7 @@ import util.annotations.StructurePatternNames;
 @EditablePropertyNames({
 	"Height", 
 	"Weight",
-	 "BMI"
+//	 "BMI"
 })
 
 public class ABMISpreadsheet implements BMISpreadsheet {
@@ -24,11 +24,10 @@ public class ABMISpreadsheet implements BMISpreadsheet {
 	double weight;	
 	public ABMISpreadsheet() { }	
 	public ABMISpreadsheet(
-			double theInitialHeight, double theInitialWeight) {
-		setHeight(theInitialHeight);
-		setWeight(theInitialWeight);
+			double anInitialHeight, double anInitialWeight) {
+		setHeight(anInitialHeight);
+		setWeight(anInitialWeight);
 	}
-//	@ComponentWidth(300)
 	public double getWeight() {
 		return weight;
 	}
@@ -43,5 +42,5 @@ public class ABMISpreadsheet implements BMISpreadsheet {
 	}	
 	public double getBMI() {
 		return weight/(height*height);
-	}		
+	}	
 }

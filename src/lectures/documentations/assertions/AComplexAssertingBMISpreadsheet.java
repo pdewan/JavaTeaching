@@ -3,12 +3,12 @@ package lectures.documentations.assertions;
 import lectures.interfaces.BMISpreadsheet;
 import bus.uigen.ObjectEditor;
 
-public class ASafeBMISpreadsheet implements BMISpreadsheet {
+public class AComplexAssertingBMISpreadsheet implements BMISpreadsheet {
 	double height;
 	double weight;	
 	double initialHeight, initialWeight;
-	public ASafeBMISpreadsheet() { }	
-	public ASafeBMISpreadsheet(
+	public AComplexAssertingBMISpreadsheet() { }	
+	public AComplexAssertingBMISpreadsheet(
 			double theInitialHeight, double theInitialWeight) {
 		// not calling setters as precondition of these are not met
 		height = theInitialHeight;
@@ -70,7 +70,7 @@ public class ASafeBMISpreadsheet implements BMISpreadsheet {
 	}
 	
 	public static void main (String[] args) {
-		ObjectEditor.edit(new ASafeBMISpreadsheet(1.77, 75));
+		ObjectEditor.edit(new AComplexAssertingBMISpreadsheet(1.77, 75));
 	}
 
 		

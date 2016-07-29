@@ -9,10 +9,10 @@ public class ASimpleAssertingBMISpreadsheet extends ABMISpreadsheet  {
 	double initialHeight, initialWeight;
 	public ASimpleAssertingBMISpreadsheet() { }	
 	public ASimpleAssertingBMISpreadsheet(
-			double theInitialHeight, double theInitialWeight) {
-		super(theInitialHeight, theInitialWeight);
-		initialHeight = theInitialHeight;
-		initialWeight = theInitialWeight;
+			double anInitialHeight, double anInitialWeight) {
+		super(anInitialHeight, anInitialWeight);
+		initialHeight = anInitialHeight;
+		initialWeight = anInitialWeight;
 	}
 	public boolean preRestoreHeightAndWeight() {
 		return getHeight() != initialHeight || getWeight() != initialWeight; 
