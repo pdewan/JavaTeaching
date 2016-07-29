@@ -73,11 +73,11 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleLaunchAnimati
 		PlottedShuttle shuttle2 = new AnObservablePlottedShuttle(SHUTTLE2_X, SHUTTLE2_Y);
 		displayShuttleFrame(shuttle1);
 		displayShuttleFrame(shuttle2);
-		// Why two animators?
+		// Why two animators, what would happen if we had one?
 		ShuttleAnimator shuttleAnimator1 = new AShuttleAnimator();
 		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimator();
 		
-		// Replace the lines below with the two commented ones below or vice versa
+		// Replace (by commenting/uncommenting) the two uncommented lines below with the two commented ones
 //		serialShuttleAnimation(shuttleAnimator1, shuttle1);
 //		serialShuttleAnimation(shuttleAnimator2, shuttle2);
 		concurrentDemoShuttleAnimation(shuttleAnimator1, shuttle1);

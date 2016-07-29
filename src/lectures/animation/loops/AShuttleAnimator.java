@@ -29,6 +29,7 @@ public class AShuttleAnimator implements ShuttleAnimator {
 			shuttle.setShuttleY(startY);	
 //			System.out.println (			
 //					" Thread:" + Thread.currentThread() +
+//					" Animator: " + this +
 //					" Shuttle:" + shuttle +
 //					" New Y " + startY );
 		}			

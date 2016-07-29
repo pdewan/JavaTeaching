@@ -2,8 +2,8 @@ package lectures.animation.threads_commands;
 
 import lectures.animation.loops.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
-// A Command Object is one that provides an "execute" method to
-// execute a target command - method with parameters - on another target object.
+// A Command Object is one that provides a parameterless "execute" method to
+// execute a command - method with parameters - on another object called the target object.
 // What is the execute method called in this example.
 // What is the class of the target object.
 // What is the name of the target method?
@@ -32,7 +32,7 @@ public class AShuttleAnimationCommand
 		// When you hit it, which method is in the base of the stack of the stopped threads - 
 		// that is the threads in which the break occurred?
 		// Is the main thread in the list?
-		// Select  one of the stopped threads, Press F8 to go to the next break point.		
+		// Select one of the two stopped threads, Press F8 to go to the next break point.		
 		shuttleAnimator.animateFromOrigin(shuttle, animationStep, animationPauseTime);
 	}
 }
