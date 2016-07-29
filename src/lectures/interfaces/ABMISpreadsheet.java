@@ -20,9 +20,14 @@ import util.annotations.StructurePatternNames;
 })
 
 public class ABMISpreadsheet implements BMISpreadsheet {
+	static final double SAMPLE_HEIGHT = 1.77;
+	static final double SAMPLE_WEIGHT = 75;
 	double height;
 	double weight;	
-	public ABMISpreadsheet() { }	
+	public ABMISpreadsheet() { 
+//		height = SAMPLE_HEIGHT;
+//		weight = SAMPLE_WEIGHT;
+	}	
 	public ABMISpreadsheet(
 			double anInitialHeight, double anInitialWeight) {
 		setHeight(anInitialHeight);

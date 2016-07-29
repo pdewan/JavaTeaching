@@ -10,20 +10,14 @@ public class AnErroneousAssertingSpreadsheet extends AnAssertingBMISpreadsheet{
 		if (newValue <= 0) { 
 			System.out.println ("Warning weight <= 0");
 		}
-		weight = newValue;
+		super.setWeight(newValue);
 		
 	}	
-	public double getWeight() {
-		return weight;
-	}
-		
-	public double getHeight() {
-		return height;
-	}
+	
 	public void setHeight(double newValue) {
 		if (newValue <= 0) { 
 			System.out.println ("Warning height <= 0");
 		}
-		height = newValue;		
+		super.setHeight(newValue);	
 	}	
 }

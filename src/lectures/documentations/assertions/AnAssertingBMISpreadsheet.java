@@ -10,6 +10,6 @@ public class AnAssertingBMISpreadsheet extends AnAlwaysCheckingBMISpreadsheet {
 		//put break point here and step over or step into to see if preGetBMI() is called
 		assert 
 		    preGetBMI():"Internal Error: Weight or height <= 0";		
-		return weight/(height*height);
+		return super.getBMI();
 	}
 }

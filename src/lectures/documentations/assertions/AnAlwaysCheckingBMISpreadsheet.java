@@ -9,7 +9,7 @@ public class AnAlwaysCheckingBMISpreadsheet extends AValidBMISpreadsheet {
 	// Specifies the precondition for getBMI(), that is, 
 	// the condition that must be true for getBMI() to correctly execute
 	protected boolean preGetBMI() {
-		return weight > 0 && height > 0;
+		return getWeight() > 0 && getHeight() > 0;
 	}
 	@Override
 	public double getBMI() {
@@ -17,7 +17,7 @@ public class AnAlwaysCheckingBMISpreadsheet extends AValidBMISpreadsheet {
 			System.out.println ("Internal Error: weight or height <= 0");
 //			System.exit(-1);// should we exit?
 		}
-		return weight/(height*height);
+		return super.getBMI();
 	}
 
 }
