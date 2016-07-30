@@ -57,7 +57,7 @@ import lectures.inheritance.abstract_classes.CourseDisplayer;
 
 
 // A grammar provides us with a structured way to write a parser.
-// A parser converts scanned tokens in a legal sentence into
+// A parser *usually* converts scanned tokens in a legal sentence into
 // into a form called the parse tree, which can the be further processed by the program.
 // In this program, we are trying to convert the input into a course list, which is the tree that
 // will be processed. Each token is assumed to appear on a separate line to make our scanning easy.
