@@ -48,7 +48,7 @@ public class ACourseParser implements CourseParser {
 	public Course parseFreshmanSeminar () {
 	 	String title = scanner.nextLine();
 	 	String dept = scanner.nextLine();
-	 	return new AFreshmanSeminar(title, dept);
+	 	return new AFreshmanSeminar(title, dept); // returning a parse tree node
 	 	
    }
 	//<RC>  -> RC  <Title> <Dept> <Number>
@@ -56,7 +56,7 @@ public class ACourseParser implements CourseParser {
 	 	String title = scanner.nextLine();
 	 	String dept = scanner.nextLine();
 	 	int number = Integer.parseInt(scanner.nextLine());	 	
-	 	return new ARegularCourse (title, dept, number); 	
+	 	return new ARegularCourse (title, dept, number); // returning a different kind of parse tree node
 }
 
 
