@@ -14,18 +14,20 @@ public class ACourseList implements CourseList, TitleMatcher {
 		return size == MAX_SIZE;
 	}
 	public void addElement(Course element) {
-		if (isFull())
+		if (isFull()) {
 			System.out.println("Adding item to a full collection");
-		else {
+		} else {
 			contents[size] = element;
 			size++;
 		}
 	}
+	
+	// Contrast this method with the member method we saw in AStringDatabase
 	public Course matchTitle (String theTitle) {
-		//Course theCourse;
 		for (int courseIndex = 0; courseIndex < size; courseIndex++) {
-			if (contents[courseIndex].getTitle().equals(theTitle))
-				return contents[courseIndex];			
+			if (contents[courseIndex].getTitle().equals(theTitle)) {
+				return contents[courseIndex];	
+			}
 		}	
 		return null;
 	}	

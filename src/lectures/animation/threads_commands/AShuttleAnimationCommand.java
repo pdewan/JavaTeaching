@@ -2,8 +2,10 @@ package lectures.animation.threads_commands;
 
 import lectures.animation.loops.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
-// A Command Object is one that provides a parameterless "execute" method to
+// This is an example of a command object.
+// A Command Object is one that provides a parameterless method to
 // execute a command - method with parameters - on another object called the target object.
+// We will refer to such a method as an execute method.
 // What is the execute method called in this example.
 // What is the class of the target object.
 // What is the name of the target method?
