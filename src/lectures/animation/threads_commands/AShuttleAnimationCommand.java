@@ -34,7 +34,19 @@ public class AShuttleAnimationCommand
 		// When you hit it, which method is in the base of the stack of the stopped threads - 
 		// that is the threads in which the break occurred?
 		// Is the main thread in the list?
-		// Select one of the two stopped threads, Press F8 to go to the next break point.		
+		// Select one of the two stopped threads, Press F8 to go to the next break point.	
+		System.out.println (
+				Thread.currentThread() +
+				" about to call animateFromOrigin in:" +
+				shuttleAnimator);
 		shuttleAnimator.animateFromOrigin(shuttle, animationStep, animationPauseTime);
+		System.out.println (
+				Thread.currentThread().getName() +
+				" finished call to animateFromOrigin in:" +
+				shuttleAnimator);
+	}
+	@Override
+	public String toString() {
+		return getClass().getSimpleName() + "@" + hashCode();
 	}
 }

@@ -7,17 +7,23 @@ import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
+// ONE SYNCHRONIZED INSTANCE METHOD, TWO INSTANCES
+// This is the same example as its superclass except that this time we create two instances of
+// the shuttle animator class.
+// Run the program. Observe the animation behavior and console output.
+// Does the synchronized method execute simultaneously in the two instances?
 
-public class OneShuttleTwoSynchronizedShuttleAnimators extends ConcurrentShuttleLaunchAnimation  {	
+// Do you need to further refine your theory about synchronized methods?
+
+public class OneShuttleTwoSynchronizedShuttleAnimators extends SynchronizedConcurrentShuttleAnimations  {	
 	public static void main(String[] args) {
-		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(50, 100);
-		OEFrame oeFrame = ObjectEditor.edit(shuttle1);
-		oeFrame.hideMainPanel();
-		oeFrame.setSize(400, 400);
+		PlottedShuttle aShuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
+		displayShuttleFrame(aShuttle1);
+
 		ShuttleAnimator aShuttleAnimator1 = new ASynchronizedShuttleAnimator();
 		ShuttleAnimator aShuttleAnimator2 = new ASynchronizedShuttleAnimator();
-		concurrentDemoShuttleAnimation(aShuttleAnimator1, shuttle1);
-		ThreadSupport.sleep(500);
-		concurrentDemoShuttleAnimation(aShuttleAnimator2, shuttle1);	
+		concurrentDemoShuttleAnimation(aShuttleAnimator1, aShuttle1);
+		ThreadSupport.sleep(SECOND_THREAD_DELAY);
+		concurrentDemoShuttleAnimation(aShuttleAnimator2, aShuttle1);	
 	}
 }

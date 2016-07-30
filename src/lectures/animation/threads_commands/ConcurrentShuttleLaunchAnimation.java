@@ -12,15 +12,23 @@ import bus.uigen.ObjectEditor;
 // Uncomment the printlns in AShuttleAnimator and run
 // How many threads?
 // How many shuttles?
+// Is there a pattern in the order in which the two threads execute the printlns?
+// Comment out the sleep call after the uncommented printlns
+// Is there still a pattern  in the order n which the two threads execute the printlns?
+// What do you think is a side-effect of sleep?
+// Uncomment the sleep. Comment out the printlns as they clutter the displays
+
+// SERIAL VS CONCURRENT EXECUTION
 // Follow the instructions in main().
 // Run and observe what happens.
 // What do you think the purpose of a Thread is based on your observations?
 
-
+// COMMAND OBJECTS AND THREAD OBJECTS
 // Put break points and uncomment statements as instructed below and in the classes
 // AShuttleAnimator and AShuttleAnimationCommand. Study this code and the two classes.
 // Debug-run the program and when each break point is hit, follow the instructions
 
+// THREAD AND ANIMATION DESIGN PATTERN
 // Now look at all of the classes in this exercise. Can you identify a general design pattern involving
 // them and the Thread class for creating threaded applications and for creating threaded animation applications.
 
@@ -62,23 +70,12 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleLaunchAnimati
 		// Uncomment this statement. Does this message appear after the anumations have finished?
 //		System.out.println ("Animation Finished?");
 	}
-//	
-//	public static void displayShuttleFrame (PlottedShuttle aShuttle, int aFrameX, int aFrameY) {
-//		OEFrame oeFrame1 = ObjectEditor.edit(aShuttle);
-//		oeFrame1.hideMainPanel();
-//		oeFrame1.setLocation(aFrameX, aFrameY);
-//		oeFrame1.setSize(SHUTTLE_FRAME_WIDTH, SHUTTLE_FRAME_HEIGHT);
-//	}
-//	public static void displayShuttleFrame (PlottedShuttle aShuttle) {
-//		displayShuttleFrame(aShuttle, START_FRAME_X  + (shuttleNumber *SHUTTLE_FRAME_WIDTH) , START_FRAME_Y);
-//		shuttleNumber++;
-//	}
+
 	public static void main(String[] args) {
 		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		PlottedShuttle shuttle2 = new AnObservablePlottedShuttle(SHUTTLE2_X, SHUTTLE2_Y);
 		displayShuttleFrame(shuttle1);
 		displayShuttleFrame(shuttle2);
-		// Why two animators, what would happen if we had one?
 		ShuttleAnimator shuttleAnimator1 = new AShuttleAnimator();
 		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimator();
 		
