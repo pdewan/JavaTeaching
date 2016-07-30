@@ -1,7 +1,7 @@
 package lectures.inheritance.abstract_classes;
 
 public class ACourseList implements CourseList, TitleMatcher {
-	final int MAX_SIZE = 50;
+	static final int MAX_SIZE = 50;
 	Course[] contents = new Course[MAX_SIZE];
 	int size = 0;
 	public int size() {
