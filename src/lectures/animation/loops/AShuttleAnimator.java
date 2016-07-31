@@ -70,6 +70,9 @@ public class AShuttleAnimator implements ShuttleAnimator {
 				" finished animating in X Direction in:" +
 				this);
 	}
-	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName() + "@" + hashCode();
+	}
 	
 }

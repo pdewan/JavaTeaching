@@ -11,7 +11,20 @@ import bus.uigen.ObjectEditor;
  So far,we have seen threads that are independent of each other, those that interfere
  with each other and those that try not to step on each others toes.
  In none of these cases did a thread depend on another thread to do its job. Now we
- will create threads that do, and hence form a team collaborating with each other
+ will create threads that do, and hence form a team collaborating with each other.
+ 
+ The shuttle animator is different now. Have a look at it.
+ Look also at the class AClearanceManager instantiated below, which makes the calls
+ to the the methods wait() and notify() inherited from Object.
+ 
+ Now that you have seen all of the code, run the program. Two shuttle animators will be created,
+ one animating each shuttle. Neither of them knows about the other. They do know about the 
+ central clearance manager, one of which is created. It provides a button to proceed.
+ 
+ Run the animateShuttle command in each animator. What happens?
+ Press the proceed command once, pause, and press proceed again. What happens on each proceed?
+ 
+ Answer the questions in the clearance manager class. 
  
  */
 public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimation {
