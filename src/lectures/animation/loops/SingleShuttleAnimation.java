@@ -15,7 +15,7 @@ import bus.uigen.ObjectEditor;
 // How many different "threads" involved in the animation?
 // How many different shuttles involved in the animation?
 
-public class SingleShuttleLaunchAnimation {	
+public class SingleShuttleAnimation {	
 	protected final static int SHUTTLE1_X = 50;
 	protected final static int SHUTTLE1_Y = 100;
 	protected final static int SHUTTLE_FRAME_WIDTH = 400;

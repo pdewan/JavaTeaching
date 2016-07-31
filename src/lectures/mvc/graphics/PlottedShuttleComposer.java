@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.mvc.properties.ObservablePlottedShuttle;
+import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 // WINWDOW-BASED CONTROLLER
 // Again we will draw our own graphics. 
@@ -22,8 +23,17 @@ import bus.uigen.ObjectEditor;
 // Press the y key somewhere in the custom view and see what happens.
 
 public class PlottedShuttleComposer {
-	public static void main(String[] args) {		
-		ObservablePlottedShuttle aPlottedShuttle = new AnObservablePlottedShuttle(50, 100);		
+	static final int CUSTOM_FRAME_WIDTH = 400;
+	static final int CUSTOM_FRAME_HEIGHT = 300;
+	static final int OE_FRAME_WIDTH = 400;
+	static final int OE_FRAME_HEIGHT = 600;
+	static final int INIT_SHUTTLE_X = 25;
+	static final int INIT_SHUTTLE_Y = 50;
+
+	static final int FINAL_SHUTTLE_X = 50;
+	static final int FINAL_SHUTTLE_Y = 100;
+	
+	public static void composeShuttleMVC(ObservablePlottedShuttle aPlottedShuttle) {
 		PropertyChangeListener view = new APlottedShuttleView(aPlottedShuttle);
 		aPlottedShuttle.addPropertyChangeListener(view);	
 		// This time we create two controllers also
@@ -32,11 +42,28 @@ public class PlottedShuttleComposer {
 		KeyListener aKeyController = new APlottedShuttleKeyController(aPlottedShuttle, (Component) view);
 		JFrame aFrame = new JFrame("Plotted Shuttle");
 		aFrame.add((Component) view);
-		aFrame.setSize(300, 300);
+		aFrame.setSize(CUSTOM_FRAME_WIDTH, CUSTOM_FRAME_HEIGHT);
 		aFrame.setVisible(true);
-		ObjectEditor.edit(aPlottedShuttle);	
-		aPlottedShuttle.setShuttleY(100);
-		aPlottedShuttle.setShuttleX(50);
+	}
+	public static void main(String[] args) {		
+		ObservablePlottedShuttle aPlottedShuttle = new AnObservablePlottedShuttle(INIT_SHUTTLE_X, INIT_SHUTTLE_Y);		
+		composeShuttleMVC(aPlottedShuttle);
+//		PropertyChangeListener view = new APlottedShuttleView(aPlottedShuttle);
+//		aPlottedShuttle.addPropertyChangeListener(view);	
+		/*
+		This time we create two controllers also
+		They will listener to events from the view, so they need the views in their constructors
+		*/
+//		MouseListener aMouseController = new APlottedShuttleMouseController(aPlottedShuttle, (Component) view);
+//		KeyListener aKeyController = new APlottedShuttleKeyController(aPlottedShuttle, (Component) view);
+//		JFrame aFrame = new JFrame("Plotted Shuttle");
+//		aFrame.add((Component) view);
+//		aFrame.setSize(300, 300);
+//		aFrame.setVisible(true);
+		OEFrame anOEFrame = ObjectEditor.edit(aPlottedShuttle);	
+		anOEFrame.setSize(OE_FRAME_WIDTH, OE_FRAME_HEIGHT);
+		aPlottedShuttle.setShuttleX(FINAL_SHUTTLE_X);
+		aPlottedShuttle.setShuttleY(FINAL_SHUTTLE_Y);
 	}
 	// Think what each controller must do 
 	// Go to the code of the two controllers and see the actual code

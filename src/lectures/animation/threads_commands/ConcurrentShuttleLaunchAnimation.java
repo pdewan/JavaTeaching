@@ -2,50 +2,57 @@ package lectures.animation.threads_commands;
 
 import lectures.animation.loops.AShuttleAnimator;
 import lectures.animation.loops.ShuttleAnimator;
-import lectures.animation.loops.SingleShuttleLaunchAnimation;
+import lectures.animation.loops.SingleShuttleAnimation;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-// THREADS
-// Run the program. See what happens.
-// Uncomment the printlns in AShuttleAnimator and run
-// How many threads?
-// How many shuttles?
-// Is there a pattern in the order in which the two threads execute the printlns?
-// Comment out the sleep call after the uncommented printlns
-// Is there still a pattern  in the order n which the two threads execute the printlns?
-// What do you think is a side-effect of sleep?
-// Uncomment the sleep. Comment out the printlns as they clutter the displays
+ /*
+ THREADS
+ Run the program. See what happens.
+ Uncomment the printlns in AShuttleAnimator and run
+ How many threads?
+ How many shuttles?
+ Is there a pattern in the order in which the two threads execute the printlns?
+ Comment out the sleep call after the uncommented printlns
+ Is there still a pattern  in the order n which the two threads execute the printlns?
+ What do you think is a side-effect of sleep?
+ Uncomment the sleep. Comment out the printlns as they clutter the displays
+ */
 
-// SERIAL VS CONCURRENT EXECUTION
-// Follow the instructions in main().
-// Run and observe what happens.
-// What do you think the purpose of a Thread is based on your observations?
+/*
+ SERIAL VS CONCURRENT EXECUTION
+ Follow the instructions in main().
+ Run and observe what happens.
+ What do you think the purpose of a Thread is based on your observations?
+ */
 
-// COMMAND OBJECTS AND THREAD OBJECTS
-// Put break points and uncomment statements as instructed below and in the classes
-// AShuttleAnimator and AShuttleAnimationCommand. Study this code and the two classes.
-// Debug-run the program and when each break point is hit, follow the instructions
+/*
+ COMMAND OBJECTS AND THREAD OBJECTS
+ Put break points and uncomment statements as instructed below and in the classes
+ AShuttleAnimator and AShuttleAnimationCommand. Study this code and the two classes.
+ Debug-run the program and when each break point is hit, follow the instructions
+ */
 
-// THREAD AND ANIMATION DESIGN PATTERN
-// Now look at all of the classes in this exercise. Can you identify a general design pattern involving
-// them and the Thread class for creating threaded applications and for creating threaded animation applications.
+/*
+ THREAD AND ANIMATION DESIGN PATTERN
+ Now look at all of the classes in this exercise. Can you identify a general design pattern involving
+ them and the Thread class for creating threaded applications and for creating threaded animation applications.
 
-// Put a break point in the setShuttleY() method in AnObservablePlottedShuttle
-// and debug-run the program. based on what you see, can you  refine your  design patterns
-// and identify how these classes interact with each other.
-// Can you justify why these classes should not be combined with each other?
-// Why not combine the animator and animation class?
-// why not combine the command object and animator?
+ Put a break point in the setShuttleY() method in AnObservablePlottedShuttle
+ and debug-run the program. based on what you see, can you  refine your  design patterns
+ and identify how these classes interact with each other.
+ Can you justify why these classes should not be combined with each other?
+ Why not combine the animator and animation class?
+ why not combine the command object and animator?
 
-// Java allows the Thread class to be subclassed to include the behavior of  acommand object.
-// Thus, one does not pass a command object to the thread constructor. Instead we use a parameterless
-// constructor of the subclassed Thread object and put the functionality of the command object
-// in the overridden run method of Thread. Is this a good idea?
+ Java allows the Thread class to be subclassed to include the behavior of  acommand object.
+ Thus, one does not pass a command object to the thread constructor. Instead we use a parameterless
+ constructor of the subclassed Thread object and put the functionality of the command object
+ in the overridden run method of Thread. Is this a good idea?
+*/
 
-
-public class ConcurrentShuttleLaunchAnimation extends SingleShuttleLaunchAnimation  {
+public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 	static int threadNumber = 0;
 	protected final static String SHUTTLE_THREAD_NAME = "Shuttle Animation";
 	protected final static int START_FRAME_X = 50;

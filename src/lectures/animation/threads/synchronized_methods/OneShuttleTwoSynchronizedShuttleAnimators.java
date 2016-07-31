@@ -19,7 +19,6 @@ public class OneShuttleTwoSynchronizedShuttleAnimators extends SynchronizedConcu
 	public static void main(String[] args) {
 		PlottedShuttle aShuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		displayShuttleFrame(aShuttle1);
-
 		ShuttleAnimator aShuttleAnimator1 = new ASynchronizedShuttleAnimator();
 		ShuttleAnimator aShuttleAnimator2 = new ASynchronizedShuttleAnimator();
 		concurrentDemoShuttleAnimation(aShuttleAnimator1, aShuttle1);

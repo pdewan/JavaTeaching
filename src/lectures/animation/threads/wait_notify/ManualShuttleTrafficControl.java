@@ -6,9 +6,16 @@ import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-
+/*
+ COLLABORATING THREADS
+ So far,we have seen threads that are independent of each other, those that interfere
+ with each other and those that try not to step on each others toes.
+ In none of these cases did a thread depend on another thread to do its job. Now we
+ will create threads that do, and hence form a team collaborating with each other
+ 
+ */
 public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimation {
-//extends OrdinaryAndVIPShuttleAnimatorDriver {	
+
 	public final static int ANIMATOR_FRAME_HEIGHT = 125;
 	public final static int CLEARANCE_FRAME_WIDTH = 200;
 	public final static int CLEARANCE_FRAME_HEIGHT = 150;

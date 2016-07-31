@@ -6,24 +6,28 @@ import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
-public class AConcurrentShuttleAnimator extends AFancyShuttleAnimator  {	
+public class AConcurrentShuttleAnimator extends AFancyShuttleAnimator  {
+	protected int animationNumber;
 	public AConcurrentShuttleAnimator(PlottedShuttle theShuttle) {
 		super(theShuttle);
 	}
-	public void animateShuttle() {		
+	public void animateShuttle() {
 		Thread thread = new Thread(
 			(new AShuttleAnimationCommand(
 				this, shuttle,animationStep, animationPauseTime)));
+		thread.setName("Animation Thread " + animationNumber);
 		thread.start();
+		animationNumber++;
+		System.out.println (thread + " created by " + Thread.currentThread());
 	}
 	
-	public static void main (String[] args) {
-		PlottedShuttle shuttle = new AnObservablePlottedShuttle(50, 100);
-		OEFrame oeFrame = ObjectEditor.edit(shuttle);
-		oeFrame.hideMainPanel();
-		oeFrame.setSize (450, 450);
-		FancyShuttleAnimator shuttleAnimator = new AConcurrentShuttleAnimator(shuttle);
-		ObjectEditor.edit(shuttleAnimator);
-	}
+//	public static void main (String[] args) {
+//		PlottedShuttle shuttle = new AnObservablePlottedShuttle(50, 100);
+//		OEFrame oeFrame = ObjectEditor.edit(shuttle);
+//		oeFrame.hideMainPanel();
+//		oeFrame.setSize (450, 450);
+//		FancyShuttleAnimator shuttleAnimator = new AConcurrentShuttleAnimator(shuttle);
+//		ObjectEditor.edit(shuttleAnimator);
+//	}
 
 }

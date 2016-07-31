@@ -46,7 +46,7 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
 		ThreadSupport.sleep(SECOND_THREAD_DELAY);
 		concurrentDemoShuttleAnimation(aShuttleAnimator, aShuttle1);
 //		for (int aReadNum = 0; aReadNum < NUM_READS;aReadNum++) {
-//			System.out.println ("Read num:" + aReadNum + " " + aShuttleAnimator);
+//			System.out.println (Thread.currentThread() + ": Read num:" + aReadNum + " " + aShuttleAnimator);
 //			ThreadSupport.sleep(ANIMATION_PAUSE_TIME);			
 //		}
 	}
