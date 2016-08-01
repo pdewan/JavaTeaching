@@ -1,10 +1,5 @@
 package lectures.generics_adapters;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import lectures.graphics.Point;
-
 public class AnIntegerHistory implements IntegerHistory {
 	public static final int MAX_SIZE = 50;
 	
