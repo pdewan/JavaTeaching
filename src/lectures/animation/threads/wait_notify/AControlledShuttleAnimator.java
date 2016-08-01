@@ -4,8 +4,8 @@ import lectures.animation.threads.ui.AConcurrentShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 
 public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
-	Lock lock;
-	public AControlledShuttleAnimator(PlottedShuttle theShuttle, Lock aLock) {
+	BasicLock lock;
+	public AControlledShuttleAnimator(PlottedShuttle theShuttle, BasicLock aLock) {
 		super(theShuttle);
 		lock = aLock;
 	}

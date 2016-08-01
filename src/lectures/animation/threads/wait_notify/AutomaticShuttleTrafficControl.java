@@ -27,8 +27,10 @@ import bus.uigen.ObjectEditor;
   
  The shuttle animator is different now. Have a look at it.
  
- Look also at the class AVisualizedLock instantiated below, which makes the calls
+ Look also at the class ALock instantiated below, which makes the calls
  to the the methods wait() and notify() inherited from Object.
+ 
+ Can you define what a computer lock is and why it is so called?
  */
 public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl {
 	static final int SHUTTLE3_X = 50;
@@ -40,7 +42,7 @@ public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl 
 	static final int ANIMATION_FRAME_X = SHUTTLE_FRAME_X + FRAME_WIDTH;
 	static int shuttleNumber = 0;
 	static final int ANIMATION_PAUSE_TIME = 500;
-	static void createAndDisplayShuttleAndAnimator(int shuttleX, int shuttleY,  Lock aLock) {
+	static void createAndDisplayShuttleAndAnimator(int shuttleX, int shuttleY,  BasicLock aLock) {
 		int aFrameY = START_FRAME_Y + shuttleNumber*FRAME_HEIGHT;
 		PlottedShuttle aShuttle = new AnObservablePlottedShuttle(shuttleX, shuttleY );		
 		OEFrame aShuttleFrame = ObjectEditor.edit(aShuttle);
@@ -55,7 +57,7 @@ public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl 
 		shuttleNumber++;
 	}
 	public static void main(String[] args) {
-		Lock aLock = new AVisualizedLock();
+		BasicLock aLock = new ALock();
 		createAndDisplayShuttleAndAnimator(SHUTTLE1_X, SHUTTLE1_Y, aLock);
 		createAndDisplayShuttleAndAnimator(SHUTTLE2_X, SHUTTLE2_Y, aLock);
 		createAndDisplayShuttleAndAnimator(SHUTTLE3_X, SHUTTLE3_Y, aLock);	

@@ -1,8 +1,9 @@
 package lectures.animation.threads.wait_notify;
 
-public interface Lock {
-	public void getLock();
-	public void releaseLock();	
-	public boolean isLocked() ;
+import lectures.inheritance.StringDatabase;
+import util.models.ListenableVector;
+import util.models.PropertyListenerRegisterer;
 
+public interface Lock extends BasicLock, PropertyListenerRegisterer {
+	public ListenableVector getWaitingThreads() ;
 }

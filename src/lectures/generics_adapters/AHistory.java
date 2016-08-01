@@ -5,26 +5,42 @@ import java.util.List;
 
 import lectures.graphics.Point;
 
+/*
+ GENERIC CLASS
+  */
 
 
-
-public class AHistory<T> implements History<T> {
-	public final int MAX_SIZE = 50;
-	Object[] contents = new Object[MAX_SIZE];
+public class AHistory<T> implements 
+	History<T> {
+	/*
+	 What happens when you replace the line above with the one below?
+	 What do the various occurrences of the type parameter, T mean, you think?
+	 */
+//	History<T2> {
+	public static final int MAX_SIZE = 50;
+	// Cannot use generic to create an array, ultimately the buck has to stop somewhere
+	// At runtime, a generic type parameter reduces to Object when we allocate memory
+	// assuming Object. Put another way, an array is not a generic.
+	Object[] contents = new Object[MAX_SIZE]; 
 	int size = 0;
 	public int size() {return size;	}	
 	public T elementAt (int index) {
-		return (T) contents[index];
+		return (T) contents[index]; // must cast from Object to T
 	}
 	boolean isFull() {return size == MAX_SIZE;	}
 
 	public void addElement(T element) {
-		if (isFull())
+		if (isFull()) {
 			System.out.println("Adding item to a full history");
-		else {
+		} else {
 			contents[size] = element;
 			size++;
 		}
+		/*
+		 Can we invoke a non object operation on a variable whose type is a parameter?
+		 */
+//		element.charAt(0);
+		
 	} 
 	
 	public static void main (String[] args) {
