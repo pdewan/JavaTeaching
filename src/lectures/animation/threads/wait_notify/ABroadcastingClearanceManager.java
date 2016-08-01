@@ -9,7 +9,6 @@ public class ABroadcastingClearanceManager extends AClearanceManager
 	@Row(1)
 	@ComponentWidth(100)
 	public synchronized void proceedAll() {
-//		clearance = true;
-		notifyAll();		
+		notifyAll(); // not notify, hover over the method and see Java's explanation for it		
 	}
 }

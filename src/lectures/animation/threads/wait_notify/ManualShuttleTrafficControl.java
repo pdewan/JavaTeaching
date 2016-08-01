@@ -11,7 +11,7 @@ import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 import bus.uigen.attributes.AttributeNames;
 /*
- COLLABORATING THREADS
+ COLLABORATING THREADS AND WAIT/NOTOFY
  So far,we have seen threads that are independent of each other, those that interfere
  with each other and those that try not to step on each others toes.
  In none of these cases did a thread depend on another thread to do its job. Now we
@@ -27,12 +27,14 @@ import bus.uigen.attributes.AttributeNames;
  What happens in the shuttle frames?
  What happens in the clearance manager frame?
  What causes the queue to change?
- Does the lock queue ever have all threads?
+ Does the queue ever have all threads?
+ 
+ You can repeat this process many times.
 
  Any theory on what is happening?
  
  The shuttle animator is different now. Have a look at it.
- Look also at the class AClearanceManager instantiated below, which makes the calls
+ Look also at the class AClearanceManager instantiated by the factory class, ClearanceManagerFactory, which makes the calls
  to the the methods wait() and notify() inherited from Object.
  
  Answer the questions in the clearance manager class. 
@@ -57,15 +59,15 @@ public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimatio
 		frame.setSize(CONTROL_FRAME_WIDTH, CONTROL_FRAME_HEIGHT);
 	}
 	public static void main(String[] args) {
-		ClearanceManager clearanceManager = new AClearanceManager();
+		ClearanceManager aClearanceManager = ClearanceManagerFactory.getClearanceManager();
 		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		displayShuttleFrame(shuttle1);
-		ShuttleAnimator shuttleAnimator1 = new AShuttleAnimatorWatitingForClearance(shuttle1, clearanceManager);
+		ShuttleAnimator shuttleAnimator1 = new AShuttleAnimatorWatitingForClearance(shuttle1, aClearanceManager);
 		displayShuttleAnimator(shuttleAnimator1);
 		PlottedShuttle shuttle2 = new AnObservablePlottedShuttle(SHUTTLE2_X, SHUTTLE2_Y);
 		displayShuttleFrame(shuttle2);		
-		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimatorWatitingForClearance(shuttle2, clearanceManager);
+		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimatorWatitingForClearance(shuttle2, aClearanceManager);
 		displayShuttleAnimator(shuttleAnimator2);
-		displayControlFrame(clearanceManager);
+		displayControlFrame(aClearanceManager);
 	}
 }

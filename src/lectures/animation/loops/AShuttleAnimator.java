@@ -5,6 +5,7 @@ import lectures.animation.threads_commands.ThreadSupport;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import bus.uigen.OEFrame;
 public class AShuttleAnimator implements ShuttleAnimator {	
+	@Visible(false)
 	public void animateFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime) {	
 		System.out.println (
 				Thread.currentThread()+

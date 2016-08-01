@@ -3,21 +3,32 @@ package lectures.animation.threads.wait_notify;
 import lectures.animation.loops.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
-
+/*
+ NOTIFY ALL
+ This program is like its superclass except that it uses a different implementation of the Clearance
+ Manager interface - ABroadcastingClearanceManager.
+ 
+ Run it like the previous one except press proceedAll instead of proceed:
+ This means you run the animateShuttle command in each animator and then
+ press the proceedAll.
+ What happens in the shuttle frames?
+ What happens in the clearance manager frame?
+ What causes the queue to change?
+ Does the queue ever have all threads?
+ 
+ Go to the class ABroadcastingClearanceManager and have a look at the proceedAll method
+ which calls the notifyAll method inherited from Object.
+ 
+ Do you understand what notfyAll does?
+ */
 public class ManualSimultaneousShuttleLaunchAnimation extends ManualShuttleTrafficControl {
-	
-	// can we use factory methods here?
-	public static void main(String[] args) {		
-		ClearanceManager clearanceManager = new ABroadcastingClearanceManager();
-		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
-		displayShuttleFrame(shuttle1);
-		ShuttleAnimator shuttleAnimator1 = new AShuttleAnimatorWatitingForClearance(shuttle1, clearanceManager);
-		displayShuttleAnimator(shuttleAnimator1);
-		PlottedShuttle shuttle2 = new AnObservablePlottedShuttle(SHUTTLE2_X, SHUTTLE2_Y);
-		displayShuttleFrame(shuttle2);		
-		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimatorWatitingForClearance(shuttle2, clearanceManager);
-		displayShuttleAnimator(shuttleAnimator2);
-		displayControlFrame(clearanceManager);
+	public static void main(String[] args) {
+		// Do not use the default clearance manager built into the factory class
+		ClearanceManagerFactory.setClearanceManager(new ABroadcastingClearanceManager());
+		// Is this not beautiful, we can just call the main from the superclass?
+		// The power of interfaces (and the factory class)
+		ManualShuttleTrafficControl.main(args); 
+
 	}	
 
 }

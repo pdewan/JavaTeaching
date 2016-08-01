@@ -43,7 +43,7 @@ public class AClearanceManager implements ClearanceManager {
 			}
 //		}
 	}
-	@Row(1)
+	@Row(2)
 	public ListenableVector getWaitingThreads() {
 		return waitingThreads;
 
