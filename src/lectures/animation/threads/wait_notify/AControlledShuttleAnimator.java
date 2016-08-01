@@ -10,7 +10,7 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
 		lock = aLock;
 	}
 	protected void animateYFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime, int startY, int endY) {	
-		lock.getLock();
+		lock.getLock(); 
 		super.animateYFromOrigin(shuttle, animationStep, animationPauseTime, startY, endY);
 		lock.releaseLock();
 	}

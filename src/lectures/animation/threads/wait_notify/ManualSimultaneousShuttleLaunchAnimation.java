@@ -17,7 +17,7 @@ public class ManualSimultaneousShuttleLaunchAnimation extends ManualShuttleTraff
 		displayShuttleFrame(shuttle2);		
 		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimatorWatitingForClearance(shuttle2, clearanceManager);
 		displayShuttleAnimator(shuttleAnimator2);
-		displayClearanceManager(clearanceManager);
+		displayControlFrame(clearanceManager);
 	}	
 
 }

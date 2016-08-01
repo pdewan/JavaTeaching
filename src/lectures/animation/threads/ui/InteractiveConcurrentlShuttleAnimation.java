@@ -16,21 +16,18 @@ public class InteractiveConcurrentlShuttleAnimation extends InteractiveSerialShu
 	 thread each time the animate method is called. This thread executes the
 	 two animation loops.
 	 
-	 Run the program. Observe the behavior.
+	 Run the program. Observe the behavior. Again answer the questions:
 	 Which thread calls the repaint() method? Which executes the paint() method?
 	 Does the repaint() call execute while the X and Y loops in the animator execute?
 	 Does the paint method execute while the X and Y loops in the animator execute?
 	 
-	 Do you have a theory as to why this version differs from the previous one?	 
+	 Do you understand why this version differs from the previous one?	 
 
 	  
 	 */
 	public static void main (String[] args) {
 		ObservablePlottedShuttle aShuttle = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		PlottedShuttleComposer.composeShuttleMVC(aShuttle);
-//		OEFrame oeFrame = ObjectEditor.edit(shuttle);
-//		oeFrame.hideMainPanel();
-//		oeFrame.setSize (SHUTTLE_FRAME_WIDTH, SHUTTLE_FRAME_HEIGHT);
 		FancyShuttleAnimator shuttleAnimator = new AConcurrentShuttleAnimator(aShuttle);
 		ObjectEditor.edit(shuttleAnimator);
 	}

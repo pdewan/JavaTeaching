@@ -1,6 +1,8 @@
 package lectures.animation.threads.wait_notify;
 
-public interface ClearanceManager {
+import util.models.PropertyListenerRegisterer;
+
+public interface ClearanceManager extends PropertyListenerRegisterer{
 	public void proceed();
 	public void waitForProceed();	
 	

@@ -1,11 +1,15 @@
 package lectures.animation.threads.wait_notify;
 
+import util.models.AListenableVector;
 import lectures.animation.loops.ShuttleAnimator;
 import lectures.animation.threads_commands.ConcurrentShuttleLaunchAnimation;
 import lectures.composite.objects_shapes.PlottedShuttle;
+import lectures.inheritance.AStringSet;
+import lectures.inheritance.AnObservableStringSet;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
+import bus.uigen.attributes.AttributeNames;
 /*
  COLLABORATING THREADS
  So far,we have seen threads that are independent of each other, those that interfere
@@ -13,16 +17,23 @@ import bus.uigen.ObjectEditor;
  In none of these cases did a thread depend on another thread to do its job. Now we
  will create threads that do, and hence form a team collaborating with each other.
  
+ Run the program. Two shuttle animators will be created,
+ one for  animating each shuttle. Neither of them knows about the other. They do know about the 
+ central clearance manager, one of which is created. It provides a button to proceed.
+ It also shows a queue of waiting threads.
+
+ Run the animateShuttle command in each animator. What happens? 
+ Press the proceed command once, pause, and press proceed again. What happens on each proceed?
+ What happens in the shuttle frames?
+ What happens in the clearance manager frame?
+ What causes the queue to change?
+ Does the lock queue ever have all threads?
+
+ Any theory on what is happening?
+ 
  The shuttle animator is different now. Have a look at it.
  Look also at the class AClearanceManager instantiated below, which makes the calls
  to the the methods wait() and notify() inherited from Object.
- 
- Now that you have seen all of the code, run the program. Two shuttle animators will be created,
- one animating each shuttle. Neither of them knows about the other. They do know about the 
- central clearance manager, one of which is created. It provides a button to proceed.
- 
- Run the animateShuttle command in each animator. What happens?
- Press the proceed command once, pause, and press proceed again. What happens on each proceed?
  
  Answer the questions in the clearance manager class. 
  
@@ -30,8 +41,8 @@ import bus.uigen.ObjectEditor;
 public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimation {
 
 	public final static int ANIMATOR_FRAME_HEIGHT = 125;
-	public final static int CLEARANCE_FRAME_WIDTH = 200;
-	public final static int CLEARANCE_FRAME_HEIGHT = 150;
+	public final static int CONTROL_FRAME_WIDTH = 250;
+	public final static int CONTROL_FRAME_HEIGHT = 180;
 	static int animatorNumber;	
 	public static void displayShuttleAnimator(ShuttleAnimator shuttleAnimator1) {
 		OEFrame frame = ObjectEditor.edit(shuttleAnimator1);
@@ -39,10 +50,11 @@ public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimatio
 		frame.setSize(SHUTTLE_FRAME_WIDTH, ANIMATOR_FRAME_HEIGHT);
 		animatorNumber++;
 	}		
-	public static void displayClearanceManager(ClearanceManager aClearanceManager) {
-		OEFrame frame = ObjectEditor.edit(aClearanceManager);
+	public static void displayControlFrame(Object aController) {
+		ObjectEditor.setPropertyAttribute(AListenableVector.class, "element", AttributeNames.COMPONENT_WIDTH, CONTROL_FRAME_WIDTH);
+		OEFrame frame = ObjectEditor.edit(aController);
 		frame.setLocation(START_FRAME_X,  START_FRAME_Y + SHUTTLE_FRAME_HEIGHT/2);
-		frame.setSize(CLEARANCE_FRAME_WIDTH, CLEARANCE_FRAME_HEIGHT);
+		frame.setSize(CONTROL_FRAME_WIDTH, CONTROL_FRAME_HEIGHT);
 	}
 	public static void main(String[] args) {
 		ClearanceManager clearanceManager = new AClearanceManager();
@@ -54,6 +66,6 @@ public class ManualShuttleTrafficControl extends ConcurrentShuttleLaunchAnimatio
 		displayShuttleFrame(shuttle2);		
 		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimatorWatitingForClearance(shuttle2, clearanceManager);
 		displayShuttleAnimator(shuttleAnimator2);
-		displayClearanceManager(clearanceManager);
+		displayControlFrame(clearanceManager);
 	}
 }
