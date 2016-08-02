@@ -6,7 +6,8 @@ import java.util.List;
 import lectures.graphics.Point;
 
 /*
- GENERIC CLASS
+ GENERIC COLLECTION CLASS
+ 
   */
 
 

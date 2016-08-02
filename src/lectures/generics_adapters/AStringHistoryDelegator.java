@@ -6,7 +6,7 @@ import java.util.List;
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.inheritance.StringDatabase;
 /* 
- DELEGATION
+ DELEGATION AND ADAPTATION
  We see here that the interface List and the class ArrayList are both
  generic types.
  
@@ -16,7 +16,7 @@ import lectures.inheritance.StringDatabase;
  Look at the two static methods.
  Why do we need this class given that we have List and ArrayList?
  
- The two static methods try to answer this question. They justfiy this
+ The two static methods try to answer this question. They justify this
  class.
  
  Let us now try to understand why the term delegation is being used here.
@@ -56,21 +56,22 @@ public class AStringHistoryDelegator implements History<String>{
 	 Which of these two examples supports least privilege?
 	 
 	 */
+	final static String EXAMPLE_STRING = "0";
 	public static void useListDirectly() {
 		List<String> aStringHistory = new ArrayList<String>();
-		aStringHistory.add("0");
+		aStringHistory.add(EXAMPLE_STRING);
 		/*
-		 Is the following allowed? Should it be alloed for a "history"?
+		 Is the following allowed? Should it be allowed for a "history"?
 		 */
 //		aStringHistory.remove("0");
 	}
 	public static void useStringHistory() {
 		History<String> aStringHistory = new AHistory<String>();
-		aStringHistory.addElement("0");
+		aStringHistory.addElement(EXAMPLE_STRING);
 		/*
 		 Is the following allowed? Should it be allowed for a "history"?
 		 */
-//		aStringHistory.removeElement("0");
-//		((StringDatabase) aStringHistory).deleteElement("0");
+//		aStringHistory.removeElement(EXAMPLE_STRING));
+//		((StringDatabase) aStringHistory).removeElement(EXAMPLE_STRING);
 	}
 }
