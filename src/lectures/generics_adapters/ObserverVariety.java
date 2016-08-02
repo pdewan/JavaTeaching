@@ -5,6 +5,7 @@ import lectures.arrays.collections_implementation.StringHistory;
 import lectures.interfaces.BMISpreadsheet;
 import lectures.mvc.ACounterConsoleView;
 import lectures.mvc.AnObservableCounter;
+import lectures.mvc.Counter;
 import lectures.mvc.CounterObserver;
 import lectures.mvc.ObservableCounter;
 import lectures.mvc.properties.AnObservableBMISpreadsheet;
@@ -15,8 +16,6 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
  that is not a collection. Study the interface GenericObserver carefully
  as well as the interface ElaboratingObservableCounter and the class 
  AnElaboratingObservableCounter and AnElaboratingCounterConsoleView
- 
- 
  
  */
 public class ObserverVariety {
@@ -30,7 +29,7 @@ public class ObserverVariety {
 	}
 	public static void elaboratingObserverObservable() {
 		ElaboratingObservableCounter anObservableCounter = new AnElaboratingObservableCounter();
-		GenericObserver<ElaboratingObservableCounter> aCounterObserver = new AnElaboratingCounterConsoleView();
+		GenericObserver<Counter> aCounterObserver = new AnElaboratingCounterConsoleView();
 		anObservableCounter.addObserver(aCounterObserver);
 		aCounterObserver.update(anObservableCounter);
 		
@@ -38,7 +37,7 @@ public class ObserverVariety {
 		 Does the following pass compiler checks?
 		 */
 		
-//		GenericObserver<BMISpreadsheet> aBMIObserver = null; // we have no class for this
+//		GenericObserver<BMISpreadsheet> aBMIObserver = new AnElaboratingBMISpreadsheetObserver();
 //		anObservableCounter.addObserver(aBMIObserver);
 //		aBMIObserver.update(anObservableCounter);
 

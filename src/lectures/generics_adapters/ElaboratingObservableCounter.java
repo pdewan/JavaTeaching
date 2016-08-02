@@ -8,6 +8,6 @@ This is like ObservableCounter except that it allows additions of observers impl
 elaborations of a generic observer interface. 
  */
 public interface ElaboratingObservableCounter extends Counter{
-	public void addObserver(GenericObserver<ElaboratingObservableCounter> observer);
+	public void addObserver(GenericObserver<Counter> observer);
 
 }

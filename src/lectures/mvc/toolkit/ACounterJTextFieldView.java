@@ -1,6 +1,7 @@
 package lectures.mvc.toolkit;
 import javax.swing.JTextField;
 
+import lectures.mvc.Counter;
 import lectures.mvc.CounterObserver;
 import lectures.mvc.ObservableCounter;
 public class ACounterJTextFieldView implements CounterObserver {
@@ -8,7 +9,7 @@ public class ACounterJTextFieldView implements CounterObserver {
 	public ACounterJTextFieldView(JTextField theTextField) {
 		textField = theTextField;
 	}
-	public void update(ObservableCounter counter) {
+	public void update(Counter counter) {
 		textField.setText("" + counter.getValue());
 	}
 }

@@ -19,12 +19,12 @@ than a type parameter.
 public class AnElaboratingObservableCounter extends ACounter implements ElaboratingObservableCounter  {
 	int counter = 0;
 	// We elaborate a generic history with an elaboration of a generic observer interface
-	History<GenericObserver<ElaboratingObservableCounter>> observers = new AHistory<GenericObserver<ElaboratingObservableCounter>>();
+	History<GenericObserver<Counter>> observers = new AHistory<GenericObserver<Counter>>();
 	public void add (int amount) {
 		super.add(amount);
 		notifyAllObservers();
 	}
-	public void addObserver(GenericObserver<ElaboratingObservableCounter> observer) {
+	public void addObserver(GenericObserver<Counter> observer) {
 		observers.addElement(observer);
 		
 		observer.update(this); 
