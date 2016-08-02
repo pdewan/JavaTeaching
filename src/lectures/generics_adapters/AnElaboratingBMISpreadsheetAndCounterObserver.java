@@ -7,13 +7,13 @@ import lectures.mvc.Counter;
 import lectures.mvc.CounterObserver;
 import lectures.mvc.ObservableCounter;
 /*
- IMPLEMENTING TWO DIFFERENT ELABORATIONS OF SAME GENERIC INTERFACE
- Should we be able to do this? 
- 
- Look at the main method. Run it. Look at the console output.
- 
- Now swap the implemented interface from CounterObserver to GenericObserver<Counter>
- Is that allowed? What output do you expect from main if it was allowed?
+ * IMPLEMENTING TWO DIFFERENT ELABORATIONS OF SAME GENERIC INTERFACE
+ * Should we be able to do this? 
+ * 
+ * Look at the main method. Run it. Look at the console output.
+ * 
+ * Now swap the implemented interface from CounterObserver to GenericObserver<Counter>
+ * Is that allowed? What output do you expect from main if it was allowed?
  
  */
 public class AnElaboratingBMISpreadsheetAndCounterObserver 

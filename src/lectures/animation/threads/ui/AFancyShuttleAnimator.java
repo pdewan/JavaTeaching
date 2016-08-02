@@ -7,9 +7,9 @@ import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.mvc.properties.ObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-/*
+/**
  * This animator does the job main has done so far, supplying the animation step and pause time values
- * defined byt properties that can be set interactively using say Objecteditor.
+ * defined by properties that can be set interactively using say Objecteditor.
  * The animateShuttle() method simply supplies these parameters to the inherited public method.
  */
 public class AFancyShuttleAnimator extends ASynchronizedShuttleAnimator implements FancyShuttleAnimator {
