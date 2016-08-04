@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 /**
- * EXCEPTIONS INVOLVING MULTIPE METHODS
+ * EXCEPTIONS IN PROGRAMS INVOLVING MULTIPE METHODS
  * The previous example involved one method, which both performed 
  * error-prone operations and handled the errors. It does not involve recovering 
  * from errors. Much of exception handling is about cooperative error handling/recovery 
@@ -11,12 +11,16 @@ import java.io.InputStreamReader;
  * 
  * This is an example of a multi-method program, but it does not involve cooperative
  * multi-method processing or much error recovery. Each method processes the
- * eexceptions thrown when it does its job. Is this the best strategy?
+ * exceptions thrown when it does its job. Is this the best strategy?
  * 
  * Look at the program, run it. Think of how you might better handle the error for
  * this particular application. Think of how you might implement it.
  * 
- * I
+ * In this example, is the operation that first detects an error the right one to
+ * (completely) handle it? If not what do you need from Java to separate detection 
+ * and handling and to provide error handling involving multiple methods?
+ * 
+ * Go to {@link LinesReaderAndPrinterPropagatingExceptions}
  *
  */
 public class LinesReaderAndPrinter {

@@ -13,14 +13,17 @@ package lectures.exceptions;
  * a subscript error and when there is not?
  * In particular, can you determine what parts of the try block and catch blocks are executed
  * when there is subscript error and when there is not? 
- * Uncomment the trace statements to confirm your deduction.
+ * 
+ * Put a break point as instructed and uncomment the trace statements.
+ * Debug-run the program and press F6 at the break point to see where the program
+ * jumps to when the exception occurs.
  * 
  * EXCEPTION TYPES
  *  
  * Can you relate the error message you got in (@link ArgPrinter} to the type of
  * the parameter e? 
  * 
- * Click F3 on the type of e. Is it a class, an interface, or some other special kind of type?
+ * Click F3 on the type name of e. Is it a class, an interface, or some other special kind of type?
  *
  * TRY-CATCH FOR ERROR REPORTING
  * 
@@ -33,7 +36,7 @@ public class ExceptionHandlingArgPrinter {
 	public static void main(String[] args) {
 		try {
 //			System.out.println ("Try block started");
-			System.out.println(args[0]);
+			System.out.println(args[0]); //put break point here
 //			System.out.println ("Try block ended");
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Did not specify the argument to be printed. Terminating program.");			
