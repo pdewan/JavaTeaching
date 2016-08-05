@@ -31,12 +31,11 @@ public class TimingLinesReaderAndPrinter {
 
 	static BufferedReader input = new BufferedReader(
 			new InputStreamReader(System.in));
-//	static void echoLines(int numberOfInputLines)  {
 	static void echoLines(int numberOfInputLines) throws IOException {
-		for (int inputNum = 0; inputNum < numberOfInputLines; inputNum++)
+		for (int inputNum = 0; inputNum < numberOfInputLines; inputNum++) {
 			System.out.println(input.readLine());
+		}
 	}
-//	static int numberOfInputLines(String[] args){
 	static int numberOfInputLines(String[] args)
 			throws ArrayIndexOutOfBoundsException {
 		return Integer.parseInt(args[0]);

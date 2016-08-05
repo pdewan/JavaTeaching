@@ -37,7 +37,9 @@ public class AComplexAssertingBMISpreadsheet implements BMISpreadsheet {
 	public void setWeight(double newValue) {
 		assert preSetWeight(newValue);
 		try {
-		if (!preSetWeight(newValue)) return;
+		if (!preSetWeight(newValue)) {
+			return;
+		}
 		weight = newValue;
 		} finally {
 		assert preSetWeight(newValue);
