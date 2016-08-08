@@ -13,10 +13,18 @@ public class AllUpperCaseLettersInOrderThrowingException implements
 	}
 
 	public char next() throws NoSuchElementException {
-		if (!hasNext())
+		if (!hasNext()) {
 			throw new NoSuchElementException();
+		}
 		char retVal = nextLetter;
 		nextLetter = (char) (nextLetter + 1);
 		return retVal;
+	}
+	
+	public static void main (String[] args) {
+		CharIterator anUpperCasePrinter = new AllUpperCaseLettersInOrderThrowingException();
+		while (anUpperCasePrinter.hasNext()) {
+			System.out.println (anUpperCasePrinter.next());
+		}
 	}
 }

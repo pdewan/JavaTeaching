@@ -17,7 +17,6 @@ public class LinesReaderAndPrinterUsingExceptionsInheritance {
 			e.printStackTrace();
 			System.exit(-1);
 		}
-		// unreachable
 		// catch (AMissingArgumentException e) {
 		// System.out.println(e);
 		// System.exit(-1);
@@ -29,8 +28,9 @@ public class LinesReaderAndPrinterUsingExceptionsInheritance {
 			new InputStreamReader(System.in));
 
 	static void echoLines(int numberOfInputLines) throws IOException {
-		for (int inputNum = 0; inputNum < numberOfInputLines; inputNum++)
+		for (int inputNum = 0; inputNum < numberOfInputLines; inputNum++) {
 			System.out.println(input.readLine());
+		}
 	}
 
 	static int numberOfInputLines(String[] args)

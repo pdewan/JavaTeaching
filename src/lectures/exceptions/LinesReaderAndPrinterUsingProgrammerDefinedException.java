@@ -18,20 +18,37 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
 	 * Run the program without supplying an argument and look at the output.
 	 * Which stack trace is printed for {@link AMissingArgumentException}, 
 	 * the one at the point the exception is thrown (in numberOfInputLines)
-	 * or the one a the point the exception is caught in main?
+	 * or the one at the point the exception is caught in main?
 	 * 
 	 * Why would you print the stack trace rather than the message?
 	 * 
+	 * CATCH AND IS-A
+	 * Comment the first catch block and debug-run the program with no break point. 
+	 * Why do you not get an error message from the compiler? 
+	 * 
+	 * Put breakpoint in the numberOfInputLines() try block.
+	 * Debug-Run the program. Press F6. Where do you land? Why? 
+	 * 
+	 * Remove the comments around the third catch block. Can you justify the error?
 	 */
 	public static void main(String args[]) {
 		try {
 			echoLines(numberOfInputLines(args));
-		} catch (AMissingArgumentException e) {
+		} 
+		// Comment this out
+		catch (AMissingArgumentException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		// Uncomment this 
+//		catch (AMissingArgumentException e) {
+//			System.out.println(e.getMessage());
+//			e.printStackTrace();
+//		}
 	}
 
 	static BufferedReader input = new BufferedReader(new InputStreamReader(
@@ -64,8 +81,8 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
 		try {
 			return Integer.parseInt(args[0]);
 		} catch (ArrayIndexOutOfBoundsException e) {
-			// comment the following and uncomment the first and both of the 
-			// commented statements below
+			// comment the following and uncomment the first and then both of the 
+			// two commented statements below
 			throw new AMissingArgumentException("First argument missing");
 //			new AMissingArgumentException("First argument missing");
 //			return -1;// error code
