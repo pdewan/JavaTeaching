@@ -2,8 +2,9 @@ package lectures.exceptions;
 
 public interface TestInterface {
 
-	public void procesArgs(String[] args) 
-			throws AMissingArgumentException // comment this out
+	public void nothingMeaningful(String[] args) 
+//			throws IOException 
+//			throws ArrayIndexOutOfBoundsException
 			;
 
 

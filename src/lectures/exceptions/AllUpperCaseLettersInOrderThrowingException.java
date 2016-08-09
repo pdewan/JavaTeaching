@@ -14,7 +14,15 @@ import lectures.iterator.CharIterator;
  * 
  * Study the code and run it. 
  * 
- * Then comment out the code fragments in the order given.
+ * Then comment out the println and run the program. Were you surprised?
+ * 
+ * WHEN TO USE EXCEPTION HANDLING
+ *
+ * Compare the two loops in exceptionCaught and noExceptionCaught.
+ * Are they equivalent?
+ * Which is faster in terms of the number of conditions checked?
+ * Which is easier to understand? Why?
+ *  
  *
  */
 public class AllUpperCaseLettersInOrderThrowingException implements
@@ -33,21 +41,39 @@ public class AllUpperCaseLettersInOrderThrowingException implements
 		   // Press F4 on the name and see its type hierarchy
 		   // Is its a checked or unchecked exception?
 			throws NoSuchElementException { 
-		// 2. Comment the code out
-//		if (!hasNext()) {
-//			throw new NoSuchElementException();
-//		}
+		if (!hasNext()) {
+			throw new NoSuchElementException();
+		}
 		char retVal = nextLetter;
 		nextLetter = (char) (nextLetter + 1);
 		return retVal;
 	}
-	
-	public static void main (String[] args) {
+	/**
+	 * Use the hasNext() function to determine when to terminate loop. No exception caught,
+	 */
+	public static void noExceptionCaught() {
 		CharIterator anUpperCasePrinter = new AllUpperCaseLettersInOrderThrowingException();
 		while (anUpperCasePrinter.hasNext()) {
 			System.out.println (anUpperCasePrinter.next());
 			// 1. Comment the following code out and run. Were you surprised?
 //			System.out.println ("Reprinting:" + anUpperCasePrinter.next());
 		}
+	}
+	/**
+	 * Use NoSuchElementException to determine when to terminate loop. An exception caight.
+	 */
+	public static void exceptionCaught() {
+		CharIterator anUpperCasePrinter = new AllUpperCaseLettersInOrderThrowingException();
+		try {
+		while (true) {
+			System.out.println (anUpperCasePrinter.next());
+		}
+		} catch (NoSuchElementException e) {
+			// no more elements, not an error, do nothing
+		}
+	}
+	public static void main (String[] args) {
+		noExceptionCaught();
+//		exceptionCaught();
 	}
 }
