@@ -58,12 +58,11 @@ public class LinesReaderAndPrinter {
 	    }
 	}
 	/**
-	 * Determine the number of lines to be echoed. 
-	 * This is expected to be the zeroth main argument.
-	 * Convert this string into an int.
+	 * Determine the number of lines to be echoed by converting the 
+	 * zeroth main argument into an int.
 	 * Possible error: The user does not enter the main argument, as in the previous
 	 * example.
-	 * Another error: The user does not specify a Strng that can be converted into an int.
+	 * Another error: The user does not specify a String that can be converted into an int.
 	 * We will ignore this error.
 	 * 
 	 * Like the previous method, it can be called from main or some other method.

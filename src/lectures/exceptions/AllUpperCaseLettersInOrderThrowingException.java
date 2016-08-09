@@ -1,9 +1,22 @@
 package lectures.exceptions;
 
+import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import lectures.iterator.CharIterator;
-
+/**
+ * ITERATORS AND EXCEPTIONS
+ * This class implements the general concept of an Iterator of which there
+ * are many implementations - in fact two in Java called {@link Enumeration}
+ * and {@link Iterator}. Look at the two definitions of these interfaces to get
+ * an idea of the general concept.
+ * 
+ * Study the code and run it. 
+ * 
+ * Then comment out the code fragments in the order given.
+ *
+ */
 public class AllUpperCaseLettersInOrderThrowingException implements
 		CharIterator {
 	char nextLetter = 'A';
@@ -11,11 +24,19 @@ public class AllUpperCaseLettersInOrderThrowingException implements
 	public boolean hasNext() {
 		return nextLetter <= 'Z';
 	}
-
-	public char next() throws NoSuchElementException {
-		if (!hasNext()) {
-			throw new NoSuchElementException();
-		}
+	/**
+	 * This is a function (returns a value) but has "side effects".
+	 * What is the side effect?
+	 */
+	public char next() 
+	       // Hover over this exception name to see its description
+		   // Press F4 on the name and see its type hierarchy
+		   // Is its a checked or unchecked exception?
+			throws NoSuchElementException { 
+		// 2. Comment the code out
+//		if (!hasNext()) {
+//			throw new NoSuchElementException();
+//		}
 		char retVal = nextLetter;
 		nextLetter = (char) (nextLetter + 1);
 		return retVal;
@@ -25,6 +46,8 @@ public class AllUpperCaseLettersInOrderThrowingException implements
 		CharIterator anUpperCasePrinter = new AllUpperCaseLettersInOrderThrowingException();
 		while (anUpperCasePrinter.hasNext()) {
 			System.out.println (anUpperCasePrinter.next());
+			// 1. Comment the following code out and run. Were you surprised?
+//			System.out.println ("Reprinting:" + anUpperCasePrinter.next());
 		}
 	}
 }
