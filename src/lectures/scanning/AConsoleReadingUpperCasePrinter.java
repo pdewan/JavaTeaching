@@ -33,7 +33,9 @@ public class AConsoleReadingUpperCasePrinter {
 	 */
 	public static void main(String[] args) 
 	/*
-	 * What happens if you use this header instead, can you execute the program?
+	 * What happens if you use the following header instead, can you execute the program?
+	 * Comment out the header above and uncomment the following to see what happens?
+	 * What is the difference between the two headers?
 	 */
 //	public static void main(String args) {
 	/**
