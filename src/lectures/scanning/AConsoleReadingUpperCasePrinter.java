@@ -56,6 +56,7 @@ public class AConsoleReadingUpperCasePrinter {
 	/*
 	 * What happens if you use each of the following headers for main instead, can you execute the program?
 	 * Comment out the header above and uncomment the following to see what happens?
+	 * Does the program compile? Can the program be executed - do you get an option to run it?
 	 * You can comment and uncomment a set of selected lines using the shortcut CTRL/
 	 * In the case of a single line, it is sufficient to have the insertion point in the line
 	 */

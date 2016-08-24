@@ -4,7 +4,7 @@
  * great depth.
  * 
  * Visit the following classes for this praxis in this order:
- * {@link lectures.scanning.AConsoleReadingUpperCasePrinter}
+ * {@link lectures.scanning.AConsoleReadingUpperCasePrinter} {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}
  * Click on the name of the referenced class name and Press F3 (maybe Fn F3 or CMD F3)
  * to automatically navigate to it.
  * 
@@ -29,6 +29,8 @@
  * T/F Any class can be executed.
  * T/F Only a class with a main method can be executed.
  * 
+ * T/F A main method is the first method executed when its class is run.
+ * T/F A main method is the last method executed when its class is run.
  * 
  * T/F A main method must have an argument named arg.
  * T/F A main method can have a String argument.
@@ -36,11 +38,11 @@
  * T/F Constraints put on the main method makes it easier for the Java interpreter, which executes a main method, to find it in the containing class.
  * T/F Constraints put on the main method can prevent programming errors such as returning a value.
  * 
+ * 
  * Scanning
  * 
  * A token produced by scanning a string s is a substring of s.
  * A token produced by scanning a string s can have non consecutive characters of s.
- * All tokens produced by scanning a string must have the same length.
  *
  */
 package lectures.scanning;
