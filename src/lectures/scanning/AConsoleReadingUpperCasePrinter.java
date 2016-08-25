@@ -73,7 +73,9 @@ public class AConsoleReadingUpperCasePrinter {
 	 */
 	public static void main(String[] args) 
 	/*
-	 * What happens if you use each of the following headers for main instead, can you execute the program?
+	 * What happens if you use each of the following headers for main instead? Can you execute the program?
+	 * You cannot execute the program is you do not see the Java Application option in the Run As
+	 * or Debug As menu command, or if you see the console message, cannot find or load main method.
 	 * Comment out the header above and uncomment the following to see what happens?
 	 * Does the program compile? Can the program be executed - do you get an option to run it?
 	 * You can comment and uncomment a set of selected lines using the shortcut CTRL/
