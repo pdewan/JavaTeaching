@@ -9,20 +9,21 @@ import java.util.Scanner;
 public class AModularConsoleReadingUpperCasePrinter {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		System.out.println ("Please enter a string with uppercase and lower case letters.");
 		String scannedString = scanner.nextLine();
-		scanAndPrint(scannedString);		
+		scanAndPrint(scannedString);	
+		System.out.println ("Program ends.");
 	}
 	
 	/**
 	 * What happens if you delete the keyword static in scanAndPrint?
 	 */
 	public static void scanAndPrint(String aScannedString) {
-		System.out.println("Upper Case Letters:");
 		int index = 0;
 		while (index < aScannedString.length()) {
 			char nextLetter = aScannedString.charAt(index);
 			if (nextLetter >= 'A' && nextLetter <= 'Z') {
-				System.out.print(nextLetter);
+				System.out.println("Token:" + nextLetter); // + here means string concatenation
 			}
 			index++;
 		}

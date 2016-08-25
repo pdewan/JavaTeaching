@@ -3,9 +3,18 @@
  * RUNNING A PROGRAM
  * This is an example of a Java program called a class in Java.
  * There are many ways to execute a class,
- * If you are editing the class and your insertion pont is in it,
+ * If you are editing the class and your insertion point is in it,
  * Right click->Debug As->Java Application is one way.
  * Use it or some other way you know to run this program.
+ * 
+ * If you do nto see the Java Application option in Debug As, or your get a console message
+ * Cannot run or load class, then your project is misconfigured and you have not deleted the
+ * oeall.jar file from the class path.
+ * 
+ * Look at the PPT on importing JavaTeaching again on how to do so. You have to select
+ * the project then Right Click->Properties->Build Path->Libraries. Select oeall22.jar (it should
+ * be red, and remove it. You will get a baunch of errors now but you can do the praxis. Look at
+ * the objecteditor ppt on how to add your downloaded oeall to the class/build path.
  * 
  * PACKAGES
  * A class (named AConsoleReadingUpperCasePrinter below)  may be contained in a named hierarchical package much as a file can be in a named hierarchical folder
@@ -21,7 +30,8 @@
  * 
  * FULL VS SHORT NAME
  * The package name followed by . followed by the short name of the class is its full or long name.
- * The full name of this class is lectures.scanning.AConsoleReadingUpperCasePrinter
+ * The full name of this class is lectures.scanning.AConsoleReadingUpperCasePrinter (if you have made a copy
+ * it is lectures.scanning.copy.AConsoleReadingUpperCasePrinter).
  * 
  */
 package lectures.scanning; 
@@ -45,7 +55,7 @@ import java.util.Scanner;
 	 * CLASSS
 	 * Every runnable program must have at least one class that declares a main method.
 	 * A class is like a file in non object oriented languages.
-	 * A class name should be camel case starting with an upper case letter.
+	 * A class name should be camelCase starting with an upper case letter.
 	 * That is, the first word in the name should be a lowercase letter
 	 * and  each subsequent word should start with an uppercase letter.
 	 */
@@ -59,7 +69,7 @@ public class AConsoleReadingUpperCasePrinter {
 	 * A method name should be camelCase 
 	 * Everything before the first curly brace is the method header.
 	 * 
-	 * What is the purpose of the args parameter to the main method?
+	 * What is the purpose of the args parameter to the main method? (It is ok if you do not know the answer).
 	 */
 	public static void main(String[] args) 
 	/*
@@ -83,7 +93,7 @@ public class AConsoleReadingUpperCasePrinter {
 	* A method body is a sequence of statements terminated with semi colons;
 	*/
 	{
-
+		System.out.println ("Please enter a string with uppercase and lower case letters.");
 		 /* Use of library, nothing conceptual here, just some syntax */
 		Scanner scanner = new Scanner(System.in);
 		String scannedString = scanner.nextLine(); // gives next line input by the use, hover on method name
@@ -95,7 +105,7 @@ public class AConsoleReadingUpperCasePrinter {
 		 * The loop "scans" scannedString, that is, it examines every character in the string and finds
 		 * substrings of interest called tokens.
 		 * How many characters in each token identified by this loop?
-		 * Is this use of the term scanning consistent with its use in the English language?
+		 * Is this use of the term "scanning" consistent with its use in the English language?
 		 */
 		while (index < scannedString.length()) {
 			
@@ -124,6 +134,7 @@ public class AConsoleReadingUpperCasePrinter {
 		 */
 		
 		scanner.close(); // we are done with the scanner, we are actually just done
+		System.out.println ("Program ends.");
 	}
 
 }

@@ -6,8 +6,12 @@
  * 
  * Visit the following classes for this praxis in this order:
  * {@link lectures.scanning.AConsoleReadingUpperCasePrinter} {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}
- * Click on the name of the referenced class name and Press F3 (maybe Fn F3 or CMD F3, depending on your computer)
- * to automatically navigate to it.
+ * Change the name of the package in the names above to the one in which you are working, e.g. change
+ * lectures.scanning to lectures.scanning.cop.
+ * 
+ * Now click on the name of the referenced class name and Press F3 (maybe Fn F3 or CMD F3, depending on your computer)
+ * to automatically navigate to it. 
+ * 
  * 
  * After performing the praxis, answer the following questions in draft form here.
  * Once you are sure of your answers, take the Scanning Sakai quiz.
