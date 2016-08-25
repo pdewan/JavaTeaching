@@ -95,6 +95,7 @@ public class AConsoleReadingUpperCasePrinter {
 		 * The loop "scans" scannedString, that is, it examines every character in the string and finds
 		 * substrings of interest called tokens.
 		 * How many characters in each token identified by this loop?
+		 * Is this use of the term scanning consistent with its use in the English language?
 		 */
 		while (index < scannedString.length()) {
 			
