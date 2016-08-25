@@ -11,6 +11,8 @@
  * 
  * After performing the praxis, answer the following questions in draft form here.
  * Once you are sure of your answers, take the Scanning Sakai quiz.
+ * The praxis will help you answer not only these questions but also participate
+ * in the class discussion. So even if you can answer the questions, do the praxis.
  * 
  * QUESTION INFO
  * 

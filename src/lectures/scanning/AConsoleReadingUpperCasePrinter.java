@@ -17,6 +17,8 @@
  * contain two classes with the same name.
  * A package name should start with a lower case letter.
  * 
+ * Why are packages useful?
+ * 
  * FULL VS SHORT NAME
  * The package name followed by . followed by the short name of the class is its full or long name.
  * The full name of this class is lectures.scanning.AConsoleReadingUpperCasePrinter
@@ -27,13 +29,16 @@ package lectures.scanning;
 	 * 
 	 * IMPORTS
 	 * 
-	 * If a class C1 refers a class C2 in a different package, then it must use either the full name
+	 * If a class C1 refers a class C2 in a different (external) package, then it must use either the full name
 	 * of class C2 or import C2.
 	 * 
 	 * Below, we are importing an external class not in the package of this class.
 	 * What happens if you comment this import out?
 	 * Now execute CTRL-SHIFT-O and make the selection. The import should reappear.
 	 * This is a good way to import classes whose full names you do not remember or know.
+	 * 
+	 * Can a program that uses external packages not have imports?
+	 * Why are imports useful?
 	 */
 import java.util.Scanner; 
 	/**
@@ -53,6 +58,8 @@ public class AConsoleReadingUpperCasePrinter {
 	 * Methods correspond to procedures and functions in other languages.
 	 * A method name should be camelCase 
 	 * Everything before the first curly brace is the method header.
+	 * 
+	 * What is the purpose of the args parameter to the main method?
 	 */
 	public static void main(String[] args) 
 	/*
@@ -60,7 +67,8 @@ public class AConsoleReadingUpperCasePrinter {
 	 * Comment out the header above and uncomment the following to see what happens?
 	 * Does the program compile? Can the program be executed - do you get an option to run it?
 	 * You can comment and uncomment a set of selected lines using the shortcut CTRL/
-	 * In the case of a single line, it is sufficient to have the insertion point in the line
+	 * In the case of a single line, it is sufficient to have the insertion point in the line.
+	 * 	 
 	 */
 //	public static void main(String args) {
 //	public static void main(String[] anArgs) {

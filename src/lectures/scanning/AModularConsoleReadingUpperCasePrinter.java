@@ -2,7 +2,8 @@ package lectures.scanning;
 import java.util.Scanner;
 /**
  * Here is another way to do the same problem.
- * Why is  it more modular than the other approach?
+ * Why is it more modular than the other approach?
+ * Can you make this program even more modular?
  *
  */
 public class AModularConsoleReadingUpperCasePrinter {
