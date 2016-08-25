@@ -102,7 +102,8 @@ public class AConsoleReadingUpperCasePrinter {
 			*/
 			if (nextLetter >= 'A' && nextLetter <= 'Z') {
 				System.out.println("Token:" + nextLetter); // + here means string concatenation
-			}			
+			}
+			// just showing the else syntax below
 //			else {
 //				System.out.println("Skipping:" + nextLetter);
 //			}
