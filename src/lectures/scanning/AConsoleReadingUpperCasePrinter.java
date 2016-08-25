@@ -92,7 +92,7 @@ public class AConsoleReadingUpperCasePrinter {
 	/**
 	* METHOD BODY
 	* The code between the outermost curly braces is the method body.
-	* A method body is a sequence of statements terminated with semi colons;
+	* A method body is a sequence of statements terminated with semicolons;
 	*/
 	{
 		System.out.println ("Please enter a string with uppercase and lower case letters.");
