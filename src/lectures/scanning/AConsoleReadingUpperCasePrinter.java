@@ -32,6 +32,8 @@ package lectures.scanning;
 	 * 
 	 * Below, we are importing an external class not in the package of this class.
 	 * What happens if you comment this import out?
+	 * Now execute CTRL-SHIFT-O and make the selection. The import should reappear.
+	 * This is a good way to import classes whose full names you do not remember or know.
 	 */
 import java.util.Scanner; 
 	/**

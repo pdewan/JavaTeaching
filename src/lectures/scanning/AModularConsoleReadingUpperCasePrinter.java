@@ -13,7 +13,7 @@ public class AModularConsoleReadingUpperCasePrinter {
 	}
 	
 	/**
-	 * What happens if you delete the term keyword in scanAndPrint?
+	 * What happens if you delete the keyword static in scanAndPrint?
 	 */
 	public static void scanAndPrint(String aScannedString) {
 		System.out.println("Upper Case Letters:");

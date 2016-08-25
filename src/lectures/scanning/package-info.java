@@ -35,7 +35,7 @@
  * T/F A main method is the first method executed when its class is run.
  * T/F A main method is the last method executed when its class is run.
  * 
- * T/F A main method must have an argument named arg.
+ * T/F A main method must have an argument named args.
  * T/F A main method can have a int argument.
  * T/F Constraints put on the header of the main method makes it easier for a human being to find it in the containing main class
  * T/F Constraints put on the header of the main main method make it easier for the Java interpreter, which executes a main method, to find it in the containing class.
