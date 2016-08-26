@@ -53,5 +53,15 @@
  * (T/F) A token produced by scanning a string can have non consecutive characters of the string.
  * (T/F) A string scanned by a scanner is a concatenation of all the tokens detected by the scanner.
  *
+ * DISCUSSION INFO
+ * What did you learn or re-learn in through this praxis and the questions?
+ * What is the purpose of a package?
+ * What is the purpose of an import?
+ * What is the purpose of putting constraints on the header of any method?
+ * What is the purpose of a main method, that is, why distinguish main from other methods?
+ * What is the purpose of the argument to the main method?
+ * What is the practical benefit of modularity in {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}?
+ * How can we improve the modularity of {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}?
+ * 
  */
 package lectures.scanning;

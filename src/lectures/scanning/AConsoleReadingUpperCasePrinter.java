@@ -82,11 +82,11 @@ public class AConsoleReadingUpperCasePrinter {
 	 * In the case of a single line, it is sufficient to have the insertion point in the line.
 	 * 	 
 	 */
-//	public static void main(String args) {
-//	public static void main(String[] anArgs) {
-//	public static void main(String anArgs[]) {
-//	public void main(String anArgs[]) {
-//	public static int main(String anArgs[]) {
+//	public static void main(String args) 
+//	public static void main(String[] anArgs) 
+//	public static void main(String anArgs[]) 
+//	public void main(String anArgs[]) 
+//	public static int main(String anArgs[]) 
 
 
 	/**
