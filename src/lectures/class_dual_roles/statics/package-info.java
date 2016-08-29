@@ -37,7 +37,8 @@
  * Given the class {@link lectures.class_dual_roles.statics.Factorials}, 
  * what purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
  * What is the principle of least privilege?
- * Which members (variables and methods) of {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
+ * Which members (variables and methods) of 
+ * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  * should be public?
  * Why is the purpose of having both classes, StaticLoopingFactorialSpreadsheet and AnotherStaticLoopingFactorialSpreadsheet, 
  * which are copies of each other?
