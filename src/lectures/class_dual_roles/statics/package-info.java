@@ -8,8 +8,9 @@
  * Make a copy of this package and also lectures.class_dual_roles.statics
  * and also lectures.class_dual_roles.instances and lectures.class_dual_roles.users. *  
  * Visit the following classes for this praxis in this order:
- *  {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  *  {@link lectures.class_dual_roles.statics.Factorials}
+ *  {@link lectures.class_dual_roles.statics.Permutations}
+ *  {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  *  {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse}
  *  {@link lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse}
  *  {@link lectures.class_dual_roles.statics.AnotherStaticLoopingFactorialSpreadsheet}
@@ -18,12 +19,22 @@
  * Notice that some of these classes are in the same package and some are not.
  * 
  * SAKAI QUESTION INFO
- * In this praxis we will understand static variables, getters, setters and properties.
+ * In this praxis we will understand static global variables, getters, setters and properties.
  * 
  * Global Variable Access
+ * A static variable in a class
+ * 		must be declared in the main method of a class
+ * 		must not be declared within any method
+ * 
+ * * A static variable in a class
+ * 		is a local variable that can be  referenced by only the main method
+ * 		is a global variable that can be referenced by any method in the class
+ * 		is a global variable that can accessed only by public methods in the class
  * A static variable declared in a class can be changed
- * 			by any method in the class.
- * 			only by certain methods called setters.
+ * 		by any method in the class.
+ * 		only by certain methods called setters.
+ * 		only by the main method.
+ * 		only by public methods in the class
  * 
  * Class and Method Access
  * T/F If public classes C1 and C2 are in the same package, a method in C1 can call methods in C2 with public and default access.
@@ -34,9 +45,13 @@
  * 
  * DISCUSSIOn INFO
  * Does it makes sense for a class to be private?
+ * Why not combine {@link lectures.class_dual_roles.statics.Factorials}
+ * and and {@link lectures.class_dual_roles.statics.Permutations} 
+ * into a single class?
  * Given the class {@link lectures.class_dual_roles.statics.Factorials}, 
  * what purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
  * What is the principle of least privilege?
+ * What is the principle of separation of concerns?
  * Which members (variables and methods) of 
  * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  * should be public?
