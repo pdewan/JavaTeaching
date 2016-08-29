@@ -19,9 +19,11 @@ public class StaticLoopingFactorialSpreadsheet // public class access
 //private class StaticLoopingFactorialSpreadsheet // private class access
 {
 	/**
-	** Static variables are external or global to methods, shared by all static methods in a class
+	* Static variables are external or global to methods, shared by all static methods in a class.
+	* What hapens when you switch to the alternate declaration of number? 
 	*/
-	static int number;
+	static int number = 0;
+//	static final int number = 0;
 	static long factorial;
 	/**
 	 * 

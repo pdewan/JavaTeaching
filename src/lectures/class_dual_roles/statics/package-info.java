@@ -21,22 +21,21 @@
  * SAKAI QUESTION INFO
  * In this praxis we will understand static global variables, getters, setters and properties.
  * 
- * Global Variable Access
+ * Static
  * A static variable in a class
  * 		must be declared in the main method of a class
  * 		must not be declared within any method
  * 
  * * A static variable in a class
- * 		is a local variable that can be  referenced by only the main method
+ * 		is a local variable that can be referenced by only the main method
  * 		is a global variable that can be referenced by any method in the class
  * 		is a global variable that can accessed only by public methods in the class
- * A static variable declared in a class can be changed
+ * A (non final) static variable declared in a class can be changed
  * 		by any method in the class.
  * 		only by certain methods called setters.
  * 		only by the main method.
  * 		only by public methods in the class
  * 
- * Class and Method Access
  * T/F A class can import two different classes with the same short name.
  * T/F If public classes C1 and C2 are in the same package, a method in C1 can call methods in C2 with public and default access.
  * T/F If public classes C1 and C2 are in different packages, a method in C1 can call methods in C2 with public and default access.

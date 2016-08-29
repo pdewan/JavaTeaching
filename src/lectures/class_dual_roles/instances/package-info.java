@@ -11,6 +11,7 @@ package lectures.class_dual_roles.instances;
  * Visit the classes:
  * {@link lectures.class_dual_roles.instances.ALoopingFactorialSpreadsheet}
  * {@link lectures.class_dual_roles.instances.InstantiatingFactorialSpreadsheetUse}
+ * {@link lectures.class_dual_roles.instances.PropertiesAnalyzer}
  * 
  * QUESTION INFO
  * An instance variable is any variable
@@ -20,7 +21,7 @@ package lectures.class_dual_roles.instances;
  *   Memory space is allocated at most once.
  *   Memory space is allocated multiple times,depending on how many times the class is instantiated in the program.
  * For each static variable in a class of a program:
- *   At most one memory block is created.
+ *   Memory space is allocated at most once.
  *   Memory space is allocated multiple times,depending on how many times the class is instantiated in the program.
  * (T/F An instance variable can be accessed by only instance methods.
  * (T/F) A static variable can be accessed by only static methods.
