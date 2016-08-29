@@ -1,4 +1,4 @@
-package lectures.class_dual_roles;
+package lectures.class_dual_roles.instances;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

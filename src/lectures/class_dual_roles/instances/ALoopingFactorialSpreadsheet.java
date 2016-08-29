@@ -1,5 +1,6 @@
-package lectures.class_dual_roles;
+package lectures.class_dual_roles.instances;
 
+import lectures.class_dual_roles.statics.Factorials;
 import lectures.interfaces.FactorialSpreadsheet;
 
 

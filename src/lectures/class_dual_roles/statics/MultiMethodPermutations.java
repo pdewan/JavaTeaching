@@ -1,4 +1,4 @@
-package lectures.class_dual_roles;
+package lectures.class_dual_roles.statics;
 
 public class MultiMethodPermutations {
 	// for now all methods will be static

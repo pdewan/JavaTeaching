@@ -1,14 +1,6 @@
-package lectures.class_dual_roles;
-public class Factorials {
-//	static int number;
-//	static long factorial;
-//	public static void setNumber(int newValue) {
-//		number = newValue;
-//		factorial = loopingFactorial(number);
-//	}
-//	public static int getNumber(int newValue) {
-//		return number;
-//	}
+package lectures.class_dual_roles.statics;
+public class FactorialsTiming {
+
 	
 	// what does Eclipse say if you replace the first long with int but do not replace the second one?
 	// what does Eclipse say if you replace the second long with int but not replace the first one? 

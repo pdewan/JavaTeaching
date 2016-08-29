@@ -1,4 +1,4 @@
-package lectures.class_dual_roles;
+package lectures.class_dual_roles.instances;
 
 // Java Beans is an industry standard formally defined by these imported classes and others
 import java.beans.BeanInfo;

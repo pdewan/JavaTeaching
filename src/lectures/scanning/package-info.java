@@ -4,12 +4,13 @@
  * The word and PPT documents created for the unit describe the purpose and motivation for this unit in
  * great depth.
  * 
+ * Copy this package for your praxis.
  * Visit the following classes for this praxis in this order:
  * {@link lectures.scanning.AConsoleReadingUpperCasePrinter} {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}
  * Change the name of the package in the names above to the one in which you are working, e.g. change
- * lectures.scanning to lectures.scanning.cop.
+ * lectures.scanning to lectures.scanning.copy.
  * 
- * Now click on the name of the referenced class name and Press F3 (maybe Fn F3 or CMD F3, depending on your computer)
+ * Now click on the name of eac referenced class name and Press F3 (maybe Fn F3 or CMD F3, depending on your computer)
  * to automatically navigate to it. 
  * 
  * 
@@ -18,7 +19,7 @@
  * The praxis will help you answer not only these questions but also participate
  * in the class discussion. So even if you can answer the questions, do the praxis.
  * 
- * QUESTION INFO
+ * SAKAI QUESTION INFO
  * 
  * Packages
  * How is a package stored in the file system?

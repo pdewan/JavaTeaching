@@ -1,7 +1,5 @@
-package lectures.class_dual_roles.users;
+package lectures.class_dual_roles.instances;
 
-import lectures.class_dual_roles.ALoopingFactorialSpreadsheet;
-import lectures.class_dual_roles.Factorials;
 
 public class InstantiatingFactorialSpreadsheetUse {
 	

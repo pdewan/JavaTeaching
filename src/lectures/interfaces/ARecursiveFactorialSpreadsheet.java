@@ -1,6 +1,6 @@
 package lectures.interfaces;
 
-import lectures.class_dual_roles.Factorials;
+import lectures.class_dual_roles.statics.Factorials;
 
 
 // ignore the implements clause on first read

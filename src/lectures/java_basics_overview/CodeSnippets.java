@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-import lectures.class_dual_roles.Factorials;
+import lectures.class_dual_roles.statics.Factorials;
 import lectures.main_consoleinput.Console;
 
 // this code is for those who know conventional programming but are unfamilar with Java syntax

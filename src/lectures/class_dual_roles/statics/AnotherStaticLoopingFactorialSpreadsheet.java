@@ -1,6 +1,6 @@
-package lectures.class_dual_roles;
+package lectures.class_dual_roles.statics;
 
-// copy of StaticLoopingFactorialSpreadsheet, with just the clas name changed
+// copy of StaticLoopingFactorialSpreadsheet, with just the class name changed
 public class AnotherStaticLoopingFactorialSpreadsheet {
 	static int number;
 	static long factorial;
