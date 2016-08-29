@@ -22,7 +22,6 @@ public class Factorials // public class access
 	 * Do you get any compile errors in this file or in the class
 	 * StaticLoopingFactorialSpreadsheet?
 	 * You can hover over an error marker to see the corresponding message
-	 * Press ALT <- to return back to where you came from.
 	 */	
 	public static long loopingFactorial(int aNumber)
 //	static long loopingFactorial(int aNumber) 

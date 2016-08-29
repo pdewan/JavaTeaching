@@ -1,6 +1,9 @@
 package lectures.class_dual_roles.statics;
-
-// copy of StaticLoopingFactorialSpreadsheet, with just the class name changed
+/**
+ * 
+ * Copy of StaticLoopingFactorialSpreadsheet, with just the class name changed.
+ * What is wrong with copying code?
+ */
 public class AnotherStaticLoopingFactorialSpreadsheet {
 	static int number;
 	static long factorial;

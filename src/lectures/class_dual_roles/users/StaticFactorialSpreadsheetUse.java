@@ -40,7 +40,8 @@ public class StaticFactorialSpreadsheetUse {
 		 * We just erased the previous factorial (4!) in StaticLoopingFactorialSpreadsheet.
 		 * A class cannot access 4! and 2! simultaneously without storing them in local variables
 		 * Problem: how to allow multiple stored factorials to be shared by multiple classes or the same clas.
-		 * Go to {@link lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse}
+		 * Go to {@link lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse} for one not
+		 * very nice solution.
 		 * 
 		 */
 		

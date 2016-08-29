@@ -17,6 +17,8 @@ public class TwoStaticFactorialSpreadsheetUse {
 		 * {@link lectures.class_dual_roles.statics.AnotherStaticLoopingFactorialSpreadsheet}
 		 * Have a quick look at it to confirm it is a copy of the 
 		 * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
+		 *  As usual, click on the class name and click F3 to see the code.
+		 *  Press ALT <- to return back to this method
 		*/
 		System.out.println(AnotherStaticLoopingFactorialSpreadsheet.getFactorial() 
 				* AnotherStaticLoopingFactorialSpreadsheet.getFactorial());

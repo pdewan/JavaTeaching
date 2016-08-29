@@ -37,21 +37,25 @@
  * 		only by public methods in the class
  * 
  * Class and Method Access
+ * T/F A class can import two different classes with the same short name.
  * T/F If public classes C1 and C2 are in the same package, a method in C1 can call methods in C2 with public and default access.
  * T/F If public classes C1 and C2 are in different packages, a method in C1 can call methods in C2 with public and default access.
  * T/F If classes C1 and C2 are in the same package, and class C2 has default access, a method in C1 can call public methods  in C2.
  * T/F If classes C1 and C2 are in different packages, and class C2 has default access, a method in C1 can call public methods in C2.
- * T/F A class can import two different classes with the same short name.
+ * T/F One of the roles of a class is to create walls around its members (variables and methods) 
+ * that can restrict access to these members from other classes.
+ * T/F One of the roles of a package is to create walls around its component classes to restrict accesses to
+ * these classes (and its members) from classes in other packages.
  * 
- * DISCUSSIOn INFO
- * Does it makes sense for a class to be private?
+ * 
+ * DISCUSSION INFO
+ * What is the principle of least privilege?
+ * What is the principle of separation of concerns?
  * Why not combine {@link lectures.class_dual_roles.statics.Factorials}
  * and and {@link lectures.class_dual_roles.statics.Permutations} 
  * into a single class?
  * Given the class {@link lectures.class_dual_roles.statics.Factorials}, 
- * what purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
- * What is the principle of least privilege?
- * What is the principle of separation of concerns?
+ * What purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
  * Which members (variables and methods) of 
  * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  * should be public?

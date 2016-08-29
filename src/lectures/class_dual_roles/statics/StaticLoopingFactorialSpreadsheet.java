@@ -40,9 +40,7 @@ public class StaticLoopingFactorialSpreadsheet // public class access
 	 */
 	public static void setNumber(int newValue) {
 		number = newValue ;
-		/**
-		 *  Click on looping factorial and click F3 to see the code.
-		 *  Press ALT <- to return back to this method
+		/**		 
 		 *  Does Java accept the alternate assignment statement below?
 		 *  FYI: google for "import static" when you have spare time
 		 *  Why did we not need to import the class Factorials?
