@@ -2,7 +2,10 @@ package lectures.class_dual_roles.statics;
 /**
  * LOOPING and RECURSIVE FACTORIAL
  * This class shows how one can compute a factorial, both
- * in a loop and recursively.
+ * in a loop and recursively. 
+ * There is no main method here.
+ * The methods in this class are meant to be called directly or indirectly
+ * by a main method in some other class.
  */
 /**
  * In the following class declaration, what happens if you remove the keyword public 
@@ -14,7 +17,7 @@ package lectures.class_dual_roles.statics;
  *
  */
 public class Factorials // public class access
-//class Factorials // default class access
+//class Factorials // default class access, no access keyword
 {
 	/**
 	 * In the following method declaration, what happens if you remove the keyword public 

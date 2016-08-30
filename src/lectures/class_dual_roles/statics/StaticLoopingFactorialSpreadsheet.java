@@ -10,7 +10,7 @@ package lectures.class_dual_roles.statics;
  * In the following class declaration, what happens if you remove the keyword public 
  * to specify default class access or replace it with private to give private access
  * Do you get any compile errors in this file or in the class
- * {@link StaticLoopingFactorialSpreadsheet}?
+ * {@link StaticLoopingFactorialSpreadsheetUse}?
  * You can hover over an error marker to see the corresponding message
  * 
  */

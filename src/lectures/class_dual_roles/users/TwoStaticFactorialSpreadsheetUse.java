@@ -31,7 +31,9 @@ public class TwoStaticFactorialSpreadsheetUse {
 		 * 		
 		 * This is a copy and paste, solution - ugh!
 		 * What if we want an arbitrary number of store factorials, not known before we start the program
-		 * Go to lectures.class_dual_roles.instances.package-info.java to see the solution
+		 * Go to lectures.class_dual_roles.instances.package-info.java to see the solution after you have processed
+		 * the instructions in the classes referenced in lectures.class_dual_roles.statics.package-info.java 
+		 * 
 		 * 
 		 */
 

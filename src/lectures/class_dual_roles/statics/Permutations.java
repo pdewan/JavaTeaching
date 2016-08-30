@@ -1,5 +1,6 @@
 package lectures.class_dual_roles.statics;
 
+
 /**
  * SEPARATION OF CONCERNS
  * The separation of concerns principle says that if a set of methods and variables can

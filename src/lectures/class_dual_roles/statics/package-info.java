@@ -2,12 +2,14 @@
 /**
  * PACKAGE INFO
  * Code associated with the class dual roles teaching unit in
- * <a href="http://www.cs.unc.edu/~dewan/comp401/current</a>
+ * http://www.cs.unc.edu/~dewan/comp401/current
  * The word and PPT documents created for the unit describe the purpose and motivation for this unit in
  * great depth.
- * Make a copy of this package and also lectures.class_dual_roles.statics
- * and also lectures.class_dual_roles.instances and lectures.class_dual_roles.users. *  
- * Visit the following classes for this praxis in this order:
+ * Make a copy of this package and also lectures.class_dual_roles.instances 
+ * and lectures.class_dual_roles.users. *  
+ * Visit the following classes for this praxis. You may want to look at all of the 
+ * classes before following the instructions in them to get an idea of how this
+ * multi-class program works.
  *  {@link lectures.class_dual_roles.statics.Factorials}
  *  {@link lectures.class_dual_roles.statics.Permutations}
  *  {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
@@ -26,7 +28,7 @@
  * 		must be declared in the main method of a class
  * 		must not be declared within any method
  * 
- * * A static variable in a class
+ * A static variable in a class
  * 		is a local variable that can be referenced by only the main method
  * 		is a global variable that can be referenced by any method in the class
  * 		is a global variable that can accessed only by public methods in the class
