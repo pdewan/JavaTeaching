@@ -27,25 +27,28 @@ public class StaticLoopingFactorialSpreadsheet // public class access
 	static long factorial;
 	/**
 	 * 
-	 * This is a "getter", which returns the number, we will formally define getters later
+	 * This is a "getter", which returns the number, we will formally define getters when we study properties.
 	 */
 	public static int getNumber() {
 		/**
-		 * Uncomment the next line. Does Java complain?
-		 * Comment it back after your experiment.
+		 * Uncomment the next line. Does Java complain that your
+		 * getter changes the number (which it should not)?
+		 * Comment it back after your experiment to correct the program.
 		 */
 		// number = 0;
 		return number;
 	}
 	/**
-	 * This is a "setter", it changes the number and associated factorial, we will formally define setters later
+	 * This is a "setter", it changes the number and associated factorial, we will formally define setters when we study properties
 	 */
 	public static void setNumber(int newValue) {
 		number = newValue ;
 		/**		 
 		 *  Does Java accept the alternate assignment statement below?
-		 *  FYI: google for "import static" when you have spare time
-		 *  Why did we not need to import the class Factorials?
+		 *  FYI: google for "import static" when you have spare time.
+		 *  
+		 *  Why did we not need to import the class Factorials - look at
+		 *  the name of the package of Factorials and this class?
 		 */
 		factorial = Factorials.loopingFactorial(number);
 //		factorial = loopingFactorial(number);

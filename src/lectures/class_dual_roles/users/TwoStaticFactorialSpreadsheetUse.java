@@ -8,8 +8,9 @@ public class TwoStaticFactorialSpreadsheetUse {
 	
 	public static void main (String[] args) {
 		StaticLoopingFactorialSpreadsheet.setNumber(4);		
-		System.out.println(StaticLoopingFactorialSpreadsheet.getFactorial() 
+		System.out.println("The square of 4 factorial is:" + StaticLoopingFactorialSpreadsheet.getFactorial() 
 				* StaticLoopingFactorialSpreadsheet.getFactorial());
+		
 		AnotherStaticLoopingFactorialSpreadsheet.setNumber(2);
 		/**
 		 * 
@@ -20,13 +21,14 @@ public class TwoStaticFactorialSpreadsheetUse {
 		 *  As usual, click on the class name and click F3 to see the code.
 		 *  Press ALT <- to return back to this method
 		*/
-		System.out.println(AnotherStaticLoopingFactorialSpreadsheet.getFactorial() 
+		System.out.println("The square of 2 factorial is:" + AnotherStaticLoopingFactorialSpreadsheet.getFactorial() 
 				* AnotherStaticLoopingFactorialSpreadsheet.getFactorial());
 		/**
 		 * 		 
 		 * We can now access 4! and 2! simultaneously without storing them in local variables
+		 * or recomputing the factorials.
 		*/
-		System.out.println (StaticLoopingFactorialSpreadsheet.getFactorial()/AnotherStaticLoopingFactorialSpreadsheet.getFactorial());
+		System.out.println ("4!/2! is: " + StaticLoopingFactorialSpreadsheet.getFactorial()/AnotherStaticLoopingFactorialSpreadsheet.getFactorial());
 		/**
 		 * 		
 		 * This is a copy and paste, solution - ugh!

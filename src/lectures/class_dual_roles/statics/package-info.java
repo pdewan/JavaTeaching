@@ -1,5 +1,26 @@
 
 /**
+ * We now see ways and motivation for creating a program with multiple classes.
+ * While only one class will be runnable - have a main method - there will be
+ * many supporting classes, and we will see a principle for decomposing
+ * code into multiple classes and another for protecting the variables and methods in
+ * them from external scrutiny. While decomposition has many benefits, it has
+ * the disadvantage that the code is distributed. This means the program becomes
+ * like the elephant in the story of the blind men and an elephant 
+ * (https://en.wikipedia.org/wiki/Blind_men_and_an_elephant),
+ * which is understood differently based on which part we focus on. 
+ * 
+ * Use the F3 (or as a student pointed out, CTRL click, which I did not
+ * know also works) to navigate to reference classes and methods and 
+ * ALT <- to return back. Such navigation is crucial to understanding multi-component 
+ * programs. Better still, you and your partners can have multiple classes
+ * open in your editors so that you can view multiple classes simultaneously.
+ * Introductory courses tend not to deal large components, so many of you will
+ * grow up in this praxis. So expect to struggle, especially if you
+ * took Comp 116. Remember, instructors are here to help you. You may want
+ * to also have the lecture pdf open.
+ * 
+ * 
  * PACKAGE INFO
  * Code associated with the class dual roles teaching unit in
  * http://www.cs.unc.edu/~dewan/comp401/current
@@ -7,8 +28,9 @@
  * great depth.
  * Make a copy of this package and also lectures.class_dual_roles.instances 
  * and lectures.class_dual_roles.users. *  
- * Visit the following classes for this praxis. You may want to look at all of the 
- * classes before following the instructions in them to get an idea of how this
+ * Visit the following classes for this praxis. You may want to
+ * run   {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} and look 
+ * at all of the classes before following the instructions in them to get an idea of how this
  * multi-class program works.
  *  {@link lectures.class_dual_roles.statics.Factorials}
  *  {@link lectures.class_dual_roles.statics.Permutations}
@@ -21,11 +43,10 @@
  * Notice that some of these classes are in the same package and some are not.
  * 
  * SAKAI QUESTION INFO
- * In this praxis we will understand static global variables, getters, setters and properties.
  * 
- * Static
+ * 
  * A static variable in a class
- * 		must be declared in the main method of a class
+ * 		must be declared in the main method of a class.
  * 		must not be declared within any method
  * 
  * A static variable in a class
@@ -57,6 +78,7 @@
  * into a single class?
  * Given the class {@link lectures.class_dual_roles.statics.Factorials}, 
  * What purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
+ * Why call it a spreadsheet?
  * Which members (variables and methods) of 
  * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
  * should be public?
