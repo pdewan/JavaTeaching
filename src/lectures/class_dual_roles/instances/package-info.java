@@ -36,8 +36,8 @@ package lectures.class_dual_roles.instances;
  * Properties
  * 
  * The names and types of the instance properties defined by a class depend on:
- * 	Only  public and non public instance methods of the class.
- *  Only  public instance methods of the class.
+ * 	Only public and non public instance methods of the class.
+ *  Only public instance methods of the class.
  *  Only  instance variables of the class.
  *  Instance variables and public instance methods of the class.
  
@@ -48,7 +48,12 @@ package lectures.class_dual_roles.instances;
  *    All of the above
  *    None of the above
 
- *  
+ *  If a class has a stored instance property P of type T, then it must have:
+ *    An instance getter, that is, an instance method with name getP taking no parameter and returning a value of type T.
+ *    An instance variable of type T that directly stores the value of the property.
+ *    All of the above
+ *    None of the above
+ *    
  *  If a class has an editable property P of type T, then it must have:
  *    An instance setter, that is, an instance method with name setP taking a parameter of type T and returning a void.
  *    A non final instance variable named P of type T.
@@ -64,5 +69,6 @@ package lectures.class_dual_roles.instances;
  * Draw analogies between a car/factory and class/instance.
  * Does it make sense to allow instance methods to access static variables?
  * Does it make sense to allow static methods to access instance variables?
+ * What are the pros and cons of making a property computed instead of stored?
  * 
  */

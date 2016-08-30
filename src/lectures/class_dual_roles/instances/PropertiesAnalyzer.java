@@ -89,9 +89,9 @@ public class PropertiesAnalyzer {
 // 		printProperties(new AFactorialSpreadsheetPretender());
  		/* 				 
 	     * Uncomment the the code below. Click on name and press F3 to visit he the definition.
-	     * what properties do you expect, what do you get?
+	     * What properties do you expect, what do you get?
 	     */
-//		printProperties(new ABMISpreadsheet());
+//		printProperties(new AnotherLoopingFactorialSpreadsheet());
 	}
 
 }

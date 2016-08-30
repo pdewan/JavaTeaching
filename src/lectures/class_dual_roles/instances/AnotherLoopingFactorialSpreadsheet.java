@@ -2,23 +2,35 @@ package lectures.class_dual_roles.instances;
 
 import lectures.class_dual_roles.statics.Factorials;
 
-
+/**
+ * STORED VS COMPUTED PROPERTIES
+ * If a property is stored, then an instance variable directly stores its value.
+ * If a property is computed if it is not sored, its value is computed from variables
+ * that do not directly store its value.
+ *
+ */
 
 public class AnotherLoopingFactorialSpreadsheet 
 {
-	
+	/*
+	 * factorial is no longer an instance variable
+  
+     */ 
 	int number;
-//  factorual is no longer an instance variable
-//	long factorial;
-	// no static in method declarations as these methods access instance  variables
+
 	public int getNumber() {
 		return number;
 	}
-	// set number no longer computes the factorial
+	/*
+	 * setNumber no longer computes the factorial
+	 */
+	
 	public void setNumber(int newValue) {
 		number = newValue ;
-	}	
-	// we compute the factorial only on demand
+	}
+	/*
+	 * The getter computes the factorial only on demand
+	 */	 
 	public long getFactorial() {
 		return Factorials.loopingFactorial(number);
 	}
