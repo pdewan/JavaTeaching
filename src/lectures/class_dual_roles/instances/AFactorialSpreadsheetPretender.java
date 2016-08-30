@@ -1,14 +1,13 @@
 package lectures.class_dual_roles.instances;
 /**
  * 
- * This is a class with no variables.
- * @author Dewan
+ * This is a class with no instance variables
+ * and has only stubs for methods.
+ * DOes it have any properties>
+ * 
  *
  */
 public class AFactorialSpreadsheetPretender {	
-	// no variables!
-	// simply stubs for methods
-	// does it have any properties?
 	public int getNumber() {
 		return 0;
 	}

@@ -2,8 +2,13 @@ package lectures.class_dual_roles.instances;
 /**
  * Here we will understand the Java Beans standard and the underlying concepts of stateful objects.
  * Java Beans is an industry standard formally defined by these imported classes and others.
- * It defines the notion of  properties, which is more abstract than  methods
- * and instance variables and methods.
+ * It defines the notion of  Beans and properties, which are more abstract than  Objects, methods
+ * and instance variables.
+ * 
+ * A Bean is an object with properties,
+ * This class helps you define what a property is.
+ * 
+ * We see here only instance properties - we can similarly define class properties.
  * 
  */
 import java.beans.BeanInfo;
@@ -71,6 +76,9 @@ public class PropertiesAnalyzer {
 	 * 9. Remove both parameters. Does the property description change and if so how?
 	 * 
 	 * 10. Restore the original parameter, but give it a different name, say n. Does the property description change and if so how?
+	 * 
+	 * 11. Remove the keyword public from the headers of getNumber() and setNumber(). Does the property description change and if so how?
+	 *	
 	 */
 	public static void main (String[] args) {
 		printProperties(new ALoopingFactorialSpreadsheet());
