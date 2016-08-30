@@ -97,8 +97,14 @@ public class AConsoleReadingUpperCasePrinter {
 	{
 		System.out.println ("Please enter a string with uppercase and lower case letters.");
 		 /* Use of library, nothing conceptual here, just some syntax */
+		/*
+		 * The next statement needs to be executed once per console reading program
+		 */
 		Scanner scanner = new Scanner(System.in);
-		String scannedString = scanner.nextLine(); // gives next line input by the use, hover on method name
+		/*
+		 * The next statement gives next line input by the user on the console, hover on method name to see its description
+		 */
+		String scannedString = scanner.nextLine(); 
 		
 		int index = 0; // variable names should be camel case starting with lower case letters 
 		/**
@@ -106,15 +112,22 @@ public class AConsoleReadingUpperCasePrinter {
 		 * Syntax of Java while loop shown below
 		 * The loop "scans" scannedString, that is, it examines every character in the string and finds
 		 * substrings of interest called tokens.
+		 * Characters are letters, digits, spaces and other values you can enter from the keyboard.
+		 * A string can be considered an array or sequence of characters.
+		 * 
 		 * How many characters in each token identified by this loop?
 		 * Is this use of the term "scanning" consistent with its use in the English language?
 		 */
 		while (index < scannedString.length()) {
 			
-			/* charAt() gives character at index, hover over its name to get its behavior */
+			/* 
+			 * charAt() gives character at index, hover over its name to get its behavior.
+			 * A char is a type defined to store characters.
+			 */
 			char nextLetter = scannedString.charAt(index);
 			/**
 			 * IF STATEMENTS
+			 * 
 			 * Syntax of if statement with optional else shown below
 			 * the if check shows that characters are ordered
 			 * This ordering  preserves letter and digit ordering
