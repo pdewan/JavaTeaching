@@ -7,11 +7,14 @@
  */
 package lectures.class_dual_roles.instances;
 /**
+ * Visit this package after lectures.class_dual_roles.statics;
+ * 
  * PACKAGE INFO
  * Visit the classes:
  * {@link lectures.class_dual_roles.instances.ALoopingFactorialSpreadsheet}
  * {@link lectures.class_dual_roles.instances.InstantiatingFactorialSpreadsheetUse}
  * {@link lectures.class_dual_roles.instances.PropertiesAnalyzer}
+ * 
  * 
  * QUESTION INFO
  * 
@@ -29,7 +32,7 @@ package lectures.class_dual_roles.instances;
  * (T/F An instance variable can be accessed by only instance methods.
  * (T/F) A static variable can be accessed by only static methods.
  * (T/F) It is possible to call a static method directly on a class without instantiating it.
- * (T/F) It is possible to call an instance method directly on a class without instantiating it. * 	
+ * (T/F) It is possible to call an instance method directly on a class without instantiating it.  	
  * (T/F) A primitive value such as 5 is not an instance of any class.
  * (T/F) One of the roles of a class is to define a new type and an infinite set of values (called instances) of that type.
  * 

@@ -17,12 +17,19 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
 import lectures.state_properties.ABMISpreadsheet;
-
+/**
+ * 
+ * The goal of this exercise is to formally getters and setters through the concept of
+ * properties, which are not be mistaken with instance variables.
+ *
+ */
 public class PropertiesAnalyzer {
-	/**
+	/*
 	 * 	 
-	 * The following method uses the imported Bean classes. You do no have to understand how it
+	 * The following method uses the imported Bean classes to
+	 * extract properties through getters and setters. You do no have to understand how it
 	 * works, though the curious may want to look at it at leisure.
+	 * 
 	 * 	 
 	 */
 	public static void printProperties (Object anObject) {
@@ -52,6 +59,16 @@ public class PropertiesAnalyzer {
 		}
 	}
 	/*
+	 * This exercise will help you answer the following questions by printing the
+	 * names and types of the properties of various versions of this class.
+	 * In some runs, there will be no change; in others, there will be.
+	 * 
+	 * Questions: 
+	 * The names and types of the instance properties defined by a class depend on:
+	 	* Only public and non public instance methods of the class.
+	 	* Only public instance methods of the class.
+	 	* Only  instance variables of the class.
+	 	* Instance variables and public instance methods of the class.
 	 * 	
 	 * Run this program multiple times and think about what will happen before you test each change.
 	 * 1. Run the program without changes.
@@ -93,5 +110,5 @@ public class PropertiesAnalyzer {
 	     */
 //		printProperties(new AnotherLoopingFactorialSpreadsheet());
 	}
-
 }
+// Go to
