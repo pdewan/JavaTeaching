@@ -1,10 +1,12 @@
 package lectures.class_dual_roles.users;
+
 /*
  * Change this import to refer to the copied package as shown in the comment.
  * 
  * Can you have both imports in this class? That is, can you import
- * two different classes with the same short name?
+ * two different classes from two different packages with the same short name?
  */
+
 import lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet;
 //import lectures.class_dual_roles.statics.copy.StaticLoopingFactorialSpreadsheet;
 

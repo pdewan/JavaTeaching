@@ -9,14 +9,14 @@ package lectures.class_dual_roles.statics;
  * As This class does not have a main method, do not try to run it.
  */
 /**
- *The next exercises help you answer the question:
+ * The next exercises help you answer the question:
 	 
  * T/F If classes C1 and C2 are in the same package, and class C2 has default access, 
  * a method in C1 can call public methods  in C2. 
  * 
  * In the following class declaration, what happens if you remove the keyword public 
  * to specify default class access rather than public access. 
- * (Please do not put the keyword private, it is banned from discussion until
+ * (Please do not put the keyword protected, it is banned from discussion until
  * we learn inheritance.)
  * Do you get any compile errors in this file or in the class
  * {@link StaticLoopingFactorialSpreadsheet}, which is the same package as this class and calls
