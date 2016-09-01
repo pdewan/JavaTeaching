@@ -19,7 +19,8 @@ package lectures.class_dual_roles.statics;
  * The next exercise helps you answer the question:
  * T/F If public classes C1 and C2 are in different packages, a method in C1 can call methods in C2 with public and default access.
  * T/F If classes C1 and C2 are in different packages, and class C2 has default access, a method in C1 can call public methods in C2.
-
+ * T/F One of the roles of a class is to create walls around its members (variables and methods) 
+ * that can restrict access to these members from other classes.
  * In the following class declaration, what happens if you remove the keyword public 
  * to specify default class access.
  * Do you get any compile errors in this file or in the class

@@ -9,10 +9,13 @@ package lectures.class_dual_roles.statics;
  * As This class does not have a main method, do not try to run it.
  */
 /**
- * The next exercises help you answer the question:
+ * The next exercises help you answer the questions:
 	 
  * T/F If classes C1 and C2 are in the same package, and class C2 has default access, 
  * a method in C1 can call public methods  in C2. 
+ * T/F One of the roles of a package is to create walls around its component classes to restrict accesses to
+ * these classes (and its members) from classes in other packages.
+ * 
  * 
  * In the following class declaration, what happens if you remove the keyword public 
  * to specify default class access rather than public access. 
@@ -23,6 +26,7 @@ package lectures.class_dual_roles.statics;
  * loopingFactorial() from the method setNumber in that class?
  * You can hover over an error marker to see the corresponding message
  * and click on it to see a possible fix. 
+ * 
  * 
  *
  */
