@@ -41,6 +41,10 @@ public class InstantiatingFactorialSpreadsheetUse {
 		factorial4.setNumber(4);		
 		System.out.println(factorial4.getFactorial() 
 				* factorial4.getFactorial());
+		
+		/*
+		 * Creating another instance of our new type.
+		 */
 		ALoopingFactorialSpreadsheet factorial2 = new ALoopingFactorialSpreadsheet();
 		factorial2.setNumber(2);
 		System.out.println(factorial2.getFactorial() 
