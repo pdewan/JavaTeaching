@@ -1,5 +1,7 @@
 package lectures.state_properties;
 
+import lectures.constructors_pointers.ABMISpreadsheet;
+
 public class PointerDemoer {
 	public void demoPointersGarbageCollection() {
 		ABMISpreadsheet bmiSpreadsheet1 = new ABMISpreadsheet();

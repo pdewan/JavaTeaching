@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 import util.annotations.Tags;
-import lectures.state_properties.ABMISpreadsheet;
+import lectures.constructors_pointers.ABMISpreadsheet;
 @Tags({"Style", "Annotation", "ScannerBean"})
 
 public class StyleErrorsCS1 {

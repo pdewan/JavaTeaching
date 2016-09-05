@@ -16,7 +16,7 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
-import lectures.state_properties.ABMISpreadsheet;
+import lectures.constructors_pointers.ABMISpreadsheet;
 /**
  * 
  * The goal of this exercise is to formally getters and setters through the concept of

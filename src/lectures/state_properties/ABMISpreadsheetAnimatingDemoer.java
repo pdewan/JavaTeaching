@@ -1,6 +1,7 @@
 package lectures.state_properties;
 
 import lectures.animation.threads_commands.ThreadSupport;
+import lectures.constructors_pointers.ABMISpreadsheet;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 public class ABMISpreadsheetAnimatingDemoer {	

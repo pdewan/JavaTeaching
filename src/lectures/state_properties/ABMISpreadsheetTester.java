@@ -1,4 +1,7 @@
 package lectures.state_properties;
+
+import lectures.constructors_pointers.ABMISpreadsheet;
+
 public class ABMISpreadsheetTester {	
 	public void test (double theHeight, double theWeight, double theCorrectBMI) {		
 		ABMISpreadsheet bmiSpreadsheet = new ABMISpreadsheet();

@@ -1,6 +1,5 @@
 package lectures.constructors_pointers;
 
-import lectures.state_properties.ABMISpreadsheet;
 
 public class AssigningVariables {
 	// understand and then execute the program

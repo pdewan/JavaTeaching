@@ -5,12 +5,27 @@ public class LogicalType {
 	static ALoopingFactorialSpreadsheet a = new ALoopingFactorialSpreadsheet();
 	static ARecursiveFactorialSpreadsheet b = new ARecursiveFactorialSpreadsheet();
 	static ABMISpreadsheet c = new ABMISpreadsheet();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void main (String[] args) {
 		System.out.println (a.getNumber() + ":" + a.getFactorial());
 		System.out.println (b.getNumber() + ":" + b.getFactorial());
 		System.out.println (c.getHeight() + "," + c.getWeight() + ":" + c.getBMI());
 		
-		// Can you tell without looking at the static type declaration whether c is assigned 
+		// Can you tell without looking at the static variable declaration whether c is assigned 
 		// an instance of ALoopingFactorialSpreadsheet, ARecursiveFactorialSpreadsheet, or ABMISpreadsheet
 		// Can you do the same for a (or b), that is, whether a (b) is assigned
 		// an instance of ALoopingFactorialSpreadsheet, ARecursiveFactorialSpreadsheet, or ABMISpreadsheet

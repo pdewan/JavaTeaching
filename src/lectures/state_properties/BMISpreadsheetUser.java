@@ -1,4 +1,7 @@
 package lectures.state_properties;
+
+import lectures.constructors_pointers.ABMISpreadsheet;
+
 public class BMISpreadsheetUser {
 	public static void main (String[] args) {
 		ABMISpreadsheet bmiSpreadsheet = new ABMISpreadsheet();
