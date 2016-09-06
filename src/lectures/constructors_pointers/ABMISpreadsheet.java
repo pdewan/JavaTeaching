@@ -14,7 +14,7 @@ public class ABMISpreadsheet  {
 	 * There is no return type explicitly associated with a constructor.
 	 * The class in which it is declared is the implicit return type.	 * 
 	 *
-	 * The following ia a constructor with two parameters, which are 
+	 * The following is a constructor with two parameters, which are 
 	 * assigned to the two instance variables.	 
 	 * Thus, this constructor initializes the instance variables.
 	 * Example call to it is: new ABMISpreadsheet(1.77, 75);
