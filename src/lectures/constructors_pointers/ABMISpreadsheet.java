@@ -21,7 +21,8 @@ public class ABMISpreadsheet  {
 	 * 
 	 * Why provide constructors in a language?
 	 * (T/F) A constructor cannot take parameters.
-	 * (T/F) During the life time of an object, multiple constructors can be called.
+	 * (T/F) During the life time of an object, multiple constructors can be called to operate on it.
+	 * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory?
 	 */
 	public ABMISpreadsheet(
 			double theInitialHeight, double theInitialWeight) {

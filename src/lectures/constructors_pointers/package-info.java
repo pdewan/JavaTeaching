@@ -27,7 +27,7 @@
  * 
  * CONSTRUCTORS
  * 
- * (T/F) The syntax of a constructor header is the same as the syntax of a method header.
+ * (T/F) The syntax of a constructor header is the same as the syntax of an instance-method header.
  * 
  * (T/F) A constructor cannot take parameters.
  * 
@@ -41,15 +41,17 @@
  * 
  * (T/F) The object code of a class may contain multiple constructors.
  * 
- * (T/F) During the life time of an object, multiple constructors can be called.
+ * (T/F)  During the life time of an object, multiple constructors can be called  to operate on it.
  * 
  * (T/F) A constructor is executed before a regular instance method of a class.
  * 
  * (T/F) A constructor is executed before the instance variables of a class are initialized.
  * 
+ * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory?
+ 
  * INITIALIZATION
  * 
- * (T/F All operations that can be performed on an initialized primitive variable can also
+ * (T/F) All operations that can be performed on an initialized primitive variable can also
  * be performed on an uninitialized primitive variable.
  * 
  * (T/F) All operations that can be performed on an initialized object variable can also
