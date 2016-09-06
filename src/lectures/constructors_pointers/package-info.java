@@ -37,17 +37,17 @@
  * 
  * (T/F) The compiled object code of a class may not contain a constructor.
  * 
- * (T/F) The source code of a class may contain multiple constructors.
+ * (T/F) The source code of a class might contain multiple constructors.
  * 
- * (T/F) The object code of a class may contain multiple constructors.
+ * (T/F) The object code of a class might contain multiple constructors.
  * 
  * (T/F)  During the life time of an object, multiple constructors can be called  to operate on it.
  * 
- * (T/F) A constructor is executed before a regular instance method of a class.
+ * (T/F) A constructor must be executed before a  before an instance method can be called.
  * 
- * (T/F) A constructor is executed before the instance variables of a class are initialized.
+ * (T/F) A constructor is always executed before the instance variables of a class are initialized.
  * 
- * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory?
+ * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory.
  
  * INITIALIZATION
  * 
@@ -57,11 +57,11 @@
  * (T/F) All operations that can be performed on an initialized object variable can also
  * be performed on an uninitialized object variable.
  * 
- * (T/F) It is not possible to define an uninitialized local variable.
+ * (T/F) It is not possible to declare an uninitialized local variable.
  * 
  * (T/F) It is not possible to access (use) the value of an uninitialized local variable.
  * 
- * (T/F) It is not possible to define an uninitialized global (instance/static) variable.
+ * (T/F) It is not possible to declare an uninitialized global (instance/static) variable.
  * 
  * (T/F) It is not possible to access (use) the value of an uninitialized (instance/static) global variable.
  *  

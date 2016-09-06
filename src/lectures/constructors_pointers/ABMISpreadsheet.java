@@ -19,10 +19,11 @@ public class ABMISpreadsheet  {
 	 * Thus, this constructor initializes the instance variables.
 	 * Example call to it is: new ABMISpreadsheet(1.77, 75);
 	 * 
+	 *  Relevant Sakai Questions:
 	 * Why provide constructors in a language?
 	 * (T/F) A constructor cannot take parameters.
 	 * (T/F) During the life time of an object, multiple constructors can be called to operate on it.
-	 * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory?
+	 * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory.
 	 */
 	public ABMISpreadsheet(
 			double theInitialHeight, double theInitialWeight) {
@@ -38,7 +39,7 @@ public class ABMISpreadsheet  {
 	 * Example call to it is: new ABMISpreadsheet();
 	 * 
 	 * (T/F) A constructor cannot take parameters.
-	 * (T/F) A constructor is executed before a regular instance method of a class.
+	 * (T/F) A constructor is executed before before an instance method can be called.
 	 * 
 	 * 
 	 */
@@ -46,7 +47,7 @@ public class ABMISpreadsheet  {
 		
 	}
 	/*
-	 * The following is another overloaded method with the same as the constructor.
+	 * The following is another overloaded method with the same name as the constructor.
 	 * It has an explicit return type, so it is not a constructor.
 	 * 
 	 * (T/F) The syntax of a constructor header is the same as the syntax of a method header.
@@ -66,21 +67,22 @@ public class ABMISpreadsheet  {
 		return height;
 	}
 	public void setHeight(double newValue) {
-//		System.out.println("setHeight() Called");
 		height = newValue;
 	}	
 	public double getBMI() {
-//		System.out.println("getBMI() Called");
 		return weight/(height*height);
 	}
 	/*
 	 * Replace the uninitializing declaration of height with the commented initializing
-	 * one given above and run {@link lectures.constructors_pointers.UsingConstructors}
-	 * Does the initialization make a difference to the output?
+	 * one given at the top of this file and run {@link lectures.constructors_pointers.UsingConstructors}
+	 * Does the initialization make a difference to the outputs? 
+	 * 
+	 * (T/F) A constructor is executed before the instance variables of a class are initialized.
 	 * 
 	 * 
 	 */
 	/*
+	 * Change package name in link.
 	 * Next class: {@link lectures.constructors_pointers.PrintingConstructors}
 	 */
 }

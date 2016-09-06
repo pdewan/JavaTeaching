@@ -1,32 +1,40 @@
 package lectures.constructors_pointers;
 
 import java.util.Arrays;
-
+/*
+ * This class shows the constructors that exist in the compiled object code
+ * available at runtime.
+ */
 public class PrintingConstructors {
 	/*
 	 * The following method prints  the constructors in the 
 	 * code to which the class of an object is compiled.
 	 * 
-	 * Only the curious need look at the body of the method between
-	 * curly braces.
+	 * Look at the program and run it.
 	 * 
 	 */
-	public static void printConstructors(Object anObject) {
-		System.out.println(Arrays.toString(anObject.getClass().getConstructors()));
+	public static void printConstructors(Class aClass) {
+		System.out.println(Arrays.toString(aClass.getConstructors()));
 	}
-	public static void main (String[] args) {
-		ABMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet();		
-		printConstructors(aBMISpreadsheet);
+	public static void main (String[] args) {		
+
+		printConstructors(ABMISpreadsheet.class);
 		/*
-		 * Comment out the the parameterless constructor in ABMISPreadsheet and
-		 * run this program again.
+		 * Comment this out if the program does not compile.
+		 */
+		ABMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet(); 
+		/*
+		 * Comment out the the parameterless constructor in ABMISPreadsheet.
+		 * Does the statement above compile? If not, comment it.
+		 * Run this program again.
 		 * How many constructors?		
-		 * Comment out the constructor with the two parameters.
+		 * Now comment out also the constructor with the two parameters so
+		 * now there is no constructor in the source code of ABMISpreadsheet.
+		 * Uncomment the statement above if you commented it.
+		 * Does the statement above compile? If not, comment it.
 		 * How many constructors?
-		 * Can you explain the numbers?
-		 * 
-		 * (T/F) A constructor is executed before the instance variables of a class are initialized.
-		 *
+		 * Can you explain the numbers and compile errors?
+		 * 	
 		 * (T/F) The source code of a class (written by the programmer) may not contain a constructor.
 		 * 
 		 * (T/F) The compiled object code of a class may not contain a constructor.
@@ -38,5 +46,8 @@ public class PrintingConstructors {
 		 * What are the parameters and body of a constructor inserted by a compiler in object code?
 		 */
 	}
-
+	/*
+	 * Change package name in link.
+	 * Next file:  {@link lectures.constructors_pointers.UninitializedVariables}
+	 */
 }

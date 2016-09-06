@@ -1,13 +1,13 @@
 package lectures.constructors_pointers;
 /*
  * Look at this program and run it to understand the difference between
- * uninitialized primitive and object variables and andser the following questions:
+ * uninitialized primitive and object variables.
  * 
  */
 
 public class UninitializedVariables {
 	/* 
-	 * (T/F) It is not possible to define an uninitialized global (instance/static) variable.
+	 * (T/F) It is not possible to declare an uninitialized global (instance/static) variable.
  	 */
 	static double height; // global primitive variable
 	static String string; // global object variable
@@ -16,7 +16,7 @@ public class UninitializedVariables {
 	public static void main (String[] args) {
 		/*
 		 * Uncomment the following line to answer:
-		 * (T/F) It is not possible to define an uninitialized local variable.
+		 * (T/F) It is not possible to declare an uninitialized local variable.
 		 */
 //		int exampleLocalVariable;
 //		System.out.println (exampleLocalVariable);
