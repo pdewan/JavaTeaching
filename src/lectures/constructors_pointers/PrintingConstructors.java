@@ -35,6 +35,7 @@ public class PrintingConstructors {
 		 * 
 		 * (T/F) The object code of a class may contain multiple constructors.
 		 * 
+		 * What are the parameters and body of a constructor inserted by a compiler in object code?
 		 */
 	}
 

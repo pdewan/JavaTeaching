@@ -72,6 +72,7 @@
  * Can one have a magic string?
  * Why provide constructors in a language?
  * What is an overloaded method/constructor?
+ * What are the parameters and body of a constructor inserted by a compiler in object code?
  * Why allow uninitialized static or instance variables?
  * Why do the initialization rules distinguish between local and global variables? 
  * What does a null pointer exception mean exactly?
