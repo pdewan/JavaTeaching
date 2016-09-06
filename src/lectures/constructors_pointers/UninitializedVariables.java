@@ -24,8 +24,7 @@ public class UninitializedVariables {
 		 * Looking at and running the following code helps you answer:
 		 * (T/F) It is not possible to access (use) the value of an uninitialized local variable.
 		 * (T/F All operations that can be performed on an initialized primitive variable can also
-		 * be performed on an uninitialized primitive variable.
-		 * 
+		 * be performed on an uninitialized primitive variable.		 * 
 		 * (T/F) All operations that can be performed on an initialized object variable can also
 		 * be performed on an uninitialized object variable.
 		 * 
