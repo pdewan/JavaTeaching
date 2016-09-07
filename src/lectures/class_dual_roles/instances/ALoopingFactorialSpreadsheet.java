@@ -70,5 +70,8 @@ public class ALoopingFactorialSpreadsheet
 		return factorial;
 	}
 }
-// Go to{@link lectures.class_dual_roles.instances.InstantiatingFactorialSpreadsheetUse}
+/*
+ * Go to{@link InstantiatingFactorialSpreadsheetUse}
+ */
+ 
 

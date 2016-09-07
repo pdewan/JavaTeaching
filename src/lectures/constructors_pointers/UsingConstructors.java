@@ -4,11 +4,13 @@ public class UsingConstructors {
 	/*
 	 * 
 	 * Final variable is a named constant - a variable that that cannot be changed later.
-	 * It gives a name to a literal that would otherwise be magic to the program reader.
+	 * It gives a name to a literal (an unnamed constant such as
+	 * the int 2 and the string "hello" that literally or directly
+	 * denotes a value) that would otherwise be magic to the program reader.
 	 * It makes sure magic numbers and strings do not appear in the program.
 	 * These should be static as they do not change from instance to instance.
 	 * 
-	 * Relevant Sakai Questions:
+	 * Relevant Questions:
 	 * 
 	 *  What is a named constant?
 	 *  What is a magic number?
@@ -49,7 +51,7 @@ public class UsingConstructors {
 		print(aBMISpreadsheet);
 		/*
 		 * Change package name in link.
-		 * Next class {@link lectures.constructors_pointers.ABMISpreadsheet}
+		 * Next class {@link ABMISpreadsheet}
 		 * to better understand constructors.
 		 */
 		

@@ -1,10 +1,57 @@
 package lectures.interfaces;
-
+/*
+ * This class motivates but does not use interfaces.
+ */
 public class LogicalType {
-	// purposely using bad names
+	/*
+	 * Purposely using bad names for variables to provide the motivation.
+	 *  
+	 * 
+	 */
 	static ALoopingFactorialSpreadsheet a = new ALoopingFactorialSpreadsheet();
 	static ARecursiveFactorialSpreadsheet b = new ARecursiveFactorialSpreadsheet();
 	static ABMISpreadsheet c = new ABMISpreadsheet();
+	/*
+	 * This space left intentionally blank.
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

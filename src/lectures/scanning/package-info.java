@@ -6,9 +6,8 @@
  * 
  * Copy this package for your praxis.
  * Visit the following classes for this praxis in this order:
- * {@link lectures.scanning.AConsoleReadingUpperCasePrinter} {@link lectures.scanning.AModularConsoleReadingUpperCasePrinter}
- * Change the name of the package in the names above to the one in which you are working, e.g. change
- * lectures.scanning to lectures.scanning.copy.
+ * {@link AConsoleReadingUpperCasePrinter} {@link AModularConsoleReadingUpperCasePrinter}
+ * 
  * 
  * Now click on the name of each referenced class name and Press F3 or CTRL-click (maybe Fn F3 or CMD F3, depending on your computer)
  * to automatically navigate to it. 

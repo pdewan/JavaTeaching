@@ -16,12 +16,10 @@
  * As always, make a copy of the package.
  *   
  * Visit the following classes for this praxis. 
- *  {@link lectures.constructors_pointers.UsingConstructors}
- *  {@link lectures.constructors_pointers.ABMISpreadsheet}
- *  {@link lectures.constructors_pointers.PrintingConstructors}
- *  {@link lectures.constructors_pointers.UninitializedVariables}
-
- * Change the name of the package in the names above to the one in which you are working, 
+ *  {@link UsingConstructors}
+ *  {@link ABMISpreadsheet}
+ *  {@link PrintingConstructors}
+ *  {@link UninitializedVariables}
  * 
  * SAKAI QUESTION INFO
  * 

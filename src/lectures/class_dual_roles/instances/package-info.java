@@ -11,9 +11,11 @@ package lectures.class_dual_roles.instances;
  * 
  * PACKAGE INFO
  * Visit the classes:
- * {@link lectures.class_dual_roles.instances.ALoopingFactorialSpreadsheet}
- * {@link lectures.class_dual_roles.instances.InstantiatingFactorialSpreadsheetUse}
- * {@link lectures.class_dual_roles.instances.PropertiesAnalyzer}
+ * {@link ALoopingFactorialSpreadsheet}
+ * {@link InstantiatingFactorialSpreadsheetUse}
+ * {@link PropertiesAnalyzer}
+ * {@link AFactorialSpreadsheetPretender}
+ * {@link AnotherLoopingFactorialSpreadsheet}
  * 
  * 
  * QUESTION INFO

@@ -74,7 +74,7 @@ public class ABMISpreadsheet  {
 	}
 	/*
 	 * Replace the uninitializing declaration of height with the commented initializing
-	 * one given at the top of this file and run {@link lectures.constructors_pointers.UsingConstructors}
+	 * one given at the top of this file and run {@link UsingConstructors}
 	 * Does the initialization make a difference to the outputs? 
 	 * 
 	 * (T/F) A constructor is executed before the instance variables of a class are initialized.
@@ -83,6 +83,6 @@ public class ABMISpreadsheet  {
 	 */
 	/*
 	 * Change package name in link.
-	 * Next class: {@link lectures.constructors_pointers.PrintingConstructors}
+	 * Next class: {@link PrintingConstructors}
 	 */
 }

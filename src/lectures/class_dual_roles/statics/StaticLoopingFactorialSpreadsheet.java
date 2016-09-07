@@ -110,4 +110,11 @@ public class StaticLoopingFactorialSpreadsheet // public class access
 		return factorial;
 	}	
 }
-// Next class: {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse}
+/*
+ * Next class: {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse}
+ * Change package name in link above to account for your having copied the package.
+ * e.g. change lectures.class_dual_roles.users to lectures.class_dual_roles.users.copy.
+ */
+ 
+ 
+

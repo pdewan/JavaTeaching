@@ -32,12 +32,12 @@
  * run   {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} and look 
  * at all of the classes before following the instructions in them to get an idea of how this
  * multi-class program works.
- *  {@link lectures.class_dual_roles.statics.Factorials}
- *  {@link lectures.class_dual_roles.statics.Permutations}
- *  {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
+ *  {@link Factorials}
+ *  {@link Permutations}
+ *  {@link StaticLoopingFactorialSpreadsheet}
  *  {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse}
  *  {@link lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse}
- *  {@link lectures.class_dual_roles.statics.AnotherStaticLoopingFactorialSpreadsheet}
+ *  {@link AnotherStaticLoopingFactorialSpreadsheet}
  * Change the name of the package in the names above to the one in which you are working, e.g. change
  * and use F3 to visit each referenced class.
  * Notice that some of these classes are in the same package and some are not.
@@ -73,14 +73,14 @@
  * DISCUSSION INFO
  * What is the principle of least privilege?
  * What is the principle of separation of concerns?
- * Why not combine {@link lectures.class_dual_roles.statics.Factorials}
- * and and {@link lectures.class_dual_roles.statics.Permutations} 
+ * Why not combine {@link Factorials}
+ * and and {@link Permutations} 
  * into a single class?
- * Given the class {@link lectures.class_dual_roles.statics.Factorials}, 
+ * Given the class {@link Factorials}, 
  * What purpose does {@link lectures.class_dual_roles.users.StaticFactorialSpreadsheetUse} serve?
  * Why call it a spreadsheet?
  * Which members (variables and methods) of 
- * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
+ * {@link StaticLoopingFactorialSpreadsheet}
  * should be public?
  * Why is the purpose of having both classes, StaticLoopingFactorialSpreadsheet and AnotherStaticLoopingFactorialSpreadsheet, 
  * which are copies of each other?

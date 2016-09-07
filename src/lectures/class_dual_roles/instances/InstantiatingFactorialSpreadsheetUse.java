@@ -72,5 +72,9 @@ public class InstantiatingFactorialSpreadsheetUse {
 		 * Does it make sense to allow static methods to access instance variables?
 		 */		
 	}
-	// Go to:{@link lectures.class_dual_roles.instances.PropertiesAnalyzer}
+	 
 }
+/*
+ * Go to:{@link PropertiesAnalyzer}
+ */
+ 

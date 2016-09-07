@@ -67,5 +67,5 @@ public class Factorials // public class access
 		return aNumber*recursingFactorial(aNumber-1);		
 	}
 }
-// Go next to: {@link lectures.class_dual_roles.statics.Permutations}
+// Go next to: {@link Permutations}
 

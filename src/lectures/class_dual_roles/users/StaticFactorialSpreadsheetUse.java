@@ -56,6 +56,8 @@ public class StaticFactorialSpreadsheetUse {
 		 * 
 		 */
 		
-	}
-	
+	}	
 }
+/*
+ * Next class:  {TwoStaticFactorialSpreadsheetUse}
+ */

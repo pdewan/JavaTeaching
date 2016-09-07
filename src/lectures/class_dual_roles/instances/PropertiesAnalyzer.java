@@ -63,7 +63,7 @@ public class PropertiesAnalyzer {
 	 * names and types of the properties of various versions of this class.
 	 * In some runs, there will be no change; in others, there will be.
 	 * 
-	 * Questions: 
+	 * Question answered by the exercises below: 
 	 * The names and types of the instance properties defined by a class depend on:
 	 	* Only public and non public instance methods of the class.
 	 	* Only public instance methods of the class.

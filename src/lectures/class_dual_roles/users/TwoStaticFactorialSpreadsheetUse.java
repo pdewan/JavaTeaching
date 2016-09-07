@@ -14,11 +14,10 @@ public class TwoStaticFactorialSpreadsheetUse {
 		AnotherStaticLoopingFactorialSpreadsheet.setNumber(2);
 		/**
 		 * 
-		 * We are using a different class now - 
-		 * {@link lectures.class_dual_roles.statics.AnotherStaticLoopingFactorialSpreadsheet}
+		 * We are using a different class now - AnotherStaticLoopingFactorialSpreadsheet.
 		 * Have a quick look at it to confirm it is a copy of the 
-		 * {@link lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet}
-		 *  As usual, click on the class name and click F3 to see the code.
+		 *  StaticLoopingFactorialSpreadsheet.
+		 *  As usual, click on the class name below and click F3 to see the code.
 		 *  Press ALT <- to return back to this method
 		*/
 		System.out.println("The square of 2 factorial is:" + AnotherStaticLoopingFactorialSpreadsheet.getFactorial() 
@@ -37,8 +36,8 @@ public class TwoStaticFactorialSpreadsheetUse {
 		 * the instructions in the classes referenced in lectures.class_dual_roles.statics.package-info.java 
 		 * 
 		 * 
-		 */
-
-		
+		 */		
 	}
 }
+
+

@@ -2,8 +2,11 @@ package lectures.interfaces;
 
 import lectures.class_dual_roles.statics.Factorials;
 
-
-// ignore the implements clause on first read
+/*
+ * The only difference between this class and 
+ * {@link ALoopingFactorialSpreadsheet} is in setNumber()
+ * 
+ */
 public class ARecursiveFactorialSpreadsheet implements FactorialSpreadsheet {
 	int number;
 	long factorial;
@@ -12,7 +15,9 @@ public class ARecursiveFactorialSpreadsheet implements FactorialSpreadsheet {
 	}	
 	public void setNumber(int newValue) {
 		number = newValue;
-		// this class calls recursingFactorial instead of looping factorial
+		/*
+		 * This class calls recursingFactorial instead of looping factorial
+		 */		
 		factorial = Factorials.recursingFactorial(number);
 	}
 	public long getFactorial() {

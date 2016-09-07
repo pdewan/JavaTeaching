@@ -48,6 +48,6 @@ public class PrintingConstructors {
 	}
 	/*
 	 * Change package name in link.
-	 * Next file:  {@link lectures.constructors_pointers.UninitializedVariables}
+	 * Next file:  {@link UninitializedVariables}
 	 */
 }
