@@ -12,7 +12,7 @@
  *   
  * Visit the following classes for this praxis. 
  * {@link LogicalType}
- * {@link PolymophicType}
+ * {@link PolymorphicType}
  * {@link FactorialSpreadsheet}
  * {@link ALoopingFactorialSpreadsheet}
  * {@link ARecursiveFactorialSpreadsheet} *  
