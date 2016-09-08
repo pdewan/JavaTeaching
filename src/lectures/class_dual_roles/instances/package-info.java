@@ -31,8 +31,8 @@ package lectures.class_dual_roles.instances;
  * For each static variable in a class of a program:
  *   Memory space is allocated at most once.
  *   Memory space is allocated multiple times,depending on how many times the class is instantiated in the program.
- * (T/F An instance variable can be accessed by only instance methods.
- * (T/F) A static variable can be accessed by only static methods.
+ * (T/F An instance variable can be directly accessed (without using a dot in the access) by only instance methods.
+ * (T/F) A static variable can be directly accessed (without using a dot in the access) by only static methods.
  * (T/F) It is possible to call a static method directly on a class without instantiating it.
  * (T/F) It is possible to call an instance method directly on a class without instantiating it.  	
  * (T/F) A primitive value such as 5 is not an instance of any class.

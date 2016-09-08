@@ -7,7 +7,8 @@ package lectures.interfaces;
  * We use a special type {@link FactorialSpreadsheet}, which is an 
  * interface rather than a class
  * Go to its definition and examine it - does it capture what is common to both
- * ALoopingFactorialSpreadsheet and ARecursiveFactorialSpreadsheet?
+ * ALoopingFactorialSpreadsheet and ARecursiveFactorialSpreadsheet? Does everything in
+ * the interface appear in each of the two classes?
  * Use ALT <- to return to this class
  */
 public class PolymorphicType {
@@ -26,34 +27,37 @@ public class PolymorphicType {
 		 * one can also not	predict the	class of the value assigned to a 
 		 * variable. 
 		 * There is a 50/50 chance, when the program is executed, that the
-		 * condition of the if will be satisfied.
+		 * condition of the following if will be satisfied.
 		 */		
 		if (Math.random() > 0.5) { // hover on random to see what it does
-			/*
-			 * T/F A polymorphic variable can be assigned instances of 
-			 * different classes.
+			/*		
 			 * 
 			 * Below, we assign to a variable that held an instance 
 			 * of one class an instance of another class!
 			 * 
 			 * A variable that can be assigned objects of multiple classes is a 
-			 * polymorphic variable
+			 * polymorphic variable.
 			 * 
+			 * T/F A polymorphic variable can be assigned instances of 
+			 * different classes.
 			 */			 
 			a = b;
 			
 		}
 		/*
+	
 		 * 
+		 * At this point, because of the call to randonm(),
+		 * the compiler, which does its job before the program is 
+		 * executed has no idea of the class of the object assigned to a is 
+		 * at execution time.
+		 * So all type checking is done based on what is provided in the interface, 
+		 * FactorialSpreasheet.
+		 * 	
 		 * (T/F) The operations that are allowed on a polymorphic variable by 
 		 * the compiler depend on the type of the variable 
 		 * (e.g FactorialSpreadsheet) rather than the class of the object 
 		 * assigned to it (e.g. ALoopingFactorialSpreadsheet).
-		 * 
-		 * At this point, the compiler, which does its job before the program is 
-		 * executed has no idea of the class of the object assigned to a.
-		 * So all type checking is done based on what is provided in the interface, 
-		 * FactorialSpreasheet
 		 * 
 		 */	
 
@@ -69,11 +73,11 @@ public class PolymorphicType {
 		 * Uncomment the method, public int getA(), in the interface. 
 		 * Do you get a compile error in the two classes
 		 * (ALoopingFactorialSpreadsheet or ARecursivefactoralSpreadsheet) 
-		 * that implement it? Comment it out if you do.
+		 * that implement it? If so, what does it say. Comment it out if you do.
 		 * 
 		 * Now go to {@link ALoopingFactorialSpreadsheet)		
 		 * Copy the method getNumber() and call it getN()
-		 * Do you get an error message? 
+		 * Do you get an error message? If so, what does it say.
 		 * Comment it out if you do.
 		 */
 		 
@@ -160,6 +164,17 @@ public class PolymorphicType {
 		 * Uncomment the following to answer this question
 		 */
 //		ALoopingFactorialSpreadsheet c = a;
+		/*
+		 * Why did we need the two print methods?
+		 * Comment out all of the println() statements above that give errors.
+		 * 
+		 * Next, comment out the following two statements and run the program.
+		 * What output do you get?
+		 * This output will help you understand the output of A3.
+		 */
+		System.out.println ("l hashcode:" + Integer.toHexString(l.hashCode()));
+		System.out.println ("l:" + l);
+		
 		
 	}
 	/*
