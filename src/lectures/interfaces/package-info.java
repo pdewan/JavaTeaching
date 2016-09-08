@@ -1,7 +1,8 @@
 /**
  * We saw earlier that one of the roles of a class is to allow programmers
  * to create new types of values. However, we should not type variables
- * using classes. We should them using interfaces, the subject of this section.
+ * using classes. We should type them using interfaces, the subject of this section.,
+ * and every class should implement at least one interface.
  * 
  * PACKAGE INFO
  * Code associated with the constructors and pointers teaching unit in
@@ -11,67 +12,57 @@
  * As always, make a copy of the package.
  *   
  * Visit the following classes for this praxis. 
- * {@link LogicalType}
+ * {@link ConceptualType}
  * {@link PolymorphicType}
  * {@link FactorialSpreadsheet}
  * {@link ALoopingFactorialSpreadsheet}
  * {@link ARecursiveFactorialSpreadsheet} *  
 
- * Change the name of the package in the names above to the one in which you are working, 
  * 
  * SAKAI QUESTION INFO
  * 
- * CONSTRUCTORS
+ * INTERFACES
  * 
- * (T/F) The syntax of a constructor header is the same as the syntax of an instance-method header.
- * 
- * (T/F) A constructor cannot take parameters.
- * 
- * (T/F) A constructor must take parameters.
- * 
- * (T/F) The source code of a class (written by the programmer) may not contain a constructor.
- * 
- * (T/F) The compiled object code of a class may not contain a constructor.
- * 
- * (T/F) The source code of a class might contain multiple constructors.
- * 
- * (T/F) The object code of a class might contain multiple constructors.
- * 
- * (T/F)  During the life time of an object, multiple constructors can be called  to operate on it.
- * 
- * (T/F) A constructor must be executed before a  before an instance method can be called.
- * 
- * (T/F) A constructor is always executed before the instance variables of a class are initialized.
- * 
- * (T/F) A constructor "constructs" the object, that is, allocates space for the instance  variables of the object in memory.
- 
+ * (T/F) It s possible for two types in two different languages
+ * to implement the same conceptual type.
+ * (T/F) The Java type of an object variable determines which operations (methods) can be performed on it.
+ * (T/F) If two Java classes implement the same conceptual type, then it is not possible  to distinguish between them based on their external use.
+ * (T/F) The Java type of an object variable determines which instances can be assigned to it.
+ * (T/F) If Java classes C1 and C2 implement the same conceptual type, and a variable c is declared to be of Java type C1,
+ * then c can be assigned an instance of C2.	
+ * Which is true:
+ * 	An interface contains only bodies of methods 
+ * 	    (the code between curly braces after a method header)
+ * 	An interface contains both headers and bodies of methods.	
+ * (T/F) An interface provides a Java type to unite classes that implement the same conceptual type.
+ * (T/F If class C implements interface I, then an instance of C can be assigned to a variable
+ * of type I.
+ * T/F A polymorphic variable can be assigned instances of 
+ * different classes.
+ * (T/F) The operations that are allowed on a polymorphic variable by 
+ * the compiler depend on the type of the variable 
+ * (e.g FactorialSpreadsheet) rather than the class of the object 
+ * assigned to it (e.g. ALoopingFactorialSpreadsheet)
+ * (T/F) If class C implements I, then C must have a method matching 
+ * every method in I.
+ * (T/F) If class C implements I, then I must have a method matching 
+ * every method in C.
+ * (T/F) A polymorphic method has one or more parameters that can be assigned 
+ * instances of multiple classes.
+ * (T/F) If C implements I, then an instance of C is also considered an 
+ * instance of I.
  * INITIALIZATION
  * 
- * (T/F) All operations that can be performed on an initialized primitive variable can also
- * be performed on an uninitialized primitive variable.
  * 
- * (T/F) All operations that can be performed on an initialized object variable can also
- * be performed on an uninitialized object variable.
- * 
- * (T/F) It is not possible to declare an uninitialized local variable.
- * 
- * (T/F) It is not possible to access (use) the value of an uninitialized local variable.
- * 
- * (T/F) It is not possible to declare an uninitialized global (instance/static) variable.
- * 
- * (T/F) It is not possible to access (use) the value of an uninitialized (instance/static) global variable.
- *  
  * 
  * DISCUSSION INFO
- * What is a named constant?
- * What is a magic number?
- * Can one have a magic string?
- * Why provide constructors in a language?
- * What is an overloaded method/constructor?
- * What are the parameters and body of a constructor inserted by a compiler in object code?
- * Why allow uninitialized static or instance variables?
- * Why do the initialization rules distinguish between local and global variables? 
- * What does a null pointer exception mean exactly?
+ * 
+ * 	If a class is  a factory, what is an interface?
+ *  Why are interfaces useful?
+ *  What do you think of the rule - every class should implement at least 
+ *  one interface?
+ *  What do you think of the rule - every object variable should be typed
+ *  using an interface rather than a class.
  * 
  *
  */
