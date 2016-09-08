@@ -4,7 +4,7 @@ import lectures.class_dual_roles.statics.Factorials;
 import lectures.interfaces.FactorialSpreadsheet;
 
 /**
- * This class serves a new role - a template for creating multiple instances of the same
+ * This class serves a new role - a template for creating multiple instances with the same
  *  behavior.
  */
 public class ALoopingFactorialSpreadsheet 
