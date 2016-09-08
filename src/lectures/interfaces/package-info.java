@@ -25,18 +25,25 @@
  * 
  * (T/F) It s possible for two types in two different languages
  * to implement the same conceptual type.
- * (T/F) The Java type of an object variable determines which operations (methods) can be performed on it.
- * (T/F) If two Java classes implement the same conceptual type, then it is not possible  to distinguish between them based on their external use.
- * (T/F) The Java type of an object variable determines which instances can be assigned to it.
- * (T/F) If Java classes C1 and C2 implement the same conceptual type, and a variable c is declared to be of Java type C1,
+ * (T/F) The Java type of an object variable determines which operations 
+ * (methods) can be performed on it.
+ * (T/F) If two Java classes implement the same conceptual type, then it is
+ *  not possible  to distinguish between them based on their external use.
+ * (T/F) The Java type of an object variable determines which instances can 
+ *  be assigned to it.
+ * (T/F) If Java classes C1 and C2 implement the same conceptual type, 
+ * and a variable c is declared to be of Java type C1,
  * then c can be assigned an instance of C2.	
  * Which is true:
- * 	An interface contains only bodies of methods 
- * 	    (the code between curly braces after a method header)
- * 	An interface contains both headers and bodies of methods.	
- * (T/F) An interface provides a Java type to unite classes that implement the same conceptual type.
- * (T/F If class C implements interface I, then an instance of C can be assigned to a variable
- * of type I.
+ * An interface contains only headers of methods 
+ * 	    (the code between curly braces after a method header).
+ * An interface contains both headers and bodies of methods.	
+ * (T/F) An interface provides a Java type to unite classes that implement the 
+ * same conceptual type.
+ * (T/F) If class C implements interface I, then an instance of C can be assigned
+ *  to a variable of type I.
+ * (T/F) If class C implements interface I, then an instance of I can be 
+ *  assigned to a variable of type C.
  * T/F A polymorphic variable can be assigned instances of 
  * different classes.
  * (T/F) The operations that are allowed on a polymorphic variable by 
@@ -50,9 +57,7 @@
  * (T/F) A polymorphic method has one or more parameters that can be assigned 
  * instances of multiple classes.
  * (T/F) If C implements I, then an instance of C is also considered an 
- * instance of I.
- * INITIALIZATION
- * 
+ * instance of I.  
  * 
  * 
  * DISCUSSION INFO

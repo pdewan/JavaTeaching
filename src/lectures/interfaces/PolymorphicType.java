@@ -17,6 +17,7 @@ public class PolymorphicType {
 	 */	 
 	static FactorialSpreadsheet a = new ALoopingFactorialSpreadsheet();	
 	static FactorialSpreadsheet b = new ARecursiveFactorialSpreadsheet();
+	
 	public static void main (String[] args) {
 		
 		/*
@@ -151,6 +152,14 @@ public class PolymorphicType {
 //		System.out.println (r instanceof FactorialSpreadsheet);
 //		System.out.println (a instanceof ALoopingFactorialSpreadsheet);
 //		System.out.println (a instanceof ALoopingFactorialSpreadsheet);
+		
+		/*
+		 * (T/F If class C implements interface I, then an instance of I can be 
+		 *  assigned to a variable of type C.
+		 *  
+		 * Uncomment the following to answer this question
+		 */
+//		ALoopingFactorialSpreadsheet c = a;
 		
 	}
 	/*
