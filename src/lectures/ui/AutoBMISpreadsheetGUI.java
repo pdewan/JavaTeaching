@@ -1,72 +1,155 @@
 package lectures.ui;
+import util.annotations.EditablePropertyNames;
+import util.annotations.PropertyNames;
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import util.misc.ThreadSupport;
-import lectures.interfaces.ABMISpreadsheet;
-import lectures.interfaces.BMISpreadsheet;
 import bus.uigen.OEFrame;
-// A library class automatically generating user-interfaces of objects
-// from their programming interfaces
-// Make sure you have oeall22.jar in the classpath
 import bus.uigen.ObjectEditor;
-
-// USING OBJECT EDITOR
-// Run this program, see how it works
-// Enter different values for height and weight and press enter.
-// Can you change the value of the BMI property?
+/**
+ *
+ * This class demonstrates ObjectEditor, a library class automatically generating 
+ * user-interfaces of objects from their programming interfaces.
+ * It also demonstrates annotations, used by ObjectEditor.
+ */
 public class AutoBMISpreadsheetGUI {
+	
+	/**
+	 * ObjectEditor
+	 * (T/F) It is possible to create a tool that automatically creates a user interface
+	 * for displaying all  properties of an object.
+	 * 
+	 * (T/F) It is possible to create a tool for changing all properties of an object.
+	 * 
+	 * (T/F) It is possible to create a tool for changing all editable properties of an 
+	 * object.
+	 * 
+	 * When a property is edited (in an ObjectEditor window)
+	 * 	  the setter for only that property is called.
+	 *    the setters for all properties are called.
+	 *    
+	 * When a property is edited (in an ObjectEditor window)
+	 *     the getter for only that property is called.
+	 *     the getters for all properties are called.	 
+	 * Put your own oeall22.jar in the classpath. 
+	 * Uncomment all print methods in {@link AUIBMISpreadsheet}.
+	 * Run this program.
+	 * 
+	 * Edit the height property and see what happens in the console and in the GUI.
+	 * Can you change the value of the BMI property, which has no setter?
+	 * 
+	 * (T/F) It is possible to create a tool that automatically creates a user
+	 * interface for invoking the public methods of an object.
+	 * 
+	 * When a a method is invoked through an ObjectEditor window:
+	 *     no getter is called.
+	 *     the getters for all properties are called.	
+	 * 
+	 * Execute AUIBMISpreadsheet->Increment Weight. Provide a positive
+	 * or negative increment and hit apply. See the effects on the console and GUI.
+	 * 	  
+	 *
+	 */
+		
 	public static void main (String[] args) {
 		final double initialHeight = 1.77;
 		final double initialWeight = 75;
-		BMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet(initialHeight, initialWeight);
+		UIBMISpreadsheet aBMISpreadsheet = new AUIBMISpreadsheet(initialHeight, 
+				initialWeight);
 		OEFrame anOEFrame = ObjectEditor.edit(aBMISpreadsheet);
-// WHAT DOES OE DISPLAY?	
-		// Look carefully again at the code in ABMISpreadsheet.
-		
-		// Based on this code, and maybe some experimentation, can you say
-		// whether ObjectEditor shows the variables or properties (as defined by bean conventions)
-		// of the object?
-// ANNOTATIONS		
-		// When you run the program, you see a warning from ObjectEditor.	
-		// Uncomment the line beginning with StructurePattern.
-		// The warning goes away. 
-		// The line you uncommented is an annotation - which you can consider as a typed comment
-		// available at runtime. We know it is available at runtime because ObjectEditor, which
-		// does not compile the class of the object, changes its behavior. We know it is
-		// typed because it has to be imported like a regular class (or interface) and one
-		// cannot use a different spelling for StructurePattern.
-		// Does the term Bean in the annotation make sense?
-		
-//INTERACTION BETWEEN OBJECTEDITOR AND EDITED OBJECT		
-		// Let us now understand the interaction between ObjectEditor and the object being edited.
-		// What is your hypothesis regarding how ObjectEditor interacts with the edited object
-		// to display the object and to change the weight? That is what methods are called iniitally
-		// and on each edit?
-		
-		// Uncomment the print lines in ABMISpreadsheet. Observe the output before you 
-		// interact with the UI and after you change weight. Does that make sense?
-		// One aspect will not. It has do with the fact that ObjectEditor supports undo.
-		// Before changing a value in the object in response to a user command, ObjectEditor
-		// calls  a method to obtain the previous version of the value, in case it need to be
-		// restored. Because of this you will see an extra print that would not be needed without undo.
-		
-		// INTERACTIVE AND PROGRAMMED REFRESH
-
-		// What happens if we change a displayed object from the program, as below.
-		// Will the display change? Think about it and then uncomment this code,
-		// leaving the refresh part commented and wait until you get the println output.
-	
-//		final double aWeightGain = 2;
-//		final int aNumGains = 5;
-//		final long aTimeBetweeenGains = 1000; // one second
-//		for (int aCount = 0; aCount < aNumGains; aCount++) {
-//			aBMISpreadsheet.setWeight(aBMISpreadsheet.getWeight() + aWeightGain);
-//			ThreadSupport.sleep(aTimeBetweeenGains); // pause the program
-////			anOEFrame.refresh();
-//		}
-//		System.out.println ("No more weight again!");
-		
-		// Execute the Common->Refresh command and observe its behavior
-		// Now uncomment the refresh() line above and run the program again.
-		// Does the new behavior make sense?
+//		changeObjectProgrammatically(anOEFrame, aBMISpreadsheet);
+			
 	}
+	
+	/**
+	 * Refreshing an Object
+	 * (T/F) When an object is changed from the program, 
+	 * ObjectEditor knows about this event and calls getters in the object to update 
+	 * the display of the object.
+	 * 
+	 * (T/F) The Common->Refresh command in ObjectEditor calls all getters in the displayed
+	 * object to display current property values.
+	 * 
+	 * (T/F) The refresh method in OEFrame calls all getters in the displayed
+	 * object to display current property values.	
+	 *  
+	 * Study the code in changeObjectProgrammatically.
+	 * Uncomment the call in main to change the object.
+	 * Terminate the previous run.
+	 * Run main again and observe any changes in the ObjectEditor window.
+	 * Now execute the Common->Refresh menu item in the OE window and
+	 * observe if the display updates.
+	 * 
+	 * Terminate current run.
+	 * Uncomment the OEFrame refresh call in changeObjectProgrammatically below.
+	 * Run main again and observe any changes in the ObjectEditor window.
+	 * Now execute the Common->Refresh menu item in the OE window and
+	 * observe if the display updates.	
+	 *  
+	 * 	    	
+	 * 
+	 */
+	 static void changeObjectProgrammatically(OEFrame anOEFrame, UIBMISpreadsheet aBMISpreadsheet ) {
+			final double aWeightGain = 2;
+			final int aNumGains = 5;
+			final long aTimeBetweeenGains = 1000; // one second
+			for (int aCount = 0; aCount < aNumGains; aCount++) {
+				aBMISpreadsheet.incrementWeight(aWeightGain);
+				ThreadSupport.sleep(aTimeBetweeenGains); // pause the program
+//				anOEFrame.refresh();
+			}
+			System.out.println ("No more weight again!");
+	 }
+	 
+	/**	 
+     * Annotations		
+     * 
+     * Comment out the call to changeObjectProgrammatically in main.
+     * 
+     * Go back to AUIBMISpreadsheet and look at the annotations starting with @.
+     * 
+     * (T/F) ObjectEditor checks that each property listed in the  @PropertyNames
+     *  annotation of a class is actually a property of the class.
+     * 
+     * (T/F) The Java compiler checks that each property listed in the 
+     * @EditablePropertyNames annotation of a class is actually an editable property of
+     * the class.
+     * 
+     * Uncomment the commented property name in  @PropertyNames. Do you get a warning or 
+     * error from the compiler?
+     * If not, run the program. Do you get a warning or error from the ObjectEditor
+     * in the console?
+     * 
+     * Uncomment the commented property name in @EditablePropertyNames. Do you get a 
+     * warning or error from the compiler?
+     * If not, run the program. Do you get a warning or error from the ObjectEditor
+     * in the console?
+
+     * 
+     * (T/F) Removing the name of an editable property from the @EditablePropertyNames 
+     * annotation makes ituneditable by the user and results in a warning from ObjectEditor.
+     * 
+     * (T/F) Removing the name of the name of a property from both
+     * @EditablePropertyNames  and @PropertyNames annotation makes it 
+     * unviewable and results in a warning from ObjectEditor.
+     * 
+     * Comment out the height property from the editable property names annotation.
+     * Run the program. Do you see a warning from OE? Can you edit the property?
+     * 
+     * Now comment out this property also from the property names annotation.
+     * Run the program. Do you see a warning from OE? Can you view the property?
+     * 
+     * (T/F) Removing @StructurePattern(StructurePatternNames.BEAN_PATTERN) annotation from
+     * a class results in a warning from ObjectEditor if the class defines one or more
+     * properties.
+     * 
+     * (T/F) Annotations can help specify and document the (editable) properties 
+     * of a class.
+     * 
+     * 
+     * (T/F) Its is possible to build a tool that checks that a class implements
+     * specified properties.
+     * 
+	 */
 
 }
