@@ -75,7 +75,7 @@ public class AutoBMISpreadsheetGUI {
 	}
 	
 	/**
-	 * Refreshing an Object
+	 * REFRESH
 	 * 
 	 * (T/F) When an object is changed from the program, 
 	 * ObjectEditor knows about this event and calls getters in the object to update 
