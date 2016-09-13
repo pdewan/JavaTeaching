@@ -19,21 +19,24 @@
  * (T/F) A user interface of an object allows a human user to
  * interact with it.
  * 
- * (T/F) Java automatically provides a user-interface to interact with each object.
+ * (T/F) Java automatically provides a user-interface to interact with each 
+ * object.
  * 
  * Based on the ManualConsoleBMISpreadSheetUI example, the UI code is:
- * 	   (a) an order of magnitude (about ten times) smaller than the computation code.
+ * 	   (a) an order of magnitude (about ten times) smaller than the 
+ * 		   computation code.
  * 	   (b) an order of magnitude larger than the computation code.
  *     (c) about the same size as the computation code.
  *     
  * 
- * (T/F) It is possible to create a tool that automatically creates a user interface
- * for displaying all properties of an object.
+ * (T/F) It is possible to create a tool that automatically creates a user 
+ * interface for displaying all properties of an object.
  * 
- * (T/F) It is possible to create a tool for interactively changing all properties of an object.
+ * (T/F) It is possible to create a tool for interactively changing all 
+ * properties of an object.
  * 
- * (T/F) It is possible to create a tool for interactively changing all editable properties of an 
- * object.
+ * (T/F) It is possible to create a tool for interactively changing all 
+ * editable properties of an object.
  * 
  * When a property is edited (in an ObjectEditor window)
  * 	  (a) the setter for only that property is called.
@@ -52,14 +55,14 @@
  *     (b) the getters for all properties are called
  *     
  * (T/F) When an object is changed from the program, 
- * ObjectEditor knows about this event and calls getters in the object to update 
- * the display of the object.
+ * ObjectEditor knows about this event and calls getters in the object to 
+ * update the display of the object.
  * 
- * (T/F) The Common->Refresh command in ObjectEditor calls all getters in the displayed
- * object to display current property values.
+ * (T/F) The Common->Refresh command in ObjectEditor calls all getters in the 
+ * displayed object to display current property values.
  * 
- * (T/F) The refresh method defined in OEFrame calls all getters in the displayed
- * object to display current property values.
+ * (T/F) The refresh method defined in OEFrame calls all getters in the 
+ * displayed object to display current property values.
  * 
  * ANNOTATIONS
  * 
@@ -75,7 +78,7 @@
  * @EditablePropertyNames annotation of a class is actually an editable property of
  * the class.
  * 
- * * (T/F) Removing the name of an editable property from the @EditablePropertyNames 
+ * (T/F) Removing the name of an editable property from the @EditablePropertyNames 
  * annotation makes it uneditable by the user and results in a warning from 
  * ObjectEditor.
  * 
