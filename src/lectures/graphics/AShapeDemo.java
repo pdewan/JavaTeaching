@@ -1,8 +1,5 @@
 package lectures.graphics;
-/*
- * Study the program, run it, uncomment according to the instructions at 
- * the end.
- */
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -20,6 +17,31 @@ import util.annotations.StructurePatternNames;
 //@StructurePattern(StructurePatternNames.STRING_PATTERN)
 @StructurePattern(StructurePatternNames.IMAGE_PATTERN)
 
+/*
+ * This class demonstrated several concepts.
+ * 
+ * It shows:
+ * 
+ * 	 
+ *   a set of properties that can describe a rectangle.
+ * 
+ *   this set can also describe an oval and a line.
+ * 
+ *   a variation of this set can describe a movable text string.
+ * 
+ *   a variation of this set can describe a movable image.
+ *   
+ *   
+ *   that ObjectEditor can take this set and its variations, together with
+ *   an annotation identifying the shape, to display the shape automatically 
+ *   in the Java coordinate system.
+ *   
+ * We will take a single class and give it the behavior of different shapes by
+ * adding/deleting properties and associated variables, and changing the 
+ * commented out annotations above.
+ * 
+ *  
+ */
 public class AShapeDemo {
 	// Not all of these variables will be used at all cases
 	static final int INITIAL_X = 40, 
@@ -28,6 +50,8 @@ public class AShapeDemo {
 			INITIAL_HEIGHT = 100;
 	static final String INITIAL_TEXT = "Hello World", 
 			INITIAL_IMAGE_FILE_NAME = "shuttle2.jpg";
+	
+	
     int x = INITIAL_X, 
     	y = INITIAL_Y; 
     int width = INITIAL_WIDTH, 
