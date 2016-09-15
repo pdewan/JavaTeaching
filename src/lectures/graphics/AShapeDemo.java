@@ -9,38 +9,37 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 
 /**
- * This class demonstrated several concepts.
+ * This class demonstrates several concepts.
  * 
  * It shows:
  * 
- * 	 
- *   a set of properties that can describe a rectangle.
+ *   A set of properties that can describe a rectangle.
  * 
- *   this set can also describe an oval and a line.
+ *   That the set of the same properties can also describe an oval or a line.
  * 
- *   a variation of this set can describe a movable text string.
+ *   That a variation of this set can describe a movable text string.
  * 
- *   a variation of this set can describe a movable image.
+ *   That a variation of this set can describe a movable image.
  *   
- *   
- *   that ObjectEditor can take this set and its variations, together with
+ *   That ObjectEditor can use this set (or its variations) together with
  *   an annotation identifying the shape, to display the shape automatically 
  *   in the Java coordinate system.
  *   
  * We will take a single class and give it the behavior of different shapes by
  * adding/deleting properties and associated variables, and changing the 
  * commented out annotations below. 
- * Currently, the class is configured to be a rectangle.
+ * 
+ * Currently, the class is configured to be a plain Bean.
  * 
  *  
  */
-//@StructurePattern(StructurePatternNames.BEAN_PATTERN)
-//@StructurePattern(StructurePatternNames.POINT_PATTERN)
-//@StructurePattern(StructurePatternNames.LINE_PATTERN)
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 //@StructurePattern(StructurePatternNames.RECTANGLE_PATTERN)
 //@StructurePattern(StructurePatternNames.OVAL_PATTERN)
+//@StructurePattern(StructurePatternNames.LINE_PATTERN)
+//@StructurePattern(StructurePatternNames.IMAGE_PATTERN)
 //@StructurePattern(StructurePatternNames.STRING_PATTERN)
-@StructurePattern(StructurePatternNames.IMAGE_PATTERN)
+//@StructurePattern(StructurePatternNames.POINT_PATTERN)
 
 
 public class AShapeDemo {
@@ -54,7 +53,7 @@ public class AShapeDemo {
 	static final String INITIAL_TEXT = "Hello World", 
 			INITIAL_IMAGE_FILE_NAME = "shuttle2.jpg";
 	/*
-	 * Not all of these variables will be used at all cases
+	 * Not all of these variables will be used in every case
 	 */
 	
 	/*
@@ -70,9 +69,12 @@ public class AShapeDemo {
     
 	String imageFileName = INITIAL_IMAGE_FILE_NAME;	
 	
+	/*
+	 *  Constructor
+	 */
 	public AShapeDemo () {
 		/*
-		 * The following code makes sense only when this is an image
+		 * The following code makes sense later in the praxis- you will come back to it.
 		 */
 //		Icon icon = new ImageIcon(imageFileName);
 //		setHeight(icon.getIconHeight());
@@ -81,8 +83,9 @@ public class AShapeDemo {
 //				" Image width:" + icon.getIconWidth());
 	
 	}
+	
 	/*
-	 * 	Describe rectangular bounded box   
+	 * 	As we will soon see, these properties describe rectangular bounded box   
      */
     public int getX() {return x;} 
  	public void setX(int newX) {x = newX;}
@@ -94,18 +97,16 @@ public class AShapeDemo {
 	public void setHeight(int newVal) {height = newVal;}
 	
 	/*
-	 * Uncomment these  to make this into a text box
-	 */
-//	public String getText() {return text;}  
-//	public void setText(String newVal) {imageFileName = newVal;} 
-	
-	/*
-	 * Uncomment these out to make this into an image.
+	 * You will uncomment these later to make this into an image.
 	 */
 //	public String getImageFileName() {return imageFileName;}  
 //	public void setImageFileName(String newVal) {imageFileName = newVal;} 
 	
-	
+	/*
+	 * You will uncomment these later to make this into a text box
+	 */
+//	public String getText() {return text;}  
+//	public void setText(String newVal) {imageFileName = newVal;} 
 	
 	
     public static void main (String[] args ) {
@@ -113,12 +114,13 @@ public class AShapeDemo {
     	anOEFrame.showTreePanel();
      	
     }
+    
     /*
 	 * MAIN AND TREE PANEL
 	 * 
 	 * To understand the properties of this class, run this program.
 	 * 
-	 * You will see both a draw panel and a tree panel.
+	 * You will see both a "main" panel (on the right) and a "tree" panel (on the left).
 	 * 
 	 * Use the Common->Tree menu item to hide and show the tree panel.
 	 * 
@@ -126,24 +128,23 @@ public class AShapeDemo {
 	 * 
 	 * The tree panel view should change.
 	 * 
-	 * Edit the text following : in the tree panel. 
+	 * Edit the values following the colon in the tree panel. To do this, you will need to
+	 * triple-click on a tree item to make it editable. Here is the documentation of JTree:
+	 * "Editing is started on a triple mouse click, or after a click, pause, 
+	 * click and a delay of 1200 milliseconds."
 	 * 
 	 * The main panel should change.
-	 * 
-	 * I have noticed that I have to click 3 times before the tree item will 
-	 * become editable. Here is the documentation of JTree:
-	 * "Editing is started on a triple mouse click, or after a click, pause, 
-	 * click and a delay of 1200 milliseconds."	
 	 *    	
 	 * When you use the BeanPattern annotation, ObjectEdior displays the 
-	 * properties in the main panel (and possibly tree view if you create) 
-	 * one without interpreting	the properties in any way. 
+	 * properties in the main panel (and possibly tree view if you create 
+	 * one by placing the relevant call as we are doing in our main method)
+	 * without interpreting	the properties in any way. 
 	 * 
-	 * The other annotations, currently commented out
-	 * are associated with specific interpretations. 
+	 * The other annotations, currently commented out, are associated with specific interpretations. 
 	 * 
-	 * To understand them, you will need to	comment out the Bean Pattern 
-	 * annotation and uncomment one of the other commented annotations.
+	 * To understand them, you will need to comment out the Bean Pattern 
+	 * annotation and uncomment one of the other commented annotations, which
+	 * you will do shortly.
 	 */
     
 	/*
@@ -154,8 +155,14 @@ public class AShapeDemo {
 	 * 
 	 * Run the program.
 	 * 
-	 * The main panel is no longer displayed now, instead we see a draw panel.
-	 * .
+	 * The main panel is no longer displayed now, instead we see a "draw" panel.
+	 * Stretch the window bigger if you need to.
+	 * 
+	 * The properties of this class describe the the width and height a rectangle
+	 * and the x and y coordinates of the upper left corner of the rectangle.
+	 * 
+	 * Do these four properties completely represent the rectangle, that is,
+	 * can they be used to draw the complete rectangle?
 	 * 
 	 * (T/F) A rectangle can be completely represented by the coordinates
 	 * of its upper-left corner.
@@ -163,21 +170,17 @@ public class AShapeDemo {
 	 * (T/F) A rectangle can be completely represented by its width and  height.
 	 * 
 	 * (T/F) A rectangle can be completely represented by  the coordinates
-	 * of its upper-left corner its width and  height.
-	 * 
-	 * (T/F) A rectangle A rectangle can be completely represented by  the 
-	 * coordinates of its upper-left and lower-right corners.
-	 * 
-	 * (T/F) A rectangle A rectangle can be completely represented by  the 
-	 * coordinates of its upper-left and lower-left corners.
-	 * 	    
-	 * The properties of this class describe the the width and height a rectangle
-	 * and the x and y coordinates of the upper left corner of the rectangle.
-	 * 
-	 * Do these four properties completely represent the rectangle, that is,
-	 * can they be used to draw the complete rectangle?
+	 * of its upper-left corner and its width and  height.
 	 * 
 	 * What combination of properties are sufficient to draw a rectangle?
+	 * For these questions you will need to think:
+	 * 
+	 * (T/F) A rectangle can be completely represented by  the 
+	 * coordinates of its upper-left and lower-right corners.
+	 * 
+	 * (T/F) A rectangle can be completely represented by  the 
+	 * coordinates of its upper-left and lower-left corners.
+	 * 
 	 * 
 	 */
     
@@ -186,7 +189,7 @@ public class AShapeDemo {
 	 * 
 	 * Try to understand the graphics coordinate system by editing the
 	 * X and Y properties in the tree window (if editing it is a pain, 
-	 * just change the named constants in this program.
+	 * just change the named constants in this program).
 	 * 
 	 * In a computer coordinate system, the origin is:
 	 * 
@@ -197,7 +200,6 @@ public class AShapeDemo {
 	 * 	(d) The upper-left corner of the window being used for a graphics
 	 * 			operation.
 	 * 	
-	 * 
 	 * In a computer coordinate system, x coordinates increase
 	 * 	(a) left to right
 	 * 	(b) right to left.
@@ -213,24 +215,24 @@ public class AShapeDemo {
 	 * The upper left corner of the enclosing window is the origin of the
 	 * coordinate system for the operation.
 	 * 
-	 * As in a mathematical Cartesian Plane, the X axis however goes from 
+	 * As in a mathematical Cartesian Plane, the X axis goes from 
 	 * left to right.
 	 * 
 	 * The Y axis however goes from top to bottom.
 	 * 
-	 * This coordinate system mirrors how one reads text in typical natural 
-	 * languages, left to right, top to bottom.
+	 * This coordinate system mirrors how one reads text in many languages,
+	 * left to right, top to bottom, and it comes from early monitors, which
+	 * drew the display in this sequence.
 	 * 	
-	 *
 	 */   
     /*
      * LINE AND OVALS
      * 
-     * These are not rectangles, but can be described by rectangular bounding
+     * These are not rectangles, but they can be described by rectangular bounding
      * boxes.
      * 
      * So the properties of this object (describing the bounding box), together
-     * with an identification of the shape are sufficient to completely
+     * with an identification of the shape, are sufficient to completely
      * describe the shape.
      * 
      * Replace the current @StructurePattern current annotation with the 
@@ -246,46 +248,39 @@ public class AShapeDemo {
     /*
      * POSITIONABLE IMAGES
      * 
-     * (T/F) A (positionable) unscalable image can be represented by 
-     * an image file name and  the coordinates of the upper upper-left 
-     * corner of its bounding box.
-	 * 
-	 * (T/F) A (positionable) scalable image can be represented by an
-	 * image file name, the 
-     * coordinates of the upper upper-left corner of its bounding box, and
-     * the height and width of the box.
-	 * 
-     * 
      * Uncomment the code defining the ImageFileName property.
-     * 
      * Replace the current @StructurePattern current annotation with the 
-	 * @StructurePattern(StructurePatternNames.IMAGE_PATTERN)annotation
-	 * and run the program and view the draw panel.
-	 * 
-     * Run the program.
+     * @StructurePattern(StructurePatternNames.IMAGE_PATTERN) annotation
+     * and run the program and view the draw panel.
      * 
      * The image should look ugly as it has been scaled up or down to the
      * bounding box defined by the height and width properties.
      * 
      * It is possible to get the unscaled versions of these values - the
-     * code is given in the constructor.
+     * code is given in the constructor. Uncomment this code and run the program.
      * 
-     * Uncomment this code and run the program.
+     * This sets the height and width to their unscaled values.
      * 
-     * Comment out the getters and setters for height and width and run the
+     * Let's try it a different way. Comment out the constructor code again. Now 
+     * comment out the getters and setters for height and width and run the
      * program.
      * 
      * We are not using the unscaled versions of the height and width.
      * 
+     * (T/F) A (positionable) unscalable image can be represented by 
+     * an image file name and  the coordinates of the upper-left 
+     * corner of its bounding box.
+	 * 
+	 * (T/F) A (positionable) scalable image can be represented by an
+	 * image file name, the coordinates of the upper-left corner 
+	 * of its bounding box, and the height and width of the box.
+     * 
      */
     /*
      * POSITIONABLE STRINGS
-     * 
-     * (T/F) A (positionable) unscalable texs string can be represented by 
-     * a string and  the coordinates of the upper upper-left 
-     * corner of its bounding box.
-     * 
-     * At this point, we have three properties, X, Y and ImageFileName.
+     *
+     * At this point, we have three properties, X, Y and ImageFileName (because
+     * you commented out the height and width at the end of the last section).
      * 
      * Comment of the getter and setter for the ImageFileName property.
      * 
@@ -294,6 +289,9 @@ public class AShapeDemo {
      * Replace the current @StructurePattern current annotation with the 
 	 * @StructurePattern(StructurePatternNames.STRING_PATTERN)annotation
 	 * and run the program and view the draw panel.
+     * 
+     * (T/F) A (positionable) unscalable text string can be represented by 
+     * a string and  the coordinates of the  upper-left  corner of its bounding box.
      * 
      */
     /*
@@ -313,17 +311,19 @@ public class AShapeDemo {
      * (T/F) StructurePattern annotations can tell a tool how to interpret the
      * properties of an object.
      * 
-     * (T/F) StructurePattern annotations can be used to specify the properties
+     * (T/F) StructurePattern annotations can be used to create the properties
      * of an object.
+     * 
+     * Replace the current @StructurePattern current annotation with the 
+     * @StructurePattern(StructurePatternNames.LINE_PATTERN)annotation
+     * and run the program and view the draw panel and console.
+     * 
+     * Do you see any error messages/warnings in the console?
      * 
      * (T/F) StructurePattern annotations can be used to identify missing 
      * properties.
      * 
-     * Replace the current @StructurePattern current annotation with the 
-	 * @StructurePattern(StructurePatternNames.LINE_PATTERN)annotation
-	 * and run the program and view the draw panel and console.
 	 * 
-	 * Do you see any error messages/warnings in the console?
      */
     
    

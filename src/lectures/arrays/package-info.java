@@ -27,7 +27,7 @@
  * (T/F) The pointer or address of an array object changes each time an 
  * element of it changes.
  * 
- * (T/F) The size of an array object changes each an element of it changes.
+ * (T/F) The size of an array object changes each time an element of it changes.
  * 
  * (T/F) The pointer of an array element can change when an assignment is 
  * made to the element.
