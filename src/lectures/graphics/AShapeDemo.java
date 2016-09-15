@@ -85,12 +85,17 @@ public class AShapeDemo {
 	}
 	
 	/*
-	 * 	As we will soon see, these properties describe rectangular bounded box   
+	 * 	As we will soon see, these properties describe a rectangular bounded box   
      */
     public int getX() {return x;} 
  	public void setX(int newX) {x = newX;}
  	public int getY() { return y; }
  	public void setY(int newY) {y = newY;}
+ 	
+ 	/*
+	 * You will comment the following geters and setters later to make this 
+	 * into an unscalable image, unscalable text, and a point.
+	 */
  	public int getWidth() {return width;}
 	public void setWidth(int newVal) {width = newVal;}
 	public int getHeight() {return height;}
@@ -111,7 +116,7 @@ public class AShapeDemo {
 	
     public static void main (String[] args ) {
     	OEFrame anOEFrame = ObjectEditor.edit(new AShapeDemo());
-    	anOEFrame.showTreePanel();
+    	anOEFrame.showTreePanel(); // shows an extra panel, optional call
      	
     }
     
