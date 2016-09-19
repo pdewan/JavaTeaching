@@ -1,6 +1,6 @@
 package lectures.extra.demoers;
 
-import lectures.composite.objects_shapes.ALoan;
+import lectures.composite.objects_shapes_extra.ALoan;
 import lectures.graphics.ACartesianPoint;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.objects.ABMICalculator;

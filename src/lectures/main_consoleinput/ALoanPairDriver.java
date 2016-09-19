@@ -2,11 +2,11 @@ package lectures.main_consoleinput;
 
 import java.io.DataInputStream;
 
-import lectures.composite.objects_shapes.ALoan;
-import lectures.composite.objects_shapes.ALoanPair;
-import lectures.composite.objects_shapes.AnotherLoan;
-import lectures.composite.objects_shapes.Loan;
-import lectures.composite.objects_shapes.LoanPair;
+import lectures.composite.objects_shapes_extra.ALoan;
+import lectures.composite.objects_shapes_extra.ALoanPair;
+import lectures.composite.objects_shapes_extra.AnotherLoan;
+import lectures.composite.objects_shapes_extra.Loan;
+import lectures.composite.objects_shapes_extra.LoanPair;
 public class ALoanPairDriver {
 	static DataInputStream dataIn = new DataInputStream (System.in);
 	public static void main (String args[]) {

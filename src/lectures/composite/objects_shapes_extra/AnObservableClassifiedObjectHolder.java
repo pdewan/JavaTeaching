@@ -1,9 +1,10 @@
-package lectures.mvc.properties;
+package lectures.composite.objects_shapes_extra;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import lectures.composite.objects_shapes_extra.ClassifiedObjectHolder;
+import lectures.mvc.properties.APropertyListenerSupport;
+import lectures.mvc.properties.PropertyListenerSupport;
 import util.annotations.ComponentWidth;
 import util.models.PropertyListenerRegisterer;
 

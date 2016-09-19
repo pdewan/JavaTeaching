@@ -2,6 +2,7 @@ package lectures.composite.objects_shapes;
 
 
 
+
 public interface PlottedShuttle {
 	public CartesianPlane getCartesianPlane();
 	public ImageWithHeight getShuttleImage();

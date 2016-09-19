@@ -1,12 +1,12 @@
 package lectures.mvc.properties;
 
-import lectures.composite.objects_shapes.ALoan;
-import lectures.composite.objects_shapes.ALoanPair;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.composite.objects_shapes.Loan;
-import lectures.composite.objects_shapes.LoanPair;
 import lectures.composite.objects_shapes.PlottedShuttle;
+import lectures.composite.objects_shapes_extra.ALoan;
+import lectures.composite.objects_shapes_extra.ALoanPair;
+import lectures.composite.objects_shapes_extra.Loan;
+import lectures.composite.objects_shapes_extra.LoanPair;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Line;
 import lectures.graphics.Point;

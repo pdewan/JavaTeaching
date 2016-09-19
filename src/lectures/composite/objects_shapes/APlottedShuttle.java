@@ -1,12 +1,31 @@
 package lectures.composite.objects_shapes;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-// Without looking at this program, run it and observe the graphics view created.
-// What properties/logical structure do you think this class has based on the graphics view.
-// Use the Common->TreeView command to view the actual logical structure.
-// Examine this code.
-// Does your predicted logical structure match the actual one?
-// If not, which is the preferable one?
+/*
+ * Without looking at this program, run it and observe the graphics view created.
+ * 
+ * What properties/logical structure do you think this class has based on the
+ * graphics view.
+ * 
+ * Use the Common->TreeView command to view the actual logical structure.
+ * Examine this code.
+ * 
+ * Does your predicted logical structure match the actual one?
+ * 
+ * If not, which is the preferable one?
+ * 
+ * APlottedShuttle has a:
+ *   (a) child node that represents the X axis.
+ *   (b) has a (non-child) descendant node that represents the X axis.
+ *   
+ *  APlottedShuttle has a:
+ *   (a) child node that represents the shuttle.
+ *   (b) has a (non-child) descendant node that represents the shuttle. 
+ *   
+ * 
+ * (T/F) APlottedShuttle reuses the code in ACartesianPlane.
+ * 
+ */
 
 public class APlottedShuttle implements PlottedShuttle /*, NotAPoint*/ {
     static protected final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";

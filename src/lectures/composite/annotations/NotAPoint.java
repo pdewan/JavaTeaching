@@ -1,7 +1,7 @@
 package lectures.composite.annotations;
 
-import lectures.composite.objects_shapes.FancyCartesianPlane;
 import lectures.composite.objects_shapes.ImageWithHeight;
+import lectures.composite.objects_shapes_extra.FancyCartesianPlane;
 
 public interface NotAPoint {
 	public FancyCartesianPlane getFancyCartesianPlane();

@@ -1,31 +1,30 @@
-package lectures.mvc.properties;
+package lectures.composite.objects_shapes_extra;
 
+import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import lectures.composite.objects_shapes.CartesianPlane;
+import lectures.composite.objects_shapes.LineWithObjectProperty;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.composite.objects_shapes_extra.ALoan;
-import lectures.composite.objects_shapes_extra.ALoanPair;
-import lectures.composite.objects_shapes_extra.ClassifiedObjectHolder;
-import lectures.composite.objects_shapes_extra.Loan;
-import lectures.composite.objects_shapes_extra.LoanPair;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Line;
 import lectures.graphics.Point;
+import lectures.mvc.properties.AnObservableClassifiedObjectHolder;
+import lectures.mvc.properties.ObjectDemoer;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
 
-public class ATypesDemoer implements ObjectDemoer {
+public class AnObjectDemoer implements ObjectDemoer {
 	int amount;
 	Loan loan;
 	Point point;
 	Line line;
+	LineWithObjectProperty compositeLine;
 	CartesianPlane cartesianPlane;
-	CartesianPlane fancyCartesianPlane;
 	LoanPair loanPair;
 	PlottedShuttle shuttleLocation;
 	ClassifiedObjectHolder objectHolder;	
-	public ATypesDemoer(ClassifiedObjectHolder theObjectHolder) {
+	public AnObjectDemoer(ClassifiedObjectHolder theObjectHolder) {
 		objectHolder = theObjectHolder;
 		loanPair = new ALoanPair(new ALoan(25000), new ALoan(225000));
 		loan = loanPair.getCarLoan();
@@ -33,6 +32,7 @@ public class ATypesDemoer implements ObjectDemoer {
 		shuttleLocation = new APlottedShuttle(50, 100);
 		cartesianPlane = shuttleLocation.getCartesianPlane();
 		line = cartesianPlane.getXAxis();
+		compositeLine = new ALineWithObjectProperty(new ACartesianPoint(line.getX(), line.getY()), line.getWidth(), line.getHeight());
 		point = new ACartesianPoint(line.getX(), line.getY());
 		toInteger();
 		
@@ -56,17 +56,21 @@ public class ATypesDemoer implements ObjectDemoer {
 		
 	}	
 	public void toLine() {
-		objectHolder.setKind("Composite Object, Atomic Shape");
+		objectHolder.setKind("Object, Atomic Shape");
 		objectHolder.setObject(line);		
+	}
+	public void toCompositeLine() {
+		objectHolder.setKind("Composite Object, Atomic Shape");
+		objectHolder.setObject(compositeLine);		
 	}
 	public void toCartesianPlane() {
 		objectHolder.setKind("Composite Object, Composite Shape");
 		objectHolder.setObject(cartesianPlane);		
 	}
-	public void toFancyCartesianPlane() {
-		objectHolder.setKind("Composite Object, Composite Shape");
-		objectHolder.setObject(fancyCartesianPlane);		
-	}
+//	public void toFancyCartesianPlane() {
+//		objectHolder.setKind("Composite Object, Composite Shape");
+//		objectHolder.setObject(fancyCartesianPlane);		
+//	}
 	
 	public void toPlottedShuttle() {
 		objectHolder.setKind("Composite Object, Composite Shape");
@@ -83,8 +87,9 @@ public class ATypesDemoer implements ObjectDemoer {
 	}
 		
 	public static void main (String[] args) {
+//		ObjectEditor.edit(new ALoan(25000));
 //		ObjectEditor.edit(new ATypesDemoer(new AnObjectHolder()));
-		OEFrame oeFrame = ObjectEditor.edit(new ATypesDemoer(new AnObservableClassifiedObjectHolder()));
+		OEFrame oeFrame = ObjectEditor.edit(new AnObjectDemoer(new AnObservableClassifiedObjectHolder()));
 //		oeFrame.hideMainPanel();
 		oeFrame.showTreePanel();
 		oeFrame.showDrawPanel();

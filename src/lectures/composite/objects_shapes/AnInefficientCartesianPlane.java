@@ -5,21 +5,34 @@ import lectures.graphics.AStringShape;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
 import bus.uigen.ObjectEditor;
-// This is how you should not change structures
-// Compare setAxesLength() of this class with the one in the previous one.
-// Compare one of the getters (say getAxis()) with the corresponding getter of the previous class
-// Does any composite node change in this example (get differenrt children) and when
-// does it change?
+/**
+ * Compare the constructor of this class with the previous one.
+ * 
+ * Compare setAxesLength() of this class with the one in the previous one. 
+ * 
+ * Compare one of the getters (say getAxis()) with the corresponding 
+ * getter of the previous class.
+ * 
+ * 
+ *
+ */
 public class AnInefficientCartesianPlane implements CartesianPlane {
 	protected int originX, originY;
 	protected int axesLength; 
+	/*
+	 * Do not instantiate components in the constructor
+	 */
     public AnInefficientCartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
     	axesLength = theAxesLength; 
     	originX = theOriginX;
     	originY = theOriginY;      
     }  
+    /*
+     * Create a new line and label each time the getter is called, 
+     * based on axes length
+     * 
+     */
     
-    // what is this getter more inefficient than the previous one?
     public Line getXAxis() {
     	return new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
     }
@@ -67,5 +80,22 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     public static void main (String[] args) {
     	ObjectEditor.edit(new AnInefficientCartesianPlane(200, 125, 125));
     }
+/*
+ * Again, run in debug mode and stop at the breakpoint, and step into the getter, 
+ * step return, and then step into the setter.
+ * 
+ * When the setter above is called, did any of the leaf nodes change in 
+ * the structure?
+ * 
+ * Did any of the composite nodes change, that is, did they get new children or 
+ * lose children?
+ * 
+ * Calling setAxesLength in AnInefficientCartesianPlane changes:
+ * 		(a) only the leaf nodes in the physical structure.
+ * 		(b) changes only composite nodes in the physical structure.
+ * 		(c) changes both the leaf and composite nodes in the physical structure.
+ *
+ * Why is this class more inefficient?
+ */
 	
 }
