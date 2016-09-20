@@ -159,6 +159,8 @@ public class ACartesianPlane implements CartesianPlane {
  * 		(b) changes only composite nodes in the physical structure.
  * 		(c) changes both the leaf and composite nodes in the physical structure.
  *
+ * Resume the execution to see the behavior of the program.
+ * 
  * The next example is more concise but also inefficient: 
  * AnInefficientCartesianPlane
  */

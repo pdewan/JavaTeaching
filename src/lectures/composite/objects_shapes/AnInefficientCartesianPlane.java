@@ -94,17 +94,13 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * Again, run in debug mode and stop at the breakpoint, and step into the getter, 
  * step return, and then step into the setter.
  * 
- * When the setter above is called, did any of the leaf nodes change in 
- * the structure?
+ * Does this physical structure have any composite nodes?
  * 
- * Did any of the composite nodes change, that is, did they get new children or 
- * lose children?
+ * (T/F) AnInefficientCartesianPlane has a single leaf node in the physical
+ * structure.
  * 
- * Calling setAxesLength in AnInefficientCartesianPlane changes:
- * 		(a) only the leaf nodes in the physical structure.
- * 		(b) changes only composite nodes in the physical structure.
- * 		(c) changes both the leaf and composite nodes in the physical structure.
- *
+ * Resume the program to see the behavior of the program.
+ * 
  * Why is this class more inefficient?
  */
 	
