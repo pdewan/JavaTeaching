@@ -14,38 +14,36 @@ import bus.uigen.ObjectEditor;
  * were primitive values. Thus, these objects are composed of primitive values.
  * 
  * This class defines an object that has both a variable and a property of a 
- * non primitive
- * type. 
+ * non primitive type. 
  * 
- * So we have an object composed of another object, or in other words, we have
- * object nesting with parent/child relationship.
+ * So, we have an object composed of another object, or in other words, we have
+ * "object nesting" with a parent/child relationship.
  * 
  * Yes this is an atomic shape - a line - as the StructurePattern annotation
  * shows.
-
- * Look carefully at the code both the interface Point and the class 
- * ACartesianPointPoint used here.
-
+ * 
  * Look through this program. Go to the declaration of both the the interface 
  * Point and the class ACartesianPoint used here.
  * 
  * After that look at AnInteger.
  */
 public class ALineWithObjectProperty implements LineWithObjectProperty {
+	
 	int width, height;
-	Point location;
+	
+	Point location;	// an non-primitive variable!
+	
 	public ALineWithObjectProperty(
 		Point initLocation, int initWidth, int initHeight) {
-		/*
-		// comment this out on the second run
-		 * 
-		 */
-		location = initLocation;
+
+		location = initLocation;	// comment this out on the second run
 		width = initWidth;
 		height = initHeight;	
 	}
-	public Point getLocation() {return location;}
+	
+	public Point getLocation() {return location;}					// a non-primitive property!
 	public void setLocation(Point newVal) {location = newVal;}
+	
 	public int getWidth() {return width;}
 	public void setWidth(int newVal) {width = newVal;}
 	public int getHeight() {return height;}
@@ -68,15 +66,14 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
 /*
  * DECOMPOSING AN OBJECT
  * 
- * We can decompose an object by the values assigned to its instance variables
+ * We can decompose ("break apart") an object by the values assigned to its instance variables
  * or properties.
  * 
  * Decomposing an object by its instance variables creates its physical structure.
  * 
- * 
  * Decomposing an object by its properties creates its logical structure.
  * 
- * The physical structure reperesents how the object is physically stored in memory.
+ * The physical structure represents how the object is physically stored in memory.
  * 
  * The logical structure describes how the object is logically structured by someone
  * looking at its public instance methods.
@@ -91,8 +88,8 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * Execute the Run-->Debug As command (F11 key).
  * 
- * The ObjectEditor window should be shown and the program should stop or
- * break at the line with the breakpoint and you should be
+ * The ObjectEditor window should be shown, the program should stop or
+ * break at the line with the breakpoint you placed, and you should be
  * in the Debug perspective.
  * 
  * Execute the Run->Step Into command (F5) to step into the getter called
@@ -101,7 +98,8 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * Now execute again the Run->Step Into command (F5) to step into the setter. 
  * 
  * 
- * Look at the top right window and select the left tab: Variables. 
+ * Look at the top right window and select the left tab: Variables (if not
+ * already selected). 
  * 
  * It shows two variables. 
  * 
@@ -111,10 +109,10 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * Verify its value is correct.
  * 
  * The other is the variable, this, which refers to the object 
- * on which the setter is being execute.
+ * on which the setter is being executed.
  * 
- * Press on the arrow on the left of "this" to expand it, and expand
- * the location item also.
+ * Press on the arrow to the left of "this" to expand it, and expand
+ * the "location" item also.
  * 
  * Similarly, expand the Location item in the tree view displayed 
  * by ObjectEditor.
@@ -122,14 +120,14 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * So you have two tree views displayed now, one by ObjectEditor 
  * and one by the debugger.
  * 
- * Some items are similar (modulo the case) and some are different.
+ * Some items are similar (ignoring the case) and some are different.
  * 
  * The structure created by ObjectEditor is the logical structure and
  * the one created by the debugger is the physical structure.			
 
- * As we see in the two structures, named and values are displayed 
+ * As we see in the two structures, names and values are displayed 
  * for primitive components of an object, and expandable names are 
- * shown for object components. 
+ * shown for object components (location, in this case). 
 
  * In computer science, the items in a structure are called nodes, 
  * which have names and possibly values and children (sub structures).
@@ -140,34 +138,35 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * A node with no parent is a root node in the structure.
  * 
- * Any other node is an internal node.
+ * Any node that is not a leaf or root is an internal node.
  * 
- * If A is a child of B and C is a child of B then 
+ * If B is the child of A, and C is a child of B then 
  * B and C are descendants of A and A and B are ancestors of C
 
  * To visualize the structure, a parent is connected to a child through a 
- * line segment called an edge. Both tree views use such a visualization.
+ * line segment called an edge. The tree view in object editor uses such a visualization.
+ * The debugger uses indentation to show child relationships. 
 
  * Identify the root, a leaf, a composite, and an internal node 
  * in the two structures.
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a composite
- * node labeled location. 
+ * node labeled "location". 
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a root
- * node labeled this.
+ * node labeled "this".
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a composite
- * node labeled this.
+ * node labeled "this".
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a composite
- * node labeled x.
+ * node labeled "x".
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a leaf
- * node labeled radius.
+ * node labeled "radius".
  * 
  * (T/F) The logical structure of ALineWithObjectProperty has a leaf
- * node labeled Radius.
+ * node labeled "Radius".
  * 
 
  * Now comment out the statement in the constructor that assigns to location
@@ -210,8 +209,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * COMPOSITE VS. NON-COMPOSITE  TYPES
  * 
  * A structured type with at least one internal structured node is a 
- * composite type - such 
- * a type has a component that is itself structured.
+ * composite type - such a type has a component that is itself structured.
  * 
  * (T/F) Point is a composite type.
  * (T/F) ALineWithObjectProperty is a composite type.
@@ -221,9 +219,9 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * COMPOSITE SHAPES VS OBJECTS
  * 
  * In this example, the ObjectEditor tree view was structured but not the
- * graphics view, because the object simply represented a line, using a 
+ * graphics view, because the object simply represented a line that used a 
  * Point object rather than x,y coordinates for the location. (I recommend using
- * X,y coordinates for your project to avoid some subtle problems)
+ * x,y coordinates for your project to avoid some subtle problems)
  * 
  * The next example shows a structured shape.
  * 

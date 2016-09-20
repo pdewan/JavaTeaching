@@ -11,7 +11,7 @@ import bus.uigen.ObjectEditor;
  * Study the class and draw the logical and physical structure
  * of the instance created by main. 
  * 
- * The idea is to draw a scalable Cartesian Plane with labelled X and
+ * The idea is to draw a scalable Cartesian Plane with labeled X and
  * Y axes.
  * 
  * An editable AxesLength property can be used to magnify and shrink the plane.
@@ -24,23 +24,26 @@ import bus.uigen.ObjectEditor;
  *
  */
 public class ACartesianPlane implements CartesianPlane {
+	
 	protected int originX, originY;
 	protected int axesLength;   
 	protected Line xAxis;
     protected Line yAxis;  
 	protected StringShape xLabel;
 	protected StringShape yLabel;
+	
     public ACartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
-    	axesLength = theAxesLength; 
+    	
+   	axesLength = theAxesLength; 
     	originX = theOriginX;
     	originY = theOriginY;
     	/*
     	 * Creating the initial structure based on the initial axeslength.
     	 */
-        xAxis = new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
-        yAxis = new ALine(toYAxisX(), toYAxisY(), 0, axesLength);  
-     	xLabel = new AStringShape ("X", toXLabelX(), toXLabelY());
-        yLabel = new AStringShape ("Y", toYLabelX(), toYLabelY());
+       xAxis = new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
+       yAxis = new ALine(toYAxisX(), toYAxisY(), 0, axesLength);  
+     	 xLabel = new AStringShape ("X", toXLabelX(), toXLabelY());
+       yLabel = new AStringShape ("Y", toYLabelX(), toYLabelY());
     }
     /*
      * Do we need setters for all properties?
@@ -60,8 +63,9 @@ public class ACartesianPlane implements CartesianPlane {
     public int getAxesLength() {
 		return axesLength;
 	}
+    
     /*
-     * Modifying the graphical components to be consistent with the new axeslength.  
+     * SetAxesLength modifies the graphical components to be consistent with the new axeslength.  
      */
 	public void setAxesLength(int anAxesLength) {
 		axesLength = anAxesLength;
@@ -76,6 +80,10 @@ public class ACartesianPlane implements CartesianPlane {
 		yLabel.setX(toYLabelX());
 		yLabel.setY(toYLabelY());
 	}
+	
+	/*
+	 * These methods are used for calculating the locations of the line and label objects
+	 */
 	protected int toXAxisX() {
     	return originX - axesLength/2;
     }
@@ -100,6 +108,7 @@ public class ACartesianPlane implements CartesianPlane {
 	protected int toYLabelY() {
     	return originY - axesLength/2;  	
     }
+	
     public static void main (String[] args) {
     	CartesianPlane aCartesianPlane = new ACartesianPlane(200, 125, 125);
     	OEFrame anOEFrame =  ObjectEditor.edit(aCartesianPlane);

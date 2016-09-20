@@ -4,6 +4,7 @@ import lectures.graphics.ALine;
 import lectures.graphics.AStringShape;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
+import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 /**
  * Compare the constructor of this class with the previous one.
@@ -27,12 +28,12 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     	originX = theOriginX;
     	originY = theOriginY;      
     }  
+    
     /*
      * Create a new line and label each time the getter is called, 
      * based on axes length
      * 
      */
-    
     public Line getXAxis() {
     	return new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
     }
@@ -78,7 +79,16 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     
    
     public static void main (String[] args) {
-    	ObjectEditor.edit(new AnInefficientCartesianPlane(200, 125, 125));
+   	AnInefficientCartesianPlane myPlane = new AnInefficientCartesianPlane(200, 125, 125);
+    	OEFrame anOEFrame =  ObjectEditor.edit(myPlane);
+    	anOEFrame.showTreePanel();
+    	/*
+    	 * set a break point on setter call, 
+    	 *    	
+    	 */
+    	myPlane.setAxesLength(myPlane.getAxesLength()*2);
+    	anOEFrame.refresh();
+    	
     }
 /*
  * Again, run in debug mode and stop at the breakpoint, and step into the getter, 

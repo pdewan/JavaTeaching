@@ -26,8 +26,6 @@
  * {@link MyInteger}
  * {@link ACartesianPlane}
  * {@link AnInefficientCartesianPlane}
- * {@link PlottedShuttle}
- * 
  *
  */
 package lectures.composite.objects_shapes;
