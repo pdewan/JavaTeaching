@@ -1,9 +1,14 @@
 package lectures.composite.objects_shapes;
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 /*
- * Without looking at this program, run it and observe the graphics view created
- * (stretch the window to see all of it).
+ * Without looking at this program, run it and observe the graphics view 
+ * created (stretch the window to see all of it).
+ * 
+ * Edit the properties in the main panel to see the effect on in the graphics
+ * panel.
  * 
  * What properties/logical structure do you think this class has based on the
  * graphics view?
@@ -25,12 +30,10 @@ import bus.uigen.ObjectEditor;
  * (T/F) APlottedShuttle reuses the code in ACartesianPlane.
  * 
  */
-
-public class APlottedShuttle implements PlottedShuttle /*, NotAPoint*/ {
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
+public class APlottedShuttle implements PlottedShuttle  {
     
-	static protected final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";
-	static protected final int ORIGIN_X = 200, ORIGIN_Y = 200;
-	static protected final int AXES_LENGTH = 300;
+	public static final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";
 	int shuttleX = 0, shuttleY = 0;
 	protected CartesianPlane cartesianPlane; 
 	protected ImageWithHeight shuttleImage;
@@ -65,8 +68,9 @@ public class APlottedShuttle implements PlottedShuttle /*, NotAPoint*/ {
 	}
 	public static void main (String[] args) {
 		PlottedShuttle shuttle = new APlottedShuttle(0, 0);
-		OEFrame oeFrame = ObjectEditor.edit(shuttle);
-		oeFrame.hideMainPanel();
+		OEFrame anOEFrame = ObjectEditor.edit(shuttle);
+		anOEFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+//		oeFrame.hideMainPanel();
 	}
 }
 

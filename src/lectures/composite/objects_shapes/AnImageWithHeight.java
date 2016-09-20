@@ -3,8 +3,10 @@ package lectures.composite.objects_shapes;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;
-
+@StructurePattern(StructurePatternNames.IMAGE_PATTERN)
 public class AnImageWithHeight implements ImageWithHeight {
     int x, y;
 	String imageFileName;

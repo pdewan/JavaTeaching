@@ -1,5 +1,7 @@
 package lectures.composite.objects_shapes;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import lectures.graphics.ALine;
 import lectures.graphics.AStringShape;
 import lectures.graphics.Line;
@@ -21,10 +23,13 @@ import bus.uigen.ObjectEditor;
  * (T/F) XAxis is readonly property of ACartesianPlane. 
  * 
  * (T/F) All structured properties of ACartesianPlane are readonly.
+ * 
+ * (T/F) XAxis is a stored property of ACartesianPlane, that is, its value
+ * is stored in an instance variable.
  *
  */
-public class ACartesianPlane implements CartesianPlane {
-	
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
+public class ACartesianPlane implements CartesianPlane {	
 	protected int originX, originY;
 	protected int axesLength;   
 	protected Line xAxis;
@@ -34,7 +39,7 @@ public class ACartesianPlane implements CartesianPlane {
 	
     public ACartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
     	
-   	axesLength = theAxesLength; 
+    	axesLength = theAxesLength; 
     	originX = theOriginX;
     	originY = theOriginY;
     	/*
@@ -42,13 +47,14 @@ public class ACartesianPlane implements CartesianPlane {
     	 */
        xAxis = new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
        yAxis = new ALine(toYAxisX(), toYAxisY(), 0, axesLength);  
-     	 xLabel = new AStringShape ("X", toXLabelX(), toXLabelY());
+       xLabel = new AStringShape ("X", toXLabelX(), toXLabelY());
        yLabel = new AStringShape ("Y", toYLabelX(), toYLabelY());
     }
     /*
      * Do we need setters for all properties?
      */
     public Line getXAxis() {
+    	System.out.println ("X Axis:" + xAxis);
     	return xAxis;
     }
     public Line getYAxis() {
@@ -65,9 +71,11 @@ public class ACartesianPlane implements CartesianPlane {
 	}
     
     /*
-     * SetAxesLength modifies the graphical components to be consistent with the new axeslength.  
+     * setAxesLength modifies the graphical components to be consistent with 
+     * the new axeslength.  
      */
 	public void setAxesLength(int anAxesLength) {
+		System.out.println ("New axes length:" + anAxesLength);
 		axesLength = anAxesLength;
 		xAxis.setWidth(axesLength);
 		yAxis.setHeight(axesLength);
@@ -110,12 +118,13 @@ public class ACartesianPlane implements CartesianPlane {
     }
 	
     public static void main (String[] args) {
-    	CartesianPlane aCartesianPlane = new ACartesianPlane(200, 125, 125);
+    	CartesianPlane aCartesianPlane = 
+    		new ACartesianPlane(INIT_AXES_LENGTH, INIT_ORIGIN_X, INIT_ORIGIN_Y);
     	OEFrame anOEFrame =  ObjectEditor.edit(aCartesianPlane);
     	anOEFrame.showTreePanel();
+    	anOEFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
     	/*
-    	 * set a break point on setter call, 
-    	 *    	
+    	 * set a break point on setter call
     	 */
     	aCartesianPlane.setAxesLength(aCartesianPlane.getAxesLength()*2);
     	anOEFrame.refresh();
@@ -159,7 +168,13 @@ public class ACartesianPlane implements CartesianPlane {
  * 		(b) only composite nodes in the physical structure.
  * 		(c) both the leaf and composite nodes in the physical structure.
  *
- * Resume the execution to see the behavior of the program.
+ * Resume the execution to see the behavior of the program. 
+ * Edit the AxesLength and see the effect.
+ * 
+ * Look at the console output:
+ * 
+ * (T/F) Calling setAxesLength in ACartesianPlane changes the composite property
+ * XAxis, that is, assigns a new new object to this property.
  * 
  * The next example is more concise but also inefficient: 
  * AnInefficientCartesianPlane

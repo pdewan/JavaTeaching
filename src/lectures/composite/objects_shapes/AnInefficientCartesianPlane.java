@@ -1,5 +1,7 @@
 package lectures.composite.objects_shapes;
 
+import util.annotations.StructurePattern;
+import util.annotations.StructurePatternNames;
 import lectures.graphics.ALine;
 import lectures.graphics.AStringShape;
 import lectures.graphics.Line;
@@ -14,9 +16,13 @@ import bus.uigen.ObjectEditor;
  * Compare one of the getters (say getAxis()) with the corresponding 
  * getter of the previous class.
  * 
+ * (T/F) XAxis is a stored property of AnInefficientCartesianPlane, that is, 
+ * its value is stored in an instance variable.
+ * 
  * 
  *
  */
+@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class AnInefficientCartesianPlane implements CartesianPlane {
 	protected int originX, originY;
 	protected int axesLength; 
@@ -35,7 +41,8 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
      * 
      */
     public Line getXAxis() {
-    	return new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
+    	Line result = new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
+    	return result;
     }
     public Line getYAxis() {
     	return new ALine(toYAxisX(), toYAxisY(), 0, axesLength);
@@ -79,9 +86,14 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     
    
     public static void main (String[] args) {
-   	AnInefficientCartesianPlane myPlane = new AnInefficientCartesianPlane(200, 125, 125);
+   	    CartesianPlane myPlane = 
+   	    		new AnInefficientCartesianPlane(
+   	    				INIT_AXES_LENGTH, 
+   	    				INIT_ORIGIN_X, 
+   	    				INIT_ORIGIN_Y);
     	OEFrame anOEFrame =  ObjectEditor.edit(myPlane);
     	anOEFrame.showTreePanel();
+    	anOEFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
     	/*
     	 * set a break point on setter call, 
     	 *    	
@@ -96,10 +108,17 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * 
  * Does this physical structure have any composite nodes?
  * 
- * (T/F) AnInefficientCartesianPlane has a single leaf node in the physical
+ * (T/F) AnInefficientCartesianPlane has only leaf nodes in the physical
  * structure.
  * 
  * Resume the program to see the behavior of the program.
+ * 
+ * Edit the AxesLength and see the effect.
+ * 
+ * Look at the console output:
+ * 
+ * (T/F)  Calling setAxesLength in AnInefficientCartesianPlane changes the 
+ * composite property, XAxis, that is, assigns a new new object to this property.
  * 
  * Why is this class more inefficient?
  * 
