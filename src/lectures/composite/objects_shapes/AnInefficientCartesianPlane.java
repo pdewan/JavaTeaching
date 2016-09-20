@@ -102,6 +102,8 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * Resume the program to see the behavior of the program.
  * 
  * Why is this class more inefficient?
+ * 
+ * Next class: APlottedShuttle
  */
 	
 }

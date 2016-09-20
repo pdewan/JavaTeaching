@@ -156,8 +156,8 @@ public class ACartesianPlane implements CartesianPlane {
  * 
  * Calling setAxesLength in ACartesianPlane changes:
  * 		(a) only the leaf nodes in the physical structure.
- * 		(b) changes only composite nodes in the physical structure.
- * 		(c) changes both the leaf and composite nodes in the physical structure.
+ * 		(b) only composite nodes in the physical structure.
+ * 		(c) both the leaf and composite nodes in the physical structure.
  *
  * Resume the execution to see the behavior of the program.
  * 
