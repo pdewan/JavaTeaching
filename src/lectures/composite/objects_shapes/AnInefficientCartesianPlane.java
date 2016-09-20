@@ -117,8 +117,9 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * 
  * Look at the console output:
  * 
- * (T/F)  Calling setAxesLength in AnInefficientCartesianPlane changes the 
- * composite property, XAxis, that is, assigns a new new object to this property.
+ * (T/F)  Calling getXAxis() in AnInefficientCartesianPlane changes the 
+ * composite property, XAxis, that is, returns a new new object for this 
+ * property.
  * 
  * Why is this class more inefficient?
  * 
