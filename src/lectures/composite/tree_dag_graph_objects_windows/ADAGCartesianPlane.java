@@ -1,7 +1,7 @@
 package lectures.composite.tree_dag_graph_objects_windows;
 /**
  * The widget examples show that data structures that are displayed in a hierarchical
- * fashion are trees.
+ * fashion should be trees.
  * 
  * Here we will create a DAG and try and display it both in the tree view 
  * and the graphics view of Object Editor.
