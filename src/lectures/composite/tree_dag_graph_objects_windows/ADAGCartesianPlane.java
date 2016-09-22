@@ -154,11 +154,12 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	 * Look at the tree view and the graphics view. 
 	 * 
 	 * Do each of the views make sense? You may need to resize the tree view to see
-	 * all of it.
+	 * all of it. Be sure to expand all nodes and look at the location point
+	 * objects that have two parents,
 	 * 
 	 * Uncomment the "@Visible" annotations above. 
 	 * 
-	 * Do the views make more sense now?
+	 * Do the views, specially the draw/graphics view, make more sense now?
 	 * 
 	 * Many of you will want to create data structures that are Graphs or DAGs for
 	 * convenience point of view. 
@@ -171,7 +172,8 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 	 * split panes, panels, and other components similar to the ones you saw in the
 	 * previous classes.
 	 * 
-	 * (T/F) The ObjectEditor tree view can display an arbitrary DAG.
+	 * (T/F) The ObjectEditor tree view can be used to determine if the displayed
+	 * object is a tree or not.
 	 * 
 	 * (T/F) Annotations can be used to ask ObjectEditor to ignore certain
 	 * nodes when displaying a structured object.
