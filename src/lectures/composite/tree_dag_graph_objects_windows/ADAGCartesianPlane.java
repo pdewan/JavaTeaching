@@ -1,16 +1,16 @@
 package lectures.composite.tree_dag_graph_objects_windows;
 /**
  * The widget examples show that data structures that are displayed in a hierarchical
- * fashion should be trees.
+ * fashion are trees.
  * 
  * Here we will create a DAG and try and display it both in the tree view 
  * and the graphics view of Object Editor.
  * 
  * Now we have two additional properties XAxisLocation and YAxisLocation in
- * this class.
+ * this class, both of which are of type Point.
  * 
  * They are children of XAxis and YAxis, which are children of Cartesian Plane,
- * and they are also children of Cartesian Plane themselves.
+ * and they are also made children of Cartesian Plane themselves.
  * 
  * So, they are both grandchildren and children of this Cartesian Plane.
  * 
