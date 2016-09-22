@@ -43,11 +43,11 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
 		originX = theOriginX;
 		originY = theOriginY;
 		
-		// Create and set the two new children variables
+		// Here we create and set the two new children variables
 		xAxisLocation = toXAxisLocation(); 
 		yAxisLocation = toYAxisLocation(); 
 		
-		// Create and set the two axis variables, but give them the same point variables
+		// Here we create and set the two axis variables, but give them the same point variables
 		// to have as children.
 		// In other words, xAxisLocation and yAxisLocation will now be both children and
 		// grandchildren of the Cartesian Plane.
