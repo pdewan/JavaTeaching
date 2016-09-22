@@ -6,7 +6,7 @@
  * in CS: trees, DAGs and Graphs. 
  * 
  * We will focus on trees in this course -creating a DAG or a graph will in 
- * fact be an error.
+ * fact be indicative of an error.
  *  
  * The reason for mentioning them is mainly to avoid such errors, as a structure
  * intended to be trees can easily become DAGs and graphs.
