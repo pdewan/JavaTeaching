@@ -10,7 +10,7 @@ import javax.swing.JTextField;
  * Cartesian Plane - one that teaches you something about how a GUI is 
  * implemented.
  * 
- * This structure composes different kinds of widgets - 
+ * This structure composes different kinds of "widgets" - 
  * items that can displayed on the screen and possibly manipulated by the user.
  * 
  * 
@@ -23,10 +23,19 @@ import javax.swing.JTextField;
  * Or conversely, a child of a widget is displayed within the area of the parent
  * widget.
  * 
- * Every displayed widget must have a frame ancestor, otherwise it is not 
+ * Every displayed widget must have a frame- ancestor, otherwise it is not 
  * displayed.
  * 
- * Study the program, and run it in the debug mode, stopping at the break point
+ * In Java, a frame is an instance of the Frame or JFrame classes.
+ * 
+ * Study the program, and run it in the debug mode, stopping at the break point.
+ * 
+ * (T/F) A widget can be displayed only if is a leaf of a widget rooted
+ * by a frame.
+ * 
+ * (T/F) A widget displayed within its parent widget.
+ * 
+ *
  * 
  *
  */
@@ -53,6 +62,7 @@ public class WindowTreeCreator {
 		return frame;
 	}
 /*
+ * 
  * When the program stops, verify the containment relationship on the screen 
  * among widgets and their children.
  * 
@@ -60,12 +70,30 @@ public class WindowTreeCreator {
  * 
  * Start with the splitPane.
  * 
- *  Each of these
- * widgets has an instance variable called component, which can be expanded 
+ * Each of these widgets has an instance variable called component, 
+ * which can be expanded 
  * to see the (physical) children. 
  * 
  * Verify that you can reach the text field or button from the splitPane.
  * 
+ * ( In WindowTreeCreator, a JPanel instance is:
+ * 		(a) the root of the widget tree.
+ * 		(b) an interior node of the widget tree,
+ * 		(c) a leaf of the widget tree.
+ * 
+ * In WindowTreeCreator, a JTextField instance is:
+ * 		(a) the root of the widget tree.
+ * 		(b) an interior node of the widget tree,
+ * 		(c) a leaf of the widget tree.
+ * 
+ *  In WindowTreeCreator, a JFrame instance is:
+ * 		(a) the root of the widget tree.
+ * 		(b) an interior node of the widget tree,
+ * 		(c) a leaf of the widget tree.
+ * 
  */
+ /*
+  * Next class: WindowDAGCreator 
+  */
 
 }
