@@ -1,7 +1,7 @@
 package lectures.deep_shallow_copy;
 
-import lectures.inheritance.AMutablePoint;
-import lectures.inheritance.MutablePoint;
+import lectures.inheritance.extra.MutablePoint;
+import lectures.inheritance.is_a.AMutablePoint;
 
 public class CopyExamples {
 	public static void assignmentIsNotCopy() {

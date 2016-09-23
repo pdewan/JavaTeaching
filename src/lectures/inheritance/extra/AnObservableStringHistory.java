@@ -1,7 +1,8 @@
-package lectures.inheritance;
+package lectures.inheritance.extra;
 import java.util.Vector;
 
 import lectures.arrays.collections_implementation.AStringHistory;
+import lectures.inheritance.AStringSet;
 import util.models.VectorChangeEvent;
 import util.models.VectorListener;
 public class AnObservableStringHistory extends AStringSet {

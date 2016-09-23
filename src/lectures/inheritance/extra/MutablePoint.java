@@ -1,4 +1,4 @@
-package lectures.inheritance;
+package lectures.inheritance.extra;
 
 import lectures.graphics.Point;
 

@@ -1,6 +1,6 @@
 package lectures.deep_shallow_copy;
 
-import lectures.inheritance.ABoundedPoint;
+import lectures.inheritance.is_a.ABoundedPoint;
 
 public class ACloneableBoundedPoint extends ABoundedPoint implements CloneableBoundedPoint, Cloneable {	
 	public ACloneableBoundedPoint(int initX, int initY,

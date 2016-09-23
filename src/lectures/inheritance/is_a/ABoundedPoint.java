@@ -1,7 +1,8 @@
-package lectures.inheritance;
+package lectures.inheritance.is_a;
 
 import util.annotations.Explanation;
 import bus.uigen.ObjectEditor;
+import lectures.inheritance.extra.MutablePoint;
 @Explanation("Has max and min values.")
 public class ABoundedPoint extends AMutablePoint implements BoundedPoint {
 	protected MutablePoint upperLeftCorner, lowerRightCorner;

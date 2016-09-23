@@ -25,7 +25,13 @@ public class TypeCheckingExamples {
 	}
    
    public  void incorrectCompileTimeAndRunTimeCasts() {
-	   StringDatabase database= (StringDatabase) new AStringHistory(); // runtime error known at compile to be error
+	   /*
+	    * We know at compile time that new AStringHistory() will not
+	    * be castable to StringDatabase.
+	    * 
+	    * Yet we do not get a compile time error.
+	    */
+	   StringDatabase database= (StringDatabase) new AStringHistory(); 
 //	   String[] strings= (String)  "Joe Doe";
 	   Point point = (Point) (new AStringHistory()); // runtime error and known to be wrong at compile time
 	   StringHistory stringHistory = new AStringHistoryAndPoint(); 
@@ -40,8 +46,14 @@ public class TypeCheckingExamples {
    
    public void specialObjectRules() {
 	   StringHistory stringHistory = new AStringDatabase(); 
-	   Object o = stringHistory; // StringHistory is an object
-	   System.out.println(stringHistory);  // println takes Object arguments
+	   /*
+	    * StringHistory is an object
+	    */
+	   Object o = stringHistory; 
+	   /*
+	    * println takes Object arguments, so we can pass stringHistory
+	    */
+	   System.out.println(stringHistory); 
 
    }
    public void primitiveExamples() {
