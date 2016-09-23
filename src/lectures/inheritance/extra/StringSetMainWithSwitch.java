@@ -1,6 +1,8 @@
-package lectures.inheritance;
+package lectures.inheritance.extra;
 
 import lectures.arrays.collections_implementation.StringHistory;
+import lectures.inheritance.AStringSet;
+import lectures.inheritance.StringDatabase;
 import lectures.main_consoleinput.Console;
 
 public class StringSetMainWithSwitch {

@@ -5,7 +5,7 @@ import lectures.animation.loops.ShuttleAnimator;
 import lectures.animation.threads_commands.ConcurrentShuttleLaunchAnimation;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.inheritance.AStringSet;
-import lectures.inheritance.AnObservableStringSet;
+import lectures.inheritance.extra.AnObservableStringSet;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

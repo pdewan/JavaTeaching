@@ -2,8 +2,8 @@ package lectures.animation.threads.wait_notify;
 
 import java.beans.PropertyChangeListener;
 
-import lectures.inheritance.AnObservableStringSet;
 import lectures.inheritance.StringDatabase;
+import lectures.inheritance.extra.AnObservableStringSet;
 import lectures.mvc.properties.APropertyListenerSupport;
 import lectures.mvc.properties.PropertyListenerSupport;
 import util.annotations.ComponentWidth;
