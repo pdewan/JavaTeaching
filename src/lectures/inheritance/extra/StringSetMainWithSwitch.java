@@ -1,14 +1,15 @@
 package lectures.inheritance.extra;
 
 import lectures.arrays.collections_implementation.StringHistory;
-import lectures.inheritance.AStringSet;
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.AnInheritingStringSet;
+import lectures.inheritance.BaseStringHistory;
+import lectures.inheritance.InheritingStringDatabase;
 import lectures.main_consoleinput.Console;
 
 public class StringSetMainWithSwitch {
 
 	public static void main(String args[]) {
-    	StringDatabase names = new AStringSet();
+    	InheritingStringDatabase names = new AnInheritingStringSet();
     	while (true) {
     		String input = Console.readString();
     		if (!(input.length() == 0))
@@ -36,7 +37,7 @@ public class StringSetMainWithSwitch {
     	}
     }
 
-    static void print(StringHistory strings) {
+    static void print(BaseStringHistory strings) {
         System.out.println("******************");
         for ( int elementNum = 0; elementNum < strings.size(); elementNum++) 
         	System.out.println(strings.elementAt(elementNum));

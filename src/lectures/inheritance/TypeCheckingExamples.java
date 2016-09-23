@@ -1,7 +1,6 @@
 package lectures.inheritance;
 
-import lectures.arrays.collections_implementation.AStringHistory;
-import lectures.arrays.collections_implementation.StringHistory;
+
 import lectures.graphics.Point;
 import lectures.interfaces.BMISpreadsheet;
 
@@ -13,12 +12,12 @@ public class TypeCheckingExamples {
 	}
 	
    public  void assigningToAMoreGeneralType() {
-	   StringHistory stringHistory = new AStringDatabase();
+	   BaseStringHistory stringHistory = new AnInheritingStringDatabase();
 	   stringHistory.size();
 //	   stringHistory .clear();
-	   ((StringDatabase) stringHistory) .clear();
-	   if (stringHistory instanceof StringDatabase) {
-		   ((StringDatabase) stringHistory) .clear();
+	   ((InheritingStringDatabase) stringHistory) .clear();
+	   if (stringHistory instanceof InheritingStringDatabase) {
+		   ((InheritingStringDatabase) stringHistory) .clear();
 	   } else {
 		   System.out.println("Got unlucky");
 	   }
@@ -31,21 +30,21 @@ public class TypeCheckingExamples {
 	    * 
 	    * Yet we do not get a compile time error.
 	    */
-	   StringDatabase database= (StringDatabase) new AStringHistory(); 
+	   InheritingStringDatabase database= (InheritingStringDatabase) new ABaseStringHistory(); 
 //	   String[] strings= (String)  "Joe Doe";
-	   Point point = (Point) (new AStringHistory()); // runtime error and known to be wrong at compile time
-	   StringHistory stringHistory = new AStringHistoryAndPoint(); 
+	   Point point = (Point) (new ABaseStringHistory()); // runtime error and known to be wrong at compile time
+	   BaseStringHistory stringHistory = new AStringHistoryAndPoint(); 
 	   point = (Point) stringHistory; 
 //	   point = (Point) "hello";
 	}
    
    public void legalAndIllegalArrayExamples() {
-	   Object[] objects = { "Joe Doe", new AStringDatabase(), new AStringHistory()};
-	   StringDatabase[] database= {(StringDatabase) new AStringHistory()};
+	   Object[] objects = { "Joe Doe", new AnInheritingStringDatabase(), new ABaseStringHistory()};
+	   InheritingStringDatabase[] database= {(InheritingStringDatabase) new ABaseStringHistory()};
    }
    
    public void specialObjectRules() {
-	   StringHistory stringHistory = new AStringDatabase(); 
+	   BaseStringHistory stringHistory = new AnInheritingStringDatabase(); 
 	   /*
 	    * StringHistory is an object
 	    */

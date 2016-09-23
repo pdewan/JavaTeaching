@@ -1,8 +1,8 @@
 package lectures.inheritance_vs_delegation.shared_vars;
 
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.InheritingStringDatabase;
 
-public class ADelegatingStringDatabase 	implements StringDatabase {	
+public class ADelegatingStringDatabase 	implements InheritingStringDatabase {	
 		ADelegateStringHistory stringHistory = new ADelegateStringHistory();			
 		public int indexOf (String element) {
 			int index = 0;

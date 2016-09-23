@@ -6,7 +6,7 @@ import java.beans.PropertyChangeListener;
 import util.models.AListenableVector;
 import util.models.ListenableVector;
 import util.models.PropertyListenerRegisterer;
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.InheritingStringDatabase;
 import lectures.inheritance.extra.AnObservableStringSet;
 import lectures.mvc.collections.AnObservableStringHistory;
 import lectures.mvc.collections.ObservableStringHistory;

@@ -1,8 +1,7 @@
 package lectures.inheritance;
 
-import lectures.arrays.collections_implementation.StringHistory;
 
-public interface StringDatabase extends StringHistory {
+public interface InheritingStringDatabase extends BaseStringHistory {
 //	public static final int MAX_SIZE = 10;
 
 	public void removeElement(String element);

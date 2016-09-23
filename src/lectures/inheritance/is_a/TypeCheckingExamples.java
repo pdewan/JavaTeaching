@@ -7,13 +7,14 @@ import java.util.Arrays;
 
 
 
-import lectures.arrays.collections_implementation.AStringHistory;
+import lectures.inheritance.ABaseStringHistory;
 import lectures.arrays.collections_implementation.AStringSetMain;
 import lectures.arrays.collections_implementation.StringHistory;
 import lectures.graphics.Point;
-import lectures.inheritance.AStringDatabase;
-import lectures.inheritance.AStringSet;
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.AnInheritingStringDatabase;
+import lectures.inheritance.AnInheritingStringSet;
+import lectures.inheritance.BaseStringHistory;
+import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
 
 public class TypeCheckingExamples {
@@ -28,7 +29,7 @@ public class TypeCheckingExamples {
    // 
 	
 
-  public static void print (StringHistory aCollection) {
+  public static void print (BaseStringHistory aCollection) {
 	   System.out.println("String History Print:" + aCollection);
 	   for (int i = 0; i < aCollection.size(); i++) {
 		   System.out.println (aCollection.elementAt(i));
@@ -36,7 +37,7 @@ public class TypeCheckingExamples {
    }
   
   // Overloading the method above with a type that IS-A the type of the previous method
-   public static void print (StringDatabase aCollection) {
+   public static void print (InheritingStringDatabase aCollection) {
 	   System.out.println("StringDatabase Print:" + aCollection);
 	   for (int i = 0; i < aCollection.size(); i++) {
 		   System.out.println (aCollection.elementAt(i));
@@ -45,12 +46,12 @@ public class TypeCheckingExamples {
 
    public static void instanceOfTest(Object anObject) {
 	   System.out.println (anObject instanceof StringHistory);
-	   System.out.println (anObject instanceof StringDatabase);
-	   System.out.println (anObject instanceof AStringSet);
+	   System.out.println (anObject instanceof InheritingStringDatabase);
+	   System.out.println (anObject instanceof AnInheritingStringSet);
    }
    public static void main(String[] args) {
-	   StringDatabase aSet = new AStringSet();
-	   StringHistory aSetMasqueradingAsAHistory = new AStringSet();
+	   InheritingStringDatabase aSet = new AnInheritingStringSet();
+	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
 	   
 	   // OVERRIDE RESOLUTION
 	   
@@ -86,8 +87,8 @@ public class TypeCheckingExamples {
 	   
 	   // INSTANCE OF RULES
 	   // To consolidate what you have learned uncomment the following and run the program
-	   instanceOfTest(new AStringHistory());
-	   instanceOfTest(new AStringSet());
+	   instanceOfTest(new ABaseStringHistory());
+	   instanceOfTest(new AnInheritingStringSet());
 	   
   	   Object anObject = aSet; // aSet is typed as an interface, Object is a superclass
 	   // If I is an interface, and C is a class, based on your understanding of IS-A rules, 

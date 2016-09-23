@@ -4,7 +4,9 @@ import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
-import lectures.inheritance.AStringSet;
+import lectures.inheritance.ABaseStringHistory;
+import lectures.inheritance.AnInheritingStringSet;
+import lectures.inheritance.BaseStringHistory;
 
 public class EqualsVsEqualEqual {
 	public static void main (String[] args) {
@@ -24,13 +26,13 @@ public class EqualsVsEqualEqual {
 			
 	}
 	public static void defaultEqualsVsCustomEquals() {		
-		StringHistory stringHistory1 = new AStringHistory();
-		StringHistory stringHistory2 = new AStringHistory();
+		BaseStringHistory stringHistory1 = new ABaseStringHistory();
+		BaseStringHistory stringHistory2 = new ABaseStringHistory();
 		System.out.println(stringHistory1.equals(stringHistory2));
 		stringHistory1 = new AStringHistoryWithCustomEquals();
 		stringHistory2 = new AStringHistoryWithCustomEquals();
 		System.out.println(stringHistory1.equals(stringHistory2));
-		System.out.println(stringHistory1.equals(new AStringSet()));
+		System.out.println(stringHistory1.equals(new AnInheritingStringSet()));
 		System.out.println(((StringHistoryWithCustomEquals)stringHistory1).equals(stringHistory2));		
 	}
 	

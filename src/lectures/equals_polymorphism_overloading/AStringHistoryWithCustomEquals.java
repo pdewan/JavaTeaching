@@ -1,11 +1,10 @@
 package lectures.equals_polymorphism_overloading;
+import lectures.inheritance.ABaseStringHistory;
+import lectures.inheritance.BaseStringHistory;;
 
-import lectures.arrays.collections_implementation.AStringHistory;
-import lectures.arrays.collections_implementation.StringHistory;
-
-public class AStringHistoryWithCustomEquals extends AStringHistory implements StringHistoryWithCustomEquals {
+public class AStringHistoryWithCustomEquals extends ABaseStringHistory implements StringHistoryWithCustomEquals {
 	
-	public boolean equals(StringHistory otherStringHistory) {
+	public boolean equals(BaseStringHistory otherStringHistory) {
 		if (size != otherStringHistory.size()) 
 			return false; 
 		        for (int index  = 0; index < size; index++)
@@ -16,8 +15,8 @@ public class AStringHistoryWithCustomEquals extends AStringHistory implements St
 	}
 	public boolean equals(Object otherObject) {
 		System.out.println("Equals with Object Parameter Called");
-		if (!(otherObject instanceof  StringHistory)) return false;
-		return equals((StringHistory) otherObject);
+		if (!(otherObject instanceof  BaseStringHistory)) return false;
+		return equals((BaseStringHistory) otherObject);
 	}
 	
 	

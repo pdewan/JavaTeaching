@@ -1,8 +1,8 @@
 package lectures.equals_polymorphism_overloading;
 
-import lectures.arrays.collections_implementation.StringHistory;
+import lectures.inheritance.BaseStringHistory;
 
-public interface StringHistoryWithCustomEquals extends StringHistory {
+public interface StringHistoryWithCustomEquals extends BaseStringHistory {
 	
-	public boolean equals(StringHistory otherStringHistory);
+	public boolean equals(BaseStringHistory otherStringHistory);
 }

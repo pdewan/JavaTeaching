@@ -1,6 +1,6 @@
 package lectures.animation.threads.wait_notify;
 
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.InheritingStringDatabase;
 import util.models.ListenableVector;
 import util.models.PropertyListenerRegisterer;
 

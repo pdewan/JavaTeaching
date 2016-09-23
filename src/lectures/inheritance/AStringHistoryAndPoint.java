@@ -1,12 +1,11 @@
 package lectures.inheritance;
 
-import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.graphics.Point;
 /*
  * nonsense class to defend Java type checking rules
  * 
  */
-public class AStringHistoryAndPoint extends AStringHistory implements Point {
+public class AStringHistoryAndPoint extends ABaseStringHistory implements Point {
 
 	@Override
 	public int getX() {

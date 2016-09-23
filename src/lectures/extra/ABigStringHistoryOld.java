@@ -1,6 +1,6 @@
 package lectures.extra;
 
-import lectures.arrays.collections_implementation.StringHistory;
+import lectures.inheritance.BaseStringHistory;
 import bus.uigen.ObjectEditor;
 
 public class ABigStringHistoryOld extends AnAbstractStringHistoryOld {
@@ -17,7 +17,7 @@ public class ABigStringHistoryOld extends AnAbstractStringHistoryOld {
 
 
 	@Override
-	public boolean equals(StringHistory otherStringHistory) {
+	public boolean equals(BaseStringHistory otherStringHistory) {
 		// TODO Auto-generated method stub
 		return false;
 	}

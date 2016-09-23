@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lectures.arrays.collections_implementation.AStringHistory;
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.InheritingStringDatabase;
 /* 
  DELEGATION AND ADAPTATION
  We see here that the interface List and the class ArrayList are both

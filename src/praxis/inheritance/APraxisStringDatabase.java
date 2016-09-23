@@ -1,7 +1,7 @@
 package praxis.inheritance;
 
 import lectures.arrays.collections_implementation.AStringHistory;
-import lectures.inheritance.StringDatabase;
+import lectures.inheritance.InheritingStringDatabase;
 
 public class APraxisStringDatabase extends APraxisStringHistory implements PraxisStringDatabase {
 	int aUselessDatabaseVariable = 1;

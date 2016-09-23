@@ -2,9 +2,9 @@ package lectures.inheritance;
 /*
  * Study the program and run it without break points.
  */
-public class AStringSet extends AStringDatabase // extending an extended class
-	implements StringDatabase { // same interface as implemented by the superclass
-	public AStringSet() {
+public class AnInheritingStringSet extends AnInheritingStringDatabase // extending an extended class
+	implements InheritingStringDatabase { // same interface as implemented by the superclass
+	public AnInheritingStringSet() {
 		super(); 
 		uselessVariable = 1;
 //		super();
@@ -32,7 +32,7 @@ public class AStringSet extends AStringDatabase // extending an extended class
 	}
 	
 	 public static void main (String[] args) {		 
-    	StringDatabase aStringSet = new AStringSet();
+    	InheritingStringDatabase aStringSet = new AnInheritingStringSet();
 //    	StringDatabase aStringSet = new AStringDatabase(); 
     	/*
 		 * click on manipulateDatabase and hit F3 to see where the call before is defined

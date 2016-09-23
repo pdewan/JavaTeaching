@@ -2,10 +2,10 @@ package lectures.inheritance.extra;
 import java.util.Vector;
 
 import lectures.arrays.collections_implementation.AStringHistory;
-import lectures.inheritance.AStringDatabase;
+import lectures.inheritance.AnInheritingStringDatabase;
 import util.models.VectorChangeEvent;
 import util.models.VectorListener;
-public class AnObservableStringSet extends AStringDatabase {
+public class AnObservableStringSet extends AnInheritingStringDatabase {
 	Vector<VectorListener> listeners = new Vector();
 	public void addVectorListener(VectorListener vectorListener) {
 		listeners.addElement(vectorListener);

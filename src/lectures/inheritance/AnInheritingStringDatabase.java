@@ -1,10 +1,9 @@
 package lectures.inheritance;
 
-import lectures.arrays.collections_implementation.AStringHistory;
 
 // Again first study and run the program and  try to understand what it does on your own.
 
-public class AStringDatabase extends AStringHistory implements StringDatabase {
+public class AnInheritingStringDatabase extends ABaseStringHistory implements InheritingStringDatabase {
 	protected int uselessVariable = 0;
 //    int size = 0;
 //	public AStringDatabase() {
@@ -41,10 +40,10 @@ public class AStringDatabase extends AStringHistory implements StringDatabase {
    
    
     public static void main (String[] args) {
-    	StringDatabase stringDatabase = new AStringDatabase();
+    	InheritingStringDatabase stringDatabase = new AnInheritingStringDatabase();
     	manipulateDatabase(stringDatabase); 	
     }
-    public static void manipulateDatabase(StringDatabase aStringDatabase) {
+    public static void manipulateDatabase(InheritingStringDatabase aStringDatabase) {
     	final String EXAMPLE_ITEM = "James Dean";
     	aStringDatabase.addElement(EXAMPLE_ITEM);    	
     	aStringDatabase.addElement(EXAMPLE_ITEM); //adding item a second time
