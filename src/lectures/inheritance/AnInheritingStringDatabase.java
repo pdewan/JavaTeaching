@@ -109,7 +109,7 @@ public class AnInheritingStringDatabase
 		aStringDatabase.removeElement(EXAMPLE_ITEM); // removing a second time
 		System.out.println(aStringDatabase);  
     }
-/** 
+/*
  * IMPLEMENTING MODIFIABLE COLLECTION
  * 
  *  Study the main method and run it.
@@ -206,5 +206,9 @@ public class AnInheritingStringDatabase
  * (T/F) It is possible for a class to access and modify variables declared in 
  * its superclass.
  * 
- */ 
+ */
+ /*
+  * Next class: AnInheritingStringSet
+  */
+ 
 }

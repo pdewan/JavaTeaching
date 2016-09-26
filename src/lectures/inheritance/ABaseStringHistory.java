@@ -162,3 +162,6 @@ public class ABaseStringHistory implements BaseStringHistory {
  * 	(c) returns the number of unfilled elements in the history.
  * 
  */
+/*
+ * Next class AnInheritingStringDatabase
+ */
