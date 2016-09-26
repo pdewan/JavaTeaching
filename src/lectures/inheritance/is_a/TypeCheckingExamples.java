@@ -30,7 +30,7 @@ public class TypeCheckingExamples {
 	
 
   public static void print (BaseStringHistory aCollection) {
-	   System.out.println("String History Print:" + aCollection);
+	   System.out.println("String History b:" + aCollection);
 	   for (int i = 0; i < aCollection.size(); i++) {
 		   System.out.println (aCollection.elementAt(i));
 	   }

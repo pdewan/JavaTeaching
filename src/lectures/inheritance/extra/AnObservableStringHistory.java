@@ -12,6 +12,7 @@ public class AnObservableStringHistory extends AnInheritingStringSet {
 	}
 	@Override
 	public void addElement(String element) {
+		uselessVariable = -1;
 		super.addElement(element);
 		notifyListeners(new VectorChangeEvent(this, VectorChangeEvent.AddComponentEvent, size -1, null, element, size));		
 	} 

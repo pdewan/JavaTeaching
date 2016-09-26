@@ -4,7 +4,7 @@ package lectures.inheritance;
 import lectures.graphics.Point;
 import lectures.interfaces.BMISpreadsheet;
 
-public class TypeCheckingExamples {
+public class InheritanceTypeCheckingExamples {
 	public  void assigningToAMoreSpecificType() {
 //		StringDatabase stringDatabase = new AStringHistory();
 //		stringDatabase.clear();	

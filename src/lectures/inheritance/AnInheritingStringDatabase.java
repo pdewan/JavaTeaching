@@ -1,17 +1,66 @@
 package lectures.inheritance;
 
+/**
+ * Again first study and run the program and  try to understand what 
+ * it does on your own.
+ * 
+ * This is like a ABaseStringHistory except that it also:
+ * 	(a) allows previously added elements to be deleted.
+ * 	(b)	provides an operation to determine if an element exists
+ * 		in the collection.
+ * 	(c) provides a clear operation to remove all elements.
+ * 
+ * Like ABaseStringHistory it uses an array to store the elements. * 
+ * 
+ * Deletion involves:
+ * 	(a) finding the index of the element to be removed,
+ *  (b) shifting the elements below the element up so that the filled and
+ *  	unfilled elements of the array are separate sections of the array.
+ *  
+ * As this class extends the functionality and implementation of 
+ * ABaseStringStringHistory, it will be nice if we do not have to duplicate
+ * the implementation of ABaseStringStringHistory. 
+ * 
+ * Object-oriented languages provide inheritance to avoid such duplication.
+ * 
+ * Object-based programming involves declaring and instantiating classes.
+ * 
+ * Object-oriented programming involves also using inheritance.
+ * 
+ * So we are going from object-based to object-oriented programming.
+ * 
+ * In Java, it involves using the extends keyword used below.
+ * 
+ * If class/interface C extends class/interface E, then E is a supertype of C 
+ * and C is a subtype of E.
+ * 
+ * 
+ * If C and E are classes, then we can use the terms superclass and subclass 
+ * also for supertype and subtype.
+ * 
+ * A superclass is also sometimes called a base class.
+ *  
+ *
+ */
 
-// Again first study and run the program and  try to understand what it does on your own.
+public class AnInheritingStringDatabase 
+	extends ABaseStringHistory // use of keyword extends
+	implements InheritingStringDatabase {
 
-public class AnInheritingStringDatabase extends ABaseStringHistory implements InheritingStringDatabase {
-	protected int uselessVariable = 0;
-//    int size = 0;
-//	public AStringDatabase() {
-//		uselessVariable = 2;
-//		System.out.println (uselessVariable); // what is its value, 0 or 2
-//	}
+/*
+ * Re-declaration of inherited size, uncomment when asked
+ */
+//	protected int size = 0;
+	public AnInheritingStringDatabase() {
+		super();
+//		super(2);
+		uselessVariable = 2;
+//		super(2);
+//		System.out.println("Useless variable:" + uselessVariable);
+	}
 
 	public void clear() {
+//		super(2);
 	    size = 0;
 	}
 
@@ -31,7 +80,9 @@ public class AnInheritingStringDatabase extends ABaseStringHistory implements In
 	    while ((index < size) && !element.equals(contents[index])) {
 	        index++;
 	    }
-	    return index; // most implementations will count down and give a negative result in case of failed search
+	 // most implementations will count down and give a negative result in case 
+	 // of failed search
+	    return index; 
 	}    
     
     public boolean member(String element) {
@@ -49,75 +100,111 @@ public class AnInheritingStringDatabase extends ABaseStringHistory implements In
     	aStringDatabase.addElement(EXAMPLE_ITEM); //adding item a second time
 		System.out.println(aStringDatabase.member(EXAMPLE_ITEM)); 
 		System.out.println(aStringDatabase);
+		/*
+		 * Set break point below
+		 */
 		aStringDatabase.removeElement(EXAMPLE_ITEM);
 		System.out.println(aStringDatabase.member(EXAMPLE_ITEM)); // true or false?
 		System.out.println(aStringDatabase);
 		aStringDatabase.removeElement(EXAMPLE_ITEM); // removing a second time
 		System.out.println(aStringDatabase);  
     }
-    // COLLECTION KINDS
-   // Why do you think this object is not called a history and called a database?
-    
-    // EXTENDING INTERFACES AND CLASSES
-    // Look at the operation performed on a string database in the main program.
-    // Which of these operation are performed also on the string history we saw earlier
-        
-    // One should sure these operations are not re-defined in the string database interface and class.
-    // How does this class avoid this code duplication?
-    
-    
-    // Click on the addElement method call in the main and press F3. In which interface is the 
-    // definition found?
-            
-    // 
-    // What do you think the extends clause means in the header of the class?
-    // Click on the name of the interface (StringDatabase) and press F3.What do you think
-    // the extends clause means in the header of the interface?
-    
-    // If class/interface C extends class/interface E, then
-    // E is a supertype of C and C is a sub type of E
-    // If C and E are classes, then we can use the terms superclass and subclass also
-
-    // IMPlEMENTING INHERITED INTERFACE HEADERS AND INHERITING  METHOD IMPLEMENTATIONS IN CLASSES
-    
-    // Go to the declaration of StringHistory.
-    // Add a an arbitrary method header to in this interface such as:
-    // public void test();
-    // What error messages if any do you get when you save (compile) the interface?
-    // What error message if any do you get in the class AStringHistory?
-    // What error message if any do you get in the class AStringDatabase?
-    // Fix the problem in AStringHistory. Does the problem go away also in AStringDatabase?
-    
-    
-    // Click on the reference to the size variable in sat the clear method and press F3.
-    // In which class is the declaration found?
-    
-    // Uncomment the declarations of the size and uselessVariable declarations in this class.
-    // Run the program again - the member() and removeElement() no longer work. Can you explain why?
-    // Set a break point at the end of the addElement() method. Set a breakpoint also on at the start
-    // of the indexOf method.
-    
-    // When the program stops at the addElement() method, hover over the value of the size variable
-    // referenced in the method. What value does it have when the method finishes? Press F8 to resume
-    // the program.
-    
-    // When the program stops next in the indexOf() method, hover over the size variable in the
-    // method declaration. What value is it at the start of  the method? Can you explain why it is different?
-    
-    // Go to the debug window and look at the variables of the instance of AStringDatabase.
-    // How many size variables does it have and what are their values?
-    
-    // Comment out the duplicate size variable declaration and debug-run the program again.
-    // When the program stops at indexOf, hover over the size variable declaration again in the method
-    // and look at it again.
-    
-    // Will you ever re-declare a variable again in a subclass?
-     
-
-   
-    
-    
-    
-   
-    
+/** 
+ * IMPLEMENTING MODIFIABLE COLLECTION
+ * 
+ *  Study the main method and run it.
+ * 
+ * Adding an item a second time to an instance of AnInheritingStringDatabase:\
+ * results in:  
+ * 	(a) an exception,
+ * 	(b) the addition being ignored.
+ * 	(c) a duplicate item.
+ * 
+ * Now set break point at the specified location in main. 
+ * 
+ * Examine the the size and contents variable (defined the superclass).
+ * 
+ * Step over the statement (F6) and examine the two variables again.
+ * 
+ * (T/F) If a is an instance of C, and C extends class E, then a has a copy of
+ * the instance variables defined in E.
+ * 
+ * (T/F) Assuming O is at position I in the array, removeElement(O)
+ * 	assigns the null value at position I in the array.
+ * 
+ * Study the code of indexOf() and clear().
+ * 
+ * Assuming O is at position I in the array, indexOf(O), searches (examines)
+ * 	(a) only the first element of the array
+ * 	(b) only the last element of the array.
+ * 	(c) all elements of the element of the array
+ * 	(d)	none of the above.
+ * 
+ * 
+ * (T/F) The clear() method uses removeElement() to remove the elements the 
+ * database.
+ * 
+ * 
+ * EXTENDING INTERFACES AND CLASSES
+ * 
+ * Look at the operations performed on aStringDatabase in the main program.
+ * 
+ * Which of these operation are implemented in the class of 
+ * AnInheritingStringDatabase?
+ * 
+ * Which of these operation are implemented in ABaseStringHistory?
+ * 
+ * If object a is an instance of class C, and C is a subclass of E, then it is 
+ * possible to invoke on a:
+ * 	(a) only the operations implemented in C.
+ * 	(b) the methods implemented in both C and E.
+ * 	(c) only the methods implemented in E. 
+ *  
+ * Click on the addElement() method call in main() and press F3 (Open class
+ * declaration) to go to the interface in which the header of the method is defined. 
+ * 
+ * In which interface is the definition found?  Is it the same as the interface
+ * of this class - InheritingStringDatabase? If not, what is the relationship
+ * between the two interfaces? 
+ * 
+ *  
+ * METHOD INHERITANCE IN CLASSES AND INTERFACES 
+ * 
+ * Go to the declaration of BaseStringHistory.
+ * 
+ * Add a an arbitrary method header to in this interface by commenting out
+ * the header: public void test();
+ * 
+ * What error messages if any do you get when you save (compile) the interface?
+ * 
+ * What error message if any do you get in the class ABaseStringHistory?
+ * 
+ * What error message if any do you get in the class AnInheritingStringDatabase?
+ * 
+ * Fix the problem in ABaseStringHistory. You can click on the red error icon
+ * to make Eclipse suggest and select fixes. 
+ * 
+ * Does the problem go away also in AnInheritingStringDatabase?
+ * 
+ * (T/F) If interface I extends interface J, and class C implements 
+ * 	 I, then A must implement the methods:
+ * 	(a) declared only in I.
+ * 	(b) declared only in J.
+ * 	(c)	declared in I and J.
+ * 
+ * (T/F) If class C extends class E, then C is considered to implement the 
+ * methods:
+ * 	(a) declared only in C,
+ * 	(b) declared only in E,
+ * 	(c) declared in both C and E. * 
+ * 
+ * VARIABLE INHERITANCE
+ * 
+ * Click on the reference to the size variable in the clear method and press 
+ * F3. In which class is the declaration found?  
+ * 
+ * (T/F) It is possible for a class to access and modify variables declared in 
+ * its superclass.
+ * 
+ */ 
 }
