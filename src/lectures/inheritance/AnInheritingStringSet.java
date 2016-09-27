@@ -204,9 +204,9 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * (T/F) It is illegal for C to declare v.
  * 
- * (T/F) e has a single variable named v.
+ * (T/F) c has a single variable named v.
  * 
- * (T/F) e has multiple variables named v.
+ * (T/F) c has multiple variables named v.
  * 
  * (T/F) Methods declared in class C refer to the variable defined in C.
  * 
@@ -255,18 +255,21 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  *  (a) C and D are the same.
  *  (b) C is a subclass of D (directly or indirectly).
  *  (c) C is in the same package as D.
+ *  (d) none of the above
  *  
  * A class C can access protected variables of class D only if:  
  *  (a) C is a subclass of D (directly or indirectly).
  *  (b) C is in the same package as D.
  *  (c) C is a subclass of D (directly or indirectly) or C is in
  *      the same package as D
- *  (d) none of the above
+ *  (d) C and D are the same
  *  
  * A class C can access variables declared in class D with default access only if:  
  *  (a) C and D are the same.
  *  (b) C is a subclass of D (directly or indirectly).
  *  (c) C is in the same package as D.
+ *  (d) C is a subclass of D (directly or indirectly) or C is in
+ *      the same package as D.
  *  
  * Return the variable to public access once you're done.
  *
