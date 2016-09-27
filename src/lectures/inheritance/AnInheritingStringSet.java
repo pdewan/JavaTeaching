@@ -3,12 +3,13 @@ package lectures.inheritance;
  * Again first study and run the program and try to understand what 
  * it does on your own.
  * 
- * It declares a method that is inherited from its superclass's superclass:
- * addElement(). 
- * The @Override annotation indicates this fact.
+ * It declares and defines a method that is already inherited from its superclass's
+ * superclass: addElement(). The @Override annotation indicates this fact.
+ * 
  * As the name indicates, this method overrides (replaces) the inherited method 
  * for its instances. 
- * However, the overridden method can still be accessed using the super prefix.
+ * 
+ * However, the overridden method can still be accessed using the "super" prefix.
  * 
  */
 public class AnInheritingStringSet extends AnInheritingStringDatabase // extending an extended class
@@ -18,7 +19,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
 		super(); 
 //		super.super();
 		uselessVariable = 1;
-//		System.out.println("Useless variable:" + uselessVariable);
+//		System.out.println("AnInheritingStringSet constructor called");
 //		super();
     }
 	/*
@@ -54,8 +55,8 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
     	 */
     	manipulateDatabase(aStringSet); 
     	/*
-    	 * What if we called the static manipulateDatabase with super? 
-    	 * Is that legal in Java?     	 * 
+    	 * What if we called the static manipulateDatabase with "super"? 
+    	 * Is that legal in Java? Try uncommenting this to see.
     	 */
 //    	super.manipulateDatabase(aStringSet);
 	  }
@@ -74,7 +75,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * Adding an item a second time to an instance of AnInheritingStringSet
  * results in:  
- * 	(a) an exception,
+ * 	(a) an exception.
  * 	(b) the addition being ignored.
  * 	(c) a duplicate item.
  * 
@@ -84,21 +85,20 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * If object a is an instance of class C, and C is a subclass of E, and E
  * is a subclass of F, then it is  possible to invoke on a:
- * 	(a) only the operations implemented in C.
+ * 	(a) only the methods implemented in C.
  * 	(b) only the methods implemented in  C and E.
  * 	(c) only the methods implemented in E. 
- * 	(d) methods implemented in C, E and F
+ * 	(d) methods implemented in C, E and F.
  *
  * REDECLARING ANCESTOR METHODS
  * 
- * In the following 3 questions,
- * assume c is an instance of C, 
- * e is an instance of E, and C is a subclass of E,
- * and both define a method header m.
+ * In the following 8 questions, assume c is an instance of C, 
+ * e is an instance of E, C is a subclass of E,
+ * and both C and E define a method header m.
  * 
  * (T/F) It is illegal to call m on c.
  * 
- * (T/F) It is illegal o call m on e.
+ * (T/F) It is illegal to call m on e.
  *  
  * (T/F) Calling m on c results in call of the implementation of m in C.
  * 
@@ -110,7 +110,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * (T/F) Class C can call the implementation of m in E.
  * 
- * (T/F) Class E can call the implementation of m in C.* 
+ * (T/F) Class E can call the implementation of m in C.
  * 
  */
 /*
@@ -119,7 +119,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * Go to the definition of toString() in ABaseStringHistory.
  * 
- * Comment out the current return statement and uncomment the one below,
+ * Comment out the current return statement and uncomment the one below it,
  * which uses super.toString().
  * 
  * ABaseStringHistory does not explicitly extend any class.
@@ -135,7 +135,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * the class if you do not have a jdk installed, but you should be able
  * to see the name of the class in Eclipse.) 
  * 
- * (Which is true:
+ * Which is true:
  * 	(a) The predefined class, Object, is the immediate superclass of any class
  * 			that does not explicitly extend a class.
  * 	(b) The predefined class, Class, is  the immediate superclass of any class
@@ -147,44 +147,45 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * You can keep doing step-return (F7) until you hit the main class.
  * 
- * Which statement in the main class led to the call of toString()?
+ * Which statement in the main class led to the call of toString()? (If you were doing
+ * step-return the whole way, you will land at the line following that statement)
  * 
- * (T/F) System.out.println (o) calls the toString() method on o.  
+ * (T/F) System.out.println(o) calls the toString() method on o.  
+ * 
+ * Comment out the super.toString() call and uncomment the original when you are done.
  * 
  */
 /*
  * 
  * REDECLARING VARIABLES
  * 
- * Uncomment the declarations of the size variable in AnInheritingStringDatabase.
+ * Uncomment the declarations of the "size" variable in AnInheritingStringDatabase.
  * 
  * Now we have two declarations of this variable,
  * 
- * Run this program again - the member() and removeElement() no longer work. 
+ * Run that program again and look at the output - the member() and removeElement() no
+ * longer work properly. 
  * 
  * Can you explain why?
  * 
- * Set a break point at the start of the addElement() method in 
- * ABaseStringHistory
+ * Set a break point at the start of the addElement() method in ABaseStringHistory.
  * 
- * Set a breakpoint also on at the start of the indexOf method in the class.
+ * Set a breakpoint also on at the start of the indexOf method in AnInheritingStringDatabase.
 
  * When the program stops at the addElement() method, hover over the 
  * value of the size variable referenced in the method.
  * 
  * What value does it have when the method finishes? 
  * 
- * Press F8 to resume the program.
+ * Press F8 to resume the program, until you hit the breakpoint in indexOf().
  * 
- * When the program stops next in the indexOf() method, 
- * hover over the size variable in the method declaration. 
+ * When the program stops in the indexOf() method, hover over the size
+ * variable in the method declaration. 
  * 
  * What value is it at the start of  the method? 
  * 
- * Can you explain why it is different?
- * 
- * Go to the debug window and look at the variables of the instance of 
- * AnInheritingStringDatabase.
+ * Can you explain why it is different? Look at the variables window in the debugger
+ * at the variables of the instance of AnInheritingStringDatabase (under "this").
  * 
  * How many size variables does it have and what are their values?
  * 
@@ -197,16 +198,15 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
 
  * Will you ever re-declare a variable again in a subclass?
  * 
- * In the following 3 questions,
- * assume c is an instance of C, 
- * e is an instance of E, and C is a subclass of E,
+ * In the following 6 questions, assume c is an instance of C, 
+ * e is an instance of E, C is a subclass of E,
  * and both declare a variable v. 
  * 
  * (T/F) It is illegal for C to declare v.
  * 
  * (T/F) e has a single variable named v.
  * 
- * (T/F) e has multiple variables named V.
+ * (T/F) e has multiple variables named v.
  * 
  * (T/F) Methods declared in class C refer to the variable defined in C.
  * 
@@ -221,67 +221,70 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * For this part, you need to know to look for compile errors in classes
  * in this package and the package lectures.inheritance.extra.  
  * 
- * You will play with the access of the variable uselessVariable declared in
+ * You will play with the access of the variable "uselessVariable" declared in
  * class ABaseStringHistory by commenting and uncommenting appropriate
  * alternate declarations.
  * 
  * In reaction to changes to this access, you will determine in which classes
- * in these two packages compile errors arise 
- * because the variable is no longer visible.
+ * (in these two packages) compile errors arise, indicating that the variable
+ * is no longer visible.
  * 
  * You can go to the declaration of uselessVariable and press CTRL SHIFT G
- * to see all of its references.
+ * to see all of its references, or place your cursor in it, right-click and
+ * select References->Workspace.
  * 
- * The variable is accessed in the three classes we have seen so far, all
- * of which are in this package.
+ * The variable is accessed in the several places. It is accessed in the three
+ * classes we have seen so far, all of which are in this package. 
  * 
  * It is also accessed in AnIndependentClassInSamePackage, declared in this
  * package, which is not a subclass of ABaseStringHistory.
  * 
  * In addition, it is accessed in 
  * lectures.inheritance.extra.AnObservableStringHistory and
- * lectures.inheritace.extra.AnIndependentClassInAnotherPackage.
- * 
- * The former is a subclass of AABaseStringHistory while the latter is not.
+ * lectures.inheritace.extra.AnIndependentClassInAnotherPackage. The former is 
+ * a subclass of AABaseStringHistory while the latter is not.
  * 
  * Currently the access is public, which makes the variable visible in all
  * classes in which it is accessed. 
  * 
- * Change the access to protected, default and private, and observe the errors.
+ * Change the access to private, protected, and default, and observe the errors.
+ * After each change, save the file so that Java rebuilds the project and you see
+ * the errors.
  * 
  * A class C can access private variables of class D only if: 
- * 	(a) C and D are the same.
+ *  (a) C and D are the same.
  *  (b) C is a subclass of D (directly or indirectly).
  *  (c) C is in the same package as D.
  *  
  * A class C can access protected variables of class D only if:  
- * 	(a) C and D are the same.
+ *  (a) C is a subclass of D (directly or indirectly).
+ *  (b) C is in the same package as D.
+ *  (c) C is a subclass of D (directly or indirectly) or C is in
+ *      the same package as D
+ *  (d) none of the above
+ *  
+ * A class C can access variables declared in class D with default access only if:  
+ *  (a) C and D are the same.
  *  (b) C is a subclass of D (directly or indirectly).
  *  (c) C is in the same package as D.
  *  
- * A class C can access variables declared in class D with default access only if:  
- * 	(a) C and D are the same.
- *  (b) C is a subclass of D (directly or indirectly).
- *  (c) C is in the same package as D *  
- *  
+ * Return the variable to public access once you're done.
  *
  * CONSTRUCTORS AND SUBCLASSING
  * 
- * Uncomment the println() call in the parameterless constructor in 
+ * Uncomment the println() calls in the parameterless constructor in 
  * ABaseStringHistory, AnInheritingStringDatabase, and AnInheritingStringSet
  * and run this program and observe the output.
  * 
- * If C is a subclass of E::
- * 	(a) a constructor of only C is called.
+ * If C is a subclass of E, and an object c of type C is instantiated, then:
+ *  (a) a constructor of only C is called.
  *  (b) a constructor of only E is called.
  *  (c) a constructor of C and E are called. 
  * 
- * Comment out the first call to super() and 
- * uncomment the first call to super(2) in the constructor of 
- * AnInheritingStringDatabase.
+ * Comment out the first call to super() and uncomment the first call to
+ * super(2) in the constructor of AnInheritingStringDatabase.
  * 
  * Run the program or use F3 to go to the definition of super(2).
- * 
  * 
  * (T/F) A constructor in a class can  determine which overloaded
  *  constructor of its superclass is called by providing appropriate parameters to
@@ -294,8 +297,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  *  
  * (T/F) A super() call can be invoked anywhere in a constructor.
  * 
- * Uncomment the super(2) call in the clear() method.
- * What happens? 
+ * Uncomment the super(2) call in the clear() method. What happens? 
  * 
  * (T/F) A superclass constructor can be called from any method of a subclass.
  * 
@@ -305,25 +307,25 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * Run the program.
  * 
- * Is the constructor of ABaseStringHistory called? 
+ * Is the constructor of ABaseStringHistory called? If so, which one?
  * 
- * If so, which one?
- * 
- * Comment out the single-parameter constructor in ABaseStringHistory.
- * What happens?
+ * Comment out the parameterless constructor in ABaseStringHistory and go to
+ * AnInheritingStringDatabase. What happened?
  * 
  * If no super() call is made in a constructor:
  * 	(a) an exception is thrown.
  * 	(b) no superclass constructor is called.
- *  (c) a call to the parameterless constructor is automatically added as
+ *  	(c) a call to the parameterless super constructor is automatically added as
  *  the first statement in the constructor. 
  *  
- * Comment out the entire constructor in AnInheritingStringHistory so
+ *  Uncomment the parameterless constructor in ABaseStringHistory.
+ *  
+ * Comment out the entire constructor in AnInheritingStringDatabase so
  * we have no constructor in this class.
  * 
- * Run the program. Is the superclass constructor called.
+ * Run the program. Is the superclass constructor called?
  * 
- * (T/F) is a class has no constructor, then Java inserts in its object code
+ * (T/F) If a class has no constructor, then Java inserts into its object code
  * a constructor with no parameters that makes a call to a constructor with
  * no parameters in its superclass.
  * 
@@ -331,15 +333,11 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * ORDER OF INITIALIZATION
  * 
  * To really understand what is going on, put a break point on the first statement of 
- * the constructor in AStringSet and use f5 (Step into) to trace the 
- * path to the constructor
- * in ABaseStringHistory noting the order in which the variables and 
- * constructors are called.
+ * the constructor in AStringSet and use f5 (Step into) to trace the path to the constructor
+ * in ABaseStringHistory noting the order in which the variables and constructors are called.
+ * Step over (F6) any println calls so that you do not get pulled into that code (if you
+ * accidentally step into a println call, just step return- F8).
  * 
- * What are the various values taken by uselessVariable in this process.
+ * What is the order of initialization in this process?
  * 
  */
-
-
-
-

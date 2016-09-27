@@ -5,32 +5,32 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 /*
  * 
- * This is a "base" or super class class that is extended by other classes here.
+ * This is a "base" or super class class that is extended by other classes in this praxis.
  * 
  * Try to understand this class on your own first.
  * 
- * If you do not want to see the program without comments first, just collapse
- * them by clicking on the - symbol at the start of each comment block.
+ * If you want to see the program without comments first, just collapse
+ * them by clicking on the "-" symbol at the start of each comment block.
  * 
- * As it does not itself use inheritance, what is interesting about it is how
+ * As this class itself does not use inheritance, what is interesting about it is how
  * it allows us to go from fixed-length collection to a variable-length list
  * by defining our own type.
  * 
- * Once a item is added to the list, it cannot be removed or changed, so this
- * variable-size collection is a history.
+ * Once an item is added to the list, it cannot be removed or changed, so this
+ * variable-size collection is a "history".
  * 
- * Like any collection, a history provided operations to access or read its 
+ * Like any collection, a history provides operations to access or read its 
  * elements.
  * 
- * As it is variable sized, it also provides an operation to add elements.
+ * As it is variably-sized, it also provides an operation to add elements.
  *  
- * Its implementation uses  a collection of fixed size - an array.
+ * Its implementation uses  a collection of a fixed size: an array.
  * 
  * The array has filled and unfilled elements, and the external world
- * sees the filled elements as the variable size array.
+ * sees the filled elements as the variable-size array.
  * 
- * We do not access the elements as using array syntax, since this class
- * is not understood by the language and defined by us.
+ * We do not access the elements using array syntax, since this class
+ * is defined by us and not understood by the language.
  * 
  * Try and understand the program and run it without any break 
  * points first.
@@ -47,7 +47,7 @@ import util.annotations.StructurePatternNames;
  */ 
 public class ABaseStringHistory implements BaseStringHistory {
 	/*
-	 * This collection has a fixed max size.
+	 * This collection has a fixed maximum size.
 	 */
 	public static final int MAX_SIZE = 50;
 	
@@ -60,21 +60,21 @@ public class ABaseStringHistory implements BaseStringHistory {
 	 * number of filled elements
 	 */
 	protected int size = 0;	// number of filled elements (protected access)
+
 /*
- * We will uncomment this later.	
+ * We will uncomment other variations of this later
  */
      public int uselessVariable = 0;
-
+//   private int uselessVariable = 0;
 //    protected int uselessVariable = 0;
 //    int uselessVariable = 0;
-//    private int uselessVariable = 0;
-//
+     
 	public ABaseStringHistory() {
 		uselessVariable = 1;
-//		System.out.println("Useless variable:" + uselessVariable);
+//		System.out.println("ABaseStringHistory parameterless constructor called");
 	}
-	public ABaseStringHistory(int aMaxSize) {
-		contents = new String[MAX_SIZE];
+	
+	public ABaseStringHistory(int someParameter) {
 		System.out.println("ABaseStringHistory Single-Parameter Constructor Called");
    }
 	
@@ -108,7 +108,7 @@ public class ABaseStringHistory implements BaseStringHistory {
 			String separator = (i == 0)?"":":";
 			retVal += separator + contents[i];
 		}	
-// We will switch these two returns
+// We will switch these two returns later
 		return retVal;
 //		return super.toString();
 
@@ -136,8 +136,8 @@ public class ABaseStringHistory implements BaseStringHistory {
  * 
  * Set the breakpoint at the identified location, and debug-run the program.
  *  
- * At the breakpoint, examine the contents variable and look at its id and 
- * dimension (length) within brackets. 
+ * At the breakpoint, examine the contents variable of aStringHistory and look
+ * at its id and dimension (length) within brackets. 
  * 
  * Also look at the value of the size variable.
  * 
@@ -151,15 +151,15 @@ public class ABaseStringHistory implements BaseStringHistory {
  * 
  * (T/F) A history implemented using a single array object has a maximum size.
  * 
- * (T/F) The add operation ABaseStringHistory:
+ * The "add" operation in ABaseStringHistory:
  * 	(a) creates a new array with a larger size.
  * 	(b) replaces a null element in the existing array with the added element.
  * 	(c) replaces a non-null element in the existing array with the added element.
  * 
- * (T/F) The size method in ABaseStringHistory returns:
- * 	(a) the length of the array object holding the history elements
+ * The "size" method in ABaseStringHistory returns:
+ * 	(a) the length of the array object holding the history elements.
  * 	(b) the number of filled elements in the history.
- * 	(c) returns the number of unfilled elements in the history.
+ * 	(c) the number of unfilled elements in the history.
  * 
  */
 /*

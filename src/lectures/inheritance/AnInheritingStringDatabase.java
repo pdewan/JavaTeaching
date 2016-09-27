@@ -5,16 +5,16 @@ package lectures.inheritance;
  * it does on your own.
  * 
  * This is like a ABaseStringHistory except that it also:
- * 	(a) allows previously added elements to be deleted.
- * 	(b)	provides an operation to determine if an element exists
+ * 	1) allows previously added elements to be deleted.
+ * 	2) provides an operation to determine if an element exists
  * 		in the collection.
- * 	(c) provides a clear operation to remove all elements.
+ * 	3) provides a clear operation to remove all elements.
  * 
- * Like ABaseStringHistory it uses an array to store the elements. * 
+ * Like ABaseStringHistory it uses an array to store the elements.
  * 
  * Deletion involves:
- * 	(a) finding the index of the element to be removed,
- *  (b) shifting the elements below the element up so that the filled and
+ * 	1) finding the index of the element to be removed,
+ *   	2) shifting the elements after the deleted element up so that the filled and
  *  	unfilled elements of the array are separate sections of the array.
  *  
  * As this class extends the functionality and implementation of 
@@ -27,9 +27,9 @@ package lectures.inheritance;
  * 
  * Object-oriented programming involves also using inheritance.
  * 
- * So we are going from object-based to object-oriented programming.
+ * So, we are going from object-based to object-oriented programming.
  * 
- * In Java, it involves using the extends keyword used below.
+ * In Java, it involves using the "extends" keyword used below.
  * 
  * If class/interface C extends class/interface E, then E is a supertype of C 
  * and C is a subtype of E.
@@ -44,11 +44,11 @@ package lectures.inheritance;
  */
 
 public class AnInheritingStringDatabase 
-	extends ABaseStringHistory // use of keyword extends
+	extends ABaseStringHistory // use of keyword "extends""
 	implements InheritingStringDatabase {
 
 /*
- * Re-declaration of inherited size, uncomment when asked
+ * Re-declaration of inherited size, uncomment when asked later
  */
 //	protected int size = 0;
 	public AnInheritingStringDatabase() {
@@ -56,7 +56,7 @@ public class AnInheritingStringDatabase
 //		super(2);
 		uselessVariable = 2;
 //		super(2);
-//		System.out.println("Useless variable:" + uselessVariable);
+//		System.out.println("AnInheritingStingDatabase constructor called");
 	}
 
 	public void clear() {
@@ -69,10 +69,12 @@ public class AnInheritingStringDatabase
 	}
 
 	void shiftUp(int startIndex) {
-	    for (int index = startIndex; index + 1 < size; index++) {
-	        contents[index] = contents[index + 1];
-	    }
-	    size--;
+		if (startIndex < size){
+		    for (int index = startIndex; index + 1 < size; index++) {
+		        contents[index] = contents[index + 1];
+		    }
+		    size--;
+		}
 	}
 	
 	int indexOf(String element) {
@@ -80,10 +82,11 @@ public class AnInheritingStringDatabase
 	    while ((index < size) && !element.equals(contents[index])) {
 	        index++;
 	    }
-	 // most implementations will count down and give a negative result in case 
-	 // of failed search
-	    return index; 
-	}    
+	    // Most implementations will count down and give a negative result in case 
+		 // of failed search. Our implementation is different because of the way it is
+	    // used in removeElement().
+		    return index; 
+		}    
     
     public boolean member(String element) {
         return indexOf (element) < size;
@@ -114,34 +117,37 @@ public class AnInheritingStringDatabase
  * 
  *  Study the main method and run it.
  * 
- * Adding an item a second time to an instance of AnInheritingStringDatabase:\
+ * Adding an item a second time to an instance of AnInheritingStringDatabase
  * results in:  
- * 	(a) an exception,
+ * 	(a) an exception.
  * 	(b) the addition being ignored.
  * 	(c) a duplicate item.
  * 
  * Now set break point at the specified location in main. 
  * 
- * Examine the the size and contents variable (defined the superclass).
+ * Examine the the size and contents variable (defined the superclass)
+ * of aStringDatabase.
  * 
- * Step over the statement (F6) and examine the two variables again.
+ * Step over the statement (F6) and examine the two variables again. If you find
+ * something surprising, it will be made clear once you look at indexOf().
  * 
  * (T/F) If a is an instance of C, and C extends class E, then a has a copy of
  * the instance variables defined in E.
  * 
  * (T/F) Assuming O is at position I in the array, removeElement(O)
- * 	assigns the null value at position I in the array.
+ * 	assigns the null value at position I in the array inside 
+ * 	AnInheritingStringDatabase.
  * 
  * Study the code of indexOf() and clear().
  * 
- * Assuming O is at position I in the array, indexOf(O), searches (examines)
- * 	(a) only the first element of the array
+ * Assuming O is at position I in the array, indexOf(O), searches (examines):
+ * 	(a) only the first element of the array.
  * 	(b) only the last element of the array.
- * 	(c) all elements of the element of the array
- * 	(d)	none of the above.
+ * 	(c) all elements of the array
+ * 	(d) none of the above.
  * 
  * 
- * (T/F) The clear() method uses removeElement() to remove the elements the 
+ * (T/F) The clear() method uses removeElement() to remove the elements in the 
  * database.
  * 
  * 
@@ -155,52 +161,54 @@ public class AnInheritingStringDatabase
  * Which of these operation are implemented in ABaseStringHistory?
  * 
  * If object a is an instance of class C, and C is a subclass of E, then it is 
- * possible to invoke on a:
- * 	(a) only the operations implemented in C.
+ * possible to invoke, on a:
+ * 	(a) only the methods implemented in C.
  * 	(b) the methods implemented in both C and E.
  * 	(c) only the methods implemented in E. 
  *  
  * Click on the addElement() method call in main() and press F3 (Open class
- * declaration) to go to the interface in which the header of the method is defined. 
+ * declaration) or Ctrl+click to go to the interface in which the header of the
+ * method is defined. 
  * 
  * In which interface is the definition found?  Is it the same as the interface
  * of this class - InheritingStringDatabase? If not, what is the relationship
- * between the two interfaces? 
+ * between the two interfaces? You may need to go to InheritingStringDatabase to see. 
  * 
  *  
  * METHOD INHERITANCE IN CLASSES AND INTERFACES 
  * 
  * Go to the declaration of BaseStringHistory.
  * 
- * Add a an arbitrary method header to in this interface by commenting out
- * the header: public void test();
+ * Add an arbitrary method header in this interface by uncommenting the header: 
+ * public void test();
  * 
- * What error messages if any do you get when you save (compile) the interface?
+ * What error messages, if any, do you get when you save (compile) the interface?
  * 
- * What error message if any do you get in the class ABaseStringHistory?
- * 
- * What error message if any do you get in the class AnInheritingStringDatabase?
+ * What error message, if any, do you get in the class ABaseStringHistory?
  * 
  * Fix the problem in ABaseStringHistory. You can click on the red error icon
- * to make Eclipse suggest and select fixes. 
+ * to make Eclipse suggest and select fixes. Now go to AnInheritingStringDatabase
+ * and comment out "extends ABaseStringHistory".
  * 
- * Does the problem go away also in AnInheritingStringDatabase?
+ * What error message, if any, do you now get in the class AnInheritingStringDatabase?
  * 
- * (T/F) If interface I extends interface J, and class C implements 
- * 	 I, then A must implement the methods:
+ * Uncomment the line you just commented out. Does the problem go away?
+ * 
+ * If interface I extends interface J, and class C implements I, then A must
+ * implement the methods:
  * 	(a) declared only in I.
  * 	(b) declared only in J.
- * 	(c)	declared in I and J.
+ * 	(c) declared in I and J.
  * 
- * (T/F) If class C extends class E, then C is considered to implement the 
+ * If class C extends class E, then C is considered to implement the 
  * methods:
- * 	(a) declared only in C,
- * 	(b) declared only in E,
- * 	(c) declared in both C and E. * 
+ * 	(a) defined only in C.
+ * 	(b) defined only in E.
+ * 	(c) defined in both C and E.
  * 
  * VARIABLE INHERITANCE
  * 
- * Click on the reference to the size variable in the clear method and press 
+ * Click on the reference to the size variable in the "clear" method and press 
  * F3. In which class is the declaration found?  
  * 
  * (T/F) It is possible for a class to access and modify variables declared in 
