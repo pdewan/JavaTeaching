@@ -7,7 +7,7 @@ import lectures.generics_adapters.AHistory;
 import lectures.generics_adapters.History;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
-import lectures.inheritance.is_a.BoundedPoint;
+import lectures.inheritance.is_a.extra.BoundedPoint;
 
 public class GenericsAndArraysTypeChecking {
 	

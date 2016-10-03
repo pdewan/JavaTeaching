@@ -1,6 +1,6 @@
 package lectures.inheritance.virtual_abstract_factory_methods;
 
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 import lectures.extra.ACartesianPointHistoryWithDynamicallyDispatchedMethod;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;

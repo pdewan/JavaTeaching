@@ -3,8 +3,10 @@ package lectures.inheritance.is_a;
 import lectures.graphics.Point;
 /**
  * CORRECT USE OF INHERITANCE
+ * 
  * A class C should inherit for class E only if 
  * it makes sense to use C where E can be used.
+ * 
  * Thus, this class should inherit from Point if
  * it makes sense to use a line where a point is expected. 
  * 

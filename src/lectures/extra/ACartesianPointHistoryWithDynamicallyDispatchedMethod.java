@@ -1,6 +1,6 @@
 package lectures.extra;
 
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
 

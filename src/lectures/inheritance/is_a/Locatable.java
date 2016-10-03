@@ -1,7 +1,8 @@
 package lectures.inheritance.is_a;
 /**
  * This is an extra interface we have added, which is not directly implemented by
- * any class
+ * any class.
+ * 
  * Press F4 on the interface Locatable and see type subtypes of this
  * interface
  * 

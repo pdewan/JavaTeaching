@@ -10,8 +10,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 
-import lectures.arrays.collections_kinds.APointHistory;
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.APointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 import lectures.graphics.Point;
 import bus.uigen.ObjectEditor;
 

@@ -1,6 +1,6 @@
 package lectures.deep_shallow_copy;
 
-import lectures.inheritance.is_a.AMutablePoint;
+import lectures.inheritance.is_a.extra.AMutablePoint;
 
 public class ACloneablePoint extends AMutablePoint implements CloneablePoint, Cloneable {
 	public ACloneablePoint(int theX, int theY) {

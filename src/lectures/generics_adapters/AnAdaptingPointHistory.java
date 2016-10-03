@@ -1,5 +1,5 @@
 package lectures.generics_adapters;
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 import lectures.graphics.Point;
 import lectures.static_state.ACartesianPointComputingMidPoint;
 public class AnAdaptingPointHistory implements PointHistory {

@@ -1,6 +1,6 @@
 package lectures.inheritance_vs_delegation.abstract_methods;
 
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 import lectures.graphics.Point;
 
 public class ADelegatePointHistory implements PointHistory {

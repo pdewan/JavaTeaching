@@ -1,6 +1,6 @@
 package lectures.files;
 
-import lectures.arrays.collections_kinds.PointHistory;
+import lectures.arrays.collections_kinds.extra.PointHistory;
 
 public interface PersistentPointHistory extends PointHistory {
 	public void load();

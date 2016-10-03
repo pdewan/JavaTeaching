@@ -1,9 +1,11 @@
-package lectures.inheritance.virtual_abstract_factory_methods;
+package lectures.arrays.collections_kinds.extra;
 
-import lectures.arrays.collections_kinds.extra.PointHistory;
+import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
+import bus.uigen.ObjectEditor;
 
-public abstract class AnAbstractPointHistory implements PointHistory{
+
+public class APointHistory implements PointHistory /*, Serializable*/ {
 	public final int MAX_SIZE = 50;
 	protected Point[] contents = new Point[MAX_SIZE];
 	protected int size = 0;
@@ -15,16 +17,18 @@ public abstract class AnAbstractPointHistory implements PointHistory{
 	}
 	protected boolean isFull() {
 		return size == MAX_SIZE;
-
 	}
-	protected abstract Point createPoint(int x, int y);
 	public void addElement(int x, int y) {
 		if (isFull())
 			System.out.println("Adding item to a full history");
 		else {
-			Point p = createPoint(x, y);
+			Point p = new ACartesianPoint(x, y);
 			contents[size] = p;
 			size++;
 		}
-	}    
+	} 
+	
+	public static void main (String[] args) {
+		ObjectEditor.edit(new APointHistory());
+	}
 }
