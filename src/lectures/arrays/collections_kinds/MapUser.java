@@ -52,3 +52,6 @@ public class MapUser {
 	}
 	
 }
+/*
+ * Next class: JavaCollectionHierarchy
+ */
