@@ -53,9 +53,9 @@ import lectures.interfaces.BMISpreadsheet;
  * 
  * (T/F) If A implements B, then A IS-B.
  *
- * You will need to refer to this hierrachy when answering the questions below.
+ * You will need to refer to this hierarchy when answering the questions below.
  * 
- * 
+ * Study the program and run it.
  */
 
 public class TypeCheckingExamples {
@@ -82,25 +82,41 @@ public class TypeCheckingExamples {
 		   System.out.println (aCollection.elementAt(i));
 	   }
    }
-
+   
+   /**
+    * Answer these questions after you look at the output produed by this
+    * method.
+    * 
+    * (T/F) If A extends B, and a is an instance of A, then a is an instance
+    * of B.
+    * 
+    * (T/F) If A implements B, and a is an instance of A, then a is an instance
+    * of B.
+    * 
+    * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
+    * of B.
+    * 
+    * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
+    * of A.
+    */
    public static void instanceOfTest(Object anObject) {
 	   System.out.println (anObject instanceof StringHistory);
 	   System.out.println (anObject instanceof InheritingStringDatabase);
 	   System.out.println (anObject instanceof AnInheritingStringSet);
    }
-   public static void main(String[] args) {
-	   InheritingStringDatabase aSet = new AnInheritingStringSet();
-	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
-	   
-	   // INSTANCE OF RULES
-	   // To consolidate what you have learned uncomment the 
-	   // following and run the program
+   public static void instanceOfTest() {
 	   instanceOfTest(new ABaseStringHistory());
 	   instanceOfTest(new AnInheritingStringSet());
-	   // OVERRIDE RESOLUTION
+   }
+   public static void main(String[] args) {
+	  
 	   
+	   // OVERRIDE RESOLUTION
+	   InheritingStringDatabase aSet = new AnInheritingStringSet();
+	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
+	   	  
 	   // Which addElement is called in the two cases below, 
-	   // the one in AStringHistory or the one in AStringSet?
+	   // the one in ABaseHistory or the one in AStringSet?
 	   // Does it matter how you type the variable holding the set?
 	   aSet.addElement("Joe Doe");
 	   aSetMasqueradingAsAHistory.addElement("Joe Doe");
