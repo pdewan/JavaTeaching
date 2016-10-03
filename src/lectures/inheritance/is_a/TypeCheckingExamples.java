@@ -16,19 +16,54 @@ import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
+/**
+ *  
+ * IS_A DEFINITION AND VISUALIZATION
+ * Click on BaseStringHistory below and press F4 (Open Type Hierarchy).
+ * 
+ * Look at the Type Hierarchy tab on the upper left.
+ * 
+ * This tab shows the IS-A relationship between StringHistory and other types
+ * in the workspace.
+ * 
+ * In this hierarchy, if node A is descendant of node B, then A IS-A B.
+ * 
+ * Look carefully at the descendants of BaseStringHistory - 
+ * both direct children and other descendants. 
+ * 
+ * Look at both interfaces and classes in the hierarchy to understand the
+ * basis for creating this hierarchy. 
+ * 
+ * Can you formally define the IS-A relationship in terms of the implements and extends 
+ * relationships we have seen so far? 
+ * 
+ * Answer the following questions based on what you see in this example.  
+ * In other words, which of these statements are consistent with what you see.
+ * 
+ * 
+ * (T/F) If A is an interface and B is an interface, it is possible that A IS-A B.
+ * 
+ * (T/F) If A is a class and B is a class, it is possible that A IS-A B.
+ * 
+ * (T/F) If A is class and B is an interface, it is possible that A IS-A B.
+ * 
+ * (T/F) If A is an interface and B is a class, it is possible that A IS-A B.
+ * 
+ * (T/F) If A extends B, then A IS-A B.
+ * 
+ * (T/F) If A implements B, then A IS-B.
+ *
+ * You will need to refer to this hierrachy when answering the questions below.
+ * 
+ * 
+ */
 
 public class TypeCheckingExamples {
-    // IS_A DEFINITION AND VISUALIZATION
-   // Click on StringHistory below and press F4 (Open Type Hierarchy).
-   // Look at the Type Hierarchy tab on the upper left.
-   // This tab shows the IS-A relationship between StringHistory and other types
-   // in the workspace. Look carefully at the descendants of StringHistory - both direct children
-   // and other descendants. StringHistory is an interface. Are the descendants all interfaces?
-   // Can you formally define the IS-A relationship in terms of the implements and extends 
-   // relationships we have seen so far?   
-   // 
+   
 	
-
+  /**
+   * A method with this name will be defined below
+   */
   public static void print (BaseStringHistory aCollection) {
 	   System.out.println("String History b:" + aCollection);
 	   for (int i = 0; i < aCollection.size(); i++) {
@@ -36,7 +71,11 @@ public class TypeCheckingExamples {
 	   }
    }
   
-  // Overloading the method above with a type that IS-A the type of the previous method
+  /**
+   * Overloading the method above with a type that IS-A the type of the 
+   * previous method
+   * 
+   */
    public static void print (InheritingStringDatabase aCollection) {
 	   System.out.println("StringDatabase Print:" + aCollection);
 	   for (int i = 0; i < aCollection.size(); i++) {
@@ -53,6 +92,11 @@ public class TypeCheckingExamples {
 	   InheritingStringDatabase aSet = new AnInheritingStringSet();
 	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
 	   
+	   // INSTANCE OF RULES
+	   // To consolidate what you have learned uncomment the 
+	   // following and run the program
+	   instanceOfTest(new ABaseStringHistory());
+	   instanceOfTest(new AnInheritingStringSet());
 	   // OVERRIDE RESOLUTION
 	   
 	   // Which addElement is called in the two cases below, 
@@ -85,10 +129,7 @@ public class TypeCheckingExamples {
 	   // run the program and observe the error.
 	   // Comment the statement back.
 	   
-	   // INSTANCE OF RULES
-	   // To consolidate what you have learned uncomment the following and run the program
-	   instanceOfTest(new ABaseStringHistory());
-	   instanceOfTest(new AnInheritingStringSet());
+	  
 	   
   	   Object anObject = aSet; // aSet is typed as an interface, Object is a superclass
 	   // If I is an interface, and C is a class, based on your understanding of IS-A rules, 
@@ -98,8 +139,6 @@ public class TypeCheckingExamples {
   	   // and needs a special rule to make the statement above legal
 	   
 
-	  
-	  
    }
    
  
