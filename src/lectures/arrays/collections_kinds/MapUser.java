@@ -53,9 +53,9 @@ public class MapUser {
 		/*
 		 * Uncomment the following statements
 		 */
-		aMap.put ("me", null);
-		System.out.println (aMap.get("me"));
-		System.out.println (aMap);
+//		aMap.put ("me", null);
+//		System.out.println (aMap.get("me"));
+//		System.out.println (aMap);
 	}
 	
 }
