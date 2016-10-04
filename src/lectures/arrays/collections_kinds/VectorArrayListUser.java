@@ -30,11 +30,11 @@ import java.util.Vector;
 public class VectorArrayListUser {
 	public static void main (String[] args) {	
 		
-//		List names = new Vector();
-//		List grandSlams = new ArrayList();
+		List names = new Vector();
+		List grandSlams = new ArrayList();
 		
-		List names = new ArrayList();
-		List grandSlams = new Vector();
+//		List names = new ArrayList();
+//		List grandSlams = new Vector();
 		
 		
 		names.add("Nadal");
