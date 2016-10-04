@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 /*
- * Look at the code below
+ * Look at the code below to answer the following:
  * 
- * (T/F) An ArrayList is an instance of a Map.
- * (T/F) An ArrayList is an instance of a Collection.
- * (T/F) A HashSet is an  instance of a List.
- * (T/F) A HashSet is an  instance of a Collection.
- * (T/F) A HashMap is an instance of a Collection
+ * (T/F) An ArrayList object is an instance of a Map.
+ * (T/F) An ArrayList object is an instance of a Collection.
+ * (T/F) A HashSet object is an  instance of a List.
+ * (T/F) A HashSet object is an  instance of a Collection.
+ * (T/F) A HashMap object is an instance of a Collection.
  */
 public class JavaCollectionHierarchy {
 	public static void instanceOf(Object anObject) {
@@ -25,8 +25,13 @@ public class JavaCollectionHierarchy {
 	}
 	
 	public static void main (String[] anArgs) {
+		System.out.println("ArrayList:");
 		instanceOf(new ArrayList());
+		
+		System.out.println("\nHashMap:");
 		instanceOf(new HashMap());
+		
+		System.out.println("\nHashSet:");
 		instanceOf(new HashSet());
 	}
 

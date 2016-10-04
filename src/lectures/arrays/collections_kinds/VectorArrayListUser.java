@@ -8,14 +8,14 @@ import java.util.Vector;
  * 
  * Here we see examples of Java lists. 
  * 
- * These types inspired the string history, database and set we saw earlier.
+ * These types inspired the string history, database and set classes we saw earlier.
  * 
  * Study the program.
  * 
  * We see the use of two different classes, Vector and ArrayList.
  * 
  * 
- * Can we interchange the two, make names an ArrayList and grandSlams a 
+ * Can we interchange the two: can we make names an ArrayList and grandSlams a 
  * Vector without getting compile errors?
  * 
  * Play with the comments if you do not know the answer.
@@ -30,19 +30,19 @@ import java.util.Vector;
 public class VectorArrayListUser {
 	public static void main (String[] args) {	
 		
-		List names = new Vector();
-		List grandSlams = new ArrayList();
+//		List names = new Vector();
+//		List grandSlams = new ArrayList();
 		
-//		List names = new ArrayList();
-//		List grandSlams = new Vector();
+		List names = new ArrayList();
+		List grandSlams = new Vector();
 		
 		
 		names.add("Nadal");
-	
 		grandSlams.add(14);
 		
 		names.add("Federer");
 		grandSlams.add(17);
+		
 		names.add("Djokovic");
 		/*
 		 * Put break point below
@@ -55,23 +55,19 @@ public class VectorArrayListUser {
 /*
  * WRAPPER TYPES
  * 
- * WRAPPER TYPES
- * What do you think is the type of the parameters of add in grandSlams.add(4)?
+ * What do you think is the type of the argument to add() in grandSlams.add(4)?
  * 
  * Does it make sense to assign a primitive value and a String to the same 
  * parameter?
  * 
  * Put a break point on the last add. 
  * 
- * Use F5 to step into the add. You do not go to the
- * add directly? 
+ * Use F5 to step into the add. Do you go to the add directly? 
  * 
  * Where do you go? 
  * 
- * if you can see the source, what does the last return statement in that 
- * method return?
- * 
- * What is the return type of the method?
+ * If you can see the source, what does the last return statement in that 
+ * method return? What is the return type of the method?
  * 
  * Press F7 to return and then press F5 again. 
  * 
@@ -90,10 +86,9 @@ public class VectorArrayListUser {
  */
 	
 /*
- * What are we trying to do this program? 
+ * Take a look at the program again. What are we trying to do here? 
  * 
- * Do you know of another Java type
- * that can keep this association better?
+ * Do you know of another Java type that can keep this association better?
  * 
  * Go to MapUser
  * 

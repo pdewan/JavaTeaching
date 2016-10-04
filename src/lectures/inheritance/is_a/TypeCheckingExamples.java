@@ -18,24 +18,24 @@ import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
 /**
  *  
- * IS_A DEFINITION AND VISUALIZATION
- * Click on BaseStringHistory below and press F4 (Open Type Hierarchy).
+ * IS-A DEFINITION AND VISUALIZATION
+ * Click on BaseStringHistory (here or in the code below) and press F4 (Open Type Hierarchy).
  * 
  * Look at the Type Hierarchy tab on the upper left.
  * 
- * This tab shows the IS-A relationship between StringHistory and other types
+ * This tab shows the IS-A ("is a") relationship between StringHistory and other types
  * in the workspace.
  * 
- * In this hierarchy, if node A is descendant of node B, then A IS-A B.
+ * In this hierarchy, if node A is descendant of node B, then A IS-A B ("A is a B").
  * 
  * Look carefully at the descendants of BaseStringHistory - 
  * both direct children and other descendants. 
  * 
- * Look at both interfaces and classes in the hierarchy to understand the
- * basis for creating this hierarchy. 
+ * Look at both interfaces and classes in the hierarchy to understand the basis for creating
+ * this hierarchy. Simply double click a class or interface to go to it.
  * 
  * Can you formally define the IS-A relationship in terms of the implements and extends 
- * relationships we have seen so far? 
+ * relationships we have seen so far?
  * 
  * Answer the following questions based on what you see in this example.  
  * In other words, which of these statements are consistent with what you see.
@@ -53,7 +53,7 @@ import lectures.interfaces.BMISpreadsheet;
  * 
  * (T/F) If A implements B, then A IS-B.
  *
- * You will need to refer to this hierarchy when answering the questions below.
+ * You will need to continue to refer to this hierarchy when answering the questions below.
  * 
  * Study the program and run it.
  */
@@ -63,7 +63,7 @@ public class TypeCheckingExamples {
    /**
     * INSTANCE OF
     * 
-    * Here we try to understand what instanceof means when we add inheritance
+    * Here we try to understand what "instanceof" means when we add inheritance
     * to the language.
     * 
     * Answer these questions after you look at the following method
@@ -83,7 +83,7 @@ public class TypeCheckingExamples {
     */
    public static void instanceOfTest(Object anObject) {
 	   System.out.println ("Checking object of class:" + anObject.getClass().getSimpleName());
-	   System.out.println (anObject instanceof StringHistory);
+	   System.out.println (anObject instanceof ABaseStringHistory);
 	   System.out.println (anObject instanceof InheritingStringDatabase);
 	   System.out.println (anObject instanceof AnInheritingStringSet);
    }
@@ -93,13 +93,13 @@ public class TypeCheckingExamples {
    }
    
    /*
-    * COMPILE TIME ASSIGNMENT RULES
+    * COMPILE-TIME ASSIGNMENT RULES
     * 
     * Here we will try to understand when we can assign an expression, e, of type
     * E to a variable, v, of type V.
     * 
     *(T/F) Expression e of type E can be assigned to variable v of type V
-    *if E IS-A V
+    *if E IS-A V.
     *
     *(T/F) Expression e of type E can be assigned to variable v of type V
     *if V IS-A E
@@ -108,8 +108,8 @@ public class TypeCheckingExamples {
     */
    public static void assignmentTest() {
 	   InheritingStringDatabase aSet = new AnInheritingStringSet();
-	   BaseStringHistory aHistory = 
-			   new ABaseStringHistory();	   
+	   BaseStringHistory aHistory = new ABaseStringHistory();
+	   
 	   /**
 	    * 
 	    * Uncomment the statements below and see which assignments are legal
@@ -133,15 +133,13 @@ public class TypeCheckingExamples {
     * 
     * Finally comment them all back.
     * 
-    * (T/F) Type checking rules involving no casts depend on how 
-    * an assigned variable is typed,
-    * that is, they look at the type of the variable rather than the class
-    * of the object assigned to the variable. 
+    * (T/F) Type checking rules involving no casts depend on how an assigned
+    * variable is typed. That is, they look at the type of the variable
+    * rather than the class of the object assigned to the variable. 
     * 
     * (T/F) Type checking rules involving casts depend on how an assigned 
-    * variable is cast, that is, they look at the type used to cast used 
+    * variable is cast, that is, they look at the type used in the cast
     * rather than the type of the assigned variable.
-    *    
     * 
     * (T/F) It is possible to get runtime errors when casts are used.
     *  
@@ -160,12 +158,13 @@ public class TypeCheckingExamples {
    /**
     * OVERRIDE RESOLUTION
     * 
-    * We try to determine here the relationship between how an object is
+    * Here we try to determine the relationship between how an object is
     * typed and the overridden methods that are called.
     * 
-    * Put break points in the addElement() methods in ABaseStringHistory
-    * and AnInheritingStringSet to see which one is called in the two
-    * cases below when this program is debug-run.
+    * Put a break points at the first call to addElement() and debug the program.
+    * Step inside the call (F5) and note which class you ended up in. Then step
+    * return (F7) to come back, step over (F6) to go to the next line, and step
+    * into this call (F5). Again, note the class.
     * 
     * Is the same method called in both cases or different methods?
     * 
@@ -179,22 +178,24 @@ public class TypeCheckingExamples {
 	   InheritingStringDatabase aSet = new AnInheritingStringSet();
 	   BaseStringHistory aSetMasqueradingAsAHistory = 
 			   new AnInheritingStringSet();	
+	   
+	   //Place break point here
 	   aSet.addElement("Joe Doe");
 	   aSetMasqueradingAsAHistory.addElement("Joe Doe");
    }
    
    /**
-    * A method with this name will be defined below
+    * A method with this name (but a different parameter) will be defined below
     */
    public static void print (BaseStringHistory aCollection) {
- 	   System.out.println("String History b:" + aCollection);
+ 	   System.out.println("StringHistory Print:" + aCollection);
  	   for (int i = 0; i < aCollection.size(); i++) {
  		   System.out.println (aCollection.elementAt(i));
  	   }
     }
    /**   
-    * Overloading the method above with a type that IS-A the type of the 
-    * previous method
+    * Overloading the method above with a parameter whose type has an IS-A 
+    * relationship to the type of the previous method
     * 
     */
     public static void print (InheritingStringDatabase aCollection) {
@@ -206,23 +207,25 @@ public class TypeCheckingExamples {
     /**
      * OVERLOAD RESOLUTION
      * 
-     * We try to determine here the relationship between how an object is
-     * typed and the overridden methods that are called.
+     * Here we try to determine the relationship between how an object is typed
+     * and the overridden methods that are called when it is used as an argument.
      * 
-     * Put breakpoints in the two print methods and debug-run the program.
+     * Remove your previously placed breakpoint and put a breakpoint at the print call
+     * marked below. As before, debug-run the program, step into the first call (F5),
+     * step return (F7), step over (F6) to get to the second call, and step into it (F5).
      * 
      * Is the same method called in both cases or different methods?
      * 
      * (T/F) When the call of an overloaded method is given an object variable 
-     * as an argument, 
-     * which overloaded method is called depends on the
+     * as an argument, which overloaded method is called depends on the
      * type of the variable rather than the object assigned to the variable.
      * 
      */
     public static void overloadResolutionTest() {
        InheritingStringDatabase aSet = new AnInheritingStringSet();
- 	   BaseStringHistory aSetMasqueradingAsAHistory = 
- 			   new AnInheritingStringSet();
+ 	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
+ 	   
+ 	   //Place breakpoint here
  	   print (aSet);
  	   print(aSetMasqueradingAsAHistory);
  	   
@@ -239,7 +242,7 @@ public class TypeCheckingExamples {
     /**
      * Now that we understand the type checking rules, let us try to understand
      * how we should use inheritance so we do not write programs that compile
-     * and run but do not make logical sense and thus are confusing
+     * and run yet do not make logical sense and thus are confusing.
      * 
      * Next class: LineInheritingFromPoint
      */

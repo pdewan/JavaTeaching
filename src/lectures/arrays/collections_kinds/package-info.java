@@ -3,7 +3,7 @@
  * Here we will use important interfaces and classes from Java's 
  * collection hierarchy
  * 
- * NAVIGATIOn_INFO
+ * NAVIGATION-INFO
  * VectorArrayListUser
  * MapUser
  * JavaCollectionHierarchy
