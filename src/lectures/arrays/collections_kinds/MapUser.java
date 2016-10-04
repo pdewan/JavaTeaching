@@ -27,7 +27,7 @@ import bus.uigen.ObjectEditor;
  * (T/F) The get(k) operation on a Map instance throws an exception if some put(k,v)
  * was not previously executed on the instance.
  * 
- * (T/F) Executing put (k, null) on a Map instance associates k with null.  
+ * (T/F) Executing put (k, null) on a Map instance results in a runtime error. 
  * 
  * (T/F) It is possible to execute put(k, v) on a Map instance if a put (k, v2)
  * was previously executed on it.

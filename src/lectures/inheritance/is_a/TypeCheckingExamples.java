@@ -141,7 +141,7 @@ public class TypeCheckingExamples {
     * variable is cast, that is, they look at the type used in the cast
     * rather than the type of the assigned variable.
     * 
-    * (T/F) It is possible to get runtime errors when casts are used.
+    * (T/F) Casts an lead to runtime errors.
     *  
     */   
    public static void castAssignmentTest() {
