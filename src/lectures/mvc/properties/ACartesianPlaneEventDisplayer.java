@@ -3,6 +3,7 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import lectures.mvc.properties.atomic.ObservableLine;
 import util.annotations.Tags;
 @Tags({"Observer", "View"})
 public class ACartesianPlaneEventDisplayer implements PropertyChangeListener{

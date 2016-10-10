@@ -3,6 +3,7 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import bus.uigen.ObjectEditor;
 
 

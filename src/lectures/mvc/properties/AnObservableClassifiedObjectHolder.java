@@ -4,6 +4,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes_extra.ClassifiedObjectHolder;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import util.annotations.ComponentWidth;
 import util.models.PropertyListenerRegisterer;
 

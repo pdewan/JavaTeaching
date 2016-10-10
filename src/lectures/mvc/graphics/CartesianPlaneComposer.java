@@ -7,8 +7,8 @@ import javax.swing.JFrame;
 
 import lectures.mvc.properties.AnObservableCartesianPlane;
 import lectures.mvc.properties.ObservableCartesianPlane;
-import lectures.mvc.properties.ObservableLine;
 import lectures.mvc.properties.ObservableStringShape;
+import lectures.mvc.properties.atomic.ObservableLine;
 import bus.uigen.ObjectEditor;
 // GRAPHICS AND MVC
 // We have creates using predefined widgets, which are windows with canned behavior.

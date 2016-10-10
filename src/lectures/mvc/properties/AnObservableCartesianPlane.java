@@ -7,6 +7,8 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
+import lectures.mvc.properties.atomic.AnObservableLine;
 import bus.uigen.ObjectEditor;
 // PROPERTY-BASED NOTIFICATION IN COMPOSITE OBJECTS
 // So far our observables had atomic properties

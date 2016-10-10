@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener;
 
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import bus.uigen.ObjectEditor;
 
 

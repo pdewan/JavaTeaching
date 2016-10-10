@@ -10,8 +10,8 @@ import lectures.inheritance.InheritingStringDatabase;
 import lectures.inheritance.extra.AnObservableStringSet;
 import lectures.mvc.collections.AnObservableStringHistory;
 import lectures.mvc.collections.ObservableStringHistory;
-import lectures.mvc.properties.APropertyListenerSupport;
 import lectures.mvc.properties.PropertyListenerSupport;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 
 public class ALock implements Lock {
 	ListenableVector waitingThreads = new AListenableVector();

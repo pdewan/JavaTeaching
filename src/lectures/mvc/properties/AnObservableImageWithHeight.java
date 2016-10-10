@@ -6,6 +6,7 @@ import java.beans.PropertyChangeListener;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.AnImageWithHeight;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 @StructurePattern(StructurePatternNames.IMAGE_PATTERN)
 public class AnObservableImageWithHeight extends AnImageWithHeight implements ObservableShuttleImage {
 	public AnObservableImageWithHeight(String anImageFileName) {

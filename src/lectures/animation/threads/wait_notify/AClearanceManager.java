@@ -4,8 +4,8 @@ import java.beans.PropertyChangeListener;
 
 import lectures.inheritance.InheritingStringDatabase;
 import lectures.inheritance.extra.AnObservableStringSet;
-import lectures.mvc.properties.APropertyListenerSupport;
 import lectures.mvc.properties.PropertyListenerSupport;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import util.annotations.ComponentWidth;
 import util.annotations.Row;
 import util.models.AListenableVector;

@@ -4,6 +4,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import lectures.interfaces.ABMISpreadsheet;
+import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import util.annotations.ObserverRegisterer;
 import util.annotations.ObserverTypes;
 // PROPERTY_BASED OBSERVABLES
