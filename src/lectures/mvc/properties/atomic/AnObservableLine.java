@@ -48,11 +48,12 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 		 * After looking at this call, go into APropertyListenerSupport, look at the
 		 * notifyAllListeners() method, and answer the questions in it.
 		 * 
-		 * A setter in an observable notifies observers about:
+		 * A setter in an observable notifies observers about (choose all that apply):
 		 * (a) the name of the property that changed.
 		 * (b) the old value of the property before the setter was called.
 		 * (c) the new value of the property set by the method.
-		 * (d) all of the above.
+		 * (d)  the original value of the property, right after the object was
+		 *  initialized by its constructor 
 		 * 
 		 */
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "X", oldVal,

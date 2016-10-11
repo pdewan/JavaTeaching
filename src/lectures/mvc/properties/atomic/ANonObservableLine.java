@@ -93,10 +93,6 @@ public class ANonObservableLine implements Line {
  * 
  * (T/F) Calling the refresh() method on ObjectEditor is bad because it forces
  * code animating an object to know about ObjectEditor frames displaying it.
- * 
- * (T/F) Asking user-interface code to redisplay a computation object
- *  is bad because it forces code manipulating the object to know about 
- *  user-interface code.
  *  
  * (T/F) Asking user-interface code to redisplay a computation object
  *  is bad because it does not support the separation of concerns principle.
