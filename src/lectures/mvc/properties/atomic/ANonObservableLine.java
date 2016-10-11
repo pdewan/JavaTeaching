@@ -15,8 +15,10 @@ import bus.uigen.ObjectEditor;
  * 
  * Study the code and follow the instructions at the end.
  * 
- * Look at the equals method to see how such a method might be specialized
- * for a class. 
+ * Also take a look at the equals() method to see how a comparison method 
+ * might be written for a specific class. It overrides a generic Object equals()
+ * method that only returns true if two object variables refer to the exact same object,
+ * not when they refer to different equivalent objects.
  * 
  */
 public class ANonObservableLine implements Line {
