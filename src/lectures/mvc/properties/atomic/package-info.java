@@ -5,13 +5,13 @@
  * the display of an object without getting the warning that we should not be
  * asking ObjectEditor explicitly to refresh the object.
  * 
- * This is part of a bigger problem, how to create multiple views of an object
- * that are kept consistent.  * 
+ * This is part of a bigger problem: how to create multiple views of an object
+ * that are kept consistent.
  * 
  * This, in turn, is part of an even bigger problem: how to decompose the
  * functionality of an interactive application into different objects.
  * 
- * The solution to the last problem is a a recurring "pattern" called MVC - for
+ * The solution to the last problem is a recurring "pattern" called MVC - for
  * Model-View-Controller.
  * 
  * A component of MVC is a pattern called Observer, which provides a solution

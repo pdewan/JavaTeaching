@@ -9,7 +9,7 @@ import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 @StructurePattern(StructurePatternNames.LINE_PATTERN) 
 /**
- * This is very much the template code for line you have been using.
+ * This is very much the template code for line that you have been using.
  * 
  * Its purpose is to show you why calling refresh() on ObjectEditor is bad.
  * 
@@ -38,6 +38,7 @@ public class ANonObservableLine implements Line {
 	public void setWidth(int newVal) {width = newVal;}
 	public int getHeight() {return height;}
 	public void setHeight(int newHeight) {height = newHeight;}	
+	
 	public boolean equals(Object otherVal) {
 		if (!(otherVal instanceof Line)) {
 			return false;
@@ -72,14 +73,14 @@ public class ANonObservableLine implements Line {
 		Line aLine = new ANonObservableLine(10, 10, 30, 30);
 		OEFrame editor1 = ObjectEditor.edit (aLine);
 		OEFrame editor2 = ObjectEditor.edit (aLine);
-//		OEFrame ediitor3 = ObjectEditor.edit (aLine);
+//		OEFrame editor3 = ObjectEditor.edit (aLine);
 		animateLine (aLine, editor1, editor2);
 	}
 /*
  * Study the animateLine() and main methods and run the main method to
  * create the animation.
  * 
- * Comment out the code to create editor3 and change animateLine to 
+ * Uncomment the code to create editor3 and change animateLine to 
  * refresh all three editors.
  * 
  * Note that animateLine must be passed an extra parameter and the loop

@@ -7,6 +7,9 @@ import lectures.mvc.properties.PropertyListenerSupport;
 
 public class APropertyListenerSupport implements PropertyListenerSupport {
 	public final int MAX_SIZE = 50;
+	
+	// Here we see an array that is capable of storing listeners. Each observer will
+	// register a listener with an observable.
 	PropertyChangeListener[] contents = new PropertyChangeListener[MAX_SIZE];
 	int size = 0;
 
@@ -31,16 +34,17 @@ public class APropertyListenerSupport implements PropertyListenerSupport {
 			size++;
 		}
 	}
+	
 	/**
-	 * The method notifAllListeners calls propertyChange():
-	 * 	(a) a single time on one of the registered observers
-	 *  (b) once for each registered observer
-	 *  (c) never
+	 * The method notifyAllListeners calls propertyChange():
+	 *  (a) a single time on one of the registered observers.
+	 *  (b) once for each registered observer.
+	 *  (c) never.
 	 *  
 	 * The method propertyChange is:
-	 *  (a) notification method invoked on a registered observer
-	 *  (b) registration method invoked on an observer
-	 *  (c) setter invoked on an observer
+	 *  (a) a notification method invoked on a registered observer.
+	 *  (b) a registration method invoked on an observer.
+	 *  (c) a setter invoked on an observer.
 	 */
 	public void notifyAllListeners(PropertyChangeEvent event) {
 		for (int index = 0; index < size(); index++) {
