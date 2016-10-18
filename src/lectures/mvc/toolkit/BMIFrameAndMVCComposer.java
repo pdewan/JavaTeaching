@@ -11,7 +11,6 @@ import javax.swing.JSlider;
 import javax.swing.JTextField;
 
 import bus.uigen.ObjectEditor;
-import lectures.mvc.properties.AnObservableBMISpreadsheet;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
 
 
@@ -21,7 +20,7 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
 // Run and interact with the program to see the two GUIS created, one by our view and controller
 // and one by that of ObjectEditor and notice that the two UIs remain in sync, thanks to a common
 // observable model
-public class BMIFrameComposer {
+public class BMIFrameAndMVCComposer {
 	// The controller and view are responsible for reacting to input and refreshing the display
 	// in response to model changes once the GUI is created.
 	
@@ -71,7 +70,7 @@ public class BMIFrameComposer {
 		frame.setVisible(true);
 	}
 	public static void composeMVC() {
-		ObservableBMISpreadsheet aBMISpreadsheet = new AnObservableBMISpreadsheet();
+		ObservableBMISpreadsheet aBMISpreadsheet = new AnObservableBMISpreadsheet(1.77, 75);
 		// The controller needs to react to events in height and weight field, it can 
 		// ignore the rest of the widget tree
 		new ABMISpreadsheetController(aBMISpreadsheet, heightField, weightField);

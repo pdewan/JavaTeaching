@@ -1,17 +1,18 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.toolkit.extra;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
+import javax.swing.JMenuItem;
 
 import lectures.mvc.CounterController;
 import lectures.mvc.ObservableCounter;
-public class ACounterJButtonController implements CounterController, ActionListener {
-	JButton button;
+// can refactor to share code with ACounterJButtonController
+public class ACounterJMenuItemController implements CounterController, ActionListener {
+	JMenuItem menuItem;
 	ObservableCounter counter;
-	public ACounterJButtonController(JButton theButton) {
-		button = theButton;
-		button.addActionListener(this);
+	public ACounterJMenuItemController(JMenuItem theMenuItem) {
+		menuItem = theMenuItem;
+		menuItem.addActionListener(this);
 	}
 	public void setModel (ObservableCounter theCounter) {
 		counter = theCounter;
@@ -19,7 +20,6 @@ public class ACounterJButtonController implements CounterController, ActionListe
 	public void processInput() {
 
 	}
-	//ActionLisetener method
 	public void actionPerformed(ActionEvent arg0) {
 		counter.add(1);
 	}

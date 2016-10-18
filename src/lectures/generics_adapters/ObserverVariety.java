@@ -8,8 +8,8 @@ import lectures.mvc.AnObservableCounter;
 import lectures.mvc.Counter;
 import lectures.mvc.CounterObserver;
 import lectures.mvc.ObservableCounter;
-import lectures.mvc.properties.AnObservableBMISpreadsheet;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
+import lectures.mvc.toolkit.AnObservableBMISpreadsheet;
 /*
  NON-COLLECTION GENERIC
  Here is an example from the MVC section of a generic type, GenericObserver

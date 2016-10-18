@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.toolkit.extra;
 
 import java.awt.Component;
 import java.awt.GridLayout;
@@ -10,8 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JSlider;
 
-import lectures.mvc.properties.AnObservableBMISpreadsheet;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
+import lectures.mvc.toolkit.AnObservableBMISpreadsheet;
 
 public class InterfaceBasedBMIFrameComposer {
 	static JFrame frame = new JFrame("BMI Spreadsheet");

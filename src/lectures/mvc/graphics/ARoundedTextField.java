@@ -11,7 +11,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import lectures.mvc.toolkit.TextComponentInterface;
+import lectures.mvc.toolkit.extra.TextComponentInterface;
 
 public class ARoundedTextField extends Panel implements TextComponentInterface, KeyListener  {
 	int eventId;

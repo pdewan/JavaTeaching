@@ -1,9 +1,11 @@
-package lectures.mvc.properties;
+package lectures.mvc.toolkit;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import lectures.interfaces.ABMISpreadsheet;
+import lectures.mvc.properties.ObservableBMISpreadsheet;
+import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import util.annotations.ObserverRegisterer;
 import util.annotations.ObserverTypes;
@@ -24,7 +26,8 @@ public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements Obser
 	public AnObservableBMISpreadsheet() { }	
 	public AnObservableBMISpreadsheet(
 			double theInitialHeight, double theInitialWeight) {
-		super(theInitialHeight, theInitialWeight);
+		setHeight(theInitialHeight);
+		setWeight(theInitialWeight);
 	}
 	
 	// Write methods are overridden,  read methods are inherited without change

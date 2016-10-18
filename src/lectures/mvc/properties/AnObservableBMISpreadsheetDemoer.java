@@ -1,5 +1,6 @@
 package lectures.mvc.properties;
 import lectures.interfaces.BMISpreadsheet;
+import lectures.mvc.toolkit.AnObservableBMISpreadsheet;
 import bus.uigen.ObjectEditor;
 public class AnObservableBMISpreadsheetDemoer {
 	public static void main (String[] args) {

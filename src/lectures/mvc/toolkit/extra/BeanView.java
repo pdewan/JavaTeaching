@@ -1,4 +1,4 @@
-package lectures.mvc.toolkit;
+package lectures.mvc.toolkit.extra;
 
 import java.beans.PropertyChangeListener;
 
