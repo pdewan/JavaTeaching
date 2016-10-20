@@ -13,21 +13,26 @@ import javax.swing.JTextField;
 import bus.uigen.ObjectEditor;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
 
+/*
+ * TOOLKIT-BASED MVC COMPOSITION 
+ * An exercise in creating our own view and controller, based not on console I/O
+ * but Toolkit I/O, which supports GUIS
+ * Run and interact with the program to see the two GUIS created, one by our view and controller
+ * and one by that of ObjectEditor and notice that the two UIs remain in sync, thanks to a common
+ * observable model
+ * 
 
-// TOOLKIT-BASED MVC COMPOSITION 
-// An exercise in creating our own view and controller, based not on console I/O
-// but Toolkit I/O, which supports GUIS
-// Run and interact with the program to see the two GUIS created, one by our view and controller
-// and one by that of ObjectEditor and notice that the two UIs remain in sync, thanks to a common
-// observable model
+ * The controller and view are responsible f * reacting to input and refreshing the display
+ * in response to model changes once the GUI is created.
+
+ * The task of creating the GUI is a a separate one, which we will do in this composer object
+ * We are essentially creating a widget tree of the kind we saw in an earlier application
+
+ * These variables create nodes of the widget/window tree
+ * 
+ */
 public class BMIFrameAndMVCComposer {
-	// The controller and view are responsible for reacting to input and refreshing the display
-	// in response to model changes once the GUI is created.
 	
-	// The task of creating the GUI is a a separate one, which we will do in this composer object
-	// We are essentially creating a widget tree of the kind we saw in an earlier application
-	
-	// These variables create nodes of the widget/window tree
 	static JFrame frame = new JFrame("BMI Spreadsheet");
 	static JTextField heightField = new JTextField();
 	static JLabel heightLabel = new JLabel("Height:");
