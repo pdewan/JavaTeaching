@@ -46,24 +46,25 @@ public class AnImprovedInheritingStringSet extends AnInheritingStringDatabase //
 //			addElement(element); 
 		}
 	}
+	
 	/*
 	 * Useless re-declaration, does nothing useful besides show
 	 * another form of overriding
 	 */
-	@Override
-	protected boolean isFull() {
-		/*
-		 * Click on the name isFull() and hit CTRL-SHIFT_G (or right click
-		 * menu, select References->Project) to see which method calls it. 
-		 * 
-		 * Set breakpoint below and debug-run.
-		 * 
-		 * When the program breaks look at the stack to see which method calls it and
-		 * where the method is declared
-		 */
-		System.out.println ("isFull called in Set");
-		return super.isFull();
-	}
+//	@Override
+//	protected boolean isFull() {
+//		/*
+//		 * Click on the name isFull() and hit CTRL-SHIFT_G (or right click
+//		 * menu, select References->Project) to see which method calls it. 
+//		 * 
+//		 * Set breakpoint below and debug-run.
+//		 * 
+//		 * When the program breaks look at the stack to see which method calls it and
+//		 * where the method is declared
+//		 */
+//		System.out.println ("isFull called in Set");
+//		return super.isFull();
+//	}
 	public int size() {
 		
 		System.out.println ("Set size() called");
@@ -140,6 +141,13 @@ public class AnImprovedInheritingStringSet extends AnInheritingStringDatabase //
  * 
  * Uncomment the re-declaration of the isFull() method and follow the 
  * instructions in it. 
+ * 
+ * (T/F) A method in superclass can call an overriding method in the subclass.
+ * 
+ * Can the addElement() method in ABaseStringHistory call the member() method
+ * in AnInheritingStringSet? Try it if you cannot answer the question.
+ *  
+ * (T/F) A method in a superclass can call a non-overriding method in the subclass.
  */
 /*
  * 
@@ -180,14 +188,9 @@ public class AnImprovedInheritingStringSet extends AnInheritingStringDatabase //
  * 
  * (T/F) System.out.println(o) calls the toString() method on o.  
  * 
- * Comment out the super.toString() call and uncomment the original when you are done.
+ * Comment out the super.toString() call and uncomment the original 
+ * when you are done.
  * 
- * (T/F) A method in superclass can call an overriding method in the subclass.
- * 
- * Can the addElement() method in ABaseStringHistory call the member() method
- * in AnInheritingStringSet? Try it if you cannot answer the question.
- *  
- * (T/F) A method in a superclass can call a non-overriding method in the subclass.
  */
 /*
  * 
