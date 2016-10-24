@@ -12,7 +12,8 @@ import util.annotations.ObserverTypes;
 /**
  * Study this code to create an observable BMI Spreadsheet. 
  * 
- * Compare it with the code for creating an AnObservableLine.
+ * Compare it with the code for creating an AnObservableLine (from the last praxis,
+ * Ctrl+click to go there)
  * 
  * Each read method in AnObservableBMISpreadsheet announces to the observers:
  *   (a) exactly one notification

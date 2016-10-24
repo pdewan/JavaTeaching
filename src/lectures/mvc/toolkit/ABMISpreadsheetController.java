@@ -7,19 +7,19 @@ import javax.swing.JTextField;
 
 import lectures.interfaces.BMISpreadsheet;
 /**
- * As we see below it is not only a controller for a the model
- * but an observer of the editable widgets, which are not models!
+ * As we see below, ABMISpreadSheetController is not only a controller for 
+ * the model, but an observer of the editable widgets, which are not models!
  * 
- * Here a listener == observer
+ * Here, a listener == observer
  * 
  * Study the code below.
  * 
- * (T/F) ABMISpreadsheetController is an observer a JSlider widget.
+ * (T/F) ABMISpreadsheetController is an observer of a JSlider widget.
  * 
  * (T/F) ABMISpreadsheetController is an observer of a JTextField widget.
  * 
  * 
- * Put a break point at the start of actionPerformed and observe the stack
+ * Put a break point at the start of actionPerformed so you can observe the stack
  * when it is hit.
  * 
  * Debug-run MVCToolkitMain.
@@ -28,28 +28,28 @@ import lectures.interfaces.BMISpreadsheet;
  * 
  * Edit the height field in the custom UI.
  * 
- * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController
  *  each time a new character is input in the height field.
  * 
- * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
- *  when the user pressed ENTER to finish editing the height field.
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController
+ *  when the user presses ENTER to finish editing the height field.
  *  
- * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController
  *  when the slider is dragged.
  *  
  * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
  *  when the the use releases the slider after dragging it.
  *  
- * (T/F) When the height field is changed, actionPeformded calls setHeight() in
+ * (T/F) When the height field is changed, actionPeformed calls setHeight() in
  * the model.
  * 
- * (T/F) When the height field is changed, actionPeformded calls getHeight() in
+ * (T/F) When the height field is changed, actionPeformed calls getHeight() in
  * the model.
  * 
- * (T/F) When the height field is changed, actionPeformded calls getBMI() in
+ * (T/F) When the height field is changed, actionPeformed calls getBMI() in
  * the model.
  * 
- * (T/F) When the height field is changed, the view calls getBMI() in the model
+ * (T/F) When the height field is changed, the view calls getBMI() in the model.
  * 
  * (T/F) When the height field is changed, propertyChange() is called in the view.
  *
@@ -71,7 +71,7 @@ public class ABMISpreadsheetController
 		weight.addActionListener(this);
 	}
 	/*
-	 *  Method called on on an observer of a textfield when a user enters new 
+	 *  Method called on an observer of a textfield when a user enters new 
 	 *  text and presses ENTER.
 	 */
 	public void actionPerformed(ActionEvent event) {
@@ -81,11 +81,13 @@ public class ABMISpreadsheetController
 		double val = Double.parseDouble(text);
 		// Depending on which observable notified, do different things
 		if (source == height) {
+			
 			/*
 			 * Step into this call to trace the actions that lead to a 
 			 * new BMI value being displayed by the progress bar and slider
 			 */
-			bmiSpreadsheet.setHeight(val);		
+			bmiSpreadsheet.setHeight(val);
+			
 		} else {
 			bmiSpreadsheet.setWeight(val);
 		}		

@@ -13,11 +13,13 @@ import javax.swing.JTextField;
  * 
  * Debug-run MVCToolkitMain.
  * 
- * Put a break point at the start of propertyChange method.
+ * Then, put a break point at the start of propertyChange method (after
+ * it is already debug-running).
  * 
  * Edit the height field in the OE UI.
  * 
- * When the breakpoint is hit, look at all the methods in the stack.
+ * When the breakpoint is hit, look at all the methods in the stack 
+ * (in the "Debug" window).
  * 
  * Look at the value of the argument to the method.
  * 
@@ -26,27 +28,24 @@ import javax.swing.JTextField;
  * Which is true:
  * (a) propertyChange in ABMISpreadsheetView is called directly by 
  * notifyAllListeners in APropertyListenerSupport.
- * 
  * (b) notifyAllListeners in APropertyListenerSupport is called directly by 
  * propertyChange in ABMISpreadsheetView.
  * 
  * Which is true:
- * 
  * (a) notifyAllListeners in APropertyListenerSupport is called directly by 
- * setHeight in AnObservableBMISpreadsheet
- * 
+ * setHeight in AnObservableBMISpreadsheet.
  * (b) setHeight in AnObservableBMISpreadsheet is called directly by 
  * notifyAllListeners in APropertyListenerSupport.
  * 
  * When the height property is changed, propertyChange calls:
- * (a) heightField.setText();
- * (b) weightField.setText();
- * (c) bmiSlider.setValue();
- * (d) bmiProgressBar.setValue();
+ * (a) heightField.setText()
+ * (b) weightField.setText()
+ * (c) bmiSlider.setValue()
+ * (d) bmiProgressBar.setValue()
  *  
  * Terminate the running program. 
  *
- * Debug-run it again, while keeping the break point again.
+ * Debug-run it again, while keeping the same break point from the start.
  * 
  * Which is true:
  * (a) propertyChange in ABMISpreadsheetView is called directly by setHeight() 
@@ -54,13 +53,15 @@ import javax.swing.JTextField;
  * (b) propertyChange in ABMISpreadsheetView is called directly by 
  * addPropertyChangeListener() in AnObservableBMISpreadsheet.
  * 
+ * Step through for a while until you see what is going on.
+ * 
  * When the view becomes an observer of the model, 
  * (a) the widgets displaying all properties are refreshed.
  * (b) the widgets displaying editable properties are refreshed.
  * (c) the widgets displaying readonly properties are refreshed.
- * (d) no widgets are refreshed
+ * (d) no widgets are refreshed.
  * 
- * Next class ABMISpreadsheetController
+ * Next class: ABMISpreadsheetController
  *  
  */
 public class ABMISpreadsheetView implements PropertyChangeListener {
@@ -74,8 +75,9 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
 		bmiSlider = theBMISlider;	
 		bmiProgressBar = theBMIProgressBar;
 	}
+	
 	/*
-	 * Method called on a PropertyChangeLisetner when a property event is fired.
+	 * Method called on a PropertyChangeListener when a property event is fired.
 	 * The ObjectEditor views implement this method.
 	 * Here, one of our views is doing so.	 
 	 */
@@ -84,13 +86,13 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
 		Double newValue = (Double) event.getNewValue();
 		
 		/* 
-		 * Depending on which property was updated, change the appopriate widget 
+		 * Depending on which property was updated, change the appropriate widget 
 		 */
 		if (propertyName.equalsIgnoreCase("height")) {
 			
 			/* 
 			 * setText is just like println except that it updates existing text rather 
-			 * than displaying a new value
+			 * than displaying an additional value
 			 */
 			heightField.setText(newValue.toString()); 
 		} else if (propertyName.equalsIgnoreCase("weight")) {		
