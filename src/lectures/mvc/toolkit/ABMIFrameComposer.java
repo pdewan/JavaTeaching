@@ -12,8 +12,17 @@ import javax.swing.JTextField;
 
 import bus.uigen.ObjectEditor;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
-
-
+/**
+ * Study the program and run it.
+ * 
+ * Try and change the various widgets in the user-interface.
+ * 
+ * (T/F) Changing the height field in the custom UI causes changes in other widgets.
+ *
+ * Next class: ABMISpreadsheetView
+ * 
+ *
+ */
 public class ABMIFrameComposer implements BMIFrameComposer{	
 	 JFrame frame = new JFrame("BMI Spreadsheet");
 	 JTextField heightField = new JTextField();	 

@@ -6,9 +6,55 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 import lectures.interfaces.BMISpreadsheet;
-// TOOLKIT CONTROLLER
-// As we see below it is not only a controller for a the model
-// but an observer of the editable widgets, which are not models!
+/**
+ * As we see below it is not only a controller for a the model
+ * but an observer of the editable widgets, which are not models!
+ * 
+ * Here a listener == observer
+ * 
+ * Study the code below.
+ * 
+ * (T/F) ABMISpreadsheetController is an observer a JSlider widget.
+ * 
+ * (T/F) ABMISpreadsheetController is an observer of a JTextField widget.
+ * 
+ * 
+ * Put a break point at the start of actionPerformed and observe the stack
+ * when it is hit.
+ * 
+ * Debug-run MVCToolkitMain.
+ * 
+ * Change the slider in the custom UI.
+ * 
+ * Edit the height field in the custom UI.
+ * 
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ *  each time a new character is input in the height field.
+ * 
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ *  when the user pressed ENTER to finish editing the height field.
+ *  
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ *  when the slider is dragged.
+ *  
+ * (T/F) The actionPerformed method is called in ABMISpreadsheetController:
+ *  when the the use releases the slider after dragging it.
+ *  
+ * (T/F) When the height field is changed, actionPeformded calls setHeight() in
+ * the model.
+ * 
+ * (T/F) When the height field is changed, actionPeformded calls getHeight() in
+ * the model.
+ * 
+ * (T/F) When the height field is changed, actionPeformded calls getBMI() in
+ * the model.
+ * 
+ * (T/F) When the height field is changed, the view calls getBMI() in the model
+ * 
+ * (T/F) When the height field is changed, propertyChange() is called in the view.
+ *
+ *  
+ */
 public class ABMISpreadsheetController 
 	implements ActionListener { // The observer interface defined by the editable widgets
 	JTextField height, weight;
@@ -17,11 +63,17 @@ public class ABMISpreadsheetController
 		height = theHeight;
 		weight = theWeight;
 		bmiSpreadsheet = theBMISpreadsheet;
-		// Making this object an observer of two different observable widgets
+		
+		/*
+		 *  Making this object an observer of two different observable widgets
+		 */
 		height.addActionListener(this);
 		weight.addActionListener(this);
 	}
-	// Method called on on an observer of a textfield when a user enters new text and presses ENTER
+	/*
+	 *  Method called on on an observer of a textfield when a user enters new 
+	 *  text and presses ENTER.
+	 */
 	public void actionPerformed(ActionEvent event) {
 	
 		JTextField source = (JTextField) event.getSource();
@@ -29,14 +81,14 @@ public class ABMISpreadsheetController
 		double val = Double.parseDouble(text);
 		// Depending on which observable notified, do different things
 		if (source == height) {
+			/*
+			 * Step into this call to trace the actions that lead to a 
+			 * new BMI value being displayed by the progress bar and slider
+			 */
 			bmiSpreadsheet.setHeight(val);		
 		} else {
 			bmiSpreadsheet.setWeight(val);
 		}		
-	}
-	
-	// Put a break point in actionPerformed and trace the actions that lead to a new BMI value being displayed
-	// by the progress bar and slider. Step return (F7) when you execute the propertyChange 
-	// method in ObjectEditor
+	}	
 	
 }

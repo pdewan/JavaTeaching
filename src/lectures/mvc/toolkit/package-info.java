@@ -15,12 +15,14 @@
  * functionality of an interactive application into different objects.
  * 
  *  NAVIGATION-INFO
- *  BMIFrameAndMVCComposer
- *  AnObservableBMISpreadsheet
- *  ABMISpreadsheetView
- *  ABMISpreadsheetController
- *  BMIFrameAndMVCComposer
  *  
+ *  AnObservableBMISpreadsheet
+ *  MVCToolkitMain
+ *  
+ *  ABMIFrameComposer
+ *  ABMIMVCComposer   
+ *  ABMISpreadsheetView
+ *  ABMISpreadsheetController *  
  *  
  * 
  */
