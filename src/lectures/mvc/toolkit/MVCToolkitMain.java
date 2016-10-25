@@ -2,7 +2,7 @@ package lectures.mvc.toolkit;
 
 import bus.uigen.ObjectEditor;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
-/*
+/**
  * 
  * This is an exercise in creating our own alternative to ObjectEditor for a BMI
  * spreadsheet. 
@@ -20,7 +20,7 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
  * (T/F) In MVCToolkitMain, in the custom UI, a widget displaying the BMI property can be edited. 
  * (T/F) In MVCToolkitMain, changing the height field in the custom UI causes changes in other widgets. 
  * (T/F) In MVCToolkitMain, the OE and Custom UI are always in sync. That is, when an edit is committed
- * in one UI, the two UIS show the same information. 
+ * to an editable property in one UI, the two UIS show the same information. 
  * 
  * Study the code below. 
  * 

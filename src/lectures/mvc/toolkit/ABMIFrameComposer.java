@@ -17,7 +17,8 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
  * 
  * Try and change the various widgets in the user-interface.
  * 
- * (T/F) Changing the height field when using the custom UI by itself causes changes in other widgets.
+ * (T/F) Changing the height field in the custom UI created by ABMIFrameComposer
+ * causes changes in other widgets.
  *
  * Next class: ABMISpreadsheetView
  * 
