@@ -37,7 +37,8 @@ import javax.swing.JTextField;
  * (b) setHeight in AnObservableBMISpreadsheet is called directly by 
  * notifyAllListeners in APropertyListenerSupport.
  * 
- * When the height property is changed, propertyChange calls:
+ * When the height property is set in the model, the resulting calls to propertyChange 
+ * in the view call:
  * (a) heightField.setText()
  * (b) weightField.setText()
  * (c) bmiSlider.setValue()
