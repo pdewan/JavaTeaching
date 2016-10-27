@@ -1,6 +1,5 @@
 package lectures.animation.threads_commands;
 
-import lectures.animation.loops.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 // This is an example of a command object.
 // A Command Object is one that provides a parameterless method to

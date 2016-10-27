@@ -1,7 +1,7 @@
 package lectures.animation.threads.synchronized_methods;
 
-import lectures.animation.loops.ShuttleAnimator;
 import lectures.animation.threads_commands.ConcurrentShuttleLaunchAnimation;
+import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.animation.threads_commands.ThreadSupport;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;

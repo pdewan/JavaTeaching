@@ -5,9 +5,9 @@ import java.beans.PropertyChangeListener;
 
 import javax.swing.JFrame;
 
-import lectures.animation.loops.AShuttleAnimator;
 import lectures.animation.loops.ShuttleAnimationDriver;
-import lectures.animation.loops.ShuttleAnimator;
+import lectures.animation.threads_commands.AShuttleAnimator;
+import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.mvc.graphics.APlottedShuttleView;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import lectures.mvc.properties.ObservablePlottedShuttle;

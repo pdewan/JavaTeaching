@@ -1,6 +1,6 @@
 package lectures.animation.threads.wait_notify;
 
-import lectures.animation.loops.ShuttleAnimator;
+import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 /*

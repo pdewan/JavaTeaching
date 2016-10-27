@@ -1,7 +1,5 @@
 package lectures.animation.threads_commands;
 
-import lectures.animation.loops.AShuttleAnimator;
-import lectures.animation.loops.ShuttleAnimator;
 import lectures.animation.loops.SingleShuttleAnimation;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;

@@ -1,4 +1,4 @@
-package lectures.animation.loops;
+package lectures.animation.threads_commands;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
 import bus.uigen.OEFrame;

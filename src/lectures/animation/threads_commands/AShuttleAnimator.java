@@ -1,7 +1,6 @@
-package lectures.animation.loops;
+package lectures.animation.threads_commands;
 
 import util.annotations.Visible;
-import lectures.animation.threads_commands.ThreadSupport;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import bus.uigen.OEFrame;
 public class AShuttleAnimator implements ShuttleAnimator {	

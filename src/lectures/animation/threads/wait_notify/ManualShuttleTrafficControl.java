@@ -1,8 +1,8 @@
 package lectures.animation.threads.wait_notify;
 
 import util.models.AListenableVector;
-import lectures.animation.loops.ShuttleAnimator;
 import lectures.animation.threads_commands.ConcurrentShuttleLaunchAnimation;
+import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.extra.AnObservableStringSet;
