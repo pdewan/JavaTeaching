@@ -85,9 +85,9 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 		ShuttleAnimator shuttleAnimator2 = new AShuttleAnimator();
 		
 		// Replace (by commenting/uncommenting) the two uncommented lines below with the two commented ones
-//		serialShuttleAnimation(shuttleAnimator1, shuttle1);
-//		serialShuttleAnimation(shuttleAnimator2, shuttle2);
-		concurrentDemoShuttleAnimation(shuttleAnimator1, shuttle1);
-		concurrentDemoShuttleAnimation(shuttleAnimator2, shuttle2);
+		serialShuttleAnimation(shuttleAnimator1, shuttle1);
+		serialShuttleAnimation(shuttleAnimator2, shuttle2);
+//		concurrentDemoShuttleAnimation(shuttleAnimator1, shuttle1);
+//		concurrentDemoShuttleAnimation(shuttleAnimator2, shuttle2);
 	}	
 }
