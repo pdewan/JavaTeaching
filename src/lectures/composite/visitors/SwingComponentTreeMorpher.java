@@ -7,7 +7,7 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-import lectures.animation.threads_commands.ThreadSupport;
+import lectures.animation.threads_commands.extra.ThreadSupport;
 import lectures.composite.design_pattern.CompositeSwingComponentCreator;
 import bus.uigen.util.SingleStepper;
 

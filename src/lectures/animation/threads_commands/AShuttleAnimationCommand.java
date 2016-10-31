@@ -1,16 +1,37 @@
 package lectures.animation.threads_commands;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
-// This is an example of a command object.
-// A Command Object is one that provides a parameterless method to
-// execute a command - method with parameters - on another object called the target object.
-// We will refer to such a method as an execute method.
-// What is the execute method called in this example.
-// What is the class of the target object.
-// What is the name of the target method?
-// How is the target object determined in this example?
-// How is the target method determined?
-// How are the parameters of the target method determined?
+/**
+ * This is an example of a command-object.
+ * A command object represents a method call or commmand. 
+ * 
+ * It provides a parameterless method, called execute or run,  
+ * which can be used to make the call.
+ * 
+ * Thus, its execute method is called to make another call, which we will
+ * call the target call.
+ * 
+ * In this class, the execute method is named run, and it calls animateFromOrigin
+ * in an instance of ShuttleAnimator. 
+ * 
+ * The object on which a target call is made and the parameters of the call
+ * are passed as arguments to the constructor of a command object.
+ * 
+ * In this example, the instance of ShuttleAnimator and the parameters of 
+ * animateFromOrigin are passed as parameters to the constructor.
+ * 
+ * These parameters are then used by the run method to make the call.
+ * 
+ * The execute() method of a command object is defined by some standard interface.
+ *  
+ * 
+ * 
+ * Study the constructor and instance method provided by this class. *
+ * 
+ * Follow the instructions below. 
+ * 
+ *
+ */
 public class AShuttleAnimationCommand 
 	implements Runnable { // A Java Interface
 	ShuttleAnimator shuttleAnimator;
@@ -29,15 +50,14 @@ public class AShuttleAnimationCommand
 	
 	
 	public void run() {
-		// Put break point below.
-		// When you hit it, which method is in the base of the stack of the stopped threads - 
-		// that is the threads in which the break occurred?
-		// Is the main thread in the list?
-		// Select one of the two stopped threads, Press F8 to go to the next break point.	
+			
 		System.out.println (
 				Thread.currentThread() +
 				" about to call animateFromOrigin in:" +
 				shuttleAnimator);
+		/*
+		 * Put break point below
+		 */
 		shuttleAnimator.animateFromOrigin(shuttle, animationStep, animationPauseTime);
 		System.out.println (
 				Thread.currentThread().getName() +
@@ -48,4 +68,34 @@ public class AShuttleAnimationCommand
 	public String toString() {
 		return getClass().getSimpleName() + "@" + hashCode();
 	}
+/*
+ * 
+ * Put the break point in the  run() method of the class and look at the stack.
+ * 
+ * Switch to concurrentShuttleAnimation and debug-run the main class.
+ * 
+ * 
+ * (T/F) The run() method of the command object takes parameters. 
+ * 
+ * (T/F) The constructor of the command object determines the instance on which
+ * the run method makes the target call.
+ * 
+ * (T/F) The constructor of the command object determines the parameters of the
+ * target call.
+ * 
+ * (T/F) The constructor of the command object determines which method is invoked
+ * in the target call.
+ * 
+ * (T/F) The run() method of AShuttleAnimationCommand is called by the Thread constructor.
+ * 
+ * (T/F) The run() method of AShuttleAnimationCommand is called by the Thread.run().
+ * 
+ * (T/F) The run() method of AShuttleAnimationCommand is defined in the predefined
+ * Java interface,  Runnable
+ * 
+ * 
+ * Go to DESIGN PATTERN in main class:ConcurrentShuttleLaunchAnimation
+ *
+ *
+ */
 }

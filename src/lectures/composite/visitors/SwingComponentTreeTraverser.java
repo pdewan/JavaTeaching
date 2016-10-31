@@ -3,7 +3,7 @@ package lectures.composite.visitors;
 import java.awt.Component;
 import java.awt.Container;
 
-import lectures.animation.threads_commands.ThreadSupport;
+import lectures.animation.threads_commands.extra.ThreadSupport;
 
 public class SwingComponentTreeTraverser {	
 	public static void traversePreOrder(Component aComponent, ComponentVisitor aVisitor) {	
