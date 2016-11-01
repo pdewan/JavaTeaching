@@ -169,8 +169,6 @@ public class AShuttleAnimator implements ShuttleAnimator {
  * (T/F) During serial animation, AShuttleAnimationCommand.run() is called by
  * Thread.run().
  * 
- * (T/F) During serial animation, the program has to be resumed twice to finish
- * the animation.
  * 
  * (T/F) During serial animation, the message "Main terminates" is the last output
  * in the console.

@@ -219,8 +219,10 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * (T/F) The class of a command object is a subclass of the Thread class.
  * 
  * (T/F) It is possible to create two different threads and command objects that
- * animate the same object simultaneously.
+ * animate the same object simultaneously. 
+ * (You do not see the answer directly in the praxis so have to deduce it from what you have learned)
  * 
- * (T/F) A command object can be used only to start threads.
+ * (T/F) A command object can be used only to start threads. 
+ * (You do not see the answer directly in the praxis so have to deduce it from what you have learned)
  */
 }
