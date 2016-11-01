@@ -217,6 +217,9 @@ public class AShuttleAnimator implements ShuttleAnimator {
  * (T/F) During concurrent animation, the message "main terminates" is the last output
  * in the console.
  * 
+ * (T/F) Other threads in a program can continue to execute after the main method
+ * and thread of the program terminates.
+ * 
  * Study the code in this class and step over the println if necessary:
  * 
  * (T/F) The class AShuttleAnimator implements separate methods to animate the shuttle

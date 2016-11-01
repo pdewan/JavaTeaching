@@ -40,7 +40,7 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 	public static void concurrentDemoShuttleAnimation(ShuttleAnimator aShuttleAnimator, PlottedShuttle aShuttle) {
 		
 		/* Comment this out and uncomment the following line when asked */
-		Thread thread = new Thread(
+		Thread aThread = new Thread(
 			new AShuttleAnimationCommand(
 					aShuttleAnimator, aShuttle, 
 					ANIMATION_STEP, 
@@ -49,12 +49,13 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 //		Thread thread = new Thread();
 		
 		threadNumber++;
-		thread.setName(SHUTTLE_THREAD_NAME + " " + threadNumber);
+		aThread.setName(SHUTTLE_THREAD_NAME + " " + threadNumber);
 		
 		/*
 		 * Comment this out when asked:
 		 */
-		thread.start();
+		aThread.start();
+		System.out.println ("Thread:" + Thread.currentThread() + " has started " + aThread);
 	}
 	
 	public static void serialShuttleAnimation() {
@@ -166,6 +167,12 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * concurrentDemoShuttleAnimation shows the use of Thread objects.
  * 
  * It creates a thread and then starts it.
+ * 
+ * Look at the output produced by it.
+ * 
+ * Thread[Shuttle Animation 2] is started by:
+ * 	 (a) Thread[Shuttle Animation 1]
+ *   (b) Thread[main]
  * 
  * 
  * Comment out Thread.start(), switch to concurrent animation, and observe what
