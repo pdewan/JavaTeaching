@@ -18,14 +18,6 @@ import bus.uigen.ObjectEditor;
  * 
  * Study the code in this class, and follow the instructions at the end.
  */
- 
-
-
-
-
-
-
-
 
 public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 	static int threadNumber = 0;
@@ -34,30 +26,33 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 	protected final static int START_FRAME_Y = 50;
 	protected final static int SHUTTLE2_X = 100;
 	protected final static int SHUTTLE2_Y = 50;
+	
 	protected static int shuttleNumber = 0;
 	protected static PlottedShuttle shuttle1;
 	protected static PlottedShuttle shuttle2;
 	protected  static ShuttleAnimator shuttleAnimator1;
 	protected static ShuttleAnimator shuttleAnimator2;
+	
 	protected static void printAllThreads() {
 		System.out.println ("Current threads:" + Thread.getAllStackTraces().keySet());
 	}
+	
 	public static void concurrentDemoShuttleAnimation(ShuttleAnimator aShuttleAnimator, PlottedShuttle aShuttle) {
 		
+		/* Comment this out and uncomment the following line when asked */
 		Thread thread = new Thread(
 			new AShuttleAnimationCommand(
 					aShuttleAnimator, aShuttle, 
 					ANIMATION_STEP, 
-					ANIMATION_PAUSE_TIME));	
-//		Thread thread = new Thread(
-//				new AShuttleAnimationCommand(
-//						aShuttleAnimator, aShuttle, 
-//						ANIMATION_STEP, 
-//						ANIMATION_PAUSE_TIME));
+					ANIMATION_PAUSE_TIME));
+		
+//		Thread thread = new Thread();
+		
 		threadNumber++;
 		thread.setName(SHUTTLE_THREAD_NAME + " " + threadNumber);
+		
 		/*
-		 * Comment this out
+		 * Comment this out when asked:
 		 */
 		thread.start();
 	}
@@ -78,9 +73,11 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 		displayShuttleFrame(shuttle2);
 		shuttleAnimator1 = new AShuttleAnimator();
 		shuttleAnimator2 = new AShuttleAnimator();	
+		
 		// you will need to switch between the two calls
-//		serialShuttleAnimation();		
-		concurrentShuttleAnimation();
+		serialShuttleAnimation();		
+//		concurrentShuttleAnimation();
+		
 		System.out.println ("Main terminates");
 
 	}
@@ -89,22 +86,22 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * 
  * Run the program and observe the animations in the object editor user interfaces.
  * 
- * Now uncomment the call to concurrentShuttleAnimation and comment out the
+ * Now uncomment the call to concurrentShuttleAnimation in main and comment out the
  * call to serialShuttleAnimation.
  * 
  * Observe the animations again.
  * 
- * (T/F)serialShuttleAnimation starts animating shuttle2 after finishing animating
+ * (T/F) serialShuttleAnimation starts animating shuttle2 after finishing animating
  * shuttle1.
  * 
- * (T/F)serialShuttleAnimation ensures that the two shuttles do not climb up at the same
+ * (T/F) serialShuttleAnimation ensures that the two shuttles do not climb up at the same
  * time. 
  * 
- * (T/F) concurrentShuttleAnimation starts animating shuutle2 after finishing 
+ * (T/F) concurrentShuttleAnimation starts animating shuttle2 after finishing 
  * animating shuttle1. 
  * 
- * (T/F)serialShuttleAnimation ensures that the two shuttles do not climb up at the same
- * time.   
+ * (T/F) concurrentShuttleAnimation ensures that the two shuttles do not climb up at the same
+ * time.
  * 
  */
 /*
@@ -114,7 +111,7 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * output in addition to the OE display.
  * 
  * The idea is to understand the nature of Thread objects, where Thread is
- * a predefiend Java class.
+ * a predefined Java class.
  * 
  * The program displays these objects using strings of the form:
  * Thread[<Thread Name>} 
@@ -140,12 +137,13 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  *    2
  *    3 
  * 
- * To get further under the hood, let is try and understand where these objects
+ * To get further under the hood, let us try and understand where these objects
  * are being printed.
  * 
- * Go to AShuttleAnimator and answer the questions there. You will need to
- * switch between serial and concurrent execution.
+ * Go to the AShuttleAnimator class and answer the questions there. You will need to
+ * switch between serial and concurrent execution in this class.
  */
+	
 /*
  * COMMAND OBJECTS
  * 
@@ -158,16 +156,16 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * If different threads do different things, then somehow different Thread.run() calls
  * should call different methods.
  * 
- * Thread.run() does not take parameters. So this means, when a Thread object is
- * constructed we must tell the constructor which method to call and what the parameters of the
- * method should be.
+ * Thread.run() does not take parameters. So, this means that when a Thread object is
+ * constructed, we must tell the constructor which method to call and what the parameters
+ * of the method should be.
  * 
  * These two pieces of information are encapsulated in a command object, which
  * is passed to the thread constructor.
  * 
  * concurrentDemoShuttleAnimation shows the use of Thread objects.
  * 
- * It creates a thread and then starts it. * 
+ * It creates a thread and then starts it.
  * 
  * 
  * Comment out Thread.start(), switch to concurrent animation, and observe what
@@ -182,26 +180,27 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * the animation does not start.
  * 
  *  Go to AShuttleAnimationCommand
- * 
- * 
- * 
- * 
  */
+	
+	
 /*
  * THREAD AND ANIMATION DESIGN PATTERN
  * We see here a design pattern for using threads to animate objects that has
  * the following components:
  * 
  * Animated object - the object being animated. In this case it is an instance of
- * PlottedShuttle.
+ * AnObservablePlottedShuttle.
  * 
  * The animating object -  the object implementing the animation. In this case,
- * it is an instance of APlottedShuttle.
+ * it is an instance of AShuttleAnimator.
  * 
- * Command object - the object that interacts with the animating object
- * to start the animation -> AShuttleAnimationCommand
+ * Command object - this object wraps a call to the animating object so that it
+ * can be placed inside a separate thread. The command object is what starts the
+ * animation (here, it is AShuttleAnimationCommand).
  * 
- * Thread object - this object that interacts with the commmand object.
+ * Thread object - this object takes a command object and allows the animation to
+ * proceed in a separate, concurrent thread. This is the Java Thread object.
+ * 
  * 
  * Based on this design pattern answer the following questions:
  * 
@@ -223,40 +222,5 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
  * animate the same object simultaneously.
  * 
  * (T/F) A command object can be used only to start threads.
- * 
- * 
- *  
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
-/*
- * ANIMATING METHOD AND THREAD STACKS
- * 
- * To get further under the hood, let is try and understand wqhere
- * 
- * The console prints out Java thread objects
- * 
- * You will see printouts of the form: Thread[<Thread Name>} where <Thread Name>
- * gives the name of a thread. Each of these printouts
- * 
- * 
- * 
- * 
- * 
- * 
- * The console output is cluttered, so we will at different aspects of the output.
- * 
- * 
- * 
- * Switch back to serialShutleAnimation again.
- * 
- */
-
-	 
-	
 }

@@ -3,7 +3,7 @@ package lectures.animation.threads_commands;
 import lectures.composite.objects_shapes.PlottedShuttle;
 /**
  * This is an example of a command-object.
- * A command object represents a method call or commmand. 
+ * A command object represents a method call or command. 
  * 
  * It provides a parameterless method, called execute or run,  
  * which can be used to make the call.
@@ -22,11 +22,11 @@ import lectures.composite.objects_shapes.PlottedShuttle;
  * 
  * These parameters are then used by the run method to make the call.
  * 
- * The execute() method of a command object is defined by some standard interface.
+ * The execute/run method of a command object is defined by some standard interface.
  *  
  * 
  * 
- * Study the constructor and instance method provided by this class. *
+ * Study the constructor and instance method provided by this class.
  * 
  * Follow the instructions below. 
  * 
@@ -34,10 +34,12 @@ import lectures.composite.objects_shapes.PlottedShuttle;
  */
 public class AShuttleAnimationCommand 
 	implements Runnable { // A Java Interface
+	
 	ShuttleAnimator shuttleAnimator;
 	PlottedShuttle shuttle;
 	int animationStep;
 	int animationPauseTime;	
+	
 	public AShuttleAnimationCommand (ShuttleAnimator aShuttleAnimator,
 								PlottedShuttle aShuttle, 
 								int anAnimationStep, 
@@ -70,7 +72,7 @@ public class AShuttleAnimationCommand
 	}
 /*
  * 
- * Put the break point in the  run() method of the class and look at the stack.
+ * Put the break point in the  run() method of the class.
  * 
  * Switch to concurrentShuttleAnimation and debug-run the main class.
  * 
@@ -90,11 +92,12 @@ public class AShuttleAnimationCommand
  * 
  * (T/F) The run() method of AShuttleAnimationCommand is called by the Thread.run().
  * 
- * (T/F) The run() method of AShuttleAnimationCommand is defined in the predefined
- * Java interface,  Runnable
+ * (T/F) The run() method of AShuttleAnimationCommand is declared in the predefined
+ * Java interface, Runnable.
  * 
  * 
- * Go to DESIGN PATTERN in main class:ConcurrentShuttleLaunchAnimation
+ * Return to the main class (ConcurrentShuttleLaunchAnimation), to the THREAD AND
+ * ANIMATION DESIGN PATTERN section.
  *
  *
  */
