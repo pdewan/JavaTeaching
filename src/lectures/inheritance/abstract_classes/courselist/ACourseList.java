@@ -1,4 +1,6 @@
-package lectures.inheritance.abstract_classes;
+package lectures.inheritance.abstract_classes.courselist;
+
+import lectures.inheritance.abstract_classes.Course;
 
 public class ACourseList implements CourseList, TitleMatcher {
 	static final int MAX_SIZE = 50;

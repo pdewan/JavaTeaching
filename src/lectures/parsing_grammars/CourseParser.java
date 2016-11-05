@@ -1,7 +1,7 @@
 package lectures.parsing_grammars;
 
 import lectures.inheritance.abstract_classes.Course;
-import lectures.inheritance.abstract_classes.CourseList;
+import lectures.inheritance.abstract_classes.courselist.CourseList;
 
 public interface CourseParser {
 	public CourseList parseCourseList();

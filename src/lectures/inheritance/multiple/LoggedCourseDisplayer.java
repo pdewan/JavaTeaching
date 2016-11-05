@@ -1,8 +1,8 @@
 package lectures.inheritance.multiple;
 
-import lectures.inheritance.abstract_classes.ACourseList;
 import lectures.inheritance.abstract_classes.Course;
-import lectures.inheritance.abstract_classes.CourseList;
+import lectures.inheritance.abstract_classes.courselist.ACourseList;
+import lectures.inheritance.abstract_classes.courselist.CourseList;
 import util.misc.Console;
 
 public class LoggedCourseDisplayer {

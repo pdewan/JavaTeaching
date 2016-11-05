@@ -1,10 +1,8 @@
 package lectures.parsing_grammars;
 
+import lectures.inheritance.abstract_classes.ACourseDisplayer;
+import lectures.inheritance.abstract_classes.ACourseDisplayer1;
 import lectures.inheritance.abstract_classes.CourseDisplayer;
-// This is a variation of the CourseDisplayer we saw earlier except that it
-// has two phases. The first phase allows users to enter new courses until a "."
-// is pressed. The second phase is as in the previous version, in which one can
-// queries for courses.
 
 // Here is an example legal interaction - the prompts are
 // the output, the other lines are input.
@@ -69,18 +67,24 @@ import lectures.inheritance.abstract_classes.CourseDisplayer;
 
 
 
-public class ParsingCourseDisplayer extends CourseDisplayer {
+public class AParsingCourseDisplayer extends ACourseDisplayer1 {
 
-	public static void main(String[] args) {
-		fillCoursesInteractively();
-		matchTitles();
-	}
-	static void fillCoursesInteractively() {
+	@Override
+	public void fillCourses() {
         System.out.println("Please enter course info, terminating with a period:");
         // Put a break point below and use F5 to step into parseCourseList
         // which is parser for the root non terminal, CourseList. 
         courses = (new ACourseParser()).parseCourseList();
    }
+	protected static CourseDisplayer createCourseDisplayer() {
+		return new AParsingCourseDisplayer();
+	}
+
+	public static void main(String[] args) {
+		CourseDisplayer aCourseDisplayer = createCourseDisplayer();
+		aCourseDisplayer.fillCourses();
+		aCourseDisplayer.matchTitles();
+	}
 
 	
 }

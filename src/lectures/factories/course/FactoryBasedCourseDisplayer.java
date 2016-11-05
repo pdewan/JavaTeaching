@@ -1,14 +1,20 @@
 package lectures.factories.course;
 
+import lectures.inheritance.abstract_classes.ACourseDisplayer1;
 import lectures.inheritance.abstract_classes.CourseDisplayer;
 
-public class FactoryBasedCourseDisplayer extends CourseDisplayer {
+public class FactoryBasedCourseDisplayer extends ACourseDisplayer1 {
 
+	
+   protected static CourseDisplayer createCourseDisplayer() {
+    	return new FactoryBasedCourseDisplayer();
+    }
 	public static void main(String[] args) {
-		fillCoursesWithFactories();
-		matchTitles();
+		CourseDisplayer aCourseDisplayer = createCourseDisplayer();
+		aCourseDisplayer.fillCourses();
+		aCourseDisplayer.matchTitles();
 	}
-	protected static void fillCoursesWithFactories() {
+	public  void fillCourses() {
 		CourseFactory courseFactory = new ACourseFactory();
 		courses.addElement(courseFactory.getRegularCourse("Intro. Prog.", "COMP", 14));
 		courses.addElement(courseFactory.getRegularCourse("Found. of Prog.", "COMP", 114));

@@ -2,11 +2,11 @@ package lectures.parsing_grammars;
 
 import java.util.Scanner;
 
-import lectures.inheritance.abstract_classes.ACourseList;
 import lectures.inheritance.abstract_classes.AFreshmanSeminar;
 import lectures.inheritance.abstract_classes.ARegularCourse;
 import lectures.inheritance.abstract_classes.Course;
-import lectures.inheritance.abstract_classes.CourseList;
+import lectures.inheritance.abstract_classes.courselist.ACourseList;
+import lectures.inheritance.abstract_classes.courselist.CourseList;
 import lectures.main_consoleinput.Console;
 // Each parsing method has a comment indicating which Non terminal it is processing
 // A non terminal may be the LHS for several productions
