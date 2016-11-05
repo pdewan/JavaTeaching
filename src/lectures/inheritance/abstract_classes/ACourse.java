@@ -20,10 +20,6 @@ public abstract class ACourse
 
 	public String getDepartment() {
 		return dept;
-	}
-	// Uncomment this method. What error do you get?
-//	public static void testInstantiation() {
-//		new ACourse();
-//	}
+	}	
 	
 }

@@ -1,7 +1,7 @@
 package lectures.parsing_grammars;
 
 import lectures.inheritance.abstract_classes.ACourseDisplayer;
-import lectures.inheritance.abstract_classes.ACourseDisplayer1;
+import lectures.inheritance.abstract_classes.ACourseDisplayer2;
 import lectures.inheritance.abstract_classes.CourseDisplayer;
 
 // Here is an example legal interaction - the prompts are
@@ -67,7 +67,7 @@ import lectures.inheritance.abstract_classes.CourseDisplayer;
 
 
 
-public class AParsingCourseDisplayer extends ACourseDisplayer1 {
+public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 
 	@Override
 	public void fillCourses() {

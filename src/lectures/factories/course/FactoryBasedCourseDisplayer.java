@@ -1,9 +1,9 @@
 package lectures.factories.course;
 
-import lectures.inheritance.abstract_classes.ACourseDisplayer1;
+import lectures.inheritance.abstract_classes.ACourseDisplayer2;
 import lectures.inheritance.abstract_classes.CourseDisplayer;
 
-public class FactoryBasedCourseDisplayer extends ACourseDisplayer1 {
+public class FactoryBasedCourseDisplayer extends ACourseDisplayer2 {
 
 	
    protected static CourseDisplayer createCourseDisplayer() {

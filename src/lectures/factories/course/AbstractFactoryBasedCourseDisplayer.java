@@ -1,8 +1,8 @@
 package lectures.factories.course;
 
-import lectures.inheritance.abstract_classes.ACourseDisplayer1;
+import lectures.inheritance.abstract_classes.ACourseDisplayer2;
 
-public class AbstractFactoryBasedCourseDisplayer extends ACourseDisplayer1 {
+public class AbstractFactoryBasedCourseDisplayer extends ACourseDisplayer2 {
 
 	
 	public void fillCourses() {

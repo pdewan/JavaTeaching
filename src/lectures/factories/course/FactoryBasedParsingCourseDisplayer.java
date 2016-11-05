@@ -1,9 +1,9 @@
 package lectures.factories.course;
 
-import lectures.inheritance.abstract_classes.ACourseDisplayer1;
+import lectures.inheritance.abstract_classes.ACourseDisplayer2;
 import lectures.inheritance.abstract_classes.CourseDisplayer;
 
-public class FactoryBasedParsingCourseDisplayer extends ACourseDisplayer1 {
+public class FactoryBasedParsingCourseDisplayer extends ACourseDisplayer2 {
 	
 	public void fillCourses() {
         System.out.println("Please enter course info, terminating with a period:");

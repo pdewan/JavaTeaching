@@ -8,6 +8,9 @@ public class AnotherFreshmanSeminar  implements FreshmanSeminar {
 		dept = theDept;	
 	}
 	public int getNumber() {
+		/*
+		 * Press F3 (Open Declaration) to see where SEMINAR_NUMBER is declared
+		 */
 		return SEMINAR_NUMBER; 
 	}
 	public String getTitle() {
