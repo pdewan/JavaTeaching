@@ -1,6 +1,7 @@
 package lectures.inheritance.abstract_classes;
 
-import shapes.Locatable;
+import lectures.inheritance.is_a.Locatable;
+
 
 
 
