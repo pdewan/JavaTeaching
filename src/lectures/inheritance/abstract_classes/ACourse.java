@@ -4,7 +4,9 @@ import shapes.Locatable;
 
 
 
-public abstract class ACourse {
+public abstract class ACourse
+// implements Locatable
+{
 	protected String title, dept;
 
 	public ACourse(String theTitle, String theDept) {
