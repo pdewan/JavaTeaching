@@ -1,6 +1,7 @@
 package lectures.inheritance.abstract_classes;
 
 public class AnotherFreshmanSeminar  implements FreshmanSeminar {
+	
 	protected String title, dept;
 
 	public AnotherFreshmanSeminar (String theTitle, String theDept) {

@@ -11,7 +11,7 @@ import util.misc.Console;
  * 
  * Run it.
  *
- * Enter two course-title lines and then a .: 
+ * Enter these two course-title lines and then a period: 
  * "Intro. Prog."
  * "Meaning of Life"
  * "."
@@ -24,6 +24,7 @@ public class ACourseDisplayer1 extends ACourseDisplayer  {
 	protected RegularCourse createRegularCourse(String theTitle, String theDept, int theCourseNum) {
 		return new AnotherRegularCourse(theTitle, theDept, theCourseNum);
 	}
+	
 	protected FreshmanSeminar createFreshmanSeminar(String theTitle, String theDept) {
 		return new AnotherFreshmanSeminar(theTitle, theDept);
 	}
@@ -31,16 +32,25 @@ public class ACourseDisplayer1 extends ACourseDisplayer  {
     protected static CourseDisplayer createCourseDisplayer() {
     	return new ACourseDisplayer1();
     }
+    
 	public static void main(String[] args) {
 		CourseDisplayer aCourseDisplayer = createCourseDisplayer();
 		aCourseDisplayer.fillCourses();
 		aCourseDisplayer.matchTitles();
 	}
+	
+/*
+ * ABSTRACT CLASSES AND METHODS, CONTINUED
+ * 
+ * (T/F) Each abstract method in ACourseDisplayer is overridden in 
+ * ACourseDisplayer1 
+ *  
+ * (T/F) An abstract method declared in a class can be called by methods in
+ * subclasses of the class.
+ */
+	
 /*
  * FACTORY_METHODS
- * 
- * Compare the factory methods in ACourseDislayer1 and ACourseDisplayer2.
- * 
  * 
  * Abstract classes and factory methods often go together.
  * 
@@ -53,10 +63,10 @@ public class ACourseDisplayer1 extends ACourseDisplayer  {
  * (T/F) The method createCourseDisplayer() in ACourseDisplayer1 is a static 
  * factory method.
  * 
- * (T/F) All instance methods in ACourseDisplayer1 are factory methods.
+ * (T/F) All instance methods defined (not inherited) in ACourseDisplayer1 are factory methods.
  * 
  * (T/F) A factory method does not have to be public.
- * 
+ *  
  */
 /*
  * Next class ACourseDisplayer2

@@ -3,7 +3,9 @@ package lectures.inheritance.abstract_classes;
  * Study this class and the class ACourse it extends
  */
 public class ARegularCourse extends ACourse implements RegularCourse {
+	
 	int courseNum;
+	
 	public ARegularCourse (String theTitle, String theDept, int theCourseNum) {
 		super (theTitle, theDept);
 		courseNum = theCourseNum;

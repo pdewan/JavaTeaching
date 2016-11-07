@@ -3,7 +3,9 @@ package lectures.inheritance.abstract_classes;
  * Study this class and the class it extends and answer the questions below
  */
 public class AnotherRegularCourse extends AnotherFreshmanSeminar implements RegularCourse {
+	
 	int courseNum;
+	
 	public AnotherRegularCourse (String theTitle, String theDept, int theCourseNum) {
 		super (theTitle, theDept);
 		courseNum = theCourseNum;
@@ -30,14 +32,13 @@ public class AnotherRegularCourse extends AnotherFreshmanSeminar implements Regu
  * (T/F) It makes logical sense of AnotherRegularCourse to be a subclass of 
  * AnotherFreshmanSeminar.
  * 
- * (T/F) AnotherRegularCourse is an abstract class;
+ * (T/F) AnotherRegularCourse is an abstract class.
  * 
- * (T/F) AnotherFreshmanSeminar is an abstract class
+ * (T/F) AnotherFreshmanSeminar is an abstract class.
  * 
  * In class AnotherFreshmanSeminar, find the declaration of SEMINAR_NUMBER
  * 
  * (T/F) An interface can declare a public named constant.
- * 
  * 
  */
 /*

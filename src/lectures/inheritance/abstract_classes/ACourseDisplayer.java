@@ -6,16 +6,18 @@ import lectures.inheritance.abstract_classes.courselist.ACourseList;
 import lectures.inheritance.abstract_classes.courselist.CourseList;
 import util.misc.Console;
 /**
- * This class illustrates the nature of abstract classes and methods
+ * This class illustrates the nature of abstract classes and methods.
  * 
  */
 
 public 
-// comment out abstract
+// Comment out the "abstract" keyword to see what happens, then uncomment.
 	abstract 
 		class ACourseDisplayer implements CourseDisplayer {
+	
 	protected CourseList courses = new ACourseList();
 	Scanner scanner = new Scanner(System.in);
+	
 	public  void matchTitles() {
 		while (true) {
 			System.out.println("Please enter course title:");
@@ -37,11 +39,13 @@ public
 	protected abstract RegularCourse createRegularCourse(
 			String theTitle, String theDept, int theCourseNum)
 /*
- * Comment out the body below and then comment it back in
+ * Uncomment the body below and then comment it back in
  */
 //			{ return null}
 		;
+	
 	protected abstract FreshmanSeminar createFreshmanSeminar(String theTitle, String theDept) ;
+	
 	public void fillCourses() {
 		courses.addElement(createRegularCourse("Intro. Prog.", "COMP", 14));
 		courses.addElement(createRegularCourse("Found. of Prog.", "COMP", 114));
@@ -58,7 +62,7 @@ public
 				+ course.getNumber());
 	}
 /*
- * Comment out the method below
+ * Uncomment the method below to see what happens, then comment it out again.
  */
 //    protected static CourseDisplayer createCourseDisplayer() {
 //    	return new ACourseDisplayer();
@@ -71,49 +75,32 @@ public
  * 
  * (T/F) ACourseDisplayer is an abstract class.
  * 
- * (T/F) ACourseDisp;layer2 is an abstract class.
- * 
- * (T/F) fillCourses()is an abstract method.
+ * (T/F) fillCourses() is an abstract method.
  * 
  * (T/F) createRegularCourse() is an abstract method.
  * 
- * Comment out the body of createRegularCourse, look at any error message,
- * and comment it back in. 
+ * Uncomment the body of createRegularCourse, look at any error message,
+ * and comment it back out. 
  * 
  * (T/F) An abstract method cannot have a header.
  * 
  * (T/F) An abstract method cannot have a body.
- * 
- * (T/F) Each abstract method in ACourseDisplayer is overridden in 
- * ACourseDisplayer1 
- * 
- * (T/F) Each abstract method in ACourseDisplayer is overridden in 
- * ACourseDisplayer2.
- * 
- * (T/F) Each override of an abstract method of ACourseDisplayer is a
- * factory method. 
- * 
- * (T/F) Different overrides of each factory method in ACourseDisplayer return
- * instances of different classes.
  *  
- * Comment out the createCourseDisplayer() method, look at any error message,
- * and comment it back in.
+ * Uncomment the createCourseDisplayer() method, look at any error message,
+ * and comment it back out.
  * 
  * (T/F) An abstract class can be instantiated.
  * 
- * Comment out the abstract keyword in declaration of this class, ook at any error message,
- * and comment it back in.
+ * Comment out the abstract keyword in declaration of this class, look at any error message,
+ * and uncomment it.
  * 
  * (T/F) An abstract method can be declared in a non-abstract class  
  * 
  * (T/F) An abstract method declared in a class can be called by methods in that class.
  * 
- * (T/F) An abstract method declared in a class can be called by methods in
- * subclasses of the class.
- * 
  */
  /*
-  * Next class AnotherRegularCourse
+  * Next class: ACourseDisplayer1
   */
 	
 }
