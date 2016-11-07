@@ -27,6 +27,10 @@ public class ARegularCourse extends ACourse implements RegularCourse {
  * (T/F) An abstract class can have constructors.
  * 
  * (T/F) It makes logical sense for ARegularCourse to extend ACourse
+ * 
+ * Inside ACourse, uncomment "implements Locatable" to see if any error messages
+ * are generated. Then comment it back out.
+ * (T/F) An abstract class can implement an interface without 
  */
 /*
  * Next class: AFreshmanSeminar
