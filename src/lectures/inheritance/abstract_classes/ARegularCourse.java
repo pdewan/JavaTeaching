@@ -24,6 +24,8 @@ public class ARegularCourse extends ACourse implements RegularCourse {
  * 
  * (T/F) ACourse has abstract methods.
  * 
+ * (T/F) An abstract class must have abstract methods.
+ * 
  * (T/F) An abstract class can have constructors.
  * 
  * (T/F) It makes logical sense for ARegularCourse to extend ACourse
