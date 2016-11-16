@@ -9,31 +9,16 @@ import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-// SYNCHRONIZED VS. NOT SYNCHRONIZED
-// The difference between this program and the interfering one is that it uses a different
-// kind of animator.
-
-// Run this program. Look at the animation behavior and the console output.
-// Does the message about to call animateFromOrigin get immediately followed by the message
-// entered animateFromOrigin?
-
-// Remove synchronized keyword from animateFromOrigin in ASynchronizedShuttleAnimator
-// and run the program again. Look at the animation behavior and console output again.
-// Does the message about to call animateFromOrigin get immediately followed by the message
-// entered animateFromOrigin?
-
-// Do you have a theory about what the synchronized method does?
-
-// SYNCHRONIZED AND NOT SYNCHRONIZED METHODS
-// Comment out the for loop below.
-// The println calls the toStringMethod in ASynchronizedShuttleAnimator.
-// Look at the toString() method in ASynchronizedShuttleAnimator. It is currently not synchronized.
-// Look at the console output.
-// Is the toString() method executed while the other synchronized method is executing?
-// Now uncomment the synchronized keyword before it and run again.
-// Is the method executed while the other synchronized method is executing?
-
-// Do you need to refine your theory about what the synchronized method does?
+/**
+ * SYNCHRONIZED VS. NOT SYNCHRONIZED
+ * The difference between this program and the interfering one is that it 
+ * uses a different kind of animator to illustrate the behavior of the synchronized
+ * methods.
+ * 
+ * Run this program. Look at the animation behavior.
+ * 
+ * 
+ */
 
 
 public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurrentShuttleAnimations  {
@@ -51,3 +36,56 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
 //		}
 	}
 }
+/**
+ * SYNCHRONIZED VS. NOT SYNCHRONIZED
+ *
+ * Look at the console output.
+ * 
+ * (T/F) When thread 1 executes, the message about the call to synchronized animateFromOrigin 
+ * gets immediately followed by the message saying that animateFromOrigin was entered.
+ * 
+ * (T/F) When thread 2 executes, the message about the call to animateFromOrigin 
+ * gets immediately followed by the message saying that animateFromOrigin was entered.
+ *  
+ * (T/F) Thread 2 does not enter the synchronized animateFromOrigin() until the call
+ * to this method by thread 2 finishes.
+ * 
+ * Remove the synchronized keyword from animateFromOrigin in ASynchronizedShuttleAnimator
+ * and run the program again. Look at the animation behavior and console output again.
+ * 
+ * (T/F) When thread 1 executes, the message about the call to unsynchronized 
+ * animateFromOrigin gets immediately followed by the message saying that animateFromOrigin was entered.
+ * 
+ * (T/F) When thread 2 executes, the message about the call to unsynchronized animateFromOrigin 
+ * gets immediately followed by the message saying that animateFromOrigin was entered.
+ * 
+ *
+ * Comment out the for loop below and study it.
+ * 
+ * The println calls the toString() Method in ASynchronizedShuttleAnimator.
+ * 
+ * Look at the toString() method in ASynchronizedShuttleAnimator.
+ *  
+ * It is currently not synchronized.
+ * 
+ * Look at the console output.
+ * 
+ * (T/F) The unsynchronized toString() method in ASynchronizedShuttleAnimator is executed by
+ * the main thread during the execution of the synchronized method.
+ *  
+ * Now uncomment the synchronized keyword toString()  and run again.
+ * 
+ * (T/F) The synchronized toString() method in ASynchronizedShuttleAnimator 
+ * is executed by the main thread during the execution of the synchronized method.
+ * 
+ * (T/F) An unsynchronized method can be executed by a thread in an object 
+ * while another thread is executing a synchronized method in the same object.
+ * 
+ * (T/F) The synchronized method, M, can be executed by a thread in an object
+ *  while another thread is executing the same method M in the object.
+ * 
+ * (T/F) The synchronized method, M, can be executed by a thread in an object
+ *  while another thread is executing a different method N in the object.
+ *
+ * 
+ */
