@@ -7,8 +7,8 @@
  * 
  * NAVIGATION-INFO
  * AutomaticShuttleTrafficControl
- * AutomaticShuttleTrafficControl
  * ALock
+ * AControlledShuttleAnimator
  * 
  */
 

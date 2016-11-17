@@ -39,19 +39,24 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  * 
  * Uncomment the lock2 calls in animateXFromOrigin.
  * 
- * When animateXFromOrigin() uses lock2,  the three animators
+ * When animateXFromOrigin() uses lock2, the three animators
  * (a) run serially,  that is, while one animator is executing, other animators wait.
- * (b) animate in the Y direction serially, that while one animator is animating
+ * (b) animate only in the Y direction serially, that while one animator is animating
  * in the Y direction, the other animators do not animate in the Y direction.
  * (c) animate in the X and Y direction serially, that is while one animator is 
  * animating in the X (Y) direction, the other animators do not animate in the X (Y)
  * direction.
  * (c) run without any coordination.
  * 
- *  A deadlock occurs when there are at least two threads that have that are waiting for the other
- *  to release a lock, that is, each thread is waiting for the other to release a lock.
+ *  A deadlock occurs when there is a cycle of waiting among threads such that each thread
+ *  is waiting on a lock held by another thread, and no lock can be released. For example,
+ *  T1 holds lock L1 and is waiting on lock L2, but T2 holds L2 and is waiting on L1.
  *  
- *  (T/F) A deadlock occurs when two locks are used 
+ * Note that just because a process waits forever does not mean that it is in a deadlock- it
+ * may be just bad programming. Deadlock is one particular error created by a some specific
+ * bad programming- one in which there is a cycle of threads waiting on each other.
+ *  
+ *  (T/F) A deadlock requires at least two locks to be used. 
  * 
  * Comment out the lock1.releaseLock() call in animateYFromOrigin.
  * 
@@ -66,22 +71,14 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  *  (c) three
  *  (d) zero
  * 
- *  If releaseLock() is not executed on lock1, then the number of animations that
- *  start are:
- *  (a) one
- *  (b) two
- *  (c) three
- *  (d) zero
- *  
- * 
  * Uncomment the lock2.releaseLock() call in animateYFromOrigin(), while keeping
- * lock1.releaseLock() commented.
+ * lock1.releaseLock() commented out.
  * 
  * What do you think will happen?
  * 
  * Run the main program:
  * 
- * (T/F) A notify() call on object A does not effect wait() calls on object B.
+ * (T/F) A notify() call on object A does not affect wait() calls on object B.
  * 
  * Swap the two releaseLock() calls so we are back to the original state.
  * 

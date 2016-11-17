@@ -21,7 +21,7 @@ import lectures.mvc.properties.atomic.APropertyListenerSupport;
 public class ALock implements Lock {
 	
 	protected boolean locked = false;	
-//	protected boolean locked = true;	switch the two declarations when asked
+//	protected boolean locked = true;	//switch the two declarations when asked
 	@Override
 	public 	
 		synchronized // comment this out when asked
@@ -82,14 +82,14 @@ public class ALock implements Lock {
  *  (c) thrice
  *  (d) none of the above 
  *  
- *  Each "releasing lock" print is eventually followed by a "got lock" print
+ *  Each "releasing lock" print is eventually followed by a "got lock" print:
  *  (a) once
  *  (b) twice
  *  (c) thrice
  *  (d) none of the above
  *  
  *  (T/F) The wait() method call on an object blocks the executing thread until another thread
- *  executed notify() method on the object.
+ *  executes notify() method on the object.
  *  
  *  Now look at the thread names printed in the print statements and the order
  *  in which lock requests are made and the order in which the locks are received.
@@ -97,13 +97,15 @@ public class ALock implements Lock {
  *  (T/F) Threads are unblocked from wait() calls in the order in which they made
  *  the calls.
  *  
- *  Replace the notify() call with the notifyAll() call.
+ *  Replace the notify() call with the notifyAll() call (comment out one and uncomment
+ *  the other)
  *  
  *  Run the main program and observe the behavior.
  *  
  *  (T/F) notifyAll() unblocks all waiting threads.
  *  
- *  Comment out the call to notify().
+ *  Comment out the call to notifyAll() as well, so that both notify() and notifyAll()
+ *  are commented out.
  *  
  *  What do you think will happen?
  *  
@@ -115,9 +117,9 @@ public class ALock implements Lock {
  *  (c) three
  *  (d) zero
  *  
- *  Replace notifyAll() with notify()
+ *  Uncomment notify() again.
  *  
- *  Comment out the synchronized keywords in the two methods.
+ *  Comment out both of the synchronized keywords in the two methods.
  *  
  *  Run the main program if there are no compile errors.
  *  
@@ -128,11 +130,11 @@ public class ALock implements Lock {
  *  then a runtime exception is thrown when the calls are made.
  *  
  *  (T/F) wait() and notify() should execute in synchronized methods as they
- *  access a common queue
+ *  access a common queue.
  *  
  *  Uncomment the two keywords.
  *  
- *  Comment out the assignment to locked in lock().
+ *  Comment out the assignment to locked in getLock().
  *  What do you think will happen?
  *  
  *  Run the main program
@@ -140,7 +142,7 @@ public class ALock implements Lock {
  *  (T/F) If lock variable is not set in the getLock() method, 
  *  then there is no coordination among the threads.
  *  
- *  Restore the assignment.
+ *  Restore (uncomment) the assignment.
  *  
  *  Change the declaration of locked so it is initially true.
  *  

@@ -12,7 +12,7 @@ import bus.uigen.ObjectEditor;
  * LOCK BASED ON WAIT AND NOTIFY
  * This class shows the use of locks.
  * It creates two lock objects that are then passed to shuttle animators
- * to coordinate their animations,
+ * to coordinate their animations.
  *  
  * Run this program. Three shuttle animators will be created,
  * one for animating each shuttle. 
@@ -63,7 +63,7 @@ public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl 
 		createAndDisplayShuttleAndAnimator2(SHUTTLE3_X, SHUTTLE3_Y, aLock1, aLock2);	
 	}	
 /**
- * Each (controlled shuttle) animator knows about, that is, has reference, to 
+ * Each (controlled shuttle) animator knows about, that is, has reference to 
  *   (a) each of the other two animators
  *   (b) two shared lock objects
  *   (c) none of the above
