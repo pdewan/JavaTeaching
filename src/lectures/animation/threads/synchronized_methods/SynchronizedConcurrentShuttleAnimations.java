@@ -59,21 +59,21 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * (T/F) When thread 2 executes, the message about the call to unsynchronized animateFromOrigin 
  * gets immediately followed by the message saying that animateFromOrigin was entered.
  * 
+ * Place the synchronized keyword back when you are done.
  *
- * Comment out the for loop below and study it.
- * 
- * The println calls the toString() Method in ASynchronizedShuttleAnimator.
+ * Uncomment the for loop above and study it. The println calls the toString() Method
+ * in ASynchronizedShuttleAnimator.
  * 
  * Look at the toString() method in ASynchronizedShuttleAnimator.
  *  
  * It is currently not synchronized.
  * 
- * Look at the console output.
+ * Run this program and look at the console output.
  * 
  * (T/F) The unsynchronized toString() method in ASynchronizedShuttleAnimator is executed by
  * the main thread during the execution of the synchronized method.
  *  
- * Now uncomment the synchronized keyword toString()  and run again.
+ * Now uncomment the synchronized keyword in toString()  and run again.
  * 
  * (T/F) The synchronized toString() method in ASynchronizedShuttleAnimator 
  * is executed by the main thread during the execution of the synchronized method.
@@ -85,7 +85,7 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  *  while another thread is executing the same method M in the object.
  * 
  * (T/F) The synchronized method, M, can be executed by a thread in an object
- *  while another thread is executing a different method N in the object.
+ *  while another thread is executing a different synchronized method N in the object.
  *
  * 
  */

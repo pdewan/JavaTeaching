@@ -10,7 +10,7 @@ import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 /**
  * THREADS CHANGING THE SAME OBJECT CONCURRENTLY
- * In the previous example, we had two shuttles, two animators, and two threads, 
+ * In a previous example, we had two shuttles, two animators, and two threads, 
  * which operated independently. Now we have  one shuttle, one animator, 
  * and two threads. Thus, we have two threads changing the same object concurrently.
  *
@@ -18,15 +18,10 @@ import bus.uigen.ObjectEditor;
  * See the behavior on the screen. 
  * 
  * 
- * (T/F The two animators run serially, that is the first animation completes
- * before the second one starts. 
- * 
+ * (T/F) In InterferingConcurrentShuttleAnimations, the two animators run serially,
+ * that is, the first animation completes before the second one starts. 
  * 
  */
-
-
-
-
 
 public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLaunchAnimation  {	
 	static final long SECOND_THREAD_DELAY = 500;
@@ -44,7 +39,7 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
 }
 /**
  * Look at the main method carefully. Recall that concurrentDemoShuttleAnimation
- * creates a new thread in which its  animator argument animates the shuttle
+ * creates a new thread in which its animator argument animates the shuttle
  * argument.
  * 
  * 
@@ -68,7 +63,7 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * Your next task is to answer a series of questions to understand the
  * animation behavior and the console output.
  * 
- * Now try to understand the console output giving values of saved X and saved Y.
+ * Try to understand the console output giving values of saved X and saved Y.
  * 
  * To do so, you need to go to the class in which the prints occur, AShuttleAnimator.
  * 
@@ -81,12 +76,11 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * (T/F) The orginalX variable holds the final X position of the shuttle after the
  * animation finishes.
  * 
- * (T/F) The curX variable holds the first X position in the animation.
+ * (T/F) The curX variable is initialized with the starting X position of the animation.
  * 
  * (T/F) The originalX variable is an instance variable of AShuttleAnimator.
  * 
  * (T/F) The curX variable is an instance variable of AShuttleAnimator.
- * 
  * 
  * (T/F) originalX is changed multiple times during an execution of 
  * animateFromOrigin().
@@ -94,20 +88,20 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * (T/F) The two threads share the value of originalX, that is, changes made by
  * one thread to the variable are seen by the other thread.
  * 
- * (T/F) animateFromOrigin() sets the value of the X and Y properties of the shuttle to
- * 0 at the start of the animation.
+ * (T/F) animateFromOrigin() sets the value of the ShuttleX and ShuttleY properties of
+ * the shuttle to 0 at the start of the animation.
  * 
- * (T/F) animateYFromOrigin sets the value of the X property during the animation.
+ * (T/F) animateYFromOrigin sets the value of the ShuttleX property during the animation.
  * 
- * (T/F) animateYFromOrigin sets the value of the Y property during the animation.
+ * (T/F) animateYFromOrigin sets the value of the ShuttleY property during the animation.
  * 
  * 
  * Look at the two values of originalX and originalY printed by the two threads
  * on the console.
  * 
- * (T/F) originalX is the same value in both threads.
+ * (T/F) originalX is the same value when printed in both threads.
  * 
- * (T/F) originalY is the same value in both threads.
+ * (T/F) originalY is the same value when printed in both threads.
  * 
  * To answer the following questions, you might want to  print the values of 
  * startX and startY and the current thread with a print of the form:
@@ -115,15 +109,15 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * System.out.println ("Thread "+  Thread.currentThread()+ " x :" + startX);
  * 
  * (I should have created additional variables rather than changing startX
- * and startY in the loop, did so to save space in the PPT.)
+ * and startY in the loop- I did so to save space in the PPT.)
  *  
  * The prints will clutter the output, so try and first answer questions without 
  * printing.
  * 
- * (T/F) Changes made by Shuttle Animation 1 to the shuttle X property influence the
+ * (T/F) Changes made by Shuttle Animation 1 to the ShuttleX property influence the
  * value of originalX in Shuttle Animation 2.
  * 
- * (T/F) Changes made by Shuttle Animation 1 to the shuttle Y property influence the
+ * (T/F) Changes made by Shuttle Animation 1 to the ShuttleY property influence the
  * value of originalX in Shuttle Animation 2.
  * 
  * (T/F) The end position of the second animation is not the same as the end position
@@ -160,17 +154,17 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * (T/F) After removing the inter-thread delay, the loop in animateXFromOrigin()
  *  is executed at least once by the second thread.
  *  
- * (T/F After removing the delay, the two animators run serially, 
- * that is the first animation completes before the second one starts. 
+ * (T/F) After removing the delay, the two animators run serially, 
+ * that is, the first animation completes before the second one starts. 
  * 
- * Comment the statements:
+ * Comment out these statements in AShuttleAnimator:
  * 	int originalX = shuttle.getShuttleX(); 
- *	int originalY = shuttle.getShuttleY();	
+ *		int originalY = shuttle.getShuttleY();	
  * 
  * and instead put in:
  * 
  * 	int originalX = 50; 
- *	int originalY = 100;
+ *		int originalY = 100;
  *  
  *  
  * (T/F) After making the change to originalX and original Y, both animations
