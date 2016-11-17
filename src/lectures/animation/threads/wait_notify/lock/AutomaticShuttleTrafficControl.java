@@ -20,10 +20,14 @@ import bus.uigen.ObjectEditor;
  * Observe the behavior.
  * 
  * The three animators
- * (a) run serially,  that is, while one animator is executing, other animations wait.
+ * (a) run serially,  that is, while one animator is executing, other animators wait.
  * (b) animate in the Y direction serially, that while one animator is animating
- * in the Y direction, the other animators wait.
+ * in the Y direction, the other animators do not animate in the Y direction.
+ * (c) animate in the X and Y direction serially, that is while one animator is 
+ * animating in the X (Y) direction, the other animators do not animate in the X (Y)
+ * direction.
  * (c) run without any coordination.
+ * 
  * 
  * Look at the code and answer the questions.
  * 

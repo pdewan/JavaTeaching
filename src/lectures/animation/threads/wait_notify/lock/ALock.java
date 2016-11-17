@@ -154,4 +154,6 @@ public class ALock implements Lock {
  *  (d) zero
  *  
  *  Restore the original declaration.
+ *  
+ *  Next class: AControlledShuttleAnimator
  */
