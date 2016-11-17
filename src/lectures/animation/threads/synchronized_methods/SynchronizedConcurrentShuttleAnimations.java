@@ -48,7 +48,7 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * gets immediately followed by the message saying that animateFromOrigin was entered.
  *  
  * (T/F) Thread 2 does not enter the synchronized animateFromOrigin() until the call
- * to this method by thread 2 finishes.
+ * to this method by thread 1 finishes.
  * 
  * Remove the synchronized keyword from animateFromOrigin in ASynchronizedShuttleAnimator
  * and run the program again. Look at the animation behavior and console output again.

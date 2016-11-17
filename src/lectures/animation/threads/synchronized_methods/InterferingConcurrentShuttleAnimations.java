@@ -167,11 +167,11 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  *		int originalY = 100;
  *  
  *  
- * (T/F) After making the change to originalX and original Y, both animations
- *  execute the X loop at least once.
+ * (T/F) After setting originalX and originalY to predetermined values,
+ *  both animations execute the X loop at least once.
  *
- * (T/F) After making the change to originalX and original Y, both animations
- *  execute the Y loop at least once.
+ * (T/F) After setting originalX and originalY to predetermined values,
+ *  both animations execute the Y loop at least once.
  * 
  *  Next class: SynchronizedConcurrentShuttleAnimations
  * 
