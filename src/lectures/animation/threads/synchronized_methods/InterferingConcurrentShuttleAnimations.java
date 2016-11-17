@@ -85,8 +85,9 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * (T/F) originalX is changed multiple times during an execution of 
  * animateFromOrigin().
  * 
- * (T/F) The two threads share the value of originalX, that is, changes made by
- * one thread to the variable are seen by the other thread.
+ * (T/F) The two threads access the same copy of originalX and changes made by
+ * one thread to the variable can be seen by the other thread.
+ *  
  * 
  * (T/F) animateFromOrigin() sets the value of the ShuttleX and ShuttleY properties of
  * the shuttle to 0 at the start of the animation.
@@ -118,7 +119,7 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
  * value of originalX in Shuttle Animation 2.
  * 
  * (T/F) Changes made by Shuttle Animation 1 to the ShuttleY property influence the
- * value of originalX in Shuttle Animation 2.
+ * value of originalY in Shuttle Animation 2.
  * 
  * (T/F) The end position of the second animation is not the same as the end position
  * of the first animation.

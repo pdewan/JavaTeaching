@@ -31,7 +31,8 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
 		ThreadSupport.sleep(SECOND_THREAD_DELAY);
 		concurrentDemoShuttleAnimation(aShuttleAnimator, aShuttle1);
 //		for (int aReadNum = 0; aReadNum < NUM_READS;aReadNum++) {
-//			System.out.println (Thread.currentThread() + ": Read num:" + aReadNum + " " + aShuttleAnimator);
+//			System.out.println (Thread.currentThread() + " " + aShuttleAnimator
+//					+ ": Shuttle Y:" + aShuttle1.getShuttleX());
 //			ThreadSupport.sleep(ANIMATION_PAUSE_TIME);			
 //		}
 	}
@@ -62,7 +63,7 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * Place the synchronized keyword back when you are done.
  *
  * Uncomment the for loop above and study it. The println calls the toString() Method
- * in ASynchronizedShuttleAnimator.
+ * in ASynchronizedShuttleAnimator and prints the current thread and shuttle Y coordinate.
  * 
  * Look at the toString() method in ASynchronizedShuttleAnimator.
  *  
@@ -73,10 +74,16 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * (T/F) The unsynchronized toString() method in ASynchronizedShuttleAnimator is executed by
  * the main thread during the execution of the synchronized method.
  *  
- * Now uncomment the synchronized keyword in toString()  and run again.
+ * Now uncomment the synchronized keyword in toString()and run again.
  * 
  * (T/F) The synchronized toString() method in ASynchronizedShuttleAnimator 
  * is executed by the main thread during the execution of the synchronized method.
+ * 
+ * (T/F) The behavior of the two animating threads (the animations) can be changed by running
+ *  the main thread concurrently.
+ * 
+ * (T/F) The behavior of the main thread (its console output) can be changed by running
+ * animation threads concurrently.
  * 
  * (T/F) An unsynchronized method can be executed by a thread in an object 
  * while another thread is executing a synchronized method in the same object.
