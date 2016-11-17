@@ -7,7 +7,7 @@ import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
 public class AConcurrentShuttleAnimator extends AFancyShuttleAnimator  {
-	protected int animationNumber;
+	protected static int animationNumber;
 	public AConcurrentShuttleAnimator(PlottedShuttle theShuttle) {
 		super(theShuttle);
 	}

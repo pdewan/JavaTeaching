@@ -1,6 +1,9 @@
 package lectures.animation.threads.wait_notify;
 
 import lectures.animation.threads.ui.FancyShuttleAnimator;
+import lectures.animation.threads.wait_notify.lock.AControlledShuttleAnimator;
+import lectures.animation.threads.wait_notify.lock.ALock;
+import lectures.animation.threads.wait_notify.lock.Lock;
 import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.properties.AnObservablePlottedShuttle;
@@ -32,7 +35,7 @@ import bus.uigen.ObjectEditor;
  
  Can you define what a computer lock is and why it is so called?
  */
-public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl {
+public class InteractiveAutomaticShuttleTrafficControl extends ManualShuttleTrafficControl {
 	static final int SHUTTLE3_X = 50;
 	static final int SHUTTLE3_Y = 50;
 	static final int SHUTTLE_FRAME_X = 50;
@@ -42,25 +45,27 @@ public class AutomaticShuttleTrafficControl extends ManualShuttleTrafficControl 
 	static final int ANIMATION_FRAME_X = SHUTTLE_FRAME_X + FRAME_WIDTH;
 	static int shuttleNumber = 0;
 	static final int ANIMATION_PAUSE_TIME = 500;
-	static void createAndDisplayShuttleAndAnimator(int shuttleX, int shuttleY,  BasicLock aLock) {
+	static void createAndDisplayShuttleAndAnimator(int shuttleX, int shuttleY,  Lock aLock1, Lock aLock2) {
 		int aFrameY = START_FRAME_Y + shuttleNumber*FRAME_HEIGHT;
 		PlottedShuttle aShuttle = new AnObservablePlottedShuttle(shuttleX, shuttleY );		
 		OEFrame aShuttleFrame = ObjectEditor.edit(aShuttle);
 		aShuttleFrame.hideMainPanel();
 		aShuttleFrame.setLocation(SHUTTLE_FRAME_X, aFrameY);
 		aShuttleFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-		FancyShuttleAnimator aShuttleAnimator = new AControlledShuttleAnimator(aShuttle, aLock);
+		FancyShuttleAnimator aShuttleAnimator = new AControlledShuttleAnimator(aShuttle, aLock1, aLock2);
 		aShuttleAnimator.setAnimationPauseTime(ANIMATION_PAUSE_TIME);
 		OEFrame anAnimatorFrame = ObjectEditor.edit(aShuttleAnimator);
 		anAnimatorFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		anAnimatorFrame.setLocation(ANIMATION_FRAME_X, aFrameY);
 		shuttleNumber++;
 	}
+	
 	public static void main(String[] args) {
-		BasicLock aLock = new ALock();
-		createAndDisplayShuttleAndAnimator(SHUTTLE1_X, SHUTTLE1_Y, aLock);
-		createAndDisplayShuttleAndAnimator(SHUTTLE2_X, SHUTTLE2_Y, aLock);
-		createAndDisplayShuttleAndAnimator(SHUTTLE3_X, SHUTTLE3_Y, aLock);	
-		displayControlFrame(aLock);
+		Lock aLock1 = new ALock();
+		Lock aLock2 = new ALock();
+		createAndDisplayShuttleAndAnimator(SHUTTLE1_X, SHUTTLE1_Y, aLock1, aLock2);
+		createAndDisplayShuttleAndAnimator(SHUTTLE2_X, SHUTTLE2_Y, aLock1, aLock2);
+		createAndDisplayShuttleAndAnimator(SHUTTLE3_X, SHUTTLE3_Y, aLock1, aLock2);	
+//		displayControlFrame(aLock1);
 	}	
 }

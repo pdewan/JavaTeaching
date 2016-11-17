@@ -85,6 +85,12 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * (T/F) The behavior of the main thread (its console output) can be changed by running
  * animation threads concurrently.
  * 
+ *  (T/F) The behavior of a thread that calls write methods in an object can be
+ *  changed by a thread that calls read methods in the object concurrently.
+ * 
+ * (T/F) The behavior of a thread that calls read methods in an object can be
+ *  changed by a thread that calls write methods in the object concurrently
+ * 
  * (T/F) An unsynchronized method can be executed by a thread in an object 
  * while another thread is executing a synchronized method in the same object.
  * 

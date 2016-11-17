@@ -13,7 +13,7 @@ import lectures.mvc.collections.ObservableStringHistory;
 import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 
-public class ALock implements Lock {
+public class AComplicatedLock implements ComplicatedLock {
 	ListenableVector waitingThreads = new AListenableVector();
 	PropertyListenerSupport propertyListenerSupport = new APropertyListenerSupport();
 	protected boolean locked;		
