@@ -48,7 +48,10 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  * direction.
  * (c) run without any coordination.
  * 
- * 
+ *  A deadlock occurs when there are at least two threads that have that are waiting for the other
+ *  to release a lock, that is, each thread is waiting for the other to release a lock.
+ *  
+ *  (T/F) A deadlock occurs when two locks are used 
  * 
  * Comment out the lock1.releaseLock() call in animateYFromOrigin.
  * 
@@ -70,6 +73,7 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  *  (c) three
  *  (d) zero
  *  
+ * 
  * Uncomment the lock2.releaseLock() call in animateYFromOrigin(), while keeping
  * lock1.releaseLock() commented.
  * 
@@ -101,28 +105,9 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  *  (c) three
  *  (d) zero
  * 
- * 
- * Uncomment the lock2.relaseLock().
- * 
- * Run the program and look at the output if necessary
- * to answer the following question.
- * 
- * Now make sure that both releaseLock() calls are uncommented.
- * 
- * (T/F) The two locks, lock1 and lock2, are released in the order in 
- * which they are acquired.
- * 
- * 
- * Now comment out all calls to getLock() in animateXFromOrigin() and
- * animateYFromOrigin().
- * 
- * When locks are not acquired,  the three animators
- * (a) run serially,  that is, while one animator is executing, other animators wait.
- * (b) animate in the Y direction serially, that while one animator is animating
- * in the Y direction, the other animators do not animate in the Y direction.
- * (c) animate in the X and Y direction serially, that is while one animator is 
- * animating in the X (Y) direction, the other animators do not animate in the X (Y)
- * direction.
- * (c) run without any coordination.
- * 
+ *  (T/F) A deadlock occurs if releaseLock() is not executed on lock1.
+ *  
+ *  (T/F) A deadlock occurs if releaseLock() is not executed on lock2.
+ *
+
  */
