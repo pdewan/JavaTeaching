@@ -28,18 +28,9 @@ public class ObjectHistoryUser {
 //		System.out.println (aPointHistory.elementAt(0).getX());
 	}
 	public static void manipulateStrings() {
-		ObjectHistory aStringHistory = new AnObjectHistory();
-		/*
-		 * Swap the two addElements when asked
-		 */
-//		aStringHistory.addElement(new ACartesianPoint(0, 1));
-		aStringHistory.addElement("hello");
-		
-		/*
-		 * Swap the two printlns when asked
-		 */
+		ObjectHistory aStringHistory = new AnObjectHistory();		
+		aStringHistory.addElement("hello");		
 		System.out.println (((String)aStringHistory.elementAt(0)).charAt(0));
-//		System.out.println ((aStringHistory.elementAt(0)).charAt(0));
 	}
 	public static void main (String[] args) {
 		manipulatePoints();
@@ -55,19 +46,23 @@ public class ObjectHistoryUser {
  * element.
  * 
  * Run the program.
- * (T/F) Executing the original program results in runtime programs.
+ * (T/F) Executing the original ObjectHistoryUser program results in runtime errors.
  * 
  * In manipulateStrings() swap the two addElement() calls, and run it if there
  * are no compile errors.
  * 
- * (T/F) Swapping the two addElement() calls results in a compile error.
- * (T/F) Swapping the  two addElement() calls results in a runtime error.
+ *  Swapping the two addElement() calls in ObjectHistoryUser results in:
+ *   (a) a compile error.
+ *   (b) a runtime error.
+ *   (c) none of the above.
  * 
  * Next, in manipulateStrings() swap the two println() calls, and run if there
  * are no compile errors.
  * 
- * (T/F) Swapping the two println() calls results in a compile error.
- * (T/F) Swapping the  two println()  calls results in a runtime error.
+ * Swapping the two println() calls calls in ObjectHistoryUser results in: 
+ *   (a) a compile error.
+ *   (b) a runtime error.
+ *   (c) none of the above
  * 
  * (T/F) String elements of AnObjectHistory must be cast to String if String operations
  * are to be executed on them.

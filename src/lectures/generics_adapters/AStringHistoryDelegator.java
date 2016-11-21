@@ -6,34 +6,15 @@ import java.util.List;
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
 /* 
- DELEGATION AND ADAPTATION
- We see here that the interface List and the class ArrayList are both
- generic types.
- 
- Study this code.
- 
- Why do we need this class given that we have a generic List and ArrayList.
- Look at the two static methods.
- Why do we need this class given that we have List and ArrayList?
- 
- The two static methods try to answer this question. They justify this
- class.
- 
- Let us now try to understand why the term delegation is being used here.
- 
- What is the relationship between this class and the class ArrayList? 
- 
- This class is called a delegator and ArrayList a delegate. 
- Can you justify this nomenclature?
- 
- Does this class implement new functionality?
- Such a delegator is also called an adaptor to make an analogy with
- a 220V to 110 V voltage converter a European to US plug adapter.
- Can you justify this nomenclature?
-
- 
- l
-
+ * DELEGATION AND ADAPTATION
+ *
+ * We see here that the interface List and the class ArrayList are both
+ * generic types.
+ * 
+ * Study this code.
+ * 
+ *
+ *
  */
 
 public class AStringHistoryDelegator implements History<String>{
@@ -46,32 +27,38 @@ public class AStringHistoryDelegator implements History<String>{
 	}
 	public int size() {
 		return contents.size();
-	}
-	
-	
-	/*
-	 LEAST PRIVELEGE
-	 This principle says that the users of an object should not be able to perform
-	 unauthorized operations - operations not needed to their tasks. 
-	 Which of these two examples supports least privilege?
-	 
-	 */
-	final static String EXAMPLE_STRING = "0";
-	public static void useListDirectly() {
-		List<String> aStringHistory = new ArrayList<String>();
-		aStringHistory.add(EXAMPLE_STRING);
-		/*
-		 Is the following allowed? Should it be allowed for a "history"?
-		 */
-//		aStringHistory.remove("0");
-	}
-	public static void useStringHistory() {
-		History<String> aStringHistory = new AHistory<String>();
-		aStringHistory.addElement(EXAMPLE_STRING);
-		/*
-		 Is the following allowed? Should it be allowed for a "history"?
-		 */
-//		aStringHistory.removeElement(EXAMPLE_STRING));
-//		((StringDatabase) aStringHistory).removeElement(EXAMPLE_STRING);
-	}
+	}	
 }
+ 	
+/*
+ * 
+ * A class A delegates to class B if A has-a reference b to an instance of B
+ * and some of its method are implemented by calling methods on B. A is called
+ * the delagator and B the delegate.
+ * 
+ * (T/F) AStringHistoryDelagator inherits from ArrayList.
+ * 
+ * (T/F) AStringHistoryDelagator delegates to ArrayList.
+ * 
+ * A method m in class A delegates to method n in class B, if A delegates to B, 
+ * m calls n.
+ * 
+ * (T/F) The size() method in AStringHistory delegates to the size() method in ArrayList.
+ * 
+ * (T/F) The addElement() method in AStringHistory delegates to the add() method in ArrayList.
+ *
+ * A class A is a proxy for class B if A and B have the same interface and every 
+ * public method in a delegates to the a method in class B.
+ * 
+ * A class A is an adapter of class B is every public method in class A 
+ * delegates to a method in class B.
+ * 
+ * (T/F) AStringHistory is a proxy for ArrayList.
+ * 
+ * (T/F) AStringHistory is an adapter of ArrayList.
+ * 
+ * 
+ * Next class AStringHistoryDelegatorUser
+ */
+ 
+

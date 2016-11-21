@@ -2,6 +2,9 @@ package lectures.generics_adapters;
 
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
+import lectures.generics_adapters.extra.AnElaboratingCounterConsoleView;
+import lectures.generics_adapters.extra.AnElaboratingObservableCounter;
+import lectures.generics_adapters.extra.ElaboratingObservableCounter;
 import lectures.interfaces.BMISpreadsheet;
 import lectures.mvc.ACounterConsoleView;
 import lectures.mvc.AnObservableCounter;

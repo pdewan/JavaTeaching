@@ -7,14 +7,11 @@ import java.util.Map;
 
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
-/*
- GENERICS
- 
-Java Collection types, like our History types, are generic.
-Uncomment the code below to see errors that by now should be obvious to you.
- 
- 
+/**
+ * This class demonstrates some of the generic collections in Java.
+ * 
  */
+ 
 public class JavaCollectionsVariety {
 	static final int EXAMPLE_INT = 0;
 	static final String EXAMPLE_STRING = "0";
@@ -25,14 +22,13 @@ public class JavaCollectionsVariety {
 		anIntegerList.add(EXAMPLE_INT);
 		Map<String, List<Integer>> aMap = new HashMap<String, List<Integer>>();
 		aMap.put("my scores", anIntegerList);
-		/*
-		 Should you get compile errors? Do you?
-		 */
-//		anIntegerList.add("0");
-//		aMap.put("his scores", new ArrayList<String>());
-
-		
-
 	}
 	
 }
+/*
+ * (T/F) A generic has at most one type parameter.
+ * 
+ * (T/F) An actual parameter of a generic an itself be an elaboration of a generic.
+ * 
+ * Next class AStringHistoryDelegator
+ */

@@ -5,28 +5,39 @@ import java.util.List;
 
 import lectures.graphics.Point;
 
-/*
- GENERIC COLLECTION CLASS
- 
-  */
+/**
+ * An example of a generic class.
+ *   
+ * The formal parameter T this class defines is used as an actual parameter to the 
+ * generic History.
+ * 
+ * So if it is elaborated with String, it implements the elaboration, History<String>
+ * 
+ * (T/F) The class AHistory implements a generic.
+ * 
+ * (T/F) The class AHistory elaborates a generic.
+ */
 
 
 public class AHistory<T> implements 
-	History<T> {
 	/*
-	 What happens when you replace the line above with the one below?
-	 What do the various occurrences of the type parameter, T mean, you think?
+	 * Swap the two lines below when asked
 	 */
+	History<T> {	
 //	History<T2> {
 	public static final int MAX_SIZE = 50;
-	// Cannot use generic to create an array, ultimately the buck has to stop somewhere
-	// At runtime, a generic type parameter reduces to Object when we allocate memory
-	// assuming Object. Put another way, an array is not a generic.
+	/*
+	 * Swap the two lines below when asked.
+	 */
+
 	Object[] contents = new Object[MAX_SIZE]; 
+//	Object[] contents = new T[MAX_SIZE];
 	int size = 0;
 	public int size() {return size;	}	
 	public T elementAt (int index) {
-		return (T) contents[index]; // must cast from Object to T
+		return (T) contents[index]; 
+//		return contents[index];
+
 	}
 	boolean isFull() {return size == MAX_SIZE;	}
 
@@ -38,36 +49,61 @@ public class AHistory<T> implements
 			size++;
 		}
 		/*
-		 Can we invoke a non object operation on a variable whose type is a parameter?
+		 * Comment out the following when asked
 		 */
 //		element.charAt(0);
+//		element.toString();
 		
-	} 
-	
-	public static void main (String[] args) {
-		String foo = (new ArrayList<String>().get(0));
-		History<String> stringHistory = new AHistory();
-		Object[] objects = new Object[50];
-		String[] strings = new String[50];
-		objects = strings;
-		//objects[3] = new Object();
-		List<Object> objectList = new ArrayList();
-		List<String> stringList = new ArrayList();
-		stringList.add("hello");
-		//objectList = stringList;
-		//List<String> stringListClone = (new ArrayList()).subList(0,3);
-		List<String> stringListClone = (new ArrayList<String>(stringList));
-		//List<Point> pointListClone = (new ArrayList<Point>(stringList));
-		//History h = historyListClone.get(0);
-		//historyListClone.add(new AHistory());
-		stringHistory.addElement("James Dean");
-		stringHistory.addElement("Joe Doe");
-		stringHistory.addElement("Jane Smith");
-		stringHistory.addElement("John Smith");
-		bus.uigen.ObjectEditor.edit(stringHistory);
-		
-	}
-	public static void shapeReader (History<? extends Point> history) {
-		history.elementAt(0).getX();
-	}
+	} 	
 }
+/*
+ 
+ * 
+ * Swap the two elaborations of History.
+ * What happens?
+ * 
+ * (multiple choice) A generic can be elaboarte with parameter P in some type 
+ * (class or interface) C if:
+ * 
+ * (a) P is a literal (actual) type.
+ * 
+ * (b) P is a type parameter defined by C
+ * 
+ * (b) P is some arbitrary identifier.
+ * 
+ * 
+ * Swap the two declarations of the array.
+ * 
+ * What happens?
+ * 
+ * (T/F) An array is a generic type.
+ * 
+ * (T/F) Regardless of the type (e.g. Point, String) used to elaborate AHistory , 
+ * contents will hold values of type Object. 
+ * 
+ * 
+ * Swap the two return statements in elementAt.
+ * 
+ * What happens?
+ * 
+ * (T/F) If T is a type parameter, then a value of type Object can be automatically
+ * converted to a a value of type T.
+ * 
+ * (T/F) If T is a type parameter, then a value of type Object can be automatically
+ * converted to a a value of type T with cast. 
+ * 
+ * Comment out the String and Object operationd in addElement()
+ * 
+ * What happens?
+ * 
+ * If T is a type parameter, then it is possible to invoke on a value of type T:
+ * (a) no operation,
+ * (b) any operation defined by class Object.
+ * (c) any operation defined by a predefined type.
+ * (c) any operation defined by a predefined or programmer defined type.
+ * 
+ * Go back to GenericHistoryUser
+ * 
+ * Next class AGenericConsoleView
+ * 
+ */
