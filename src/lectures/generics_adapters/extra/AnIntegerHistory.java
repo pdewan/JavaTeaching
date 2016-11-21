@@ -1,4 +1,5 @@
-package lectures.generics_adapters;
+package lectures.generics_adapters.extra;
+
 
 public class AnIntegerHistory implements IntegerHistory {
 	public static final int MAX_SIZE = 50;

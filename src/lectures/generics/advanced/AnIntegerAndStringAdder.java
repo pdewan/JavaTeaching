@@ -1,6 +1,6 @@
 package lectures.generics.advanced;
 
-import lectures.generics_adapters.IntegerAdder;
+import lectures.generics_adapters.extra.IntegerAdder;
 
 public class AnIntegerAndStringAdder implements GenericAdder<Integer>, IntegerAdder, StringAdder /*GenericAdder<String>*/{
 	@Override

@@ -2,6 +2,8 @@ package lectures.generics_adapters;
 
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
+import lectures.generics_adapters.extra.AnIntegerHistory;
+import lectures.generics_adapters.extra.IntegerHistory;
 /*
  GENERICS
  Look at the three different static methods presented here, all

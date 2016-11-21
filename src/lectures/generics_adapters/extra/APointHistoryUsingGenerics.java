@@ -1,5 +1,6 @@
-package lectures.generics_adapters;
+package lectures.generics_adapters.extra;
 
+import lectures.generics_adapters.AHistory;
 import lectures.graphics.ACartesianPoint;
 import lectures.graphics.Point;
 

@@ -1,4 +1,7 @@
-package lectures.generics_adapters;
+package lectures.generics_adapters.extra;
+
+import lectures.generics_adapters.AHistory;
+import lectures.generics_adapters.History;
 
 
 public class AStringHistoryUsingGenerics extends AHistory<String> implements StringHistoryUsingGenerics {

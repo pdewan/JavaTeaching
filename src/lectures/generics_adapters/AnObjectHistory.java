@@ -1,12 +1,5 @@
 package lectures.generics_adapters;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import lectures.graphics.Point;
-
-
-
 
 public class AnObjectHistory implements ObjectHistory {
 	public static final int MAX_SIZE = 50;

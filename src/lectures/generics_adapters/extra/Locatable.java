@@ -1,4 +1,4 @@
-package lectures.generics_adapters;
+package lectures.generics_adapters.extra;
 
 public interface Locatable {
 	void setX(int newVal);

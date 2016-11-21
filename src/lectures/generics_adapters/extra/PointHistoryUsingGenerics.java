@@ -1,5 +1,6 @@
-package lectures.generics_adapters;
+package lectures.generics_adapters.extra;
 
+import lectures.generics_adapters.History;
 import lectures.graphics.Point;
 
 
