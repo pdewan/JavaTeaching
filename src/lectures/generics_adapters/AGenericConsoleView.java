@@ -16,6 +16,5 @@ public class AGenericConsoleView<T> implements GenericObserver<T> {
 	}
 }
 /*
- * 
  * Go to JavaCollectionsVariety
  */

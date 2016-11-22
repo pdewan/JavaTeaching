@@ -28,7 +28,7 @@ public class JavaCollectionsVariety {
 /*
  * (T/F) A generic has at most one type parameter.
  * 
- * (T/F) An actual parameter of a generic an itself be an elaboration of a generic.
+ * (T/F) An actual parameter (argument) of a generic an itself be an elaboration of a generic.
  * 
  * Next class AStringHistoryDelegator
  */

@@ -13,28 +13,31 @@ import lectures.graphics.Point;
  * Answer questions below.
  */
 public class ObjectHistoryUser {
-	public static void manipulatePoints() {
-		ObjectHistory aPointHistory = new AnObjectHistory();
+	
+	public static void manipulateStrings() {
+		ObjectHistory aStringHistory = new AnObjectHistory();	
 		/*
 		 * Swap the two addElements when asked
 		 */
-		aPointHistory.addElement(new ACartesianPoint(0, 1));
-//		aPointHistory.addElement("hello");
+		aStringHistory.addElement("hello");		
+//		aStringHistory.addElement(new ACartesianPoint(0, 1));
 		
 		/*
 		 * Swap the two printlns when asked
 		 */
-		System.out.println (((Point)aPointHistory.elementAt(0)).getX());
-//		System.out.println (aPointHistory.elementAt(0).getX());
-	}
-	public static void manipulateStrings() {
-		ObjectHistory aStringHistory = new AnObjectHistory();		
-		aStringHistory.addElement("hello");		
 		System.out.println (((String)aStringHistory.elementAt(0)).charAt(0));
+//		System.out.println (aStringHistory.elementAt(0).charAt(0));
 	}
+	
+	public static void manipulatePoints() {
+		ObjectHistory aPointHistory = new AnObjectHistory();
+		aPointHistory.addElement(new ACartesianPoint(0, 1));
+		System.out.println (((Point)aPointHistory.elementAt(0)).getX());
+	}
+	
 	public static void main (String[] args) {
-		manipulatePoints();
 		manipulateStrings();		
+		manipulatePoints();
 	}	
 }
 /*
@@ -42,14 +45,14 @@ public class ObjectHistoryUser {
  * 
  * (T/F) An instance of AnObjectHistory can have String elements.
  * 
- * (T/F) AnObjectHistory can be instantiated to create a history of any type of
- * element.
+ * (T/F) An instance of AnObjectHistory can be used to create a history of any
+ * type of element.
  * 
  * Run the program.
  * (T/F) Executing the original ObjectHistoryUser program results in runtime errors.
  * 
- * In manipulateStrings() swap the two addElement() calls, and run it if there
- * are no compile errors.
+ * In manipulateStrings() swap the two addElement() calls, and run the program if
+ * there are no compile errors.
  * 
  *  Swapping the two addElement() calls in ObjectHistoryUser results in:
  *   (a) a compile error.
@@ -62,7 +65,7 @@ public class ObjectHistoryUser {
  * Swapping the two println() calls calls in ObjectHistoryUser results in: 
  *   (a) a compile error.
  *   (b) a runtime error.
- *   (c) none of the above
+ *   (c) none of the above.
  * 
  * (T/F) String elements of AnObjectHistory must be cast to String if String operations
  * are to be executed on them.
@@ -77,4 +80,6 @@ public class ObjectHistoryUser {
  * 
  * (T/F) AnObjectHistory is less safe than AStringHistory - it can lead to 
  * class cast exceptions when elements are to be manipulated in different applications.
+ * 
+ * Go to GenericHistoryUser
  */

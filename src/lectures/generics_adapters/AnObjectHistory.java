@@ -20,7 +20,8 @@ public class AnObjectHistory implements ObjectHistory {
 			size++;
 		}
 		/*
-		 Can we invoke a non object operation on a variable whose type is a parameter?
+		 Can we invoke a non Object operation on a variable whose type 
+		 in the parameter list is Object?
 		 */
 //		element.charAt(0);
 		
