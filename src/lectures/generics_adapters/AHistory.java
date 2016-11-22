@@ -69,7 +69,8 @@ public class AHistory<T> implements
 	} 	
 }
 /*
- * (T/F) The element type of AHistory is T.
+ * (T/F) The element type of AHistory (that is the type of elements that can be
+ *  added to and retrieved from instance of the the class)  is T.
  * 
  * Swap the two elaborations of History.
  * What happens?

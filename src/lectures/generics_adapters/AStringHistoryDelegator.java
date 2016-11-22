@@ -37,9 +37,9 @@ public class AStringHistoryDelegator implements History<String>{
  * instance of B) and some of A's methods are implemented by calling methods
  * on B. A is called the delegator and B is called the delegate.
  * 
- * (T/F) AStringHistoryDelagator inherits from ArrayList.
+ * (T/F) AStringHistoryDelegator inherits from ArrayList.
  * 
- * (T/F) AStringHistoryDelagator delegates to ArrayList.
+ * (T/F) AStringHistoryDelegator delegates to ArrayList.
  * 
  * A method m in class A delegates to method n in class B if A delegates to B and
  * m calls n.
@@ -50,12 +50,18 @@ public class AStringHistoryDelegator implements History<String>{
  *
  *
  * A delegator class A is a proxy for a delegate class B if A and B have the same interface and every 
- * public method in A delegates to the a method in class B.
+ * public method in A delegates to a method in class B.
  *  
  * A delegator class A is an adapter of delegate class B if every public method in class A delegates to
- * a method in class B. 
+ * a method in class B. The delagate class, B, is called the adapted class.
  * 
- * Thus, an adapter and proxy is a more specific form of a delegator.
+ * 
+ * Thus, a proxy is a more specific form of an adapter.
+ * 
+ * It is possible to create proxies using inheritance by overriding the inherited
+ * methods and making super calls. As an adapter can change the interface provided
+ * by the adapted class, it is not always possible to create an adapter using
+ * inheritance.
  * 
  * (T/F) AStringHistory is a proxy for ArrayList.
  * 

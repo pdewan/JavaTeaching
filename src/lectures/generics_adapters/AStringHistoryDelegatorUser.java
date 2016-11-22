@@ -54,13 +54,13 @@ public class AStringHistoryDelegatorUser {
  * (Multiple choice) Removing an element from aStringHistory in useListDirectly leads to a:
  * (a) compile-time error.
  * (b) runtime error.
- * (c) successful violation of least privilege principle.
+ * (c) violation of the least privilege principle.
  * (d) none of the above.
  * 
  * (Multiple choice) Removing an element from aStringHistory in useHistory leads to a:
  * (a) compile-time error.
  * (b) runtime error.
- * (c) successful violation of least principle.
+ * (c) violation of least principle.
  * (d) none of the above.
  * 
  * (T/F) Adapting a class rather than using it directly can reduce least privilege violations.
@@ -78,6 +78,7 @@ public class AStringHistoryDelegatorUser {
  * the same interface)? Proxies are used in more specialized situations where they tweak how we
  * interact with a class. For example they might restrict access to the delegate object based
  * on access rights, or help the code use the delegate object by forwarding it requests if it
- * is actually connected over a network.
+ * is actually connected over a network. Server proxies are used to cache results in a server
+ * near you. 
  */
 
