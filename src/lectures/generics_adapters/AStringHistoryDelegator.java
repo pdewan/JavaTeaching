@@ -35,7 +35,7 @@ public class AStringHistoryDelegator implements History<String>{
 /*
  * A class A delegates to class B if A has-a B (A has a reference to an
  * instance of B) and some of A's methods are implemented by calling methods
- * on B. A is called the delagator and B is called the delegate.
+ * on B. A is called the delegator and B is called the delegate.
  * 
  * (T/F) AStringHistoryDelagator inherits from ArrayList.
  * 
@@ -49,14 +49,13 @@ public class AStringHistoryDelegator implements History<String>{
  * (T/F) The addElement() method in AStringHistory delegates to the add() method in ArrayList.
  *
  *
- * A class A is a proxy for class B if A and B have the same interface and every 
+ * A delegator class A is a proxy for a delegate class B if A and B have the same interface and every 
  * public method in A delegates to the a method in class B.
  *  
- * A class A is an adapter of class B if every public method in class A delegates to
+ * A delegator class A is an adapter of delegate class B if every public method in class A delegates to
  * a method in class B. 
  * 
- * Thus, an adapter is a more specific form of a delegator, and a proxy is a more specific
- * form of an adapter.
+ * Thus, an adapter and proxy is a more specific form of a delegator.
  * 
  * (T/F) AStringHistory is a proxy for ArrayList.
  * 
