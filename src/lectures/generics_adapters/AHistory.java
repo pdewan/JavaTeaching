@@ -75,7 +75,7 @@ public class AHistory<T> implements
  * What happens?
  * 
  * (T/F) A generic can be elaborated with parameter P in some type (class or 
- * interface) C only if P is a literal type or C is a type parameter declared
+ * interface) C only if P is a literal type or P is a type parameter declared
  * by C.
  * 
  * Swap the two declarations of the array.
