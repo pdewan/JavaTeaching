@@ -4,10 +4,16 @@ import java.io.IOException;
 /**
  * PROGRAMMER-DEFINED EXCEPTION EXAMPLE
  * 
- * Why extend IOException and not (a) Exception or (b) RuntimeException
+ * 
  */
 public class AMissingArgumentException extends IOException{
 	public AMissingArgumentException(String message) {
 		super(message);
 	}
 }
+/*
+ *(T/F) It is possible to create our own Exception class by subclassing an
+ * existing Exception class
+ * 
+ * Return back to LinesReaderAndPrinterUsingProgrammerDefinedException
+ */ 

@@ -11,12 +11,7 @@ package lectures.exceptions;
  * Study the two alternative loops and the exceptions caught. Debug-run the program 
  * in each of the four cases.
  * 
- * In each of the four cases, do you understand what the next statement will be after an
- * exception?
- * 
- * In this example, which of the four alternatives is the best?
- * 
- * Can you imagine a different example, in which a different alternative is better?
+ 
  */
 
 public class IntraMethodPropagation {
@@ -29,7 +24,9 @@ public class IntraMethodPropagation {
 	public static void tryInsideBlock() {
 		for (int i = 0; i < list.length; i++) {
 			try {
-				// Set breakpoint here and press F6 to see where you go next
+				/*
+				 *  Set breakpoint here and press F6 to see where you go next
+				 */
 				System.out.println((String) list[i]); 
 			} catch (ClassCastException e) {
 				System.out.println(e);
@@ -40,7 +37,9 @@ public class IntraMethodPropagation {
 	public static void tryOutsideBlock() {
 		try {
 			for (int i = 0; i < list.length; i++) {
-				// Set breakpoint here and press F6 to see where you go next
+				/*
+				 * Set breakpoint here and press F6 to see where you go next
+				 */
 				System.out.println((String) list[i]); 
 			}
 		} catch (ClassCastException e) {
@@ -52,7 +51,9 @@ public class IntraMethodPropagation {
 		try {
 			for (int i = 0; i < list.length; i++) {
 				try {
-					// Set breakpoint here and press F6 to see where you go next
+					/*
+					 *  Set breakpoint here and press F6 to see where you go next
+					 */
 					System.out.println((String) list[i]); 
 				} catch (ClassCastException e) {
 					System.out.println(e);
@@ -64,7 +65,9 @@ public class IntraMethodPropagation {
 	}
 	public static void tryInNoBlock() {
 		for (int i = 0; i < list.length; i++) {
-				// Set breakpoint here and press F6 to see where you go next
+				/*
+				 * Set breakpoint here and press F6 to see where you go next
+				 */
 				System.out.println((String) list[i]); 			
 		}
 	}
@@ -75,5 +78,18 @@ public class IntraMethodPropagation {
 //		tryInsideAndOutsideBlock();
 //		tryInNoBlock();
 	}
-
 }
+/**
+ * If an exception is thrown by a statement s, then it is  caught by:
+ * (a) the innermost compatible catch blocks that encloses s.
+ * (b) the outermost compatible catch block that encloses s.
+ * (c) all compatible catch blocks that enclose s.
+ * 
+ * After a catch block finishes execution, control flows to:
+ * (a) the statement following the corresponding try block.
+ * (b) the caller of the method in which the catch block executes.
+ * (c) none of the above
+ * 
+ * 
+ * 
+ */

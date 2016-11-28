@@ -1,9 +1,9 @@
-package lectures.exceptions;
+package lectures.exceptions.extra;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import lectures.exceptions.extra.TimingLinesReaderWithFinally;
+import lectures.exceptions.AMissingArgumentException;
 /**
  * Look at the code and associated documentation by hovering.
  * 

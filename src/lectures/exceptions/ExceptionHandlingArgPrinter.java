@@ -32,7 +32,7 @@ public class ExceptionHandlingArgPrinter {
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Did not specify the argument to be printed. Terminating program.");			
 		} finally {
-			System.out.println ("Program terminates");
+			System.out.println ("Program terminates at time:" + System.currentTimeMillis());
 		}
 	}
 }
@@ -100,6 +100,6 @@ public class ExceptionHandlingArgPrinter {
  * of programs, ExceptionHandlingArgPrinter is more readable than SafeArgPrinter as 
  * they can more easily find and hence ignore error handling code.
  *  
- * 
+ * Next Class LinesReaderAndPrinter
  *
  */
