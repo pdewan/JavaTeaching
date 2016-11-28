@@ -1,4 +1,7 @@
 package lectures.exceptions;
+
+import lectures.exceptions.extra.WeightSetterWithFinallyAndAssertions;
+
 /**
  * FINALLY FOR METHOD POST CONDITION
  * 
