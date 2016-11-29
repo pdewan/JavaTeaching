@@ -9,10 +9,10 @@ package lectures.exceptions;
  * The code within the braces following "catch" is called the catch block.
  * 
  * A catch block, like a method, takes parameters. However it takes a single
- * parameter whose type is an exception class. 
+ * parameter whose type is an exception class.
  * 
  * An exception class is a class whose instances represent
- * runtime errors.
+ * runtime errors and is the Java class Exception or a subclass of Exception.
  * 
  * Different exception classes represent different kinds of errors.
  * 
