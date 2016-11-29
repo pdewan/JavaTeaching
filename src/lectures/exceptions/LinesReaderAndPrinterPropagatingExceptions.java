@@ -183,11 +183,25 @@ public class LinesReaderAndPrinterPropagatingExceptions {
  *  The Halting problem says that it is not possible for Java to always know if some
  *  statement will actually be executed at runtime.
  *  
- *  (T/F) The halting problem prevents Java from knowing if an exception will actually 
+ *  (T/F) The halting problem prevents Java from always knowing if an exception will actually 
  *  be thrown by a try block.
+ *  
+ *  As we have seen, at compile time we do not know which implementation of  a
+ *  method will actually be invoked to service a method call. If the call is an external call
+ *  targeted at a variable typed using an interface, then answer depends on the class of 
+ *  the object assigned to the variable. If the call is made in class C to an 
+ *  internal (inherited or declared) method m of C, then the method actually invoked 
+ *  may be an overriding method m in some subclass of C. In both cases, the method
+ *  call is dynamically dispatched at runtime. This means the header of a method
+ *  in an interface or class must advertise the union of all exceptions
+ *  thrown by implementing and overriding methods respectively.
+ *   
+ *  (T/F) Dynamic dispatching prevents Java from always knowing which exceptions will be
+ *  thrown by a method call.
  *   
  *  (T/F) When in doubt, is it better to be conservative and over advertise the thrown
- * exceptions.
+ * checked exceptions in a method header so that the a caller can always handle an exception 
+ * that propagates to it.
  * 
  *
 

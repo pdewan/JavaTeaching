@@ -81,11 +81,12 @@ public class IntraMethodPropagation {
 	}
 }
 /**
- * If an exception is thrown by a statement s enclosed in two or more try blocks, 
- * then it is  caught by:
+ * If an exception is thrown in method m by a statement s enclosed in two or more try blocks in m, 
+ * then it is caught by:
  * (a) the innermost compatible catch block.
  * (b) the outermost compatible catch block.
  * (c) all compatible catch blocks associated with enclosing try blocks.
+ * (d) a compatible catch block in the caller of m.
  * 
  * After a catch block finishes execution, control flows to:
  * (a) the statement following the corresponding try-catch-finally blocks.
