@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * We see here several new features including two exception operations 
+ * We see here several new features including two exception operations, 
  * and instantiation and use of an exception defined by us.
  *
  * Consider the comments in main() and numberOfInputLines and answer the questions.
@@ -57,8 +57,9 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
 			return Integer.parseInt(args[0]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			/*
-			 * Comment the following and uncomment the 
-			 * commented statement below
+			 * First uncomment the commented statement below.
+			 * Then comment out the throw statement.
+			 * Then return the statements to their original states.
 			 * 
 			 */
 			throw new AMissingArgumentException("First argument missing");
@@ -83,7 +84,7 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
  * 
  * (T/F) AMissingArgumentException is a checked exception.
  * 
- * (T/F) A suclass of a checked exception is also a checked exception.
+ * (T/F) A subclass of a checked exception is also a checked exception.
  * 
  * Uncomment the throws clause
  * 
@@ -95,9 +96,10 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
  * throw another kind of exception to its caller.
  * 
  * (T/F) It is possible for a method that catches an unchecked exception to throw
- * a checked exception to its caller
+ * a checked exception to its caller.
  * 
- * Follow the commenting and un-commenting instructions in the catch block.
+ * Follow the commenting and un-commenting instructions in the catch block of
+ * numberOfInputLines.
  * 
  * (T/F) It makes sense to execute a statement after an exception is thrown.
  * 
@@ -107,12 +109,12 @@ public class LinesReaderAndPrinterUsingProgrammerDefinedException {
  * 
  * CATCH AND IS-A
  * 
- * Comment out the first catch block and debug-run the program with no break point. 
+ * Comment out the first catch block in main and debug-run the program with no break point. 
  * 
  * 
  * Put breakpoint in the numberOfInputLines() try block.
  * 
- * Debug-Run the program and follow the control flow. 
+ * Debug-Run the program and follow the control flow using F6 (step over). 
  * 
  * (T/F) A catch block can handle exceptions of multiple types.
  * 

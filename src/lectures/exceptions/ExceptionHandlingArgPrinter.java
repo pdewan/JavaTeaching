@@ -2,22 +2,22 @@ package lectures.exceptions;
 /**
  * TRY-CATCH
  * 
- * Finally, we see something new, the try-catch-finally statement.
+ * Finally, we see something new: the try-catch-finally statement.
  *   
- * The code within the braces following try is called the try block.
+ * The code within the braces following "try" is called the try block.
  * 
- * The code within the braces following catch is called the catch block.
+ * The code within the braces following "catch" is called the catch block.
  * 
- * A catch block, like a method, also takes parameters. However it takes a single
+ * A catch block, like a method, takes parameters. However it takes a single
  * parameter whose type is an exception class. 
  * 
  * An exception class is a class whose instances represent
  * runtime errors.
  * 
- * Different exception classes repersent different kinds of errors.
+ * Different exception classes represent different kinds of errors.
  * 
  *
- * The code within the braces following finally is called the finally block.
+ * The code within the braces following "finally" is called the finally block.
  *
  */
 public class ExceptionHandlingArgPrinter {
@@ -39,7 +39,7 @@ public class ExceptionHandlingArgPrinter {
 /**
  * TRY-CATCH
  * 
- * Your next catch is to understand the nature of a try-catch block.
+ * Your next task is to understand the nature of a try-catch block.
  * 
  * Uncomment the two printlns and put a break point where instructed.
  * 
@@ -50,19 +50,19 @@ public class ExceptionHandlingArgPrinter {
  * 
  * Repeat the two steps, but this time provide an argument.
  * 
- * Answer the questions below based on the behavior you see, that is,
+ * Answer the questions below based on the behavior you see. That is,
  * your answers should be consistent with the behavior.
  * 
  * (T/F) If no statement in a try block results in a runtime error (exception), 
  * then the catch block is *not* executed.
  * 
  * (T/F) If no statement in a try block results in a runtime error, 
- * then the finally block is *not executed.
+ * then the finally block is *not* executed.
  * 
  * (T/F) If some statement in a try block causes an exception of some type 
  * (e.g. ArrayIndexOutOfBoundsException), then the program jumps to the
- * catch block that takes the exception (e.g. V)  as an argument, 
- * abandoning the remaining statements in the try block.
+ * catch block that takes the exception (e.g. ArrayIndexOutOfBoundsException)
+ * as an argument, abandoning the remaining statements in the try block.
  * 
  * 
  * (T/F) If some statement in a try block causes an exception of some type 
@@ -79,8 +79,8 @@ public class ExceptionHandlingArgPrinter {
  * 
  * (T/F) It is possible for a try block to not have a corresponding catch block.
  * 
- * Comment out the two lines of the finally block without commenting out the two
- * lines of the catch block.
+ * Uncomment the catch lines and comment out the two lines of the finally block
+ * without commenting out the two lines of the catch block.
  * 
  * (T/F) It is possible for a try block to not have a corresponding finally block.
  * 
@@ -92,8 +92,7 @@ public class ExceptionHandlingArgPrinter {
  * 
  * Look at the code again now that you understand it.
  * 
- * 
- * (T/F) ExceptionHandlingArgPrinter is more inefficient than ArgPrinter as subscript
+ * (T/F) ExceptionHandlingArgPrinter is more inefficient than ArgPrinter since subscript
  * checking of args is done twice, once by the program and once by Java.
  * 
  * (T/F) For programmers not interested in understanding the error behavior

@@ -5,11 +5,12 @@ package lectures.exceptions;
  * We see a new kind of exception {@link ClassCastException}. Hover over the name
  * to see the full description,
  * 
- * We see also an exception that occurs in a nester block that is caught in one
+ * We see also an exception that occurs in a nested block that is caught in one
  * case within the block and another case in an outer block,
  * 
- * Study the two alternative loops and the exceptions caught. Debug-run the program 
- * in each of the four cases.
+ * Study the four alternative loops and the exceptions caught. Debug-run the program 
+ * in each of the four cases by placing the proper breakpoints and making the proper
+ * call uncommented in main.
  * 
  
  */
@@ -80,13 +81,14 @@ public class IntraMethodPropagation {
 	}
 }
 /**
- * If an exception is thrown by a statement s, then it is  caught by:
- * (a) the innermost compatible catch blocks that encloses s.
- * (b) the outermost compatible catch block that encloses s.
- * (c) all compatible catch blocks that enclose s.
+ * If an exception is thrown by a statement s enclosed in two or more try blocks, 
+ * then it is  caught by:
+ * (a) the innermost compatible catch block.
+ * (b) the outermost compatible catch block.
+ * (c) all compatible catch blocks associated with enclosing try blocks.
  * 
  * After a catch block finishes execution, control flows to:
- * (a) the statement following the corresponding try block.
+ * (a) the statement following the corresponding try-catch-finally blocks.
  * (b) the caller of the method in which the catch block executes.
  * (c) none of the above
  * 

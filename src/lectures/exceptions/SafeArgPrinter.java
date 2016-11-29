@@ -22,13 +22,13 @@ public class SafeArgPrinter {
  * 
  * (T/F) For programmers testing the program to identify bugs, 
  * the error message of SafeArgPrinter is more useful than the one given by
- * ArgPrinter
+ * ArgPrinter.
  *  
  * (T/F) For end users trying to understand how to use the program, 
  * the error message of SafeArgPrinter is more useful than the one given by
  * ArgPrinter
  * 
- * (T/F) SafeArgPrinter is more inefficient than ArgPrinter as subscript
+ * (T/F) SafeArgPrinter is more inefficient than ArgPrinter, as subscript
  * checking of args is done twice, once by the program and once by Java.
  * 
  * (T/F) For programmers not interested in understanding the error behavior

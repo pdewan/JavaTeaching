@@ -7,6 +7,17 @@
  * 
  * Start with ArgPrinter
  * 
+ * Then:
+ * 
+ * SafeArgPrinter
+ * ExceptionHandlingArgPrinter
+ * LinesReaderAndPrinter
+ * LinesReaderAndPrinterPropagatingExceptions
+ * LinesReaderAndPrinterUsingProgrammerDefinedException
+ * AMissingArgumentException
+ * IntraMethodPropagation
+ * 
+ * 
  */
 
 package lectures.exceptions;

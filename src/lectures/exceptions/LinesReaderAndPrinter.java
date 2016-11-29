@@ -25,14 +25,14 @@ public class LinesReaderAndPrinter {
 	/*
 	 * BufferedReader is an alternative to Scanner that better suits our purpose
 	 * as it throws an important Java exception, IOException, that we will study here.
-	 * The readLine method of the class takes the place of the Scanner nextLine method.
+	 * The readLine() method of the class takes the place of the Scanner nextLine() method.
 	 * 
 	 */
 	static BufferedReader input = new BufferedReader(
 			new InputStreamReader(System.in));
 	
 	/**
-	 * Delegates two work two two methods, each of which can result in errors.	 
+	 * Delegates work to two methods, each of which can result in errors.	 
 	 */
 	public static void main (String args[])  {
 		try {
@@ -46,12 +46,12 @@ public class LinesReaderAndPrinter {
 	} 
 	
 	/**
-	 * Read from the console the number of lines specified in the argument
-	 * and echo each of them to the console. 
+	 * Reads from the console the number of lines specified in the argument
+	 * and echoes each of them to the console. 
 	 * 
 	 * Possible error: the user may not enter the expected number of lines. 
 	 * For instance, the expected number is 2 and the user entered one and
-	 * then entered the EOF character to close the console input.
+	 * then entered the EOF (End-of-File) character to close the console input.
 	 * 
 	 * This method can be called from main or some other method. So it does
 	 * not know the context - that its argument is specified by the end
@@ -63,13 +63,17 @@ public class LinesReaderAndPrinter {
 	            System.out.println("Please enter the line to be echoed");
 	        	System.out.println(input.readLine());
 	        }
-	    } catch (IOException e) { // User entered the EOF (End of File) marker to close input before the read was executed
-	        System.out.println("Did not input " + numberOfInputLines +  " input strings before input was closed. ");
+	    } catch (IOException e) { 
+	   	 // User entered the EOF (End of File) marker to close input 
+	   	 // before the read was executed
+	       
+	   	 System.out.println("Did not input " + numberOfInputLines 
+	   			 +  " input strings before input was closed. ");
 	    }
 	}
 	
 	/**
-	 * Determine the number of lines to be echoed by converting the 
+	 * Determines the number of lines to be echoed by converting the 
 	 * zeroth main argument into an int.
 	 * 
 	 * Possible error: The user does not enter the main argument, as in the previous
@@ -82,10 +86,10 @@ public class LinesReaderAndPrinter {
 	 * So it does also does not know the context - that its result will be used
 	 * in an interactive session by an end-user to echo lines. 
 	 *  
-	 * Is returning 0 the best error "recovery" strategy. 
+	 * Is returning 0 the best error "recovery" strategy?
 	 * 
 	 * Can you think of a better one, if the method had context and knew 
-	 * what main is doing?
+	 * what main was doing?
 	 *
 	 */
 	public static int numberOfInputLines(String[] args) {
@@ -108,24 +112,22 @@ public class LinesReaderAndPrinter {
  * (T/F) LinesReaderAndPrinter with no argument executes (one or more statements in) a try 
  * block of numberOfInputLines.
  * 
- * (T/F) LinesReaderAndPrinter with no argument executes a catch 
- * block of numberOfInputLines. 
+ * (T/F) LinesReaderAndPrinter with no argument executes a catch block of numberOfInputLines. 
  * 
  *  
- * (T/F) LinesReaderAndPrinter with no argument executes (one or more statements in) a catch block of main.
+ * (T/F) LinesReaderAndPrinter with no argument executes (one or more statements in) a catch
+ *  block of main.
  * 
  * (T/F) If method p calls method q, and the execution of q results in an exception 
  * of type E that is handled by a catch block of q, then control transfers to a 
  * catch block of q that can handle an exception of type E.
  * 
- * 
  * (T/F) LinesReaderAndPrinter with no argument executes (one or more statements in) a try 
  * block of echoLines.
  * 
- * (T/F) LinesReaderAndPrinter with no argument executes a catch 
- * block of echoLines. 
+ * (T/F) LinesReaderAndPrinter with no argument executes a catch block of echoLines. 
  * 
- * (T/F) LinesReaderAndPrinter with no argument prompts the use for input.
+ * (T/F) LinesReaderAndPrinter with no argument prompts the user for input.
  * 
  * Now debug-run the program with an argument of 2 and follow the program
  * execution. Respond to the prompt in the console.
