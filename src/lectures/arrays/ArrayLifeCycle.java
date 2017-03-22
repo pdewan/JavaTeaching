@@ -81,7 +81,7 @@ public class ArrayLifeCycle {
 		uninitializedElements = new FactorialSpreadsheet[] {
 				new ALoopingFactorialSpreadsheet()
 		};
-		System.out.println ("Length of uniinitializedElements now: " +
+		System.out.println ("Length of uninitializedElements now: " +
 				uninitializedElements.length);
 		System.out.println("Contents of unininitializedElements:" +
 				Arrays.toString(uninitializedElements));
