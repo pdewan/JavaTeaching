@@ -26,7 +26,7 @@ public class Comp110Driver {
 	public static void demoSimpleState() {
 		//VirtualToolkit.selectAWT();
 		
-		uiFrame frame = ObjectEditor.edit(new ABMIAndOverweightSpreadsheet(1.77, 75));
+		uiFrame frame = (uiFrame) ObjectEditor.edit(new ABMIAndOverweightSpreadsheet(1.77, 75));
 		WidgetAdapter.setFontInFrameTree(frame, null, null, null, 18);
 		ObjectEditor.edit(new ACartesianPoint(100, 200));
 	}
