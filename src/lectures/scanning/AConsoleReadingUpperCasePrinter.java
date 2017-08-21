@@ -156,7 +156,7 @@ public class AConsoleReadingUpperCasePrinter {
 		 * 	(a) returns the remainder of the current line input by the user 
 		 *     and advances to the next line.
 		 * 
-		 * ( (b) advances to the next line and returns all the characters in it.
+		 *  (b) advances to the next line and returns all the characters in it.
 		 * 
 		 * The next statement gives next line input by the user on the console, 
 		 * hover on method name to see its description and ansxwer the 
