@@ -158,8 +158,8 @@ public class AConsoleReadingUpperCasePrinter {
 		 * 
 		 *  (b) advances to the next line and returns all the characters in it.
 		 * 
-		 * The next statement gives next line input by the user on the console, 
-		 * hover on method name to see its description and ansxwer the 
+		 * The next statement gives the next line input by the user on the console. 
+		 * Hover on method name, nextLine, to see its description and answer the 
 		 * questions above.	
 		 *
 		 */
