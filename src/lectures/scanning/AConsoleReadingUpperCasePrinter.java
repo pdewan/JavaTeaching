@@ -84,7 +84,7 @@ public class AConsoleReadingUpperCasePrinter {
 	/**
 	 * EXECUTABLE CLASSES and MAIN METHOD HEADER
 	 * T/F Only a class with a main method can be executed.  
-     * T/F A main method is the first method executed when its class is run.
+     * T/F A main method is the: first method executed when its class is run.
      * T/F A main method is the last method executed when its class is run.
      * 
 	 * Every runnable program must have at least one class that declares a main method.
@@ -152,8 +152,16 @@ public class AConsoleReadingUpperCasePrinter {
 		 */
 		Scanner scanner = new Scanner(System.in);
 		/*
+		 * The Scanner nextLine() method:
+		 * 	(a) returns the remainder of the current line input by the user 
+		 *     and advances to the next line.
+		 * 
+		 * ( (b) advances to the next line and returns all the characters in it.
+		 * 
 		 * The next statement gives next line input by the user on the console, 
-		 * hover on method name to see its description
+		 * hover on method name to see its description and ansxwer the 
+		 * questions above.	
+		 *
 		 */
 		String scannedString = scanner.nextLine(); 
 		
@@ -185,21 +193,49 @@ public class AConsoleReadingUpperCasePrinter {
 		while (index < scannedString.length()) {
 			
 			/* 
+			 * The charAt() operation returns a value of type:
+			 * 	 (a) String.
+			 *   (b) char.
+			 *   (c) none of the above
+			 *  If L is the length of the String on which charAt() is invoked,
+			 * 		legal arguments of charAt() are in the range: 
+			 *   (a) 0..L
+			 *   (b) 1..L
+			 *   (c) 0..L-1
+			 *   (d) 1..L-1
+			 *   (e) None of the above
+			 * 			 * 
 			 * charAt() gives character at index, hover over its name to get its 
-			 * behavior.
+			 * behavior and answer the questions.
 			 * A char is a type defined to store characters.
 			 */
 			char nextLetter = scannedString.charAt(index);
 			/**
-			 * IF STATEMENTS
+			 * STRING + AND CHARACTER ORDERING
+			 * 
+			 * Which is true:
+			 *     (a) The character 'a' is greater than the character 'b'.
+			 *     (b) The character 'a' is smaller than the character 'b'.
+			 *     (c) The character 'a' and 'b' cannot be compared.
+			 *      
+			 * Which is true:
+			 * 	   (a) The character 'a' and '0' cannot be compared in Java.
+			 *     (b) The character 'a' and '0' can be compared in Java but 
+			 *         it is not good style to make this comparison.
+			 *     (c) The character 'a' and '0' can be compared in Java and it
+			 *         is good style to make this comparison.
+			 *        
+			 * (T/F) Given strings s1 and s2, s1 + s2 is 
+			 * 		(a)the sum of the lengths of (number of characters in) s1 and s2.		 * 
+			 * 		(b)the result of appending s2 to s1.
+			 *      (c)none of the above.
 			 * 
 			 * Syntax of if statement with optional else shown below
 			 * the if check shows that characters are ordered
 			 * This ordering  preserves letter and digit ordering
 			 * You should only compare digits, lowercase letters and upper case 
-			 * letters with each other
-			 * not digits and letters or lower case and upper case with each other 
-			 * as these orderings are not fundamental
+			 * letters with each other, not digits and letters or lower case 
+			 * and upper case with each other as these orderings are not fundamental.
 			*/
 			if (nextLetter >= 'A' && nextLetter <= 'Z') {
 				System.out.println("Token:" + nextLetter); // + here means string concatenation
@@ -211,8 +247,18 @@ public class AConsoleReadingUpperCasePrinter {
 			index++;
 		}
 		/**
-		 * What are the tokens printed when the input is Albert Einstein
-		 * What are the values of index when the print is executed
+		 * When the String "Albert Einstein" is input, the tokens produced are
+		 * the strings:
+		 *     (a) "Albert" and "Einstein"
+		 *     (b) "A" and "B"
+		 *     (c) None of the above
+		 *     
+		 *  The values of variable, index, when the print is executed are:
+		 *      (a) Each of the values in the range 0..scannedString.length()-1
+		 *      (b) Each of the values in the range 0..scannedString.length()
+		 *      (c) 0 and 7
+		 *      (d) 1 and 8
+		 *      (e) None of the above		
 		 */
 		
 		scanner.close(); // we are done with the scanner, we are actually just done
