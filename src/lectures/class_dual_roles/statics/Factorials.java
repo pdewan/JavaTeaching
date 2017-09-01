@@ -22,20 +22,21 @@ package lectures.class_dual_roles.statics;
  * (Please do not put the keyword protected, it is banned from discussion until
  * we learn inheritance.)
  * Do you get any compile errors in this file or in the class
- * {@link StaticLoopingFactorialSpreadsheet}, which is the same package as this class and calls
- * loopingFactorial() from the method setNumber in that class?
+ * {@link StaticLoopingFactorialSpreadsheet}, which is the same package 
+ * as this class and calls loopingFactorial() from the method setNumber 
+ * in that class?
+ * 
  * You can hover over an error marker to see the corresponding message
  * and click on it to see a possible fix. 
- * 
- * 
  *
  */
 public class Factorials // public class access
 //class Factorials // default class access, no access keyword
 {
 	/**
-	 * In the following method declaration, what happens if you remove the keyword public
-	 * to give default access to the method loopingFactorial.	
+	 * In the following method declaration, what happens if you remove the 
+	 * keyword public to give default access to the method loopingFactorial.
+	 * 	
 	 * Do you get any compile errors in this file or in the class
 	 * {@link StaticLoopingFactorialSpreadsheet}?
 	 * You can hover over an error marker to see the corresponding message.	
@@ -67,5 +68,5 @@ public class Factorials // public class access
 		return aNumber*recursingFactorial(aNumber-1);		
 	}
 }
-// Go next to: {@link Permutations}
+// Go next to: {@Permutations} (F3 or CTRL/Command Click on its name)
 
