@@ -6,7 +6,7 @@ package lectures.class_dual_roles.statics;
  * There is no main method here.
  * The methods in this class are meant to be called directly or indirectly
  * by a main method in some other class.
- * As This class does not have a main method, do not try to run it.
+ * As this class does not have a main method, do not try to run it.
  */
 /**
  * The next exercises help you answer the questions:
