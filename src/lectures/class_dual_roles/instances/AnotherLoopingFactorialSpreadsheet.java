@@ -17,27 +17,22 @@ public class AnotherLoopingFactorialSpreadsheet
 	 * factorial is no longer an instance variable as it is computed
 	 * each time getFactorial() is called  
      */ 
-	int number;
+	int num; // the name is not the same as the property.
 
 	public int getNumber() {
-		return number;
+		return num;
 	}
-	/*
+	/**
 	 * setNumber no longer computes the factorial as it is computed
 	 * each time getFactorial() is called  
-	 */
-	
+	 */	
 	public void setNumber(int newValue) {
-		number = newValue ;
+		num = newValue ;
 	}
-	/*
+	/**
 	 * The getter computes the factorial only on demand
 	 */	 
 	public long getFactorial() {
-		return Factorials.loopingFactorial(number);
-	}
-	/*
-	 * So now you can answer the question:
-	 * What are the pros and cons of making a property computed instead of stored?
-	 */
+		return Factorials.loopingFactorial(num);
+	}	
 }

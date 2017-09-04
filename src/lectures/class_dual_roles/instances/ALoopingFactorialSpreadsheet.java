@@ -10,21 +10,20 @@ import lectures.interfaces.FactorialSpreadsheet;
 public class ALoopingFactorialSpreadsheet 
 {
 	/*
-	 * 
-	 * No static in variable declaration below, this means these variables are  
+	 * No static in global variable declaration below, this means these variables are  
 	 * created in memory dynamically when we do new ALoopinFactorialSpreadsheet()
-	 * to "instantiate" the class. Such a variable is called an instance variable.	
+	 * to "instantiate" the class. Such a global variable is called an instance variable.	
 	 * A static variable is created once the first time the class is accessed by main()
 	 * or some method called by main(). It is not by default a final variable,
-	 * it value is dynamic but there is only instance of it is created for a 
+	 * it value is dynamic (can change) but there is only instance of it is created for a 
 	 * particular program.
-	 * 	 
-	 * Did you have to instantiate a class to execute static methods or access static
-	 * variables? 
-	 * 
-	 * 
-	 * 
-	 * So you can now answer:
+	 */
+	
+	int number;
+	
+	long factorial;
+//	static long factorial;
+	/*
 	 * 
 	 * An instance variable is any variable
 	 * 	that does not have the keyword static next to it.
@@ -40,40 +39,25 @@ public class ALoopingFactorialSpreadsheet
 	 *   Memory space is allocated at most once.
 	 *   Memory space is allocated multiple times,depending on how many times the 
 	 *   class is instantiated in the program.
-	 
-	 * (T/F) It is possible to call a static method directly on a class without 
-	 * instantiating it.
-	 * (T/F) It is possible to call an instance method directly on a class without i
-	 * nstantiating it. 
-	 * 
-	 * The next two exercises involve changing the declaration of number and getNumber() 
-	 * and help you answerthe questions:
-	 * 
-	 * (T/F An instance variable can be directly accessed (without using a dot)
-	 *  by only instance methods.
-	 * (T/F) A static variable can be directly accessed (without using a dot)by 
-	 *  only static methods.
-	 * 	
 	 */
-	int number;
-	/*
-	 * What happens if you switch to the alternate declaration below?
-	 * Can this static variable still be accessed by the instance methods below?
-	 */
-	long factorial;
-//	static long factorial;
 	
 	/*
 	 * No static in method declarations below as these methods access instance variables.
 	 * They are called instance methods.
-	 * What happens if you switch to the alternate declaration below? 
-	 * Can you still directly access the instance variables?
-	 */
+	 * What happens if you make the variable, factorial, static?
+	 * Can this static variable still be accessed by the instance methods.
+	 * What happens if you make the method getNumber static.
+	 * Can you still directly access the instance variables? 
+	 */	
 	public int getNumber() {
 //	static public int getNumber() {
 
 		return number;
 	}
+	/*	 
+	 * (T/F) An instance variable can be accessed by only instance methods.
+	 * (T/F) A static variable can be accessed by only static methods.
+	 */	
 	public void setNumber(int newValue) {
 		number = newValue ;
 		factorial = Factorials.loopingFactorial(number);
@@ -83,7 +67,7 @@ public class ALoopingFactorialSpreadsheet
 	}
 }
 /*
- * Go to{@link InstantiatingFactorialSpreadsheetUse}
+ * Go to{InstantiatingFactorialSpreadsheetUse}
  */
- 
+
 

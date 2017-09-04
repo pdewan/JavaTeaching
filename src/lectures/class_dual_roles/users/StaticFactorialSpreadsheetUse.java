@@ -11,7 +11,8 @@ import lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet;
 public class StaticFactorialSpreadsheetUse {
 	/*
 	 * Run the program. Then study this class and the classes to which it refers.
-	 * Then follow the commented instructions in each of the classes referenced in the package-info
+	 * Then follow the commented instructions in each of the classes referenced 
+	 * in the package-info
 	 */
 	public static void main (String[] args) {		
 		StaticLoopingFactorialSpreadsheet.setNumber(4);
@@ -46,11 +47,14 @@ public class StaticFactorialSpreadsheetUse {
 		System.out.println("The square of 2 factorial is:" + StaticLoopingFactorialSpreadsheet.getFactorial() 
 				* StaticLoopingFactorialSpreadsheet.getFactorial());
 		/*
-		 * When we called setNumber(2), we erased the previous factorial (4!) in StaticLoopingFactorialSpreadsheet.
-		 * A class cannot access 4! and 2! simultaneously (without storing them in local variables.)
-		 * Problem: how to allow multiple stored factorials to be shared by multiple classes or the same clas.
-		 * Go to {@link lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse} for one not
-		 * very nice solution.
+		 * When we called setNumber(2), we erased the previous factorial (4!) in 
+		 * StaticLoopingFactorialSpreadsheet.
+		 * A class cannot access 4! and 2! simultaneously (without storing them 
+		 * in local variables.)
+		 * Problem: how to allow multiple stored factorials to be shared by 
+		 * multiple classes or the same clas.
+		 * Go to {lectures.class_dual_roles.users.TwoStaticFactorialSpreadsheetUse} 
+		 * for one not very nice solution.
 		 * 
 		 */
 		
