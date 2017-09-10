@@ -1,197 +1,255 @@
 package lectures.interfaces;
-/**		
- * (T/F) An interface provides a Java type to unite classes that implement the same conceptual type.
-
+/**
  * Now we no longer differentiate between variables holding instances of the 
- * two factorial classes
- * We use a special type {@link FactorialSpreadsheet}, which is an 
- * interface rather than a class
- * Go to its definition and examine it - does it capture what is common to both
- * ALoopingFactorialSpreadsheet and ARecursiveFactorialSpreadsheet? Does everything in
- * the interface appear in each of the two classes?
- * Use ALT <- to return to this class
+ * two factorial classes.
+ * We use a special type {FactorialSpreadsheet}, which is an 
+ * interface rather than a class.
+ * This class illustrates why interfaces are important.
  */
-public class PolymorphicType {
-	/*
-	 * (T/F If class C implements interface I, then an instance of C can be 
-	 *  assigned to a variable of type I.
-	 */	 
+public class PolymorphicType {	
+/*
+ * Go to the declaration of FactorialSpreadsheet, ALoopingFactorialSpreadsheet,
+ * and  ARecursiveFactorialSpreadsheet ((Fn) F3/ (CTRL/CMD) click). 
+ * Use ALT <- in each of these types to return here.
+ * Note the aspects common to both
+ * ALoopingFactorialSpreadsheet and ARecursiveFactorialSpreadsheet captured by
+ * FactorialSpreadsheet.
+ * .
+ * 
+ * An interface declares:
+ * 	 method headers and bodies that must appear in all classes that implement it.
+ *   method headers that must appear in all classes that implement it.
+ *   method bodies that that must appear in all classes that implement it. 
+ *   
+ * (T/F) An interface provides a Java type to unite classes that implement the 
+ * same conceptual type
+ */
+	
+/*
+ * Below the interface is used as the type of variables.
+ */
 	static FactorialSpreadsheet a = new ALoopingFactorialSpreadsheet();	
 	static FactorialSpreadsheet b = new ARecursiveFactorialSpreadsheet();
+/*   
+ * (T/F If class C implements interface I, then an instance of C can be 
+ *  assigned to a variable of type I.
+ */
 	
-	public static void main (String[] args) {
+/*
+ * Uncomment the statement below and note any errors you get.
+ * Comment it back to remove any errors
+ */
+//	static ARecursiveFactorialSpreadsheet d = new ALoopingFactorialSpreadsheet();
+/*	
+ * (T/F) If classes C1 and C2 implement an interface I, then an instance of C1
+ * can be assigned to a variable of type C1.
+ */
+	
+/*
+ * Let us try to better understand what the implements clause really means. 
+ * Uncomment the method, public int getA(), in the interface. 
+ * Do you get a compile error in the two classes
+ * (ALoopingFactorialSpreadsheet or ARecursivefactoralSpreadsheet) 
+ * that implement it? If so, what does it say? 
+ * Comment getA() out if you do.
+ * 
+ * Now go to {ALoopingFactorialSpreadsheet)		
+ * Copy the method getNumber() and call it getN()
+ * Do you get an error message? If so, what does it say.
+ * Comment getN() out if you do, otherwise keep it.
+ * 
+ * (T/F) If class C implements I, then C must have a method matching 
+ * every method in I.
+ * (T/F) If class C implements I, then I must have a method matching 
+ * every method in C.
+ */
+	 
+/* 
+ * Comment out the following statement. Do you get a compile error?
+ * 
+ */		
+//			System.out.println (a.getN() + ":" + a.getFactorial());
 		
+/*
+ *  Given an arbitrary class C that implements I and given a variable v of type
+ *  I:
+ *  (a) all methods implemented by C can be invoked on v.
+ *  (b) a subset of the methods implemented by C can be invoked on C.
+ *  (c) no method implemented by C can be invoked on v.
+ */
+	/**
+	 * Run this method when asked.
+	 */
+	public static void main (String[] args) {		
+		System.out.println ("Before the call to maybeAssignToA a is assigned an instance of:" + a.getClass().getSimpleName());
+		maybeAssignToA();
+		System.out.println ("After the call to maybeAssignToA a is assigned an instance of:" + a.getClass().getSimpleName());		
+//		callPrints();		
+//		printInstanceOf();	
+	}
+/*
+ * Run the main a few times to look at the outputs. 
+ */
+	public static void maybeAssignToA() {
 		/*
-		 * The purpose of the if below is to show that one cannot predict the
-		 * value a variable might hold at execution time. With interfaces, 
-		 * one can also not	predict the	class of the value assigned to a 
-		 * variable. 
-		 * There is a 50/50 chance, when the program is executed, that the
-		 * condition of the following if will be satisfied.
-		 */		
-		if (Math.random() > 0.5) { // hover on random to see what it does
-			/*		
-			 * 
-			 * Below, we assign to a variable that held an instance 
-			 * of one class an instance of another class!
-			 * 
-			 * A variable that can be assigned objects of multiple classes is a 
-			 * polymorphic variable.
-			 * 
-			 * T/F A polymorphic variable can be assigned instances of 
-			 * different classes.
-			 */			 
-			a = b;
-			
+		* There is a 50/50 chance, when the program is executed, that the
+		* condition of the following if will be satisfied.
+		*/
+		if (Math.random() > 0.5) { // hover on random to see what it does				
+			a = b;			
 		}
-		/*
+   }
+/*	 
+ * In class PolymoprhicType, before the call to  maybeAssignToA(), the 
+ * class of the object assigned to a is:
+ * (a) Always ALoopingFactorialSpreadsheet
+ * (b) Always ARecursiveFactorialSpreadsheet
+ * (c) Sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
+ * (d) None of the above.
+ * 
+ * At the end of the call to maybeAssignToA() the class of the object assigned to a is:
+ * (a) Always ALoopingFactorialSpreadsheet
+ * (b) Always ARecursiveFactorialSpreadsheet
+ * (c) Sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
+ * (d) None of the above. *  
+ * 
+ * (T/F) A compiler analysis of the source code of any class can determine 
+ e the class of the object assigned to any variable after a procedure call
+ * or some other statement of the program.
+ * 
+ * Given the variable declaration:
+ *     I v = new C();
+ * the operations that are allowed on v by the compiler should depend on:
+ *    (a) I
+ *    (b) C
+ *  
+ *  A polymorphic variable is one that can be assigned instances of different
+ *  classes.
+ *  
+ *  (T/F) In PolymorphicType, the variable a is polymorphic.
+ *  
+ *  Comment out the call to this method in main to unclutter the output.
+ */
 	
-		 * 
-		 * At this point, because of the call to randonm(),
-		 * the compiler, which does its job before the program is 
-		 * executed has no idea of the class of the object assigned to a is 
-		 * at execution time.
-		 * So all type checking is done based on what is provided in the interface, 
-		 * FactorialSpreasheet.
-		 * 	
-		 * (T/F) The operations that are allowed on a polymorphic variable by 
-		 * the compiler depend on the type of the variable 
-		 * (e.g FactorialSpreadsheet) rather than the class of the object 
-		 * assigned to it (e.g. ALoopingFactorialSpreadsheet).
-		 * 
-		 */	
-
-		/*
-		 * Let us try to understand what the implements clause really means.
-		 * 
-		 * (T/F) If class C implements I, then C must have a method matching 
-		 * every method in I.
-		 * (T/F) If class C implements I, then I must have a method matching 
-		 * every method in C.
-		 * 
-		 * Go to the definition of {@link FactorialSpreadsheet) (F3).
-		 * Uncomment the method, public int getA(), in the interface. 
-		 * Do you get a compile error in the two classes
-		 * (ALoopingFactorialSpreadsheet or ARecursivefactoralSpreadsheet) 
-		 * that implement it? If so, what does it say. Comment it out if you do.
-		 * 
-		 * Now go to {@link ALoopingFactorialSpreadsheet)		
-		 * Copy the method getNumber() and call it getN()
-		 * Do you get an error message? If so, what does it say.
-		 * Comment it out if you do.
-		 */
-		 
-		/*
-		 * 
-		 * (T/F) The operations that allowed on a polymorphic variable by the compiler depend
-		 * on the type the variable (e.g FactorialSpreadsheet) rather than the class of the object 
-		 * assigned to it (e.g. ALoopingFactorialSpreadsheet).
-		 * 
-		 * Comment out the following statement. Do you get a compile error?
-		 * 
-		 */		
-//		System.out.println (a.getN() + ":" + a.getFactorial());
-		
-		
-		/*
-	 	 * As we see above, when a Class C implements an interface I, we can use
-		 * both C and I as types. Which should we choose? We can declare variables
-		 * using both interfaces as we see above for variables a and b, or classes, 
-		 * as shown below.
-		 * 
-		 * The answer is interfaces. To understand why go below this method and look at the
-		 * two print methods printPolymorphic() and printNonPolyMoprhic();
-
-		 */
+/*
+ * Uncomment the call to this method in main and run main again and view the
+ * output.
+ */
+	public static void printInstanceOf () {
+		System.out.println (a instanceof ALoopingFactorialSpreadsheet);
+		System.out.println (a instanceof FactorialSpreadsheet);
+		System.out.println (a instanceof ARecursiveFactorialSpreadsheet);
+		System.out.println (b instanceof FactorialSpreadsheet);
+	}	
+/*
+ * You can click F3 or CTRL/COMMAND Click on the name of variables a and b to see their
+ * declarations and use ALT <- to return here. 
+ * 
+ * If C1 and C2 implements I then:
+ *     (a) all instances of C1 are also instances of I.
+ *     (b) all instances of I are also instances of C1.
+ *     (c) all instances of C1 are also instances of C2.
+ * 
+ * Click on the name FactorialSpreadsheet and press F4, Fn F4 or 
+ * Right Menu-> Open Type Hierarchy
+ * 
+ * In the type hierarchy:
+ *    (a) ALoopingFactorialSpreadsheet is a child of FactorialSpreadsheet
+ *    (b) ARecursiveFactorialSpreadsheet is a child of ALoopingFactorialSpreadsheet.
+ *    (c) FactorialSpreadsheet is a child of ALoopingFactorialSpreadsheet.
+ *    
+ * In the type hierarchy, if TC is a child of TP, then all instances of:
+ *    TC are also instances of TP.
+ *    TP are also instances of TA.
+ *    None of the above 
+ * 
+ * Comment out the call to this method in main to unclutter the output. 
+ */
+	
+/*
+ * Study the definition of  printPolymorphic.
+ */
+	public static void printPolymorphic (FactorialSpreadsheet aFactorialSpreadsheet) {
+		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
+	}
+/* 
+ * (T/F) The type of the formal parameter of printPolymorphic is an interface.
+ */		
+	
+/*
+ * Now study the definition of printNonPolymoprhic.
+ */	
+	public static void printNonPolymoprhic (ALoopingFactorialSpreadsheet aFactorialSpreadsheet) {
+		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
+	}
+/* 
+ * (T/F) The type of the formal parameter of printNonPolymoprhic is an interface.
+ */	
+	
+	public static void callPrints() {
 		ALoopingFactorialSpreadsheet l = new ALoopingFactorialSpreadsheet();
-		ARecursiveFactorialSpreadsheet r = new ARecursiveFactorialSpreadsheet();
-		
-	
+		ARecursiveFactorialSpreadsheet r = new ARecursiveFactorialSpreadsheet();/*	 
+ * Uncomment the statements below and note the error messages.
+ * Do the error messages make sense.
+ */	
 //		printPolymorphic(l);
 //		printPolymorphic(r);
 //		printPolymorphic(a);
 //		printPolymorphic(b);
 //		
-//		printNonPolyMoprhic(l);
-//		printNonPolyMoprhic(r);
-//		printNonPolyMoprhic(a);
-//		printNonPolyMoprhic(b);
-		
-		/*
-		 * 
-		 * Do the error messages make sense?
-		 * 
-		 * Which print is more versatile, that is, can operate on a greater 
-		 * variety of objects?
-		 */
-		
-		/*
-		 * If a class is  a factory, what is an interface?
-		 * What are the advantages of interfaces?
-		 * What do you think of the rule - every class should implement at least 
-		 * one interface?
-		 * What do you think of the rule - every object variable should be typed
-		 * using an interface rather than a class.
-		 * 
-		 * Polymorphism is only one of the advantage of interfaces.
-		 * Think of other advantages.
-		 * To understand one of them, click on the name FactorialSpreadsheet 
-		 * below and press F4.
-		 * You should see a new tree window called the type hierarchy.
-		 * Does this hierarchy make sense? 
-		 * Is it useful even if you did not use polymorphism?
-		 * 
-		 */
-		
-		/*
-		 * (T/F) If C implements I, then an instance of 
-		 * C is also considered an instance of I.
-		 * 		
-		 * To unite the type checking rules and this hierarchies consider the following
-		 * Which of these instanceof operations aways/sometimes make sense?;
-		 */
-//		System.out.println (l instanceof ALoopingFactorialSpreadsheet);
-//		System.out.println (r instanceof ALoopingFactorialSpreadsheet);
-//		System.out.println (l instanceof FactorialSpreadsheet);
-//		System.out.println (r instanceof FactorialSpreadsheet);
-//		System.out.println (a instanceof ALoopingFactorialSpreadsheet);
-//		System.out.println (a instanceof ALoopingFactorialSpreadsheet);
-		
-		/*
-		 * (T/F If class C implements interface I, then an instance of I can be 
-		 *  assigned to a variable of type C.
-		 *  
-		 * Uncomment the following to answer this question
-		 */
-//		ALoopingFactorialSpreadsheet c = a;
-		/*
-		 * Why did we need the two print methods?
-		 * Comment out all of the println() statements above that give errors.
-		 * 
-		 * Next, comment out the following two statements and run the program.
-		 * What output do you get?
-		 * This output will help you understand the output of A3.
-		 */
-		System.out.println ("l hashcode:" + Integer.toHexString(l.hashCode()));
-		System.out.println ("l:" + l);
-		
-		
+//		printNonPolymoprhic(l);
+//		printNonPolymoprhic(r);
+//		printNonPolymoprhic(a);
+//		printNonPolymoprhic(b);			
 	}
-	/*
-	 * (T/F) A polymorphic method has one or more parameters that can be assigned instances
-	 * of multiple classes.
-	 * 
-	 * This is a polymorphic method as it declares a  parameter that is a polymprhic variable.
-	 */
-	public static void printPolymorphic (FactorialSpreadsheet aFactorialSpreadsheet) {
-		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
-	}
-	/*
-	 * This is not a polymorphic method as it does not declare a polymorphic parameter
-	 * (Actually when we study inheritance we we will see that it does - even so
-	 * the former print is more flexible.
-	 */
-	public static void printNonPolyMoprhic (ALoopingFactorialSpreadsheet aFactorialSpreadsheet) {
-		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
-	}
+/* 
+ * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be 
+ * assigned an actual parameter of type ALoopingFactorialSpreadsheet.
+ * 
+ * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be  
+ * assigned an actual parameter of type ARecursiveFactorialSpreadsheet.
+ * 
+ * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be  
+ * assigned an actual parameter of type FactorialSpreadsheet.  
+ * 
+ * A polymorphic method is one that declares at least parameter that 
+ * is a polymorphic variable.
+ * 	  
+ * (T/F) A polymorphic method has one or more (formal) parameters that can be 
+ * assigned instances of multiple classes.
+ *  
+ * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic can be 
+ * assigned an  actual parameter of type ALoopingFactorialSpreadsheet.
+ * 
+ * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic can  
+ * be assigned an actual parameter of type ARecursiveFactorialSpreadsheet.
+ * 
+ * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic  
+ * can be assigned an actual parameter of type FactorialSpreadsheet. 
+ * 
+ * (T/F) If class C implements interface I, then a variable of type C can be 
+		assigned a variable of type I. 
+ * (T/F) If class C implements interface I, then a variable of type I can be 
+		assigned a variable of type C. 
+				 
+ * Which print is more versatile, that is, can operate on a greater 
+ * variety of objects?
+ * 
+ * (T/F) printPolymorphic is more reusable, that is can be used in more contexts,
+ * than printNonPolyMoprhic.
+ * 
+ * A parameter is an example of a variable.
+ * 
+ * (T/F) If class C implements I, then C can be used as the type of a variable.
+ * (T/F) If class C implements I, then C should be used as the type of a variable. 
+ * 
+ * Interfaces
+ *    (a) make code more reusable
+ *    (b) constrain or specifiy the nature of classes that implement them
+ *    (c) provide an abstract description of the classes that implement them.
+ *   
+ * (T/F) Every class must implement an interface.
+ * (T/F) Every class should implement an interface
+ * 
+ */	
 }

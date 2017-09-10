@@ -16,7 +16,10 @@ public class ALoopingFactorialSpreadsheet
 		number = newValue ;
 		factorial = Factorials.loopingFactorial(number);
 	}	
-	public long getFactorial() {
+	// method header, part of method declaration before the first curly brace
+	public long getFactorial() 
+	// method body, part of method declaration after the method header
+	{ 
 		return factorial;
-	}
+	}	
 }

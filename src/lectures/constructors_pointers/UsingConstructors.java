@@ -1,61 +1,114 @@
 package lectures.constructors_pointers;
 
 public class UsingConstructors {
-	/*
-	 * 
-	 * Final variable is a named constant - a variable that that cannot be changed later.
-	 * It gives a name to a literal (an unnamed constant such as
-	 * the int 2 and the string "hello" that literally or directly
-	 * denotes a value) that would otherwise be magic to the program reader.
-	 * It makes sure magic numbers and strings do not appear in the program.
-	 * These should be static as they do not change from instance to instance.
-	 * 
-	 * Relevant Questions:
-	 * 
-	 *  What is a named constant?
-	 *  What is a magic number?
-	 */
-	 
+/*
+ * We see below examples of named constants.
+ */
 	 static final double EXAMPLE_HEIGHT = 1.77;
 	 static final double EXAMPLE_WEIGHT = 75;
+ /*
+  * A named constant is a final variable- a variable that that cannot be changed later
+  * and whose value is known at program writing time.
+  * 
+  * An unnamed constant or literal is a value such as the
+  * the double 1.77 and the String "hello" that literally or directly
+  * denotes a value. 
+  * 
+  * A named constant gives a name to a literal that would otherwise be 
+  * magic to the program reader.
+  * 
+  * Make sure magic literals (numbers and strings) do not appear in the program.
+  * Named constants should be static as they do not change from instance to instance. 
+  * (T/F) A named constant is a final variable whose value is known at program 
+  * writing time.
+  * (T/F) A magic literal is a number, string or some other literal
+  *  whose meaning/purpose is not clear.
+  * (T/F) Named constants reduce magic literals.
+  */
 	 
-	 /*
-	 * Example of a method that takes a class parameter, that is, a parameter
-	 * whose type is a class
-	 */
+ /**
+  * Example of a method that takes a parameter
+  * whose type is a class. Invokes getters.
+  */
 	public static void print(ABMISpreadsheet aBMISpreadsheet) {
 		System.out.println ("Height:" + aBMISpreadsheet.getHeight() + 
 				" Weight:" + aBMISpreadsheet.getWeight() +
 				" BMI " + aBMISpreadsheet.getBMI());
 	}
+
+	public static void callPrintln(ABMISpreadsheet aBMISpreadsheet) {
+		System.out.println ("aBMISpreadsheet hashcode:" + 
+				Integer.toHexString(aBMISpreadsheet.hashCode()));
+		System.out.println ("aBMISpreadshee:" + aBMISpreadsheet);
+	}
 	
-	public static void main (String[] args) {
-		/*
-		 * Instantiate the class ABMISpreadsheet
-		 */
-		ABMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet();
-		/*
-		 * Invoke setters on the instance
-		 */
+	/**
+	 * Example of use of setters
+	 */
+	public static void set(ABMISpreadsheet aBMISpreadsheet){
 		aBMISpreadsheet.setWeight(EXAMPLE_WEIGHT);
-		aBMISpreadsheet.setHeight(EXAMPLE_HEIGHT);		
-		print (aBMISpreadsheet);
+		aBMISpreadsheet.setHeight(EXAMPLE_HEIGHT);
+	}
+/*
+ * Study main, run it, and understand its output.
+ */
+	public static void main (String[] args) {
+	
+		// Instantiate the class ABMISpreadsheet
+		ABMISpreadsheet aBMISpreadsheet = new ABMISpreadsheet();
+		
+		// understand println
+		callPrintln(aBMISpreadsheet);
+		
+		// understand instantiation vs initialization
+		System.out.println("Instantiated object:");
+		print(aBMISpreadsheet);
+		
+		set(aBMISpreadsheet);
+		System.out.println("Initialized object:");
+		print(aBMISpreadsheet);
+		
+		// understand use of (parameterized) constructors
+		System.out.println("Instantiated and initialized object:");
 		/*
 		 * Does it make sense for the height or weight to ever be 0?
 		 * The following uses a different syntax for new.
-		 * It provides the height and weight when instantiating the class.
-		 * It makes sure the instance variables in the class are initialized to values specified 
-		 * by the use of the class
+		 * It initialized the height and weight when instantiating the class.
+		 * It makes sure the instance variables in the class are initialized to values 
+		 * specified  by the use of the class
 		 */
 		aBMISpreadsheet = new ABMISpreadsheet(EXAMPLE_HEIGHT, EXAMPLE_WEIGHT);
-		print(aBMISpreadsheet);
-		/*
-		 * Change package name in link.
-		 * Next class {@link ABMISpreadsheet}
-		 * to better understand constructors.
-		 */
-		
-		
+		print(aBMISpreadsheet);		
 	}
+/*
+ * If c is an instance of C, then println(c) displays:
+ *     a) the properties of c.
+ *     b) the memory address of c.
+ *     c) the hashcode of c.
+ */
+	
+/*
+ * In UsingConstructors, print() displays:
+ *    a) the properties of its argument.
+ *    b) the memory address of its argument.
+ *    c) the hashcode of its argument.     
+ */
 
+/*
+ * (T/F) It is possible to create an instance of ABMISpreadsheet whose
+ * height and weight propsrties are 0.
+ * (T/F) It is possible to create an instance of ABMISpreadsheet whose
+ * BMI property is not a number (NaN).
+ * 
+ * (T/F) It makes sense for an instance of ABMISpreadsheet to have height and
+ * weight properties set to 0.  
+ * 
+ * (T/F) (Without calling setters) It is possible to create an instance of 
+ * ABMISpreadsheet whose height and weight properties are initialized to values chosen by the
+ * instantiating class.
+ */
+/*
+ * Next class {ABMISpreadsheet}
+ * to better understand constructors.
+ */
 }
