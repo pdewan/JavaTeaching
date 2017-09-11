@@ -23,7 +23,7 @@ public class UsingConstructors {
   * writing time.
   * (T/F) A magic literal is a number, string or some other literal
   *  whose meaning/purpose is not clear.
-  * (T/F) Named constants reduce magic literals.
+  * (T/F) Named constants increase magic literals.
   */
 	 
  /**
@@ -96,19 +96,19 @@ public class UsingConstructors {
 
 /*
  * (T/F) It is possible to create an instance of ABMISpreadsheet whose
- * height and weight propsrties are 0.
+ * height and weight properties are 0.
  * (T/F) It is possible to create an instance of ABMISpreadsheet whose
  * BMI property is not a number (NaN).
  * 
  * (T/F) It makes sense for an instance of ABMISpreadsheet to have height and
- * weight properties set to 0.  
+ * weight set to 0.  
  * 
  * (T/F) (Without calling setters) It is possible to create an instance of 
- * ABMISpreadsheet whose height and weight properties are initialized to values chosen by the
- * instantiating class.
+ * ABMISpreadsheet whose height and weight properties are initialized to values 
+ * chosen by the instantiator.
  */
 /*
  * Next class {ABMISpreadsheet}
- * to better understand constructors.
+ * to constructor implementation.
  */
 }

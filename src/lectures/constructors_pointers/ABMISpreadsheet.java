@@ -25,8 +25,8 @@ public class ABMISpreadsheet  {
 	 * parameters to the constructor:	 * 
 	 *     new ABMISpreadsheet(EXAMPLE_HEIGHT, EXAMPLE_WEIGHT);
 	 * 
-	 * (T/F) During the life time of an object, a constructor can be called multiple
-	 * times to operate on it.	
+	 * (T/F) During the lifetime of an object, a constructor can be called multiple
+	 * times to operate on the object.	
 	 * 
 	 * (T/F) A constructor is executed before before an instance method can be called.* 	 
 	 * 
