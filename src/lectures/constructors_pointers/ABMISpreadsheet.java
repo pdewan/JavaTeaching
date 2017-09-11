@@ -28,12 +28,12 @@ public class ABMISpreadsheet  {
 	 * (T/F) During the lifetime of an object, a constructor can be called multiple
 	 * times to operate on the object.	
 	 * 
-	 * (T/F) A constructor is executed before before an instance method can be called.* 	 
+	 * (T/F) A constructor is executed before an instance method can be called.* 	 
 	 * 
 	 * Look at the difference between the syntax of a constructor and an instance 
 	 * method. 
 	 *  
-	 * (T/F) Like an instance method, a constructor can take multiple parameters.
+	 * (T/F) Like an instance method, a constructor can take parameters.
 	 * 
 	 * (T/F) Like an instance method, a constructor must have a method name and 
 	 * a method return type.	 
@@ -60,7 +60,7 @@ public class ABMISpreadsheet  {
 	 *   (a) "constructs" the object, that is, allocates space for 
 	 * 	  the instance	variables of the object in memory.
 	 *   (b) can initialize instance variables of an object.
-	 *   (c) must initialize instance variales of an object.
+	 *   (c) must initialize instance variables of an object.
 	 */
 	
 	
@@ -79,9 +79,8 @@ public class ABMISpreadsheet  {
 	 * Ordinary methods can also be overloaded.
 	 * Based on parameters supplied Java knows which constructor/method to call
 	 * 
-	 * (T/F) A constructor cannot take parameters.
-	 * (T/F) A class can have multiple methods with the same name.
-	 * (T/F) A class can have multiple constructors with the same parameters.	 
+	 * (T/F) A class can have overloaded methods, that is, multiple methods with the same name.
+	 * (T/F) A class can have multiple constructors with different parameters.	 
 	 * 
 	 */
 	
@@ -89,8 +88,7 @@ public class ABMISpreadsheet  {
 	 * The following is another overloaded method with the same name as the constructor.
 	 * Like a regular method, it has an explicit return type, so it is not a constructor.
 	 * 
-	 * (T/F) A class can have a constructor and an instance method can 
-	 * have the same name and parameters.
+	 * (T/F) An instance method can have the same name as a constructor.
 	 * 
 	 */
 	

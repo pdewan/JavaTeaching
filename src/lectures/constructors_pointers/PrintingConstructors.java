@@ -26,15 +26,15 @@ public class PrintingConstructors {
 	}
 /* 
  * 	
- * (T/F) The source code of a class (written by the programmer) must always
- * contain an unparameterized constructor.
+ * (T/F) The source code of a class (written by the programmer) might not contain a constructor.
  * 
- * (T/F) The compiled object code of a class must always contain an unparameterized 
- * constructor.
+ * (T/F) The compiled object code of a class might not contain a constructor.
  * 
- * (T/F) The source code of a class may contain multiple constructors.
+ * The complier:
+ *   a) may insert a constructor in the object code.
+ *   b) always inserts a constructor in the object code.
+ *   c) never inserts a constructor in the object code.
  * 
- * (T/F) The object code of a class may contain multiple constructors.
  * 
  */
 /*

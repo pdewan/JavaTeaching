@@ -39,26 +39,32 @@ public class UninitializedVariables {
 	}
 /*
  * (T/F) It is not possible to access (use) the value of an uninitialized 
- *   local variable.
+ *   global variable.
  *   
  * (T/F) A constructor can initialize an arbitrary uninitialized local variable.
  * 
  * (T/F) A constructor can initialize an arbitrary uninitialized global variable.
  * 
- * (T/F) It is possible to get a null pointer exception when accessing a 
- * primitive variable.
+ * Because of constructors, Java's rules regarding whether a variable 
+ * can be uninitialized distinguish between local and global variables.
  * 
- * (T/F) It is possible to get a null pointer exception when accessing a 
- * global variable.
+ * An uninitialized primitive variable of type T has:
+ *    a  value of type T
+ *    has the null value.
+ *    none of the above
+ *    
+ * An uninitialized object variable of type T has:
+ *    a  value (instance) of type T
+ *    the null value.
+ *    none of the above
+ * 
  * 
  * (T/F) A null pointer exception is thrown when an uninitialized Object variable
- * is accessed.
+ * is printed.
  * 
  * (T/F) A null pointer exception is thrown when a method is called on an 
  * uninitialized Object variable.
- * 
- * (T/F) Because of constructors, Java's rules regarding whether a variable 
- * can be uninitialized distinguish between local and global variables.
+ *
  */
 
 }
