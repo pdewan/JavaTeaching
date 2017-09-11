@@ -102,19 +102,19 @@ public class PolymorphicType {
 /*	 
  * In class PolymoprhicType, before the call to  maybeAssignToA(), the 
  * class of the object assigned to a is:
- * (a) Always ALoopingFactorialSpreadsheet
- * (b) Always ARecursiveFactorialSpreadsheet
- * (c) Sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
+ * (a) always ALoopingFactorialSpreadsheet.
+ * (b) always ARecursiveFactorialSpreadsheet.
+ * (c) sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
  * (d) None of the above.
  * 
  * At the end of the call to maybeAssignToA() the class of the object assigned to a is:
- * (a) Always ALoopingFactorialSpreadsheet
- * (b) Always ARecursiveFactorialSpreadsheet
- * (c) Sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
- * (d) None of the above. *  
+ * (a) always ALoopingFactorialSpreadsheet.
+ * (b) always ARecursiveFactorialSpreadsheet.
+ * (c) sometimes ALoopingFactorialSpreadsheet and sometimes ARecursiveFactorialSpreadsheet.
+ * (d) None of the above.  
  * 
- * (T/F) A compiler analysis of the source code of any class can determine 
- e the class of the object assigned to any variable after a procedure call
+ * (T/F) A compiler analysis of the source code of any class can always determine 
+ * the class of the object assigned to any variable after a procedure call
  * or some other statement of the program.
  * 
  * Given the variable declaration:
@@ -126,7 +126,7 @@ public class PolymorphicType {
  *  A polymorphic variable is one that can be assigned instances of different
  *  classes.
  *  
- *  (T/F) In PolymorphicType, the variable a is polymorphic.
+ *  (T/F) In PolymorphicType, the variable, a, is polymorphic.
  *  
  *  Comment out the call to this method in main to unclutter the output.
  */
@@ -154,14 +154,14 @@ public class PolymorphicType {
  * Right Menu-> Open Type Hierarchy
  * 
  * In the type hierarchy:
- *    (a) ALoopingFactorialSpreadsheet is a child of FactorialSpreadsheet
+ *    (a) ALoopingFactorialSpreadsheet is a child of FactorialSpreadsheet.
  *    (b) ARecursiveFactorialSpreadsheet is a child of ALoopingFactorialSpreadsheet.
  *    (c) FactorialSpreadsheet is a child of ALoopingFactorialSpreadsheet.
  *    
  * In the type hierarchy, if TC is a child of TP, then all instances of:
  *    TC are also instances of TP.
- *    TP are also instances of TA.
- *    None of the above 
+ *    TP are also instances of TC.
+ *    None of the above. 
  * 
  * Comment out the call to this method in main to unclutter the output. 
  */
@@ -203,34 +203,27 @@ public class PolymorphicType {
 //		printNonPolymoprhic(b);			
 	}
 /* 
- * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be 
- * assigned an actual parameter of type ALoopingFactorialSpreadsheet.
- * 
- * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be  
- * assigned an actual parameter of type ARecursiveFactorialSpreadsheet.
- * 
- * (T/F) In PolymorphicType, the formal parameter of printPolymorphic can be  
- * assigned an actual parameter of type FactorialSpreadsheet.  
- * 
+ * In PolymorphicType, the formal parameter of printPolymorphic can be 
+ * assigned an actual parameter of type 
+ *    a) ALoopingFactorialSpreadsheet.
+ *    b) ARecursiveFactorialSpreadsheet.
+ *    c) FactorialSpreadsheet
+ *  
+ * In PolymorphicType, the formal parameter of printNonPolymorphic can be 
+ * assigned an actual parameter of type: 
+ *    a) ALoopingFactorialSpreadsheet.
+ *    b) ARecursiveFactorialSpreadsheet.
+ *    c) FactorialSpreadsheet 
+ *    
+ *(T/F) If class C implements interface I, then a variable of type I can be 
+		assigned a variable of type C. 
  * A polymorphic method is one that declares at least parameter that 
  * is a polymorphic variable.
  * 	  
  * (T/F) A polymorphic method has one or more (formal) parameters that can be 
- * assigned instances of multiple classes.
- *  
- * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic can be 
- * assigned an  actual parameter of type ALoopingFactorialSpreadsheet.
+ * assigned instances of multiple classes. 
  * 
- * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic can  
- * be assigned an actual parameter of type ARecursiveFactorialSpreadsheet.
- * 
- * (T/F) In PolymorphicType, the formal parameter of printNonPolymorphic  
- * can be assigned an actual parameter of type FactorialSpreadsheet. 
- * 
- * (T/F) If class C implements interface I, then a variable of type C can be 
-		assigned a variable of type I. 
- * (T/F) If class C implements interface I, then a variable of type I can be 
-		assigned a variable of type C. 
+
 				 
  * Which print is more versatile, that is, can operate on a greater 
  * variety of objects?
@@ -240,16 +233,14 @@ public class PolymorphicType {
  * 
  * A parameter is an example of a variable.
  * 
- * (T/F) If class C implements I, then C can be used as the type of a variable.
  * (T/F) If class C implements I, then C should be used as the type of a variable. 
  * 
  * Interfaces
  *    (a) make code more reusable
- *    (b) constrain or specifiy the nature of classes that implement them
+ *    (b) constrain or specify the nature of classes that implement them.
  *    (c) provide an abstract description of the classes that implement them.
- *   
- * (T/F) Every class must implement an interface.
- * (T/F) Every class should implement an interface
+ *    (d) none of the above.
+ * (T/F) Every class should implement an interface.
  * 
  */	
 }

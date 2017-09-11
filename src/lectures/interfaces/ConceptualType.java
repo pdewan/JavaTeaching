@@ -43,7 +43,7 @@ public class ConceptualType {
 	 * (T/F) It is possible to assign the result of getFactorial() to a variable
 	 * of type int.
 	 * If the type of variable c is class C, then the methods you can call on c
-	 * depends on the:
+	 * depends only on the:
 	 *    a) headers of the methods declared in C.
 	 *    b) the bodies of the methods of the methods in C.
 	 *    c) the headers and bodies of the methods declared in C.
@@ -67,13 +67,13 @@ public class ConceptualType {
 		 * {@ARecursiveFactorialSpreadsheet}, or 
 		 * {@ABMISpreadsheet}	
 		 * 	 
-		 * Can you do the same for a (or b), that is, whether ab is assigned
+		 * Can you do the same for a (or b), that is, whether a or b is assigned
 		 * an instance of ALoopingFactorialSpreadsheet
 		 * ARecursiveFactorialSpreadsheet, or ABMISpreadsheet
 		 * 
 		 * If instances of two Java classes cannot be distinguished by their 
-		 * public operations (methods), then they are of the same conceptual type.		 * 
-		 * Though they may be internally implemented very differently and 
+		 * public operations (methods), then they are of the same conceptual type,		 * 
+		 * though they may be internally implemented very differently and 
 		 * give different performance.
 		 * 
 		 * (T/F) If two Java classes implement the same conceptual type, then 
@@ -89,9 +89,12 @@ public class ConceptualType {
 //		a = new ALoopingFactorialSpreadsheet();
 //		a = new ARecursiveFactorialSpreadsheet();	
 		/*
+		 * 
 		 * (T/F) If Java classes C1 and C2 implement the same conceptual type, 
 		 * and a variable c is declared to be of Java type C1,
 		 * then c can be assigned an instance of C2.
+		 * 
+		 * (T/F) The Java type of an object variable determines which instances can be assigned to it.
 		 */
 		
 	}
