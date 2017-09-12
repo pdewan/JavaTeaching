@@ -49,7 +49,7 @@ public class ConceptualType {
 	 *    c) the headers and bodies of the methods declared in C.
 	 * 	
 	 * (T/F) The Java type of an object variable determines the legal ways of
-	 * using the variable.
+	 * using the variable at program writing time.
 	 */
 	
 	
