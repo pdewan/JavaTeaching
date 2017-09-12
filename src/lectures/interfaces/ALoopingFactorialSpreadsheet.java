@@ -12,6 +12,9 @@ public class ALoopingFactorialSpreadsheet
 	public int getNumber() {
 		return number;
 	}
+//	public int getN() {
+//		return number;
+//	}
 	public void setNumber(int newValue) {
 		number = newValue ;
 		factorial = Factorials.loopingFactorial(number);

@@ -8,18 +8,18 @@ package lectures.interfaces;
  */
 public class PolymorphicType {	
 /*
- * Go to the declaration of FactorialSpreadsheet, ALoopingFactorialSpreadsheet,
+ * Go to the declaration of FactorialSpreadsheet (interface), ALoopingFactorialSpreadsheet,
  * and  ARecursiveFactorialSpreadsheet ((Fn) F3/ (CTRL/CMD) click). 
  * Use ALT <- in each of these types to return here.
  * Note the aspects common to both
  * ALoopingFactorialSpreadsheet and ARecursiveFactorialSpreadsheet captured by
- * FactorialSpreadsheet.
- * .
+ * the interface FactorialSpreadsheet.
+ * 
  * 
  * An interface declares:
- * 	 method headers and bodies that must appear in all classes that implement it.
- *   method headers that must appear in all classes that implement it.
- *   method bodies that that must appear in all classes that implement it. 
+ * 	 method headers and bodies that appear in all classes that implement it.
+ *   method headers that appear in all classes that implement it.
+ *   method bodies that that appear in all classes that implement it. 
  *   
  * (T/F) An interface provides a Java type to unite classes that implement the 
  * same conceptual type
@@ -36,25 +36,25 @@ public class PolymorphicType {
  */
 	
 /*
- * Uncomment the statement below and note any errors you get.
+ * Uncomment the statement below and note any compile errors you get.
  * Comment it back to remove any errors
  */
 //	static ARecursiveFactorialSpreadsheet d = new ALoopingFactorialSpreadsheet();
 /*	
  * (T/F) If classes C1 and C2 implement an interface I, then an instance of C1
  * can be assigned to a variable of type C1.
- */
-	
+ */	
 /*
  * Let us try to better understand what the implements clause really means. 
- * Uncomment the method, public int getA(), in the interface. 
+ * Uncomment the method, public int getA(), in the interface, which does
+ * not appear in the classes. 
  * Do you get a compile error in the two classes
  * (ALoopingFactorialSpreadsheet or ARecursivefactoralSpreadsheet) 
  * that implement it? If so, what does it say? 
  * Comment getA() out if you do.
  * 
  * Now go to {ALoopingFactorialSpreadsheet)		
- * Copy the method getNumber() and call it getN()
+ * Uncomment getN(), which does not appear in the interface.
  * Do you get an error message? If so, what does it say.
  * Comment getN() out if you do, otherwise keep it.
  * 
@@ -65,17 +65,21 @@ public class PolymorphicType {
  */
 	 
 /* 
- * Comment out the following statement. Do you get a compile error?
- * 
- */		
-//			System.out.println (a.getN() + ":" + a.getFactorial());
-		
+ * Comment out the following statements. Notice any compile errors?
+ * (a is assigned an instance of ALoopingFactorialSpreadsheet; * 
+ */	
+public static void casting() {
+//	System.out.println (a.getN());
+//	System.out.println (((ALoopingFactorialSpreadsheet) a).getN());
+}		
 /*
- *  Given an arbitrary class C that implements I and given a variable v of type
+ *  Given an arbitrary class C that implements I and given an uncast variable v of type
  *  I:
  *  (a) all methods implemented by C can be invoked on v.
- *  (b) a subset of the methods implemented by C can be invoked on C.
+ *  (b) methods declared in I can be invoked on v.
  *  (c) no method implemented by C can be invoked on v.
+ *  
+ * (T/F) Casting can be used to change the set of methods that can be invoked on an Object value
  */
 	/**
 	 * Run this method when asked.
@@ -88,7 +92,7 @@ public class PolymorphicType {
 //		printInstanceOf();	
 	}
 /*
- * Run the main a few times to look at the outputs. 
+ * Run the main a few times (at least 5) to look at the outputs. 
  */
 	public static void maybeAssignToA() {
 		/*
@@ -128,11 +132,11 @@ public class PolymorphicType {
  *  
  *  (T/F) In PolymorphicType, the variable, a, is polymorphic.
  *  
- *  Comment out the call to this method in main to unclutter the output.
+ *  Comment out the call to the above method in main to unclutter the output.
  */
 	
 /*
- * Uncomment the call to this method in main and run main again and view the
+ * Uncomment the call to the following method in main and run main again and view the
  * output.
  */
 	public static void printInstanceOf () {
@@ -163,7 +167,7 @@ public class PolymorphicType {
  *    TP are also instances of TC.
  *    None of the above. 
  * 
- * Comment out the call to this method in main to unclutter the output. 
+ * Comment out the call to the method in main to unclutter the output. 
  */
 	
 /*
@@ -188,7 +192,8 @@ public class PolymorphicType {
 	
 	public static void callPrints() {
 		ALoopingFactorialSpreadsheet l = new ALoopingFactorialSpreadsheet();
-		ARecursiveFactorialSpreadsheet r = new ARecursiveFactorialSpreadsheet();/*	 
+		ARecursiveFactorialSpreadsheet r = new ARecursiveFactorialSpreadsheet();
+/*	 
  * Uncomment the statements below and note the error messages.
  * Do the error messages make sense.
  */	
@@ -222,9 +227,7 @@ public class PolymorphicType {
  * 	  
  * (T/F) A polymorphic method has one or more (formal) parameters that can be 
  * assigned instances of multiple classes. 
- * 
-
-				 
+ * 				 
  * Which print is more versatile, that is, can operate on a greater 
  * variety of objects?
  * 
@@ -240,7 +243,6 @@ public class PolymorphicType {
  *    (b) constrain or specify the nature of classes that implement them.
  *    (c) provide an abstract description of the classes that implement them.
  *    (d) none of the above.
- * (T/F) Every class should implement an interface.
- * 
+ * (T/F) Every class should implement an interface. * 
  */	
 }
