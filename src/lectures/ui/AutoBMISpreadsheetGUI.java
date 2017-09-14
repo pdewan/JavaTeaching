@@ -14,55 +14,13 @@ import bus.uigen.ObjectEditor;
  */
 public class AutoBMISpreadsheetGUI {
 	
-	/**
-	 * OBJECTEDITOR
-	 * 
-	 * (T/F) It is possible to create a tool that automatically creates a user interface
-	 * for displaying all properties of an object.
-	 * 
-	 * (T/F) It is possible to create a tool for interactively changing all properties of an object.
-	 * 
-	 * (T/F) It is possible to create a tool for interactively changing all editable properties of an 
-	 * object.
-	 * 
-	 * When a property is edited (in an ObjectEditor window)
-	 * 	  (a) the setter for only that property is called.
-	 *    (b) the setters for all editable properties are called.
-	 *    
-	 * When a property is edited (in an ObjectEditor window)
-	 *     (a) the getter for only that property is called.
-	 *     (b) the getters for all editable properties are called.	 
-	 *     (C) the getters for all properties are called.
-	 * 
-	 * Put your own oeall22.jar in the classpath. 
-	 *  
-	 * Go to {@link AUIBMISpreadsheet}. Look at all print methods in it.
-	 * ALT <- to return to this class.
-	 * 
-	 * Run this program.
-	 * 
-	 * Edit the height property in the GUY and see what happens in the 
-	 * console and in the GUI.
-	 * 
-	 * Can you change the value of the BMI property, which has no setter?
-	 * 
-	 * 
-	 * (T/F) It is possible to create a tool that automatically creates a user
-	 * interface for invoking the public methods of an object.
-	 * 
-	 * When a a method is invoked through an ObjectEditor window:
-	 *     (a) no getter is called.
-	 *     (b) the getters for all properties are called.	
-	 * 
-	 * Execute the commmand AUIBMISpreadsheet->Increment Weight from the menu
-	 * at the top of the window).
-	 * 
-	 * Provide a positive or negative increment and hit apply. 
-	 * 
-	 * See the effects on the console and GUI.
-	 * 	  
-	 *
-	 */
+/*
+ * OBJECTEDITOR 
+ * 
+ * Put your own oeall22.jar in the classpath.  
+ * 
+ * Run this program. 
+ */
 		
 	public static void main (String[] args) {
 		final double initialHeight = 1.77;
@@ -73,6 +31,62 @@ public class AutoBMISpreadsheetGUI {
 //		changeObjectProgrammatically(anOEFrame, aBMISpreadsheet);
 			
 	}
+/*
+ * GUI Structure
+ * 
+ * Look at the GUI and relate it to the properties in AUIBMISpreadsheet.
+ * 
+ * It is possible to create a tool that automatically creates a user interface
+ * for displaying:
+ *     (a) all properties of an object.
+ *     (b) the editable properties off an object.
+ * 
+ * Can you change the height property, which has a setter?
+ * 
+ * Can you change the value of the BMI property, which has no setter?
+ * 
+ * It is possible to create a tool for interactively changing:
+ *     all properties of an object.
+ *     all editable properties of anobject.
+ */
+/*
+ * GUI Dynamics
+ * 
+ * Edit the height property in the GUI and see what happens in the 
+ * console and in the GUI.
+ * 
+ * When a property is edited (in an ObjectEditor window)
+ * 	  (a) the setter for only that property is called.
+ *    (b) the setters for all editable properties are called.
+ *    
+ * When a property is edited (in an ObjectEditor window)
+ *     (a) the getter for only that property is called.
+ *     (b) the getters for all editable properties are called.	 
+ *     (C) the getters for all properties are called.
+ * 
+ * Put your own oeall22.jar in the classpath. 
+ *  
+ * Go to {AUIBMISpreadsheet}. Look at all print methods in it.
+ * ALT <- to return to this class.
+ * 
+ 
+ * 
+ 
+ * 
+ * (T/F) It is possible to create a tool that automatically creates a user
+ * interface for invoking the public methods of an object.
+ * 
+ * When a a method is invoked through an ObjectEditor window:
+ *     (a) no getter is called.
+ *     (b) the getters for all properties are called.	
+ * 
+ * Execute the commmand AUIBMISpreadsheet->Increment Weight from the menu
+ * at the top of the window).
+ * 
+ * Provide a positive or negative increment and hit apply. 
+ * 
+ * See the effects on the console and GUI. 
+ */
 	
 	/**
 	 * REFRESH

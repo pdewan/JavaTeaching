@@ -1,17 +1,7 @@
 package lectures.ui;
 import java.util.Scanner;
-/**
- * A TALE OF TWO INTERFACES
- * 
- *   
- * (T/F) A programming interface of an object allows another object to
- * interact with it. 
- * 
- * (T/F) A user interface of an object allows a human user to
- * interact with it.
- * 
- * (T/F) Java automatically provides a user-interface to interact with each object.
- * 
+/*
+ * A TALE OF TWO INTERFACES  
  *  
  * The interfaces in computer science are special cases of the notion of a general
  * interface in English. 
@@ -29,6 +19,14 @@ import java.util.Scanner;
  * User interfaces have to be implemented by user-interface code. They are
  * not automatically provided by Java, though there are libraries to
  * make them easy to write.
+ * 
+ * (T/F) A programming interface of an object allows another object to
+ * interact with it. 
+ * 
+ * (T/F) A user interface of an object allows a human user to
+ * interact with it.
+ * 
+ * (T/F) Java automatically provides a user-interface to interact with each object.
  * 
  * 
  * EXTENT OF USER-INTERFACE CODE
@@ -53,9 +51,9 @@ import java.util.Scanner;
  * the program.
  * 
  * Based on the ManualConsoleBMISpreadSheetUI example, the UI code is:
- * 	   (a) an order of magnitude (about ten times) smaller than the computation code.
- * 	   (b) an order of magnitude larger than the computation code.
- *     (c) about the same size as the computation code.
+ * 	   (a) an order of magnitude (6-10 times) smaller than the computation code.
+ * 	   (b) an order of magnitude (6-10 times)  larger than the computation code.
+ *     (c) about the same size (0-5 times) as the computation code.
  * 
  * Go to AUIBMISpreadsheet and count the number of lines in that class.
  * 
