@@ -4,6 +4,9 @@ import lectures.graphics.ACartesianPoint;
 import lectures.inheritance.extra.MutablePoint;
 
 public class AMutablePoint extends ACartesianPoint implements MutablePoint {
+	public AMutablePoint() {
+		super(0, 0);
+	}
 	public AMutablePoint(int theX, int theY) {
 		super(theX, theY);
 	}	

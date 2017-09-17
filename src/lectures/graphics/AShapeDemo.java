@@ -352,6 +352,6 @@ public class AShapeDemo {
  * (T/F) StructurePattern annotations can be used to identify missing 
  * properties.  
  * 
- */    
+ */  
 
 }
