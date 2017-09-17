@@ -97,15 +97,23 @@ public class NextTimePropertiesAnalyzer {
 		printProperties(new ALoopingFactorialSpreadsheet());
 		
 		/*	     
-	     * Run the main method and study the output.	   	  
+	     * Run the main method and study the output.	
+	     * 
+	     * The set of global variables a method accesses  
+	     * includes each variable the method reads or writes.
+	     * 	  
 	     * (T/F) If we ignore case, for each property in ALoopingFactorialSpreadsheet 
 	     * there is an (instance) variable with the same name. 
+	     * 
 	     * (T/F) The number of properties in 
-	     * ALoopingFactorialSpreadsheet is the same as the number of variables in it.
+	     * ALoopingFactorialSpreadsheet is the same as the number of variables in it.	
+	     * 
+	     * The set of global variables a method accesses  
+	     * includes each variable the method reads or writes.
+	     * 
 	     * (T/F) Each read method of ALoopingFactorialSpreadsheet accesses 
-	     * (uses or assigned) a different set of instance variables. 
-	     * (e.g. if a method assigns global variable a to b, then the set
-	     * of variables it accesses includes a and b) 
+	     * a different set of instance variables. 
+	     * 	  
 	     * (T/F) Each write method of ALoopingFactorialSpreadsheet changes
 	     * a different set of instance variables.
 		 */
@@ -123,11 +131,13 @@ public class NextTimePropertiesAnalyzer {
 	     * AnotherLoopingFactorialSpreadsheet is the same as the number of variables in it.
 	     * (T/F) Each read method of AnotherLoopingFactorialSpreadsheet accesses
 	     * a different set of instance variables.	     * 
-	     * (T/F) Each write method of AnotherLoopingFactorialSpreadsheet changes
-	     * a different set of instance variables. 
+	     * (T/F)Each write method of ALoopingFactorialSpreadsheet changes a single 
+	     * global variable. 
 	     * (T/F) AnotherLoopingFactorialSpreadsheet and ALoopingFactorialSpreadsheet
-	     * have the same public behavior, that is behavior defined by public
-	     * methods.
+	     * have the same public behavior, that is behavior defined by their public
+	     * methods. If they have the same public behavior, then they can be
+	     * interchanged without their users noticing any change in the actions
+	     * taken by them.
 	     */
 		/* 				 
 	     * Uncomment the the code below, commenting the prints above.
@@ -138,13 +148,13 @@ public class NextTimePropertiesAnalyzer {
 //		printVariables(new AFactorialSpreadsheetPretender());
 // 		printProperties(new AFactorialSpreadsheetPretender());
 		/*
-	     * (T/F) For each property of AFactorialSpreadsheetPretender there
+	     * (T/F) For each property of ALoopingFactorialSpreadsheet there
 	     * exists a property with the same name and type in 
-	     * ALoopingFactorialSpreadsheet.
+	     * AFactorialSpreadsheetPretender .
 	     * 
-	     * (T/F) For each variable of AFactorialSpreadsheetPretender there
-	     * exists a variable with the same name and type in 
-	     * ALoopingFactorialSpreadsheet.
+	     * (T/F) For each variable of ALoopingFactorialSpreadsheet  there
+	     * exists a variable with the same name and type in AFactorialSpreadsheetPretender. 
+	     * .
 	     * 	   	
 	     * (T/F) AFactorialSpreadsheetPretender and ALoopingFactorialSpreadsheet
 	     * have the same public behavior, that is behavior defined by the execution of
@@ -159,13 +169,13 @@ public class NextTimePropertiesAnalyzer {
 //		printVariables(new AnotherFactorialSpreadsheetPretender());
 //		printProperties(new AnotherFactorialSpreadsheetPretender());
 		/*
-	     * (T/F) For each property of AnotherFactorialSpreadsheetPretender there
-	     * exists a property with the same name and type in 
-	     * ALoopingFactorialSpreadsheet.
+	     * (T/F) For each property of ALoopingFactorialSpreadsheet  there
+	     * exists a property with the same name and type in AnotherFactorialSpreadsheetPretender.
+	     * .
 	     * 
-	     * (T/F) For each variable of AnotherFactorialSpreadsheetPretender there
-	     * exists a variable with the same name and type in 
-	     * ALoopingFactorialSpreadsheet.	  	     
+	     * (T/F) For each variable of ALoopingFactorialSpreadsheet  there
+	     * exists a variable with the same name and type in AnotherFactorialSpreadsheetPretender.
+	     * .	  	     
 	     */
 		/* 				 
 	     * Uncomment the the code below, commenting the prints above.
@@ -178,9 +188,9 @@ public class NextTimePropertiesAnalyzer {
 		 * (T/F) ANonBeanLoopingFactorialSpreadsheet and ALoopingFactorialSpreadsheet
 	     * have the same behavior except that they use different method names.	
 	     * 
-		 * (T/F) For each property of ANonBeanLoopingFactorialSpreadsheet there
-	     * exists a property with the same name and type in 
-	     * ALoopingFactorialSpreadsheet.
+		 * (T/F) For each property of ALoopingFactorialSpreadsheet  there
+	     * exists a property with the same name and type in ANonBeanLoopingFactorialSpreadsheet. 
+	     * .
 	     *  
 	        
 	     */
@@ -194,11 +204,9 @@ public class NextTimePropertiesAnalyzer {
 		/*	
 		 * (T/F) ALoopingFactorialSpreadsheetWithNonPublicMethods and ALoopingFactorialSpreadsheet
 	     * have the same behavior except that they give different access to their methods.	    
-		 * (T/F) For each property of ALoopingFactorialSpreadsheetWithNonPublicMethods there
-	     * exists a property with the same name and type in 
-	     * ALoopingFactorialSpreadsheet. 
-	     *     
-	     
+		 * (T/F) For each property of ALoopingFactorialSpreadsheet  there
+	     * exists a property with the same name and type in ALoopingFactorialSpreadsheetWithNonPublicMethods. 
+	     *	     
 	     */		
 	}
 }

@@ -50,17 +50,18 @@ import java.util.Scanner;
  * Run this class to see what it does and terminate it by pressing on the red button to kill
  * the program.
  * 
- * Based on the ManualConsoleBMISpreadSheetUI example, the UI code is:
- * 	   (a) an order of magnitude (6-10 times) smaller than the computation code.
- * 	   (b) an order of magnitude (6-10 times)  larger than the computation code.
- *     (c) about the same size (0-5 times) as the computation code.
  * 
  * Go to AUIBMISpreadsheet and count the number of lines in that class.
  * 
  * Now count the number of lines of code in this class. Exclude comments if you can.
  * 
  * To show line numbers, Go to Windows -> Preferences->General ->Text Editors ->
- * Show line numbers .
+ * Show line numbers.
+ * 
+ *  Based on the ManualConsoleBMISpreadSheetUI example, the UI code is:
+ * 	   (a) orders of magnitude (6 or more times) smaller than the computation code.
+ * 	   (b) orders of magnitude (6 or more times)  larger than the computation code.
+ *     (c) about the same size as the computation code (none of the above).  
  * 
  */
 public class ManualConsoleBMISpreadsheetUI {
@@ -75,7 +76,6 @@ public class ManualConsoleBMISpreadsheetUI {
 	}
 	static void printBMI(double aBMI) {
 		System.out.println ("The BMI is:" + aBMI);
-
 	}
 	public static void main(String[] args) {
 		UIBMISpreadsheet aBMISpreadsheet = new AUIBMISpreadsheet();
@@ -94,7 +94,7 @@ public class ManualConsoleBMISpreadsheetUI {
  * Can we build a tool that similarly automatically extract a user-interface from
  * a class?
  * 
- * Go to AutoBMISpreadsheetGUI (press F3 or CTRL-click)
+ * Go to AutoBMISpreadsheetGUI (press F3 or CTRL/COMMAND-click)
  * 
  */
 }
