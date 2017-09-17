@@ -132,6 +132,7 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
  
  * (T/F) It is possible to build a tool that checks that a Java class implements
  * specified properties.
+ * 
  * Now comment out the @StructurePattern annotation in AUIBMISpreadsheet and run 
  * the program. Observe the error/warning messages.        
  * 
@@ -139,6 +140,6 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
  * annotation from a class results in a warning from ObjectEditor if the 
  * class defines one or more properties.
  * 
- * End of Praxis on UI
+ * End of Praxis on UI. Go to Graphics next. lectures.graphics.package-info.java
  *  
  */
