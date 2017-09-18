@@ -178,7 +178,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * A node with no parent is a root node in the structure.
  * 
- * Any node that is not a leaf or root is an internal node.
+ * Any node that is not a leaf or root is an internal or interior node.
  * 
  * If B is the child of A, and C is a child of B then 
  * B and C are descendants of A and A and B are ancestors of C
