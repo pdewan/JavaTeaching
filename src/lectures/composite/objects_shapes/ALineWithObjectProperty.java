@@ -19,7 +19,7 @@ import bus.uigen.ObjectEditor;
  * So, we have an object composed of another object, or in other words, we have
  * "object nesting" with a parent/child relationship.
  * 
- * Yes this is an atomic shape - a line - as the StructurePattern annotation
+ * Yet this is an atomic shape - a line - as the StructurePattern annotation
  * shows.
  * 
  * Look through this program. Go to the declaration of both the the interface 
@@ -28,7 +28,10 @@ import bus.uigen.ObjectEditor;
  * After that look at AnInteger.
  */
 public class ALineWithObjectProperty implements LineWithObjectProperty {
-	
+	public static final int INIT_X = 10;
+	public static final int INIT_Y = 10;
+	public static final int INIT_WIDTH = 20;
+	public static final int INIT_HEIGHT = 20;
 	int width, height;
 	
 	Point location;	// an non-primitive variable!
@@ -51,7 +54,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
 	
 	public static void main(String args[]) {
 			LineWithObjectProperty line =  new ALineWithObjectProperty(
-					new ACartesianPoint(10, 10), 20, 20);		
+					new ACartesianPoint(INIT_X, INIT_Y), INIT_WIDTH, INIT_HEIGHT);		
 			OEFrame aFrame = ObjectEditor.edit (line);
 			aFrame.showTreePanel();
 			/*
@@ -64,55 +67,68 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
 		}
 }
 /*
- * DECOMPOSING AN OBJECT
+ * LOGICAL (EXTERNAL) vs. PHYSICAL (INTERNAL) STRUCTURE
  * 
- * We can decompose ("break apart") an object by the values assigned to its instance variables
- * or properties.
+ * We can decompose a physical object based on what is externally visible or
+ * how it is internally organized. For example we decompose a human hand into
+ * its individual fingers or the various bones that make up the hand.
  * 
- * Decomposing an object by its instance variables creates its physical structure.
+ * Similarly can decompose ("break apart") an object by the values assigned to its 
+ * instance variables or properties.
  * 
- * Decomposing an object by its properties creates its logical structure.
+ * Decomposing an object by its instance variables creates its internal or 
+ * physical structure.
+ * 
+ * Decomposing an object by its properties creates its external or logical structure.
  * 
  * The physical structure represents how the object is physically stored in memory.
  * 
  * The logical structure describes how the object is logically structured by someone
  * looking at its public instance methods.
  * 
- * Both structures involve common concepts of root, internal nodes, and leaves.
- * 
- * The debugger and ObjectEditor provide visualizations of this structures.
+ * The debugger and ObjectEditor provide visualizations of these structures,
+ * respectively.
  * 
  * We will use these visualizations to describe common concepts in these 
  * structures.
  * 
+ * Set the break point as instructed by the comment in the main method.
  * 
  * Execute the Run-->Debug As command (F11 key).
  * 
  * The ObjectEditor window should be shown, the program should stop or
  * break at the line with the breakpoint you placed, and you should be
  * in the Debug perspective.
+ */
+
+/*
+ * VISUALIZING THE TWO STRUCZTURES
  * 
- * Execute the Run->Step Into command (F5) to step into the getter called
- * and step return back (F7).
+ * Execute the Run->Step Into command ((Fn) F5) to step into the getter called
+ * and step return back ((Fin) F7).
  * 
- * Now execute again the Run->Step Into command (F5) to step into the setter. 
- * 
- * 
+ * Now execute again the Run->Step Into command ((Fn) F5) to step into the setter. 
+ *   
  * Look at the top right window and select the left tab: Variables (if not
  * already selected). 
  * 
  * It shows two variables. 
  * 
- * One is the variable, newHeight, holding the parameter value 
- * passed to the setter. 
+ * One is the variable, newHeight, look its value.
  * 
- * Verify its value is correct.
+ * The value of newHeight is:
+ *     (a) 0
+ *     (b) the parameter passed by main to the setHeight() method.
+ *     
+ * The variable newHeight is a:
+ *     (a) global variable
+ *     (b) local variable 
  * 
  * The other is the variable, this, which refers to the object 
  * on which the setter is being executed.
  * 
  * Press on the arrow to the left of "this" to expand it, and expand
- * the "location" item also.
+ * the "location" item   
  * 
  * Similarly, expand the Location item in the tree view displayed 
  * by ObjectEditor.
@@ -122,13 +138,37 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * Some items are similar (ignoring the case) and some are different.
  * 
- * The structure created by ObjectEditor is the logical structure and
+ * The structure (tree view) created by ObjectEditor is the logical structure and
  * the one created by the debugger is the physical structure.			
 
  * As we see in the two structures, names and values are displayed 
  * for primitive components of an object, and expandable names are 
  * shown for object components (location, in this case). 
-
+ * 
+ * Under "this", the debugger displays items corresponding to:
+ * (a) local variables of the object.
+ * (b) global variables of the object.
+ * (c) properties of the object. 
+ * 
+ * In the tree view, ObjectEditor displays items corresponding to:
+ * 
+ * (a) local variables of the object.
+ * (b) global variables of the object.
+ * (c) properties of the object. 
+ * 
+ * (T/F) A debugger shows the physical structure of an object.
+ * (T/F) ObjectEditor shows the physical structure of an object.
+ * The logial structure of an object is its decomposition by its:
+ *    (a) variables.
+ *    (b) properties
+ * 
+ */
+/*
+ * STRUCTURE-BASED TERMINOLOGY
+ *  
+ * Both physical and logical structures involve common concepts of root, 
+ * internal nodes, and leaves,defined below.
+ * 
  * In computer science, the items in a structure are called nodes, 
  * which have names and possibly values and children (sub structures).
  *  
@@ -168,7 +208,6 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * (T/F) The logical structure of ALineWithObjectProperty has a leaf
  * node labeled "Radius".
  * 
-
  * Now comment out the statement in the constructor that assigns to location
  * and debug the program again (F11), stepping into the break point.
 
@@ -176,12 +215,10 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * Do the tree views show the same nodes as previously?
  * 
- * (T/F) Different instances of the same class can have different physical and
- * logical structures.
+ * (T/F) Different instances of the same class can have different physical structures.
  *  
- * 
+ * (T/F) Different instances of the same class can have different logical structures.
  */
-
 
 /*
  * ATOMIC VS STRUCTURED TYPE
@@ -197,10 +234,15 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * A non-atomic type is a structured type - these types can be decomposed into
  * more than one component.
  * 
+ *
  * 
  * (T/F) int is an atomic type
  * 
+ * Go to the declaration of Point
+ * 
  * (T/F) Point is a structured type.
+ * 
+ * Go to the declaration of MyInteger
  * 
  * (T/F) MyInteger is a structured type.
  */
@@ -220,12 +262,13 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * In this example, the ObjectEditor tree view was structured but not the
  * graphics view, because the object simply represented a line that used a 
- * Point object rather than x,y coordinates for the location. (I recommend using
- * x,y coordinates for your project to avoid some subtle problems)
+ * Point object rather than x,y coordinates for the location. 
+ * (We recommend using x,y coordinates for location in your project to avoid 
+ * some subtle problems)
  * 
  * The next example shows a structured shape.
  * 
  * Next class: ACartesianPlane
-
+ *
  */
 

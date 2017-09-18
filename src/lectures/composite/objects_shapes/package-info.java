@@ -21,12 +21,12 @@
  * 
  * VISITED CLASSES
  * 
- * {@link ALineWithObjectProperty}
- * {@link ACartesianPoint}
- * {@link MyInteger}
- * {@link ACartesianPlane}
- * {@link AnInefficientCartesianPlane}
- * {@link APlottedShuttle}
+ * {ALineWithObjectProperty}
+ * {ACartesianPoint}
+ * {MyInteger}
+ * {ACartesianPlane}
+ * {AnInefficientCartesianPlane}
+ * {APlottedShuttle}
  *
  */
 package lectures.composite.objects_shapes;

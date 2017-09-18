@@ -9,14 +9,16 @@ import lectures.graphics.StringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
-/**
- * Study the class and draw the logical and physical structure
- * of the instance created by main. 
- * 
- * The idea is to draw a scalable Cartesian Plane with labeled X and
+/*
+ * The purpose of this clas is to draw a scalable Cartesian Plane with labeled X and
  * Y axes.
  * 
  * An editable AxesLength property can be used to magnify and shrink the plane.
+ * 
+ * Study the class and draw or imagine the logical and physical structure
+ * of the instance created by main. 
+ *
+ * 
  * 
  * (T/F) AxesLength is a readonly property of ACartesianPlane.
  * 
@@ -134,21 +136,39 @@ public class ACartesianPlane implements CartesianPlane {
     	
     }	
 }
-/*
- * 
+/*  
  * 
  * Run in debug mode and stop at the breakpoint, and step into the getter, 
  * step return, and then step into the setter.
  * 
  * Again look at the logical structure displayed by ObjectEditor and the 
- * physical structure displayed by the debugger. 
+ * physical structure displayed by the debugger.  * 
+ * 
  * 
  * Are these the structures you would have predicted? 
  *   	
- * Is the content of the main panel predicted?
  * 
  * Is the content of the graphics panel predicted?
  * 
+ * (T/F) xxesLength is a leaf variable of ACartesianPlane.
+ * 
+ * (T/F) xAxis is a leaf variable of ACartesianPlane. 
+ * 
+ * (T/F) xLabel is a leaf variable of ACartesianPlane.
+ * 
+ * (T/F) XAxis is a stored property of ACartesianPlane, that is, its value
+ * is stored in an instance variable.
+ * 
+ * (T/F) AxesLength is a readonly property of ACartesianPlane.
+ * 
+ * (T/F) XAxis is readonly property of ACartesianPlane. 
+ * 
+ * (T/F) All structured properties of ACartesianPlane are readonly.
+ * 
+ * (T/F) XAxis is a stored property of ACartesianPlane, that is, its value
+ * is stored in an instance variable.
+ * 
+ *  Is the content of the main panel predicted?
  * 
  * (T/F) Every property of an object is displayed in the ObjectEditor tree panel.
  * 
