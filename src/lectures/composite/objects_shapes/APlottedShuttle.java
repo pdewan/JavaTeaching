@@ -3,40 +3,13 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
-/*
- * Without looking at this program, run it and observe the graphics view 
- * created (stretch the window to see all of it).
- * 
- * Edit the properties in the main panel to see the effect on in the graphics
- * panel.
- * 
- * What properties/logical structure do you think this class has based on the
- * graphics view?
- * 
- * Use the Common->TreeView command to view the actual logical structure.
- * 
- * Examine this code. Does your predicted logical structure match the actual one?
- * 
- * If not, which is the preferable one?
- * 
- * APlottedShuttle has:
- *   (a) a child node that represents the X axis.
- *   (b) a (non-child) descendant node that represents the X axis.
- *   
- *  APlottedShuttle has:
- *   (a) a child node that represents the shuttle.
- *   (b) a (non-child) descendant node that represents the shuttle. 
- * 
- * (T/F) APlottedShuttle reuses the code in ACartesianPlane.
- * 
- */
+
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
-public class APlottedShuttle implements PlottedShuttle  {
-    
+public class APlottedShuttle implements PlottedShuttle  {    
 	public static final String SHUTTLE_IMAGE_FILE_NAME = "shuttle2.jpg";
 	int shuttleX = 0, shuttleY = 0;
 	protected CartesianPlane cartesianPlane; 
-	protected ImageWithHeight shuttleImage;
+	protected ImageWithHeight shuttleImage;	
 	
 	public APlottedShuttle(int anX, int aY) {
 		cartesianPlane = new ACartesianPlane (AXES_LENGTH, ORIGIN_X, ORIGIN_Y);
@@ -54,6 +27,12 @@ public class APlottedShuttle implements PlottedShuttle  {
 		shuttleX = newVal;
 		shuttleImage.setX(toWindowX());
 	}
+	/*
+	 * In a APlotedShttle, setShuttleX() changes:
+	 * 	a) the shuttleX variable
+	 *  b) the x variable of the object assigned to the shuttleImage variable.
+	 *  c) the xAxesLength variable of the object assigned to the cartesianPlane variable.
+	 */
 	public int getShuttleY() {return shuttleY;}
 	public void setShuttleY(int newVal) {
 		shuttleY = newVal;
@@ -73,4 +52,38 @@ public class APlottedShuttle implements PlottedShuttle  {
 //		oeFrame.hideMainPanel();
 	}
 }
+/*
+ * Without looking at this program, run it and observe the graphics view 
+ * created (stretch the window to see all of it).
+ * 
+ * Edit the properties in the main panel to see the effect on in the graphics
+ * panel.
+ * 
+ * What properties/logical structure do you think this class has based on the
+ * graphics view?
+ * 
+ * Use the Common->TreeView command to view the actual logical structure.
+ * 
+ * Examine this code. Does your predicted logical structure match the actual one?
+ * 
+ * If not, which is the preferable one?
+ * 
+ * The logical and physical structure of APlottedShuttle has:
+ *   (a) a child node that represents the X axis.
+ *   (b) a (non-child) descendant node that represents the X axis.
+ *   (c) None of the above.
+ *   
+ *  The  logical and physical structure of APlottedShuttle has:
+ *   (a) a child node that represents the shuttle.
+ *   (b) a (non-child) descendant node that represents the shuttle.
+ *   (c) None of the above. 
+ *   
+ *  The logical and physical structure of APlottedShuttle has:
+ *   (a) a child node that represents the cartesian plane
+ *   (b) a (non-child) descendant node that represents the cartesian plane.
+ *   (c) None of the above.
+ * 
+ * (T/F) APlottedShuttle reuses the code in ACartesianPlane.
+ * 
+ */
 

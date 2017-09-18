@@ -9,34 +9,37 @@ import lectures.graphics.StringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 /**
- * Compare the constructor of this class with the previous one.
- * 
- * Compare setAxesLength() of this class with the one in the previous one. 
- * 
- * Compare one of the getters (say getAxis()) with the corresponding 
- * getter of the previous class.
- * 
- * (T/F) XAxis is a stored property of AnInefficientCartesianPlane, that is, 
- * its value is stored in an instance variable.
- * 
- * 
+ * As the name of this class illustrates, this is an example of how not
+ * to code a composite object. Compare this code with ACartsianPlane.  
  *
  */
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class AnInefficientCartesianPlane implements CartesianPlane {
 	protected int originX, originY;
 	protected int axesLength; 
+/*    
+ * AnInefficientCartesianPlane has:
+ *   a) only primitive components in its physical structure.
+ *   b) only object components in its physical structure.
+ *   c) both primitive and objct components in its physical structure.
+ */
 	/*
-	 * Do not instantiate components in the constructor
+	 * Does not instantiate components in the constructor
 	 */
     public AnInefficientCartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {
     	axesLength = theAxesLength; 
     	originX = theOriginX;
     	originY = theOriginY;      
     }  
+/*
+ * (T/F) The constructor of AnInefficientCartesianPlane assigns objects to 
+ *  object instance variables.
+ * (T/F) The constructor of AnInefficientCartesianPlane initializes
+ *  all instance variables of the class.  
+ */
     
-    /*
-     * Create a new line and label each time the getter is called, 
+    /**
+     * Creates a new line and label each time the getter is called, 
      * based on axes length
      * 
      */
@@ -44,6 +47,10 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     	Line result = new ALine(toXAxisX(), toXAxisY(), axesLength, 0);
     	return result;
     }
+/*
+ * (T/F) getAxis() of AnInefficientCartesianPlane creates and returns a new 
+ * object each time it is called.
+ */
     public Line getYAxis() {
     	return new ALine(toYAxisX(), toYAxisY(), 0, axesLength);
     }    
@@ -59,6 +66,12 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
 	public void setAxesLength(int anAxesLength) {
 		axesLength = anAxesLength;		
 	}
+/* 
+ *   
+ * Calling setAxesLength in ACartesianPlane changes:
+ * 		(a)  leaf nodes in the physical structure.
+ * 		(b)  object nodes in the physical and logical structure.
+ */
 	protected int toXAxisX() {
     	return originX - axesLength/2;
     }
@@ -102,6 +115,24 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     	anOEFrame.refresh();
     	
     }
+/* 
+ * 
+ * Study the class and draw or imagine the logical and physical structure
+ * of the instance created by main.
+ * 
+ * (T/F) XAxis is a stored property of AnInefficientCartesianPlane, that is, 
+ * its value is stored in an instance variable. 
+ * 
+ * (T/F) ACartesianPlane and AnInefficientCartesianPlane have the same
+ * logical structure.
+ * 
+ * (T/F) ACartesianPlane and AnInefficientCartesianPlane have the same
+ * physical structure.
+ * 
+ * (T/F) In AnInefficientCartesianPlane, each time a getter of an object property is called, a new object is
+ * returned. 
+ *  
+ */
 /*
  * Again, run in debug mode and stop at the breakpoint, and step into the getter, 
  * step return, and then step into the setter.
@@ -118,7 +149,7 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * Look at the console output:
  * 
  * (T/F)  Calling getXAxis() in AnInefficientCartesianPlane changes the 
- * composite property, XAxis, that is, returns a new new object for this 
+ * composite property, XAxis, that is, returns a new object for this 
  * property.
  * 
  * Why is this class more inefficient?
