@@ -70,7 +70,6 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
 /*
  * Annotation  
  * 
- 
  *   
  * An annotation is an instantiation of an annotation class that describes some 
  * program construct such as a class, method or variable that follows it.
@@ -112,7 +111,7 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
  * 
  * (T/F) Removing the name of an editable property from the @EditablePropertyNames 
  * annotation makes it uneditable by the user and results in a warning from 
- * ObjectEditor about the missing matching setter.
+ * ObjectEditor.
  * 
  * 
  * Comment out the height property from the editable property names annotation.
@@ -130,8 +129,8 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
  * (T/F) Annotations can help specify and document the (editable) properties 
  * of a class.
  
- * (T/F) It is possible to build a tool that checks that a Java class implements
- * specified properties.
+ * (T/F) It is possible to build a tool that checks that a Java class implements 
+ * properties specified through annotations.
  * 
  * Now comment out the @StructurePattern annotation in AUIBMISpreadsheet and run 
  * the program. Observe the error/warning messages.        

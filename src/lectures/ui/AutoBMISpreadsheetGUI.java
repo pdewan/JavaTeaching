@@ -35,10 +35,8 @@ public class AutoBMISpreadsheetGUI {
  * 
  * Look at the GUI and relate it to the properties in AUIBMISpreadsheet.
  * 
- * It is possible to create a tool that automatically creates a user interface
- * for displaying:
- *     (a) all properties of an object.
- *     (b) the editable properties off an object.
+ * (T/F) It is possible to create a tool that automatically creates a user interface
+ *  displaying all properties of an object.
  * 
  * Can you change the height property, which has a setter?
  * 
@@ -46,7 +44,11 @@ public class AutoBMISpreadsheetGUI {
  * 
  * It is possible to create a tool for interactively changing:
  *     all properties of an object.
- *     all editable properties of anobject.
+ *     all editable properties of an object.
+ *     
+ * An application that contains only computation code and relies completely 
+ * on an external tool to manage its user-interface follows the separation
+ * of concerns principle.
  */
 /*
  * GUI Dynamics
@@ -81,21 +83,23 @@ Console.Writeline(p.Name) //invokes Name's getter and uses return value
  * What triggers execution of the getter and setter in the above code?
  * 
  *In C#: 
- *    (a) a getter for a property must have the name, getP;
- *    (b) all getters have the same name, get().
+ *    (a) a getter for a property must be given the name, getP.
+ *    (b) all getters have are given the same name, get.
  *    (c) none of the above
  *  
  * In C#, to assign the value of property P of object o to variable p, 
  * we must execute a statement of the form:
  * 	(a) v = o.getP();
- *  (b) v = o.P
- *  (c) none of the above
+ *  (b) v = o.get();
+ *  (c) v = o.P;
+ *  (d) None of the above
  *  
  * In C#, to change the value of property P of object o to expression E, 
  * we must execute code of the form:
  * 	(a) o.setP(E);
+ *  (b) o.set(E);
  *  (b) o.P = E;
- *  (c) none of the above
+ *  (c) None of the above.
  * 
  * In C#, the setters and getters of properties are:
  *    (a) explicitly invoked by the caller by making regular method calls in 
@@ -121,7 +125,7 @@ Console.Writeline(p.Name) //invokes Name's getter and uses return value
  *     (C) the getters for all properties are called.
  *  
  * (T/F) It is possible to create a tool that calls getters and setters of 
- * properties implicitly in response to user actions that dipslay or edit these 
+ * properties implicitly in response to user actions that display or edit these 
  * properties.
  *  
  * Execute the commmand AUIBMISpreadsheet->Increment Weight from the menu

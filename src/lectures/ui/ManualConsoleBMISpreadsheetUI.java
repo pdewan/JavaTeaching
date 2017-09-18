@@ -17,6 +17,10 @@ import java.util.Scanner;
  * They are interfaces between (programmed) objects and users. 
  * 
  * This class illustrates user-interfaces. 
+ * 
+ * They are important for two reasons. First, many interesting applications
+ * are interactive. More important, user-interface of an application is a 
+ * separate concern from the rest of the application.
  */
 public class ManualConsoleBMISpreadsheetUI {
 	static Scanner scanner = new Scanner(System.in);
@@ -80,15 +84,25 @@ public class ManualConsoleBMISpreadsheetUI {
  * It processes output by converting some value computed by the 
  * model code  into output that can be viewed by the user.
  * 
- * User-interface code is responsible for:
+ *  Computation or model code is responsible for:
  *    (a) converting user input into Java values.
  *    (b) converting Java values into user output.
+ *    (c) determining the relationship between output and input.
+ *    
+ * User-interface code is responsible for: 
+ *    (a) converting user input into Java values used by computation code.
+ *    (b) converting Java values computed by computation code into user output.
  *    (c) determining the relationship between output and input. 
  *  
- *  Computation code is responsible for:
- *    (a) converting user input into Java values.
- *    (b) converting Java values into user output.
- *    (c) determining the relationship between output and input.   
+ * (T/F) The user-interface code of an application depends on the computation code 
+ * of the application.
+ * 
+ * (T/F) The computation code of an application depends on the user-interface code 
+ * of the application.
+ * 
+ * (T/F) The separation of concerns principle implies that
+ * user-interface and computation code of an application should be kept
+ * in separate classes.
  * 
  * We know this main class is a UI class and it does nothing but 
  * read from the console and output to the console, 
