@@ -21,6 +21,11 @@ import java.util.Scanner;
  * They are important for two reasons. First, many interesting applications
  * are interactive. More important, user-interface of an application is a 
  * separate concern from the rest of the application.
+ * 
+ * (T/F) A programming interface of an object determines how another object interacts with it. 
+ * 
+ * (T/F)A user interface of an object determines how a human interacts with it
+ * 
  */
 public class ManualConsoleBMISpreadsheetUI {
 	static Scanner scanner = new Scanner(System.in);
@@ -50,12 +55,6 @@ public class ManualConsoleBMISpreadsheetUI {
  * User interfaces have to be implemented by user-interface code. They are
  * not automatically provided by Java, though there are libraries to
  * make them easy to write.
- * 
- * (T/F) A programming interface of an object allows another object to
- * interact with it. 
- * 
- * (T/F) A user interface of an object allows a human user to
- * interact with it.
  * 
  * (T/F) Java automatically provides a user-interface to interact with each object.
  * 

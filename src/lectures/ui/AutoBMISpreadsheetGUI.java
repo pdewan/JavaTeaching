@@ -87,7 +87,7 @@ Console.Writeline(p.Name) //invokes Name's getter and uses return value
  *    (b) all getters have are given the same name, get.
  *    (c) none of the above
  *  
- * In C#, to assign the value of property P of object o to variable p, 
+ * In C#, to assign the value of property P of object o to variable v, 
  * we must execute a statement of the form:
  * 	(a) v = o.getP();
  *  (b) v = o.get();
@@ -135,6 +135,9 @@ Console.Writeline(p.Name) //invokes Name's getter and uses return value
  * Provide a positive or negative increment and hit apply. 
  * 
  * See the effects on the console and GUI. 
+ * 
+ * (T/F) It is possible to create a tool that automatically creates a user interface for 
+ * invoking the public methods of an object
  * 
  * When a a method is invoked through an ObjectEditor window:
  *     (a) no getter is called.
