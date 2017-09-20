@@ -265,8 +265,7 @@ public class AShapeDemo {
  * program again and view the console and OE user-interfaces.
  * 
  * (T/F) The same set of properties can be used to completely represent a
- * rectangle and image.
- *  
+ * rectangle and image. *  
  * 
  * Change the Width and Height properties in the tree panel. Observe 
  * what happens in the other panel.
@@ -333,9 +332,7 @@ public class AShapeDemo {
  * properties.
 */
 /*
- * USE OF STRUCTURE PATTERN
- * 
- 
+ * USE OF STRUCTURE PATTERN   
  * 
  * Replace the current @StructurePattern current annotation with the 
  * @StructurePattern(StructurePatternNames.LINE_PATTERN)annotation
@@ -353,5 +350,57 @@ public class AShapeDemo {
  * properties.  
  * 
  */  
+ /*
+  * OE Rules
+  * 
+  * If an object should be displayed by ObjectEditor as a point, its class should have
+  * the corresponding StructurePattern annotation and the following properties:
+  * a) X
+  * b) Y
+  * c) Width
+  * d) Height
+  * e) Text
+  * f) ImageFileName 
+  * 
+  * If an object should be displayed by ObjectEditor as a line/rectangle/oval, 
+  * its class should have the corresponding StructurePattern annotation and the 
+  * following properties:
+  * a) X
+  * b) Y
+  * c) Width
+  * d) Height
+  * e) Text
+  * f) ImageFileName 
+  * 
+  * If an object should be displayed by ObjectEditor as a positionable string, 
+  * its class should have the corresponding StructurePattern annotation and the 
+  * following properties:
+  * a) X
+  * b) Y
+  * c) Width
+  * d) Height
+  * e) Text
+  * f) ImageFileName
+  * 
+  * If an object should be displayed by ObjectEditor as an unscalable image, 
+  * its class should have the corresponding StructurePattern annotation and the 
+  * following properties:
+  * a) X
+  * b) Y
+  * c) Width
+  * d) Height
+  * e) Text
+  * f) ImageFileName
+  * 
+  * If an object should be displayed by ObjectEditor as a scalable image, 
+  * its class should have the corresponding StructurePattern annotation and the 
+  * following properties:
+  * a) X
+  * b) Y
+  * c) Width
+  * d) Height
+  * e) Text
+  * f) ImageFileName
+  */
 
 }
