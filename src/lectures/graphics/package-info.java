@@ -14,7 +14,6 @@
  * 
  * It will also demonstrate that is possible to automatically display these
  * objects using computer graphics.
- * 
  *
  * You need to visit only one class for this praxis: AShapeDemo.
  * 

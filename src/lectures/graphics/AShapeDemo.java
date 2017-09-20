@@ -153,11 +153,11 @@ public class AShapeDemo {
  * annotation and uncomment one of the other commented annotations, which
  * you will do shortly.
  * 
- * (T/F) It is possible to develop user-interface that creates multiple
+ * (T/F) It is possible to automatically generate user-interfaces that create multiple
  * views of the exported state (e.g. properties)of an object.
  *  
- * (T/F) Changes to a view of an object should result in other views of it
- * to be automatically updated.
+ * (T/F) In ObjectEditor, changes to a view of an object can result in other views of it
+ * being automatically updated.
  * 
  */
 
@@ -230,7 +230,7 @@ public class AShapeDemo {
  * which they will be read by the user.   
  * 
  * The directions in which the x and y coordinates increase 
- * in a computer coordinate system are based on
+ * in a computer coordinate system are based on:
  *   (a) the Mathematical Cartesian Plane
  *   (b) how one reads text in the English language (left to right, top to bottom).
  * 	
@@ -246,12 +246,12 @@ public class AShapeDemo {
  * @StructurePattern(StructurePatternNames.LINE_PATTERN)annotation
  * and run the program again and view the shape displayed.  
  * 
- * (T/F) An oval can be completely represented by its rectangular bounded box.
+ * (T/F) An oval can be completely represented by its rectangular bounding box.
  *   
- * (T/F) A Line can be completely represented by its rectangular bounded box.
+ * (T/F) A line can be completely represented by its rectangular bounding box.
  * 
  * (T/F) The same set of properties can be used to completely represent a rectangle,
- * oval or line.
+ * oval and line.
  * 
  */
 /*
@@ -265,12 +265,13 @@ public class AShapeDemo {
  * program again and view the console and OE user-interfaces.
  * 
  * (T/F) The same set of properties can be used to completely represent a
- * rectangle and image. *  
+ * rectangle and image.
+ *  
  * 
  * Change the Width and Height properties in the tree panel. Observe 
  * what happens in the other panel.
  * 
- * (T/F) It is possible to automatically scale an image by changing 
+ * (T/F) With ObjectEditor, it is possible to automatically scale an image by changing 
  * the size of its bounding box.
  * 
  * (T/F) In Java, it is possible to get the unscaled values of the height and
@@ -328,9 +329,25 @@ public class AShapeDemo {
  * @StructurePattern(StructurePatternNames.POINT_PATTERN)annotation
  * and run the program and view the draw panel.
  * 
- * (T/F) ObjectEditor can graphically represent an object with only X and Y
+ * (T/F) ObjectEditor can graphically display an object with only X and Y
  * properties.
 */
+/*
+ * USE OF STRUCTURE PATTERN
+ *  
+ * 
+ * Do you see any error messages/warnings in the console?
+ * 
+ * (T/F) StructurePattern annotations can tell a tool how to interpret the
+ * properties of an object.
+ * 
+ * (T/F) StructurePattern annotations can be used to create the properties of 
+ * an object, that is, the getters and setters of the properties.
+ * 
+ * (T/F) StructurePattern annotations can be used to identify missing 
+ * properties.  
+ * 
+ */  
 /*
  * USE OF STRUCTURE PATTERN   
  * 
@@ -344,7 +361,7 @@ public class AShapeDemo {
  * properties of an object.
  * 
  * (T/F) StructurePattern annotations can be used to create the properties
- * of an object, that is, fill in missing properties.
+ * of an object, that is, fill in missing getters.
  * 
  * (T/F) StructurePattern annotations can be used to identify missing 
  * properties.  
@@ -372,7 +389,7 @@ public class AShapeDemo {
   * e) Text
   * f) ImageFileName 
   * 
-  * If an object should be displayed by ObjectEditor as a positionable string, 
+  * If an object should be displayed by ObjectEditor as unscalable, positionable string, 
   * its class should have the corresponding StructurePattern annotation and the 
   * following properties:
   * a) X
