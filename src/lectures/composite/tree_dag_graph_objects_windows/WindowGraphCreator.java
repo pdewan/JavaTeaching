@@ -6,21 +6,10 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 /**
- * A structure in which there is no restriction on the parent-child relationships
- * is a general graph. 
+ * This class creates a generalization of a DAG structure, called a graph.
  * 
- * It can have cycles, so we can make an ancestor of a node its child.
- * 
- * A DAG ("Directed Acyclic Graph") does not allow cycles but does allow children with 
- * multiple parents.
- * 
- * So, what we attempted to create in the previous program was a DAG.
- * 
- * Here we will try to create a graph with a cycle.
- * 
- * (T/F) In a DAG, there can be multiple paths from the root to a node.
- * 
- * (T/F) A DAG can have cycles.
+ * Look at the code to see what makes it different from the tree and DAG creator.
+ *  
  * 
  */
 
@@ -53,7 +42,29 @@ public class WindowGraphCreator {
 		// No need for a breakpoint this time, we won't be going into the debugger
 		// unless you choose to for the next question.
 	}
-/**
+/*
+ * This class creates a generalization of a DAG structure, called a graph.
+ * 
+ * Look at the code to see what makes it different from the tree and DAG creator.
+ * 
+ * A structure in which there is no restriction on the parent-child relationships
+ * is a general graph. 
+ * 
+ * 
+ * It can have cycles, so we can make an ancestor of a node be its child.
+ * 
+ * A DAG ("Directed Acyclic Graph") does not allow cycles but does allow children with 
+ * multiple parents.
+ * 
+ * 
+ * Here we have created a graph with a cycle.
+ * 
+ * (T/F) In a DAG, there can be multiple paths from the root to a node.
+ * 
+ * (T/F) A DAG can have cycles.
+ * 
+ */
+/*
  * What should happen when the program runs?
  * 
  * What does happen?
@@ -61,10 +72,10 @@ public class WindowGraphCreator {
  * If we create a cycle in a widget structure, Java:
  * 		(a)  removes the cycle
  * 		(b)  ignores the operation that creates a cycle.
- * 		(c)  gives a compile-time error. * 		
+ * 		(c)  gives a compile-time error.  		
  * 		(d)  gives a runtime error.
  * 
- * 		* A compile-time error means that Java is unable to build the code (you get
+ * 		 A compile-time error means that Java is unable to build the code (you get
  * 			something underlined in Eclipse, an error message talking about a
  * 			compilation problem, etc).
  * 		  A runtime error means that the code gets built successfully, but crashes when it runs.

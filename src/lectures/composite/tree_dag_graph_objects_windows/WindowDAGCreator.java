@@ -7,17 +7,10 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 /*
  * The previous program created a tree structure.
- * 
- * A tree structure is one in which 
- * 	1. there is a unique root node.
- * 
- *    2. a node does not have two parents, that is, two nodes do not point to
- * 		   the same child.
- * 
- * In this program we will try to make textField have two parents.
- * 
- * Before you debug this program, try to reason what should happen to 
- * to the display if a textField has two parents.
+ * This class creates what is known as a DAG structure.
+ * Study the program and try to see what is different
+ * about the structure created.
+ *  
  */
 public class WindowDAGCreator {
 	public static void main (String[] args) {
@@ -44,14 +37,40 @@ public class WindowDAGCreator {
 		// set break point below
 		return frame;
 	}
-	
-/**
- * View the output. What did Java do to the text field?
+/*
+ * The previous program created a tree structure.
+ * This class creates what is known as a DAG structure.
+ * Study the program and try to see what is different
+ * about the structure created.
+ * 
+ * A tree structure is one in which 
+ * 	1. there is a unique root node.
+ * 
+ *  2. a node does not have two parents, that is, two nodes do not point to
+ * 		   the same child.
+ *   
+ * A DAG does not have these constraints.
+ * 
+ * 
+ * A path from a node A to another node B is a sequence of parent-child
+ * edges we follow to reach B from A. Not all nodes in a logical structure
+ * are reachable from other nodes.
+ *
+ * (T/F) In a tree, there is a unique path from a root node to a leaf node.
+ * (T/F) In a DAG, there is a unique path from a root node to a leaf node.
+ * 
+ *  
+ */	
+/*
+ * Before you debug this program, try to reason what should happen to 
+ * to the display if a textField has two parents.
+ * 
+ * Debug-Run the program.
+ *  What did Java do to the text field?
  * 
  * Go to the rightPanel and leftPanel variables and see if you can reach
  * the text field from both.
  * 
- * (T/F) In a tree there can be two paths from the root to a node.
  * 
  * If we assign two parents to a widget, Java:
  * 		(a)  displays two copies of the widget, one in the display area of each

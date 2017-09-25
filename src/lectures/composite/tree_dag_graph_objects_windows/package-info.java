@@ -12,8 +12,7 @@
  * intended to be trees can easily become DAGs and graphs.
  * 
  * We will see why trees are easier to handle in two practical situations.
- * 
- *
+ *  
  * 
  * VISIT_INFO
  * 

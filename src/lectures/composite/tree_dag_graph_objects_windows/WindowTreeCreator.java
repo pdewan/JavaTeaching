@@ -6,35 +6,12 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 /**
- * Let us create a logical and physical structure very different from the
+ * This class creates a logical and physical structure very different from the
  * Cartesian Plane - one that teaches you something about how a GUI is 
  * implemented.
  * 
- * This structure is composed of different kinds of "widgets" - 
- * items that can be displayed on the screen and possibly manipulated by the user.
- * 
- * 
- * The widgets used here are a button, a textfield, two panels, a split pane, 
- * and a frame (top level window).
- * 
- * If we want a widget to be displayed in another widget, 
- * then we must make it a child of the latter.
- * 
- * Or conversely, a child of a widget is displayed within the area of the parent
- * widget.
- * 
- * Every displayed widget must have a frame as its ancestor, otherwise it is not 
- * displayed.
- * 
- * In Java, a frame is an instance of the Frame or JFrame classes.
- * 
- * Study the program, and run it in the debug mode, stopping at the break point that
- * you are asked to place.
- * 
- * (T/F) A widget can be displayed only if is a leaf of a widget structure rooted
- * by a frame.
- * 
- * (T/F) A widget is displayed within its parent widget.
+ * Look at the class and understand as much of it as possible on your own
+ * based on intuition.
  *
  */
 public class WindowTreeCreator {
@@ -65,17 +42,53 @@ public class WindowTreeCreator {
 		// set break point at this return statement
 		return frame;
 	}
+/* 
+ * 
+ * The logical structure of this object is composed of different kinds of 
+ * "widgets" - items that can be displayed on the screen and possibly 
+ * manipulated by the user.
+ * 
+ * 
+ * The widgets used here are a button, a textfield, two panels, a split pane, 
+ * and a frame (top level window).
+ * 
+ * If we want a widget to be displayed in another widget, 
+ * then we must make it a child of the latter.
+ * 
+ * A child of a widget is displayed within the area of the parent
+ * widget.
+ * 
+ * Every displayed widget must be a frame or have a frame as 
+ * its ancestor, otherwise it is not displayed.
+ * 
+ * 
+ * In Java, a frame is an instance of the Frame or JFrame classes.
+ * 
+ * A widget is displayed :
+ *    (a) within its parent widget.
+ *    (b) within its child widget.
+ *    (c) anywhere on the screen.
+ * 
+ * Which nodes of the logical structure of a frame can be displayed:
+ *     (a) root (frame)
+ *     (b) interior nodes
+ *     (c) leaf nodes 
+ *  
+ */
 /*
+ * Run the program it in the debug mode, stopping at the break point that
+ * you are asked to place.
  * 
  * When the program stops, verify the containment relationship on the screen 
  * among widgets and their children.
  * 
- * Now verify the parent-child relationship itself by looking in the "Variables" tab
- * in the debugger.
+ * Now verify the parent-child relationship itself by looking in the 
+ * "Variables" tab in the debugger.
  * 
  * Start with the splitPane.
  * 
- * Each of these widgets has an instance variable called "component", which can be expanded 
+ * Each of these widgets has an instance variable called "component",
+ * which can be expanded 
  * to see the (physical) children under "elementData".
  * 
  * Verify that you can reach the text field or button from the splitPane.

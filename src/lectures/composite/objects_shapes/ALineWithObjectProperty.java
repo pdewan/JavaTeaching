@@ -198,7 +198,9 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * Any node that is not a leaf or root is an internal or interior node.
  * 
  * If B is the child of A, and C is a child (or descendant) of B then 
- * B and C are descendants of A and A and B are ancestors of C
+ * B and C are descendants of A and A and B are ancestors of C.
+ * 
+ * Choldren of the same node are called siblings.
  * 
  * To visualize the structure, a parent is connected to a child through a 
  * (directed) line segment called an edge that goes from parent to child. 
