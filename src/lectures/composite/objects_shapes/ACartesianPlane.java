@@ -28,7 +28,7 @@ public class ACartesianPlane implements CartesianPlane {
  * ACartesianPlane has:
  *   a) only primitive components in its physical structure.
  *   b) only object components in its physical structure.
- *   c) both primitive and objct components in its physical structure.
+ *   c) both primitive and object components in its physical structure.
  */
 	
     public ACartesianPlane (int theAxesLength, int theOriginX, int theOriginY ) {    	
@@ -44,10 +44,11 @@ public class ACartesianPlane implements CartesianPlane {
        yLabel = new AStringShape ("Y", toYLabelX(), toYLabelY());
     }
 /*
- * (T/F) The constructor of ACartesianPlane assigns objects to 
- *  object instance variables.
- * (T/F) The constructor of ACartesianPlane initializes
- *  instance variables of the class.  
+ * The constructor of ACartesianPlane:
+ *    (a) does not initialize its object variables.
+ *    (b) assigns its parameters to its object variables.
+ *    (c) creates new instances and assigns them to its object variables.
+ *   
  */
    
     public Line getXAxis() {
@@ -90,15 +91,16 @@ public class ACartesianPlane implements CartesianPlane {
 		yLabel.setY(toYLabelY());
 	}
 /*
- * (T/F) Calling setAxesLength in ACartesianPlane changes the object variable
- * xAxis, that is, assigns a new object to this variable.
- * 
- * (T/F) Calling setAxesLength in ACartesianPlane changes the x variable of the
- * object stored in the xAxis variable. 
+ * Calling setAxesLength in ACartesianPlane, changes the:
+ *   (a) object variable xAxis, that is, 
+ *       assigns a new object to this variable.
+ *   (b) primitive x variable of the existing object stored in the xAxis variable. 
+ *   (c) None of the above.
  *   
  * Calling setAxesLength in ACartesianPlane changes:
  * 		(a)  leaf nodes in the physical structure.
- * 		(b)  object nodes in the physical and logical structure.
+ * 		(b)  object nodes in the physical structure.
+ * 		(c)  None of the above
  */
 	
 	/*
@@ -160,7 +162,7 @@ public class ACartesianPlane implements CartesianPlane {
  * (T/F) XAxis is a stored property of ACartesianPlane, that is, its value
  * is stored in an instance variable.
  * 
- * (T/F) In AtCartesianPlane, each time a getter of an object property is called, 
+ * (T/F) In ACartesianPlane, each time a getter of an object property is called, 
  * a new object is returned.  
  */
 
@@ -169,18 +171,15 @@ public class ACartesianPlane implements CartesianPlane {
  * Run in debug mode and stop at the breakpoint, and step into the getter, 
  * step return, and then step into the setter.
  * 
- * Again look at the logical structure displayed by ObjectEditor and the 
- * physical structure displayed by the debugger.  * 
+ * Look at the physical structure displayed by the debugger. 
  *  
- * Are these the structures you would have predicted?     	
- * 
- * Is the content of the graphics panel predicted?
- * 
  * (T/F) xAxesLength is a leaf variable of ACartesianPlane.
  * 
  * (T/F) xAxis is a leaf variable of ACartesianPlane. 
  * 
- * (T/F) xLabel is a leaf variable of ACartesianPlane.
+ * Look at the logical structure displayed by ObjectEditor.
+ * 
+ * Is the content of the graphics panel predicted?
  *  
  * Is the content of the main panel predicted?
  * 
@@ -201,11 +200,7 @@ public class ACartesianPlane implements CartesianPlane {
  * 
  * Look at the console output. Is it what you would predict.
  *
- * Look at the code in setAxesLength and review your answers about it.
- * 
- *  (T/F)  Calling getXAxis() in ACartesianPlane changes the 
- * composite property, XAxis, that is, returns a new object for this 
- * property.
+ * Look at the code in setAxesLength and getAxis and review your answers about it.
  * 
  * The next example is more concise but also inefficient: 
  * AnInefficientCartesianPlane

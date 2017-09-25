@@ -10,14 +10,18 @@ import bus.uigen.ObjectEditor;
 @StructurePattern(StructurePatternNames.LINE_PATTERN) 
 /**
  *   
- * In all objects we have seen so far, the instance variables and properties
- * were primitive values. Thus, these objects are composed of primitive values.
+ * In all objects we have seen in Praxis or assignments so far, 
+ * the instance variables and properties
+ * were primitive values (or Strings in assignments).Thus, these objects are "composed" of 
+ * primitive values and Strings. None of the component objects themselves had
+ * properties.
  * 
- * This class defines an object that has both a variable and a property of a 
- * non primitive type. 
+ * This class defines an object that has both a variable and a property that is
+ * itself a Bean,
  * 
- * So, we have an object composed of another object, or in other words, we have
- * "object nesting" with a parent/child relationship.
+ * So, we have a Bean composed of another Bean, or in other words, we have
+ * "object nesting" with a parent/child relationship, where the part is called
+ * a child of the containing object.
  * 
  * Yet this is an atomic shape - a line - as the StructurePattern annotation
  * shows.
@@ -67,6 +71,16 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
 		}
 }
 /*
+ * Bean vs non Bean Properties
+ * 
+ * The Bean properties of ALineWithObjectProperty are:
+ *    (a) Width
+ *    (b) Height
+ *    (c) Location
+ *    (d) None of the above
+ * 
+ */
+/*
  * LOGICAL (EXTERNAL) vs. PHYSICAL (INTERNAL) STRUCTURE
  * 
  * We can decompose a physical object based on what is externally visible or
@@ -102,7 +116,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  */
 
 /*
- * VISUALIZING THE TWO STRUCZTURES
+ * VISUALIZING THE TWO STRUCTURES
  * 
  * Execute the Run->Step Into command ((Fn) F5) to step into the getter called
  * and step return back ((Fin) F7).
@@ -116,13 +130,15 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * One is the variable, newHeight, look its value.
  * 
- * The value of newHeight is:
+ * When setHeight is called in ALineWithObjectProperty, the value of newHeight shown
+ * by the debugger is:
  *     (a) 0
- *     (b) the parameter passed by main to the setHeight() method.
+ *     (b) the parameter passed by main to the setHeight() method (INIT_HEIGHT).
+ *     (c) None of the above
  *     
  * The variable newHeight is a:
- *     (a) global variable
- *     (b) local variable 
+ *     (a) local variable created when the method is called and deleted it ends
+ *     (b) global variable persisting between invocations (calls) of the method
  * 
  * The other is the variable, this, which refers to the object 
  * on which the setter is being executed.
@@ -138,8 +154,8 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * Some items are similar (ignoring the case) and some are different.
  * 
- * The structure (tree view) created by ObjectEditor is the logical structure and
- * the one created by the debugger is the physical structure.			
+ * The structure (tree view) created by ObjectEditor is the logical (external) structure and
+ * the one created by the debugger is the physical (internal) structure.			
 
  * As we see in the two structures, names and values are displayed 
  * for primitive components of an object, and expandable names are 
@@ -158,9 +174,10 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * 
  * (T/F) A debugger shows the physical structure of an object.
  * (T/F) ObjectEditor shows the physical structure of an object.
- * The logial structure of an object is its decomposition by its:
+ * 
+ * The logical structure of an object is its decomposition by its:
  *    (a) variables.
- *    (b) properties
+ *    (b) properties.
  * 
  */
 /*
@@ -174,32 +191,47 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  *  
  * A node with no children is a leaf node in the structure.
  * 
- * A non leaf node is a composite node.
+ * A non leaf node is a parent node.
  * 
  * A node with no parent is a root node in the structure.
  * 
  * Any node that is not a leaf or root is an internal or interior node.
  * 
- * If B is the child of A, and C is a child of B then 
+ * If B is the child of A, and C is a child (or descendant) of B then 
  * B and C are descendants of A and A and B are ancestors of C
-
+ * 
  * To visualize the structure, a parent is connected to a child through a 
- * line segment called an edge. The tree view in object editor uses such a visualization.
+ * (directed) line segment called an edge that goes from parent to child. 
+ * Usually the arrow in the segment is not shown as the parent is drawn
+ * above the child.
+ * The tree view in object editor uses such a visualization.
  * The debugger uses indentation to show child relationships. 
+ * 
+ * An edge is a:
+ *   a) directed line segment showing a parent-child relationship.
+ *   b) undirected line segment showing a parent-child relationship.
+ *   c) the set of all leaf nodes.
+ *   d) None of the above.
+ *   
+ * Nodes represent the:
+ *   parent-child relationships among the element compositions in a structure.
+ *   elements themselves.
+ *   None of the above.
+ *   
 
- * Identify the root, a leaf, a composite, and an internal node 
+ * Identify the root, a leaf, a parent, and an internal node 
  * in the two structures.
  * 
- * (T/F) The physical structure of ALineWithObjectProperty has a composite
+ * (T/F) The physical structure of ALineWithObjectProperty has a parent
  * node labeled "location". 
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a root
  * node labeled "this".
  * 
- * (T/F) The physical structure of ALineWithObjectProperty has a composite
+ * (T/F) The physical structure of ALineWithObjectProperty has a parent
  * node labeled "this".
  * 
- * (T/F) The physical structure of ALineWithObjectProperty has a composite
+ * (T/F) The physical structure of ALineWithObjectProperty has a parent
  * node labeled "x".
  * 
  * (T/F) The physical structure of ALineWithObjectProperty has a leaf
@@ -214,10 +246,14 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * Can you explain how each of the two tree views has changed and why?
  * 
  * Do the tree views show the same nodes as previously?
+ *
+ * Does the debugger show the same nodes as previously when you call setLocation?
  * 
- * (T/F) Different instances of the same class can have different physical structures.
+ * (T/F) Different instances of the same class can have different logical structures 
+ * depending on if and what values are assigned to the properties.
  *  
- * (T/F) Different instances of the same class can have different logical structures.
+ * (T/F) Different instances of the same class can have different physical structures 
+ * depending on if and what values are assigned to the variables.
  */
 
 /*
@@ -232,8 +268,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * variables/properties they define.
  * 
  * A non-atomic type is a structured type - these types can be decomposed into
- * more than one component.
- * 
+ * more than one component. 
  *
  * 
  * (T/F) int is an atomic type

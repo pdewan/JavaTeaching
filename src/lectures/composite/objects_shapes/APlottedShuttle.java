@@ -28,10 +28,10 @@ public class APlottedShuttle implements PlottedShuttle  {
 		shuttleImage.setX(toWindowX());
 	}
 	/*
-	 * In a APlotedShttle, setShuttleX() changes:
-	 * 	a) the shuttleX variable
-	 *  b) the x variable of the object assigned to the shuttleImage variable.
-	 *  c) the xAxesLength variable of the object assigned to the cartesianPlane variable.
+	 * In APlotedShttle, setShuttleX() changes:
+	 * 	a) the shuttleX instance variable
+	 *  b) the X property of the object assigned to the shuttleImage instance variable.
+	 *  c) the xAxis property of the object assigned to the cartesianPlane variable.
 	 */
 	public int getShuttleY() {return shuttleY;}
 	public void setShuttleY(int newVal) {
@@ -73,17 +73,30 @@ public class APlottedShuttle implements PlottedShuttle  {
  *   (b) a (non-child) descendant node that represents the X axis.
  *   (c) None of the above.
  *   
- *  The  logical and physical structure of APlottedShuttle has:
+ *  The logical and physical structure of APlottedShuttle has:
  *   (a) a child node that represents the shuttle.
  *   (b) a (non-child) descendant node that represents the shuttle.
  *   (c) None of the above. 
  *   
  *  The logical and physical structure of APlottedShuttle has:
- *   (a) a child node that represents the cartesian plane
+ *   (a) a child node that represents the Cartesian plane
  *   (b) a (non-child) descendant node that represents the cartesian plane.
  *   (c) None of the above.
  * 
  * (T/F) APlottedShuttle reuses the code in ACartesianPlane.
  * 
+ * (T/F) Every atomic graphics object (line, image, text) displayed in the 
+ *     graphics window created for an instance of ACartesianPlane is a 
+ *     (physical or logical) child of the instance.
+ * 
+ * (T/F) Every atomic graphics object (line, image, text) displayed in the 
+ *     graphics window created for an instance of APlottedShuttle  is  
+ *     (physical or logical) child of the instance.
+ *     
+ * If our requirements specify only the root and leaf nodes of a physical structure,
+ * reusability is increased by making each leaf node a:
+ * 	   (a) child of the root.
+ * 	   (b) a (direct or indiect) descendant of the object.
+ *  
  */
 

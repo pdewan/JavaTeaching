@@ -21,7 +21,7 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * AnInefficientCartesianPlane has:
  *   a) only primitive components in its physical structure.
  *   b) only object components in its physical structure.
- *   c) both primitive and objct components in its physical structure.
+ *   c) both primitive and object components in its physical structure.
  */
 	/*
 	 * Does not instantiate components in the constructor
@@ -32,10 +32,9 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
     	originY = theOriginY;      
     }  
 /*
- * (T/F) The constructor of AnInefficientCartesianPlane assigns objects to 
- *  object instance variables.
- * (T/F) The constructor of AnInefficientCartesianPlane initializes
- *  all instance variables of the class.  
+ * The constructor of AnInefficientCartesianPlane:
+ *   (a) assigns objects to instance variables.
+ *   (b) initializes all instance variables of the class.  
  */
     
     /**
@@ -70,7 +69,7 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  *   
  * Calling setAxesLength in ACartesianPlane changes:
  * 		(a)  leaf nodes in the physical structure.
- * 		(b)  object nodes in the physical and logical structure.
+ * 		(b)  object nodes in the physical structure.
  */
 	protected int toXAxisX() {
     	return originX - axesLength/2;
@@ -128,9 +127,7 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
  * 
  * (T/F) ACartesianPlane and AnInefficientCartesianPlane have the same
  * physical structure.
- * 
- * (T/F) In AnInefficientCartesianPlane, each time a getter of an object property is called, a new object is
- * returned. 
+ *
  *  
  */
 /*
