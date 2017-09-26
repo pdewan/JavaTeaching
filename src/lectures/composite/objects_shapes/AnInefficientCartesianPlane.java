@@ -67,7 +67,7 @@ public class AnInefficientCartesianPlane implements CartesianPlane {
 	}
 /* 
  *   
- * Calling setAxesLength in ACartesianPlane changes:
+ * Calling setAxesLength in AnInefficientCartesianPlane  changes:
  * 		(a)  leaf nodes in the physical structure.
  * 		(b)  object nodes in the physical structure.
  */

@@ -94,7 +94,7 @@ public class ACartesianPlane implements CartesianPlane {
  * Calling setAxesLength in ACartesianPlane, changes the:
  *   (a) object variable xAxis, that is, 
  *       assigns a new object to this variable.
- *   (b) primitive x variable of the existing object stored in the xAxis variable. 
+ *   (b) primitive X property of the existing object stored in the xAxis variable. 
  *   (c) None of the above.
  *   
  * Calling setAxesLength in ACartesianPlane changes:

@@ -191,7 +191,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  *  
  * A node with no children is a leaf node in the structure.
  * 
- * A non leaf node is a parent node.
+ * A non leaf node is a parent or structured node.
  * 
  * A node with no parent is a root node in the structure.
  * 
@@ -200,7 +200,20 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * If B is the child of A, and C is a child (or descendant) of B then 
  * B and C are descendants of A and A and B are ancestors of C.
  * 
- * Choldren of the same node are called siblings.
+ * A path from an ancestor to a descendant is a series of  connected edges
+ * (representing parent-child edges)leading from the ancestor to the descendant.
+ * 
+ *  The length of the path is the number of edges in the path.
+ * 
+ * A node is considered to have a path to itself of length 0.
+ *
+ * (T/F) In (logical or physical) structure with a unique root, a path exists from 
+ *  the root to every other node.
+ *  
+ *  (T/F) In (logical or physical) structure with a unique root, a path exists from 
+ *  each parent node to every other node.
+ * 
+ * Children of the same node are called siblings.
  * 
  * To visualize the structure, a parent is connected to a child through a 
  * (directed) line segment called an edge that goes from parent to child. 
