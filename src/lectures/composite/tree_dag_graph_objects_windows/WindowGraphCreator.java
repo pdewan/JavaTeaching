@@ -59,8 +59,7 @@ public class WindowGraphCreator {
  * 
  * Here we have created a graph with a cycle.
  * 
- * (T/F) In a DAG, there can be multiple paths from the root to a node.
- * 
+ * (T/F) A graph can have cycles.
  * (T/F) A DAG can have cycles.
  * 
  */

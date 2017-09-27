@@ -64,13 +64,13 @@ public class WindowTreeCreator {
  * 
  * In Java, a frame is an instance of the Frame or JFrame classes.
  * 
- * A widget is displayed :
+ * A widget is displayed:
  *    (a) within its parent widget.
  *    (b) within its child widget.
  *    (c) anywhere on the screen.
  * 
- * Which nodes of the logical structure of a frame can be displayed:
- *     (a) root (frame)
+ * Which nodes of the logical structure of a frame can be displayed?
+ *     (a) root (the frame)
  *     (b) interior nodes
  *     (c) leaf nodes 
  *  

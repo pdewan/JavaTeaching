@@ -183,6 +183,8 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
  * widget tree created by ObjectEditor to display this object. You'll see
  * split panes, panels, and other components similar to the ones you saw in the
  * previous classes.
+ * 
+ * THE END
  *  
  */
 	

@@ -47,7 +47,7 @@ public class WindowDAGCreator {
  * 	1. there is a unique root node.
  * 
  *  2. a node does not have two parents, that is, two nodes do not point to
- * 		   the same child.
+ * 	   the same child.
  *   
  * A DAG does not have these constraints.
  * 
@@ -55,9 +55,12 @@ public class WindowDAGCreator {
  * A path from a node A to another node B is a sequence of parent-child
  * edges we follow to reach B from A. Not all nodes in a logical structure
  * are reachable from other nodes.
+ * 
+ * (T/F) A tree can have multiple roots.
+ * (T/F) A DAG can have multiple roots.
  *
- * (T/F) In a tree, there is a unique path from a root node to a leaf node.
- * (T/F) In a DAG, there is a unique path from a root node to a leaf node.
+ * (T/F) In a tree, there is always a unique path from an ancestor node to a descendant node.
+ * (T/F) In a DAG, there is always  unique path from an ancestor node to a descendant node.
  * 
  *  
  */	
