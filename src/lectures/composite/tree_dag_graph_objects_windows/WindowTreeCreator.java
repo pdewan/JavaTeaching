@@ -45,8 +45,11 @@ public class WindowTreeCreator {
 /* 
  * 
  * The logical structure of this object is composed of different kinds of 
- * "widgets" - items that can be displayed on the screen and possibly 
- * manipulated by the user.
+ * "widgets" - objects that represent buttons, textboxes and other images 
+ * drawn in rectangles (windows) on the screen.
+ * 
+ *  Widgets may be readonly by the user (e.g. labels) or can be
+ *  manipulated by the user (e.g. textboxed).
  * 
  * 
  * The widgets used here are a button, a textfield, two panels, a split pane, 
@@ -64,6 +67,17 @@ public class WindowTreeCreator {
  * 
  * In Java, a frame is an instance of the Frame or JFrame classes.
  * 
+ * An example of a Java widget is a:
+ * 		a) String
+ * 		b) JTextField
+ * 		c) int
+ * 
+ * A Java widget is:
+ *   (a) an arbitrary Java object 	
+ *   (b) a Java object that represents an image drawn in a rectangular area of 
+ *        the screen. 	
+*    (c) a Java object that represents a 3-D physical object in the real-world
+*    
  * A widget is displayed:
  *    (a) within its parent widget.
  *    (b) within its child widget.
