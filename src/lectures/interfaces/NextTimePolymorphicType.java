@@ -222,6 +222,8 @@ public static void casting() {
  *    
  *(T/F) If class C implements interface I, then a variable of type I can be 
 		assigned a variable of type C. 
+ *(T/F) If class C implements interface I, then a variable of type C can be 
+		assigned a variable of type I. 
  * A polymorphic method is one that declares at least parameter that 
  * is a polymorphic variable.
  * 	  
@@ -243,6 +245,6 @@ public static void casting() {
  *    (b) constrain or specify the nature of classes that implement them.
  *    (c) provide an abstract description of the classes that implement them.
  *    (d) none of the above.
- * (T/F) Every class (with instance methods) should implement an interface. * 
+ * (T/F) Every class (with one or more instance methods) should implement an interface. * 
  */	
 }
