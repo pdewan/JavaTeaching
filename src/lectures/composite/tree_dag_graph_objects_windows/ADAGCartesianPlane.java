@@ -171,7 +171,7 @@ public class ADAGCartesianPlane implements DAGCartesianPlane {
  * Do the views, specially the draw/graphics view, make more sense now?
  * 
  * (T/F) Annotations can be used to ask ObjectEditor to ignore certain
- * nodes when displaying a structured object.
+ * nodes in the logical structure of an object.
  * 
  * Many of you will want to create data structures that are Graphs or DAGs for
  * convenience point of view. 
