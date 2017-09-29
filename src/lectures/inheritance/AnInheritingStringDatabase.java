@@ -1,46 +1,17 @@
 package lectures.inheritance;
 
 /**
- * Again first study and run the program and  try to understand what 
- * it does on your own.
- * 
- * This is like a ABaseStringHistory except that it also:
- * 	1) allows previously added elements to be deleted.
- * 	2) provides an operation to determine if an element exists
- * 		in the collection.
- * 	3) provides a clear operation to remove all elements.
- * 
- * Like ABaseStringHistory it uses an array to store the elements.
- * 
- * Deletion involves:
- * 	1) finding the index of the element to be removed,
- *   	2) shifting the elements after the deleted element up so that the filled and
- *  	unfilled elements of the array are separate sections of the array.
- *  
- * As this class extends the functionality and implementation of 
- * ABaseStringStringHistory, it will be nice if we do not have to duplicate
- * the implementation of ABaseStringStringHistory. 
- * 
- * Object-oriented languages provide inheritance to avoid such duplication.
- * 
- * Object-based programming involves declaring and instantiating classes.
- * 
- * Object-oriented programming involves also using inheritance.
- * 
- * So, we are going from object-based to object-oriented programming.
- * 
- * In Java, it involves using the "extends" keyword used below.
+ * This class uses inheritance by extending the previous class.
+ * In Java, it involves using the "extends" keyword used below. 
  * 
  * If class/interface C extends class/interface E, then E is a supertype of C 
  * and C is a subtype of E.
  * 
- * 
- * If C and E are classes, then we can use the terms superclass and subclass 
- * also for supertype and subtype.
- * 
  * A superclass is also sometimes called a base class.
- *  
- *
+ * 
+ * Again first study and run the program and try to understand what 
+ * it does on your own.  
+ * 
  */
 
 public class AnInheritingStringDatabase 
@@ -48,7 +19,7 @@ public class AnInheritingStringDatabase
 	implements InheritingStringDatabase {
 
 /*
- * Re-declaration of inherited size, uncomment when asked later
+ * Re-declaration of size of base class, uncomment when asked later
  */
 //	protected int size = 0;
 	public AnInheritingStringDatabase() {
@@ -58,7 +29,9 @@ public class AnInheritingStringDatabase
 //		super(2);
 //		System.out.println("AnInheritingStingDatabase constructor called");
 	}
-
+/*
+ * refers to variable of extended class: size
+ */
 	public void clear() {
 //		super(2);
 	    size = 0;
@@ -67,7 +40,9 @@ public class AnInheritingStringDatabase
 	public void removeElement(String element) {
 		shiftUp(indexOf(element));
 	}
-
+	/*
+	 * refers to variables of extended class: size and contents
+	 */
 	void shiftUp(int startIndex) {
 		if (startIndex < size){
 		    for (int index = startIndex; index + 1 < size; index++) {
@@ -76,6 +51,16 @@ public class AnInheritingStringDatabase
 		    size--;
 		}
 	}
+/* 
+ * Element deletion involves:
+ * 	1) finding the index of the element to be removed,
+ *  2) shifting the elements after the deleted element up so that the filled and
+ *  	unfilled elements of the array are separate sections of the array.
+ *  3) Assigning the null value to the element at the deleted index.
+ *  
+ 
+*/
+	
 	
 	int indexOf(String element) {
 	    int index = 0;
@@ -90,8 +75,7 @@ public class AnInheritingStringDatabase
     
     public boolean member(String element) {
         return indexOf (element) < size;
-    }
-   
+    }   
    
     public static void main (String[] args) {
     	InheritingStringDatabase stringDatabase = new AnInheritingStringDatabase();
@@ -112,9 +96,15 @@ public class AnInheritingStringDatabase
 		aStringDatabase.removeElement(EXAMPLE_ITEM); // removing a second time
 		System.out.println(aStringDatabase);  
     }
+
 /*
- * IMPLEMENTING MODIFIABLE COLLECTION
+ *  MODIFIABLE COLLECTION
  * 
+ * This class:
+ * 	1) allows previously added elements to be deleted.
+ * 	2) provides an operation to determine if an element exists
+ * 		in the collection.
+ * 	3) provides a clear operation to remove all elements.
  *  Study the main method and run it.
  * 
  * Adding an item a second time to an instance of AnInheritingStringDatabase
@@ -149,9 +139,75 @@ public class AnInheritingStringDatabase
  * 
  * (T/F) The clear() method uses removeElement() to remove the elements in the 
  * database.
+ */
+/* 
  * 
+ * When a class (this one) conceptually extends the functionality and 
+ * implementation of another class (e.g. ABaseStringStringHistory), it is nice
+ * if we do not have to physically duplicate the functionality of the
+ * second class (ABaseStringStringHistory), by physically typing
+ * its code. 
+ * 
+ * Object-oriented languages provide inheritance to avoid such duplication.
+ * 
+ * Object-based programming involves declaring and instantiating classes.
+ * 
+ * Object-oriented programming involves also using inheritance.
+ * 
+ * So, with inheritance are going from object-based to object-oriented programming.
+ * 
+ * This is like a ABaseStringHistory except that it also:
+ * 	1) allows previously added elements to be deleted.
+ * 	2) provides an operation to determine if an element exists
+ * 		in the collection.
+ * 	3) provides a clear operation to remove all elements.
+ * 
+ * Like ABaseStringHistory it uses an array to store the elements.
+ * 
+ 
+ *  
+ * As this class extends the functionality and implementation of 
+ * ABaseStringStringHistory, it will be nice if we do not have to duplicate
+ * the implementation of ABaseStringStringHistory.    
+ *
+ */
+/*
  * 
  * EXTENDING INTERFACES AND CLASSES
+ * /* 
+ * 
+ * When a class (this one) conceptually extends the functionality and 
+ * implementation of another class (e.g. ABaseStringStringHistory), it is nice
+ * if we do not have to physically duplicate the functionality of the
+ * second class (ABaseStringStringHistory), by physically typing
+ * its code. 
+ * 
+ * Object-oriented languages provide inheritance to avoid such duplication.
+ * 
+ * Object-based programming involves declaring and instantiating classes.
+ * 
+ * Object-oriented programming involves also using inheritance.
+ * 
+ * So, with inheritance are going from object-based to object-oriented programming.
+ * 
+ * This is like a ABaseStringHistory except that it also:
+ * 	1) allows previously added elements to be deleted.
+ * 	2) provides an operation to determine if an element exists
+ * 		in the collection.
+ * 	3) provides a clear operation to remove all elements.
+ * 
+ * Like ABaseStringHistory it uses an array to store the elements.
+ * 
+ * Deletion involves:
+ * 	1) finding the index of the element to be removed,
+ *   	2) shifting the elements after the deleted element up so that the filled and
+ *  	unfilled elements of the array are separate sections of the array.
+ *  
+ * As this class extends the functionality and implementation of 
+ * ABaseStringStringHistory, it will be nice if we do not have to duplicate
+ * the implementation of ABaseStringStringHistory.    
+ *
+ 
  * 
  * Look at the operations performed on aStringDatabase in the main program.
  * 
