@@ -184,7 +184,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  *  in the main method give an error?
  *  
  * (T/F) A class is implicitly considered to implement the interfaces implemented by its superclasses.
- * (T/F) A subclsas can control the nature of inheritance by disabling the invocation
+ * (T/F) A subclass can control the nature of inheritance by disabling the invocation
  *  of an inherited method declared in an interface of a superclass.
  * 
  */
