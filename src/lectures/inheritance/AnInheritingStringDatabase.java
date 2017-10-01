@@ -228,7 +228,6 @@ public class AnInheritingStringDatabase
  * In which interface is the definition found?  Is it the same as the interface
  * of this class - InheritingStringDatabase? If not, what is the relationship
  * between the two interfaces? You may need to go to InheritingStringDatabase to see. 
- * 
  *  
  * 
  * Go to the declaration of BaseStringHistory.
@@ -248,7 +247,7 @@ public class AnInheritingStringDatabase
  * 
  * Uncomment the line you just commented out. Does the problem go away?
  * 
- * If interface I extends interface J, and class C implements I, then A must
+ * If interface I extends interface J, and class C implements I, then C must
  * implement the methods:
  * 	(a) declared only in I.
  * 	(b) declared only in J.
@@ -259,7 +258,6 @@ public class AnInheritingStringDatabase
  * 	(a) defined only in C.
  * 	(b) defined only in E.
  * 	(c) defined in both C and E.
- *
  * 
  */
  /*

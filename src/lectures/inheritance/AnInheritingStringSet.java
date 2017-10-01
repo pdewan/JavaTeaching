@@ -3,7 +3,9 @@ package lectures.inheritance;
  * This class illustrates the concept of sets, method overriding.
  */
 public class AnInheritingStringSet extends AnInheritingStringDatabase // extending an extended class
-	implements InheritingStringDatabase { // same interface as implemented by the superclass, need not be explicitly mentioned
+    // comment out the next line when asked
+	implements InheritingStringDatabase // same interface as implemented by the superclass, need not be explicitly mentioned
+	{ 
 /*
  * Since AnInheritingStringSet extends AnInheritingStringDatabase,
  * and AnInheritingStringDatabase extends ABaseStringHistory,
@@ -36,8 +38,6 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * (T/F) If class C1 implementing I1 is a subclass of C implementing I2, then I2
  * must be a subtype of I1.	
  */
-
-	
 	
 	public AnInheritingStringSet() {
 		super(); 
@@ -160,8 +160,13 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * (b) gives a runtime error.
  * (c) calls all implementations of m() - the one i A and the ones in A's superclasses
  * (d) calls the implementation of m() in the furthest superclass of A.
- * (e) calls the implementation m() in the closes superclass of A.
+ * (e) calls the implementation m() in the closest superclass of A.
  * (f) calls the implementation of m() in A.
+ * 
+ * (T/F) A subclsas can control the nature of inheritance by overriding an
+ * inherited method, that is, replacing the implementation of an inherited with
+ * its own one.
+ * 
  * 
  * If O is an instance of A, and a method with header m() is implemented in
  * A and one or more of its superclasses, then it is *not* possible to call the
@@ -171,7 +176,19 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * (b) any superclass of A.
  * (c) none of the above
  * 
+ * 
+ * Comment out the implements clause in this class. Does the line:
+ * 
+ *    InheritingStringDatabase aStringSet = new AnInheritingStringSet();
+ *    
+ *  in the main method give an error?
+ *  
+ * (T/F) A class is implicitly considered to implement the interfaces implemented by its superclasses.
+ * (T/F) A subclsas can control the nature of inheritance by disabling the invocation
+ *  of an inherited method declared in an interface of a superclass.
+ * 
  */
+
 /*
  * ROOT SUPERCLASS
  * 
