@@ -33,10 +33,10 @@ public class ABaseStringHistory implements BaseStringHistory {
 /*
  * We will uncomment other variations of this later
  */
-     public int uselessVariable = 0;
-//   private int uselessVariable = 0;
-//    protected int uselessVariable = 0;
-//    int uselessVariable = 0;
+    public int uselessVariable = 0;
+//  private int uselessVariable = 0;
+//  protected int uselessVariable = 0;
+//  int uselessVariable = 0;
      
 	public ABaseStringHistory() {
 		uselessVariable = 1;
@@ -45,7 +45,7 @@ public class ABaseStringHistory implements BaseStringHistory {
 	
 	public ABaseStringHistory(int someParameter) {
 		System.out.println("ABaseStringHistory Single-Parameter Constructor Called");
-   }
+    }
 	
 	/*
 	 * Number of filled elements
@@ -70,6 +70,19 @@ public class ABaseStringHistory implements BaseStringHistory {
 			size++;
 		}
 	} 
+/*
+ * (In a non-full history) the addElement() method of ABaseStringHistory assigns 
+ * to a component of the underlying array, contents,  at the:
+ *    (a) first index of the array (0)
+ *    (b) the last index of the array (contents.size(0 - 1))
+ *    (c) the first unfilled index of the array (size)
+ *  
+ * Adding a new element to a full history:
+ *    (a) replaces the last element of the array with the new element.
+ *    (b) replaces the first element of the array with the new element.
+ *    (c) does not add the new element, and prints an error message
+ * 
+ */
 	@Override
 	public String toString() {
 		String retVal = "";
@@ -81,21 +94,26 @@ public class ABaseStringHistory implements BaseStringHistory {
 		return retVal;
 //		return super.toString();
 
-	}	
+	}
+/*
+ * The toString() method returns a String displaying:
+ *    (a) all elements of the underlying array.
+ *    (b) all filled elements of the underlying array.
+ */
+	final static String EXAMPLE_ITEM = "James Dean";
 
-	public static void main (String[] args) {
-		BaseStringHistory aStringHistory = new ABaseStringHistory();
-		aStringHistory.addElement("James Dean");
-		System.out.println(aStringHistory.size());
-		System.out.println(aStringHistory);
-		/*
+    protected static void manipulateHistory(BaseStringHistory aStringHistory) {
+    	/*
 		 set break point below
 		 */
-		aStringHistory.addElement("Joe Doe");
-		/*
-		 * If aStringHistory was an array, we would say aStringHistory.length
-		 * rather than aStringHistory.size()
-		 */
+    	aStringHistory.addElement(EXAMPLE_ITEM);     	
+    	aStringHistory.addElement(EXAMPLE_ITEM); //adding item a second time
+	 }
+	public static void main (String[] args) {
+		BaseStringHistory aStringHistory = new ABaseStringHistory();
+		manipulateHistory(aStringHistory);
+		System.out.println(aStringHistory.size());
+		System.out.println(aStringHistory);		
 		System.out.println (aStringHistory.size());
 		System.out.println(aStringHistory);	
 		ObjectEditor.edit(aStringHistory);		
@@ -106,7 +124,7 @@ public class ABaseStringHistory implements BaseStringHistory {
  * it allows us to go from fixed-length collection to a variable-length list
  * by defining our own type.
  * 
- * Answer the following questions based on your understanding
+ * Answer the following general questions about histories based on your understanding
  * of the English term "history" and the fact that this is an example
  * of a history.
  * 
@@ -117,15 +135,15 @@ public class ABaseStringHistory implements BaseStringHistory {
  * The array has filled and unfilled elements, and the external world
  * sees the filled elements as the variable-size array.
  * 
- * As with strings, We do not access the elements using array syntax, 
+ * As with strings, we do not access the elements using array syntax, 
  * since this class is defined by us and not understood by the language.
  * 
  * (T/F) A history has a variable external size, that is, public methods
  * of the object define a variable-size collection.
  * 
- * (T/F) A history implemented using a single array has a changeable internal size, that
- * is, the instance variables point to objects that can grow larger
- * over the lifetime of the history.
+ * (T/F) A history implemented using a single array object has a changeable 
+ * internal size, that is, the instance variables point to objects that can grow 
+ * larger over the lifetime of the history.
  * 
  * (T/F) We can define our own collection type that uses array syntax to 
  * manipulate the elements of the collection.  
@@ -148,7 +166,7 @@ public class ABaseStringHistory implements BaseStringHistory {
  * 
  * Also look at the value of the size variable.
  * 
- * Step over the call to addElement() method.
+ * Step over the first call to addElement() method.
  * 
  * Examine the two variables in the same way.
  * 
@@ -165,8 +183,16 @@ public class ABaseStringHistory implements BaseStringHistory {
  * 
  * The "size" method in ABaseStringHistory returns:
  * 	(a) the length of the array object holding the history elements.
- * 	(b) the number of filled elements in the history.
- * 	(c) the number of unfilled elements in the history.
+ * 	(b) the number of filled elements in the array.
+ * 	(c) the number of unfilled elements in the array.
+ * 
+ * Step over the second call to addElement()
+ * 
+ * Adding an item a second time to an instance of AnInheritingStringDatabase
+ *  results in:  
+ * 	(a) an error.
+ * 	(b) the addition being ignored.
+ * 	(c) a duplicate item.
  * 
  */
 /*

@@ -4,45 +4,62 @@ package lectures.inheritance;
  * This class uses inheritance by extending the previous class.
  * In Java, it involves using the "extends" keyword used below. 
  * 
- * If class/interface C extends class/interface E, then E is a supertype of C 
- * and C is a subtype of E.
- * 
- * A superclass is also sometimes called a base class.
+ * It also shows how one can create a modifiable collection.
  * 
  * Again first study and run the program and try to understand what 
  * it does on your own.  
- * 
  */
 
 public class AnInheritingStringDatabase 
 	extends ABaseStringHistory // use of keyword "extends""
 	implements InheritingStringDatabase {
-
+/*
+ * Since AnInheritingStringDatabase extends ABaseStringHistory 
+ * AnInheritingStringDatabase is a subclass/subtype of ABaseStringHistory
+ * ABaseStringHistory is a base class/superclass/supertype of
+ * AnInheritingStringDatabase.
+ * 
+ * Which of the following is consistent with the above statements.
+ *
+ * If class A extends class B:
+ *     (a) A is a superclass of B.
+ *     (b) B is a supertype of A.
+ *     (c) A is a subclass of B.
+ *     (d) B is a base class of A.
+ */
+/*
+ * Go to the interface of this class, InheritingStringDatabase and answer the
+ * questions there.
+ * 
+ * (T/F) If class C1 implementing I1 is a subclass of C implementing I2, then I2
+ * can be a subtype of I1.	
 /*
  * Re-declaration of size of base class, uncomment when asked later
  */
 //	protected int size = 0;
+	protected int anotherUselessVariable = uselessVariable - 1;
+	
 	public AnInheritingStringDatabase() {
 		super();
 //		super(2);
 		uselessVariable = 2;
+		anotherUselessVariable = 1;
 //		super(2);
 //		System.out.println("AnInheritingStingDatabase constructor called");
 	}
+	
 /*
- * refers to variable of extended class: size
+ * Comment and uncomment when asked in the next class
  */
-	public void clear() {
-//		super(2);
-	    size = 0;
-	}
-
+//	@Override
+//	public void addElement(String element) {
+//		super.addElement(element);
+//	}
+	
 	public void removeElement(String element) {
 		shiftUp(indexOf(element));
 	}
-	/*
-	 * refers to variables of extended class: size and contents
-	 */
+	
 	void shiftUp(int startIndex) {
 		if (startIndex < size){
 		    for (int index = startIndex; index + 1 < size; index++) {
@@ -50,41 +67,88 @@ public class AnInheritingStringDatabase
 		    }
 		    size--;
 		}
-	}
+	}	
 /* 
- * Element deletion involves:
+ * Click on the reference to the instance variables (in blue) and press 
+ * F3 (ctrl/command-click). In which class is the declaration found?    
+ * 
+ * shiftUp in AnInheritingStringDatabse refers to instance variables declared 
+ * in class:
+ *    (a) the class itself, AnInheritingStringDatabase
+ *    (b) its superclass ABaseStringHistory
+ *    
+ * (T/F) It is possible for a class to access and modify variables declared in 
+ * its superclass.
+ * 
+ * Element removal involves:
  * 	1) finding the index of the element to be removed,
  *  2) shifting the elements after the deleted element up so that the filled and
  *  	unfilled elements of the array are separate sections of the array.
- *  3) Assigning the null value to the element at the deleted index.
- *  
- 
+ *  3) Assigning the null value to the element at the deleted index so that the
+ *  filled and unfilled elements are not separate sections of the array.  
 */
-	
-	
-	int indexOf(String element) {
+
+	protected int indexOf(String element) {
 	    int index = 0;
 	    while ((index < size) && !element.equals(contents[index])) {
 	        index++;
 	    }
 	    // Most implementations will count down and give a negative result in case 
-		 // of failed search. Our implementation is different because of the way it is
-	    // used in removeElement().
-		    return index; 
-		}    
+		// of failed search. 
+		return index; 
+	}  
+/*
+ * if indexOf(element) cannot find element, it returns:
+ *    (a) 0
+ *    (b) -1
+ *    (c) the number of filled elements (size) in the underlying array
+ *    (c) the size of the underlying array
+ *    
+ * Assuming O is at position I in the array, indexOf(O), searches (examines):
+ * 	  (a) only the first element of the array.
+ * 	  (b) only the last element of the array.
+ * 	  (c) all elements of the array * 
+ * 	  (d) none of the above.
+ *    
+ * The method indexOf(element) of AnInheritingStringDatabase is called by:
+ *    (a) no public method of AnInheritingStringDatabase.
+ *    (b) exactly one public method of AnInheritingStringDatabase
+ *    (c) more than one public method of AnInheritingStringDatabase.
+ *    
+ *  The  method indexOf(element) is a:
+ *    (a) part of the external (public) behavior AnInheritingStringDatabase
+ *    (b) reusable piece of code. 
+ */	
+
+     public void clear() {
+//			super(2);
+		    size = 0;
+	}
+/*
+ * The clear() method:
+ * 	 (a) uses removeElement() to remove the elements in the database.
+ *   (b) sets all elements in the underlying array to null.
+ *   (c) changes the value of the variable that keeps track of the number of
+ *    filled elements in the underlying array.
+ *   (d) none of the above
+ */
     
     public boolean member(String element) {
         return indexOf (element) < size;
-    }   
-   
-    public static void main (String[] args) {
-    	InheritingStringDatabase stringDatabase = new AnInheritingStringDatabase();
-    	manipulateDatabase(stringDatabase); 	
-    }
-    public static void manipulateDatabase(InheritingStringDatabase aStringDatabase) {
-    	final String EXAMPLE_ITEM = "James Dean";
-    	aStringDatabase.addElement(EXAMPLE_ITEM);    	
-    	aStringDatabase.addElement(EXAMPLE_ITEM); //adding item a second time
+    }    
+/* 
+ * The method member(element) in AnInheritingStringDatabase:
+ *   (a) adds its argument (element) to the database.
+ *   (b) determines if its argument exists in the database
+ *   (c) determines if its argument can be added to the database
+ *   
+ *  (T/F) The instance method member(element) of AnInheritingStringDatabase 
+ *  calls a method  in the superclass.
+ *       
+ */
+    
+    protected static void manipulateDatabase(InheritingStringDatabase aStringDatabase) {
+    	manipulateHistory(aStringDatabase);
 		System.out.println(aStringDatabase.member(EXAMPLE_ITEM)); 
 		System.out.println(aStringDatabase);
 		/*
@@ -96,125 +160,60 @@ public class AnInheritingStringDatabase
 		aStringDatabase.removeElement(EXAMPLE_ITEM); // removing a second time
 		System.out.println(aStringDatabase);  
     }
-
+    
 /*
- *  MODIFIABLE COLLECTION
+ * A target of a (class) instance method is the (class) instance on which the 
+ * method is invoked.
  * 
- * This class:
- * 	1) allows previously added elements to be deleted.
- * 	2) provides an operation to determine if an element exists
- * 		in the collection.
- * 	3) provides a clear operation to remove all elements.
- *  Study the main method and run it.
+ * (T/F) The static method manipulateDatabase() calls a method declared in the superclass
+ * without explicitly specifying the target of the class.  
+ *     
+ */
+   
+    public static void main (String[] args) {
+    	InheritingStringDatabase stringDatabase = new AnInheritingStringDatabase();
+    	manipulateDatabase(stringDatabase); 	
+    }
+   
+
+/*  
+ * PHYSICAL STRUCTURE
  * 
- * Adding an item a second time to an instance of AnInheritingStringDatabase
- * results in:  
- * 	(a) an exception.
- * 	(b) the addition being ignored.
- * 	(c) a duplicate item.
+ * Study the main method and run it.
+ *
+ * Now set break point at the specified location. 
  * 
- * Now set break point at the specified location in main. 
+ * Examine the the size and contents variable.
  * 
- * Examine the the size and contents variable (defined the superclass)
- * of aStringDatabase.
- * 
- * Step over the statement (F6) and examine the two variables again. If you find
- * something surprising, it will be made clear once you look at indexOf().
+ * (T/F) The physical structure of AnInheritingStringDatabase (shown by the 
+ * debugger) includes variables declared in the superclass.
  * 
  * (T/F) If a is an instance of C, and C extends class E, then a has a copy of
  * the instance variables defined in E.
  * 
+ * Step over the statement (F6) and examine the two variables again. If you find
+ * something surprising, it will be made clear once you look at indexOf().
+ * 
  * (T/F) Assuming O is at position I in the array, removeElement(O)
- * 	assigns the null value at position I in the array inside 
- * 	AnInheritingStringDatabase.
- * 
- * Study the code of indexOf() and clear().
- * 
- * Assuming O is at position I in the array, indexOf(O), searches (examines):
- * 	(a) only the first element of the array.
- * 	(b) only the last element of the array.
- * 	(c) all elements of the array
- * 	(d) none of the above.
- * 
- * 
- * (T/F) The clear() method uses removeElement() to remove the elements in the 
- * database.
- */
-/* 
- * 
- * When a class (this one) conceptually extends the functionality and 
- * implementation of another class (e.g. ABaseStringStringHistory), it is nice
- * if we do not have to physically duplicate the functionality of the
- * second class (ABaseStringStringHistory), by physically typing
- * its code. 
- * 
- * Object-oriented languages provide inheritance to avoid such duplication.
- * 
- * Object-based programming involves declaring and instantiating classes.
- * 
- * Object-oriented programming involves also using inheritance.
- * 
- * So, with inheritance are going from object-based to object-oriented programming.
- * 
- * This is like a ABaseStringHistory except that it also:
- * 	1) allows previously added elements to be deleted.
- * 	2) provides an operation to determine if an element exists
- * 		in the collection.
- * 	3) provides a clear operation to remove all elements.
- * 
- * Like ABaseStringHistory it uses an array to store the elements.
- * 
- 
+ * 	assigns the null value at position I in the array.
  *  
- * As this class extends the functionality and implementation of 
- * ABaseStringStringHistory, it will be nice if we do not have to duplicate
- * the implementation of ABaseStringStringHistory.    
- *
  */
 /*
+ *  KIND OF COLLECTION
  * 
- * EXTENDING INTERFACES AND CLASSES
- * /* 
- * 
- * When a class (this one) conceptually extends the functionality and 
- * implementation of another class (e.g. ABaseStringStringHistory), it is nice
- * if we do not have to physically duplicate the functionality of the
- * second class (ABaseStringStringHistory), by physically typing
- * its code. 
- * 
- * Object-oriented languages provide inheritance to avoid such duplication.
- * 
- * Object-based programming involves declaring and instantiating classes.
- * 
- * Object-oriented programming involves also using inheritance.
- * 
- * So, with inheritance are going from object-based to object-oriented programming.
- * 
- * This is like a ABaseStringHistory except that it also:
- * 	1) allows previously added elements to be deleted.
- * 	2) provides an operation to determine if an element exists
+ * This collection class:
+ *  a) supports addition of elements
+ * 	b) allows previously added elements to be deleted.
+ * 	c) provides an operation to determine if an element exists
  * 		in the collection.
- * 	3) provides a clear operation to remove all elements.
- * 
- * Like ABaseStringHistory it uses an array to store the elements.
- * 
- * Deletion involves:
- * 	1) finding the index of the element to be removed,
- *   	2) shifting the elements after the deleted element up so that the filled and
- *  	unfilled elements of the array are separate sections of the array.
+ * 	d) provides a clear operation to remove all elements.
+ *  e) provides an operation to replace an existing element with a new one.
  *  
- * As this class extends the functionality and implementation of 
- * ABaseStringStringHistory, it will be nice if we do not have to duplicate
- * the implementation of ABaseStringStringHistory.    
- *
- 
- * 
- * Look at the operations performed on aStringDatabase in the main program.
- * 
- * Which of these operation are implemented in the class of 
- * AnInheritingStringDatabase?
- * 
- * Which of these operation are implemented in ABaseStringHistory?
+ * (T/F) This collection class used an array to store its elements.
+ */
+
+/*
+ * EXTENDING INTERFACES AND CLASSES
  * 
  * If object a is an instance of class C, and C is a subclass of E, then it is 
  * possible to invoke, on a:
@@ -223,7 +222,7 @@ public class AnInheritingStringDatabase
  * 	(c) only the methods implemented in E. 
  *  
  * Click on the addElement() method call in main() and press F3 (Open class
- * declaration) or Ctrl+click to go to the interface in which the header of the
+ * declaration) or Ctrl/command+click to go to the interface in which the header of the
  * method is defined. 
  * 
  * In which interface is the definition found?  Is it the same as the interface
@@ -231,7 +230,6 @@ public class AnInheritingStringDatabase
  * between the two interfaces? You may need to go to InheritingStringDatabase to see. 
  * 
  *  
- * METHOD INHERITANCE IN CLASSES AND INTERFACES 
  * 
  * Go to the declaration of BaseStringHistory.
  * 
@@ -261,14 +259,7 @@ public class AnInheritingStringDatabase
  * 	(a) defined only in C.
  * 	(b) defined only in E.
  * 	(c) defined in both C and E.
- * 
- * VARIABLE INHERITANCE
- * 
- * Click on the reference to the size variable in the "clear" method and press 
- * F3. In which class is the declaration found?  
- * 
- * (T/F) It is possible for a class to access and modify variables declared in 
- * its superclass.
+ *
  * 
  */
  /*
