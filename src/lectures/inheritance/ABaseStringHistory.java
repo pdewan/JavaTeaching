@@ -145,7 +145,11 @@ public class ABaseStringHistory implements BaseStringHistory {
  * internal size, that is, the instance variables point to objects that can grow 
  * larger over the lifetime of the history.
  * 
- * (T/F) It is possible to access each element of a history. 
+ * (T/F) It is possible to access each (added) element of a history using public methods of the history. 
+ * 
+ * (T/F) Given a history implemented using a single array object, 
+ *     it is possible to access each element of the underlying array using 
+ *     public methods of the history. 
  * 
  * (T/F) We can define our own collection type that uses int indices  to 
  * access the elements of the collection.

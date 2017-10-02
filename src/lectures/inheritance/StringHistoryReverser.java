@@ -14,10 +14,11 @@ public class StringHistoryReverser {
 		return retVal;
 	}
 /*
- * The reverse method in StringHistoryReverser can reverse instances of 
+ * The reverse method in StringHistoryReverser can reverse instances of: 
  *     (a) ABaseStringHistory
  *     (b) AnInheritingStringDatabase
  *     (c) AnInheritingStringStringSet
+ *     (d) String
  */
 
 	
@@ -47,7 +48,7 @@ public class StringHistoryReverser {
  * Which tasks is class StringHistoryReverser responsible for:
  * (a) Creating an implementation a BaseStringHistory.
  * (b) Choosing an implementation of BaseStringHistory.
- * (c) Reversing a BaseStringHistory
+ * (c) Reversing a BaseStringHistory.
  * 
  * Which tasks is class ABaseStringHistory responsible for:
  * (a) Creating an implementation a BaseStringHistory.
@@ -57,10 +58,13 @@ public class StringHistoryReverser {
  * (T/F) Implementing an interface and using (operating on) the interface are separate
  * concerns
  * 
- * (T/F) Operating on an interface and choosing which which implementation of the interface is
+ * (T/F) Operating on an interface and choosing which implementation of the interface is
  * used are separate concerns.
  * 
  * (T/F) Factory methods support separation of concerns.
+ */
+/*
+ * THE END
  */
 
 }

@@ -31,7 +31,7 @@ public class AnInheritingStringDatabase
  * Go to the interface of this class, InheritingStringDatabase and answer the
  * questions there.
  * 
- * (T/F) If class C1 implementing I1 is a subclass of C implementing I2, then I2
+ * (T/F) If class C1 implementing I1 is a subclass of C2 implementing I2, then I2
  * can be a subtype of I1.	
 /*
  * Re-declaration of size of base class, uncomment when asked later
@@ -80,23 +80,32 @@ public class AnInheritingStringDatabase
  * (T/F) It is possible for a class to access and modify variables declared in 
  * its superclass.
  * 
- * Element removal involves:
- * 	1) finding the index of the element to be removed,
- *  2) shifting the elements after the deleted element up so that the filled and
+ * Element removal in AnInheritingStringDatabse involves:
+ *  1) shifting the elements after the deleted element up so that the filled and
  *  	unfilled elements of the array are separate sections of the array.
- *  3) Assigning the null value to the element at the deleted index so that the
+ *  2) assigning the null value to the element at the deleted index so that the
  *  filled and unfilled elements are not separate sections of the array.  
 */
 
 	protected int indexOf(String element) {
 	    int index = 0;
-	    while ((index < size) && !element.equals(contents[index])) {
+	    while ((index < size()) && !element.equals(contents[index])) {
 	        index++;
 	    }
 	    // Most implementations will count down and give a negative result in case 
 		// of failed search. 
 		return index; 
 	}  
+/*
+ * A target of a (class) instance method is the (class) instance on which the 
+ * method is invoked.
+ * 
+ * (T/F) the index() method of AnInheritingStringDatabase calls an instance method
+ * in its superclass without specifying the target of the call.
+ * 
+ * (T/F) The syntax for calling inherited instance (superclass) methods of class C is the
+ * same as the syntax for calling instance methods declared in the class.
+ */
 /*
  * if indexOf(element) cannot find element, it returns:
  *    (a) 0
@@ -107,15 +116,15 @@ public class AnInheritingStringDatabase
  * Assuming O is at position I in the array, indexOf(O), searches (examines):
  * 	  (a) only the first element of the array.
  * 	  (b) only the last element of the array.
- * 	  (c) all elements of the array * 
+ * 	  (c) all elements of the array  
  * 	  (d) none of the above.
  *    
  * The method indexOf(element) of AnInheritingStringDatabase is called by:
  *    (a) no public method of AnInheritingStringDatabase.
- *    (b) exactly one public method of AnInheritingStringDatabase
+ *    (b) exactly one public method of AnInheritingStringDatabase.
  *    (c) more than one public method of AnInheritingStringDatabase.
  *    
- *  The  method indexOf(element) is a:
+ *  The method indexOf(element) is a:
  *    (a) part of the external (public) behavior AnInheritingStringDatabase
  *    (b) reusable piece of code. 
  */	
@@ -125,11 +134,10 @@ public class AnInheritingStringDatabase
 		    size = 0;
 	}
 /*
- * The clear() method:
+ * The clear() method in AnInheritingStringDatabase:
  * 	 (a) uses removeElement() to remove the elements in the database.
  *   (b) sets all elements in the underlying array to null.
- *   (c) changes the value of the variable that keeps track of the number of
- *    filled elements in the underlying array.
+ *   (c) changes the value of the variable returned by the size() method.
  *   (d) none of the above
  */
     
@@ -140,10 +148,8 @@ public class AnInheritingStringDatabase
  * The method member(element) in AnInheritingStringDatabase:
  *   (a) adds its argument (element) to the database.
  *   (b) determines if its argument exists in the database
- *   (c) determines if its argument can be added to the database
- *   
- *  (T/F) The instance method member(element) of AnInheritingStringDatabase 
- *  calls a method  in the superclass.
+ *   (c) determines if its argument can be added to the database.
+ *  
  *       
  */
     
@@ -167,6 +173,9 @@ public class AnInheritingStringDatabase
  * 
  * (T/F) The static method manipulateDatabase() calls a method declared in the superclass
  * without explicitly specifying the target of the class.  
+ * 
+ * (T/F) The syntax for calling inherited static (superclass) methods of class C is the
+ * same as the syntax for calling static methods declared in the class.  
  *     
  */
    
@@ -191,7 +200,7 @@ public class AnInheritingStringDatabase
  * (T/F) If a is an instance of C, and C extends class E, then a has a copy of
  * the instance variables defined in E.
  * 
- * Step over the statement (F6) and examine the two variables again. If you find
+ * Step over the removeElement statement (F6) and examine the two variables again. If you find
  * something surprising, it will be made clear once you look at indexOf().
  * 
  * (T/F) Assuming O is at position I in the array, removeElement(O)
@@ -201,15 +210,15 @@ public class AnInheritingStringDatabase
 /*
  *  KIND OF COLLECTION
  * 
- * This collection class:
+ * AnInheritingStringDatabase :
  *  a) supports addition of elements
  * 	b) allows previously added elements to be deleted.
  * 	c) provides an operation to determine if an element exists
  * 		in the collection.
- * 	d) provides a clear operation to remove all elements.
+ * 	d) provides an operation to remove all elements in the collection.
  *  e) provides an operation to replace an existing element with a new one.
  *  
- * (T/F) This collection class used an array to store its elements.
+ * (T/F) In AnInheritingStringDatabase an array is used to store the database elements.
  */
 
 /*

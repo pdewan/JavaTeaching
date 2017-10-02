@@ -21,3 +21,6 @@ public interface InheritingStringDatabase extends BaseStringHistory {
  *     (c) A is a subclass of B.
  *     (d) B is a base type of A.
  */
+/*
+ * Use Alt <- to return
+ */

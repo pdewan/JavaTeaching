@@ -19,7 +19,7 @@ public class StringHistoryFactory {
  *     (d) has a polymorphic return type, that is, can return an instance of multiple
  *     classes.
  *     (e) chooses which instance of an object type is returned
- *     (f) none of the above *     
+ *     (f) none of the above      
  */
 }
 /*

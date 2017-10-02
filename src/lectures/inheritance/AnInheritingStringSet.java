@@ -9,12 +9,12 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
 /*
  * Since AnInheritingStringSet extends AnInheritingStringDatabase,
  * and AnInheritingStringDatabase extends ABaseStringHistory,
- * AnInheritingStringSet is a direct/child subclass/subtype of AnInheritingStringDatabase
+ * AnInheritingStringSet is a direct/child/immediate subclass/subtype of AnInheritingStringDatabase
  * an indirect/descendant subclass/subtype of ABaseStringHistory, and a subclass/subytype
  * of both AnInheritingStringDatabase and ABaseStringHistory.
  * 
  * 
- * Similarly, AnInheritingStringDatabase is a direct/parent superclass of 
+ * Similarly, AnInheritingStringDatabase is a direct/parent/immediate superclass of 
  * AnInheritingStringSet,  ABaseStringHistory is an indirect/ancestor superclass
  * of AnInheritingStringSet, both AnInheritingStringDatabase and ABaseStringHistory
  * are superclasses/supertypes of AnInheritingStringSet, and AnInheritingStringDatabase
@@ -24,18 +24,17 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * If class A extends B, and B is a subclass of C then A is a:
  *   (a) subclass of B
- *   (b) direct/child subtype of B,
- *   (c) direct/child subtype of C,
- *   (d) indirect/descendant subtype of B,
- *   (e) indirect/descendant subtype of C,
- *   (f) closer subclass of B (in comparison to C)
- *   (g) closer subclass of C (in comparison to B)
+ *   (b) direct/child subtype of B.
+ *   (c) direct/child subtype of C.
+ *   (d) indirect/descendant subtype of B.
+ *   (e) indirect/descendant subtype of C.
+ *   (f) closer subclass of C (in comparison to B)
  *
  */
 /*
  * Look at the interface of this class:
  * 
- * (T/F) If class C1 implementing I1 is a subclass of C implementing I2, then I2
+ * (T/F) If class C1 implementing I1 is a subclass of C2 implementing I2, then I2
  * must be a subtype of I1.	
  */
 	
@@ -72,15 +71,15 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * in:
  *    (a)AnInheritingStringSet
  *    (b)the direct/parent superclass of AnInheritingStringSet.
- *    (c)an indirect/ancestor superclass of AnInheritingStringSet
+ *    (c)an indirect/ancestor superclass of AnInheritingStringSet.
  * 
- * The method addElement() in AnInheritingStringSet and ABaseStringHistory
+ * The addElement() methods in AnInheritingStringSet and ABaseStringHistory
  * have the same:
  * 	   (a) name
- * 	   (b) parameters
+ * 	   (b) parameter(s)
  *     (c) header
  * 
- * (T/F) A class can implement two methods with the same header..
+ * (T/F) A class can implement two methods with the same header.
  * (T/F) A class and a superclass can implement two methods with the same header.
  * 
  * Uncomment the addElement() method in the direct superclsas of this class.
@@ -90,7 +89,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  *
  * Comment out the method again in the direct superclass. 
  * 
- * If a method m (with the same header) is implemented in class A, its direct super class
+ * If a method with header m is implemented in class A, its direct super class
  * B, and its indirect super class, C, then call to super.m() in A calls the
  * implementation of m() in:
  *     (c) A
@@ -141,6 +140,12 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * Run the main method, look at the output, and study the addElement() method
  * defined here.
  * 
+ * Adding an item a second time to an instance of AnInheritingStringDatabase
+ * results in:  
+ * 	(a) an error.
+ * 	(b) the addition being ignored.
+ * 	(c) a duplicate item. 
+ * 
  * Adding an item a second time to an instance of AnInheritingStringSet
  * results in:  
  * 	(a) an error.
@@ -153,23 +158,23 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * Set the break point in main and use Step Into (F5) and Step Over (F6) to see 
  * which path is taken when main is called for each added element.
  * 
- * If O is an instance of A, and a method with header m() is implemented in
- * A and one or more of its superclasses, then calling m() on O:
+ * If O is an instance of A, and mutltiple implementations of m() exist in the super type
+ * hierarchy, then calling m() on O:
  * 
  * (a) gives a compile time error.
  * (b) gives a runtime error.
- * (c) calls all implementations of m() - the one i A and the ones in A's superclasses
+ * (c) calls all implementations of m() - the one in A and the ones in A's superclasses.
  * (d) calls the implementation of m() in the furthest superclass of A.
- * (e) calls the implementation m() in the closest superclass of A.
- * (f) calls the implementation of m() in A.
+ * (e) calls the implementation of m() in A, if it exists, or the 
+ * implementation of m() in the closest superclass of A
  * 
- * (T/F) A subclsas can control the nature of inheritance by overriding an
+ * (T/F) A subclass can control the nature of inheritance by overriding an
  * inherited method, that is, replacing the implementation of an inherited with
  * its own one.
  * 
  * 
  * If O is an instance of A, and a method with header m() is implemented in
- * A and one or more of its superclasses, then it is *not* possible to call the
+ * A and one or more of its superclasses, then it *not* possible for a method in A to call the
  * implementation of m() in:
  * 
  * (a) A
@@ -211,9 +216,11 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * to see the name of the class in Eclipse.) 
  * 
  * Stepping into super.toString() in ABaseStringHistory
- *   (a) given an error
+ *   (a) gives an error
  *   (b) executes the toString() method in class Object
  *   (c) does nothing
+ *   
+ * (T/F) The method toString() is implemented in the class Object.
  * 
  * A class that has no superclass is a root superclass.
  * 
@@ -232,8 +239,8 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * System.out.println(o) calls 
  * 	  the toString() method on o. 
- *    the println() method on on.
- *    calls getter() methods of o to print o.
+ *    the println() method on o.
+ *    getter() methods of o.
  *    none of the above
  * 
  * Comment out the super.toString() call and uncomment the original when you are done.
@@ -259,7 +266,7 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  *
  * Set a break point at the start of the addElement() method in ABaseStringHistory.
  * 
- * Set a breakpoint also on at the start of the indexOf method in AnInheritingStringDatabase.
+ * Set a breakpoint also on at the start of the shiftUp method in AnInheritingStringDatabase.
 
  * When the program stops at the addElement() method, hover over the 
  * value of the size variable referenced in the method.
@@ -269,14 +276,14 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * (T/F) At the end of the addElement() method of ABaseStringHistory, the 
  * value of the size variable referenced by the method is 0.  
  * 
- * Press F8 to resume the program, until you hit the breakpoint in indexOf().
+ * Press F8 to resume the program, until you hit the breakpoint in shiftUp().
  * 
- * When the program stops in the indexOf() method, hover over the size
- * variable in the method declaration. 
+ * When the program stops in the shiftUp() method, hover over the size
+ * variable in the method body. 
  * 
  * What value is it at the start of  the method? 
  * 
- * (T/F) At the start of the indexOf() method of AnInheritingStringDataabsese the
+ * (T/F) At the start of the shiftUp() method of AnInheritingStringDataabsese the
  * value of the size variable referenced by the method is  0 when 
  * AnInheritingStringDatase redeclares the variable.
  * 
@@ -285,40 +292,19 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * How many size variables does it have and what are their values? 
  * 
- *  The physical structure of AnInheritingStringDatabase has
+ *  The physical structure of AnInheritingStringDatabase has:
  *  (a) only one size variable,
- *  (b) has two size variables, whose value are non zero
- *  (c) has two size variables, one of which is zero
+ *  (b) two size variables, whose values are always the same.
+ *  (c) two size variables, whose values can diverge.
  *  
- *  (T/F) The physical structure of AnInheritingStringDatabase cannot have
+ *  (T/F) The physical structure of an object cannot have
  *  two variables with the same name.
  *  
+ *  (T/F) Methods declared in class C can refer to variables declared in its subclasses.
  *  
- * Comment out the duplicate size variable declaration and
- * debug-run the program again.
  *  
- * When the program stops at indexOf, hover over the size 
- * variable declaration again in the method
- * and look at its value again.
- * 
- * (T/F) At the start of the indexOf() method of AnInheritingStringDataabsese the
- * value of the size variable referenced by the method is  0 when 
- * AnInheritingStringDatase does not redeclare the variable.
- *
- * Which is consistent with the above observations?
- * 
- * If a method m() in class C accesses (refers to) the value of a variable v declared in 
- * multiple superclasses of C:
- *    (a) the compiler gives an error
- *    (b) an error occurs at runtime
- *    (c) the value accessed is null
- *    (c) the value accessed is that of variable v declared in the closest 
- *    superclass of C
- *    (d) the value accessed is that of variable v declared in the furthest 
- *    superclass of C
- *    (e) the value accessed is a collection containing the values of all variables v
- *    declared in the superclasses of C
- *    (f) none of the above
+ *  
+ * Comment out the duplicate size variable declaration.   
  *
  * Will you ever re-declare a variable again in a subclass?
  * 
@@ -462,13 +448,13 @@ public class AnInheritingStringSet extends AnInheritingStringDatabase // extendi
  * 
  * The initialization declaration of AnInheritingStringDatabase
  * 	AnInheritingStringDatabase is executed:
- *     (a) before the initializing declaration of uslessVariable in 
+ *     (a) before the initializing declarations in 
  *     		ABaseStringHistory is executed.
  *     (b) before the constructor of  AnInheritingStringDatabase is executed
  *     (c) before the constructor of ABaseStringHistory is executed.  
  * 
  * (T/F) Java executes the constructor of a class after before executing the constructors of its superclasses.
- * (T/F) Java executes the initialization declaration of a class before executing its constructor.
+ * (T/F) Java executes the initialization declaration of a class before executing its constructors.
  * (T/F) Java executes the initialization declaration of a class before executing the initialization
  * declarations of its superclassses.
  * (T/F) Java executes the initialization declaration of a class before executing the constructors of its superclasses.
