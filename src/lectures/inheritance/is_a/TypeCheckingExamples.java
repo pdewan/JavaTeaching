@@ -17,9 +17,9 @@ import lectures.inheritance.BaseStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
 /*
- * This class illustrates the IS-A relationship in computer science.
- *  
- 
+ * This class uses several examples to illustrate the IS-A relationship 
+ * and some its implications in type checking and program execution.
+ * 
  */
 
 public class TypeCheckingExamples {
@@ -159,13 +159,7 @@ public class TypeCheckingExamples {
  */   
    static  final String EXAMPLE_ITEM = "Joe Doe";
    public static void overrideResolutionTest() {
-	   /*
-	    * Instances of the same class are assigned to variables typed
-	    * differently. Does the typing effect which methods are
-	    * called on the object? Hint, we should really not type variables using 
-	    * classes.
-	    * 
-	    */
+	  
 	   AnInheritingStringSet aSet = new AnInheritingStringSet();
 	   ABaseStringHistory aSetMasqueradingAsAHistory = 
 			   new AnInheritingStringSet();	
@@ -180,6 +174,11 @@ public class TypeCheckingExamples {
  * 
  * Here we try to determine the relationship between how an object is
  * typed and the overridden methods that are called.
+ * (T/F) The typing of the two variables in overrideResolutionTest follows the style
+ * rules learned so far.
+ * (T/F) The two variables in overrideResolutionTest have the same type.
+ * (T/F) The two variables in overrideResolutionTest are assigned objects created
+ * by instantiating the same class.
  * 
  * Put a break points at the first call to addElement() and debug-run the program.
  * Step inside the call (F5) and note which class you ended up in. Then step
@@ -198,112 +197,102 @@ public class TypeCheckingExamples {
  * which overridden method is called depends on the
  * type of the variable rather than the object assigned to the variable.
  * 
- */   
+ */ 
    
-   /**
-    * A method with this name (but a different parameter) will be defined below
-    */
-   public static void print (BaseStringHistory aCollection) {
+/*
+ * A method with this name (but a different parameter) will be defined below
+ */   
+public static void print (BaseStringHistory aCollection) {
  	   System.out.println("StringHistory Print:" + aCollection);
- 	   for (int i = 0; i < aCollection.size(); i++) {
- 		   System.out.println (aCollection.elementAt(i));
- 	   }
-    }
-   /**   
-    * Overloading the method above with a parameter whose type has an IS-A 
-    * relationship to the type of the previous method
-    * 
-    */
-    public static void print (InheritingStringDatabase aCollection) {
- 	   System.out.println("StringDatabase Print:" + aCollection);
- 	   for (int i = 0; i < aCollection.size(); i++) {
- 		   System.out.println (aCollection.elementAt(i));
- 	   }
-    }
-    /**
-     * OVERLOAD RESOLUTION
-     * 
-     * Here we try to determine the relationship between how an object is typed
-     * and the overridden methods that are called when it is used as an argument.
-     * 
-     * Remove your previously placed breakpoint and put a breakpoint at the print call
-     * marked below. As before, debug-run the program, step into the first call (F5),
-     * step return (F7), step over (F6) to get to the second call, and step into it (F5).
-     * 
-     * Is the same method called in both cases or different methods?
-     * 
-     * (T/F) When the call of an overloaded method is given an object variable 
-     * as an argument, which overloaded method is called depends on the
-     * type of the variable rather than the object assigned to the variable.
-     * 
-     */
-    public static void overloadResolutionTest() {
-       InheritingStringDatabase aSet = new AnInheritingStringSet();
- 	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();
- 	   
- 	   //Place breakpoint here
- 	   print (aSet);
- 	   print(aSetMasqueradingAsAHistory);
- 	   
-    	
-    }
+   for (int i = 0; i < aCollection.size(); i++) {
+	   System.out.println (aCollection.elementAt(i));
+   }
+}
+/*   
+ * Overloading the method above with a parameter whose type is different 
+ * from the type of the previous method
+ */
+public static void print(InheritingStringDatabase aCollection) {
+	System.out.println("StringDatabase Print:" + aCollection);
+	for (int i = 0; i < aCollection.size(); i++) {
+		System.out.println(aCollection.elementAt(i));
+	}
+}
+public static void overloadResolutionTest() {	
+	   InheritingStringDatabase aSet = new AnInheritingStringSet();
+	   BaseStringHistory aSetMasqueradingAsAHistory = new AnInheritingStringSet();   
+   //Place breakpoint here
+   print (aSet);
+   print(aSetMasqueradingAsAHistory);	
+}
+/*
+ * OVERLOAD RESOLUTION 
+ * 
+ * Here we try to determine the relationship between how an object is typed
+ * and the overridden methods that are called when it is used as an argument.
+ * 
+ * The type of the parameter of print(InheritingStringDatabase) method in TypeCheckingExamples is
+ *    (a) unrelated to the type of the parameter of print(BaseStringHistory).
+ *    (c) is a supertype of the type of the parameter of print(BaseStringHistory).
+ *    (c) IS-A the type of the parameter of the parameter of print(BaseStringHistory).
+ * 
+ * Remove your previously placed breakpoint and put a breakpoint at the print call
+ * marked above. As before, debug-run the program, step into the first call (F5),
+ * step return (F7), step over (F6) to get to the second call, and step into it (F5).
+ * 
+ * 
+ * Is the same method called in both cases or different methods?
+ * 
+ * (T/F) A print() call whose parameter is an AnInheritingStringSet 
+ * instance typed as BaseStringHistory calls print (BaseStringHistory).
+ * 
+ * (T/F) A print() call whose parameter is an AnInheritingStringSet instance 
+ * typed as InheritingStringDatabase calls print (InheritingStringDatabase).
+ * 
+ * (T/F) When the call of an overloaded method is given an object variable 
+ * as an argument, which overloaded method is called depends on the
+ * type of the variable rather than the object assigned to the variable.
+ * 
+ * (T/F) If A IS-A B IS-A C, and there exist two overloaded methods, m, 
+ * taking a single parameter of types B and C, (that is m(B) and m(C)), respectively), 
+ * then when m is passed a parameter of type A, the method:
+ *    m(B) is called
+ *    m(C) is called
+ *    the call is illegal
+ *    
+ * (T/F) If A IS-A B IS-A C, and there exists only one method, m, 
+ * taking a single parameter of type C, 
+ * then when m is passed a parameter of type A, the method:
+ *    m(C) is called
+ *    the call is illegal
+ *    
+ * (T/F) If A IS-A B IS-A C, and there exists only one method, m, 
+ * taking a single parameter of type A, 
+ * then when m is passed a parameter of type C, the method:
+ *    m(A) is called
+ *    the call is illegal      
+ * 
+ * For the curious, try to determine what will happen when
+ * overloaded methods takes multiple parameters with IS-A
+ * relationships between them.
+ */
+
     
-    public static void main(String[] args) {
-	  instanceOfTest();
-	  assignmentTest();
-	  castAssignmentTest();
-	  overrideResolutionTest();
-	  overloadResolutionTest();
-    }
-    /*
-     * INSTANCE OF
-     * 
-     * Here we try to understand what "instanceof" means when we add inheritance
-     * to the language.
-     * 
-     * Answer these questions after you look at the following method
-     * and the output it produces the two times it is called.
-     * 
-     * (T/F) If A extends B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A implements B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
-     * of A.
-     */
-    /*
-     * INSTANCE OF
-     * 
-     * Here we try to understand what "instanceof" means when we add inheritance
-     * to the language.
-     * 
-     * Answer these questions after you look at the following method
-     * and the output it produces the two times it is called.
-     * 
-     * (T/F) If A extends B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A implements B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
-     * of B.
-     * 
-     * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
-     * of A.
-     */
-    /*
-     * Now that we understand the type checking rules, let us try to understand
-     * how we should use inheritance so we do not write programs that compile
-     * and run yet do not make logical sense and thus are confusing.
-     * 
-     * Next class: LineInheritingFromPoint
-     */
+public static void main(String[] args) {
+  instanceOfTest();
+  assignmentTest();
+  castAssignmentTest();
+  overrideResolutionTest();
+  overloadResolutionTest();
+}
+    
+/*
+ * Now that we understand the type checking rules, let us try to understand
+ * how we should use inheritance so we do not write programs that compile
+ * and run yet do not make logical sense and thus are confusing.
+ * 
+ * Next class: LineInheritingFromPoint
+ */
 
    }
    
