@@ -1,11 +1,15 @@
 package lectures.inheritance.is_a;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 
 
 
+
+import java.util.Collection;
+import java.util.List;
 
 import lectures.inheritance.ABaseStringHistory;
 import lectures.arrays.collections_implementation.AStringSetMain;
@@ -26,7 +30,8 @@ public class TypeCheckingExamples {
 
 /*   
  * IS-A DEFINITION AND VISUALIZATION
- * Click on BaseStringHistory (here or in the code below) and press F4 (Open Type Hierarchy).
+ * Click on BaseStringHistory (here or in the code below) and 
+ * press F4 (Right Menu-->Open Type Hierarchy).
  * 
  * Look at the Type Hierarchy tab on the upper left.
  * 
@@ -92,8 +97,7 @@ public class TypeCheckingExamples {
  * 
  * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
  * of A.
- */    
-   
+ */   
    
    public static void assignmentTest() {
 	   InheritingStringDatabase aSet = new AnInheritingStringSet();
@@ -119,9 +123,24 @@ public class TypeCheckingExamples {
  * 
  * (T/F) Expression e of type E can be assigned to variable v of type V
  * if E IS-A V.
+ * 
+ * (T/F) In real-life T1 IS-A T2, if T1 has all the traits of T2.
  *
  * (T/F) Expression e of type E can be assigned to variable v of type V
  * if V IS-A E
+ * 
+ * 
+ * (T/F) In real-life T1 IS-A T2, it an instance of T1 can be supplied where
+ * an instance of T2 is expected.
+ * 
+ * An (instance of) a type can be used in some code fragment if it does not
+ * cause compile errors in the code fragment.
+ * 
+ * (T/F) In Java type T1 IS-A T2, if an instance of T1 can be used
+ *        wherever an instance of T1 is expected.
+ *        
+ * (T/F) In Java, substituting an instance of T2 with an instance of T2 in a program 
+ * can cause the program to give different results. 
  * 
  */     
    public static void castAssignmentTest() {
@@ -180,6 +199,7 @@ public class TypeCheckingExamples {
  * (T/F) The two variables in overrideResolutionTest are assigned objects created
  * by instantiating the same class.
  * 
+ * 
  * Put a break points at the first call to addElement() and debug-run the program.
  * Step inside the call (F5) and note which class you ended up in. Then step
  * return (F7) to come back, step over (F6) to go to the next line, and step
@@ -195,15 +215,27 @@ public class TypeCheckingExamples {
  * 
  * (T/F) When the call of an overridden method is directed at an object variable, 
  * which overridden method is called depends on the
- * type of the variable rather than the object assigned to the variable.
+ * type of the variable rather than the class of the object assigned to the variable.
+ * 
+ * Click on the first addElement() call and use F3 or CTRL/CMD CLICK to go to the
+ * implementation of it (computed at compile time).
+ * 
+ * Click on the second addElement() call and use F3 or CTRL/CMD CLICK to go to the
+ * implementation of it (computed at compile time).
+ * 
+ * Were they the ones that actually got called in these two calls.
+ * 
+ * (T/F) Which overridden method is called is known at compile time.  
  * 
  */ 
    
 /*
  * A method with this name (but a different parameter) will be defined below
  */   
-public static void print (BaseStringHistory aCollection) {
- 	   System.out.println("StringHistory Print:" + aCollection);
+public static void print (BaseStringHistory aCollection) {  
+   System.out.println("StringHistory Print:" + aCollection);
+   if (aCollection == null)
+	   return;
    for (int i = 0; i < aCollection.size(); i++) {
 	   System.out.println (aCollection.elementAt(i));
    }
@@ -212,8 +244,10 @@ public static void print (BaseStringHistory aCollection) {
  * Overloading the method above with a parameter whose type is different 
  * from the type of the previous method
  */
-public static void print(InheritingStringDatabase aCollection) {
+public static void print(InheritingStringDatabase aCollection) {	
 	System.out.println("StringDatabase Print:" + aCollection);
+	if (aCollection == null)
+		   return;
 	for (int i = 0; i < aCollection.size(); i++) {
 		System.out.println(aCollection.elementAt(i));
 	}
@@ -244,7 +278,7 @@ public static void overloadResolutionTest() {
  * Is the same method called in both cases or different methods?
  * 
  * (T/F) A print() call whose parameter is an AnInheritingStringSet 
- * instance typed as BaseStringHistory calls print (BaseStringHistory).
+ * instance typed as BaseStringHistory invokes print(BaseStringHistory).
  * 
  * (T/F) A print() call whose parameter is an AnInheritingStringSet instance 
  * typed as InheritingStringDatabase calls print (InheritingStringDatabase).
@@ -270,11 +304,55 @@ public static void overloadResolutionTest() {
  * taking a single parameter of type A, 
  * then when m is passed a parameter of type C, the method:
  *    m(A) is called
- *    the call is illegal      
+ *    the call is illegal  
+ *    
+ * (T/F) When more than one overloaded implementation of a method can 
+ * service a legal call to the method, Java chooses the most specific one,
+ * that is, the one whose formal (declared) parameter types are closer to the 
+ * actual (supplied) parameters in the IS-A DAG.
+ *    
+ * Click on the first print() call and use F3 or CTRL/CMD CLICK to go to the
+ * implementation of it (computed at compile time).
  * 
- * For the curious, try to determine what will happen when
- * overloaded methods takes multiple parameters with IS-A
- * relationships between them.
+ * Click on the second print() call and use F3 or CTRL/CMD CLICK to go to the
+ * implementation of it (computed at compile time).
+ * 
+ * (T/F) Which overloaded method is called is known at compile time. 
+ * 
+ */
+
+
+public static void append (Collection anOriginal, List aList) {
+	anOriginal.addAll(aList);
+}
+/*
+ * A second overloaded method with two parameters
+ */
+//public static void append (List anOriginal, Collection aList) {
+//	anOriginal.addAll(aList);
+//}
+public static void overloadResolutionTest2() {	
+	append(new ArrayList<>(), new ArrayList<>());	
+}
+/*
+ * Look at the type hierarchy of Collection (F4, Right Menu-->Open Type Hierarchy)
+ * Look at the second commented out definition of append().
+ * 
+ * (T/F) The type of each formal parameter of append (Collection, List) IS-A the
+ * the type of the corresponding parameter of append (List, ArrayList)
+ * 
+ * Uncomment the second append(). Do you get any compile time errors? If so, what
+ * do they say.
+ * 
+ * A legal method or call is one that does not result in compile errors.
+ * 
+ * (T/F) It is possible for a call to two legal overloaded methods to be ambiguous
+ * and thus illegal.
+ * 
+ * (T/F) It is possible for a legal call to a method to become illegal by adding
+ * a legal overloaded method.
+ * 
+ * 
  */
 
     
@@ -285,7 +363,7 @@ public static void main(String[] args) {
   overrideResolutionTest();
   overloadResolutionTest();
 }
-    
+}
 /*
  * Now that we understand the type checking rules, let us try to understand
  * how we should use inheritance so we do not write programs that compile
@@ -293,7 +371,5 @@ public static void main(String[] args) {
  * 
  * Next class: LineInheritingFromPoint
  */
-
-   }
    
  

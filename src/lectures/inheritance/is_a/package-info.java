@@ -9,7 +9,6 @@
  * LineInheritingFromPoint
  * Locatable
  * PointInheritingFromLocatable
- * LineInheritingFromLocatable
  */
 
 package lectures.inheritance.is_a;

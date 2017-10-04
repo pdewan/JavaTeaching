@@ -28,14 +28,11 @@ public interface LineInheritingFromPoint extends Point {
  * from Point only if it makes sense to use a line where a point
  * is expected.
  * 
- * (T/F) It makes sense for LineInheritingFromPoint to inherit from Point.
+ * (T/F) It makes sense of a type defining a line to inherit from a type defining a point.
+ * That is, LineInheritingFromPoint uses inheritance correctly.
  * 
- * (T/F) It makes sense for LineInheritingFromPoint to have all the properties
- * of Point.
- * 
- * (T/F) An interface defining a line should inherit from an interface defining
- * a point. That is, LineInheritingFromPoint used inheritance correctly.
- *    
+ * (T/F) It makes sense of a type defining a line to have all the properties
+ * of a type defining Point.    
 
  * 
  * Go to interface Locatable to see another way to share code with Point.
