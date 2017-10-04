@@ -16,8 +16,15 @@ import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
-/**
+/*
+ * This class illustrates the IS-A relationship in computer science.
  *  
+ 
+ */
+
+public class TypeCheckingExamples {
+
+/*   
  * IS-A DEFINITION AND VISUALIZATION
  * Click on BaseStringHistory (here or in the code below) and press F4 (Open Type Hierarchy).
  * 
@@ -40,7 +47,6 @@ import lectures.interfaces.BMISpreadsheet;
  * Answer the following questions based on what you see in this example.  
  * In other words, which of these statements are consistent with what you see.
  * 
- * 
  * (T/F) If A is an interface and B is an interface, it is possible that A IS-A B.
  * 
  * (T/F) If A is a class and B is a class, it is possible that A IS-A B.
@@ -51,67 +57,49 @@ import lectures.interfaces.BMISpreadsheet;
  * 
  * (T/F) If A extends B, then A IS-A B.
  * 
- * (T/F) If A implements B, then A IS-B.
+ * (T/F) If A implements B, then A IS-B.    * 
  *
  * You will need to continue to refer to this hierarchy when answering the questions below.
- * 
- * Study the program and run it.
+ *
  */
-
-public class TypeCheckingExamples {
-      
-   /**
-    * INSTANCE OF
-    * 
-    * Here we try to understand what "instanceof" means when we add inheritance
-    * to the language.
-    * 
-    * Answer these questions after you look at the following method
-    * and the output it produces the two times it is called.
-    * 
-    * (T/F) If A extends B, and a is an instance of A, then a is an instance
-    * of B.
-    * 
-    * (T/F) If A implements B, and a is an instance of A, then a is an instance
-    * of B.
-    * 
-    * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
-    * of B.
-    * 
-    * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
-    * of A.
-    */
+  public static void instanceOfTest() {
+	   instanceOfTest(new ABaseStringHistory());
+	   instanceOfTest(new AnInheritingStringSet());
+   }
    public static void instanceOfTest(Object anObject) {
 	   System.out.println ("Checking object of class:" + anObject.getClass().getSimpleName());
 	   System.out.println (anObject instanceof ABaseStringHistory);
 	   System.out.println (anObject instanceof InheritingStringDatabase);
 	   System.out.println (anObject instanceof AnInheritingStringSet);
    }
-   public static void instanceOfTest() {
-	   instanceOfTest(new ABaseStringHistory());
-	   instanceOfTest(new AnInheritingStringSet());
-   }
+/*
+ * INSTANCE OF
+ * 
+ * Here we try to understand what "instanceof" means when we add inheritance
+ * to the language.
+ * 
+ * Run the program and look at the output the method above produces the two 
+ * times it is called.
+ * 
+ * (T/F) If A extends B, and a is an instance of A, then a is an instance
+ * of B.
+ * 
+ * (T/F) If A implements B, and a is an instance of A, then a is an instance
+ * of B.
+ * 
+ * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
+ * of B.
+ * 
+ * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
+ * of A.
+ */    
    
-   /*
-    * COMPILE-TIME ASSIGNMENT RULES
-    * 
-    * Here we will try to understand when we can assign an expression, e, of type
-    * E to a variable, v, of type V.
-    * 
-    *(T/F) Expression e of type E can be assigned to variable v of type V
-    *if E IS-A V.
-    *
-    *(T/F) Expression e of type E can be assigned to variable v of type V
-    *if V IS-A E
-    *      
-    * 
-    */
+   
    public static void assignmentTest() {
 	   InheritingStringDatabase aSet = new AnInheritingStringSet();
 	   BaseStringHistory aHistory = new ABaseStringHistory();
 	   
-	   /**
-	    * 
+	   /*	     
 	    * Uncomment the statements below and see which assignments are legal
 	    * at compile time.	    
 	    */
@@ -120,30 +108,22 @@ public class TypeCheckingExamples {
 //	   aSet = aHistory;	  
 	   
    }
-   /**
-    * Typing and Casting an Object
-    * 
-    * Here we will try to understand the difference between the actual class
-    * of an object and how it is typed in the program.
-    * 
-    * Uncomment the lines below and see which ones give compile errors.
-    * 
-    * Then comment the lines that give errors and run the program, noting
-    * any runtime errors.
-    * 
-    * Finally comment them all back.
-    * 
-    * (T/F) Type checking rules involving no casts depend on how an assigned
-    * variable is typed. That is, they look at the type of the variable
-    * rather than the class of the object assigned to the variable. 
-    * 
-    * (T/F) Type checking rules involving casts depend on how an assigned 
-    * variable is cast, that is, they look at the type used in the cast
-    * rather than the type of the assigned variable.
-    * 
-    * (T/F) Casts an lead to runtime errors.
-    *  
-    */   
+/*
+ * COMPILE-TIME ASSIGNMENT RULES
+ * 
+ * The code above helps us understand when we can assign an expression, e, of type
+ * E to a variable, v, of type V.
+ * 
+ * Uncomment the statements above and see which assignments are legal
+ * at compile time.
+ * 
+ * (T/F) Expression e of type E can be assigned to variable v of type V
+ * if E IS-A V.
+ *
+ * (T/F) Expression e of type E can be assigned to variable v of type V
+ * if V IS-A E
+ * 
+ */     
    public static void castAssignmentTest() {
 //	   InheritingStringDatabase aSet = new AnInheritingStringSet();
 //	   BaseStringHistory aSetMasqueradingAsAHistory = 
@@ -151,38 +131,74 @@ public class TypeCheckingExamples {
 //	   aSet = aSetMasqueradingAsAHistory;
 //	   aSet = (InheritingStringDatabase) aSetMasqueradingAsAHistory; 
 //	   aSetMasqueradingAsAHistory = new ABaseStringHistory();
-//	   aSet = (InheritingStringDatabase) aSetMasqueradingAsAHistory;
-	   
-	   
+//	   aSet = (InheritingStringDatabase) aSetMasqueradingAsAHistory; 	   
    }
-   /**
-    * OVERRIDE RESOLUTION
-    * 
-    * Here we try to determine the relationship between how an object is
-    * typed and the overridden methods that are called.
-    * 
-    * Put a break points at the first call to addElement() and debug the program.
-    * Step inside the call (F5) and note which class you ended up in. Then step
-    * return (F7) to come back, step over (F6) to go to the next line, and step
-    * into this call (F5). Again, note the class.
-    * 
-    * Is the same method called in both cases or different methods?
-    * 
-    * (T/F) When the call of an overridden method is directed at an object variable, 
-    * which overridden method is called depends on the
-    * type of the variable rather than the object assigned to the variable.
-    * 
-    */   
+/*
+ * Typing and Casting an Object
+ * 
+ * Here we will try to understand the difference between the actual class
+ * of an object and how it is typed in the program.
+ * 
+ * Uncomment the lines above and see which ones give compile errors.
+ * 
+ * Then comment the lines that give errors and run the program, noting
+ * any runtime errors.
+ * 
+ * Finally comment all lines in the method all back.
+ * 
+ * (T/F) Type checking rules involving no casts depend on how an assigned
+ * variable is typed. That is, they look at the type of the variable
+ * rather than the class of the object assigned to the variable. 
+ * 
+ * (T/F) Type checking rules involving casts depend on how an assigned 
+ * variable is cast, that is, they look at the type used in the cast
+ * rather than the type of the assigned variable.
+ * 
+ * (T/F) Casts an lead to runtime errors.
+ *  
+ */   
+   static  final String EXAMPLE_ITEM = "Joe Doe";
    public static void overrideResolutionTest() {
-
-	   InheritingStringDatabase aSet = new AnInheritingStringSet();
-	   BaseStringHistory aSetMasqueradingAsAHistory = 
+	   /*
+	    * Instances of the same class are assigned to variables typed
+	    * differently. Does the typing effect which methods are
+	    * called on the object? Hint, we should really not type variables using 
+	    * classes.
+	    * 
+	    */
+	   AnInheritingStringSet aSet = new AnInheritingStringSet();
+	   ABaseStringHistory aSetMasqueradingAsAHistory = 
 			   new AnInheritingStringSet();	
 	   
 	   //Place break point here
-	   aSet.addElement("Joe Doe");
-	   aSetMasqueradingAsAHistory.addElement("Joe Doe");
+	   aSet.addElement(EXAMPLE_ITEM);
+	   aSetMasqueradingAsAHistory.addElement(EXAMPLE_ITEM);
    }
+
+/*
+ * OVERRIDE RESOLUTION
+ * 
+ * Here we try to determine the relationship between how an object is
+ * typed and the overridden methods that are called.
+ * 
+ * Put a break points at the first call to addElement() and debug-run the program.
+ * Step inside the call (F5) and note which class you ended up in. Then step
+ * return (F7) to come back, step over (F6) to go to the next line, and step
+ * into this call (F5). Again, note the class.
+ * 
+ * Is the same method called in both cases or different methods?
+ * 
+ * (T/F) addElement() invoked on a variable typed as ABaseStringHistory calls
+ * the implementation of this method in ABaseStringHistory.
+ * 
+ * (T/F) addElement() invoked on a variable typed as AnInheritingStringSet calls
+ * the implementation of this method in AnInheritingStringSet.
+ * 
+ * (T/F) When the call of an overridden method is directed at an object variable, 
+ * which overridden method is called depends on the
+ * type of the variable rather than the object assigned to the variable.
+ * 
+ */   
    
    /**
     * A method with this name (but a different parameter) will be defined below
@@ -239,7 +255,49 @@ public class TypeCheckingExamples {
 	  overrideResolutionTest();
 	  overloadResolutionTest();
     }
-    /**
+    /*
+     * INSTANCE OF
+     * 
+     * Here we try to understand what "instanceof" means when we add inheritance
+     * to the language.
+     * 
+     * Answer these questions after you look at the following method
+     * and the output it produces the two times it is called.
+     * 
+     * (T/F) If A extends B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A implements B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
+     * of A.
+     */
+    /*
+     * INSTANCE OF
+     * 
+     * Here we try to understand what "instanceof" means when we add inheritance
+     * to the language.
+     * 
+     * Answer these questions after you look at the following method
+     * and the output it produces the two times it is called.
+     * 
+     * (T/F) If A extends B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A implements B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A IS-A B, and a is an instance of A, then a is an instance
+     * of B.
+     * 
+     * (T/F) If A IS-A B, and b is an instance of B, then b is an instance
+     * of A.
+     */
+    /*
      * Now that we understand the type checking rules, let us try to understand
      * how we should use inheritance so we do not write programs that compile
      * and run yet do not make logical sense and thus are confusing.
