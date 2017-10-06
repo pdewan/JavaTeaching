@@ -339,7 +339,7 @@ public static void overloadResolutionTest2() {
  * Look at the second commented out definition of append().
  * 
  * (T/F) The type of each formal parameter of append (Collection, List) IS-A the
- * the type of the corresponding parameter of append (List, ArrayList)
+ * the type of the corresponding parameter of append (List, Collection)
  * 
  * Uncomment the second append(). Do you get any compile time errors? If so, what
  * do they say.
