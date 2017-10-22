@@ -14,14 +14,13 @@ import bus.uigen.ObjectEditor;
  * This class is a subclass of the one we just left that performs the same task
  * in a different (better?) way.
  * 
- * It overrides the write methods (re-implements the two setter methods).
+ * The code in this class, AnObservableLine, makes an "observable" version of
+ * the code it inherits, ANonObservableLine.
  * 
- * A write method is one that changes object state. In a Bean, setters are write
- * methods.
+ * An "observable" interacts with its "observers".
  * 
- * (T/F) The method getX() inherited by AnObservableLine is a write method.  
- *  
- * Study the code below. 
+ * The goal of this praxis is to help explain to what an observable and observer
+ * exactly mean in Computer Science.
  *  
  * Study also the class, APropertyListenerSupport, used in this code.
  *  
@@ -41,24 +40,28 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 		int oldVal = getX(); // save old value of X
 		super.setX(newVal); // change x
 		
-		/*
-		 * 	
-		 * Hover over PropertyChangeEvent to see the associated documentation.
-		 * 
-		 * After looking at this call, go into APropertyListenerSupport, look at the
-		 * notifyAllListeners() method, and answer the questions in it.
-		 * 
-		 * A setter in an observable notifies observers about (choose all that apply):
-		 * (a) the name of the property that changed.
-		 * (b) the old value of the property before the setter was called.
-		 * (c) the new value of the property set by the method.
-		 * (d)  the original value of the property, right after the object was
-		 *  initialized by its constructor 
-		 * 
-		 */
+		// put breakpoint here and step into notifyAllListeners
 		propertySupport.notifyAllListeners(new PropertyChangeEvent(this, "X", oldVal,
 				newVal));
 	}
+/*
+ * Follow these instructions when asked.
+ * 
+ * Hover over PropertyChangeEvent to see the associated documentation.
+ * 
+ * After looking at this call, go into APropertyListenerSupport, look at the
+ * notifyAllListeners() method, and answer the questions in it.
+ * 
+ * A setter in an observable notifies observers about (choose all that apply):
+ * (a) the name of the property that changed.
+ * (b) the old value of the property before the setter was called.
+ * (c) the new value of the property set by the method.
+ * (d)  the original value of the property, right after the object was
+ *  initialized by its constructor 
+ *  
+ *  
+ * 
+ */
 	@Override
 	public void setY(int newVal) {
 		int oldVal = getY();
@@ -84,58 +87,41 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 	
 	/**
 	 * This is the observer registration method.
-	 * 
-	 * Its header is a standard header, meaning that it has to have a particular
-	 * form, much like the main method header.
-	 * 
-	 * Unlike the main method, the form is defined by the Bean framework rather than Java.
-	 * 
-	 * Since it is an instance method, we can put it in an interface.
-	 * 
-	 * However, the Bean framework does not define such an interface.
-	 * 
-	 * The OE library defines such an interface, called PropertyListenerRegister.
-	 * 
-	 * Since it is a standard method, ObjectEditore understands it and calls it
-	 * from edit().
-	 * 
-	 *  The header of the observer registration code in AnObservableLine is:
-	 * 	(a) a standard header defined by Java.
-	 * 	(b) a standard header defined by the Bean framework.
-	 *  	(c) a non standard method.
+	 * Follow the instructions associated with it when asked.
 	 */
 	@Override
 	public void addPropertyChangeListener(PropertyChangeListener aListener) {
 		/*
-		 * Put breakpoint here and debug-run.
-		 * 
-		 * Look at the bottom two methods in the stack (in the debug window). Each method
-		 * in the stack was called by the method below it, so looking at the bottom can help
-		 * you see how you got to this break point.
-		 * 
-		 * Now, hover over the parameter, aListener, to determine the class of the
-		 * object assigned to it.
-		 * 
-		 * The method, addPropertyChangeListener, in AnObservableLine, is called:
-		 *   (a) each time a setter is invoked in  AnObservableLine.
-		 *   (b) when the main method is invoked in AnObservableLine.
-		 *   (c) each time ObjectEditor.edit() is called.
-		 *   
-		 * The class of the argument of addPropertyChangeListener is an instance of:
-		 *   (a) AnObservableLine
-		 *   (b) APropertyChangeSupport
-		 *   (c) PropertyChangeEvent
-		 *   (b) LineAdapter		    
-		 * 
-		 * 
-		 * Step into the add method.
-		 * 
-		 * The method addPropertyChangeListener:
-		 * 	(a) prints the observer passed as an argument.
-		 *   	(b) stores the observer in a history collection implemented by AnObservableLine.
-		 *   	(c) stores the observer in a history collection implemented by APropertyListenerSupport.
-		 */
-		propertySupport.add(aListener); //
+		 * Put breakpoint in the statement in this method and debug-run.
+		 */		 
+		propertySupport.add(aListener); 
+/*
+ * Look at the bottom two methods in the stack (in the debug window). Each method
+ * in the stack was called by the method below it, so looking at the bottom can help
+ * you see how you got to this break point.
+ * 
+ * Now, hover over the parameter, aListener, to determine the class of the
+ * object assigned to it.
+ * 
+ * The method, addPropertyChangeListener, in AnObservableLine, is called:
+ *   (a) each time a setter is invoked in  AnObservableLine.
+ *   (b) when the main method is invoked in AnObservableLine.
+ *   (c) each time ObjectEditor.edit() is called.
+ *   
+ * The class of the argument of addPropertyChangeListener is an instance of:
+ *   (a) AnObservableLine
+ *   (b) APropertyChangeSupport
+ *   (c) PropertyChangeEvent
+ *   (b) LineAdapter		    
+ * 
+ * 
+ * Step into the add method.
+ * 
+ * The method addPropertyChangeListener:
+ * 	 (a) prints the observer passed as an argument.
+ *   (b) stores the observer in a history collection implemented by AnObservableLine.
+ *   (c) stores the observer in a history collection implemented by APropertyListenerSupport.
+*/
 		
 	}
 	/**
@@ -149,7 +135,7 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 			
 		}
 	}
-	/*
+	/**
 	 * Supplies the parameters to animateLine
 	 */
 	public static void main(String args[]) {
@@ -159,44 +145,162 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 //		OEFrame editor3 = ObjectEditor.edit (aLine);
 		animateLine (aLine);
 	}
+
 /*
- *
+ * Study the animateLine() and main methods in this class and run the main method to
+ * create the animation.
  * 
- * Uncomment the code to create editor3 and change animateLine, if necessary,
- * to refresh all three editors (hint: does animateLine in this situation need
- * to know about any of the editors displaying the line?) .
+ * Uncomment the code to create editor3 and change animateLine if necessary to 
+ * refresh all three editors.
  * 
- * (T/F) Code animating an instance of AnObservableLine must know about the
- * user-interface objects displaying it.
+ * In ObservableLine, which of the following is required to animate the line in 
+ * a third editor:
  * 
- * What is causing the line to be updated? The answer lies in the new setX()
- * method: it notifies each object editor frame that it has changed. 
+ * (a) The header of animateLine() must be changed.
+ * (b) The body of animateLine() must be changed.
+ * (c) None of the above.
  * 
- * This code illustrates the observer pattern for connecting objects. In this 
- * pattern, an "observable" object defines a method to register one or
- * more observer objects. Here, the registered observer objects are stored in the
- * propertySupport variable, which is of type APropertySupport.
+ * (T/F) animateLine() in AObservableLine is aware of the the user-interface
+ * code (OEFrame) objects displaying the lines. 
  * 
- * Each write method of the observable calls a "notification method" in each
- * "observer" to notify it about the change. Here, this is done through the
- * APropertyListenerSupport object.
- * 
+ * In ObservableLine, which methods are aware of the OE frames displaying
+ * a line object: * 
+ *    (a) The main method.
+ *    (b) animateLine()
+ *    (c) equals()   
  *  
- * In this code, the instance methods implement the observer behavior and the static
- * main method calls ObjectEditor.edit() to display an instance of this class.
+ * The remaining exercises try to explain what makes this code different.
+ */
+/* 
+ * INTUITION
  * 
- * The edit() method inside ObjectEditor creates appropriate observers and registers them
- * with the displayed observable. Whenever the observable changes due to the invocation
- * of a write method, it informs ObjectEditor of the change, which updates its display.
+ * Based on the English meaning of these two terms, which are true:
+ * (a) "Observer" objects learn about changes to "observable" objects.
+ * (b) "Observable" objects learn about changes to "observer" objects.
  * 
- * Now, to see more details of  how this pattern is implemented, go and follow the 
- * instructions in the setX() and addPropertyChangeListener() methods.
+ * If object A must learn about every change to the state of object B as soon as it occurs
+ * (a) A should periodically ask B about its current state (say every 100 ms).
+ * (b) B should inform A about each change to it as soon as it occurs.
+ * (c) A should know about B, that is, B should be "registered" with A.
+ * (d) B should know about A, that is, A should be "registered" with B.
  * 
- * The observer registration method in AnObservableLine is a method named:
+ * Which is true, 
+ * (a) An observable should allow observers to be registered with it.
+ * (b) An observer should allow observables to be registered with it.
+ * 
+ * Let us now see what are some of the responsibilities of an observer
+ * and observer.
+ */
+/*
+ * WRITE AND READ METHODS IN OBSERVABLES
+ * 
+ * It overrides the write methods (re-implements the two setter methods).
+ * 
+ * A write method is one that changes object state. In a Bean, setters are write
+ * methods.
+ * 
+ * A read method is one that reads state. A getter is a read method.
+ * 
+ * Class AnObservableLine overrides:
+ * (a) all read methods of ANonObservableLine
+ * (b) all write methods of ANonObservableLine 
+ * 
+ * Given that this class defines an observer object, which of the following properties
+ * of an observable object are consistent with the code in this class.
+ * 
+ * To convert (the class of) a non observable object to an observable object:
+ * (a) all write methods must be changed.
+ * (b) all read methods must be changed.
+ * (c) none of the above
+ * 
+ */
+/*
+ * OBSERVER REGISTRATION 
+ * 
+ * addPropertyChangeListener is the observer registration method.
+ * 
+ * Its header is a standard header, meaning that it has to have a particular
+ * form, much like the main method header.
+ * 
+ * Unlike the main method, the form is defined by the Bean framework rather than Java.
+ * 
+ * Since it is an instance method, we can put it in an interface.
+ * 
+ * However, the Bean framework does not define such an interface.
+ * 
+ * The OE library defines such an interface, called PropertyListenerRegister. 
+ * 
+ * * The observer registration method in AnObservableLine is a method named:
  * 	(a) setX
  * 	(b) propertyChange
  * 	(c) animateLine
- *  	(d) addPropertyChangeListener
+ *  (d) addPropertyChangeListener
+ *  
+ *  The header of the observer registration code in AnObservableLine is:
+ * 	(a) a standard header defined by Java.
+ * 	(b) a standard header defined by the Bean framework.
+ *  (c) a non standard method.
+ *  
+ * Since it is a standard method, ObjectEditore understands it and calls it
+ * from edit(). Specifically, given an object o, edit(o) calls the method with
+ * the signature addPropertyChangeListener:PropertyChangeListener-->void on each
+ * object in the logical structure of o that defines such a method:
+ * 
+ * ObjectEditor.edit(o) calls the method with
+ * the signature addPropertyChangeListener:PropertyChangeListener-->void:
+ * (a) only on o if it implements the method.
+ * (b) only on leaf nodes in the logical structure of o that implement the method.
+ * (c) only on nodes in the logical structure that implement PropertyListenerRegisterer
+ * (d) all nodes in the logical structure that implement the method.
+ * 
+ * Follow the instructions in the comments surrounding the method. 
+ */ 
+	
+/*
+ * OBSERVER NOTIFICATION
+ * 
+ * Follow the instructions surrounding setX() when asked.
+ */	
+/*  
+ * COMPLETE PATTERN
+ * 
+ * This code illustrates the observer pattern for connecting objects. Which
+ * of the following is true about this pattern and this class.
+ * 
+ * (T/F) A "observable" object defines a method to register one or
+ * more observer objects. 
+ * 
+ * (T/F) In AnObservableLine the registered objects are added to a 
+ * collection of type: 
+ *  (a) PropertyListenerSupport.
+ *  (b) ArrayList
+ *  (c) LinkedList
+ *  (d) None of the above
+ * 
+ * In AnObservableLine, the registered objects are instances of:
+ * (a) ObservableLine
+ * (b) PropertyChangeLisetner
+ * (c) PropertyListenerSupport
+ * 
+ * (T/F) AnObservableLine calls the notification methods from:
+ * (a) some of its write methods
+ * (b) all of its write methods
+ * (c) some of its read methods
+ * (d) all of its read methods
+ * 
+ * Notification methods are invoked on instances of:
+ * (a) ObservableLine
+ * (b) PropertyChangeLisetner
+ * (c) PropertyListenerSupport  
+ * 
+ * Each write method in AnObservableLine announces to the observers:
+ *   (a) exactly one notification
+ *   (b) at least one notification
+ *   (c) no notification
+ *  
+ * (T/F) The registration method of AnObservableBMISpreadsheet notifies the 
+ * registered observe
  * 
  */
+	
 }

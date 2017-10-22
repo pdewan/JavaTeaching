@@ -1,4 +1,4 @@
-/**
+/*
  * PRAXIS-INFO
  * 
  * We will now address a persistent problem in our animations - how to refresh

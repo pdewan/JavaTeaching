@@ -15,10 +15,7 @@ import bus.uigen.ObjectEditor;
  * 
  * Study the code and follow the instructions at the end.
  * 
- * Also take a look at the equals() method to see how a comparison method 
- * might be written for a specific class. It overrides a generic Object equals()
- * method that only returns true if two object variables refer to the exact same object,
- * not when they refer to different equivalent objects.
+ 
  * 
  */
 public class ANonObservableLine implements Line {
@@ -40,18 +37,24 @@ public class ANonObservableLine implements Line {
 	public void setWidth(int newVal) {width = newVal;}
 	public int getHeight() {return height;}
 	public void setHeight(int newHeight) {height = newHeight;}	
-	
+	/**
+	 * Also take a look at the equals() method to see how a comparison method 
+	 * might be written for a specific class. It overrides a generic Object equals()
+	 * method that only returns true if two object variables refer to the exact same object,
+	 * not when they refer to different equivalent objects.
+	 */
 	public boolean equals(Object otherVal) {
 		if (!(otherVal instanceof Line)) {
 			return false;
 		}
 		Line otherLine = (Line) otherVal;
-		return (x == otherLine.getX() && y == otherLine.getY() && width == otherLine.getWidth() && height == otherLine.getHeight());
+		return (x == otherLine.getX() && y == otherLine.getY() && 
+				width == otherLine.getWidth() && height == otherLine.getHeight());
 	}
 	
-	protected static int NUM_STEPS = 10;
-	protected static long SLEEP_TIME = 500;
-	protected static int X_STEP = 10;
+	protected final static int NUM_STEPS = 10;
+	protected final static long SLEEP_TIME = 500;
+	protected final static int X_STEP = 10;
 	/**
 	 * Creates an animation displayed in two editors.
 	 */
@@ -67,12 +70,18 @@ public class ANonObservableLine implements Line {
 			editor2.refresh();
 		}
 	}
+
 	
+	protected static final int INIT_X = 10;
+	protected static final int INIT_Y = 10;
+	protected static final int INIT_WIDTH = 30;
+	protected static final int INIT_HEIGHT = 30;
+
 	/**
 	 * Supplies the parameters to animateLine
 	 */
 	public static void main(String args[]) {
-		Line aLine = new ANonObservableLine(10, 10, 30, 30);
+		Line aLine = new ANonObservableLine(INIT_X, INIT_Y, INIT_WIDTH, INIT_HEIGHT);
 		OEFrame editor1 = ObjectEditor.edit (aLine);
 		OEFrame editor2 = ObjectEditor.edit (aLine);
 //		OEFrame editor3 = ObjectEditor.edit (aLine);
@@ -82,20 +91,32 @@ public class ANonObservableLine implements Line {
  * Study the animateLine() and main methods and run the main method to
  * create the animation.
  * 
- * Uncomment the code to create editor3 and change animateLine to 
+ * Uncomment the code to create editor3 and change animateLine if necessary to 
  * refresh all three editors.
  * 
- * Note that animateLine must be passed an extra parameter and the loop
- * must be changed.
+ * In ANonObservableLine, which of the following is required to animate the line in 
+ * a third editor:
  * 
- * This is because the animation code  must know about each editor 
- * that displays a line.
+ * (a) The header of animateLine() must be changed.
+ * (b) The body of animateLine() must be changed.
+ * (c) None of the above.
  * 
- * (T/F) Calling the refresh() method on ObjectEditor is bad because it forces
- * code animating an object to know about ObjectEditor frames displaying it.
- *  
- * (T/F) Asking user-interface code to redisplay a computation object
- *  is bad because it does not support the separation of concerns principle.
+ * (T/F) animateLine() in ANonObservableLine is aware of the the user-interface
+ * code (OEFrame) objects displaying the lines. 
+ * 
+ * In ANonObservableLine, which methods are aware of the OE frames displaying
+ * a line object:
+ * 
+ *    (a) The main method.
+ *    (b) animateLine()
+ *    (c) equals()
+ * 
+ * (T/F) Code that manipulates an object (e.g. animateLine()) should be aware of
+ * the user-interface code (e.g. ObjectEditor) that displays it.  
+ * 
+ * (T/F) Asking code that manipulates an object (e.g. animateLine()) to call the
+ * ObjectEditor refresh method is consistent with the separation of concerns
+ * principle.
  *  
  *  Go to: AnObservableLine
  */

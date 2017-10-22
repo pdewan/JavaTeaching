@@ -20,31 +20,7 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
  * is a separate one, which is done in a composer object.
  * 
  * Study the code below.
- * 
- * The state (data) shared by the two UIs (OE and custom) is maintained by:
- * (a) model
- * (b) view
- * (c) controller
- * (d) widget-tree composer
- * 
- * (T/F) The widgets displaying readonly properties need to accessed by the controller.  
- * (T/F) The widgets displaying editable properties need to be accessed by the controller.
- * (T/F) The widgets displaying readonly properties need to accessed by the view.  
- * (T/F) The widgets displaying editable properties need to be accessed by the view.
- * 
- *
- * (T/F) BMIMVCComposer gives the controller a reference to the model.
- * (T/F) BMIMVCCompsoer gives the model a reference to the controller.
- * (T/F) BMIMVCComposer creates a connection between the model and controller.
- * 
- * (T/F) BMIMVCCompsoer gives the view a reference to the model.
- * (T/F) BMIMVCCompsoer gives the model a reference to the view.
- * (T/F) BMIMVCComposer creates a connection between the model and view.
- * 
- * (T/F) A view is an observer.
- * (T/F) A model is an observable.
- * 
- * Next class: ABMIFrameComposer    
+ *   
  * 
  */
 
@@ -88,3 +64,31 @@ public class BMIMVCComposer {
 	}
 	
 }
+/* 
+ * 
+ * The state (data) shared by the two UIs (OE and custom) is maintained by:
+ * (a) model
+ * (b) view
+ * (c) controller
+ * (d) widget-tree composer
+ * 
+ * (T/F) The widgets displaying readonly properties need to accessed by the controller.  
+ * (T/F) The widgets displaying editable properties need to be accessed by the controller.
+ * (T/F) The widgets displaying readonly properties need to accessed by the view.  
+ * (T/F) The widgets displaying editable properties need to be accessed by the view.
+ * 
+ *
+ * (T/F) BMIMVCComposer gives the controller a reference to the model.
+ * (T/F) BMIMVCCompsoer gives the model a reference to the controller.
+ * (T/F) BMIMVCComposer creates a connection between the model and controller.
+ * 
+ * (T/F) BMIMVCCompsoer gives the view a reference to the model.
+ * (T/F) BMIMVCCompsoer gives the model a reference to the view.
+ * (T/F) BMIMVCComposer creates a connection between the model and view.
+ * 
+ * (T/F) A view is an observer.
+ * (T/F) A model is an observable.
+ * 
+ * Next class: ABMIFrameComposer    
+ * 
+ */

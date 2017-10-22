@@ -10,6 +10,54 @@ import javax.swing.JTextField;
  * Here we see how to write our own observer.
  * 
  * Study the code.
+ *
+ */
+public class ABMISpreadsheetView implements PropertyChangeListener {
+	JTextField heightField, weightField;
+	JSlider bmiSlider;
+	JProgressBar bmiProgressBar;
+	public ABMISpreadsheetView (JTextField theHeightField, JTextField theWeightField, 
+			                    JSlider theBMISlider, JProgressBar theBMIProgressBar) {
+		heightField = theHeightField;
+		weightField = theWeightField;
+		bmiSlider = theBMISlider;	
+		bmiProgressBar = theBMIProgressBar;
+	}
+	
+	/*
+	 * Method called on a PropertyChangeListener when a property event is fired.
+	 * The ObjectEditor views implement this method.
+	 * Here, one of our views is doing so.	 
+	 */
+	public void propertyChange(PropertyChangeEvent event) {
+		String propertyName = event.getPropertyName();
+		Double newValue = (Double) event.getNewValue();
+		
+		/* 
+		 * Depending on which property was updated, change the appropriate widget 
+		 */
+		if (propertyName.equalsIgnoreCase("height")) {
+			
+			/* 
+			 * setText is just like println except that it updates existing text rather 
+			 * than displaying an additional value
+			 */
+			heightField.setText(newValue.toString()); 
+		} else if (propertyName.equalsIgnoreCase("weight")) {		
+			weightField.setText(event.getNewValue().toString());
+		} else if (propertyName.equalsIgnoreCase("bmi")) {
+			double newBMI = newValue;
+			
+			/*
+			 * The slider and progress bar understand int values
+			 */
+			bmiSlider.setValue((int) newBMI);
+			bmiProgressBar.setValue((int) newBMI);
+		}		
+	}	
+
+}
+/**
  * 
  * Debug-run MVCToolkitMain.
  * 
@@ -65,48 +113,3 @@ import javax.swing.JTextField;
  * Next class: ABMISpreadsheetController
  *  
  */
-public class ABMISpreadsheetView implements PropertyChangeListener {
-	JTextField heightField, weightField;
-	JSlider bmiSlider;
-	JProgressBar bmiProgressBar;
-	public ABMISpreadsheetView (JTextField theHeightField, JTextField theWeightField, 
-			                    JSlider theBMISlider, JProgressBar theBMIProgressBar) {
-		heightField = theHeightField;
-		weightField = theWeightField;
-		bmiSlider = theBMISlider;	
-		bmiProgressBar = theBMIProgressBar;
-	}
-	
-	/*
-	 * Method called on a PropertyChangeListener when a property event is fired.
-	 * The ObjectEditor views implement this method.
-	 * Here, one of our views is doing so.	 
-	 */
-	public void propertyChange(PropertyChangeEvent event) {
-		String propertyName = event.getPropertyName();
-		Double newValue = (Double) event.getNewValue();
-		
-		/* 
-		 * Depending on which property was updated, change the appropriate widget 
-		 */
-		if (propertyName.equalsIgnoreCase("height")) {
-			
-			/* 
-			 * setText is just like println except that it updates existing text rather 
-			 * than displaying an additional value
-			 */
-			heightField.setText(newValue.toString()); 
-		} else if (propertyName.equalsIgnoreCase("weight")) {		
-			weightField.setText(event.getNewValue().toString());
-		} else if (propertyName.equalsIgnoreCase("bmi")) {
-			double newBMI = newValue;
-			
-			/*
-			 * The slider and progress bar understand int values
-			 */
-			bmiSlider.setValue((int) newBMI);
-			bmiProgressBar.setValue((int) newBMI);
-		}		
-	}	
-
-}

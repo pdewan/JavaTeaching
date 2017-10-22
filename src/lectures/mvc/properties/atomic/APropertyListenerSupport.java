@@ -6,7 +6,7 @@ import java.beans.PropertyChangeListener;
 import lectures.mvc.properties.PropertyListenerSupport;
 
 public class APropertyListenerSupport implements PropertyListenerSupport {
-	public final int MAX_SIZE = 50;
+	public static final int MAX_SIZE = 50;
 	
 	// Here we see an array that is capable of storing listeners. Each observer will
 	// register a listener with an observable.
@@ -35,27 +35,29 @@ public class APropertyListenerSupport implements PropertyListenerSupport {
 		}
 	}
 	
-	/**
-	 * The method notifyAllListeners calls propertyChange():
-	 *  (a) a single time on one of the registered observers.
-	 *  (b) once for each registered observer.
-	 *  (c) never.
-	 *  
-	 * The method propertyChange is:
-	 *  (a) a notification method invoked on a registered observer.
-	 *  (b) a registration method invoked on an observer.
-	 *  (c) a setter invoked on an observer.
-	 */
+	
 	public void notifyAllListeners(PropertyChangeEvent event) {
-		for (int index = 0; index < size(); index++) {
-			/*
-			 * Hover over propertyChange to see its documentation
-			 * Hover over event to see its instance variables
-			 * What kind of object does get(index) return?
-			 */
+		for (int index = 0; index < size(); index++) {			
 			get(index).propertyChange(event);
 		}
 	}
+/*
+ * 
+ * Hover over the "propertyChange" to see its documentation
+ * When the program is stopped at this statement,
+ * hover over "event" to see its instance variables
+ * What kind of object does get(index) return?
+			
+ * The method notifyAllListeners calls the propertyChange():
+ *  (a) a single time on one of the registered observers.
+ *  (b) once for each registered observer.
+ *  (c) never.
+ *  
+ * The method propertyChange is:
+ *  (a) a notification method invoked on a registered observer.
+ *  (b) a registration method invoked on an observer.
+ *  (c) a setter invoked on an observer.
+ */
 	public void remove(PropertyChangeListener element) {
 		contents[indexOf(element)] = contents[size - 1];
 		size--;

@@ -13,15 +13,12 @@ import javax.swing.JTextField;
 import bus.uigen.ObjectEditor;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
 /**
- * Study the program and run it.
+ * This is the class that creates the UI. It provides a method to compose
+ * the widgets in a JFrame and methods to to retrieve the widgets. 
  * 
- * Try and change the various widgets in the user-interface.
+ * These widget are shared by both the controller and view.
  * 
- * (T/F) Changing the height field in the custom UI created by ABMIFrameComposer
- * causes changes in other widgets.
- *
- * Next class: ABMISpreadsheetView
- * 
+ * Study the program. 
  *
  */
 public class ABMIFrameComposer implements BMIFrameComposer{	
@@ -48,6 +45,9 @@ public class ABMIFrameComposer implements BMIFrameComposer{
 		bmiPanel.add(bmiSlider);
 		bmiPanel.add(bmiProgressBar);		
 	}
+	/**
+	 * Method called by BMIMVCComposer to create the UI
+	 */
 	public JFrame composeFrame() {
 		composeLabelledField(heightPanel, heightLabel, heightField);
 		composeLabelledField(weightPanel, weightLabel, weightField);
@@ -94,4 +94,16 @@ public class ABMIFrameComposer implements BMIFrameComposer{
 		aFrame.setVisible(true);
 	}
 }
+/*
+ * Run the program.
+ * 
+ * Try and change the various widgets in the user-interface.
+ * 
+ * (T/F) Changing the height field in the custom UI created by ABMIFrameComposer
+ * causes changes in other widgets.
+ *
+ * Next class: ABMISpreadsheetView
+ * 
+ *
+ */
 

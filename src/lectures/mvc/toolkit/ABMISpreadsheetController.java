@@ -10,9 +10,48 @@ import lectures.interfaces.BMISpreadsheet;
  * As we see below, ABMISpreadSheetController is not only a controller for 
  * the model, but an observer of the editable widgets, which are not models!
  * 
- * Here, a listener == observer
- * 
- * Study the code below.
+ * Here, a listener == observer *  
+ *  
+ */
+public class ABMISpreadsheetController 
+	implements ActionListener { // The observer interface defined by the editable widgets
+	JTextField height, weight;
+	BMISpreadsheet bmiSpreadsheet;
+	public ABMISpreadsheetController (BMISpreadsheet theBMISpreadsheet, JTextField theHeight, JTextField theWeight) {
+		height = theHeight;
+		weight = theWeight;
+		bmiSpreadsheet = theBMISpreadsheet;
+		
+		/*
+		 *  Making this object an observer of two different observable widgets
+		 */
+		height.addActionListener(this);
+		weight.addActionListener(this);
+	}
+	/*
+	 *  Method called on an observer of a textfield when a user enters new 
+	 *  text and presses ENTER.
+	 */
+	public void actionPerformed(ActionEvent event) {
+	
+		JTextField source = (JTextField) event.getSource();
+		String text = source.getText();
+		double val = Double.parseDouble(text);
+		// Depending on which observable notified, do different things
+		if (source == height) {
+			
+			/*
+			 * Step into this call to trace the actions that lead to a 
+			 * new BMI value being displayed by the progress bar and slider
+			 */
+			bmiSpreadsheet.setHeight(val);
+			
+		} else {
+			bmiSpreadsheet.setWeight(val);
+		}		
+	}	
+}
+/**
  * 
  * (T/F) ABMISpreadsheetController is an observer of a JSlider widget.
  * 
@@ -55,42 +94,3 @@ import lectures.interfaces.BMISpreadsheet;
  *
  *  
  */
-public class ABMISpreadsheetController 
-	implements ActionListener { // The observer interface defined by the editable widgets
-	JTextField height, weight;
-	BMISpreadsheet bmiSpreadsheet;
-	public ABMISpreadsheetController (BMISpreadsheet theBMISpreadsheet, JTextField theHeight, JTextField theWeight) {
-		height = theHeight;
-		weight = theWeight;
-		bmiSpreadsheet = theBMISpreadsheet;
-		
-		/*
-		 *  Making this object an observer of two different observable widgets
-		 */
-		height.addActionListener(this);
-		weight.addActionListener(this);
-	}
-	/*
-	 *  Method called on an observer of a textfield when a user enters new 
-	 *  text and presses ENTER.
-	 */
-	public void actionPerformed(ActionEvent event) {
-	
-		JTextField source = (JTextField) event.getSource();
-		String text = source.getText();
-		double val = Double.parseDouble(text);
-		// Depending on which observable notified, do different things
-		if (source == height) {
-			
-			/*
-			 * Step into this call to trace the actions that lead to a 
-			 * new BMI value being displayed by the progress bar and slider
-			 */
-			bmiSpreadsheet.setHeight(val);
-			
-		} else {
-			bmiSpreadsheet.setWeight(val);
-		}		
-	}	
-	
-}

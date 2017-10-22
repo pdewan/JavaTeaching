@@ -9,23 +9,10 @@ import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import util.annotations.ObserverRegisterer;
 import util.annotations.ObserverTypes;
-/**
- * Study this code to create an observable BMI Spreadsheet. 
+/*
+ * Study this code for creating an observable BMI Spreadsheet. 
+ *  
  * 
- * Compare it with the code for creating an AnObservableLine (from the last praxis,
- * Ctrl+click to go there)
- * 
- * Each read method in AnObservableBMISpreadsheet announces to the observers:
- *   (a) exactly one notification
- *   (b) at least one notification
- *   (c) no notification
- *
- * Each write method in AnObservableBMISpreadsheet announces to the observers:
- *   (a) exactly one notification
- *   (b) at least one notification
- *   (c) no notification
- *   
- *   Next class: MVCToolkitMain
  */
 
 public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements ObservableBMISpreadsheet  {
@@ -62,9 +49,27 @@ public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements Obser
 	
 	public void addPropertyChangeListener(PropertyChangeListener listener) {
 		propertyListenerSupport.add(listener);
+		//inform observers about the initial value of the object
 		listener.propertyChange(new PropertyChangeEvent(this, "Weight", 0, getWeight()));
 		listener.propertyChange(new PropertyChangeEvent(this, "Height", 0, getHeight()));
 		listener.propertyChange(new PropertyChangeEvent(this, "BMI", 0, getBMI()));		
 	}
 		
 }
+/* 
+ *
+ * Each write method in AnObservableBMISpreadsheet announces to the observers:
+ *   (a) exactly one notification
+ *   (b) at least one notification
+ *   (c) no notification
+ *  
+ * (T/F) The registration method of AnObservableBMISpreadsheet notifies the 
+ * registered observers.
+ * 
+ * An instances of AnObservableBMISpreadsheet informs its observes about:
+ * (a) The initial values of its properties.
+ * (b) Changes to the values of its properties.
+ * (c) None of the above.
+ *   
+ *   Next class: MVCToolkitMain
+ */
