@@ -2,7 +2,7 @@ package lectures.animation.threads.wait_notify;
 
 import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 /*
  NOTIFY ALL
  This program is like its superclass except that it uses a different implementation of the Clearance

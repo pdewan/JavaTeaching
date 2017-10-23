@@ -1,5 +1,7 @@
 package lectures.mvc.properties;
 
+import lectures.mvc.graphics.AnObservableCartesianPlane;
+import lectures.mvc.graphics.ObservableCartesianPlane;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

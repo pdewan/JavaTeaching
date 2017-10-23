@@ -3,6 +3,7 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import lectures.mvc.graphics.ObservableCartesianPlane;
 import util.annotations.Tags;
 @Tags({"Observer"})
 public class ACartesianPlaneEventCounter implements PropertyChangeListener{

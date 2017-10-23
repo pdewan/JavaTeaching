@@ -19,6 +19,8 @@ import bus.uigen.ObjectEditor;
  * 
  * An "observable" interacts with its "observers".
  * 
+ * A listener == observer 
+ * 
  * The goal of this praxis is to help explain to what an observable and observer
  * exactly mean in Computer Science.
  *  

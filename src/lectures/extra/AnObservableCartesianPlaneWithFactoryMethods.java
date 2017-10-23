@@ -5,8 +5,8 @@ import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.inheritance.virtual_abstract_factory_methods.ACartesianPlaneWithFactoryMethod;
+import lectures.mvc.graphics.ObservableCartesianPlane;
 import lectures.mvc.properties.AnObservableStringShape;
-import lectures.mvc.properties.ObservableCartesianPlane;
 import lectures.mvc.properties.ObservableStringShape;
 import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;

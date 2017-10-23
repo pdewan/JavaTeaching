@@ -6,7 +6,7 @@ import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.extra.AnObservableStringSet;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 import bus.uigen.attributes.AttributeNames;

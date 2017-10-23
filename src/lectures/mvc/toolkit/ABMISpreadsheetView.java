@@ -13,9 +13,28 @@ import javax.swing.JTextField;
  *
  */
 public class ABMISpreadsheetView implements PropertyChangeListener {
+/*
+ *  ABMISpreadsheet IS-A:
+ *     (c) JFrame
+ *     (d) Component
+ *     (e) None of the above	
+ *     
+ * (T/F) ABMISpreadsheetView IS-A PropertyChangeListener.
+ *
+ */
 	JTextField heightField, weightField;
 	JSlider bmiSlider;
 	JProgressBar bmiProgressBar;
+/*
+ * Move insertion point before JTextFeld and press F4, CTRL_T, or 
+ * Right Menu--> Quick Type Hierarchy/Show Type Hierarchy
+ * 
+ * ABMISpreadSheet HAS-A (has an instance variable of type/supertype):
+ *    (a) JFrame
+ *    (b) Component
+ *    (d) None of the above
+ *  
+ */
 	public ABMISpreadsheetView (JTextField theHeightField, JTextField theWeightField, 
 			                    JSlider theBMISlider, JProgressBar theBMIProgressBar) {
 		heightField = theHeightField;
@@ -57,7 +76,11 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
 	}	
 
 }
-/**
+/*
+ * (T/F) ABMISoreadsheetView overrides a method called paint();
+ * 
+ */
+/*
  * 
  * Debug-run MVCToolkitMain.
  * 
@@ -91,6 +114,9 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
  * (b) weightField.setText()
  * (c) bmiSlider.setValue()
  * (d) bmiProgressBar.setValue()
+ * 
+ * (T/F) propertyChange() in ABMISpreadsheetView calls a method called repaint()
+ * 
  *  
  * Terminate the running program. 
  *
@@ -104,7 +130,7 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
  * 
  * Step through for a while until you see what is going on.
  * 
- * When the view becomes an observer of the model, 
+ * When ABMISpreadsheetView becomes an observer of its model, 
  * (a) the widgets displaying all properties are refreshed.
  * (b) the widgets displaying editable properties are refreshed.
  * (c) the widgets displaying readonly properties are refreshed.

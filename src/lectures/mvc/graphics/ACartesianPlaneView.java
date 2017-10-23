@@ -11,11 +11,23 @@ import java.beans.PropertyChangeListener;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.graphics.Line;
 import lectures.graphics.StringShape;
-import lectures.mvc.properties.ObservableCartesianPlane;
 
 public class ACartesianPlaneView 
-	extends Component // inheriting the basic window behavior of being paintable and insertable in a parent container
+   /*
+    * inheriting the basic window behavior of being paintable and insertable in a 
+    * parent container
+    */
+	extends Component 
 	implements PropertyChangeListener {	
+/*
+ *    
+ *  ACartesianPlaneView IS-A:
+ *     (a) JFrame
+ *     (b) Component
+ *     (c) None of the above
+ *     
+ *  (T/F) ACartesianPlaneView IS-A PropertyChangeListener	
+ */
     // Some magic to draw a sotted line
 	BasicStroke dotted = new BasicStroke(
   	      1f, 
@@ -25,7 +37,15 @@ public class ACartesianPlaneView
   	      new float[] {2f}, 
   	      0f);
 	// Other views did not store models in instance variables, why do it here?
-	ObservableCartesianPlane cartesianPlane;	
+	ObservableCartesianPlane cartesianPlane;
+	
+	/*
+	 * ACartesianPlaneView HAS-A (has an instance variable of type/supertype):
+	 *    (a) JFrame
+	 *    (b) Component
+	 *    (d) None of the above
+	 *  
+	 */
 	public ACartesianPlaneView(ObservableCartesianPlane aCartesianPlane) {
 		cartesianPlane = aCartesianPlane;
 
@@ -41,7 +61,7 @@ public class ACartesianPlaneView
 		 */
 		System.out.println(("Repaint called by:" + Thread.currentThread()));
 
-		/* put breakpoint here */
+		/* put breakpoint here when asked */
 		repaint(); 
 	}	
 	@Override
@@ -49,8 +69,8 @@ public class ACartesianPlaneView
 	
 	public void paint(Graphics g) {
 		System.out.println(("Paint called by:" + Thread.currentThread()));
-		/* Put break point below */
-		super.paint(g); // do whatever the superclass does with the method, in case it does something essential
+		super.paint(g); // do whatever the superclass does with the method, 
+		// in case it does something essential
 		// The graphics object is a pen on which you can do several operations		
 		Graphics2D g2 = (Graphics2D) g;
 		// which is really a Graphics2D object
@@ -58,15 +78,7 @@ public class ACartesianPlaneView
 		g.setColor(Color.BLUE);	 // its color	
 		draw(g, cartesianPlane); // and of course you can ask it to draw
 	}
-	/*
-	 Put a break point in paint and also at the call to repaint  and debug-run it.
-	 Change the axes length
-	 Resize the frame
-	 How many times did the paint method get called?
-	 How many times did the repaint call get executed?
-	 What is at the bottom of the stack?
-	 Is the call to main at the bottom of the stack?	
-	 */
+	
 
 		
     public  void draw(Graphics g, CartesianPlane aCartesianPlane) {
@@ -85,4 +97,20 @@ public class ACartesianPlaneView
 		String s = aLabel.getText();
 		g.drawString(s, aLabel.getX(), aLabel.getY());		
 	}
+/*
+ * (T/F) ACartesianPlaneView overrides a method called paint();
+ * 
+ * (T/F) propertyChange() in ACartesianPlaneView calls a method called repaint()
+ * 
+ *  The method drawLine() is invoked on an object of type:
+ *        (a) Component
+ *        (b) JFrame
+ *        (c) Graphics 
+ *        
+ * (T/F) ACartesianPlaneView registers its instances with its model(s) by calling 
+ * addPropertyChangeListener() method an in it.
+ *
+ * Return to CartesianPlaneComposer
+ */
+	
 }

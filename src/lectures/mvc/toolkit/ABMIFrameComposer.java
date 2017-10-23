@@ -101,6 +101,18 @@ public class ABMIFrameComposer implements BMIFrameComposer{
  * 
  * (T/F) Changing the height field in the custom UI created by ABMIFrameComposer
  * causes changes in other widgets.
+ * 
+ * A widget in Java is an object whose class IS-A Component and is displayed in
+ * a rectangular area.
+ * 
+ * Recall that you can determine the IS-A hierarchy of a class (such as
+ * JTextField, JProgressBar) by putting the
+ * insertion point before its name and Right_Menu-->Show Type Hierarchy or
+ * Open Type Hierarchy (F4, CTRL_T)
+ * 
+ * 
+ * (T/F) Each property of the model is displayed in at least widget (instance
+ * of a Component)
  *
  * Next class: ABMISpreadsheetView
  * 

@@ -1,4 +1,4 @@
-package lectures.mvc.properties;
+package lectures.mvc.graphics;
 
 import lectures.composite.objects_shapes.CartesianPlane;
 import util.models.PropertyListenerRegisterer;

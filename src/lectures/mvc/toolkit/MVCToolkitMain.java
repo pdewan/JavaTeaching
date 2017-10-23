@@ -26,7 +26,7 @@ public class MVCToolkitMain {
 }
 /*
  * 
- * Run and interact with the program to see the two GUIS created, one by our editor
+ * Run and interact with the program to see the two GUIS created, the custom one by our editor
  * and one by ObjectEditor. Experiment with the two UIs - change the editable
  * properties in each and observe the effect on different widgets. 
  * 

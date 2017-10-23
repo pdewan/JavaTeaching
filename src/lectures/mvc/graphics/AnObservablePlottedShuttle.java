@@ -1,10 +1,12 @@
-package lectures.mvc.properties;
+package lectures.mvc.graphics;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.APlottedShuttle;
+import lectures.mvc.properties.AnObservableImageWithHeight;
+import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import bus.uigen.ObjectEditor;
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
@@ -44,3 +46,6 @@ public class AnObservablePlottedShuttle extends APlottedShuttle implements Obser
 	}
 
 }
+/*
+ * Next class PlottedShuttleComposer
+ */

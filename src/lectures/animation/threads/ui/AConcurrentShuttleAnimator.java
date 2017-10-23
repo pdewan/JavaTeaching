@@ -2,7 +2,7 @@ package lectures.animation.threads.ui;
 
 import lectures.animation.threads_commands.AShuttleAnimationCommand;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

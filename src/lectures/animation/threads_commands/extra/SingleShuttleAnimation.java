@@ -4,7 +4,7 @@ import lectures.animation.threads_commands.AShuttleAnimator;
 import lectures.animation.threads_commands.ShuttleAnimator;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 // ANMIMATION_BASICS

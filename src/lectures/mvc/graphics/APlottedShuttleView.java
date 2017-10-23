@@ -7,10 +7,16 @@ import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes.ImageWithHeight;
-import lectures.mvc.properties.ObservableCartesianPlane;
-import lectures.mvc.properties.ObservablePlottedShuttle;
 
-public class APlottedShuttleView extends ACartesianPlaneView implements PropertyChangeListener {   
+public class APlottedShuttleView extends ACartesianPlaneView implements PropertyChangeListener { 
+/*   
+ *  APlottedShuttleView IS-A:
+ *     (a) JFrame
+ *     (b) Component
+ *     (c) None of the above
+ *     
+ *  (T/F) APlottedShuttleView IS-A PropertyChangeListener.	
+ */
 	ObservablePlottedShuttle plottedShuttle;	
 	public APlottedShuttleView(ObservablePlottedShuttle aPlottedShuttle) {
 		// can we get rid of the cast while still doing reuse?
@@ -20,6 +26,7 @@ public class APlottedShuttleView extends ACartesianPlaneView implements Property
 	}		
 	public void paint(Graphics g) {
 		super.paint(g);
+		System.out.println ("Paint called in APLottedShuttleView");
 		Graphics2D g2 = (Graphics2D) g;
 		draw(g2, plottedShuttle.getShuttleImage());
 	}
@@ -29,3 +36,18 @@ public class APlottedShuttleView extends ACartesianPlaneView implements Property
 	}	
 	
 }
+/*
+ * (APlottedShuttleView:
+ *  (a) inherits paint()
+ *  (b) overrides  paint();
+ *  (c) None of the above
+ *  
+ * 
+ * APlottedShuttleView:
+ * (a) inherits propertyChange()
+ * (b) overrides propertyChange()
+ * (c) None of the above
+ * 
+ *
+ * Return to PlottedShuttleComposer (ALT <-)
+ */

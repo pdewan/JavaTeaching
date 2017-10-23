@@ -1,4 +1,4 @@
-package lectures.mvc.properties;
+package lectures.mvc.graphics;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -7,12 +7,16 @@ import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
+import lectures.mvc.properties.AnObservableStringShape;
+import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import lectures.mvc.properties.atomic.AnObservableLine;
 import bus.uigen.ObjectEditor;
-// PROPERTY-BASED NOTIFICATION IN COMPOSITE OBJECTS
-// So far our observables had atomic properties
-// How does the observable change when it has Object properties
+
+/**
+ * So far our observables had non Bean properties
+ * Some of the properties of this observable are themselves observable beans
+ */
 @StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class AnObservableCartesianPlane extends ACartesianPlane implements ObservableCartesianPlane {
  
@@ -37,8 +41,35 @@ public class AnObservableCartesianPlane extends ACartesianPlane implements Obser
 		propertySupport.add(listener);
 		
 	}
+/*
+ * AnObervableCartesianPlane sends notifications for changes to its:
+ *   (a) AxesLength property
+ *   (b) the X property of the object assigned to its XAxis property.
+ *   (c) None of the above
+ *   
+ * (T/F) A model M must send  notifications for editable properties in those nodes in 
+ * its logical structure that are obervables;
+ * 
+ * A view displaying the entire logical structure of an object, O, should be registered
+ * with:
+ * 
+ * (a) all nodes in the logical structure that are observables
+ * (b) only the root node in the logical structure. 
+ * 
+ * We will revisit this question later if you cannot answer it right now.
+ * 
+ * Next Class: ACartesianPlaneView
+ */
+    protected static final int INIT_AXES_LENGTH = 200;
+    protected static final int INIT_ORIGIN_X = 125;
+    protected static final int INIY_ORIGIN_Y = 125;
     public static void main (String[] args) {
-    	CartesianPlane plane = new AnObservableCartesianPlane(200, 125, 125);
+    	CartesianPlane plane = 
+    		new AnObservableCartesianPlane(INIT_AXES_LENGTH, INIT_ORIGIN_X, INIT_ORIGIN_Y);
     	ObjectEditor.edit(plane);
-    }	
+    }
+/*
+ * 
+ */
 }
+ 

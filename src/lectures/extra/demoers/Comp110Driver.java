@@ -2,7 +2,7 @@ package lectures.extra.demoers;
 
 import lectures.composite.objects_shapes_extra.ALoan;
 import lectures.graphics.ACartesianPoint;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import lectures.objects.ABMICalculator;
 import lectures.objects.ASquareCalculator;
 import lectures.types.math.ABMIAndOverweightSpreadsheet;

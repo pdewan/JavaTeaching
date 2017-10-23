@@ -2,9 +2,9 @@ package lectures.animation.threads.ui;
 
 import lectures.animation.threads.synchronized_methods.ASynchronizedShuttleAnimator;
 import lectures.composite.objects_shapes.PlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.ObservablePlottedShuttle;
 import lectures.mvc.graphics.PlottedShuttleComposer;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
-import lectures.mvc.properties.ObservablePlottedShuttle;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 /**

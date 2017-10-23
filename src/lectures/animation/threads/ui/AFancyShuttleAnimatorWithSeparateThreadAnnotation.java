@@ -1,7 +1,7 @@
 package lectures.animation.threads.ui;
 
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.mvc.properties.AnObservablePlottedShuttle;
+import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import util.annotations.SeparateThread;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

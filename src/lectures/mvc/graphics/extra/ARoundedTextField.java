@@ -1,4 +1,4 @@
-package lectures.mvc.graphics;
+package lectures.mvc.graphics.extra;
 
 import java.awt.Frame;
 import java.awt.Graphics;

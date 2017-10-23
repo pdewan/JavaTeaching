@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
+import lectures.mvc.graphics.ObservableCartesianPlane;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import bus.uigen.ObjectEditor;
 // HOW NOT TO CREATE COMPOSITE OBSERVABLES
