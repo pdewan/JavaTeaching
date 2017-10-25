@@ -15,8 +15,6 @@ import bus.uigen.ObjectEditor;
  * 
  * Study the code and follow the instructions at the end.
  * 
- 
- * 
  */
 public class ANonObservableLine implements Line {
 	int x, y, width, height;
@@ -88,8 +86,9 @@ public class ANonObservableLine implements Line {
 		animateLine (aLine, editor1, editor2);
 	}
 /*
- * Study the animateLine() and main methods and run the main method to
- * create the animation.
+ * Study the animateLine() and main methods.
+ * 
+ * Run the main method to create the animation.
  * 
  * Uncomment the code to create editor3 and change animateLine if necessary to 
  * refresh all three editors.
@@ -100,12 +99,10 @@ public class ANonObservableLine implements Line {
  * (a) The header of animateLine() must be changed.
  * (b) The body of animateLine() must be changed.
  * (c) None of the above.
+ *  
  * 
- * (T/F) animateLine() in ANonObservableLine is aware of the the user-interface
- * code (OEFrame) objects displaying the lines. 
- * 
- * In ANonObservableLine, which methods are aware of the OE frames displaying
- * a line object:
+ * In ANonObservableLine, which methods are aware of the user-interface code
+ * (OE frames) displaying a line object:
  * 
  *    (a) The main method.
  *    (b) animateLine()

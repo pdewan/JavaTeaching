@@ -26,7 +26,7 @@ import bus.uigen.ObjectEditor;
  *  
  * Study also the class, APropertyListenerSupport, used in this code.
  *  
- * Then skip down to the instructions at the bottom of this page and start there.
+ * Then skip down to the instructions at the end of the main() and start there.
  *
  */
 public class AnObservableLine extends ANonObservableLine implements ObservableLine  {
@@ -98,6 +98,7 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 		 */		 
 		propertySupport.add(aListener); 
 /*
+ * 
  * Look at the bottom two methods in the stack (in the debug window). Each method
  * in the stack was called by the method below it, so looking at the bottom can help
  * you see how you got to this break point.
@@ -110,11 +111,11 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  *   (b) when the main method is invoked in AnObservableLine.
  *   (c) each time ObjectEditor.edit() is called.
  *   
- * The class of the argument of addPropertyChangeListener is an instance of:
- *   (a) AnObservableLine
- *   (b) APropertyChangeSupport
- *   (c) PropertyChangeEvent
- *   (b) LineAdapter		    
+ * The type of the argument of addPropertyChangeListener is an instance of:
+ *   (a) ObservableLine
+ *   (b) PropertyListenerSupport
+ *   (c) PropertyChangeListener
+ *   (d) None of the above
  * 
  * 
  * Step into the add method.
@@ -161,13 +162,11 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * (a) The header of animateLine() must be changed.
  * (b) The body of animateLine() must be changed.
  * (c) None of the above.
+ *
  * 
- * (T/F) animateLine() in AObservableLine is aware of the the user-interface
- * code (OEFrame) objects displaying the lines. 
- * 
- * In ObservableLine, which methods are aware of the OE frames displaying
- * a line object: * 
- *    (a) The main method.
+ * In ObservableLine, which methods are aware of the user-interface code 
+ * (OE frames) displaying a line object:  
+ *    (a) the main method.
  *    (b) animateLine()
  *    (c) equals()   
  *  
@@ -180,7 +179,8 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * (a) "Observer" objects learn about changes to "observable" objects.
  * (b) "Observable" objects learn about changes to "observer" objects.
  * 
- * If object A must learn about every change to the state of object B as soon as it occurs
+ * If object A must learn about every change to the state of object B as soon as 
+ * it occurs:
  * (a) A should periodically ask B about its current state (say every 100 ms).
  * (b) B should inform A about each change to it as soon as it occurs.
  * (c) A should know about B, that is, B should be "registered" with A.
@@ -196,12 +196,13 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 /*
  * WRITE AND READ METHODS IN OBSERVABLES
  * 
- * It overrides the write methods (re-implements the two setter methods).
+ * It overrides the write methods.
  * 
- * A write method is one that changes object state. In a Bean, setters are write
- * methods.
+ * A write method is one that changes object state. 
  * 
- * A read method is one that reads state. A getter is a read method.
+ * A read method is one that reads state.
+ * 
+ * (T/F) The method getX() inherited by AnObservableLine is a write method.
  * 
  * Class AnObservableLine overrides:
  * (a) all read methods of ANonObservableLine
@@ -232,7 +233,7 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * 
  * The OE library defines such an interface, called PropertyListenerRegister. 
  * 
- * * The observer registration method in AnObservableLine is a method named:
+ * The observer registration method in AnObservableLine is a method named:
  * 	(a) setX
  * 	(b) propertyChange
  * 	(c) animateLine
@@ -256,6 +257,7 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * (d) all nodes in the logical structure that implement the method.
  * 
  * Follow the instructions in the comments surrounding the method. 
+ * That is, follow the instructions in addPropertyChangeListener.
  */ 
 	
 /*
@@ -266,42 +268,37 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
 /*  
  * COMPLETE PATTERN
  * 
+ * (T/F) The registration method of AnObservableBMISpreadsheet notifies the 
+ * registered observers.
+ * 
  * This code illustrates the observer pattern for connecting objects. Which
  * of the following is true about this pattern and this class.
  * 
- * (T/F) A "observable" object defines a method to register one or
- * more observer objects. 
- * 
- * (T/F) In AnObservableLine the registered objects are added to a 
- * collection of type: 
- *  (a) PropertyListenerSupport.
- *  (b) ArrayList
- *  (c) LinkedList
- *  (d) None of the above
- * 
- * In AnObservableLine, the registered objects are instances of:
- * (a) ObservableLine
- * (b) PropertyChangeLisetner
- * (c) PropertyListenerSupport
- * 
- * (T/F) AnObservableLine calls the notification methods from:
- * (a) some of its write methods
- * (b) all of its write methods
- * (c) some of its read methods
- * (d) all of its read methods
- * 
- * Notification methods are invoked on instances of:
- * (a) ObservableLine
- * (b) PropertyChangeLisetner
- * (c) PropertyListenerSupport  
- * 
- * Each write method in AnObservableLine announces to the observers:
- *   (a) exactly one notification
- *   (b) at least one notification
- *   (c) no notification
+ * Which is true:
+ *	a) An observer object defines a standard method to register one or
+ * 	more observable objects. 
+ *	b) An observable object defines a standard method to register one or
+ * 		more observer objects.
+ *  c) None of the above.
  *  
- * (T/F) The registration method of AnObservableBMISpreadsheet notifies the 
- * registered observe
+ *  Which is true?
+ *  a) Write methods of an observer send change notifications
+ *	b) Read methods of an observer send change notifications.
+ *  c) Write methods of an observable send change notifications.
+ *  d) Read methods of an observable send change notifications.
+ * 
+ *
+ * Which is true (in the Bean framework)?
+ * 	a) An observer knows at least one interface of an observable.
+ * 	b) An observable knows at least one interface of an observer.
+ * 
+ * Which is true?
+ * 	a) All observers of an observable must implement a common interface.
+ *  b) All observables of an observer must implement a common interface.
+ * 
+ *  
+ *  
+ 
  * 
  */
 	
