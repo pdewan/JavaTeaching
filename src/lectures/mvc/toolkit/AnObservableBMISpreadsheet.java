@@ -12,7 +12,6 @@ import util.annotations.ObserverTypes;
 /*
  * Study this code for creating an observable BMI Spreadsheet. 
  *  
- * 
  */
 
 public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements ObservableBMISpreadsheet  {
@@ -56,7 +55,7 @@ public class AnObservableBMISpreadsheet extends ABMISpreadsheet implements Obser
 	}
 		
 }
-/* 
+/*  
  *
  * Each write method in AnObservableBMISpreadsheet announces to the observers:
  *   (a) exactly one notification

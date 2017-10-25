@@ -111,8 +111,12 @@ public class ABMIFrameComposer implements BMIFrameComposer{
  * Open Type Hierarchy (F4, CTRL_T)
  * 
  * 
- * (T/F) Each property of the model is displayed in at least widget (instance
+ * (T/F) Each property of the model is displayed in at least one widget (instance
  * of a Component)
+ * 
+ * (T/F) No two properties of the model are displayed in the same widget.
+ * 
+ * (T/F) No property of the model is displayed in multiple widgets.
  *
  * Next class: ABMISpreadsheetView
  * 

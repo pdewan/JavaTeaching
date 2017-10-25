@@ -77,7 +77,10 @@ public class ABMISpreadsheetView implements PropertyChangeListener {
 
 }
 /*
- * (T/F) ABMISoreadsheetView overrides a method called paint();
+ * ABMISpreadsheetView overrides a method called: 
+ *    paint()
+ *    repaint()
+ *    None of the above
  * 
  */
 /*

@@ -10,7 +10,7 @@ import lectures.interfaces.BMISpreadsheet;
  * As we see below, ABMISpreadSheetController is not only a controller for 
  * the model, but an observer of the editable widgets, which are not models!
  * 
- * Here, a listener == observer 
+ * Again, a listener == observer 
  *  
  */
 public class ABMISpreadsheetController 
@@ -51,7 +51,7 @@ public class ABMISpreadsheetController
 		}		
 	}	
 }
-/**
+/*
  * 
  * (T/F) ABMISpreadsheetController is an observer of a JSlider widget.
  * 
