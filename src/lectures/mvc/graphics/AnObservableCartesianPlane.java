@@ -44,21 +44,22 @@ public class AnObservableCartesianPlane extends ACartesianPlane implements Obser
 /*
  * AnObervableCartesianPlane sends notifications for changes to its:
  *   (a) AxesLength property
+ *   (b) XAxis property
  *   (b) the X property of the object assigned to its XAxis property.
  *   (c) None of the above
  *   
- * (T/F) A model M must send  notifications for editable properties in those nodes in 
- * its logical structure that are obervables;
+ * (T/F) A model needs to send  notifications for editable properties in those 
+ * nodes in its logical structure that are obervables.
  * 
- * A view displaying the entire logical structure of an object, O, should be registered
- * with:
+ * An observer view displaying the entire logical structure of an observable
+ * should be registered with:
  * 
  * (a) all nodes in the logical structure that are observables
  * (b) only the root node in the logical structure. 
  * 
  * We will revisit this question later if you cannot answer it right now.
  * 
- * Next Class: ACartesianPlaneView
+ * Next Class: CartesianPlaneComposer
  */
     protected static final int INIT_AXES_LENGTH = 200;
     protected static final int INIT_ORIGIN_X = 125;

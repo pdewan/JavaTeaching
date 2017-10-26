@@ -72,25 +72,30 @@ public class PlottedShuttleComposer {
  * Look at the console output
  * 
  * When the plotted shuttle model changes, 
- *    (a) the repaint() method is called by code in APlottedShuttleView
- *    (b) the repaint() method is called by code in ACartesianPlaneView
+ *    (a) the repaint() method is called by code contained in APlottedShuttleView
+ *    (b) the repaint() method is called by code contained in ACartesianPlaneView
  *    (c) the paint() method implemented in APlottedShuttleView is called
  *    (d) the paint method implemented in ACartesianPlaneView is called
  *    (e) None of the above
  *    
- * Go to APlottedShuttleKeyController  
+ *Given a component c of class C, when the component needs to be redrawn, a paint()
+ *methods implemented by 
+ *   (a) class C should be called
+ *   (b) all superclasses of C should be called
+ *   (c) None of the above
+ *    
+ * Go to APlottedShuttleKeyController and answer the questions there
  * 
- * (T/F) PlottedShuttleComposer attaches the model it creates to a single view.
- * (T/F) PlottedShuttleComposer attaches the model it creates to a single controller.
+ * (T/F) PlottedShuttleComposer attaches the model it creates to a single custom
+ *      (non ObjectEditor) view.
+ * (T/F) PlottedShuttleComposer attaches the model it creates to a single 
+ * 		(non ObjectEditor) controller.
  * 
  * (T/F) APlottedShuttleView is an observer of PlottedShuttleModel.
  * (T/F) APlottedShuttleKeyController is an observer of APlottedShuttleView.
  * 
- * APlottedShuttleView is an:
+ * (T/F) An observer cannot be an observable
  * 
- * (a) observer
- * (b) observable
- * (c) None of the above
  * 
  */
 

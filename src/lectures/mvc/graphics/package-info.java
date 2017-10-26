@@ -6,6 +6,7 @@
 package lectures.mvc.graphics;
 /*
  * Navigation Info
+ * 
  * AnObservableCartesianPlane
  * CartesianPlaneComposer
  * ACartesianPlaneView

@@ -12,10 +12,11 @@ import bus.uigen.ObjectEditor;
 /*
  * GRAPHICS AND MVC
  *
- * We have creates using predefined widgets, which are windows with canned behavior.
- * Now we will use window directly to do implement custom graphics.
- * Run the program, change the AxesLength property in the ObjectEditor user-interface
- * and and see what happens to the custom view
+ * We have created MVC using predefined widgets.
+ * 
+ * Now we will use widgets directly to do implement custom graphics.
+ * 
+ * Study the program and go to the end.
  */
 public class CartesianPlaneComposer {
 	protected final static int FRAME_WIDTH = 300;
@@ -63,8 +64,8 @@ public class CartesianPlaneComposer {
  * 
  * Go to ACartesianPlaneView and answer the questions there.
  * 
- * (T/F) CartesianPlaneComposer registers an  instances of ACartesianPlaneView
- *  with the model(s) of the view by calling addPropertyChangeListener() method an in it.
+ * (T/F) CartesianPlaneComposer registers instances of ACartesianPlaneView
+ *  with the model(s) of the view (by calling addPropertyChangeListener).
  * 
  * Repeated question
  * A view displaying the entire logical structure of an object, O, should be registered
@@ -74,14 +75,14 @@ public class CartesianPlaneComposer {
  * (b) only the root node in the logical structure.
  * 
  * ACartesianPlaneView displays:
- * (a) a single node (property) in the logical structure of its model.
- * (b) multiple nodes (properties) in the logical structure of its model.
+ * (a) a single node (property) in the logical structure of ACartesianPlane
+ * (b) multiple nodes (properties) in the logical structure of ACartesianPlane.
  * 
- * (T/F) A property of ObservableCartesianPlane is displayed in multiple widgets
- * (instances of Component)
+ * (T/F) ACartesianPlaneView displays some property of ObservableCartesianPlane 
+ * in multiple widgets(instances of Component)
  * 
- * (T/F) Multiple properties of ObservableCartesianPlane are displayed in a 
- * single widget (instances of Component)
+ * (T/F) ACartesianPlaneView displays multiple property of ObservableCartesianPlane 
+ * in a single widget.
  * 
  * Look at the console output:
  * 
@@ -93,11 +94,13 @@ public class CartesianPlaneComposer {
  * 
  * (T/F) Each call to paint() is preceded by a call to repaint()
  * 
- * The paint() method is called in a component:
- * (a) The repaint() method is called in it.
- * (b) when the frame containing the component is resized.
+ * The paint() method is called in a component when:
+ * (a) the repaint() method is called in it.
+ * (b) the frame containing the component is resized.
  * (c) None of the above
  * 
+ * (T/F) The paint() method is called in a component to give it a chance to redraw
+ * itself in response to some condition that requires new content to be drawn.
  * 
  * 
  * Set a break point in paint() and Debug-Run the command and resize the custom
@@ -105,6 +108,7 @@ public class CartesianPlaneComposer {
  *
  * What is at the bottom of the stack?
  * Is the call to main at the bottom of the stack?
+ * You will better understand what is going on when we study threads.
  * 
  * Next class: PlottedShuttleComposer	
  */

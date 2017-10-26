@@ -18,7 +18,15 @@ public class APlottedShuttleMouseController implements MouseListener {
 		 */
 		shuttleComponent.addMouseListener(this);
 	}
+/*
+ * APlottedShuttleMouseController IS-A
+ *    (a) Component
+ *    (b) KeyListener
+ *    (c) MouseListener
+ *    (d) None of the above
+ */
 	// This mouse event we care about
+	// The mouse click notification method
 	public void mouseClicked(MouseEvent e) {
     	System.out.println ("Mouse clicked:");
 
@@ -36,7 +44,7 @@ public class APlottedShuttleMouseController implements MouseListener {
  * 
  * (T/F) When the left mouse button is pressed a method in APlottedShuttleMouseController
  * is called.
- * (T/F) when a key is pressed, a method in APlottedShuttleMouseController is called
+ * (T/F) When a key is pressed, a method in APlottedShuttleMouseController is called
  * 
  * To answer the question above, look at mouseClicked and if necessary,  again:
  * 
@@ -44,20 +52,10 @@ public class APlottedShuttleMouseController implements MouseListener {
  * Press the x key somewhere in the custom view and see what happens.
  * Press the y key somewhere in the custom view and see what happens.
  *  
- * Look at the constructor.
+ * (T/F) An instance of APlottedShuttleMouseController knows about, that is,
+ * has a reference to an instance of APlottedKeyController.
  * 
- * Listener = Observer
- * 
- * APlottedShuttleMouseController is an 
- *   (a) observer of an object of type Component
- *   (b) observable of an object of type Component
- *   (c) observer of an object of type ObservablePlottedShuttle
- *   (c) None of the above
- * 
- * Look at the method mouseClicked
- *  
- * (T/F) APlottedShuttleMoController calls methods in its model in response
- * to user input 	 
+ * (T/F) Controllers of the same model can be independent of each other.
  * 
  * Return to PlottedShuttleComposer
  */

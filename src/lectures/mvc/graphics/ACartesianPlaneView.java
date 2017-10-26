@@ -98,17 +98,25 @@ public class ACartesianPlaneView
 		g.drawString(s, aLabel.getX(), aLabel.getY());		
 	}
 /*
- * (T/F) ACartesianPlaneView overrides a method called paint();
+ * (ACartesianPlaneView overrides a method called:
+ *     paint()
+ *     repaint()
+ *     None of the above
  * 
- * (T/F) propertyChange() in ACartesianPlaneView calls a method called repaint()
+ * propertyChange() in ACartesianPlaneView calls:
+ *    (a) repaint()
+ *    (b) paint()
+ *    (c) None of the above
  * 
  *  The method drawLine() is invoked on an object of type:
  *        (a) Component
  *        (b) JFrame
  *        (c) Graphics 
  *        
+ * (T/F) ACartesianPlaneView instantiates an object of type Graphics
+ *        
  * (T/F) ACartesianPlaneView registers its instances with its model(s) by calling 
- * addPropertyChangeListener() method an in it.
+ * addPropertyChangeListener() method an in the model(s).
  *
  * Return to CartesianPlaneComposer
  */
