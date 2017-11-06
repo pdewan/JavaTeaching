@@ -8,15 +8,8 @@ import util.misc.Console;
 /**
  * 
  * Study this interactive program. 
- * 
- * Run it.
- *
- * Enter these two course-title lines and then a period: 
- * "Intro. Prog."
- * "Meaning of Life"
- * "."
- * 
- * Answer the questions below.
+ * Follow the instructions at the end.
+ *  
  */
 
 public class ACourseDisplayer1 extends ACourseDisplayer  {
@@ -40,6 +33,15 @@ public class ACourseDisplayer1 extends ACourseDisplayer  {
 	}
 	
 /*
+ * Run the program.
+ *
+ * Enter these two course-title lines and then a period: 
+ * "Intro. Prog."
+ * "Meaning of Life"
+ * "."
+ * 
+ * Answer the questions below.
+ * 
  * ABSTRACT CLASSES AND METHODS, CONTINUED
  * 
  * (T/F) Each abstract method in ACourseDisplayer is overridden in 

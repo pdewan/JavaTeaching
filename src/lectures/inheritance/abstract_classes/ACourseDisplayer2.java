@@ -5,15 +5,9 @@ import java.util.Scanner;
 import lectures.inheritance.abstract_classes.courselist.ACourseList;
 import lectures.inheritance.abstract_classes.courselist.CourseList;
 import util.misc.Console;
-/*
+/**
  * Now compare the factory methods in ACourseDislayer1 and ACourseDisplayer2.
- * 
- * Run this program and provide the same input you provided to ACourseDislayer1.
- * 
- * (T/F) ACourseDislayer1 and ACourseDisplayer2 provide the same functionality,
- * that is, produce the same output for each input.
- * 
- * Answer the questions below.
+ *
  */
 
 public class ACourseDisplayer2 extends ACourseDisplayer {
@@ -35,6 +29,19 @@ public class ACourseDisplayer2 extends ACourseDisplayer {
 		aCourseDisplayer.fillCourses();
 		aCourseDisplayer.matchTitles();
 	}
+/*
+ * 
+ * Run this program and provide the same input you provided to ACourseDisplayer1:
+ * 
+ * "Intro. Prog."
+ * "Meaning of Life"
+ * ".
+ * 
+ * (T/F) ACourseDislayer1 and ACourseDisplayer2 provide the same functionality,
+ * that is, produce the same output for each input.
+ * 
+ * Answer the questions below.
+ */
 	
 /*
  * COMMON METHODS

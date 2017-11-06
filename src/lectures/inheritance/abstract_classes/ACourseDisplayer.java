@@ -7,7 +7,7 @@ import lectures.inheritance.abstract_classes.courselist.CourseList;
 import util.misc.Console;
 /**
  * This class illustrates the nature of abstract classes and methods.
- * 
+ * Study the code and then follow the instructions at the end.
  */
 
 public 
@@ -67,7 +67,7 @@ public
 //    protected static CourseDisplayer createCourseDisplayer() {
 //    	return new ACourseDisplayer();
 //    } 
-/**
+/*
  * ABSTRACT CLASSES AND METHODS
  * 
  * An abstract method is one that has the keyword abstract in its header.
