@@ -1,5 +1,4 @@
 package lectures.types.math;
-
 public class ACastConversionDemo {
 	public static final double EXAMPLE_DOUBLE = 5.4;
 	public static final long EXAMPLE_LONG = Long.MAX_VALUE;
@@ -14,24 +13,22 @@ public class ACastConversionDemo {
 //		System.out.println(EXAMPLE_LONG + " --> in:" + aLongToInt);			
 	}
 /*
- * Uncomment the code in the method above by selecting it and pressing CTRL.
- * Look at the errors. Hover over each of them and see the suggestions.
- * Take the one that asks for cast. Run the program.
+ * Uncomment the code in the method above by using @block-comment (CTRL \). 
+ * Look at the errors. Hover over each of them and click on them see the suggestions.
+ * Take a suggestion that asks for a cast. Execute @run (CTRL-F11).
  * 
- * The first print statement displays:
- * (a) 0
- * (b) NAN
- * (c) 5 
+ * Q.The first print statement displays:
+ *	(a) 0
+ *	(b) NAN
+ *X	(c) 5 
  * 
- * Which of the the following statements are consistent with your observations:=
- * 
- * If T1 is a subset of T2, an expression of type T2
- * (a) can never be assigned to a variable of type T1.
- * (b) can be assigned to a variable of type T1 using a cast, which does a lossy
+ *Q. Which of the the following statements are consistent with your observations. 
+ *   If T1 is a subset of T2, an expression of type T2
+ *	(a) can never be assigned to a variable of type T1.
+ *X	(b) can be assigned to a variable of type T1 using a cast, which does a lossy
  *     conversion of T2 to T1.
- * (c) can be assigned to a variable of type T1 using a cast, which converts the
+ *	(c) can be assigned to a variable of type T1 using a cast, which converts the
  *     value to 0.
- * 
  */
 	
 	public static void main (String[] args) {
