@@ -250,7 +250,7 @@ public class AConsoleReadingUpperCasePrinter {
 		 * When the String "Albert Einstein" is input, the tokens produced are
 		 * the strings:
 		 *     (a) "Albert" and "Einstein"
-		 *     (b) "A" and "B"
+		 *     (b) "A" and "E"
 		 *     (c) None of the above
 		 *     
 		 *  The values of variable, index, when the print is executed are:
