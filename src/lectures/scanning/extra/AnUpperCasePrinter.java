@@ -1,4 +1,4 @@
-package lectures.scanning;
+package lectures.scanning.extra;
 public class AnUpperCasePrinter {
 	public static void main(String[] args) {
 		if (args.length != 1) {

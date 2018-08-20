@@ -21,9 +21,9 @@ public class InstantiatingFactorialSpreadsheetUse {
 		 * A primitive value is not an instance of any class, that is,
 		 * does not have a class.
 		 * 
-		 * (T/F) One of the roles of a class is to define a new type and a 
-		 * set of values (called instances) of that types.
-		 * 
+		 * (T/F) One of the roles of a class is to define a new type and provide
+		 * a mechanism for creating a (possibly infinite) set of values 
+		 * (called instances) of that types.
 		 */
 		
 		/*
@@ -76,11 +76,11 @@ public class InstantiatingFactorialSpreadsheetUse {
 		 * Is uncommenting the above statement legal?
 		 * 
 		 * (T/F)An instance method can be invoked on a class, that is, it can be
-		 * invoked by prefixing the method name with the (name of the class + ".').
+		 * invoked by prefixing the method name with the name of the class + ".' 
 		 * 
 		 
 		 * (T/F)A static method can be invoked on a class, that is, it can be
-		 * invoked by prefixing the method name with the (name of the class + ".').
+		 * invoked by prefixing the method name with the name of the class + ".'.
 		 * 
 		 * (T/F) A class C1 can call a static method declared in class C2 without 
 				instantiating it.

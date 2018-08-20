@@ -83,4 +83,4 @@
  * 
  * What is wrong with a copy and paste solution in which we create two copies of code?
  */
-package lectures.class_dual_roles.statics;
+package lectures.class_dual_roles.statics.extra;

@@ -1,4 +1,4 @@
-package lectures.class_dual_roles.statics;
+package lectures.class_dual_roles.statics.extra;
 
 public class SingleMethodPermutations {
 	public static void main (String[] args) {

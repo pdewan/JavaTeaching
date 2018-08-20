@@ -1,4 +1,4 @@
-package lectures.class_dual_roles.statics;
+package lectures.class_dual_roles.statics.extra;
 public class FactorialWithPublicVariables {
     public static int number = 0; // last number for which factorial is computed
     public static int factorial;  // factorial for last number	 

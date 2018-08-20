@@ -23,10 +23,6 @@ import java.util.Scanner;
  * (T/F) The main method is static, that is, has the static keyword in its header.
  * 
  * (T/F) A static method can call both static and non-static methods.
- * 
- 
- * 
- * 
  *
  */
 public class AModularConsoleReadingUpperCasePrinter {

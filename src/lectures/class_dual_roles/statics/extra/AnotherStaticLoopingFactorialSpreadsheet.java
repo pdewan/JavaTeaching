@@ -1,4 +1,7 @@
-package lectures.class_dual_roles.statics;
+package lectures.class_dual_roles.statics.extra;
+
+import lectures.class_dual_roles.statics.Factorials;
+
 /**
  * 
  * Copy of StaticLoopingFactorialSpreadsheet, with just the class name changed.

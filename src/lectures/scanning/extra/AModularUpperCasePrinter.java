@@ -1,4 +1,7 @@
-package lectures.scanning;
+package lectures.scanning.extra;
+
+import lectures.scanning.AModularConsoleReadingUpperCasePrinter;
+
 public class AModularUpperCasePrinter {
 	public static void main(String[] args) {
 		if (args.length != 1) {

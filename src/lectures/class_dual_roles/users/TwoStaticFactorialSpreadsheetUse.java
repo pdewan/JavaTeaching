@@ -1,8 +1,8 @@
 package lectures.class_dual_roles.users;
 
-import lectures.class_dual_roles.statics.AnotherStaticLoopingFactorialSpreadsheet;
 import lectures.class_dual_roles.statics.Factorials;
 import lectures.class_dual_roles.statics.StaticLoopingFactorialSpreadsheet;
+import lectures.class_dual_roles.statics.extra.AnotherStaticLoopingFactorialSpreadsheet;
 
 public class TwoStaticFactorialSpreadsheetUse {
 	

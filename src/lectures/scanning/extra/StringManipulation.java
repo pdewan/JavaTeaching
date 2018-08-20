@@ -1,4 +1,4 @@
-package lectures.scanning;
+package lectures.scanning.extra;
 
 public class StringManipulation {
 	public static void main (String[] args) {
