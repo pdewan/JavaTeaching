@@ -1,5 +1,6 @@
 /**
- * 
+ * Some of the questions have been rephrased in the quiz. In general, the
+ * quiz questions trump over the ones here.
  */
 /**
  * @author Dewan
