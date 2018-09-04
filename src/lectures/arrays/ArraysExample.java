@@ -6,9 +6,9 @@ import lectures.extra.Loan;
 import lectures.interfaces.ABMISpreadsheet;
 import lectures.interfaces.ALoopingFactorialSpreadsheet;
 import lectures.interfaces.ARecursiveFactorialSpreadsheet;
-import lectures.interfaces.AnotherBMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
 import lectures.interfaces.FactorialSpreadsheet;
+import lectures.interfaces.extra.AnotherBMISpreadsheet;
 
 public class ArraysExample {
 	// initialized arrays

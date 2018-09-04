@@ -1,11 +1,8 @@
-package lectures.least_privilege;
+package lectures.interfaces.extra;
 
-import lectures.interfaces.BMISpreadsheet;
 
-public class ALbInchBMISpreadsheetWithLocalVariables implements BMISpreadsheet{    
-	double height, weight, bmi;
-	final double LBS_IN_KG = 2.2;
-    final double CMS_IN_INCH = 2.54;   
+public class ALbInchBMISpreadsheetUsingInterfaceConstants implements LBInchBMISpreadsheet{    
+	double height, weight, bmi;	
 	public double getHeight() {
         return height;
     }

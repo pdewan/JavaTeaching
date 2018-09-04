@@ -81,7 +81,18 @@ public class UsingConstructors {
 		print(aBMISpreadsheet);		
 	}
 /*
- * If c is an instance of C, then println(c) displays:
+ * A memory address is an int from 0 to MemorySize -1. 
+ * Every object loaded in memory has a unique memory address
+ * A hashcode is also a number, about which you will learn in great depth
+ * in your data structure course. 
+ * Multiple objects can have the same hashcode.
+ * Both memory addresses and hashcodes can be printed using hex, in which case
+ * you will find both digits and letters in their representation.
+ * To answer the question below, you need to see the printouts created by
+ * print().
+ * 
+ * Look at 
+ * If c is an instance of C, one of the things println(c) displays is:
  *     a) the properties of c.
  *     b) the memory address of c.
  *     c) the hashcode of c.
@@ -103,7 +114,7 @@ public class UsingConstructors {
  * (T/F) It makes sense for an instance of ABMISpreadsheet to have height and
  * weight set to 0.  
  * 
- * (T/F) (Without calling setters) It is possible to create an instance of 
+ * (T/F) (Without *directly* calling setters) It is possible to create an instance of 
  * ABMISpreadsheet whose height and weight properties are initialized to values 
  * chosen by the instantiator.
  */

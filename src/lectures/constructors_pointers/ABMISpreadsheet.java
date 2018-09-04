@@ -9,7 +9,7 @@ public class ABMISpreadsheet  {
 	/*
 	 * Initializing declaration
 	 */
-//	double height = 1.77;
+//	double height = 1.57;
 	
 	/*
 	 * A constructor, not seen before.  

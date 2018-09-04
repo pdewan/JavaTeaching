@@ -5,8 +5,8 @@ import util.annotations.PropertyNames;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.annotations.Tags;
-import lectures.interfaces.AnotherBMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
+import lectures.interfaces.extra.AnotherBMISpreadsheet;
 
 @Tags({ "Quote" })
 @PropertyNames({ "Height", "Weight", "BMI"/*, "IdealBMI"*/ })

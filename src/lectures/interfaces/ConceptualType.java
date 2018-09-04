@@ -1,4 +1,6 @@
 package lectures.interfaces;
+
+
 /*
  * 
  * This class motivates but does not use interfaces.

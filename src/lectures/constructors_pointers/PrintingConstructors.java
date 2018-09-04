@@ -30,6 +30,10 @@ public class PrintingConstructors {
  * 
  * (T/F) The compiled object code of a class might not contain a constructor.
  * 
+ * Inserting a constructor in object code implies that some constructor is added to
+ * the object code that did not exist in the source code.
+ * 
+ * 
  * The complier:
  *   a) may insert a constructor in the object code.
  *   b) always inserts a constructor in the object code.

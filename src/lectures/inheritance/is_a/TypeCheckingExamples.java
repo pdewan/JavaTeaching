@@ -20,11 +20,6 @@ import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
-/*
- * This class uses several examples to illustrate the IS-A relationship 
- * and some its implications in type checking and program execution.
- * 
- */
 
 public class TypeCheckingExamples {
 

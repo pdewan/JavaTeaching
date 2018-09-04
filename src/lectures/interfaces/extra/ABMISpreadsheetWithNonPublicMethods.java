@@ -1,11 +1,10 @@
-package lectures.least_privilege;
+package lectures.interfaces.extra;
 
 import lectures.interfaces.BMISpreadsheet;
 
-public class ALbInchBMISpreadsheetWithLocalVariables implements BMISpreadsheet{    
+public class ABMISpreadsheetWithNonPublicMethods implements BMISpreadsheet{    
 	double height, weight, bmi;
-	final double LBS_IN_KG = 2.2;
-    final double CMS_IN_INCH = 2.54;   
+    
 	public double getHeight() {
         return height;
     }
@@ -23,13 +22,10 @@ public class ALbInchBMISpreadsheetWithLocalVariables implements BMISpreadsheet{
     public double getBMI() {
         return bmi;
     }
-    //not least privilege
-//  double heightInMeters = height*CMS_IN_INCH/100;
-    double calculateBMI() {    	
-        double heightInMeters = height*CMS_IN_INCH/100; // least privilege
-        return (weight/LBS_IN_KG) /
-        (heightInMeters*heightInMeters);
-
+    // removes code duplication; not in interface
+    double calculateBMI() {
+        return weight/(height*height);
     }
+
 }
 

@@ -1,6 +1,4 @@
 package lectures.interfaces;
-
-
 public interface BMISpreadsheet {	
 	double getWeight();
 	void setWeight(double newValue);	

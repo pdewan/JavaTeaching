@@ -45,7 +45,7 @@ public class UninitializedVariables {
  * 
  * (T/F) A constructor can initialize an arbitrary uninitialized global variable.
  * 
- * Because of constructors, Java's rules regarding whether a variable 
+ * (T/F) Because of constructors, Java's rules regarding whether a variable 
  * can be uninitialized distinguish between local and global variables.
  * 
  * An uninitialized primitive variable of type T has:

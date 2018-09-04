@@ -1,4 +1,9 @@
-package lectures.interfaces;
+package lectures.interfaces.extra;
+
+import lectures.interfaces.ALoopingFactorialSpreadsheet;
+import lectures.interfaces.ARecursiveFactorialSpreadsheet;
+import lectures.interfaces.FactorialSpreadsheet;
+
 /**
  * Now we no longer differentiate between variables holding instances of the 
  * two factorial classes.
@@ -6,7 +11,7 @@ package lectures.interfaces;
  * interface rather than a class.
  * This class illustrates why interfaces are important.
  */
-public class NextTimePolymorphicType {	
+public class ProposalPolymorphicType {	
 /*
  * Go to the declaration of FactorialSpreadsheet (interface), ALoopingFactorialSpreadsheet,
  * and  ARecursiveFactorialSpreadsheet ((Fn) F3/ (CTRL/CMD) click). 
@@ -88,7 +93,7 @@ public static void casting() {
 		System.out.println ("Before the call to maybeAssignToA a is assigned an instance of:" + a.getClass().getSimpleName());
 		maybeAssignToA();
 		System.out.println ("After the call to maybeAssignToA a is assigned an instance of:" + a.getClass().getSimpleName());		
-//		callPrints();		
+		callPrints();		
 //		printInstanceOf();	
 	}
 /*
@@ -186,21 +191,26 @@ public static void casting() {
 	public static void printNonPolymoprhic (ALoopingFactorialSpreadsheet aFactorialSpreadsheet) {
 		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
 	}
+//	public static void printNonPolymoprhic (ARe aFactorialSpreadsheet) {
+//		System.out.println (aFactorialSpreadsheet.getNumber() + ":" + aFactorialSpreadsheet.getFactorial());
+//	}
 /* 
  * (T/F) The type of the formal parameter of printNonPolymoprhic is an interface.
  */	
 	
 	public static void callPrints() {
 		ALoopingFactorialSpreadsheet l = new ALoopingFactorialSpreadsheet();
+		l.setNumber(2);
 		ARecursiveFactorialSpreadsheet r = new ARecursiveFactorialSpreadsheet();
+		l.setNumber(3);
 /*	 
  * Uncomment the statements below and note the error messages.
  * Do the error messages make sense.
  */	
-//		printPolymorphic(l);
-//		printPolymorphic(r);
-//		printPolymorphic(a);
-//		printPolymorphic(b);
+		printPolymorphic(l);
+		printPolymorphic(r);
+		printPolymorphic(a);
+		printPolymorphic(b);
 //		
 //		printNonPolymoprhic(l);
 //		printNonPolymoprhic(r);
