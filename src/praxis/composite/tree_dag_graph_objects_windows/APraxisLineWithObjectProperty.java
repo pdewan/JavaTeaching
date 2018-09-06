@@ -1,8 +1,8 @@
 package praxis.composite.tree_dag_graph_objects_windows;
 
 import lectures.composite.tree_dag_graph_objects_windows.DAGCartesianPlane;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.annotations.Visible;

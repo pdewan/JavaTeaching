@@ -12,7 +12,7 @@ import java.io.PrintStream;
 
 import lectures.arrays.collections_kinds.extra.APointHistory;
 import lectures.arrays.collections_kinds.extra.PointHistory;
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 import bus.uigen.ObjectEditor;
 
 //need to uncomment the Serializable declarations in ACartesianPoint and APointHistory

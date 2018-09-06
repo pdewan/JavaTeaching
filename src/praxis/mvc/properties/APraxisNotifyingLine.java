@@ -4,8 +4,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import util.annotations.Tags;
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.Line;
 import bus.uigen.ObjectEditor;
 @Tags({"Model", "Observable"})
 public class APraxisNotifyingLine extends ALine implements PraxisObservableLine  {

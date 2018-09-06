@@ -1,7 +1,7 @@
 package lectures.inheritance.virtual_abstract_factory_methods;
 
 import lectures.arrays.collections_kinds.extra.PointHistory;
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 
 public abstract class AnAbstractPointHistory implements PointHistory{
 	public final int MAX_SIZE = 50;

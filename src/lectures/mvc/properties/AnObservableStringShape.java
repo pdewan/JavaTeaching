@@ -3,8 +3,8 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import lectures.graphics.AStringShape;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.StringShape;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 
 public class AnObservableStringShape extends AStringShape implements ObservableStringShape {

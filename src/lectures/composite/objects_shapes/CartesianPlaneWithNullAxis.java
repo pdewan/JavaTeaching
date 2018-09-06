@@ -1,6 +1,6 @@
 package lectures.composite.objects_shapes;
 
-import lectures.graphics.Line;
+import lectures.graphics.extra.Line;
 
 public interface CartesianPlaneWithNullAxis {
     public Line getXAxis();

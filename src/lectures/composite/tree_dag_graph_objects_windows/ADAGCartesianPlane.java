@@ -12,10 +12,10 @@ package lectures.composite.tree_dag_graph_objects_windows;
 
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.AStringShape;
-import lectures.graphics.Point;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.Point;
+import lectures.graphics.extra.StringShape;
 import util.annotations.Visible;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

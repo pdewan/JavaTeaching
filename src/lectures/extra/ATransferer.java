@@ -3,8 +3,8 @@ package lectures.extra;
 import java.util.ArrayList;
 import java.util.List;
 
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.Line;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

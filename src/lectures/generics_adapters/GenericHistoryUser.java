@@ -2,8 +2,8 @@ package lectures.generics_adapters;
 
 import java.util.Arrays;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 /**
  * This class illustrates the use of generics.
  * 

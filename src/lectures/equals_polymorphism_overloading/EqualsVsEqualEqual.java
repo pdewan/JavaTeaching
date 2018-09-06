@@ -2,8 +2,8 @@ package lectures.equals_polymorphism_overloading;
 
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import lectures.inheritance.ABaseStringHistory;
 import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;

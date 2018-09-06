@@ -2,7 +2,7 @@ package lectures.oegraphics;
 
 import java.awt.event.MouseEvent;
 
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.StringShape;
 import lectures.mvc.properties.AnObservableStringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

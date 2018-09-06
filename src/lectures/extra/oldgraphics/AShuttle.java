@@ -1,6 +1,6 @@
 package lectures.extra.oldgraphics;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import bus.uigen.ObjectEditor;
 //@StructurePattern(StructurePatternNames.LABEL_PATTERN)
 public class AShuttle implements ShuttleImage {

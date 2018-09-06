@@ -13,8 +13,8 @@ import javax.swing.JPanel;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.ImageWithHeight;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 import lectures.mvc.graphics.ObservablePlottedShuttle;
 import util.models.PropertyListenerRegisterer;
 

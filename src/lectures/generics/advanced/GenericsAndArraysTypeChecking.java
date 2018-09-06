@@ -5,8 +5,8 @@ import java.util.List;
 
 import lectures.generics_adapters.AHistory;
 import lectures.generics_adapters.History;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import lectures.inheritance.is_a.extra.BoundedPoint;
 
 public class GenericsAndArraysTypeChecking {

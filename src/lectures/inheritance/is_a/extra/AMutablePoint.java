@@ -1,6 +1,6 @@
 package lectures.inheritance.is_a.extra;
 
-import lectures.graphics.ACartesianPoint;
+import lectures.graphics.extra.ACartesianPoint;
 import lectures.inheritance.extra.MutablePoint;
 
 public class AMutablePoint extends ACartesianPoint implements MutablePoint {

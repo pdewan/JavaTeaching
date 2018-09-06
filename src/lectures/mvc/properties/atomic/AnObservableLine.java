@@ -4,8 +4,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import util.misc.ThreadSupport;
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.Line;
 import lectures.mvc.properties.PropertyListenerSupport;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;

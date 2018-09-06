@@ -1,7 +1,8 @@
 package lectures.test.junit;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+
+import lectures.graphics.extra.Point;
 
 //import org.junit.Test;
 import org.junit.Assert;

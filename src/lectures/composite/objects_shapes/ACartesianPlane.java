@@ -2,10 +2,10 @@ package lectures.composite.objects_shapes;
 
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
-import lectures.graphics.ALine;
-import lectures.graphics.AStringShape;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

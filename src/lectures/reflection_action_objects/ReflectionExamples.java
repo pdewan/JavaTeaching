@@ -3,8 +3,8 @@ package lectures.reflection_action_objects;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import lectures.interfaces.ABMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
 

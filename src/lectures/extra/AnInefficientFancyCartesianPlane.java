@@ -3,8 +3,8 @@ package lectures.extra;
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes_extra.FancyCartesianPlane;
-import lectures.graphics.AStringShape;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.StringShape;
 import bus.uigen.ObjectEditor;
 
 public class AnInefficientFancyCartesianPlane implements FancyCartesianPlane {

@@ -1,8 +1,8 @@
 package lectures.inheritance_vs_delegation.abstract_methods;
 
 import lectures.arrays.collections_kinds.extra.PointHistory;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 
 public class ADelegatingCartesianPointHistory implements DelegatingPointHistory{
 	PointHistory delegate;

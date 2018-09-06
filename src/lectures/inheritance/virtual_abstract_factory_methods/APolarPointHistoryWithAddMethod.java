@@ -1,8 +1,8 @@
 package lectures.inheritance.virtual_abstract_factory_methods;
 
 import lectures.arrays.collections_kinds.extra.APointHistory;
-import lectures.graphics.APolarPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.APolarPoint;
+import lectures.graphics.extra.Point;
 
 public class APolarPointHistoryWithAddMethod extends APointHistory {
 	public void addElement(int x, int y) {

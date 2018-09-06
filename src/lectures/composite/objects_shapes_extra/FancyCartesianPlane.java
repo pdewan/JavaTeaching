@@ -1,7 +1,7 @@
 package lectures.composite.objects_shapes_extra;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.StringShape;
 
 public interface FancyCartesianPlane {
 	public int getAxesLength();

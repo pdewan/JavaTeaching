@@ -4,8 +4,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import util.annotations.Tags;
-import lectures.graphics.AStringShape;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.StringShape;
 @Tags({"Model", "Observable"})
 public class APraxisNotifyingStringShape extends AStringShape implements PraxisObservableStringShape {
 

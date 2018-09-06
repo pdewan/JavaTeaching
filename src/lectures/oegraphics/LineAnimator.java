@@ -1,7 +1,7 @@
 package lectures.oegraphics;
 
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.Line;
 import bus.uigen.ObjectEditor;
 
 public class LineAnimator {

@@ -1,7 +1,7 @@
 package lectures.oegraphics;
 
-import lectures.graphics.AStringShape;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.StringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

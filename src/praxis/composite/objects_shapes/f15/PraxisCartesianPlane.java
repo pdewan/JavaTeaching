@@ -1,8 +1,8 @@
 package praxis.composite.objects_shapes.f15;
 
 import lectures.composite.objects_shapes.LineWithObjectProperty;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 
 public interface PraxisCartesianPlane {
 	public int getAxesLength();

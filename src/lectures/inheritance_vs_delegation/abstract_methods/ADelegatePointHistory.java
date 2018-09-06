@@ -1,7 +1,7 @@
 package lectures.inheritance_vs_delegation.abstract_methods;
 
 import lectures.arrays.collections_kinds.extra.PointHistory;
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 
 public class ADelegatePointHistory implements PointHistory {
 	public final int MAX_SIZE = 50;

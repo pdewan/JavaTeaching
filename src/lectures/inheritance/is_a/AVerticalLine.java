@@ -1,7 +1,7 @@
 package lectures.inheritance.is_a;
 
-import lectures.graphics.ALine;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.Line;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import bus.uigen.ObjectEditor;

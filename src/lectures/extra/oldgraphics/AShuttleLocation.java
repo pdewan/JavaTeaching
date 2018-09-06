@@ -1,5 +1,5 @@
 package lectures.extra.oldgraphics;
-import lectures.graphics.ACartesianPoint;
+import lectures.graphics.extra.ACartesianPoint;
 import bus.uigen.ObjectEditor;
 //@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 //@StructurePattern(StructurePatternNames.LINE_PATTERN)

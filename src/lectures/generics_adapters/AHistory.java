@@ -3,7 +3,7 @@ package lectures.generics_adapters;
 import java.util.ArrayList;
 import java.util.List;
 
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 
 /**
  * An example of a generic class.

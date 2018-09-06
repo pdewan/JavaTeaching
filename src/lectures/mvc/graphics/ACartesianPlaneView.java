@@ -9,8 +9,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 
 public class ACartesianPlaneView 
    /*

@@ -1,7 +1,7 @@
 package lectures.composite.objects_shapes;
 
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 
 public interface CartesianPlane {
 	static final int INIT_ORIGIN_X = 200;

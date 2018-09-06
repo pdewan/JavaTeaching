@@ -8,9 +8,9 @@ import lectures.composite.objects_shapes_extra.ALoanPair;
 import lectures.composite.objects_shapes_extra.ClassifiedObjectHolder;
 import lectures.composite.objects_shapes_extra.Loan;
 import lectures.composite.objects_shapes_extra.LoanPair;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Line;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.Point;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

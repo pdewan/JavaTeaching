@@ -1,6 +1,6 @@
 package lectures.oegraphics;
 
-import lectures.graphics.Line;
+import lectures.graphics.extra.Line;
 import lectures.main_consoleinput.Console;
 import lectures.mvc.properties.atomic.AnObservableLine;
 import bus.uigen.ObjectEditor;

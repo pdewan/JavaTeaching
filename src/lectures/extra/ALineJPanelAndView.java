@@ -14,8 +14,8 @@ import javax.swing.JPanel;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.ImageWithHeight;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 
 public class ALineJPanelAndView extends JPanel implements PropertyChangeListener {	
     BasicStroke dotted = new BasicStroke(

@@ -1,8 +1,8 @@
 package lectures.casting_vs_conversion;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.APolarPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.APolarPoint;
+import lectures.graphics.extra.Point;
 
 public class CastingVsConversionExamples {	
 	public static void convertingObjects() {

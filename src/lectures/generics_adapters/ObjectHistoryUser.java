@@ -1,7 +1,7 @@
 package lectures.generics_adapters;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 /**
  * This class motivates the need for generics.
  * 

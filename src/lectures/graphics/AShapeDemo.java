@@ -95,7 +95,7 @@ public class AShapeDemo {
  	public void setY(int newY) {y = newY;}
  	
  	/*
-	 * You will comment the following geters and setters later to make this 
+	 * You will comment out the following getters and setters later to make this 
 	 * into an unscalable image, unscalable text, and a point.
 	 */
  	public int getWidth() {return width;}

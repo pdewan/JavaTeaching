@@ -1,10 +1,10 @@
 package lectures.inheritance.virtual_abstract_factory_methods;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.ALine;
-import lectures.graphics.AStringShape;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 import bus.uigen.ObjectEditor;
 
 public class ACartesianPlaneWithFactoryMethod implements CartesianPlane {

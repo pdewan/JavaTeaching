@@ -1,8 +1,8 @@
 package lectures.composite.annotations;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.ImageShape;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ImageShape;
+import lectures.graphics.extra.Point;
 public interface CartesianShuttleWithPoint {
 	public CartesianPlane getCartesianPlane();
 	public ImageShape getShuttle();	

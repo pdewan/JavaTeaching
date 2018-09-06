@@ -1,6 +1,6 @@
 package lectures.inheritance;
 
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 /*
  * nonsense class to defend Java type checking rules
  * 

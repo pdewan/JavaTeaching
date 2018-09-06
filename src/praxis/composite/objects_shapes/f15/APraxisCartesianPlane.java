@@ -4,11 +4,11 @@ import util.misc.ThreadSupport;
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.ALine;
-import lectures.graphics.AStringShape;
-import lectures.graphics.Line;
-import lectures.graphics.StringShape;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.ALine;
+import lectures.graphics.extra.AStringShape;
+import lectures.graphics.extra.Line;
+import lectures.graphics.extra.StringShape;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 

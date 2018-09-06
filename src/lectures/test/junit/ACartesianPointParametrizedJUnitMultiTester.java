@@ -3,8 +3,8 @@ package lectures.test.junit;
 import java.util.Arrays;
 import java.util.Collection;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 
 import org.junit.Assert;
 import org.junit.Test;

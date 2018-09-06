@@ -1,6 +1,6 @@
 package lectures.static_state;
 
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 
 
 public class ACartesianPointComputingMidPoint implements Point {

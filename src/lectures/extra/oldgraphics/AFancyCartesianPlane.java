@@ -2,8 +2,8 @@ package lectures.extra.oldgraphics;
 
 import lectures.composite.objects_shapes.ACartesianPlane;
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Line;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Line;
 import bus.uigen.ObjectEditor;
 
 public class AFancyCartesianPlane implements FancyCartesianPlane {

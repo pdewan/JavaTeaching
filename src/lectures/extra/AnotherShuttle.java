@@ -1,7 +1,7 @@
 package lectures.extra;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import bus.uigen.ObjectEditor;
 public class AnotherShuttle   {
 	 static final String IMAGE = "shuttle2.jpg";

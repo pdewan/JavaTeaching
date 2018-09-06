@@ -10,7 +10,7 @@ import praxis.inheritance.PraxisStringDatabase;
 import praxis.inheritance.PraxisStringHistory;
 import lectures.arrays.collections_implementation.AStringHistory;
 import lectures.arrays.collections_implementation.StringHistory;
-import lectures.graphics.Point;
+import lectures.graphics.extra.Point;
 import lectures.interfaces.BMISpreadsheet;
 
 public class PraxisTypeCheckingExamples {

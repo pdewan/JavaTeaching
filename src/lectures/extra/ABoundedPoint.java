@@ -1,7 +1,7 @@
 package lectures.extra;
 
-import lectures.graphics.ACartesianPoint;
-import lectures.graphics.Point;
+import lectures.graphics.extra.ACartesianPoint;
+import lectures.graphics.extra.Point;
 import util.annotations.Explanation;
 import bus.uigen.ObjectEditor;
 @Explanation("Has max and min values.")

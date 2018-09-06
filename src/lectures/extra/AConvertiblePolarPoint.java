@@ -2,7 +2,7 @@ package lectures.extra;
 
 import lectures.casting_vs_conversion.AConvertibleCartesianPoint;
 import lectures.casting_vs_conversion.ConvertiblePoint;
-import lectures.graphics.APolarPoint;
+import lectures.graphics.extra.APolarPoint;
 
 public class AConvertiblePolarPoint extends APolarPoint implements ConvertiblePoint {
 	public AConvertiblePolarPoint(double theRadius, double theAngle) {

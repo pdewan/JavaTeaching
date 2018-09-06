@@ -1,7 +1,7 @@
 package lectures.mvc.properties.atomic;
 import java.awt.Color;
 
-import lectures.graphics.Line;
+import lectures.graphics.extra.Line;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.misc.ThreadSupport;
