@@ -1,4 +1,4 @@
-package lectures.ui;
+package lectures.ui.extra;
 
 import util.misc.ThreadSupport;
 import lectures.interfaces.ABMISpreadsheet;

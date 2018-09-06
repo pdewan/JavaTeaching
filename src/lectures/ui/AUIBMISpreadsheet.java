@@ -109,16 +109,16 @@ public class AUIBMISpreadsheet implements UIBMISpreadsheet {
  * Uncomment the commented property name in @EditablePropertyNames. Do you get a 
  * warning or error from the compiler?
  * 
- * If not, run the program. Do you get a warning or error from the ObjectEditor
- * in the console? What happens in the UI?
- * 
  * The Java compiler processes the @EditablePropertyNames annotation of a 
  * class by:
  *      (a)generating a setter for each property listed in the annotation.
  *      (b) giving a warning if a property listed in the @EditablePropertyNames 
  *         annotation of a class is not editable, that is, 
  *         does not have a setter.
- *      (c) None of the above.  
+ *      (c) None of the above.   * 
+ * 
+ * If not, run the program. Do you get a warning or error from the ObjectEditor
+ * in the console? What happens in the UI?
  * 
  * (T/F) Removing the name of an editable property from the @EditablePropertyNames 
  * annotation makes it uneditable by the user and results in a warning from 

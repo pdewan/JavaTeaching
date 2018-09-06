@@ -56,10 +56,10 @@ public class AutoBMISpreadsheetGUI {
  * This part will help you better understand properties and how they can be
  * formalized in OE.
  * 
- * Look at the C# code below, which also formalized properties, at the language
+ * Look at the C# code below, which formalizes properties, at the language
  * level.
  * 
- //Declaring a class with property
+ //Declaring a C# class with a property
  class Person
  {
      string name;  // the name field (instance variable)
@@ -75,7 +75,7 @@ public class AutoBMISpreadsheetGUI {
          }
      }
  }
-// Using a class with properties
+// Using a class with a property
 Person p = new Person();
 p.Name = "Stack"  // invokes Name's set with argument "Stack"
 Console.Writeline(p.Name) //invokes Name's getter and uses return value

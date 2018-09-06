@@ -3,10 +3,12 @@
  * We also see the nature of a tool we will use in this class
  * to support user-interfaces.
  * 
- * Visit the following classes for this praxis in this order:
+ * Visit the following classes for this praxis :
+ * 
  * ManualConsoleBMISpreadsheetUI
- * AutoBMISpreadsheetGUI
  * AUIBMISpreadsheet 
+ * AutoBMISpreadsheetGUI
+ 
  *   
  */
 

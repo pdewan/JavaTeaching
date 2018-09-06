@@ -106,16 +106,16 @@ public class ManualConsoleBMISpreadsheetUI {
  * We know this main class is a UI class and it does nothing but 
  * read from the console and output to the console, 
  * letting the computation of
- * BMI be done by ABMISpreadsheetComputationClass.
+ * BMI be done by AUIBMISpreadsheet.
  * 
  * Look at the code of this class to verify it 
- * does UI and not computation.
+ * does UI and not computation. Answer the questions in it.
  * 
  * Run this main class to see what it does and terminate it by
  * pressing on the red button to kill the program.
  * 
  * To make our programming easier, this class does not provide access to the 
- * full functionality of ABMISpreadsheetComputationClass: It does not provide
+ * full functionality of AUIBMISpreadsheet class: It does not provide
  * access to the increment operations nor does it do error checking.
  * 
  * Run this class to see what it does and terminate it by pressing on the red button to kill

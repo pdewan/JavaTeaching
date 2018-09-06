@@ -1,4 +1,4 @@
-package lectures.ui;
+package lectures.ui.extra;
 
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
