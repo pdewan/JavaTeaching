@@ -1,15 +1,15 @@
 package lectures.mvc.properties;
 
+import lectures.composite.objects_shapes.ACartesianPoint;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.PlottedShuttle;
+import lectures.composite.objects_shapes.Point;
 import lectures.composite.objects_shapes_extra.ALoan;
 import lectures.composite.objects_shapes_extra.ALoanPair;
 import lectures.composite.objects_shapes_extra.Loan;
 import lectures.composite.objects_shapes_extra.LoanPair;
-import lectures.graphics.extra.ACartesianPoint;
 import lectures.graphics.extra.Line;
-import lectures.graphics.extra.Point;
 import bus.uigen.ObjectEditor;
 
 

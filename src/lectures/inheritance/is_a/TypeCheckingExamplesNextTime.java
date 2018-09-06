@@ -14,7 +14,7 @@ import java.util.List;
 import lectures.inheritance.ABaseStringHistory;
 import lectures.arrays.collections_implementation.AStringSetMain;
 import lectures.arrays.collections_implementation.StringHistory;
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 import lectures.inheritance.AnInheritingStringDatabase;
 import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;

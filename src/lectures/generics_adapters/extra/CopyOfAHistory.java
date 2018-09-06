@@ -3,8 +3,8 @@ package lectures.generics_adapters.extra;
 import java.util.ArrayList;
 import java.util.List;
 
+import lectures.composite.objects_shapes.Point;
 import lectures.generics_adapters.History;
-import lectures.graphics.extra.Point;
 
 /**
  * An example of a generic class.

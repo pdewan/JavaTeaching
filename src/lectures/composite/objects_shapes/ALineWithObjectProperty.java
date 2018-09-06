@@ -1,7 +1,5 @@
 package lectures.composite.objects_shapes;
 
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import util.misc.ThreadSupport;
@@ -73,7 +71,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
 /*
  * Bean vs non Bean Properties
  * 
- * The Bean properties of ALineWithObjectProperty are:
+ * The properties of ALineWithObjectProperty that are themselves Beans are:
  *    (a) Width
  *    (b) Height
  *    (c) Location
@@ -133,7 +131,7 @@ public class ALineWithObjectProperty implements LineWithObjectProperty {
  * When setHeight is called in ALineWithObjectProperty, the value of newHeight shown
  * by the debugger is:
  *     (a) 0
- *     (b) the parameter passed by main to the setHeight() method (INIT_HEIGHT).
+ *     (b) the parameter passed by main to the setHeight() method (getHeight()*2).
  *     (c) None of the above
  *     
  * The variable newHeight is a:

@@ -1,7 +1,7 @@
 package lectures.extra.oldgraphics;
 
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import bus.uigen.ObjectEditor;
 
 public class ALabel implements Label {

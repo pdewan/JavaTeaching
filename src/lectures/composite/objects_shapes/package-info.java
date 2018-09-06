@@ -19,11 +19,13 @@
  * new ways of programming and debugging as null pointer exceptions are more
  * likely now.
  * 
- * VISITED CLASSES
+ * Composite Objects Quiz:
  * 
  * {ALineWithObjectProperty}
  * {ACartesianPoint}
  * {MyInteger}
+ * 
+ * Composite Shapes Quiz:
  * {ACartesianPlane}
  * {AnInefficientCartesianPlane}
  * {APlottedShuttle}

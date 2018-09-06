@@ -3,8 +3,8 @@ package lectures.undo_commands;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.interfaces.ABMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
 

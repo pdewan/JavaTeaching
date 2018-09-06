@@ -1,6 +1,5 @@
 package lectures.composite.objects_shapes;
 
-import lectures.graphics.extra.Point;
 
 public interface LineWithObjectProperty {	
     public Point getLocation();

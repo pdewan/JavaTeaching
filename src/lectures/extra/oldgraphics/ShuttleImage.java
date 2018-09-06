@@ -1,6 +1,6 @@
 package lectures.extra.oldgraphics;
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 
 public interface ShuttleImage {	
     public Point getLocation();

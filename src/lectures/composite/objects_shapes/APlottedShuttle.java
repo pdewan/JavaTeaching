@@ -1,4 +1,6 @@
 package lectures.composite.objects_shapes;
+import lectures.composite.objects_shapes_extra.AnImageWithHeight;
+import lectures.composite.objects_shapes_extra.ImageWithHeight;
 import util.annotations.StructurePattern;
 import util.annotations.StructurePatternNames;
 import bus.uigen.OEFrame;

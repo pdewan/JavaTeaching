@@ -1,11 +1,11 @@
 package lectures.composite.annotations;
 
 import lectures.composite.objects_shapes.ACartesianPlane;
+import lectures.composite.objects_shapes.ACartesianPoint;
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.graphics.extra.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.graphics.extra.AShapeImage;
 import lectures.graphics.extra.ImageShape;
-import lectures.graphics.extra.Point;
 import bus.uigen.ObjectEditor;
 //@StructurePattern(StructurePatternNames.BEAN_PATTERN)
 public class ACartesianShuttleWithPoint implements CartesianShuttleWithPoint {

@@ -1,5 +1,7 @@
 package lectures.graphics.extra;
 
+import lectures.composite.objects_shapes.Point;
+
 
 public class APolarPoint implements Point {
 	double radius, angle;

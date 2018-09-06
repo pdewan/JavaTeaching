@@ -1,6 +1,6 @@
 package lectures.inheritance.is_a;
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 /**
  * This class makes us think about correct and incorrect use of inheritance.
  *

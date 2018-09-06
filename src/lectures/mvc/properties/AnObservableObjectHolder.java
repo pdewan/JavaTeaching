@@ -3,8 +3,8 @@ package lectures.mvc.properties;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
 import bus.uigen.ObjectEditor;
 

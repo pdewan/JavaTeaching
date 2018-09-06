@@ -1,6 +1,6 @@
 package lectures.inheritance_vs_delegation.wrong_is_a;
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 
 public class ASquareHAS_A_Point implements Square {
 	Point center;

@@ -1,10 +1,10 @@
 package praxis.composite.objects_shapes.f15;
 
 import util.misc.ThreadSupport;
+import lectures.composite.objects_shapes.ACartesianPoint;
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
-import lectures.graphics.extra.ACartesianPoint;
 import lectures.graphics.extra.ALine;
 import lectures.graphics.extra.AStringShape;
 import lectures.graphics.extra.Line;

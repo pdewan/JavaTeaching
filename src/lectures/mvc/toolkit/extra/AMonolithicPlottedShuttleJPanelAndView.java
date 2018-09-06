@@ -11,8 +11,8 @@ import java.beans.PropertyChangeEvent;
 import javax.swing.JPanel;
 
 import lectures.composite.objects_shapes.CartesianPlane;
-import lectures.composite.objects_shapes.ImageWithHeight;
 import lectures.composite.objects_shapes.PlottedShuttle;
+import lectures.composite.objects_shapes_extra.ImageWithHeight;
 import lectures.graphics.extra.Line;
 import lectures.graphics.extra.StringShape;
 import lectures.mvc.graphics.ObservablePlottedShuttle;

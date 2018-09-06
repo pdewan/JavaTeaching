@@ -1,5 +1,7 @@
 package lectures.composite.objects_shapes;
 
+import lectures.composite.objects_shapes_extra.ImageWithHeight;
+
 
 
 

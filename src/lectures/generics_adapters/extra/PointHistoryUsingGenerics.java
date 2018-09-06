@@ -1,7 +1,7 @@
 package lectures.generics_adapters.extra;
 
+import lectures.composite.objects_shapes.Point;
 import lectures.generics_adapters.History;
-import lectures.graphics.extra.Point;
 
 
 public interface PointHistoryUsingGenerics extends History<Point> {

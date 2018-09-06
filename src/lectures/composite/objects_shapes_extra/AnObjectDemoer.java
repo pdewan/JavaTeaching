@@ -1,13 +1,13 @@
 package lectures.composite.objects_shapes_extra;
 
+import lectures.composite.objects_shapes.ACartesianPoint;
 import lectures.composite.objects_shapes.ALineWithObjectProperty;
 import lectures.composite.objects_shapes.APlottedShuttle;
 import lectures.composite.objects_shapes.CartesianPlane;
 import lectures.composite.objects_shapes.LineWithObjectProperty;
 import lectures.composite.objects_shapes.PlottedShuttle;
-import lectures.graphics.extra.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.graphics.extra.Line;
-import lectures.graphics.extra.Point;
 import lectures.mvc.properties.AnObservableClassifiedObjectHolder;
 import lectures.mvc.properties.ObjectDemoer;
 import bus.uigen.OEFrame;

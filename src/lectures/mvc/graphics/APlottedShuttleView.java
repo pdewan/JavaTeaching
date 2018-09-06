@@ -6,7 +6,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
 
-import lectures.composite.objects_shapes.ImageWithHeight;
+import lectures.composite.objects_shapes_extra.ImageWithHeight;
 
 public class APlottedShuttleView extends ACartesianPlaneView implements PropertyChangeListener { 
 /*   

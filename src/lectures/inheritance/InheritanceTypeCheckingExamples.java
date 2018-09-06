@@ -1,7 +1,7 @@
 package lectures.inheritance;
 
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 import lectures.interfaces.BMISpreadsheet;
 
 public class InheritanceTypeCheckingExamples {

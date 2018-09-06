@@ -173,7 +173,7 @@ public class ACartesianPlane implements CartesianPlane {
  * 
  * Look at the physical structure displayed by the debugger. 
  *  
- * (T/F) xAxesLength is a leaf variable of ACartesianPlane.
+ * (T/F) axesLength is a leaf variable of ACartesianPlane.
  * 
  * (T/F) xAxis is a leaf variable of ACartesianPlane. 
  * 

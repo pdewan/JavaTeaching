@@ -1,4 +1,4 @@
-package lectures.graphics.extra;
+package lectures.composite.objects_shapes;
 
 import util.annotations.Explanation;
 import util.annotations.StructurePattern;

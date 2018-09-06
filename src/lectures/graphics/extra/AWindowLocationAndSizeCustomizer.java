@@ -1,4 +1,5 @@
 package lectures.graphics.extra;
+import lectures.composite.objects_shapes.ACartesianPoint;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 public class AWindowLocationAndSizeCustomizer {

@@ -1,6 +1,6 @@
 package lectures.inheritance_vs_delegation.wrong_is_a;
 
-import lectures.graphics.extra.ACartesianPoint;
+import lectures.composite.objects_shapes.ACartesianPoint;
 
 public class ASquareIS_A_Point extends ACartesianPoint {
 	int sideLength;

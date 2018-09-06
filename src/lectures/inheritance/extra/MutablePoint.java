@@ -1,6 +1,6 @@
 package lectures.inheritance.extra;
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 
 public interface MutablePoint extends Point {
 	void setX(int newVal);

@@ -1,6 +1,6 @@
 package lectures.arrays.collections_kinds.extra;
 
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.Point;
 
 public interface PointHistory {
 	public void addElement(int x, int y);

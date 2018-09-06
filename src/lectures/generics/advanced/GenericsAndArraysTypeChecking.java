@@ -3,10 +3,10 @@ package lectures.generics.advanced;
 import java.util.ArrayList;
 import java.util.List;
 
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.generics_adapters.AHistory;
 import lectures.generics_adapters.History;
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
 import lectures.inheritance.is_a.extra.BoundedPoint;
 
 public class GenericsAndArraysTypeChecking {

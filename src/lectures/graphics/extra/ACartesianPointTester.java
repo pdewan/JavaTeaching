@@ -1,5 +1,8 @@
 package lectures.graphics.extra;
 
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
+
 
 public class ACartesianPointTester {
 	public void test() {

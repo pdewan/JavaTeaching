@@ -1,8 +1,8 @@
 package lectures.extra;
 
 import lectures.arrays.collections_kinds.extra.APointHistory;
-import lectures.graphics.extra.ACartesianPoint;
-import lectures.graphics.extra.Point;
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 import lectures.mvc.collections.AVectorListenerSupport;
 import lectures.mvc.collections.VectorListenerSupport;
 import util.annotations.ObserverRegisterer;

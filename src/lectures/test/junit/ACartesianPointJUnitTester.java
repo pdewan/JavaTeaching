@@ -1,8 +1,9 @@
 package lectures.test.junit;
 
-import lectures.graphics.extra.ACartesianPoint;
+import lectures.composite.objects_shapes.ACartesianPoint;
+import lectures.composite.objects_shapes.Point;
 
-import lectures.graphics.extra.Point;
+
 
 //import org.junit.Test;
 import org.junit.Assert;

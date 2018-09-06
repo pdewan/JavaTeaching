@@ -1,7 +1,7 @@
 package lectures.casting_vs_conversion;
 
+import lectures.composite.objects_shapes.ACartesianPoint;
 import lectures.extra.AConvertiblePolarPoint;
-import lectures.graphics.extra.ACartesianPoint;
 
 public class AConvertibleCartesianPoint extends ACartesianPoint implements ConvertiblePoint {
 	public AConvertibleCartesianPoint(int theX, int theY) {
