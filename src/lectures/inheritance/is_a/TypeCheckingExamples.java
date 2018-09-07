@@ -1,25 +1,12 @@
 package lectures.inheritance.is_a;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-
-
-
-
-
 import java.util.Collection;
 import java.util.List;
-
 import lectures.inheritance.ABaseStringHistory;
-import lectures.arrays.collections_implementation.AStringSetMain;
-import lectures.arrays.collections_implementation.StringHistory;
-import lectures.composite.objects_shapes.Point;
-import lectures.inheritance.AnInheritingStringDatabase;
 import lectures.inheritance.AnInheritingStringSet;
 import lectures.inheritance.BaseStringHistory;
 import lectures.inheritance.InheritingStringDatabase;
-import lectures.interfaces.BMISpreadsheet;
 
 public class TypeCheckingExamples {
 
@@ -132,9 +119,9 @@ public class TypeCheckingExamples {
  * cause compile errors in the code fragment.
  * 
  * (T/F) In Java type T1 IS-A T2, if an instance of T1 can be used
- *        wherever an instance of T1 is expected.
+ *        wherever an instance of T2 is expected.
  *        
- * (T/F) In Java, substituting an instance of T2 with an instance of T2 in a program 
+ * (T/F) In Java, substituting an instance of T1 with an instance of T2 in a program 
  * can cause the program to give different results. 
  * 
  */     

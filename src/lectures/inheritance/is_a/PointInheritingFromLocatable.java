@@ -1,9 +1,7 @@
 package lectures.inheritance.is_a;
 /**
  * This interface adds no extra methods- it merely reuses the declarations from
- * Locatable.
- * 
- *
+ * Locatable. 
  */
 public interface PointInheritingFromLocatable extends Locatable{
 

@@ -1,4 +1,4 @@
-package lectures.inheritance.is_a;
+package lectures.inheritance.is_a.extra;
 
 import lectures.graphics.extra.ALine;
 import lectures.graphics.extra.Line;
