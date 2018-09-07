@@ -38,10 +38,6 @@ public class WindowDAGCreator {
 		return frame;
 	}
 /*
- * The previous program created a tree structure.
- * This class creates what is known as a DAG structure.
- * Study the program and try to see what is different
- * about the structure created.
  * 
  * A tree structure is one in which 
  * 	1. there is a unique root node.

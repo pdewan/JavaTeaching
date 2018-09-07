@@ -31,8 +31,8 @@ public class AnInheritingStringDatabase
  * Go to the interface of this class, InheritingStringDatabase and answer the
  * questions there.
  * 
- * (T/F) If class C1 implementing I1 is a subclass of C2 implementing I2, then I2
- * can be a subtype of I1.	
+ * (T/F) If class C1 implementing I1 is a subclass of C2 implementing I2, then I1
+ * can be a subtype of I2.	
 /*
  * Re-declaration of size of base class, uncomment when asked later
  */

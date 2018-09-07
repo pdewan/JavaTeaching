@@ -1,6 +1,7 @@
-package lectures.inheritance;
+package lectures.inheritance.extra;
 
 import lectures.composite.objects_shapes.Point;
+import lectures.inheritance.ABaseStringHistory;
 /*
  * nonsense class to defend Java type checking rules
  * 

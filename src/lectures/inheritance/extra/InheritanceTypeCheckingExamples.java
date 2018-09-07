@@ -1,7 +1,11 @@
-package lectures.inheritance;
+package lectures.inheritance.extra;
 
 
 import lectures.composite.objects_shapes.Point;
+import lectures.inheritance.ABaseStringHistory;
+import lectures.inheritance.AnInheritingStringDatabase;
+import lectures.inheritance.BaseStringHistory;
+import lectures.inheritance.InheritingStringDatabase;
 import lectures.interfaces.BMISpreadsheet;
 
 public class InheritanceTypeCheckingExamples {
