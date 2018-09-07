@@ -1,7 +1,6 @@
 package lectures.mvc.toolkit;
 
 import java.awt.GridLayout;
-import java.beans.PropertyChangeListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -9,9 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
-
-import bus.uigen.ObjectEditor;
-import lectures.mvc.properties.ObservableBMISpreadsheet;
 /**
  * This is the class that creates the UI. It provides a method to compose
  * the widgets in a JFrame and methods to to retrieve the widgets. 

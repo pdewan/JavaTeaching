@@ -25,7 +25,9 @@ public class APropertyListenerSupport implements PropertyListenerSupport {
 		return size == MAX_SIZE;
 
 	}
-
+	/*
+	 * This is the method that adds to the list of registered listeners
+	 */
 	public void add(PropertyChangeListener l) {
 		if (isFull())
 			System.out.println("Adding item to a full collection");
@@ -42,6 +44,8 @@ public class APropertyListenerSupport implements PropertyListenerSupport {
 		}
 	}
 /*
+ * propertChange() is the method called in an observer to inform
+ * it of the change, and its parameter describes the kind of change.
  * 
  * Hover over the "propertyChange" to see its documentation
  * When the program is stopped at this statement,

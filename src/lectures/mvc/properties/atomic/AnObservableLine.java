@@ -3,10 +3,9 @@ package lectures.mvc.properties.atomic;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import util.misc.ThreadSupport;
-import lectures.graphics.extra.ALine;
 import lectures.graphics.extra.Line;
 import lectures.mvc.properties.PropertyListenerSupport;
+import util.misc.ThreadSupport;
 import bus.uigen.OEFrame;
 import bus.uigen.ObjectEditor;
 
@@ -104,7 +103,10 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * you see how you got to this break point.
  * 
  * Now, hover over the parameter, aListener, to determine the class of the
- * object assigned to it.
+ * object assigned to it. The class will be an OE class that implements
+ * PropertyChangeListener. The identity of the class does not matter. This is 
+ * just to show you that this program can handle an object of a class  about
+ * which it has no idea.
  * 
  * The method, addPropertyChangeListener, in AnObservableLine, is called:
  *   (a) each time a setter is invoked in  AnObservableLine.
@@ -164,7 +166,7 @@ public class AnObservableLine extends ANonObservableLine implements ObservableLi
  * (c) None of the above.
  *
  * 
- * In ObservableLine, which methods are aware of the user-interface code 
+ * In AnObservableLine, which methods are aware of the user-interface code 
  * (OE frames) displaying a line object:  
  *    (a) the main method.
  *    (b) animateLine()

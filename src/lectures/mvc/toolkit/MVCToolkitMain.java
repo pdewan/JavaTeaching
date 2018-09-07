@@ -1,7 +1,7 @@
 package lectures.mvc.toolkit;
 
-import bus.uigen.ObjectEditor;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
+import bus.uigen.ObjectEditor;
 /**
  * 
  * This is an exercise in creating our own alternative to ObjectEditor for a BMI
@@ -11,7 +11,6 @@ import lectures.mvc.properties.ObservableBMISpreadsheet;
  * and one by ObjectEditor. Experiment with the two UIs - change the editable
  * properties in each and observe the effect on different widgets. 
  * 
- * Next class: BMIMVCComposer
  * 
  */
 public class MVCToolkitMain {

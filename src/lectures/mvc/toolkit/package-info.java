@@ -17,7 +17,7 @@
  *  NAVIGATION-INFO
  *  
  *  AnObservableBMISpreadsheet
- *  MVCToolkitMain *  
+ *  MVCToolkitMain  
  *  BMIMVCComposer
  *  ABMIFrameComposer
  *  ABMIMVCComposer   

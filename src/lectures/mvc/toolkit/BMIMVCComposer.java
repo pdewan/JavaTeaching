@@ -1,6 +1,5 @@
 package lectures.mvc.toolkit;
 
-import java.awt.GridLayout;
 import java.beans.PropertyChangeListener;
 
 import javax.swing.JFrame;

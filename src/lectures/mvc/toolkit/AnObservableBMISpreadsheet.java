@@ -7,8 +7,6 @@ import lectures.interfaces.ABMISpreadsheet;
 import lectures.mvc.properties.ObservableBMISpreadsheet;
 import lectures.mvc.properties.PropertyListenerSupport;
 import lectures.mvc.properties.atomic.APropertyListenerSupport;
-import util.annotations.ObserverRegisterer;
-import util.annotations.ObserverTypes;
 /*
  * Study this code for creating an observable BMI Spreadsheet. 
  *  
