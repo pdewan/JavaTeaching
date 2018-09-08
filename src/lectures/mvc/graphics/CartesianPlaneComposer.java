@@ -22,7 +22,7 @@ public class CartesianPlaneComposer {
 	protected final static int FRAME_WIDTH = 300;
 	protected final static int FRAME_HEIGHT = 300;
 	public static void main(String[] args) {
-		// As before we ceaate a model
+		// As before we create a model
 		ObservableCartesianPlane cartesianPlane = 
 				new AnObservableCartesianPlane
 					(AnObservableCartesianPlane.INIT_AXES_LENGTH, 

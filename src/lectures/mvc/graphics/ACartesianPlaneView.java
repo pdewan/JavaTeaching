@@ -28,7 +28,7 @@ public class ACartesianPlaneView
  *     
  *  (T/F) ACartesianPlaneView IS-A PropertyChangeListener	
  */
-    // Some magic to draw a sotted line
+    // Some magic to draw a dotted line
 	BasicStroke dotted = new BasicStroke(
   	      1f, 
   	      BasicStroke.CAP_ROUND, 
