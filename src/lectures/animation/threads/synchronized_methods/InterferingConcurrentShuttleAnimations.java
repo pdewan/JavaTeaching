@@ -24,7 +24,7 @@ import bus.uigen.ObjectEditor;
  */
 
 public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLaunchAnimation  {	
-	static final long SECOND_THREAD_DELAY = 500;
+	protected static final long SECOND_THREAD_DELAY = 500;
 	public static void main(String[] args) {
 		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		displayShuttleFrame(shuttle1);
