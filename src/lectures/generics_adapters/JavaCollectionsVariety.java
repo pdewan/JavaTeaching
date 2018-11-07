@@ -22,8 +22,7 @@ public class JavaCollectionsVariety {
 		anIntegerList.add(EXAMPLE_INT);
 		Map<String, List<Integer>> aMap = new HashMap<String, List<Integer>>();
 		aMap.put("my scores", anIntegerList);
-	}
-	
+	}	
 }
 /*
  * (T/F) A generic has at most one type parameter.

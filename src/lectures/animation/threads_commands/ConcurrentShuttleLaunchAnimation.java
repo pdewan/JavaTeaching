@@ -1,6 +1,5 @@
 package lectures.animation.threads_commands;
 
-import lectures.animation.threads_commands.extra.SingleShuttleAnimation;
 import lectures.composite.objects_shapes.PlottedShuttle;
 import lectures.mvc.graphics.AnObservablePlottedShuttle;
 import bus.uigen.OEFrame;
@@ -68,6 +67,8 @@ public class ConcurrentShuttleLaunchAnimation extends SingleShuttleAnimation  {
 	}
 
 	public static void main(String[] args) {
+		System.out.println ("Thread:" + Thread.currentThread() + " has started ");
+
 		shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		shuttle2 = new AnObservablePlottedShuttle(SHUTTLE2_X, SHUTTLE2_Y);
 		displayShuttleFrame(shuttle1);
