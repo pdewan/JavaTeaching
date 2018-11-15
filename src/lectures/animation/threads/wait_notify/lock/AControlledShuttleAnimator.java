@@ -78,11 +78,12 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  * 
  * Run the main program:
  * 
- * (T/F) A notify() call on object A does not affect wait() calls on object B.
+ 
  * 
- * Swap the two releaseLock() calls so we are back to the original state.
+ * Swap the two releaseLock() calls, that is:
  * 
- * Comment out the lock2.releaseLock() call in animateXFromOrigin.
+ * Comment out the lock2.releaseLock() call in animateXFromOrigin while
+ * uncommenting the lock1.releaseLock() call.
  * 
  * What do you think will happen?
  * 
@@ -101,6 +102,11 @@ public class AControlledShuttleAnimator extends AConcurrentShuttleAnimator {
  *  (b) two
  *  (c) three
  *  (d) zero
+ *  
+ *  Is there a difference between the number of animations that start and finish when both
+ *  locks are acquired? If so, can a thread get one lock without getting another?
+ *  Based on these answers, what is the answer to the following:
+ *  (T/F) A notify() call on object A does not affect wait() calls on object B.
  * 
  *  (T/F) A deadlock occurs if releaseLock() is not executed on lock1.
  *  
