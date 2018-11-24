@@ -130,6 +130,10 @@ public class ACourseParser implements CourseParser {
  *  <RegularCourse> -> RC <Number> <String> <String> <String> 
  * 
  *  <T/F> A parser can parse more than one grammar, that is, recognize sentences defined by more
- *  than one grammar
+ *  than one grammar.
+ *  
+ *  <T/F> The same input representation can be defined using more than one set of grammar rules.
+ *  
+ *  <T/F> A grammar can be parsed by two different parsers, that is, parsers that are not identical.
  * 
  */
