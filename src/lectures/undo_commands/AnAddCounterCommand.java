@@ -5,9 +5,9 @@ import lectures.mvc.Counter;
 public class AnAddCounterCommand implements UndoableCommand {
 	Counter counter;
 	int addAmount;
-	public AnAddCounterCommand (Counter theCounter, int theAmount) {
-		counter = theCounter;
-		addAmount = theAmount;
+	public AnAddCounterCommand (Counter aCounter, int anAmount) {
+		counter = aCounter;
+		addAmount = anAmount;
 	}
 	public void execute() {counter.add(addAmount);}	
 	public void undo() {counter.add(-addAmount);}

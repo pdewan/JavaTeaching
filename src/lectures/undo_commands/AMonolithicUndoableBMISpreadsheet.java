@@ -1,7 +1,7 @@
 package lectures.undo_commands;
 import lectures.interfaces.ABMISpreadsheet;
 import lectures.interfaces.BMISpreadsheet;
-public class AnUnmodularUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
+public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
 	BMISpreadsheet bmiSpreadsheet;
 	public enum WriteMethod {SET_WEIGHT, SET_HEIGHT,  NO_COMMAND};
 	WriteMethod lastWriteMethod = WriteMethod.NO_COMMAND;
@@ -9,8 +9,8 @@ public class AnUnmodularUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 	boolean redoEnabled = false;
 	double oldWeight, newWeight;
 	double oldHeight, newHeight;
-	public AnUnmodularUndoableBMISpreadsheet (double height, double weight) {
-		bmiSpreadsheet = new ABMISpreadsheet(height, weight);
+	public AMonolithicUndoableBMISpreadsheet (double aHeight, double aWeight) {
+		bmiSpreadsheet = new ABMISpreadsheet(aHeight, aWeight);
 	}
 	public double getBMI() {return bmiSpreadsheet.getBMI();}
 	public double getHeight() {return bmiSpreadsheet.getHeight();}
@@ -18,6 +18,7 @@ public class AnUnmodularUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 	public void setHeight(double newValue) {
 		oldHeight = getHeight();
 		newHeight = newValue;
+		lastWriteMethod = WriteMethod.SET_HEIGHT;
 		undoEnabled = true;
 		redoEnabled = false;
 		bmiSpreadsheet.setHeight(newValue);
@@ -63,7 +64,7 @@ public class AnUnmodularUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 	}
 	
 	public static void main (String[] args) {
-		bus.uigen.ObjectEditor.edit(new AnUnmodularUndoableBMISpreadsheet(1.77, 75));
+		bus.uigen.ObjectEditor.edit(new AMonolithicUndoableBMISpreadsheet(1.77, 75));
 	}
 
 }

@@ -4,18 +4,19 @@ import lectures.interfaces.BMISpreadsheet;
 public class AnUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
 	BMISpreadsheet bmiSpreadsheet;
 //	Undoer undoer = new LastCommandUndoer();
-	Undoer undoer = new HistoryUndoer();
-	public AnUndoableBMISpreadsheet (double height, double weight) {
-		bmiSpreadsheet = new ABMISpreadsheet(height, weight);
+//	Undoer undoer = new HistoryUndoer();
+	Undoer undoer = UndoerFactory.getUndoer();
+	public AnUndoableBMISpreadsheet (double aHeight, double aWeight) {
+		bmiSpreadsheet = new ABMISpreadsheet(aHeight, aWeight);
 	}
 	public double getBMI() {return bmiSpreadsheet.getBMI();}
 	public double getHeight() {return bmiSpreadsheet.getHeight();}
 	public double getWeight() {return bmiSpreadsheet.getWeight();}
-	public void setHeight(double theHeight) {
-		undoer.execute(new ASetHeightCommand(bmiSpreadsheet, theHeight));
+	public void setHeight(double newValue) {
+		undoer.execute(new ASetHeightCommand(bmiSpreadsheet, newValue));
 	}
-	public void setWeight(double theWeight) {		
-		undoer.execute(new ASetWeightCommand(bmiSpreadsheet, theWeight));		
+	public void setWeight(double newValue) {		
+		undoer.execute(new ASetWeightCommand(bmiSpreadsheet, newValue));		
 	}	
 	public void undo() {undoer.undo();}
 	public void redo() {undoer.redo();}	
