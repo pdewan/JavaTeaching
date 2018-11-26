@@ -34,8 +34,9 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	public void fillCourses() {
         System.out.println("Please enter course info, terminating with a period:");
         /*
+         * When asked:
          * Put a break point below and use F5 to step into parseCourseList
-         * which is parser for the root non terminal, CourseList. 
+         * which is parser for the root non-terminal, CourseList. 
          */        
         courses = (new ACourseParser()).parseCourseList();
    }
@@ -114,14 +115,15 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	 *  (d) University
 	 *  (e) Instructor
 	 *  
-	 * (T/F) An input representation of a course *can* contains information not displayed as part of
+	 * (T/F) (In the case of this program) An input representation of a course *can* contain information not displayed as part of
 	 * its output representation.
 	 * 
-	 * (T/F) An output representation of a course *can* contain entered as part of its input representation.
+	 * (T/F) (In the case of this program) An output representation of a course *can* contain entered as part of its input representation.
 	 *  
-	 *  You can run the program to answer the following questions. A legal input representation is one
-	 *  that does not lead to an error when it is being parsed. Run the program if in doubt.
+	 *  Run the program to answer the following questions. 
 	 *  
+	 *  A legal input representation is one
+	 *  that does not lead to an error when it is being parsed.	 
 	 *  The following is a legal input representation of a course:
 	 *  RC
 	 *  Meaning of Life
@@ -177,40 +179,40 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	 *  A <Course> can either be a <RegularCourse> (regular course) or <FreshmanSeminar> (Freshman seminar)
 	 *  | stands for alternation.
 	 *  
-	 *  An <RegularCourse> is followed by the the literal "RC" followed by a <Title> <Dept> <Number>
-	 *  <Title> and <Dept> are string values. <Number> is an arbitrary integer.
+	 *  A <RegularCourse> is the literal "RC" followed by <Title> <Dept> <Number>
+	 *  <Title> and <Dept> are arbitrary strings. <Number> is an arbitrary integer.
 	 *  A terminal or literal does not appear on the left hand side (LHS) of a production and thus
 	 *  does not need elaboration. (We know what strings and integers are). It is not enclosed in angle brackets.
-	 *  A non terminal must appear on the LHS of at least one production and can appear in the right
-	 *  hand side also. It is enclosed in angle brackets. The root non terminal appears only on the LHS.
+	 *  A non-terminal must appear on the LHS of at least one production and can appear in the right
+	 *  hand side also. It is enclosed in angle brackets. The root non-terminal appears only on the LHS.
 	 *
-	 * (T/F) <Course> is a non terminal
+	 * (T/F) <Course> is a non-terminal.
 	 * 
-	 * (T/F) RC is a non terminal
+	 * (T/F) RC is a non-terminal.
 	 * 
-	 * (T/F) <RegularCourse> is a terminal
+	 * (T/F) <RegularCourse> is a terminal.
 	 * 
-	 * (T/F> <FreshmanSeminar> is a non terminal
+	 * (T/F> <FreshmanSeminar> is a non-terminal.
 	 * 	
-	 * <T/F> <CourseList> is a non terminal
+	 * <T/F> <CourseList> is a non-terminal
 	 * 
 	 * <T/F> <CourseList> is a root.
 	 * 
 	 * <T/F> <Course> is a root.
 	 * 
-	 * <T/F> A non terminal must appear on the LHS of at least one production.
+	 * <T/F> A non-terminal must appear on the LHS of at least one production.
 	 * 
 	 * <T/F> A terminal must appear on the LHS of at least one production. 
 	 *
-	 * <T/F> A non terminal must appear on the RHS of at least one production.
+	 * <T/F> A non-terminal must appear on the RHS of at least one production.
 	 * 
 	 * <T/F> A terminal must appear on the RHS of at least one production. 
 	 * 
-	 * <T/F> A non terminal can appear on the RHS of a production.
+	 * <T/F> A non-terminal can appear on the RHS of a production.
 	 * 
 	 *  <T/F> A  terminal can appear on the LHS of a production.
 	 *  
-	 * Suppose we change:
+	 * For the following questions in this part, assume  we change:
 	 * 
 	 *  <RegularCourse> -> RC <Title> <Dept> <Number>
 	 *  
@@ -218,7 +220,7 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	 *  
 	 *  <RegularCourse> -> RegularCourse <Number> <Title> <Dept> <Univ>
 	 *  
-	 *  and added the following production
+	 *  and add the following production
 	 *  
 	 *  <Univ> -> <String>
 	 *  
@@ -231,18 +233,24 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	 *  COMP
 	 *  42
 	 *  
+	 *  The following is a legal input representation of a course, that is, a representation
+	 *  that is processed without an error: 
 	 *  RegularCourse
 	 *  Meaning of Life
 	 *  UNC
 	 *  COMP
 	 *  42
 	 *  
+	 *  The following is a legal input representation of a course, that is, a representation
+	 *  that is processed without an error: 
 	 *  RegularCourse
 	 *  42
 	 *  Meaning of Life
 	 *  COMP
 	 *  UNC
 	 *
+	 * The following is a legal input representation of a course, that is, a representation
+	 *  that is processed without an error: 
 	 *  RegularCourse
 	 *  42
 	 *  UNC
@@ -254,16 +262,7 @@ public class AParsingCourseDisplayer extends ACourseDisplayer2 {
 	 *  Put the break point as instructed above and step into the parser to follow its
 	 *  structure.
 	 *  
-	 *  Next Class ACourseParser
-	 *  
-	 *  A parser *usually* converts scanned tokens in a legal sentence into
-	 *  into a form called the parse tree, which can the be further processed by the program.
-	 *  In this program, we are trying to convert the input into a course list, which is the tree that
-	 *  will be processed. Each token is assumed to appear on a separate line to make our scanning easy.
-
-	 *  This structured way is called recursive descent parsing in which a separate
-	 *  parsing method is created for each non terminal that can recursively
-	 *  call parsing methods for non terminals defining or deriving smaller parts of the sentence.
+	 *  Next Class ACourseParser	
 	 * 
 	 */
 

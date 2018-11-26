@@ -14,14 +14,20 @@ import lectures.main_consoleinput.Console;
  *  An example of a parser.
  *  A parser *usually* converts scanned tokens in a legal sentence into
  *  into a form called the parse tree, which can the be further processed by the program.
+ *  SOme parsers do not create any data structue, they simply indicate if a sentence is legal or not.
  *  In this program, we are trying to convert the input into a course list, which is the tree that
  *  will be processed. Each token is assumed to appear on a separate line to make our scanning easy.
-
- *  This structured way is called recursive descent parsing in which a separate
- *  parsing method is created for each non terminal that can recursively
+ *  
+ *  Thus, a parser takes as input tokens produced by a scanner and may produces as output a data
+ *  structure called a parse tree. A token read from the scanner is called a consumed token. In
+ *  general, a parser keeps a pointer separating the sequence of consumed tokens from those
+ *  that are unconsumed.
+ * 
+ *  Recursive descent parsing is a structured way of writing a parser in which a separate
+ *  parsing method is created for each non terminal, which can recursively
  *  call parsing methods for non terminals defining or deriving smaller parts of the sentence.
  *  
- *  Each parsing method has a comment indicating which non terminal it is processing
+ *  In this class, each parsing method has a comment indicating which non terminal it is processing
  *  A non terminal may be the LHS for several productions
  *  
  *  It calls parsing methods for non terminals appearing on the right hand side of each of these
@@ -51,8 +57,8 @@ public class ACourseParser implements CourseParser {
 		return aCourseList;
 	}
 	// <Course> -> <RegularCourse> | <FreshmanSeminar>
-	// A there is alternation, we have if statements and a different behavior for each alternation
-	// The first terminal in each alternative is used to determine the path
+	// As there is alternation, we have if statements and a different behavior for each alternation
+	// The first terminal in each alternative is used to determine the path.
 	public Course parseCourse (String firstToken) {
 	 	if ("FS".equals(firstToken.toUpperCase())) {
 	 		return parseFreshmanSeminar(); 
@@ -101,6 +107,16 @@ public class ACourseParser implements CourseParser {
  * (T/F) The parsing method for <Course> directly calls the parser for <FreshmanSeminar>.
  * 
  * (T/F) The parsing method for <Course> directly calls the parsing method for <CourseList>. 
+ * 
+ * (T/F) The parsing method for <Course> looks at the first terminal in multiple alternative ways
+ * of representing a course.
+ * 
+ *
+ * 
+ * (T/F) The parsing method for <Course> looks at the first two terminals in multiple alternative ways
+ * of representing a course.
+ * 
+ * 
  * 
  * (T/F> Each parsing method is associated with a non terminal.
  * 
