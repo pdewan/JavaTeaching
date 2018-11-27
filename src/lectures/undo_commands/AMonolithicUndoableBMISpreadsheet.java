@@ -54,10 +54,10 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 			System.out.println("Undo not applicable");
 		switch (lastWriteMethod) {
 		case SET_WEIGHT: 
-			undoWeight();
+			redoWeight();
 			break;
 		case SET_HEIGHT:
-			undoHeight();
+			redoHeight();
 			break;	 
 			
 		}		
