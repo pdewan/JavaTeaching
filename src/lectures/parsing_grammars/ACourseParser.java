@@ -98,35 +98,56 @@ public class ACourseParser implements CourseParser {
 
 }
 /*
+ * (T/F> A parsing method is associated with each non-terminal.
+ * 
+ * (T/F> A parsing method is associated with each terminal.
+ * 
+ * (T/F> A parsing method is associated with a root.
+ *  
  * (T/F) The parsing method for <CourseList> directly calls the parsing method for <RegularCourse>.
  * 
  * (T/F) The parsing method for <CourseList> directly calls the parsing method for <Course>.
  *  
  * (T/F) The parsing method for <Course> directly calls the parsing method for <RegularCourse>.
  * 
- * (T/F) The parsing method for <Course> directly calls the parser for <FreshmanSeminar>.
+ * (T/F) The parsing method for <Course> directly calls the parsing method for <FreshmanSeminar>.
  * 
  * (T/F) The parsing method for <Course> directly calls the parsing method for <CourseList>. 
  * 
- * (T/F) The parsing method for <Course> looks at the first terminal in multiple alternative ways
- * of representing a course.
- * 
  *
+ * (T/F) The course title is syntactic sugar. (A terminal that is entered by the user but not stored in the parse tree is called syntactic
+ * sugar.)
  * 
- * (T/F) The parsing method for <Course> looks at the first two terminals in multiple alternative ways
- * of representing a course.
+ * (T/F) The course number is syntactic sugar.
+ * 
+ * (T/F) The literal "FS" is syntactic sugar.
+ * 
+ * (T/F) The literal "RC" is syntactic sugar.
+ * 
+ * (T/F) The parsing method of <Course> consumes tokens. A method
+ * consumes a token if it reads it from the scanner (in this case the Scanner
+ * instance).
+ * 
+ * (T/F) The parsing method of <FreshmanSeminar> consumes tokens.
+ * 
+ * (T/F) The parsing method of <Course> processes tokens. A method processes a 
+ * token if it examines its value.
+ * 
+ * (T/F) The parsing method of <FreshmanSeminar> processes tokens.
+ * 
+ * (T/F) All tokens consumed by a parsing method are passed as parameters to the method.
+ *
+ * (T/F) All tokens processed by a parsing method are passed as parameters to the method.
  * 
  * 
+ * (T/F) All tokens processed by a parsing method that are not consumed by it are
+ *  passed as parameters to the method.
  * 
- * (T/F> Each parsing method is associated with a non terminal.
- * 
- * (T/F> Each parsing method is associated with a terminal.
- * 
- * (T/F> Each parsing method is associated with a root.
- * 
- * <T/F> A root is associated with a parsing method.
- * 
- * If a production P contains non terminal N1 on its LHS, and non terminal N2 on its RHS
+ *   
+ * (T/F) All tokens consumed by a parsing method that are not processed by it are
+ *  passed as parameters to the method.
+ *  
+ * If a production P contains non-terminal N1 on its LHS, and non-terminal N2 on its RHS
  * then:
  * 
  * The parsing method of N1 directly calls the parsing method for N2.
