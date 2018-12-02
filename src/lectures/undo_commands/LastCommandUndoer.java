@@ -1,4 +1,7 @@
 package lectures.undo_commands;
+
+import org.junit.Assert;
+
 public class LastCommandUndoer  implements Undoer {
     UndoableCommand lastCommand = null;
     boolean lastCommandWasUndone = false;
@@ -6,17 +9,23 @@ public class LastCommandUndoer  implements Undoer {
         c.execute();
         lastCommand = c;
         lastCommandWasUndone = false;
-    }    
+    }  
+    public boolean preUndo() {
+		return lastCommand != null && !lastCommandWasUndone;
+	}
     public void undo() {
-    	if (lastCommandWasUndone || lastCommand == null)   
-    		return;       
+		Assert.assertTrue("Cannot undo, call preUndo before calling undo", preUndo());
         lastCommand.undo();
         lastCommandWasUndone = true;              
     }
+    public boolean preRedo() {
+    	return lastCommand != null && lastCommandWasUndone;
+    }
     public void redo() {
-    	if (!lastCommandWasUndone || lastCommand == null)
-    		return;        
+		Assert.assertTrue("Cannot redo, call preRedo before calling redo", preRedo());
         lastCommand.execute();
         lastCommandWasUndone = false;                   
     }
+	
+	
 }

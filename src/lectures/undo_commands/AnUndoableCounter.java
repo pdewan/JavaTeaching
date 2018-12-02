@@ -6,7 +6,9 @@ import bus.uigen.ObjectEditor;
 import bus.uigen.attributes.AttributeNames;
 public class AnUndoableCounter implements UndoableCounter {
 	ObservableCounter counter;
-	Undoer undoer = new HistoryUndoer();
+	Undoer undoer = new LastCommandUndoer();
+//	Undoer undoer = new HistoryUndoer();
+//	Undoer undoer = UndoerFactory.getUndoer();
 	public AnUndoableCounter (ObservableCounter theCounter){
 		counter = theCounter;
 	}
@@ -20,10 +22,15 @@ public class AnUndoableCounter implements UndoableCounter {
 		counter.addObserver(observer);		
 	}
 	public void undo() {undoer.undo();}
-	public void redo() {undoer.redo();}	
+	public void redo() {undoer.redo();}		
+	public boolean preUndo() {
+		return undoer.preUndo();
+	}
+	public boolean preRedo() {
+		return undoer.preRedo();
+	}
 	public static void main (String[] args) {	
-		ObjectEditor.setAttribute(AnUndoableCounter.class, AttributeNames.SHOW_SYSTEM_MENUS, false);
-		bus.uigen.ObjectEditor.edit(new AnUndoableCounter(new AnObservableCounter()));
-	}	
+		ObjectEditor.edit(new AnUndoableCounter(new AnObservableCounter()));
+	}
 	
 }
