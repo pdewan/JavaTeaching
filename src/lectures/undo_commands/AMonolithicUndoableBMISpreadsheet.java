@@ -44,6 +44,9 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
 	public AMonolithicUndoableBMISpreadsheet (double aHeight, double aWeight) {
 		bmiSpreadsheet = new ABMISpreadsheet(aHeight, aWeight);
 	}
+	public AMonolithicUndoableBMISpreadsheet (BMISpreadsheet aBMISpreadsheet) {
+		bmiSpreadsheet = aBMISpreadsheet;
+	}
 	void enableUndo() {
 		undoEnabled = true;
 		redoEnabled = false;

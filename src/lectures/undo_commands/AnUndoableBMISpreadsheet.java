@@ -213,5 +213,5 @@ public class AnUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
  * (e.g. instance of AnUndoableBMISpreadsheet) without making any changes to the 
  * class of the object.
  * 
- * Next class AnAddCounterCommand
+ * Next class ASetHeightCommand
  */
