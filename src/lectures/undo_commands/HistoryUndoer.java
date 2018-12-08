@@ -95,8 +95,11 @@ public class HistoryUndoer implements Undoer {
  *  (T/F) If command C1 exists in the history, then command C2 must appear in the history
  *  after C1.
  *  
- *  (T/F) If command C1 exists in the history, then command C2 must appear in the history
- *  after C1. 
+ *  (T/F) If command C2 exists in the history, then command C1 must appear in the history
+ *  before C2. 
+ *  
+ *   (T/F) If command C1 and C2 exists in the history, then command C1 must appear in the history
+ *  before C2. 
  *  
  *  (T/F) The size of command history never reduces.
  *  
