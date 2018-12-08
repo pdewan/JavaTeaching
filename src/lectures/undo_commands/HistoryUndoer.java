@@ -89,14 +89,14 @@ public class HistoryUndoer implements Undoer {
  * c) adds a command to the history
  *   
  *  In the following questions, suppose command C2 was executed after command C1:
- *  If command C2 exists in the history, then command C1 must appear in the history
+ *  If command C1 and C2 exist in the history, then command C1 must appear in the history
  *  before C2.
  *  
- *  (T/F) If command C1 exists in the history, then command C2 must appear in the history
+ *  (T/F) If command C1 exists in the history, then command C2 must also appear in the history
  *  after C1.
  *  
- *  (T/F) If command C2 exists in the history, then command C1 must appear in the history
- *  before C2. 
+ *  (T/F) If command C2 exists in the history, then command C1 must also exist in the history.
+ *
  *  
  *   (T/F) If command C1 and C2 exists in the history, then command C1 must appear in the history
  *  before C2. 
