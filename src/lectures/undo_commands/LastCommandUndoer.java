@@ -27,5 +27,4 @@ public class LastCommandUndoer  implements Undoer {
         lastCommandWasUndone = false;                   
     }
 	
-	
 }

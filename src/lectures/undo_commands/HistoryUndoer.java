@@ -34,41 +34,42 @@ public class HistoryUndoer implements Undoer {
         UndoableCommand c = commandHistory.get(nextCommandIndex);
         c.execute();
         nextCommandIndex++;			
-    }
-	
+    }	
 }
 /*
- * An undoer must keep references to:
+ *  An undoer must keep references to ( that is, store in its instance variables):
  * a) Undoable objects (e.g. AnUndoableBMISpreadsheet, AnUndoableCounter)
  * b) Command objects (e.g. AnAddCounterCommand, ASetHeightCommand)
  * c) Executors (e.g ABMISpreadsheet and AnObservableCounter)
  * 
  * 
  * An undoer provides methods to:
- * (a) Execute a write for the first time in an executor.
- * (b) Redo a write in an executor.
- * (c) Undo a write in the executor. 
+ * (a) execute a write for the first time.
+ * (b) redo a write.
+ * (c) undo a write. 
  * 
- * The same method in an undoer can be used to:
- * (a) Execute a write for the first time in an executor.
- * (b) Redo a write in an executor.
- * (c) Undo a write in the executor. 
+ * The same method in an undoer is called to:
+ * (a) Execute a write for the first time.
+ * (b) Redo a write.
+ * (c) Undo a write.
  * 
  * 
  * A history undoer may:
- * a) Append a command to the command history (e.g commandHistory)
- * b) Remove the last command in the history.
- * c) Insert a command in the middle of the history.
- * d) Delete a command in the middle of the history.
+ * a) append a command to the stored command history.
+ * b) remove the last command in the history.
+ * c) insert a command in the middle of the history without deleting subsequent commands.
+ * d) delete a command in the middle of the history without deleting subsequent commands.
  * 
  * 
- * The command history can be changed by which of the following methods of HistoryUndoer:
+ * The contents of the command history can be changed by which of the following 
+ * methods of a history undoer:
  * a) execute
  * b) undo
  * c) redo
  * 
  *  
- * The pointer to the command history can be changed which of the following methods of HistoryUndoer:
+ * The pointer to the command history can be changed which of the following 
+ * methods of a history undoer:
  * a) execute
  * b) undo
  * c) redo
@@ -88,13 +89,13 @@ public class HistoryUndoer implements Undoer {
  * c) adds a command to the history
  *   
  *  In the following questions, suppose command C2 was executed after command C1:
- *  If command C2 exists in the history, then command must appear in the history
+ *  If command C2 exists in the history, then command C1 must appear in the history
  *  before C2.
  *  
- *  (T/F) If command C1 exists in the history, then command must appear in the history
- *  after C1
+ *  (T/F) If command C1 exists in the history, then command C2 must appear in the history
+ *  after C1.
  *  
- *  (T/F) If commands C1 and C2 both exist in the history, then C2 must appear
+ *  (T/F) If command C1 exists in the history, then command C2 must appear in the history
  *  after C1. 
  *  
  *  (T/F) The size of command history never reduces.
@@ -103,29 +104,30 @@ public class HistoryUndoer implements Undoer {
  *  when the undo(), redo() and execute() methods are invoked on the history undoer.
  *
  *  
- * An executed (undone) command is one on which the last invoked method is 
- * execute() (undo()).
- * The precondition of redo is:
+ * In the following questions,
+ * an executed (undone) (redone) command is one on which the last invoked method is 
+ * execute() (undo()) (redo()).
+ * The precondition of history redo is:
  * (a) An undone command exists in the history
  * (b) A redone command exists in the history
  * (c) An executed command exists in the history
- * (d) An executed or redone commmand exists in the history
- * (e) An executed or undone commmand exists in the history
+ * (d) An executed or redone commmnd exists in the history
+ * (e) An executed or undone command exists in the history
  * 
- * The precondition of undo is:
- * (a) An undone commmand exists in the history
+ * The precondition of history undo is:
+ * (a) An undone command exists in the history
  * (b) A redone command exists in the history
  * (c) An executed command exists in the history
- * (d) An executed or redone commmand exists in the history
- * (e) An executed or undone commmand exists in the history
+ * (d) An executed or redone command exists in the history
+ * (e) An executed or undone command exists in the history
  * 
- * The undo method undoes:
+ * The history undo method undoes:
  * (a) the latest command in the history that has been executed.
  * (b) the earliest command in the history that has been executed.
- * (c) the latest command in the history that has been undone.
- * (b) the earliest command in the history that has been undone.
+ * (c) the latest command in the history that has been executed or redone.
+ * (d) the earliest command in the history that has been executed or redone.
  * 
- * The redo method undoes:
+ * The history redo method redoes:
  * (a) the latest command in the history that has been executed.
  * (b) the earliest command in the history that has been executed.
  * (c) the latest command in the history that has been undone.

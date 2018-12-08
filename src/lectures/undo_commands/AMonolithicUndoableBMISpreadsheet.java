@@ -154,42 +154,61 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
  * (T/F) AMonolithicUndoableBMISpreadsheet makes it possible to undo before 
  * any changes are made to weight or height.
  * 
- * (T/F) AMonolithicUndoableBMISpreadsheet allows an undo to be followed by another undo
+ * (T/F) AMonolithicUndoableBMISpreadsheet allows an undo to be followed by another undo.
  * 
- * (T/F) AMonolithicUndoableBMISpreadsheet allows an undo to be followed by a redo
+ * (T/F) AMonolithicUndoableBMISpreadsheet allows an undo to be followed by a redo.
  * 
- * (T/F) AMonolithicUndoableBMISpreadsheet allows a redo to be followed by a redo
+ * (T/F) AMonolithicUndoableBMISpreadsheet allows a redo to be followed by a redo.
  * 
- * The maximum number of executed commands that AMonolithicUndoableBMISpreadsheet allows to be undone is:
+ * (T/F) AMonolithicUndoableBMISpreadsheet allows a redo to be followed by an undo.
+
+ * 
+ * The maximum number of undos that can be executed consecutively in AMonolithicUndoableBMISpreadsheet are:
  * a) 0
  * b) 1
  * c) 2
  * d) > 2
  * 
- * Terminate the program. Uncomment the undo call from main. Run it again.
+ * The maximum number of redos that can be executed consecutively in AMonolithicUndoableBMISpreadsheet are:
+ * a) 0
+ * b) 1
+ * c) 2
+ * d) > 2
+ * 
+ * (T/F) An undone command can always be immediately redone in AMonolithicUndoableBMISpreadsheet.
+ * (T/F) A redone command can always be immediately undone in AMonolithicUndoableBMISpreadsheet.
+ * (T/F) A newly executed command can always be immediately undone in AMonolithicUndoableBMISpreadsheet.
+ * (A newly executed command is an explicit change to the object that is made not through undo or redo but by calling its write methods directly,)
+ * (T/F) A newly executed command can always be immediately redone in AMonolithicUndoableBMISpreadsheet.
+ * 
+ * 
+ * 
+ *  Terminate the program.
+
+ *  Uncomment the undo call from main. Run it again.
  * 
  * Calling the undo() method when its precondition is not met results:
- * (a) always in an AssertionError
+ * (a) always in an AssertionError.
  * (b) an AssertionError when Java assertions are enabled
- * (c) in the object to be changed
- * (d) in no error being thrown and no change in the object
+ * (c) in the object being changed.
+ * (d) in no error being thrown and no change in the object.
  * 
  *  
  * The precondition of undo is:
  * (a) The last user action was a redo.
  * (b) The last user action was an undo.
- * (c) The last user action was a change to the spreadsheet or an undo
- * (d) The last user action was a change to the spreadsheet or a redo
- * (d) The last user action was a change to the spreadsheet or an undo or an undo
+ * (c) The last user action was a newly executed command or an undo.
+ * (d) The last user action was a newly executed command or a redo.
+ * (e) The last user action was a newly executed command or an undo or a redo.
  * 
  * 
  * 
  * The precondition of redo is:
  * (a) The last user action was a redo.
  * (b) The last user action was an undo.
- * (c) The last user action was a change to the spreadsheet or an undo
- * (d) The last user action was a change to the spreadsheet or a redo
- * (e) The last user action was a change to the spreadsheet or an undo or an undo
+ * (c) The last user action was a newly executed command or an undo.
+ * (d) The last user action was a newly executed command or a redo.
+ * (e) The last user action was a newly executed command or an undo or a redo.
  * 
  * 
  * Comment back the call to the erroneous undo.
@@ -206,22 +225,23 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
  * in the class). 
  * In AMonolithicUndoableBMISpreadsheet, the getter methods of the 
  * undoable object (that is, instance of AMonolithicUndoableBMISpreadsheet) involve execution of
- * application-specific (that is, BMISpreasheet-specific) code in:
- *  (a) the undoable object  
+ * application-specific (that is, BMISpreasheet-specific) code in the:
+ *  (a) undoable object  
  *  (b) executor delegate  (bmiSpreadsheet).
  * 
  * In AMonolithicUndoableBMISpreadsheet, the setter methods of the 
  * undoable object (that is, instance of AMonolithicUndoableBMISpreadsheet) 
  * involve execution of application-specific (that is, BMISpreasheet-specific) code in:
- *  (a) the undoable object  
+ *  (a) the undoable object.  
  *  (b) executor delegate  (bmiSpreadsheet).
  * 
- * (T/F) In AMonolithicUndoableBMISpreadsheet, the undo/redo methods in the 
- * undoable object involve execution of application-specific code in:
- *  (a) the undoable object
+ * In AMonolithicUndoableBMISpreadsheet, the undo/redo methods in the 
+ * undoable object (that is, instance of AMonolithicUndoableBMISpreadsheet) involve 
+ * execution of application-specific code in:
+ *  (a) the undoable object.
  *  (b) the executor delegate  (bmiSpreadsheet).
  * 
- * (T/F) In AnUndoableBMISpreadsheet, the undo/redo methods in the undoable object
+ * (T/F) In AMonolithicUndoableBMISpreadsheet, the undo/redo methods in the undoable object
  *  involve execution of application-specific code in the undoable object.  
  * 
  * In undoWeight() swap the two statements through commenting and uncommenting.
@@ -231,7 +251,7 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
  * (T/F) undoWeight()  is correct if it calls the setWeight() method of the  undoable object
  * rather than the setWeight() method of the executor delegate object (bmiSpreadsheet).
  * 
- * (T/F) undoWeight() should change the value of newWeight variable in the undoable object.
+ * (T/F) The call to undoWeight() should result in a change to the value of newWeight variable in the undoable object.
  * 
  * Swap the two statements back.
  * 
@@ -250,13 +270,16 @@ public class AMonolithicUndoableBMISpreadsheet implements UndoableBMISpreadsheet
  * 
  * Interact with them to answer the following question.
  * 
- * (T/F) An undo of one spreadsheet disables the undo of another spreadsheet.
+ * (T/F) An undo of one instance of AMonolithicUndoableBMISpreadsheet disables 
+ * the undo of another instance of this class.
  * (T/F) Both instances of this class share a common undo/redo history.
  * (T/F) Both instances of this class share a common implementation of undo/redo.
- * (T/F) AMonolithicUndoableBMISpreadsheet class can be used to support undo/redo of (the set calls in) 
- * 		any executor delegate that implements the interface BMISpreadsheet. 
- * (T/F) AMonolithicUndoableBMISpreadsheet can be used to support undo/redo of (the set calls) 
- * 		in any delegate that is a Bean object.
+ * (T/F) AMonolithicUndoableBMISpreadsheet class can be used to support undo/redo
+ * of (the set calls in) 
+ * any executor delegate that implements the interface, BMISpreadsheet. 
+ * (T/F) AMonolithicUndoableBMISpreadsheet can be used to support undo/redo of 
+ * (the set calls in) 
+ * 	any delegate that is a Bean object.
  * 
  * Next class AnUndoableBMISpreadsheet
  */

@@ -105,38 +105,40 @@ public class AnUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
  * Run the program and study its initial undo/redo model,
  *  
  * 
- * (T/F) AMonolithicUndoableBMISpreadsheet and AnUndoableBMISpreadsheet implement 
- * the same interface.
- * (T/F) AMonolithicUndoableBMISpreadsheet and AnUndoableBMISpreadsheet provide 
- * the same user interface when the undoer is assigned a LastCommandUndoer.
+ * (T/F) The two undoables, AMonolithicUndoableBMISpreadsheet and AnUndoableBMISpreadsheet,
+ *  implement the same programming interface.
+ * (T/F) The two undoables, AMonolithicUndoableBMISpreadsheet and AnUndoableBMISpreadsheet, provide 
+ * the same user interface when the undoer of AnUndoableBMISpreadsheet is assigned 
+ * an instance of LastCommandUndoer.
  * 
  * Put breakpoints in setWeight and undo methods, run the programs,
  * and follow execution of these methods (and/or simply look at the source code).
  * 
  * (Again, forwarding a call in a class is not considered execution of application-specific code
- * in the class. Instantiating an object is considered execution of such code). 
+ * in the class. Instantiating a class or executing its constructor is considered 
+ * execution of such code). 
  * In AnUndoableBMISpreadsheet, the getter methods of the 
  * undoable object (that is, instance of AnUndoableBMISpreadsheet) involve execution of
  * application-specific (that is, BMISpreasheet-specific) code in:
- *  (a) the undoable object  
- *  (b) executor delegate  (bmiSpreadsheet)
- *  (c) the undoer delegate (undoer)
- *  (d) the command objects
+ *  (a) the undoable object.  
+ *  (b) executor delegate. 
+ *  (c) the undoer delegate.
+ *  (d) the command objects.
  * 
  * In AnUndoableBMISpreadsheet, the setter methods of the 
  * undoable object (that is, instance of AnUndoableBMISpreadsheet) 
- * involve execution of application-specific (that is, BMISpreasheet-specific) code in:
- *  (a) the undoable object  
- *  (b) executor delegate  (bmiSpreadsheet)
- *  (c) the undoer delegate (undoer)
- *  (d) the command objects
+ * involve execution of application-specific (that is, BMISpreadsheet-specific) code in:
+ *  (a) the undoable object.  
+ *  (b) executor delegate. 
+ *  (c) the undoer delegate.
+ *  (d) the command objects.
  * 
  * (T/F) In AnUndoableBMISpreadsheet, the undo/redo methods in the 
  * undoable object involve execution of application-specific code in:
- *  (a) the undoable object
- *  (b) the executor delegate  (bmiSpreadsheet)
- *  (c) the undoer delegate (undoer)
- *  (d) the command objects
+ *  (a) the undoable object.  
+ *  (b) executor delegate.
+ *  (c) the undoer delegate.
+ *  (d) the command objects.
  *  
  *  Assign to the undoer the HistoryUndoer. Study the new undo/redo model.
  *  
@@ -147,36 +149,55 @@ public class AnUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
  * (T/F) HistoryUndoer makes it possible to undo before 
  * any changes are made to weight or height.
  * 
- * (T/F) HistoryUndoer allows an undo to be followed by another undo
+ * HistoryUndoer allows an undo to 
+ * (a) sometimes but not always followed by another undo.
+ * (b) always be followed by another undo.
+ * (c) none of the above.
  * 
- * (T/F) HistoryUndoer allows an undo to be followed by a redo
+ * HistoryUndoer allows an undo to 
+ * (a) sometimes but not always followed by a redo.
+ * (b) always be followed by a redo.
+ * (c) none of the above. 
  * 
- * (T/F) HistoryUndoer allows a redo to be followed by a redo
+ * HistoryUndoer allows a redo to 
+ * (a) sometimes but not always followed by another redo.
+ * (b) always be followed by another redo.
+ * (c) none of the above.
  * 
- * The maximum number of executed commands that HistoryUndoer allows to be undone is:
- * a) 0
- * b) 1
- * c) 2
- * d) > 2 
- *    
+ * HistoryUndoer allows a redo to 
+ * (a) sometimes but not always followed by an undo.
+ * (b) always be followed by an undo.
+ * (c) none of the above.  
+ *  
+ *  HistoryUndoer allows a newly executed command to 
+ * (a) sometimes but not always followed by an undo.
+ * (b) always be followed by another undo.
+ * (c) none of the above
+ * 
+ * HistoryUndoer allows a newly executed command to 
+ * (a) sometimes but not always followed by a redo.
+ * (b) always be followed by a redo.
+ * (c) none of the above.
+ *
+ * 
  *  
  *  Uncomment the lines in main that create and display another spreadsheet and
  *  the counter. 
  *  
- *  Run the program to display the objects.
- *  
- *  
- *  Change the weight in one spreadsheet. Can you undo it from another spreadsheet?
- *  
- * 
- * (T/F) A set of objects that choose their own undoers support the same 
- * undo/redo model.
- * 
+ *  Run the program to display the objects.  
+ *  Change the weight in one spreadsheet. 
+ *  Can you undo it from another spreadsheet?
  *  Invoke the add() command from the menu of the counter a few times.
  *  Can you undo all of them?
+ * 
+ * (T/F) Two undoables that follow undo pattern support the same 
+ * undo/redo model.
+ * 
+ * (T/F) Two undoables that are instances of the same class share a common undo/redo
+ * model.
  *       
- * (T/F)A set of objects that choose that choose their own undoers share a common undo/redo
- * history
+ * (T/F) Two undoables that are instances of the same class must share a common undo/redo
+ * history.
  * 
  * 
  * Assign to the undoer the the object returned by UndoerFactory returning a
@@ -188,14 +209,14 @@ public class AnUndoableBMISpreadsheet implements UndoableBMISpreadsheet {
  * Change the weight in one spreadsheet. Can you undo it from another spreadsheet?
  *  
  * 
- * (T/F) A set of objects that choose a singleton undoer support the same 
- * undo/redo model.
+ * (T/F) Two undoables following the undo pattern that choose a singleton undoer (
+ * an undoer that has a single instance) support the same undo/redo model.
  * 
  *  Invoke the add() command from the menu of the counter a few times.
  *  Can you undo all of them?
  *       
- * (T/F) A set of objects that choose a singleton undoer share a common undo/redo
- * history.
+ * (T/F) Two undoables following the undo pattern that choose a singleton undoer 
+ * share a common undo/redo history.
  * 
  * (T/F) The same undoer class can be used to undo writes of objects of different
  * types (e.g. BMISpreadsheet and Counter) that are not related by IS-A relationships.

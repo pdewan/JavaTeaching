@@ -13,8 +13,8 @@ public class AnAddCounterCommand implements UndoableCommand {
 	public void undo() {counter.add(-addAmount);}
  /*
   *  
-  *  (T/F) The constructor of an undoable command object must call a read method 
-  *        in the executor
+  *  (T/F) The constructor of an undoable command object associated with any write
+  *   method must call a read method in the executor.
   *
   *  Next class: HistoryUndoer
   */

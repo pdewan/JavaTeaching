@@ -15,30 +15,36 @@ public class ASetHeightCommand implements UndoableCommand {
 	public void undo() {bmiSpreadsheet.setHeight(oldHeight);}
 
  /*
-  *  (T/F) A single command-object class must be implemented for all writes 
-  *  (e.g setHeight() and setWeight()) to an executor (e.g. BMI Spreadhseet).
+  *  (T/F) A separate command-object class is implemented for each write method 
+  *  (e.g setHeight() and setWeight()) invoked on undoable object (e.g. BMISpreadhseet).
   *  
-  *  (T/F) The constructor of a command object must take as an argument the executor.
+  *  (T/F) The constructor of a command object takes as an argument the executor.
   *  
-  *  (T/F) The constructor of a command object must takes as an argument the kind
-  *  of write (e.g setHeight(), setWeight(), add())
+  *  (T/F) The constructor of a command object takes as an argument the undoable.
   *  
-  *  (T/F) The constructor of a command object must take as arguments information about
+  *  (T/F) The constructor of a command object takes as an argument the undoer.
+  *  
+  *  (T/F) The constructor of a command object takes as an argument information 
+  *  about the kind of write (e.g setHeight(), setWeight(), add())
+  *  
+  *  (T/F) The constructor of a command object takes as arguments information about
   *  arguments of the write (e.g. height, weight, add amount)
   *  
-  *  (T/F) The constructor of an undoable command object may call a read method in the executor.
+  *  (T/F) The constructor of an undoable command object associated with a setter
+  *  calls a read method in the executor.
   *  
-  *  (T/F) Each instance variable of an undoable command object stores an argument passed to its constructor.
+  *  (T/F) Each instance variable of an undoable command object stores an argument 
+  *  passed to its constructor.
   *  
-  *  (T/F) Each argument passed to the constructor of an undoable command object is stored in an instance
-  *  variable.
+  *  (T/F) Each argument passed to the constructor of an undoable command object 
+  *  is stored in an instance variable.
   *
   *  
-  *  The same method can be used in an undoable command object to:
+  *  The same method in a command object can be used in an undoable command object to:
   *  
-  *  (a) Execute a write for the first time in an executor.
-  *  (b) Redo a write in an executor.
-  *  (c) Undo a write in an executor. 
+  *  (a) Execute a newly issued user write.
+  *  (b) Redo a previously issued write.
+  *  (c) Undo a previously issued write. 
   *
   * Next class AnAddCounterCommand
   *  
