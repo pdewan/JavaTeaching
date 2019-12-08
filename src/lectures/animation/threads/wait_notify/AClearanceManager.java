@@ -21,7 +21,7 @@ public class AClearanceManager implements ClearanceManager {
 	ListenableVector waitingThreads = new AListenableVector<>();
 	PropertyListenerSupport propertyListenerSupport = new APropertyListenerSupport();
 	@Row(0)
-	@ComponentWidth(100)
+	@ComponentWidth(150)
 	public synchronized void proceed() {
 		System.out.println( Thread.currentThread() + ": before notify");
 		notify(); // Defined in call Object. Hover over it to see its explanation. Think of a monitor as simply an object.

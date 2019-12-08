@@ -28,7 +28,13 @@ public class InterferingConcurrentShuttleAnimations extends ConcurrentShuttleLau
 	public static void main(String[] args) {
 		PlottedShuttle shuttle1 = new AnObservablePlottedShuttle(SHUTTLE1_X, SHUTTLE1_Y);
 		displayShuttleFrame(shuttle1);
-		ShuttleAnimator aShuttleAnimator = new AShuttleAnimator();
+		/*
+		 * Switch between these two AShuttleAnimator constructors and try and explain
+		 * the difference in the interference.
+		 */
+//		ShuttleAnimator aShuttleAnimator = new AShuttleAnimator();
+		ShuttleAnimator aShuttleAnimator = new AShuttleAnimator(SHUTTLE1_X, SHUTTLE1_Y);
+
 		concurrentDemoShuttleAnimation(aShuttleAnimator, shuttle1);
 		/*
 		 * Comment the sleep out when asked.

@@ -14,7 +14,15 @@ import bus.uigen.OEFrame;
  * 
  *
  */
-public class AShuttleAnimator implements ShuttleAnimator {	
+public class AShuttleAnimator implements ShuttleAnimator {
+	protected Integer originalX;
+	protected Integer originalY;
+	public AShuttleAnimator(int anOriginalX, int anOriginalY) {
+		originalX = anOriginalX;
+		originalY = anOriginalY;
+	}
+	public  AShuttleAnimator() {
+	}
 	@Visible(false)
 	public void animateFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime) {	
 		/*
@@ -25,15 +33,15 @@ public class AShuttleAnimator implements ShuttleAnimator {
 				" entered animateFromOrigin in:" +
 				this);
 
-		int originalX = shuttle.getShuttleX(); 
-		int originalY = shuttle.getShuttleY();	
-		System.out.println (Thread.currentThread() + " saved X = " + originalX + " Y = " + originalY);
+		int anOriginalX = originalX == null? shuttle.getShuttleX(): originalX; 
+		int anOriginalY =  originalY == null? shuttle.getShuttleY(): originalY;	
+		System.out.println (Thread.currentThread() + " saved X = " + anOriginalX + " Y = " + anOriginalY);
 		int curX = 0;
 		int curY = 0;
 		shuttle.setShuttleX(curX);
 		shuttle.setShuttleY(curY);
-		animateYFromOrigin(shuttle, animationStep, animationPauseTime, curY, originalY);
-		animateXFromOrigin(shuttle, animationStep, animationPauseTime, curX, originalX);
+		animateYFromOrigin(shuttle, animationStep, animationPauseTime, curY, anOriginalY);
+		animateXFromOrigin(shuttle, animationStep, animationPauseTime, curX, anOriginalX);
 	}
 	protected void animateYFromOrigin(PlottedShuttle shuttle, int animationStep, int animationPauseTime, int startY, int endY) {	
 		System.out.println (
