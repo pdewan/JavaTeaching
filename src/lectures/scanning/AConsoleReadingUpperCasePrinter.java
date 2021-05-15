@@ -342,5 +342,8 @@ public class AConsoleReadingUpperCasePrinter {
 		scanner.close(); // we are done with the scanner, we are actually just done
 		System.out.println ("Program ends.");
 	}
+	/*
+	 * Next class to visit {AModularConsoleReadingUpperCasePrinter}
+	*/
 	
 }
