@@ -3,13 +3,14 @@ package lectures.class_dual_roles.instances;
 import lectures.class_dual_roles.statics.Factorials;
 import lectures.interfaces.FactorialSpreadsheet;
 
-/**
+/*
  * In general, when you visit a class, you will of course see code performing
  * some function
  * .
  * In addition, you will see comments, which not only describe the code
  * but also the lesson associated with the code.
- * 
+ */
+/**
  * 
  * This particular class serves the role of being a template for creating multiple 
  * instances with the same behavior, that is, a class with instance variables
@@ -20,7 +21,7 @@ public class ALoopingFactorialSpreadsheet
 {
 	
 	
-	/* This multi-line comment is an example of a lesson comment related to
+	/* The multi-line comment below is an example of a lesson comment related to
 	 * the variable number declared below the comment.
 	 * 
 	 * It is not so much a comment on the purpose of the variable, 
@@ -33,6 +34,8 @@ public class ALoopingFactorialSpreadsheet
 	 * 
 	 * Now that we have finished this meta comment about the lesson comment, here is
 	 * the lesson comment.
+	 */
+	/*
 	 * 
 	 * Lesson Comment:
 	 * 
@@ -59,6 +62,8 @@ public class ALoopingFactorialSpreadsheet
 	 * 
 	 * The lesson comment explained instance variables, so you should be able to
 	 * answer the following three multiple choice questions.
+	 */
+	/*
 	 * 
 	 * Reproduced Sakai Questions:
 	 * 
@@ -78,13 +83,28 @@ public class ALoopingFactorialSpreadsheet
 	 *   class is instantiated in the program.
 	 */
 	
-	/*
-	 * No static in method declarations below as these methods access instance variables.
+	
+	/**
+	 * Lesson comment:
+	 * There is no static in method declarations below as these methods access instance variables.
 	 * They are called instance methods.
+	 */
+	
+	
+	public int getNumber() { // comment out when asked
+//	static public int getNumber() { //uncomment when asked
+
+		return number;
+	}
+	/*
 	 * 
 	 * In general, a Praxis contains not only lessons but also experiment descriptions.
-	 * The following is an example of our first experiment.
-	 * 	
+	 * Based on your observations after the experiment, you can answer questions
+	 * not directly explained in lesson comments.
+	 * 
+	 */
+	/*
+	 * 
 	 * Experiment:
 	 * 
 	 * Make the variable, factorial, static by commenting its declaration
@@ -100,14 +120,12 @@ public class ALoopingFactorialSpreadsheet
 	 * of the experiment, and based on these, answer more Sakai questions, that
 	 * are not simply deduced from lesson comments, but from the observation
 	 * comments.
-	 * 
-	 * Observation:
+	 *
 	 * 
 	 * After you do the commentin-commentout action above, based on your observation
 	 * of the result, can this static variable still be accessed by the 
 	 * instance methods?
-	 * 
-	 * Experiment:
+	 * 	
 	 * 
 	 * Now try to determine what happens if you make the method getNumber 
 	 * static by doing another commentin-commentout action involving the delaration
@@ -115,12 +133,6 @@ public class ALoopingFactorialSpreadsheet
 	 * 
 	 * Can you still directly access the instance variables? 
 	 */	
-	
-	public int getNumber() { // comment out when asked
-//	static public int getNumber() { //uncomment when asked
-
-		return number;
-	}
 	/*	 
 	 * You should now be able to answer the following graded questions based
 	 * on your two observations.

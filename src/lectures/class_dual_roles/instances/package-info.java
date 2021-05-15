@@ -8,17 +8,18 @@
  */
 package lectures.class_dual_roles.instances;
 /**
- * If you do not understand static variables,
- * visit this package after doing the quiz on static variables.
+ * Do this praxis after the statics praxis is in the package 
+ * lectures.class_dual_roles.statics, 
+ * which means you must go to its package-info.java file;
+ * 
+ *
  * You can learn the concepts in a quiz by doing hands-on programming using
  * a praxis or looking at a web resource mentioned in the quiz description.
  * 
- * The praxis for statics is in the package lectures.class_dual_roles.statics, 
- * which means you must go to its package-info.java file;
- * 
+ *
  * 
  * A praxis is a hands-on lesson about some programming concept that involves
- * visiting a series of classes using 
+ * visiting a series of classe.
  * .
  *
  * In this praxis, you will visit the following classes in this package.

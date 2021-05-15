@@ -1,8 +1,17 @@
 
 /**
- * We now see ways and motivation for creating a program with multiple classes.
- * While only one class will be runnable - have a main method - there will be
- * many supporting classes. As before the questions will ask your to change 
+ *
+ *
+ * You can learn the concepts in a quiz by doing hands-on programming using
+ * a praxis or looking at a web resource mentioned in the quiz description. 
+ *
+ * 
+ * A praxis is a hands-on lesson about some programming concept that involves
+ * visiting a series of classe.
+ * 
+ * Here, we  see ways and motivation for creating a program with multiple classes.
+ * While only one class will be executable - have a main method - there will be
+ * many supporting classes. In general, a parxis will ask your to change 
  * something in the code and 'see what happens'. Your  first instinct to see 
  * what happens is to try and run the class. However, many of these classes 
  * do not have a 'main' method (so they cannot be run). This implies that your  
@@ -24,8 +33,9 @@
  * open in your editors so that you can view multiple classes simultaneously.
  * Introductory courses tend not to deal large components, so many of you will
  * grow up in this praxis. Expect to struggle, especially if you
- * took Comp 116. Remember, instructors are here to help you. You may want
- * to also have the lecture pdf open.
+ * have not used a programming environment as sophisticated as Eclipse. 
+ * Remember, instructors are here to help you. You may want
+ * to also have other resources open
  * 
  * 
  * PACKAGE INFO   
