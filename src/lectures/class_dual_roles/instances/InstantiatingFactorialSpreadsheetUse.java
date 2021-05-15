@@ -5,7 +5,7 @@ public class InstantiatingFactorialSpreadsheetUse {
 	
 	public static void main (String[] args) {
 		/*		 
-		 * The previous class is being instantiated now before use by doing a new
+		 * The previous class is being instantiated now  by doing a new operation.
 		 * Each new creates a new copy of the instance variables declared in the class
 		 * It an instance of the class and can be assigned
 		 * to a variable whose type is the name of the class of the instance.
@@ -73,6 +73,7 @@ public class InstantiatingFactorialSpreadsheetUse {
 	
 //		ALoopingFactorialSpreadsheet.setNumber(3);
 		/*
+		 * Experiment:
 		 * Is uncommenting the above statement legal?
 		 * 
 		 * (T/F)An instance method can be invoked on a class, that is, it can be

@@ -15,6 +15,9 @@ public class ASynchronizedShuttleAnimator extends AShuttleAnimator  {
 		super.animateFromOrigin(shuttle, animationStep, animationPauseTime);
 	}
 	public 
+	/*
+	 * Uncomment synchronized line when asked.
+	 */
 //		synchronized 
 		String toString() {
 		return super.toString();

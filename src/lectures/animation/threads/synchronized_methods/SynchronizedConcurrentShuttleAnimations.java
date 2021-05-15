@@ -30,11 +30,14 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
 		concurrentDemoShuttleAnimation(aShuttleAnimator, aShuttle1);
 		ThreadSupport.sleep(SECOND_THREAD_DELAY);
 		concurrentDemoShuttleAnimation(aShuttleAnimator, aShuttle1);
-//		for (int aReadNum = 0; aReadNum < NUM_READS;aReadNum++) {
-//			System.out.println (Thread.currentThread() + " " + aShuttleAnimator
-//					+ ": Shuttle Y:" + aShuttle1.getShuttleX());
-//			ThreadSupport.sleep(ANIMATION_PAUSE_TIME);			
-//		}
+		/*
+		 * Uncomment the lines below when asked
+		 */
+		for (int aReadNum = 0; aReadNum < NUM_READS;aReadNum++) {
+			System.out.println (Thread.currentThread() + " " + aShuttleAnimator
+					+ ": Shuttle X:" + aShuttle1.getShuttleX() + ": Shuttle Y:" + aShuttle1.getShuttleY());
+			ThreadSupport.sleep(ANIMATION_PAUSE_TIME);			
+		}
 	}
 }
 /**
@@ -74,7 +77,7 @@ public class SynchronizedConcurrentShuttleAnimations extends InterferingConcurre
  * (T/F) The unsynchronized toString() method in ASynchronizedShuttleAnimator is executed by
  * the main thread during the execution of the synchronized method.
  *  
- * Now uncomment the synchronized keyword in toString()and run again.
+ * Now uncomment the synchronized keyword in toString() and run again and observe the output.
  * 
  * (T/F) The synchronized toString() method in ASynchronizedShuttleAnimator 
  * is executed by the main thread during the execution of the synchronized method.

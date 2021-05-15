@@ -11,7 +11,11 @@ import java.lang.reflect.Modifier;
 import lectures.constructors_pointers.ABMISpreadsheet;
 
 /**
- * Here we will understand the Java Beans standard and the underlying concepts of 
+ * Instance variables and methods were probably concepts you learned earlier.
+ * This part formalizes the notions of getters and setters, which you may think
+ * you understand well, but probably do not! 
+ * 
+ * We will understand the Java Beans standard and the underlying concepts of 
  * stateful objects.
  * Java Beans is an industry standard formally defined by the imported classes 
  * and others.
@@ -118,9 +122,12 @@ public class PropertiesAnalyzer {
 	     * a different set of instance variables.
 		 */
 		/* 				 
-	     * Uncomment the the code below. Study
-	     * the definition of the AnotherLoopingFactorialSpreadsheet.
-	     * What output  do you expect, what do you get?	     
+	     * Uncomment the code below.
+	     * Do so by selecting the two lines, and pressing CTRL-/.
+	     *  
+	     * Study the definition of the AnotherLoopingFactorialSpreadsheet by 
+	     * visiting it.
+	     * What output do you expect, what do you get?	     
 	     */
 //		printVariables(new AnotherLoopingFactorialSpreadsheet());
 //		printProperties(new AnotherLoopingFactorialSpreadsheet());
@@ -178,7 +185,7 @@ public class PropertiesAnalyzer {
 	     * .	  	     
 	     */
 		/* 				 
-	     * Uncomment the the code below, commenting the prints above.
+	     * Uncomment the code below, commenting the prints above.
 	     * Visit the definition of ANonBeanLoopingFactorialSpreadsheet.
 	     * What properties do you expect, what do you get?
 	     */
